@@ -18,7 +18,7 @@ jobs:
           python-version: '3.12'
           cache: pip
 
-      - run: pip install trafilatura
+      - run: pip install -r requirements.txt
 
       - name: Ingest article
         env:
