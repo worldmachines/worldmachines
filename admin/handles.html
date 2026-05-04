@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage Handles — World Machines</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-family: system-ui, sans-serif; font-size: 0.88rem; }
+    th { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+    td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    .del-btn { background: none; border: 1px solid var(--border); color: var(--muted); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 3px; cursor: pointer; }
+    .del-btn:hover { border-color: #991b1b; color: #991b1b; }
+    .add-row { display: flex; gap: 0.5rem; align-items: flex-end; flex-wrap: wrap; }
+    .add-row .field { margin: 0; flex: 1; min-width: 160px; }
+    .add-row button { white-space: nowrap; }
+    .status { font-family: system-ui, sans-serif; font-size: 0.82rem; margin-top: 0.75rem; }
+    .status.ok  { color: #065f46; }
+    .status.err { color: #991b1b; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <p class="tagline">Admin — handle registry</p>
+  </header>
+
+  <div class="form-wrap">
+    <h2>Email → Handle registry</h2>
+    <p class="form-intro">Maps approved collaborator emails to their public handles. Add an entry here <em>and</em> add the email to the Cloudflare Access policy for <code>/submit</code>.</p>
+
+    <table id="handles-table">
+      <thead><tr><th>Email</th><th>Handle</th><th></th></tr></thead>
+      <tbody id="handles-body"><tr><td colspan="3" style="color:var(--muted);font-style:italic">Loading…</td></tr></tbody>
+    </table>
+
+    <h3 style="font-size:1rem;font-weight:normal;margin-bottom:1rem">Add entry</h3>
+    <form id="add-form" novalidate>
+      <div class="add-row">
+        <div class="field">
+          <label for="new-email">Email</label>
+          <input type="email" id="new-email" name="email" placeholder="collaborator@example.com" required>
+        </div>
+        <div class="field">
+          <label for="new-handle">Handle</label>
+          <input type="text" id="new-handle" name="handle" placeholder="theirhandle" required>
+        </div>
+        <button type="submit">Add</button>
+      </div>
+    </form>
+    <div class="status" id="status"></div>
+  </div>
+
+  <script>
+    const tbody = document.getElementById('handles-body');
+    const status = document.getElementById('status');
+
+    function setStatus(msg, ok) {
+      status.textContent = msg;
+      status.className = 'status ' + (ok ? 'ok' : 'err');
+      if (ok) setTimeout(() => { status.textContent = ''; status.className = 'status'; }, 3000);
+    }
+
+    async function load() {
+      const res = await fetch('/api/admin/handles');
+      const { handles, error } = await res.json();
+      if (error) { setStatus(error, false); return; }
+
+      tbody.innerHTML = '';
+      if (!handles.length) {
+        tbody.innerHTML = '<tr><td colspan="3" style="color:var(--muted);font-style:italic">No entries yet.</td></tr>';
+        return;
+      }
+      for (const { email, handle } of handles) {
+        const tr = document.createElement('tr');
+        tr.dataset.email = email;
+        tr.innerHTML = `
+          <td>${esc(email)}</td>
+          <td>${esc(handle)}</td>
+          <td><button class="del-btn" data-email="${esc(email)}">Remove</button></td>`;
+        tbody.appendChild(tr);
+      }
+    }
+
+    tbody.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.del-btn');
+      if (!btn) return;
+      const email = btn.dataset.email;
+      if (!confirm(`Remove ${email}?`)) return;
+      btn.disabled = true;
+      const res = await fetch('/api/admin/handles', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (res.ok) { setStatus(`Removed ${email}`, true); load(); }
+      else { setStatus(data.error || 'Failed', false); btn.disabled = false; }
+    });
+
+    document.getElementById('add-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email  = document.getElementById('new-email').value.trim();
+      const handle = document.getElementById('new-handle').value.trim();
+      if (!email || !handle) return;
+      const res = await fetch('/api/admin/handles', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, handle }),
+      });
+      const data = await res.json();
+      if (res.ok) { setStatus(`Added ${handle} → ${email}`, true); e.target.reset(); load(); }
+      else setStatus(data.error || 'Failed', false);
+    });
+
+    function esc(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    load();
+  </script>
+</body>
+</html>
