@@ -47,7 +47,7 @@ def main():
 
     payload = json.loads(raw)
     url = payload['url']
-    submitted_by = payload['submitted_by']
+    handle = payload['handle']
     type_ = payload['type']
     description = payload.get('description') or None
     submitted_at = payload['submitted_at']
@@ -68,7 +68,7 @@ def main():
         'slug': slug,
         'url': url,
         'title': title,
-        'submitted_by': submitted_by,
+        'handle': handle,
         'submitted_at': submitted_at,
         'type': type_,
         'description': description,

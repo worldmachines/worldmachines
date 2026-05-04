@@ -43,7 +43,7 @@ def escape(s):
 def render_article(a):
     title = escape(a.get('title') or a['url'])
     url = escape(a['url'])
-    by = escape(a.get('submitted_by', ''))
+    by = escape(a.get('handle') or a.get('submitted_by', ''))
     type_ = a.get('type', 'resource')
     badge_class = 'badge-contribution' if type_ == 'contribution' else 'badge-resource'
     badge_label = type_.capitalize()

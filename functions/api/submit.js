@@ -21,6 +21,11 @@ export async function onRequestPost({ request, env }) {
     return Response.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
+  const handle = await env.HANDLES.get(submitterEmail);
+  if (!handle) {
+    return Response.json({ error: 'Your account is not registered. Contact the site admin.' }, { status: 403 });
+  }
+
   let formData;
   try {
     formData = await request.formData();
@@ -29,11 +34,10 @@ export async function onRequestPost({ request, env }) {
   }
 
   const url = formData.get('url')?.trim() ?? '';
-  const name = formData.get('name')?.trim() ?? '';
   const type = formData.get('type') ?? '';
   const description = formData.get('description')?.trim() || null;
 
-  if (!url || !name || !['contribution', 'resource'].includes(type)) {
+  if (!url || !['contribution', 'resource'].includes(type)) {
     return Response.json({ error: 'Missing or invalid required fields' }, { status: 400 });
   }
 
@@ -43,8 +47,7 @@ export async function onRequestPost({ request, env }) {
 
   const payload = {
     url,
-    submitted_by: name,
-    submitter_email: submitterEmail,
+    handle,
     type,
     description,
     submitted_at: new Date().toISOString(),

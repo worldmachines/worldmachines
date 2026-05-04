@@ -23,11 +23,6 @@
       </div>
 
       <div class="field">
-        <label for="name">Your name <span class="required">*</span></label>
-        <input type="text" id="name" name="name" placeholder="Full name or handle" required>
-      </div>
-
-      <div class="field">
         <label for="type">Type <span class="required">*</span></label>
         <div class="select-wrap">
           <select id="type" name="type" required>
@@ -59,10 +54,9 @@
       msg.textContent = '';
 
       const url = form.url.value.trim();
-      const name = form.name.value.trim();
       const type = form.type.value;
 
-      if (!url || !name || !type) {
+      if (!url || !type) {
         msg.className = 'form-message error';
         msg.textContent = 'Please fill in all required fields.';
         return;
