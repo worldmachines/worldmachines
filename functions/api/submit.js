@@ -1,5 +1,22 @@
+function emailFromRequest(request) {
+  // Access injects this header when the path is policy-protected
+  const header = request.headers.get('Cf-Access-Authenticated-User-Email');
+  if (header) return header;
+
+  // Fallback: decode email from the CF_Authorization JWT in the session cookie
+  const cookie = request.headers.get('cookie') || '';
+  const match = cookie.match(/CF_Authorization=([^;]+)/);
+  if (!match) return null;
+  try {
+    const payload = JSON.parse(atob(match[1].split('.')[1]));
+    return payload.email || null;
+  } catch {
+    return null;
+  }
+}
+
 export async function onRequestPost({ request, env }) {
-  const submitterEmail = request.headers.get('Cf-Access-Authenticated-User-Email');
+  const submitterEmail = emailFromRequest(request);
   if (!submitterEmail) {
     return Response.json({ error: 'Unauthorized' }, { status: 401 });
   }
