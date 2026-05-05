@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Profile — World Machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+
+  <div class="form-wrap">
+    <h2>Your profile</h2>
+    <p class="form-intro">Your handle is set by the admin and cannot be changed here. Update your display name, site, and bio below.</p>
+
+    <div id="handle-display" style="font-family:system-ui,sans-serif;font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;display:none">
+      Signed in as <strong id="handle-value"></strong> (<span id="email-value"></span>)
+    </div>
+
+    <form id="profile-form" novalidate>
+      <div class="field">
+        <label for="name">Display name</label>
+        <input type="text" id="name" name="name" placeholder="First Last or preferred name">
+      </div>
+      <div class="field">
+        <label for="url">Site URL</label>
+        <input type="url" id="url" name="url" placeholder="https://your.site">
+      </div>
+      <div class="field">
+        <label for="bio">Bio <span class="optional">(shown on contributors page)</span></label>
+        <input type="text" id="bio" name="bio" placeholder="your.site or a brief description">
+      </div>
+      <button type="submit" id="save-btn">Save</button>
+      <div class="form-message" id="form-message"></div>
+    </form>
+  </div>
+
+  <script>
+    const msg = document.getElementById('form-message');
+
+    function setMsg(text, ok) {
+      msg.textContent = text;
+      msg.className = 'form-message ' + (ok ? 'success' : 'error');
+    }
+
+    // Load current profile
+    fetch('/api/profile')
+      .then(r => r.json())
+      .then(data => {
+        if (data.error) { setMsg(data.error, false); return; }
+        document.getElementById('handle-value').textContent = '@' + data.handle;
+        document.getElementById('email-value').textContent  = data.email;
+        document.getElementById('handle-display').style.display = 'block';
+        document.getElementById('name').value = data.name || '';
+        document.getElementById('url').value  = data.url  || '';
+        document.getElementById('bio').value  = data.bio  || '';
+      })
+      .catch(() => setMsg('Could not load profile.', false));
+
+    document.getElementById('profile-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('save-btn');
+      btn.disabled = true;
+      btn.textContent = 'Saving…';
+
+      try {
+        const res = await fetch('/api/profile', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: document.getElementById('name').value.trim(),
+            url:  document.getElementById('url').value.trim(),
+            bio:  document.getElementById('bio').value.trim(),
+          }),
+        });
+        const data = await res.json();
+        if (res.ok) setMsg('Profile saved.', true);
+        else setMsg(data.error || 'Save failed.', false);
+      } catch {
+        setMsg('Network error.', false);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Save';
+      }
+    });
+  </script>
+</body>
+</html>
