@@ -7,7 +7,6 @@
 ## Upcoming
 
 ### Near-term
-- **Add /profile + /api/profile to Cloudflare Access policy** — manual step in Zero Trust dashboard; currently these endpoints exist but are unprotected
 - **Fix incorrect book publication dates** — 7 books got edition/translation dates from Open Library rather than true first-publication years. Manual fix needed:
   - Divine Comedy: 2015 → ~1308
   - Don Quixote: 1747 → 1605
@@ -28,6 +27,7 @@
 
 ## Done
 
+- **2026-05-04** — Added /profile + /api/profile to Cloudflare Access policy (collaborator email allowlist); tested working
 - **2026-05-04** — Backfilled first-publication years for 31/38 books via Open Library API (`scripts/backfill_book_dates.py`)
 - **2026-05-04** — Backfilled actual publication dates for all 22 essay/contribution articles via trafilatura (`scripts/backfill_dates.py`)
 - **2026-05-04** — Split `type` (contribution|resource) from `format` (essay|short story|paper|book); added format dropdown to submit form
