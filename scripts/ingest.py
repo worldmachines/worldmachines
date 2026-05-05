@@ -53,16 +53,22 @@ def main():
     description = payload.get('description') or None
     submitted_at = payload['submitted_at']
 
-    print(f"Ingesting: {url}")
-    title, text, success = fetch_and_extract(url)
-
-    if not title:
+    if type_ == 'resource':
+        # Resources are third-party — store the link without fetching
         title = title_from_url(url)
-        print(f"  Title fallback from URL: {title}")
+        text = None
+        success = False
+        print(f"Resource (no ingestion): {url}")
+        print(f"  Title fallback: {title}")
     else:
-        print(f"  Title: {title}")
-
-    print(f"  Extraction: {'success' if success else 'failed (link-only)'}")
+        print(f"Ingesting: {url}")
+        title, text, success = fetch_and_extract(url)
+        if not title:
+            title = title_from_url(url)
+            print(f"  Title fallback from URL: {title}")
+        else:
+            print(f"  Title: {title}")
+        print(f"  Extraction: {'success' if success else 'failed (link-only)'}")
 
     slug = slugify(title, url, submitted_at)
     article = {
