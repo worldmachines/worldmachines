@@ -239,7 +239,6 @@ main {
 .contributor:last-child { border-bottom: none; }
 
 .contributor-name { font-size: 1rem; color: var(--text); }
-a.contributor-name:hover { color: var(--link); text-decoration: none; }
 
 .contributor-handle {
   font-family: system-ui, sans-serif;
@@ -247,12 +246,72 @@ a.contributor-name:hover { color: var(--link); text-decoration: none; }
   color: var(--muted);
 }
 
+.contributor-site {
+  font-family: system-ui, sans-serif;
+  font-size: 0.73rem;
+  color: var(--link);
+}
+.contributor-site:hover { color: var(--link-hover); text-decoration: underline; }
+
 .contributor-bio {
   font-family: system-ui, sans-serif;
   font-size: 0.8rem;
   color: var(--muted);
-  width: 100%;            /* forces bio onto its own line */
+  width: 100%;
   margin-top: 0.1rem;
+}
+
+/* ─── Welcome / inline profile (submit page) ────────────────── */
+
+.welcome {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.welcome-greeting {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-details { margin-top: 0.25rem; }
+
+.profile-details summary {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--link);
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  user-select: none;
+}
+.profile-details summary::-webkit-details-marker { display: none; }
+.profile-details summary::after { content: ' ▾'; font-size: 0.68rem; }
+.profile-details[open] summary::after { content: ' ▴'; }
+.profile-details summary:hover { color: var(--link-hover); }
+
+.profile-fields {
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border);
+}
+
+input[readonly] {
+  background: var(--bg);
+  color: var(--muted);
+  cursor: default;
+  border-color: var(--border);
+}
+input[readonly]:focus { outline: none; border-color: var(--border); }
+
+.form-note {
+  font-family: system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 /* ─── Forms ──────────────────────────────────────────────────── */

@@ -21,6 +21,40 @@
   </nav>
 
   <div class="form-wrap">
+
+    <!-- Profile / welcome section — populated by JS -->
+    <div id="welcome" class="welcome" style="display:none">
+      <p class="welcome-greeting">Welcome, <strong id="welcome-name"></strong>.</p>
+      <details class="profile-details">
+        <summary>Modify profile</summary>
+        <div class="profile-fields">
+          <div class="field">
+            <label>Email <span class="optional">(read-only)</span></label>
+            <input type="email" id="p-email" readonly>
+          </div>
+          <div class="field">
+            <label>Handle <span class="optional">(read-only)</span></label>
+            <input type="text" id="p-handle" readonly>
+          </div>
+          <div class="field">
+            <label for="p-name">Full name</label>
+            <input type="text" id="p-name" placeholder="First Last">
+          </div>
+          <div class="field">
+            <label for="p-url">Site URL</label>
+            <input type="url" id="p-url" placeholder="https://your.site">
+          </div>
+          <div class="field">
+            <label for="p-bio">Bio <span class="optional">(shown on contributors page)</span></label>
+            <input type="text" id="p-bio" placeholder="Brief description or your.site">
+          </div>
+          <p class="form-note">Contact admin (vgr) to update email or handle.</p>
+          <button type="button" id="save-profile-btn">Save profile</button>
+          <div class="form-message" id="profile-msg"></div>
+        </div>
+      </details>
+    </div>
+
     <h2>Submit an article</h2>
     <p class="form-intro">Share a link to a contribution or resource relevant to world machines theory. Submissions are reviewed before publication.</p>
 
@@ -65,17 +99,68 @@
   </div>
 
   <script>
+    // ── Profile load & save ──────────────────────────────────
+    fetch('/api/profile')
+      .then(r => r.json())
+      .then(data => {
+        if (data.error) return;
+        document.getElementById('welcome-name').textContent = data.name || data.handle;
+        document.getElementById('p-email').value  = data.email  || '';
+        document.getElementById('p-handle').value = data.handle || '';
+        document.getElementById('p-name').value   = data.name   || '';
+        document.getElementById('p-url').value    = data.url    || '';
+        document.getElementById('p-bio').value    = data.bio    || '';
+        document.getElementById('welcome').style.display = 'block';
+      })
+      .catch(() => {});
+
+    document.getElementById('save-profile-btn').addEventListener('click', async () => {
+      const btn = document.getElementById('save-profile-btn');
+      const msg = document.getElementById('profile-msg');
+      btn.disabled = true;
+      btn.textContent = 'Saving…';
+      try {
+        const res = await fetch('/api/profile', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: document.getElementById('p-name').value.trim(),
+            url:  document.getElementById('p-url').value.trim(),
+            bio:  document.getElementById('p-bio').value.trim(),
+          }),
+        });
+        const data = await res.json();
+        if (res.ok) {
+          msg.className = 'form-message success';
+          msg.textContent = 'Profile saved.';
+          const newName = document.getElementById('p-name').value.trim();
+          document.getElementById('welcome-name').textContent =
+            newName || document.getElementById('p-handle').value;
+        } else {
+          msg.className = 'form-message error';
+          msg.textContent = data.error || 'Save failed.';
+        }
+      } catch {
+        msg.className = 'form-message error';
+        msg.textContent = 'Network error.';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Save profile';
+      }
+    });
+
+    // ── Article submit ───────────────────────────────────────
     const form = document.getElementById('submit-form');
-    const btn = document.getElementById('submit-btn');
-    const msg = document.getElementById('form-message');
+    const btn  = document.getElementById('submit-btn');
+    const msg  = document.getElementById('form-message');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       msg.className = 'form-message';
       msg.textContent = '';
 
-      const url = form.url.value.trim();
-      const type = form.type.value;
+      const url    = form.url.value.trim();
+      const type   = form.type.value;
       const format = form.format.value;
 
       if (!url || !type || !format) {
@@ -94,7 +179,7 @@
 
       try {
         const body = new FormData(form);
-        const res = await fetch('/api/submit', { method: 'POST', body });
+        const res  = await fetch('/api/submit', { method: 'POST', body });
         const data = await res.json();
         if (res.ok) {
           msg.className = 'form-message success';

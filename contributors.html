@@ -37,13 +37,15 @@
           return;
         }
         list.innerHTML = contributors.map(c => {
-          const nameHtml = c.url
-            ? `<a href="${esc(c.url)}" class="contributor-name">${esc(c.name)}</a>`
-            : `<span class="contributor-name">${esc(c.name)}</span>`;
+          const display = esc(c.name || c.handle);
+          const urlHtml = c.url
+            ? `<a href="${esc(c.url)}" class="contributor-site">${esc(c.url.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a>`
+            : '';
           const bioHtml = c.bio ? `<span class="contributor-bio">${esc(c.bio)}</span>` : '';
           return `<li class="contributor">
-            ${nameHtml}
+            <span class="contributor-name">${display}</span>
             <span class="contributor-handle">@${esc(c.handle)}</span>
+            ${urlHtml}
             ${bioHtml}
           </li>`;
         }).join('\n');
