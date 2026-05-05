@@ -16,11 +16,12 @@ import trafilatura
 def fetch_and_extract(url):
     downloaded = trafilatura.fetch_url(url)
     if downloaded is None:
-        return None, None, False
+        return None, None, None, False
     metadata = trafilatura.extract_metadata(downloaded)
-    text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
+    text  = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
     title = (metadata.title or '').strip() or None
-    return title, text, text is not None
+    date  = (metadata.date  or '').strip() or None
+    return title, date, text, text is not None
 
 
 def title_from_url(url):
@@ -56,18 +57,21 @@ def main():
     if type_ == 'resource':
         # Resources are third-party — store the link without fetching
         title = title_from_url(url)
+        pub_date = None
         text = None
         success = False
         print(f"Resource (no ingestion): {url}")
         print(f"  Title fallback: {title}")
     else:
         print(f"Ingesting: {url}")
-        title, text, success = fetch_and_extract(url)
+        title, pub_date, text, success = fetch_and_extract(url)
         if not title:
             title = title_from_url(url)
             print(f"  Title fallback from URL: {title}")
         else:
             print(f"  Title: {title}")
+        if pub_date:
+            print(f"  Published: {pub_date}")
         print(f"  Extraction: {'success' if success else 'failed (link-only)'}")
 
     slug = slugify(title, url, submitted_at)
@@ -79,6 +83,7 @@ def main():
         'submitted_at': submitted_at,
         'type': type_,
         'format': format_,
+        'published_at': pub_date,
         'description': description,
         'extraction_success': success,
         'extracted_text': text,

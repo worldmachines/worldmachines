@@ -121,12 +121,14 @@ def render_item(a):
     fmt    = a.get('format', 'essay')
     badge_class = 'badge-contribution' if type_ == 'contribution' else 'badge-resource'
     badge_label = fmt.title()
-    date        = fmt_date(a.get('submitted_at', ''))
-    desc        = a.get('description') or ''
-    title_html  = f'<a href="{url}">{title}</a>' if url else title
-    desc_html   = f'\n      <p class="article-description">{escape(desc)}</p>' if desc else ''
+    # Use published_at when available, fall back to submitted_at
+    date_iso   = a.get('published_at') or a.get('submitted_at', '')
+    date       = fmt_date(date_iso)
+    desc       = a.get('description') or ''
+    title_html = f'<a href="{url}">{title}</a>' if url else title
+    desc_html  = f'\n      <p class="article-description">{escape(desc)}</p>' if desc else ''
     return f'''\
-    <li class="article" data-date="{escape(a.get("submitted_at", ""))}" data-handle="{escape(a.get("handle") or "")}" data-format="{escape(fmt)}">
+    <li class="article" data-date="{escape(date_iso)}" data-handle="{escape(a.get("handle") or "")}" data-format="{escape(fmt)}">
       <div class="article-meta">
         <span class="badge {badge_class}">{badge_label}</span>
         <span>{date}</span>
