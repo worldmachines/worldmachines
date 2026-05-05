@@ -71,6 +71,7 @@ def main():
         'handle': handle,
         'submitted_at': submitted_at,
         'type': type_,
+        'format': 'essay',
         'description': description,
         'extraction_success': success,
         'extracted_text': text,
