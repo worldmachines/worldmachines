@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contributors — World Machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <main>
+    <section class="blurb">
+      <p>The people building the World Machines project.</p>
+    </section>
+    <ul class="contributors-list" id="contributors-list">
+      <li style="color:var(--muted);font-style:italic;list-style:none">Loading…</li>
+    </ul>
+  </main>
+
+  <script>
+    fetch('/api/contributors')
+      .then(r => r.json())
+      .then(({ contributors }) => {
+        const list = document.getElementById('contributors-list');
+        if (!contributors.length) {
+          list.innerHTML = '<li style="color:var(--muted);font-style:italic;list-style:none">No contributors yet.</li>';
+          return;
+        }
+        list.innerHTML = contributors.map(c => {
+          const nameHtml = c.url
+            ? `<a href="${esc(c.url)}" class="contributor-name">${esc(c.name)}</a>`
+            : `<span class="contributor-name">${esc(c.name)}</span>`;
+          const bioHtml = c.bio ? `<span class="contributor-bio">${esc(c.bio)}</span>` : '';
+          return `<li class="contributor">
+            ${nameHtml}
+            <span class="contributor-handle">@${esc(c.handle)}</span>
+            ${bioHtml}
+          </li>`;
+        }).join('\n');
+      });
+
+    function esc(s) {
+      return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+  </script>
+</body>
+</html>

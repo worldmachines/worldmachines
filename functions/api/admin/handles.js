@@ -1,23 +1,26 @@
-// GET  — list all email→handle entries
-// POST — add { email, handle }
+// GET    — list all contributors (without emails)
+// POST   — add/update { email, handle, name, url, bio }
 // DELETE — remove { email }
 //
 // Protected by Cloudflare Access at /admin/* (admin-only policy).
 
+function parseValue(raw) {
+  try { return JSON.parse(raw); } catch { return { handle: raw }; }
+}
+
 async function listHandles(env) {
   const listed = await env.HANDLES.list();
-  const handles = await Promise.all(
-    listed.keys.map(async ({ name }) => ({
-      email: name,
-      handle: await env.HANDLES.get(name),
-    }))
+  const rows = await Promise.all(
+    listed.keys.map(async ({ name: email }) => {
+      const data = parseValue(await env.HANDLES.get(email));
+      return { email, ...data };
+    })
   );
-  return handles.sort((a, b) => a.email.localeCompare(b.email));
+  return rows.sort((a, b) => (a.handle || '').localeCompare(b.handle || ''));
 }
 
 export async function onRequestGet({ env }) {
-  const handles = await listHandles(env);
-  return Response.json({ handles });
+  return Response.json({ handles: await listHandles(env) });
 }
 
 export async function onRequestPost({ request, env }) {
@@ -28,6 +31,9 @@ export async function onRequestPost({ request, env }) {
 
   const email  = (body.email  ?? '').trim().toLowerCase();
   const handle = (body.handle ?? '').trim();
+  const name   = (body.name   ?? '').trim();
+  const url    = (body.url    ?? '').trim() || null;
+  const bio    = (body.bio    ?? '').trim() || null;
 
   if (!email || !handle) {
     return Response.json({ error: 'email and handle are required' }, { status: 400 });
@@ -36,7 +42,7 @@ export async function onRequestPost({ request, env }) {
     return Response.json({ error: 'Invalid email' }, { status: 400 });
   }
 
-  await env.HANDLES.put(email, handle);
+  await env.HANDLES.put(email, JSON.stringify({ handle, name, url, bio }));
   return Response.json({ ok: true });
 }
 
@@ -47,9 +53,7 @@ export async function onRequestDelete({ request, env }) {
   }
 
   const email = (body.email ?? '').trim().toLowerCase();
-  if (!email) {
-    return Response.json({ error: 'email is required' }, { status: 400 });
-  }
+  if (!email) return Response.json({ error: 'email is required' }, { status: 400 });
 
   await env.HANDLES.delete(email);
   return Response.json({ ok: true });

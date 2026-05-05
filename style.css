@@ -131,6 +131,38 @@ main {
   font-style: italic;
 }
 
+/* Contributors list */
+
+.contributors-list { list-style: none; }
+
+.contributor {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+}
+.contributor:last-child { border-bottom: none; }
+
+.contributor-name {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+a.contributor-name:hover { color: var(--link); }
+
+.contributor-handle {
+  font-family: system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.contributor-bio {
+  font-family: system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 /* Submit form */
 
 .form-wrap {

@@ -21,9 +21,14 @@ export async function onRequestPost({ request, env }) {
     return Response.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const handle = await env.HANDLES.get(submitterEmail);
-  if (!handle) {
+  const raw = await env.HANDLES.get(submitterEmail);
+  if (!raw) {
     return Response.json({ error: 'Your account is not registered. Contact the site admin.' }, { status: 403 });
+  }
+  let handle;
+  try { handle = JSON.parse(raw).handle; } catch { handle = raw; }
+  if (!handle) {
+    return Response.json({ error: 'Handle not configured for this account.' }, { status: 403 });
   }
 
   let formData;

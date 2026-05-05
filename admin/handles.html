@@ -6,15 +6,15 @@
   <title>Manage Handles — World Machines</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-family: system-ui, sans-serif; font-size: 0.88rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-family: system-ui, sans-serif; font-size: 0.85rem; }
     th { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
-    td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); }
+    td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
     tr:last-child td { border-bottom: none; }
+    td.muted { color: var(--muted); font-style: italic; }
     .del-btn { background: none; border: 1px solid var(--border); color: var(--muted); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 3px; cursor: pointer; }
     .del-btn:hover { border-color: #991b1b; color: #991b1b; }
-    .add-row { display: flex; gap: 0.5rem; align-items: flex-end; flex-wrap: wrap; }
-    .add-row .field { margin: 0; flex: 1; min-width: 160px; }
-    .add-row button { white-space: nowrap; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
+    .grid .field { margin-bottom: 0.9rem; }
     .status { font-family: system-ui, sans-serif; font-size: 0.82rem; margin-top: 0.75rem; }
     .status.ok  { color: #065f46; }
     .status.err { color: #991b1b; }
@@ -23,31 +23,43 @@
 <body>
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
-    <p class="tagline">Admin — handle registry</p>
+    <p class="tagline">Admin — contributor registry</p>
   </header>
 
   <div class="form-wrap">
-    <h2>Email → Handle registry</h2>
-    <p class="form-intro">Maps approved collaborator emails to their public handles. Add an entry here <em>and</em> add the email to the Cloudflare Access policy for <code>/submit</code>.</p>
+    <h2>Contributor registry</h2>
+    <p class="form-intro">Maps emails to contributor handles and profile info. Add entries here <em>and</em> add the email to the Cloudflare Access policy for <code>/submit</code>.</p>
 
     <table id="handles-table">
-      <thead><tr><th>Email</th><th>Handle</th><th></th></tr></thead>
-      <tbody id="handles-body"><tr><td colspan="3" style="color:var(--muted);font-style:italic">Loading…</td></tr></tbody>
+      <thead><tr><th>Email</th><th>Handle</th><th>Name</th><th>URL</th><th>Bio</th><th></th></tr></thead>
+      <tbody id="handles-body"><tr><td colspan="6" style="color:var(--muted);font-style:italic">Loading…</td></tr></tbody>
     </table>
 
-    <h3 style="font-size:1rem;font-weight:normal;margin-bottom:1rem">Add entry</h3>
+    <h3 style="font-size:1rem;font-weight:normal;margin-bottom:1rem">Add / update entry</h3>
     <form id="add-form" novalidate>
-      <div class="add-row">
+      <div class="grid">
         <div class="field">
-          <label for="new-email">Email</label>
-          <input type="email" id="new-email" name="email" placeholder="collaborator@example.com" required>
+          <label for="new-email">Email <span style="color:#991b1b">*</span></label>
+          <input type="email" id="new-email" name="email" placeholder="contributor@example.com" required>
         </div>
         <div class="field">
-          <label for="new-handle">Handle</label>
+          <label for="new-handle">Handle <span style="color:#991b1b">*</span></label>
           <input type="text" id="new-handle" name="handle" placeholder="theirhandle" required>
         </div>
-        <button type="submit">Add</button>
+        <div class="field">
+          <label for="new-name">Full name</label>
+          <input type="text" id="new-name" name="name" placeholder="First Last">
+        </div>
+        <div class="field">
+          <label for="new-url">Site URL</label>
+          <input type="url" id="new-url" name="url" placeholder="https://their.site">
+        </div>
+        <div class="field" style="grid-column: span 2">
+          <label for="new-bio">Bio <span class="optional">(short — shown on contributors page)</span></label>
+          <input type="text" id="new-bio" name="bio" placeholder="their.site or a brief description">
+        </div>
       </div>
+      <button type="submit">Save</button>
     </form>
     <div class="status" id="status"></div>
   </div>
@@ -62,6 +74,10 @@
       if (ok) setTimeout(() => { status.textContent = ''; status.className = 'status'; }, 3000);
     }
 
+    function esc(s) {
+      return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
     async function load() {
       const res = await fetch('/api/admin/handles');
       const { handles, error } = await res.json();
@@ -69,16 +85,19 @@
 
       tbody.innerHTML = '';
       if (!handles.length) {
-        tbody.innerHTML = '<tr><td colspan="3" style="color:var(--muted);font-style:italic">No entries yet.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" style="color:var(--muted);font-style:italic">No entries yet.</td></tr>';
         return;
       }
-      for (const { email, handle } of handles) {
+      for (const h of handles) {
         const tr = document.createElement('tr');
-        tr.dataset.email = email;
+        const urlCell = h.url ? `<a href="${esc(h.url)}" target="_blank">${esc(h.url)}</a>` : '<span class="muted">—</span>';
         tr.innerHTML = `
-          <td>${esc(email)}</td>
-          <td>${esc(handle)}</td>
-          <td><button class="del-btn" data-email="${esc(email)}">Remove</button></td>`;
+          <td>${esc(h.email)}</td>
+          <td><strong>${esc(h.handle)}</strong></td>
+          <td>${esc(h.name) || '<span class="muted">—</span>'}</td>
+          <td style="font-size:0.8rem">${urlCell}</td>
+          <td>${esc(h.bio) || '<span class="muted">—</span>'}</td>
+          <td><button class="del-btn" data-email="${esc(h.email)}">Remove</button></td>`;
         tbody.appendChild(tr);
       }
     }
@@ -103,20 +122,19 @@
       e.preventDefault();
       const email  = document.getElementById('new-email').value.trim();
       const handle = document.getElementById('new-handle').value.trim();
-      if (!email || !handle) return;
+      const name   = document.getElementById('new-name').value.trim();
+      const url    = document.getElementById('new-url').value.trim();
+      const bio    = document.getElementById('new-bio').value.trim();
+      if (!email || !handle) { setStatus('Email and handle are required', false); return; }
       const res = await fetch('/api/admin/handles', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, handle }),
+        body: JSON.stringify({ email, handle, name, url, bio }),
       });
       const data = await res.json();
-      if (res.ok) { setStatus(`Added ${handle} → ${email}`, true); e.target.reset(); load(); }
+      if (res.ok) { setStatus(`Saved ${handle} (${email})`, true); e.target.reset(); load(); }
       else setStatus(data.error || 'Failed', false);
     });
-
-    function esc(s) {
-      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-    }
 
     load();
   </script>
