@@ -1,27 +1,47 @@
 # Status — worldmachines
 
 ## Active
-- Testing end-to-end submission pipeline with initial collaborators
+- Site live and taking submissions at worldmachines.org
+- 60 articles in content/articles/ (22 contributions, 38 resources/books)
 
 ## Upcoming
 
 ### Near-term
-- **Batch populate from spreadsheet** — write a script that reads a CSV/spreadsheet of existing links and fires `repository_dispatch` for each, or writes article JSONs directly and runs `build.py`
-- **Update site blurb** — the tagline/description on the index page needs proper copy explaining what world machines theory is and what this site is for
-- **Add URL + bio to handle registry** — extend the KV value (or use a separate KV key) to store each contributor's personal URL and short bio alongside their handle; update `/admin/handles` form to capture these fields
-- **Contributors page** — `worldmachines.org/contributors` listing all handles with their bio and URL, each linking to a filtered view of their submissions (or an anchor in the article list)
+- **Add /profile + /api/profile to Cloudflare Access policy** — manual step in Zero Trust dashboard; currently these endpoints exist but are unprotected
+- **Fix incorrect book publication dates** — 7 books got edition/translation dates from Open Library rather than true first-publication years. Manual fix needed:
+  - Divine Comedy: 2015 → ~1308
+  - Don Quixote: 1747 → 1605
+  - Revolt of the Masses: 2021 → 1930
+  - Monkey King: Journey to the West: 2012 → ~1592
+  - Candide: 1746 → 1759
+  - The Complete Essays (Montaigne): 1958 → 1580
+  - A Distant Mirror: 1600 → 1978
+- **Add dates for 7 books not found by Open Library** — Ibn Khaldun: An Intellectual Biography, Islamic Gunpowder Empires, Majapahit, Raiders Rulers and Traders, The Chivalric Turn, The Printing Revolution in Early Modern Europe, Venice: A New History
+- **Update site blurb** — blurbs.md could use richer prose explaining world machines theory
 
 ### Later
 - Article detail pages — surface extracted full text for reading on-site
-- Filtering/search by type (Contribution vs Resource) or contributor
-- AI backend layer — use stored full text for analysis, synthesis, modeling
+- Oracle page — AI backend layer using stored full text for analysis, synthesis, modeling
+- Filtering/search by contributor or format
 - Consider pagination or grouping as article count grows
 - Add www → worldmachines.org redirect
 
 ## Done
+
+- **2026-05-04** — Backfilled first-publication years for 31/38 books via Open Library API (`scripts/backfill_book_dates.py`)
+- **2026-05-04** — Backfilled actual publication dates for all 22 essay/contribution articles via trafilatura (`scripts/backfill_dates.py`)
+- **2026-05-04** — Split `type` (contribution|resource) from `format` (essay|short story|paper|book); added format dropdown to submit form
+- **2026-05-04** — Moved contributions off front page to `/contributions`; renamed bibliography to `/resources`; front page is now blurb-only landing page
+- **2026-05-04** — Standalone `/profile` page for editing name/url/bio (handle+email readonly); linked from submit page greeting
+- **2026-05-04** — Submit page: greets submitter by name after Access login; "Edit profile" link
+- **2026-05-04** — Contributors page: links website instead of name
+- **2026-05-04** — Comprehensive CSS style overhaul; nav visually attached to header as one block
+- **2026-05-04** — KV value format upgraded from plain handle string to JSON `{handle, name, url, bio}`
+- **2026-05-04** — Oracle page stub added to nav
+- **2026-05-04** — Batch-populated 60 articles from spreadsheet data (books as resources, essays as contributions)
 - **2026-05-04** — Contributors added to handle registry via `/admin/handles` web UI
 - **2026-05-04** — Full pipeline live and tested end-to-end (form → Access → Function → GH Actions → Pages deploy)
-- **2026-05-04** — Handle registry: email→handle KV lookup replaces name field on submit form; `/admin/handles` web UI (Access-protected, admin-only)
+- **2026-05-04** — Handle registry: email→{handle,name,url,bio} KV lookup; `/admin/handles` web UI (Access-protected, admin-only)
 - **2026-05-04** — Cloudflare Access: `/submit` + `/api/submit` gated for approved collaborators; `/admin*` gated for admin only
 - **2026-05-04** — Custom domain worldmachines.org live on Cloudflare Pages
 - **2026-05-04** — GitHub org at github.com/worldmachines, repo worldmachines/worldmachines
