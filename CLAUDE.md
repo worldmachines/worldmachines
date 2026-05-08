@@ -1,5 +1,7 @@
 # worldmachines
 
+> **All contributors — including AI agents — must read [`CONTRIBUTING.md`](CONTRIBUTING.md) before making any changes to this repository.**
+
 Collaborative project to develop psychohistorical models based on Venkatesh Rao's world machines theory.
 
 The repository is organized into three collaboration zones:
