@@ -18,21 +18,23 @@ jobs:
           python-version: '3.12'
           cache: pip
 
-      - run: pip install -r requirements.txt
+      - run: pip install -r website/requirements.txt
 
       - name: Ingest article
+        working-directory: website
         env:
           SUBMISSION_PAYLOAD: ${{ toJson(github.event.client_payload) }}
         run: python scripts/ingest.py
 
       - name: Build site
+        working-directory: website
         run: python scripts/build.py
 
       - name: Commit and push
         run: |
           git config user.name  "worldmachines-bot"
           git config user.email "bot@worldmachines.org"
-          git add content/articles/ index.html
+          git add website/content/articles/ website/*.html
           git diff --staged --quiet && echo "Nothing to commit" && exit 0
           git commit -m "Add: ${{ github.event.client_payload.url }}"
           git push
@@ -41,6 +43,7 @@ jobs:
         run: npm install -g wrangler
 
       - name: Deploy to Cloudflare Pages
+        working-directory: website
         run: wrangler pages deploy . --project-name worldmachines --commit-dirty=true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

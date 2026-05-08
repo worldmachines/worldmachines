@@ -1,0 +1,73 @@
+name: Approval Policy
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review, review_submitted]
+
+permissions:
+  pull-requests: read
+  contents: read
+
+jobs:
+  approval-policy:
+    name: approval-policy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check path-specific approval policy
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull_number = context.payload.pull_request.number;
+
+            const websiteOwner = 'vgururao';
+            const wikiApprovers = new Set(['aneeshsathe', 'florianlohse', 'KyleAMathews', 'vgururao'].map(s => s.toLowerCase()));
+
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner,
+              repo,
+              pull_number,
+              per_page: 100,
+            });
+
+            const paths = files.map(file => file.filename);
+            const touchesWebsite = paths.some(path => path.startsWith('website/'));
+            const touchesWiki = paths.some(path => path.startsWith('wiki/'));
+
+            if (!touchesWebsite && !touchesWiki) {
+              core.info('No website/ or wiki/ changes; no special approval required.');
+              return;
+            }
+
+            const reviews = await github.paginate(github.rest.pulls.listReviews, {
+              owner,
+              repo,
+              pull_number,
+              per_page: 100,
+            });
+
+            // Keep only the latest review state per reviewer. GitHub review states include
+            // APPROVED, CHANGES_REQUESTED, COMMENTED, and DISMISSED.
+            const latestReviewByUser = new Map();
+            for (const review of reviews) {
+              if (!review.user || !review.user.login) continue;
+              latestReviewByUser.set(review.user.login.toLowerCase(), review.state);
+            }
+
+            const approvedBy = login => latestReviewByUser.get(login.toLowerCase()) === 'APPROVED';
+            const wikiApproved = [...wikiApprovers].some(login => approvedBy(login));
+
+            const failures = [];
+            if (touchesWebsite && !approvedBy(websiteOwner)) {
+              failures.push('website/ changes require approval from @vgururao.');
+            }
+            if (touchesWiki && !wikiApproved) {
+              failures.push('wiki/ changes require approval from a repo owner/admin: @aneeshsathe, @florianlohse, @KyleAMathews, or @vgururao.');
+            }
+
+            if (failures.length) {
+              core.setFailed(failures.join('\n'));
+            } else {
+              core.info('Required path-specific approvals are present.');
+            }

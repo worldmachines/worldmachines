@@ -2,7 +2,8 @@
 
 ## Active
 - Site live and taking submissions at worldmachines.org
-- 60 articles in content/articles/ (22 contributions, 38 resources/books)
+- 60 articles in website/content/articles/ (22 contributions, 38 resources/books)
+- Repo reorganized into raw-notes/, wiki/, and website/ collaboration zones
 
 ## Upcoming
 
@@ -27,6 +28,7 @@
 
 ## Done
 
+- **2026-05-07** — Reorganized repo into `raw-notes/`, `wiki/`, and `website/`; moved Cloudflare Pages app under `website/`; added CODEOWNERS/review-policy docs
 - **2026-05-04** — Added /profile + /api/profile to Cloudflare Access policy (collaborator email allowlist); tested working
 - **2026-05-04** — Backfilled first-publication years for 31/38 books via Open Library API (`scripts/backfill_book_dates.py`)
 - **2026-05-04** — Backfilled actual publication dates for all 22 essay/contribution articles via trafilatura (`scripts/backfill_dates.py`)

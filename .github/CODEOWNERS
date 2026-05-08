@@ -1,0 +1,18 @@
+# Review ownership for repository zones.
+# CODEOWNERS documents ownership and auto-requests reviewers on PRs.
+# It does not grant or restrict push permission by itself.
+# For this high-trust repo, collaborators may push directly to their own raw-notes directory by convention.
+# Website and wiki changes should go through PR review.
+
+# Public website: changes must be made by PR and approved by Venkat.
+/website/ @vgururao
+
+# Shared wiki: AI-generated or human PRs may be approved by any repo owner/admin.
+/wiki/ @aneeshsathe @florianlohse @KyleAMathews @vgururao
+
+# Raw notes: each collaborator owns their own scratch space.
+/raw-notes/anish/ @aneeshsathe
+/raw-notes/florian/ @florianlohse
+/raw-notes/kyle/ @KyleAMathews
+/raw-notes/venkat/ @vgururao
+
