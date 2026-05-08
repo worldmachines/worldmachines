@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devlog — World Machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+  </nav>
+  <main>
+  <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
+  <div class="devlog">
+  <article class="devlog-entry">
+    <div class="devlog-meta">8 May 2026 · vgr</div>
+    <p>Governance and tooling session. Reviewed and merged Kyle's repo restructure PR; resolved a ruleset conflict where the hard PR-gate was blocking the ingest bot, settling on soft governance (CODEOWNERS and <code>approval-policy</code> workflow active but advisory). Added this devlog page and a <code>devlog-check</code> workflow to flag non-trivial commits that skip the log.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">7 May 2026 · kyle</div>
+    <p>Reorganized the repository for multi-person collaboration. Three zones now: <code>raw-notes/</code> for per-collaborator working notes, <code>wiki/</code> for the shared AI-organized knowledge layer, and <code>website/</code> for the public site. Added CODEOWNERS and an <code>approval-policy</code> workflow enforcing zone-specific review requirements (website PRs need Venkat; wiki PRs need any admin; raw-notes are self-owned).</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">4 May 2026 · vgr</div>
+    <p>Metadata backfill. Recovered publication dates for all 22 essays via trafilatura URL extraction, and first-publication years for 31 of 38 books via the Open Library API. Seven books still need manual correction — the API returned edition or translation dates rather than original publication years.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">4 May 2026 · vgr</div>
+    <p>Site structure and contributor tooling. Split content into a blurb landing page, <code>/contributions</code> for member essays, and <code>/resources</code> for the curated reading list. Added self-service <code>/profile</code> editing, a <code>/theory</code> introduction page, and a comprehensive CSS overhaul. Batch-loaded all 60 articles (22 contributions, 38 resources/books).</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">4 May 2026 · vgr</div>
+    <p>Project launch. Stood up the full pipeline: Cloudflare Pages hosting at worldmachines.org, Access email-OTP gate for contributors, Pages Functions backed by KV for the handle registry, and GitHub Actions ingest (trafilatura text extraction → build.py HTML generation → Pages deploy).</p>
+  </article>
+  </div>
+  </main>
+  <!-- built: 2026-05-08T17:48:54Z -->
+</body>
+</html>

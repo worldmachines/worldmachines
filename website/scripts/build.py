@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Reads content/articles/*.json and regenerates index.html, contributions.html,
-and resources.html. Run locally or as part of the GitHub Actions ingest pipeline.
+Reads content/articles/*.json and devlog.md, then regenerates index.html,
+contributions.html, resources.html, and devlog.html.
+Run locally or as part of the GitHub Actions ingest pipeline.
 """
 import json
 import re
@@ -11,6 +12,7 @@ from pathlib import Path
 
 ARTICLES_DIR = Path('content/articles')
 BLURBS_FILE  = Path('blurbs.md')
+DEVLOG_FILE  = Path('devlog.md')
 
 
 NAV = '''\
@@ -19,6 +21,7 @@ NAV = '''\
     <a href="/contributions">Contributions</a>
     <a href="/resources">Resources</a>
     <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
     <a href="/oracle">Oracle</a>
   </nav>'''
 
@@ -218,11 +221,79 @@ def build_resources(articles):
     print(f'Built resources.html — {len(items)} resource(s)')
 
 
+def parse_devlog():
+    if not DEVLOG_FILE.exists():
+        return []
+    text = DEVLOG_FILE.read_text(encoding='utf-8')
+    entries = []
+    for chunk in re.split(r'^## ', text, flags=re.MULTILINE):
+        chunk = chunk.strip()
+        if not chunk:
+            continue
+        lines = chunk.split('\n', 1)
+        header = lines[0].strip()
+        body = lines[1].strip() if len(lines) > 1 else ''
+        if '[trivial]' in header.lower():
+            continue
+        m = re.match(r'(\d{4}-\d{2}-\d{2})\s*[·•\-]\s*(\S+)', header)
+        if not m:
+            continue
+        entries.append({'date': m.group(1), 'handle': m.group(2), 'body': body})
+    return entries
+
+
+def render_devlog_body(text):
+    paras = []
+    for para in text.split('\n\n'):
+        para = para.strip()
+        if not para:
+            continue
+        para = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', para)
+        para = re.sub(r'`([^`]+)`', r'<code>\1</code>', para)
+        para = re.sub(r'_([^_]+)_', r'<em>\1</em>', para)
+        paras.append(f'    <p>{para}</p>')
+    return '\n'.join(paras)
+
+
+def render_devlog_entry(entry):
+    try:
+        dt = datetime.strptime(entry['date'], '%Y-%m-%d')
+        date_display = dt.strftime('%-d %B %Y')
+    except Exception:
+        date_display = entry['date']
+    body_html = render_devlog_body(entry['body'])
+    return (
+        f'  <article class="devlog-entry">\n'
+        f'    <div class="devlog-meta">{date_display} · {escape(entry["handle"])}</div>\n'
+        f'{body_html}\n'
+        f'  </article>'
+    )
+
+
+def build_devlog():
+    entries = parse_devlog()
+    if entries:
+        items_html = '\n'.join(render_devlog_entry(e) for e in entries)
+        body = (
+            '  <p class="devlog-intro">A running log of non-trivial changes, '
+            'maintained by contributors.</p>\n'
+            '  <div class="devlog">\n'
+            f'{items_html}\n'
+            '  </div>'
+        )
+    else:
+        body = '  <p class="empty-state">No devlog entries yet.</p>'
+    html = page_shell('Devlog', NAV, body)
+    Path('devlog.html').write_text(html, encoding='utf-8')
+    print(f'Built devlog.html — {len(entries)} entry/entries')
+
+
 def build():
     articles = load_articles()
     build_index(articles)
     build_contributions(articles)
     build_resources(articles)
+    build_devlog()
 
 
 if __name__ == '__main__':

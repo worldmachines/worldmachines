@@ -295,6 +295,44 @@ input[readonly]:focus { outline: none; border-color: var(--border); }
   margin-bottom: 1rem;
 }
 
+/* ─── Devlog ─────────────────────────────────────────────────── */
+
+.devlog-intro {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.devlog-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.devlog-entry:last-child { border-bottom: none; }
+
+.devlog-meta {
+  font-family: system-ui, sans-serif;
+  font-size: 0.73rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.devlog-entry p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 0.6rem;
+  color: #2a2a2a;
+}
+.devlog-entry p:last-child { margin-bottom: 0; }
+
+.devlog-entry code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+  background: #f0ede8;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
 /* ─── Forms ──────────────────────────────────────────────────── */
 
 .form-wrap h2 {

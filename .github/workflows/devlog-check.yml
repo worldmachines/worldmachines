@@ -1,0 +1,53 @@
+name: Devlog check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  devlog-check:
+    name: devlog-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check devlog update
+        env:
+          EVENT: ${{ github.event_name }}
+          ACTOR: ${{ github.actor }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          # Ingest bot pushes directly and is exempt
+          if [ "$ACTOR" = "github-actions[bot]" ]; then
+            echo "Ingest bot commit — exempt from devlog check."
+            exit 0
+          fi
+
+          if [ "$EVENT" = "pull_request" ]; then
+            CHANGED=$(git diff --name-only "origin/$BASE_REF"...HEAD)
+            MESSAGES=$(git log --format=%s "origin/$BASE_REF"...HEAD)
+          else
+            CHANGED=$(git diff --name-only HEAD~1 HEAD)
+            MESSAGES=$(git log --format=%s -1)
+          fi
+
+          echo "Changed files:"
+          echo "$CHANGED"
+
+          if echo "$CHANGED" | grep -q "^website/devlog\.md$"; then
+            echo "Devlog updated — OK."
+            exit 0
+          fi
+
+          if echo "$MESSAGES" | grep -qi '\[trivial\]'; then
+            echo "Commit(s) marked [trivial] — OK."
+            exit 0
+          fi
+
+          echo "::error::Non-trivial change detected but website/devlog.md was not updated."
+          echo "Prepend an entry to website/devlog.md, or add [trivial] to your commit message for trivial changes."
+          exit 1
