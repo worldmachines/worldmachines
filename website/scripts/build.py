@@ -23,6 +23,7 @@ NAV = '''\
     <a href="/contributors">Contributors</a>
     <a href="/devlog">Devlog</a>
     <a href="/oracle">Oracle</a>
+    <a href="https://worldmachines.zulipchat.com">Project Chat</a>
   </nav>'''
 
 
