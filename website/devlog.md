@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-05-09 · anish
+Added a "Project Chat" link to the site nav pointing to the Zulip server (`worldmachines.zulipchat.com`), so contributors can find the chat from any page.
+
 ## 2026-05-08 · vgr
 Governance and tooling session. Reviewed and merged Kyle's repo restructure PR; resolved a ruleset conflict where the hard PR-gate was blocking the ingest bot, settling on soft governance (CODEOWNERS and `approval-policy` workflow active but advisory). Added this devlog page and a `devlog-check` workflow to flag non-trivial commits that skip the log.
 
