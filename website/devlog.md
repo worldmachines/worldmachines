@@ -5,7 +5,7 @@
   instead of writing an entry here.
 -->
 
-## 2026-05-09 · anish
+## 2026-05-09 · aneesh
 Added a "Project Chat" link to the site nav pointing to the Zulip server (`worldmachines.zulipchat.com`), so contributors can find the chat from any page.
 
 ## 2026-05-08 · vgr

@@ -16,7 +16,7 @@ Queried GitHub repo collaborators / org members for `worldmachines/worldmachines
 
 | Person | GitHub username | Raw notes directory |
 | --- | --- | --- |
-| Anish / Aneesh | `@aneeshsathe` | `anish/` |
+| Aneesh | `@aneeshsathe` | `aneesh/` |
 | Florian | `@florianlohse` | `florian/` |
 | Kyle | `@KyleAMathews` | `kyle/` |
 | Venkat | `@vgururao` | `venkat/` |
@@ -26,7 +26,7 @@ Queried GitHub repo collaborators / org members for `worldmachines/worldmachines
 
 ## Directories
 
-- `anish/`
+- `aneesh/`
 - `florian/`
 - `ivo/`
 - `kyle/`

@@ -20,7 +20,7 @@ Live site: **worldmachines.org**.
 - Notes can be rough, idiosyncratic, incomplete, and written for future AI organization.
 - Suggested note format: Markdown, short files, descriptive filenames, links/citations when available.
 - Current directories:
-  - `raw-notes/anish/`
+  - `raw-notes/aneesh/`
   - `raw-notes/florian/`
   - `raw-notes/ivo/`
   - `raw-notes/kyle/`
