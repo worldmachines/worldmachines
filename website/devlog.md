@@ -6,7 +6,7 @@
 -->
 
 ## 2026-05-14 · vgr
-Promoted Aneesh's Oracle preview to `/oracle` — the stub is now the live RAG interface. `/notes` redirects to `/oracle`. Oracle is public (no auth gate). Nav updated to include Devlog.
+Promoted Aneesh's Oracle preview to `/oracle` — the stub is now the live RAG interface. `/notes` redirects to `/oracle`. Oracle is public (no auth gate). Nav updated to include Devlog. Also merged PR #9 (Oracle infrastructure): created R2 bucket `worldmachines-notes`, applied Pages R2+AI bindings, set up `CF_AI_TOKEN`/`CF_R2_TOKEN` GitHub secrets, ran first notes-ingest (743 notes embedded). Added two raw notes: Prime Radiant and Stigmergic-Verbose Cycle. Opened issue #10 proposing wiki generation pipeline.
 
 ## 2026-05-12 · aneesh
 Working Oracle preview at `/notes`: a personal-notes Parquet on R2 with EmbeddingGemma-300M vectors per row, in-browser DuckDB-WASM does cosine-similarity retrieval, Gemma-4-26B answers via a Pages Function — single-voice Oracle output, no citations. `tools/notes-pipeline/` uv project builds the parquet (single- or multi-contributor mode). A new `notes-ingest` GitHub workflow rebuilds and uploads the parquet on every push to `raw-notes/`. ADR at `wiki/decisions/0001-notes-oracle-architecture.md`. Page is unlinked from site nav and not at `/oracle` — that stub stays until Venkat reviews.

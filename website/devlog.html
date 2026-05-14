@@ -24,6 +24,14 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">14 May 2026 · vgr</div>
+    <p>Promoted Aneesh's Oracle preview to <code>/oracle</code> — the stub is now the live RAG interface. <code>/notes</code> redirects to <code>/oracle</code>. Oracle is public (no auth gate). Nav updated to include Devlog. Also merged PR #9 (Oracle infrastructure): created R2 bucket <code>worldmachines-notes</code>, applied Pages R2+AI bindings, set up <code>CF<em>AI</em>TOKEN</code>/<code>CF<em>R2</em>TOKEN</code> GitHub secrets, ran first notes-ingest (743 notes embedded). Added two raw notes: Prime Radiant and Stigmergic-Verbose Cycle. Opened issue #10 proposing wiki generation pipeline.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">12 May 2026 · aneesh</div>
+    <p>Working Oracle preview at <code>/notes</code>: a personal-notes Parquet on R2 with EmbeddingGemma-300M vectors per row, in-browser DuckDB-WASM does cosine-similarity retrieval, Gemma-4-26B answers via a Pages Function — single-voice Oracle output, no citations. <code>tools/notes-pipeline/</code> uv project builds the parquet (single- or multi-contributor mode). A new <code>notes-ingest</code> GitHub workflow rebuilds and uploads the parquet on every push to <code>raw-notes/</code>. ADR at <code>wiki/decisions/0001-notes-oracle-architecture.md</code>. Page is unlinked from site nav and not at <code>/oracle</code> — that stub stays until Venkat reviews.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">9 May 2026 · aneesh</div>
     <p>Added a "Project Chat" link to the site nav pointing to the Zulip server (<code>worldmachines.zulipchat.com</code>), so contributors can find the chat from any page.</p>
   </article>
@@ -49,6 +57,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-05-12T07:32:35Z -->
+  <!-- built: 2026-05-14T19:57:22Z -->
 </body>
 </html>
