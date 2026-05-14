@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "worldmachines",
+  "compatibility_date": "2026-05-12",
+  "pages_build_output_dir": ".",
+  "r2_buckets": [
+    {
+      "binding": "NOTES",
+      "bucket_name": "worldmachines-notes"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  }
+}

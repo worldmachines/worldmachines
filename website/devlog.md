@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-05-12 · aneesh
+Working Oracle preview at `/notes`: a personal-notes Parquet on R2 with EmbeddingGemma-300M vectors per row, in-browser DuckDB-WASM does cosine-similarity retrieval, Gemma-4-26B answers via a Pages Function — single-voice Oracle output, no citations. `tools/notes-pipeline/` uv project builds the parquet (single- or multi-contributor mode). A new `notes-ingest` GitHub workflow rebuilds and uploads the parquet on every push to `raw-notes/`. ADR at `wiki/decisions/0001-notes-oracle-architecture.md`. Page is unlinked from site nav and not at `/oracle` — that stub stays until Venkat reviews.
+
 ## 2026-05-09 · aneesh
 Added a "Project Chat" link to the site nav pointing to the Zulip server (`worldmachines.zulipchat.com`), so contributors can find the chat from any page.
 

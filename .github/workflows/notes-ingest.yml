@@ -1,0 +1,59 @@
+# Rebuild the Oracle's Parquet from raw-notes/ and upload it to R2.
+#
+# Triggers:
+#   - Any push to main that touches raw-notes/ (including merges via PR).
+#   - Manual workflow_dispatch — use this to backfill or to re-embed after a
+#     model change without a notes commit.
+#
+# Required GitHub secrets (Settings -> Secrets and variables -> Actions):
+#   CF_AI_TOKEN            — Cloudflare API token with Workers AI: Read
+#   CF_R2_TOKEN            — Cloudflare API token with Workers R2 Storage: Edit
+#   CLOUDFLARE_ACCOUNT_ID  — already used by ingest.yml; reused here
+#
+# The two AI/R2 tokens are scoped narrowly on purpose; do not consolidate.
+
+name: Ingest raw notes to R2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'raw-notes/**'
+      - 'tools/notes-pipeline/**'
+      - '.github/workflows/notes-ingest.yml'
+  workflow_dispatch:
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          version: '0.6.x'
+
+      - name: Build parquet with embeddings
+        working-directory: tools/notes-pipeline
+        env:
+          CF_AI_TOKEN: ${{ secrets.CF_AI_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          uv sync
+          uv run python notes_to_parquet.py \
+            "$GITHUB_WORKSPACE/raw-notes" \
+            "$GITHUB_WORKSPACE/notes.parquet" \
+            --multi-contributor \
+            --embed
+
+      - name: Upload to R2
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_R2_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx --yes wrangler@4 r2 object put \
+            worldmachines-notes/notes.parquet \
+            --file "$GITHUB_WORKSPACE/notes.parquet" \
+            --content-type application/vnd.apache.parquet \
+            --remote

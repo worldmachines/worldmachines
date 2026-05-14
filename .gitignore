@@ -3,3 +3,14 @@
 .wrangler/
 .opentrace/
 .opentrace-index.log
+
+# Node deps (wrangler installed via npm at repo root). package.json /
+# package-lock.json get committed; node_modules does not.
+node_modules/
+
+# Local test parquet exports of personal notes (do not commit).
+website/notes-data/
+notes.parquet
+
+# uv-managed tool venvs.
+tools/**/.venv/

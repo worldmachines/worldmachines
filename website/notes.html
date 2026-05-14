@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oracle (preview) — World Machines</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .oracle-shell { max-width: var(--max-width); margin: 1.5rem auto; }
+    .oracle-lede {
+      font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .oracle-status {
+      font-family: system-ui, sans-serif; font-size: 0.78rem; color: var(--muted);
+      min-height: 1.2em; margin-bottom: 0.6rem;
+    }
+    .oracle-status.err { color: #a23; }
+
+    #question {
+      width: 100%; min-height: 4rem; padding: 0.7rem 0.85rem;
+      font: 1rem Georgia, 'Times New Roman', serif;
+      border: 1px solid var(--border); border-radius: 3px; background: #fff;
+      resize: vertical;
+    }
+    .ask-row { display: flex; gap: 0.6rem; align-items: center; margin-top: 0.55rem; }
+    .ask-btn {
+      font: inherit; font-family: system-ui, sans-serif;
+      font-weight: 500; font-size: 0.88rem;
+      background: var(--text); color: var(--bg); border: none;
+      padding: 0.45rem 1.1rem; border-radius: 3px; cursor: pointer;
+    }
+    .ask-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .ask-hint {
+      font-family: system-ui, sans-serif; font-size: 0.75rem; color: var(--muted);
+    }
+
+    .answer {
+      margin-top: 1.4rem; padding: 1.1rem 1.2rem;
+      background: #fdfcf8; border-left: 3px solid #c9b88a;
+      font-size: 1rem; line-height: 1.7; white-space: pre-wrap;
+      min-height: 1em;
+    }
+    .answer:empty { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://worldmachines.zulipchat.com">Project Chat</a>
+  </nav>
+
+  <main class="oracle-shell">
+    <p class="oracle-lede">
+      A draft Oracle drawing on the project wiki. Preview only — the official <a href="/oracle">Oracle</a> remains a stub until reviewed.
+    </p>
+    <p class="oracle-status" id="status">Loading…</p>
+
+    <textarea id="question" spellcheck="true" placeholder="Ask the Oracle…"></textarea>
+    <div class="ask-row">
+      <button class="ask-btn" id="ask" disabled>Ask</button>
+      <span class="ask-hint">Cmd/Ctrl + Enter to submit</span>
+    </div>
+    <div class="answer" id="answer"></div>
+  </main>
+
+  <script type="module">
+    import * as duckdb from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.29.0/+esm';
+
+    const PARQUET_URL = '/api/notes-parquet';
+    const EMBED_URL = '/api/embed';
+    const CHAT_URL = '/api/chat';
+    const TOP_K = 6;
+    const CHUNK_BODY_CHARS = 1800;
+
+    const $ = (id) => document.getElementById(id);
+    const statusEl = $('status');
+    const askBtn = $('ask');
+    const questionEl = $('question');
+    const answerEl = $('answer');
+
+    const setStatus = (msg, isErr = false) => {
+      statusEl.textContent = msg;
+      statusEl.classList.toggle('err', !!isErr);
+    };
+
+    let conn;
+
+    async function boot() {
+      const bundles = duckdb.getJsDelivrBundles();
+      const bundle = await duckdb.selectBundle(bundles);
+      const workerUrl = URL.createObjectURL(
+        new Blob([`importScripts("${bundle.mainWorker}");`], { type: 'text/javascript' })
+      );
+      const worker = new Worker(workerUrl);
+      const logger = new duckdb.ConsoleLogger();
+      const db = new duckdb.AsyncDuckDB(logger, worker);
+      await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
+      URL.revokeObjectURL(workerUrl);
+
+      await db.registerFileURL(
+        'notes.parquet',
+        new URL(PARQUET_URL, window.location.href).toString(),
+        duckdb.DuckDBDataProtocol.HTTP,
+        false,
+      );
+      conn = await db.connect();
+      await conn.query(`CREATE OR REPLACE VIEW notes AS SELECT * FROM read_parquet('notes.parquet');`);
+      setStatus('Ready.');
+      askBtn.disabled = false;
+    }
+
+    async function embedQuestion(text) {
+      const r = await fetch(EMBED_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text }),
+      });
+      if (!r.ok) throw new Error(`embed: ${r.status}`);
+      const { embedding } = await r.json();
+      return embedding;
+    }
+
+    async function retrieveChunks(embedding) {
+      const lit = '[' + embedding.map((v) => v.toFixed(6)).join(',') + ']::FLOAT[]';
+      const sql = `
+        SELECT title, slug, body, category,
+               list_cosine_similarity(embedding, ${lit}) AS sim
+        FROM notes
+        WHERE NOT excluded_from_oracle
+        ORDER BY sim DESC
+        LIMIT ${TOP_K}
+      `;
+      const result = await conn.query(sql);
+      return result.toArray().map((r) => ({
+        title: r.title,
+        slug: r.slug,
+        body: String(r.body || '').slice(0, CHUNK_BODY_CHARS),
+      }));
+    }
+
+    async function streamChat(question, chunks) {
+      const r = await fetch(CHAT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question, chunks }),
+      });
+      if (!r.ok) throw new Error(`chat: ${r.status}`);
+
+      const reader = r.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        let idx;
+        while ((idx = buffer.indexOf('\n')) !== -1) {
+          const line = buffer.slice(0, idx).trim();
+          buffer = buffer.slice(idx + 1);
+          if (!line.startsWith('data:')) continue;
+          const payload = line.slice(5).trim();
+          if (!payload || payload === '[DONE]') continue;
+          try {
+            const obj = JSON.parse(payload);
+            const piece = obj.response ?? obj.choices?.[0]?.delta?.content ?? '';
+            if (piece) answerEl.textContent += piece;
+          } catch {}
+        }
+      }
+    }
+
+    async function ask() {
+      const q = questionEl.value.trim();
+      if (!q) return;
+      askBtn.disabled = true;
+      answerEl.textContent = '';
+      setStatus('Thinking…');
+      try {
+        const embedding = await embedQuestion(q);
+        const chunks = await retrieveChunks(embedding);
+        await streamChat(q, chunks);
+        setStatus('');
+      } catch (e) {
+        setStatus(`Something went wrong: ${e.message || e}`, true);
+      } finally {
+        askBtn.disabled = false;
+      }
+    }
+
+    askBtn.addEventListener('click', ask);
+    questionEl.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); ask(); }
+    });
+
+    boot().catch((e) => setStatus(`Couldn't load: ${e.message || e}`, true));
+  </script>
+</body>
+</html>
