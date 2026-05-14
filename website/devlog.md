@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-05-14 · vgr (2)
+Added `rebuild.yml` GitHub Actions workflow — pushes to `devlog.md` or `blurbs.md` now auto-rebuild and deploy the site, no manual `build.py` or wrangler step needed. Added session wrap-up checklist to `CLAUDE.md` and a security policy (no credentials in tracked files) to `CONTRIBUTING.md`. Opened issue #10 proposing wiki generation pipeline and browsing layer options.
+
 ## 2026-05-14 · vgr
 Promoted Aneesh's Oracle preview to `/oracle` — the stub is now the live RAG interface. `/notes` redirects to `/oracle`. Oracle is public (no auth gate). Nav updated to include Devlog. Also merged PR #9 (Oracle infrastructure): created R2 bucket `worldmachines-notes`, applied Pages R2+AI bindings, set up `CF_AI_TOKEN`/`CF_R2_TOKEN` GitHub secrets, ran first notes-ingest (743 notes embedded). Added two raw notes: Prime Radiant and Stigmergic-Verbose Cycle. Opened issue #10 proposing wiki generation pipeline.
 
