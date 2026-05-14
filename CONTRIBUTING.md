@@ -26,6 +26,17 @@ One to three sentences: what changed and why it matters for the project.
 
 For trivial changes (typo fixes, formatting, config tweaks), add `[trivial]` to your commit message instead. The `devlog-check` workflow will flag violations with a red ✗ — it will not block your merge, but please follow the rule.
 
+## Security
+
+**Never commit API keys, tokens, or credentials to this repository.**
+
+- Store credentials in `.env` or `.env.keys` at the repo root — both are gitignored and will not be committed.
+- Do not hardcode credentials in scripts, raw notes, or any other tracked file.
+- Before pushing, run `git diff --staged` and check that no secrets appear in staged content.
+- If you accidentally commit a credential, treat it as compromised immediately: rotate the key and notify Venkat. Do not assume that deleting the file in a follow-up commit is sufficient — the credential is in git history and should be considered public.
+
+The `.gitignore` covers `.env` and `.env.keys` by name. If you create a credentials file with a different name, add it to `.gitignore` yourself before staging anything.
+
 ## Zone ownership
 
 | Zone | Rule |

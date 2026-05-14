@@ -75,7 +75,7 @@ website/
   submit.html                 ← submission form (Access-gated); greets by name, links to /profile
   profile.html                ← standalone profile edit page (Access-gated)
   contributors.html           ← contributor list; links website, loaded from /api/contributors
-  oracle.html                 ← static stub (future AI backend)
+  oracle.html                 ← live Oracle (RAG over raw-notes corpus via DuckDB-WASM + Workers AI)
   style.css                   ← shared styles
   blurbs.md                   ← front-page prose
   admin/handles.html          ← handle registry admin UI
@@ -126,6 +126,18 @@ manual CI re-runs. It is gitignored and Dropbox-ignored (`com.dropbox.ignored`).
 | `CF_R2_TOKEN` | Workers R2 Storage: Edit | `wrangler r2 object put worldmachines-notes/notes.parquet` |
 
 The same values are stored as GitHub Actions secrets `CF_AI_TOKEN` and `CF_R2_TOKEN`.
+
+## Session wrap-up
+
+Run this checklist at the end of every working session:
+
+1. **Devlog** — prepend an entry to `website/devlog.md` summarising what changed and why it matters. Or add `[trivial]` to your commit message for minor changes. The `rebuild.yml` workflow auto-rebuilds and deploys `devlog.html` on push — no manual build step needed.
+
+2. **CLAUDE.md** — if anything structural changed (new pages, new workflows, new conventions, stack changes), update this file so future sessions start with accurate context.
+
+3. **Secrets check** — before committing, run `git diff --staged` and scan for anything that looks like an API key or token. `.env` and `.env.keys` are gitignored, but credentials can end up hardcoded in scripts or notes. See the Security section in `CONTRIBUTING.md`.
+
+4. **Push** — GitHub Actions handles rebuild and deployment automatically for `devlog.md` and `blurbs.md` changes. For website structural changes (`oracle.html`, new pages, functions), run `wrangler pages deploy` manually after pushing.
 
 ## Rebuilding the site locally
 
