@@ -2,6 +2,8 @@
 
 **Read this file before contributing anything to this repository.**
 
+For a full technical overview of the website stack, see [`ARCHITECTURE.md`](ARCHITECTURE.md).
+
 ## Proposals and decisions
 
 Use **GitHub Issues** (labeled `proposal`) for anything that needs group input before work begins — technical plans, feature proposals, infrastructure changes, policy questions.

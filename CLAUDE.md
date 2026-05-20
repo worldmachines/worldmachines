@@ -58,6 +58,8 @@ This is a small high-trust group. `.github/CODEOWNERS` documents ownership and a
 
 ## Website stack
 
+> Full technical reference: [`ARCHITECTURE.md`](ARCHITECTURE.md)
+
 - Static HTML · CSS · JS (no build framework)
 - Cloudflare Pages (hosting + Pages Functions for serverless endpoints)
 - Cloudflare Zero Trust / Access (authentication gate)

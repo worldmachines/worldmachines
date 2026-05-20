@@ -2,6 +2,8 @@
 
 Cloudflare Pages website for World Machines.
 
+For a full technical overview of the stack, bindings, deployment, and pipelines, see [`ARCHITECTURE.md`](../ARCHITECTURE.md).
+
 Website changes must go through pull requests and must be approved by Venkat before merge. Configure GitHub branch protection to require CODEOWNERS review for `website/**`.
 
 ## Local build
