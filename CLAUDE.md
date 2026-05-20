@@ -1,6 +1,8 @@
 # worldmachines
 
 > **All contributors — including AI agents — must read [`CONTRIBUTING.md`](CONTRIBUTING.md) before making any changes to this repository.**
+>
+> **For a full technical overview of the website stack (deployment, bindings, APIs, pipelines), read [`ARCHITECTURE.md`](ARCHITECTURE.md) before working on anything in `website/`.**
 
 Collaborative project to develop psychohistorical models based on Venkatesh Rao's world machines theory.
 
