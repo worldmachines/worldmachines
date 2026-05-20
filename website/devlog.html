@@ -24,6 +24,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">20 May 2026 · vgr</div>
+    <p>Fixed a silent infrastructure breakage: the <code>HANDLES</code> KV binding had been dropped when Aneesh's Oracle commit introduced <code>wrangler.jsonc</code> on May 12, causing the contributors page, submit form, and admin UI to fail silently ever since. Fixed by adding the binding to <code>wrangler.jsonc</code> and manually writing the missing KV entry for Sean Stevenson. Added <code>ARCHITECTURE.md</code> as a full technical reference for the website stack (bindings, deployment, APIs, pipelines), and a proper <code>README.md</code> for the GitHub repo landing page.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">14 May 2026 · vgr</div>
     <p>Added <code>rebuild.yml</code> GitHub Actions workflow — pushes to <code>devlog.md</code> or <code>blurbs.md</code> now auto-rebuild and deploy the site, no manual <code>build.py</code> or wrangler step needed. Added session wrap-up checklist to <code>CLAUDE.md</code> and a security policy (no credentials in tracked files) to <code>CONTRIBUTING.md</code>. Opened issue #10 proposing wiki generation pipeline and browsing layer options.</p>
   </article>
@@ -61,6 +65,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-05-14T20:19:59Z -->
+  <!-- built: 2026-05-20T17:38:32Z -->
 </body>
 </html>
