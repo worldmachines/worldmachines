@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-05-20 · vgr
+Fixed a silent infrastructure breakage: the `HANDLES` KV binding had been dropped when Aneesh's Oracle commit introduced `wrangler.jsonc` on May 12, causing the contributors page, submit form, and admin UI to fail silently ever since. Fixed by adding the binding to `wrangler.jsonc` and manually writing the missing KV entry for Sean Stevenson. Added `ARCHITECTURE.md` as a full technical reference for the website stack (bindings, deployment, APIs, pipelines), and a proper `README.md` for the GitHub repo landing page.
+
 ## 2026-05-14 · vgr (2)
 Added `rebuild.yml` GitHub Actions workflow — pushes to `devlog.md` or `blurbs.md` now auto-rebuild and deploy the site, no manual `build.py` or wrangler step needed. Added session wrap-up checklist to `CLAUDE.md` and a security policy (no credentials in tracked files) to `CONTRIBUTING.md`. Opened issue #10 proposing wiki generation pipeline and browsing layer options.
 
