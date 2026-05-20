@@ -65,6 +65,29 @@ This is a small high-trust group. `.github/CODEOWNERS` documents ownership and a
 - GitHub Actions (article ingestion pipeline)
 - Python + `trafilatura` (full-text extraction)
 
+## Cloudflare bindings (`wrangler.jsonc`)
+
+`website/wrangler.jsonc` is the **single source of truth** for all Cloudflare resource bindings (KV, R2, AI). The Pages project is a direct-upload project (not GitHub-connected), so the dashboard defers entirely to this file — any binding not declared here will be silently absent from `env` at runtime, causing Functions to crash with a 1101 error.
+
+**When adding a new Cloudflare resource** (KV namespace, R2 bucket, D1 database, etc.), always add it to `wrangler.jsonc` first. Do not rely on the dashboard — the "Bindings" section in the Pages dashboard will show "managed by wrangler.toml" and ignore any manual additions.
+
+**Current bindings:**
+
+| `env` variable | Type | Resource |
+|----------------|------|----------|
+| `HANDLES` | KV | `handles` namespace — contributor email → handle/profile registry |
+| `NOTES` | R2 | `worldmachines-notes` bucket — notes Parquet for Oracle |
+| `AI` | Workers AI | Oracle embedding + chat models |
+
+**Deploying:** Pages does not auto-deploy on git push. Always deploy manually after structural changes:
+
+```bash
+cd website
+wrangler pages deploy . --project-name worldmachines --branch main
+```
+
+GitHub Actions only handles rebuilding static HTML from `blurbs.md`/`devlog.md` — it does not deploy to Pages.
+
 ## Website structure
 
 ```text
