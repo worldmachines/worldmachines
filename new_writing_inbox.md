@@ -1,19 +1,23 @@
 # New Writing Inbox
 
-Add one line per link below the divider. A GitHub Actions workflow picks this
-up on every push to `main`, ingests each entry, and clears the file automatically.
+<!-- ================================================================
+  HOW TO ADD A LINK — this section is never deleted by the workflow.
 
-**Format:**
+  1. Add one line per link BELOW the dashes (---).
+  2. Format:
+       handle | type | url
+       handle | type | url | optional description
 
-```
-handle | type | url
-handle | type | url | optional description
-```
+  3. `handle` is your SITE handle (not your GitHub username):
+       vgr · aneesh · kyle · florian · patrick · sean · ivo
 
-- `handle` — your contributor handle (vgr, ivo, aneesh, kyle, florian, patrick, sean)
-- `type` — `contribution` (your own writing) or `resource` (third-party)
-- Lines starting with `#` are ignored
+  4. `type` is one of:
+       contribution   your own writing
+       resource       third-party link
 
-**No fork needed** — commit directly to `main`. The workflow does the rest.
+  5. Commit and push directly to main — no fork, no PR, no login needed.
+     The workflow ingests your entries, clears this section, rebuilds the
+     site, and deploys. Lines starting with # are ignored.
+================================================================ -->
 
 ---
