@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-05-25 · vgr
+Added a direct-push inbox flow for submitting new writing without going through the web form or a fork/merge. Contributors add lines to `new_writing_inbox.md` in the repo root (`handle | type | url`) and push to main; a GitHub Actions workflow ingests the entries, clears the file, rebuilds the site, and deploys — same pipeline as the web form. Also populated the HANDLES KV with all contributor emails (several were missing due to the May 20 binding fix arriving after initial setup) and synced the Cloudflare Access allowlist to match.
+
 ## 2026-05-20 · vgr
 Fixed a silent infrastructure breakage: the `HANDLES` KV binding had been dropped when Aneesh's Oracle commit introduced `wrangler.jsonc` on May 12, causing the contributors page, submit form, and admin UI to fail silently ever since. Fixed by adding the binding to `wrangler.jsonc` and manually writing the missing KV entry for Sean Stevenson. Added `ARCHITECTURE.md` as a full technical reference for the website stack (bindings, deployment, APIs, pipelines), and a proper `README.md` for the GitHub repo landing page.
 

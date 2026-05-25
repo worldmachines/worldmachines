@@ -1,0 +1,57 @@
+name: Ingest Writing Inbox
+
+on:
+  push:
+    branches: [main]
+    paths: [new_writing_inbox.md]
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r website/requirements.txt
+
+      - name: Ingest inbox entries
+        working-directory: website
+        run: python scripts/ingest_inbox.py
+
+      - name: Build site
+        working-directory: website
+        run: python scripts/build.py
+
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name  "worldmachines-bot"
+          git config user.email "bot@worldmachines.org"
+          git add new_writing_inbox.md website/content/articles/ website/*.html
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Ingest inbox: ${{ github.sha }}"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Install wrangler
+        if: steps.commit.outputs.changed == 'true'
+        run: npm install -g wrangler
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.commit.outputs.changed == 'true'
+        working-directory: website
+        run: wrangler pages deploy . --project-name worldmachines --commit-dirty=true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
