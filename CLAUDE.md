@@ -109,7 +109,9 @@ website/
   functions/api/              ← Cloudflare Pages Functions
   scripts/                    ← ingest/build/backfill scripts
   content/articles/           ← one JSON file per submitted article
-.github/workflows/ingest.yml  ← article submission workflow
+new_writing_inbox.md          ← direct-push submission inbox (repo root, not in website/)
+.github/workflows/ingest.yml  ← article submission workflow (web form → repository_dispatch)
+.github/workflows/inbox.yml   ← inbox workflow (push to new_writing_inbox.md → ingest + deploy)
 ```
 
 ## Article JSON schema
@@ -134,13 +136,25 @@ Each file in `website/content/articles/` contains:
 }
 ```
 
-## Submission pipeline
+## Submission pipelines
 
+**Web form (Access-gated):**
 1. Collaborator visits `worldmachines.org/submit` → Cloudflare Access email OTP gate.
 2. Form POSTs to `/api/submit`.
 3. Function looks up submitter's handle+name from KV, fires `repository_dispatch` to GitHub.
-4. GitHub Actions runs from `website/`: `scripts/ingest.py`, then `scripts/build.py`.
-5. The workflow commits generated article/page changes and deploys `website/` to Cloudflare Pages.
+4. `ingest.yml` runs `scripts/ingest.py` then `scripts/build.py` from `website/`.
+5. Commits article JSON + rebuilt HTML, deploys to Cloudflare Pages.
+
+**Writing inbox (direct push, no login needed):**
+1. Collaborator adds lines to `new_writing_inbox.md` (repo root) and pushes to `main`.
+2. Format: `handle | type | url` or `handle | type | url | description`
+3. `inbox.yml` runs `scripts/ingest_inbox.py` then `scripts/build.py`.
+4. Commits article JSONs + rebuilt HTML + cleared inbox, deploys to Cloudflare Pages.
+5. Bot commits are guarded (`github.actor != 'github-actions[bot]'`) to prevent loops.
+
+**HANDLES KV:** maps contributor email → `{handle, name, url, bio}`. Managed via
+`worldmachines.org/admin/handles` (Access-gated) or `wrangler kv key put --binding HANDLES --remote`.
+The Cloudflare Access email allowlist must also be updated when adding new contributors.
 
 ## Local credentials
 
