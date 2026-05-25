@@ -24,6 +24,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">25 May 2026 · vgr</div>
+    <p>Added a direct-push inbox flow for submitting new writing without going through the web form or a fork/merge. Contributors add lines to <code>new<em>writing</em>inbox.md</code> in the repo root (<code>handle | type | url</code>) and push to main; a GitHub Actions workflow ingests the entries, clears the file, rebuilds the site, and deploys — same pipeline as the web form. Also populated the HANDLES KV with all contributor emails (several were missing due to the May 20 binding fix arriving after initial setup) and synced the Cloudflare Access allowlist to match.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">20 May 2026 · vgr</div>
     <p>Fixed a silent infrastructure breakage: the <code>HANDLES</code> KV binding had been dropped when Aneesh's Oracle commit introduced <code>wrangler.jsonc</code> on May 12, causing the contributors page, submit form, and admin UI to fail silently ever since. Fixed by adding the binding to <code>wrangler.jsonc</code> and manually writing the missing KV entry for Sean Stevenson. Added <code>ARCHITECTURE.md</code> as a full technical reference for the website stack (bindings, deployment, APIs, pipelines), and a proper <code>README.md</code> for the GitHub repo landing page.</p>
   </article>
@@ -65,6 +69,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-05-20T18:21:42Z -->
+  <!-- built: 2026-05-25T16:30:21Z -->
 </body>
 </html>
