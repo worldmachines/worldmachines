@@ -1,5 +1,8 @@
 # New Writing Inbox
 
+
+@ivo | contribution | https://www.linkandth.ink/p/two-longbow-moments
+
 <!-- ================================================================
   HOW TO ADD A LINK — this section is never deleted by the workflow.
 
