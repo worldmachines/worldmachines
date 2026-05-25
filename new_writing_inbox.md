@@ -8,12 +8,12 @@
        handle | type | url
        handle | type | url | optional description
 
-  3. `handle` is your SITE handle (not your GitHub username):
-       vgr · aneesh · kyle · florian · patrick · sean · ivo
+  3. `handle` is your site handle (not your GitHub username) — find yours at
+       https://worldmachines.org/contributors
 
-  4. `type` is one of:
-       contribution   your own writing
-       resource       third-party link
+  4. `type` is whether the link is your own original writing or a third-party link:
+       contribution   your own original writing
+       resource       third-party link (someone else's work)
 
   5. Commit and push directly to main — no fork, no PR, no login needed.
      The workflow ingests your entries, clears this section, rebuilds the
