@@ -23,6 +23,14 @@
 
   <div class="form-wrap">
 
+    <!-- Not-registered state — shown if email not in HANDLES KV -->
+    <div id="not-registered" class="not-registered-panel" style="display:none">
+      <h2>You're not registered yet</h2>
+      <p>You're signed in as <strong id="nr-email"></strong>, but this account isn't set up as a World Machines contributor yet.</p>
+      <p>Request access and the project admin will get you set up.</p>
+      <a id="nr-join-link" href="/join" class="btn-join">Request access →</a>
+    </div>
+
     <!-- Welcome banner — populated by JS -->
     <p id="welcome" class="welcome-greeting" style="display:none">
       Welcome, <strong id="welcome-name"></strong>.
@@ -73,13 +81,21 @@
   </div>
 
   <script>
-    // ── Profile greeting ─────────────────────────────────────
-    fetch('/api/profile')
+    // ── Auth check ───────────────────────────────────────────
+    fetch('/api/me')
       .then(r => r.json())
       .then(data => {
-        if (data.error) return;
-        document.getElementById('welcome-name').textContent = data.name || data.handle;
-        document.getElementById('welcome').style.display = 'inline';
+        if (data.error === 'not_registered') {
+          document.getElementById('submit-form').style.display = 'none';
+          document.getElementById('nr-email').textContent = data.email;
+          document.getElementById('nr-join-link').href = '/join?email=' + encodeURIComponent(data.email);
+          document.getElementById('not-registered').style.display = '';
+          return;
+        }
+        if (data.handle) {
+          document.getElementById('welcome-name').textContent = data.name || data.handle;
+          document.getElementById('welcome').style.display = 'inline';
+        }
       })
       .catch(() => {});
 

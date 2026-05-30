@@ -280,6 +280,15 @@ PRIVATE_LIBRARY_SCRIPT = '''\
               document.getElementById('private-library-signin').style.display = '';
               return null;
             }
+            if (r.status === 403) {
+              return r.json().then(function (d) {
+                var el = document.getElementById('private-library-signin');
+                var email = d.email ? encodeURIComponent(d.email) : '';
+                el.innerHTML = '<p class="empty-state">Team library is for registered contributors. <a href="/join' + (email ? '?email=' + email : '') + '">Request access →</a></p>';
+                el.style.display = '';
+                return null;
+              });
+            }
             return r.ok ? r.json() : null;
           })
           .then(function (articles) {

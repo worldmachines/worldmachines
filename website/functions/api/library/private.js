@@ -22,6 +22,11 @@ export async function onRequestGet({ request, env }) {
     return Response.json({ error: 'Authentication required' }, { status: 401 });
   }
 
+  const registered = await env.HANDLES.get(email);
+  if (!registered) {
+    return Response.json({ error: 'not_registered', email }, { status: 403 });
+  }
+
   const manifest = await env.LIBRARY.get('_manifests/private-articles.json');
   if (!manifest) {
     return Response.json([], { headers: { 'Cache-Control': 'private, no-store' } });

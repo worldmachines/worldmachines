@@ -22,6 +22,15 @@
   </nav>
 
   <div class="form-wrap">
+
+    <!-- Not-registered state -->
+    <div id="not-registered" class="not-registered-panel" style="display:none">
+      <h2>You're not registered yet</h2>
+      <p>You're signed in as <strong id="nr-email"></strong>, but this account isn't set up as a World Machines contributor yet.</p>
+      <p>Request access and the project admin will get you set up.</p>
+      <a id="nr-join-link" href="/join" class="btn-join">Request access →</a>
+    </div>
+
     <h2>Your profile</h2>
     <p class="form-intro">Update your display name, site URL, and bio. Handle and email are set by the admin.</p>
 
@@ -55,9 +64,16 @@
   <script>
     const msg = document.getElementById('form-message');
 
-    fetch('/api/profile')
+    fetch('/api/me')
       .then(r => r.json())
       .then(data => {
+        if (data.error === 'not_registered') {
+          document.getElementById('profile-form').style.display = 'none';
+          document.getElementById('nr-email').textContent = data.email;
+          document.getElementById('nr-join-link').href = '/join?email=' + encodeURIComponent(data.email);
+          document.getElementById('not-registered').style.display = '';
+          return;
+        }
         if (data.error) {
           msg.className = 'form-message error';
           msg.textContent = data.error;

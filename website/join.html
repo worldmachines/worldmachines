@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join — World Machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+  </header>
+
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://worldmachines.zulipchat.com">Project Chat</a>
+  </nav>
+
+  <div class="form-wrap">
+    <h2>Request access</h2>
+    <p class="form-intro">World Machines is a small collaborative project. Fill in your details and the project admin will review your request.</p>
+
+    <div id="success-panel" style="display:none">
+      <p class="form-message success" style="display:block">
+        Request submitted. You'll hear from the project admin once your access is set up.
+      </p>
+      <p style="margin-top:1rem"><a href="/">← Back to World Machines</a></p>
+    </div>
+
+    <form id="join-form" novalidate>
+      <div class="field">
+        <label for="j-email">Email <span class="required">*</span></label>
+        <input type="email" id="j-email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="j-name">Full name <span class="required">*</span></label>
+        <input type="text" id="j-name" name="name" placeholder="First Last" required>
+      </div>
+      <div class="field">
+        <label for="j-handle">Requested handle <span class="required">*</span></label>
+        <input type="text" id="j-handle" name="handle" placeholder="e.g. vgr" pattern="[a-z0-9_\-]{2,20}" required>
+        <p class="field-hint">2–20 lowercase letters, numbers, hyphens, or underscores. This is how you'll appear on the site.</p>
+      </div>
+      <div class="field">
+        <label for="j-url">Website <span class="optional">(optional)</span></label>
+        <input type="url" id="j-url" name="url" placeholder="https://your.site">
+      </div>
+      <div class="field">
+        <label for="j-bio">Brief bio <span class="optional">(optional)</span></label>
+        <input type="text" id="j-bio" name="bio" placeholder="What draws you to world machines theory?">
+      </div>
+
+      <button type="submit" id="join-btn">Request access</button>
+      <div class="form-message" id="join-message"></div>
+    </form>
+  </div>
+
+  <script>
+    // Pre-fill email from query param (set by not-registered redirect) or from session
+    const params = new URLSearchParams(location.search);
+    const emailParam = params.get('email');
+    if (emailParam) {
+      document.getElementById('j-email').value = emailParam;
+      document.getElementById('j-email').readOnly = true;
+    } else {
+      // Try to get email from session (works if they authenticated but aren't registered)
+      fetch('/api/me')
+        .then(r => r.json())
+        .then(data => {
+          const email = data.email;
+          if (email) {
+            document.getElementById('j-email').value = email;
+            document.getElementById('j-email').readOnly = true;
+          }
+        })
+        .catch(() => {});
+    }
+
+    document.getElementById('join-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('join-btn');
+      const msg = document.getElementById('join-message');
+      msg.className = 'form-message';
+      msg.textContent = '';
+
+      const email  = document.getElementById('j-email').value.trim();
+      const name   = document.getElementById('j-name').value.trim();
+      const handle = document.getElementById('j-handle').value.trim().toLowerCase();
+      const url    = document.getElementById('j-url').value.trim();
+      const bio    = document.getElementById('j-bio').value.trim();
+
+      if (!email || !name || !handle) {
+        msg.className = 'form-message error';
+        msg.textContent = 'Please fill in all required fields.';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+
+      try {
+        const res = await fetch('/api/join', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, name, handle, url: url || null, bio: bio || null }),
+        });
+        const data = await res.json();
+        if (res.ok) {
+          document.getElementById('join-form').style.display = 'none';
+          document.getElementById('success-panel').style.display = '';
+        } else {
+          msg.className = 'form-message error';
+          msg.textContent = data.error || 'Submission failed. Please try again.';
+        }
+      } catch {
+        msg.className = 'form-message error';
+        msg.textContent = 'Network error. Please try again.';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Request access';
+      }
+    });
+  </script>
+</body>
+</html>
