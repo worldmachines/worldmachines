@@ -140,8 +140,9 @@ def render_item(a):
     desc_html  = f'\n      <p class="article-description">{escape(desc)}</p>' if desc else ''
     pdf_key    = a.get('pdf_key') or ''
     license_   = a.get('license') or ''
+    file_label = 'PDF' if pdf_key.endswith('.pdf') else 'Access'
     pdf_html   = (
-        f'\n        <a class="badge badge-pdf" href="/api/pdf/{escape(pdf_key)}" target="_blank">PDF</a>'
+        f'\n        <a class="badge badge-pdf" href="/api/pdf/{escape(pdf_key)}" target="_blank">{file_label}</a>'
         if pdf_key and license_ in OPEN_LICENSES else ''
     )
     return f'''\
@@ -262,7 +263,8 @@ PRIVATE_LIBRARY_SCRIPT = '''\
         var date = fmtDate(dateIso) || dateIso;
         var titleHtml = url ? '<a href="' + url + '">' + title + '</a>' : title;
         var descHtml = a.description ? '\n      <p class="article-description">' + esc(a.description) + '</p>' : '';
-        var pdfHtml = a.pdf_key ? '\n        <a class="badge badge-pdf" href="/api/pdf/' + esc(a.pdf_key) + '" target="_blank">PDF</a>' : '';
+        var fileLabel = a.pdf_key && a.pdf_key.endsWith('.pdf') ? 'PDF' : 'Access';
+        var pdfHtml = a.pdf_key ? '\n        <a class="badge badge-pdf" href="/api/pdf/' + esc(a.pdf_key) + '" target="_blank">' + fileLabel + '</a>' : '';
         return '<li class="article" data-date="' + esc(dateIso) + '" data-handle="' + esc(a.handle || '') + '" data-format="' + esc(fmt) + '">'
           + '\n      <div class="article-meta">'
           + '\n        <span class="badge badge-resource">' + fmt.charAt(0).toUpperCase() + fmt.slice(1) + '</span>'
