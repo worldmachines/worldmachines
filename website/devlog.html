@@ -25,7 +25,7 @@
   <div class="devlog">
   <article class="devlog-entry">
     <div class="devlog-meta">30 May 2026 · vgr</div>
-    <p>Added a full-text library system. New <code>worldmachines-library</code> R2 bucket stores PDFs under <code>public/</code> (open access, served to all) and <code>private/</code> (team-only, gated by CF Access JWT). The article JSON schema gained <code>license</code> and <code>pdf<em>key</code> fields; the resources page now shows PDF download badges for open-license documents and dynamically loads a "Team Library" section for authenticated members. First document: Darnton's </em>The Business of Enlightenment<em> (CC BY). Also opened <a href="https://github.com/worldmachines/worldmachines/pull/13">PR #13</a> proposing ADR 0002 — how to ingest library books into the Oracle (separate Parquet vs merged index), seeking input from Aneesh before building <code>tools/ingest</em>pdf.py</code>. Finally, wrote <code>tools/translate_french.py</code>: a Claude-powered script that extracts every French passage from a PDF, translates it, and outputs a supplement document with page numbers and chapter/section context — running now on the Darnton book to produce an English-translation companion for all contributors.</p>
+    <p>Three things shipped today. (1) **Full-text library**: new <code>worldmachines-library</code> R2 bucket serves PDFs under <code>public/</code> (open) and <code>private/</code> (CF Access JWT gated); article JSON schema gained <code>license</code> and <code>pdf<em>key</code> fields; resources page shows download badges and dynamically loads a Team Library section for registered members. First document: Darnton's </em>The Business of Enlightenment_ (CC BY), plus a companion supplement of all 1,197 French passages translated into English with page and chapter context (viewable at <code>/supplements/business-of-enlightenment-translations</code>). (2) **Self-service join flow**: CF Access can now be set to allow any email OTP; unregistered users who authenticate see a "not registered" panel redirecting to <code>/join</code>, where they submit a request that creates a GitHub issue with the exact <code>wrangler kv</code> approval command — one admin step instead of two. New <code>/api/me</code> endpoint provides consistent auth state across submit, profile, and library pages. (3) **ADR 0002** (<a href="https://github.com/worldmachines/worldmachines/pull/13">PR #13</a>) proposes how to ingest library books into the Oracle, pending Aneesh's input on retrieval quality tradeoffs.</p>
   </article>
   <article class="devlog-entry">
     <div class="devlog-meta">25 May 2026 · vgr</div>
@@ -73,6 +73,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-05-30T20:47:49Z -->
+  <!-- built: 2026-05-30T21:06:23Z -->
 </body>
 </html>
