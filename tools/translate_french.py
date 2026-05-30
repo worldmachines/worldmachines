@@ -105,13 +105,14 @@ def format_batch(pages: list[dict]) -> str:
 
 
 def call_claude(client: anthropic.Anthropic, batch_text: str) -> list[dict]:
-    resp = client.messages.create(
+    # Stream the response to avoid read timeouts on large outputs
+    with client.messages.stream(
         model=MODEL,
         max_tokens=8192,
         system=SYSTEM_PROMPT,
         messages=[{'role': 'user', 'content': batch_text}],
-    )
-    raw = resp.content[0].text.strip()
+    ) as stream:
+        raw = stream.get_final_text().strip()
     # Strip accidental markdown fences
     raw = re.sub(r'^```(?:json)?\s*', '', raw)
     raw = re.sub(r'\s*```$', '', raw)
@@ -200,22 +201,62 @@ def main():
     pages = pages[start:end]
     print(f'Processing {len(pages)} pages ({start+1}–{start + len(pages)}) in batches of {args.batch}…', file=sys.stderr)
 
+    # Incremental JSONL cache: survives crashes, enables resume
+    cache_path = output_path.with_suffix('.cache.jsonl')
+    done_pages: set[int] = set()
     all_results: list[dict] = []
+
+    if cache_path.exists():
+        print(f'Resuming from cache {cache_path.name}…', file=sys.stderr)
+        with open(cache_path, encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    entry = json.loads(line)
+                    if entry.get('_batch_pages'):
+                        done_pages.update(entry['_batch_pages'])
+                    else:
+                        all_results.append(entry)
+                except json.JSONDecodeError:
+                    pass
+        print(f'  Loaded {len(all_results)} passages, {len(done_pages)} pages already processed.', file=sys.stderr)
+
+    cache_fh = open(cache_path, 'a', encoding='utf-8')
     n_batches = (len(pages) + args.batch - 1) // args.batch
 
-    for i in range(0, len(pages), args.batch):
-        batch = pages[i:i + args.batch]
-        label = f'{batch[0]["num"]}–{batch[-1]["num"]}'
-        batch_num = i // args.batch + 1
-        print(f'  [{batch_num}/{n_batches}] pages {label}…', file=sys.stderr, end=' ', flush=True)
+    try:
+        for i in range(0, len(pages), args.batch):
+            batch = pages[i:i + args.batch]
+            batch_page_nums = {p['num'] for p in batch}
 
-        batch_text = format_batch(batch)
-        results = call_claude(client, batch_text)
-        all_results.extend(results)
-        print(f'{len(results)} passage(s)', file=sys.stderr)
+            # Skip if all pages in this batch were already processed
+            if batch_page_nums.issubset(done_pages):
+                batch_num = i // args.batch + 1
+                print(f'  [{batch_num}/{n_batches}] pages {batch[0]["num"]}–{batch[-1]["num"]}… skipped (cached)', file=sys.stderr)
+                continue
 
-        if i + args.batch < len(pages):
-            time.sleep(0.3)
+            label = f'{batch[0]["num"]}–{batch[-1]["num"]}'
+            batch_num = i // args.batch + 1
+            print(f'  [{batch_num}/{n_batches}] pages {label}…', file=sys.stderr, end=' ', flush=True)
+
+            batch_text = format_batch(batch)
+            results = call_claude(client, batch_text)
+            all_results.extend(results)
+
+            # Write results + sentinel to cache immediately
+            for r in results:
+                cache_fh.write(json.dumps(r, ensure_ascii=False) + '\n')
+            cache_fh.write(json.dumps({'_batch_pages': list(batch_page_nums)}) + '\n')
+            cache_fh.flush()
+
+            print(f'{len(results)} passage(s)', file=sys.stderr)
+
+            if i + args.batch < len(pages):
+                time.sleep(0.3)
+    finally:
+        cache_fh.close()
 
     print(f'\nTotal: {len(all_results)} French passages found.', file=sys.stderr)
     print(f'Writing to {output_path}…', file=sys.stderr)
@@ -226,7 +267,7 @@ def main():
         author='Robert Darnton',
     )
     output_path.write_text(md, encoding='utf-8')
-    print(f'Done.', file=sys.stderr)
+    print(f'Done. Cache retained at {cache_path.name} — delete it to force a full re-run.', file=sys.stderr)
 
 
 if __name__ == '__main__':
