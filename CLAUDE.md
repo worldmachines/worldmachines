@@ -81,6 +81,7 @@ This is a small high-trust group. `.github/CODEOWNERS` documents ownership and a
 |----------------|------|----------|
 | `HANDLES` | KV | `handles` namespace — contributor email → handle/profile registry |
 | `NOTES` | R2 | `worldmachines-notes` bucket — notes Parquet for Oracle |
+| `LIBRARY` | R2 | `worldmachines-library` bucket — full PDFs and private article manifest |
 | `AI` | Workers AI | Oracle embedding + chat models |
 
 **Deploying:** Pages does not auto-deploy on git push. Always deploy manually after structural changes:
@@ -107,8 +108,10 @@ website/
   blurbs.md                   ← front-page prose
   admin/handles.html          ← handle registry admin UI
   functions/api/              ← Cloudflare Pages Functions
+    pdf/[[key]].js            ← serves PDFs from LIBRARY R2; public/ unrestricted, private/ requires CF Access JWT
+    library/private.js        ← returns team-only article manifest (from LIBRARY R2 _manifests/private-articles.json) after auth
   scripts/                    ← ingest/build/backfill scripts
-  content/articles/           ← one JSON file per submitted article
+  content/articles/           ← one JSON file per submitted article (license:team_only articles excluded from static HTML)
 new_writing_inbox.md          ← direct-push submission inbox (repo root, not in website/)
 .github/workflows/ingest.yml  ← article submission workflow (web form → repository_dispatch)
 .github/workflows/inbox.yml   ← inbox workflow (push to new_writing_inbox.md → ingest + deploy)
@@ -132,9 +135,32 @@ Each file in `website/content/articles/` contains:
   "extraction_success": true,
   "extracted_text": "Full article text (or null if extraction failed)",
   "author": "Author Name (books/resources only)",
-  "section": "Optional section/grouping label"
+  "section": "Optional section/grouping label",
+  "license": "public_domain | cc_by | cc_by_nc | cc_by_sa | cc_by_nc_sa | cc | team_only | null",
+  "pdf_key": "public/filename.pdf | private/filename.pdf | null"
 }
 ```
+
+`license` and `pdf_key` are optional. When `pdf_key` is set and `license` is an open license, resources.html shows a PDF download badge. Articles with `license: "team_only"` are excluded from static HTML and served dynamically to authenticated users.
+
+## Library (PDF hosting)
+
+Full PDFs are stored in the `worldmachines-library` R2 bucket:
+- `public/` prefix → freely downloadable, no auth
+- `private/` prefix → requires CF Access JWT (same cookie as web form)
+- `_manifests/private-articles.json` → JSON array of `team_only` article objects
+
+**To add a private article's PDF:**
+1. Upload PDF: `wrangler r2 object put worldmachines-library/private/<name>.pdf --file <path> --content-type application/pdf --remote`
+2. Create article JSON with `license: "team_only"` and `pdf_key: "private/<name>.pdf"`
+3. Regenerate and upload the private manifest:
+   ```bash
+   # From website/
+   /opt/homebrew/bin/python3 scripts/build_private_manifest.py  # (not yet written)
+   wrangler r2 object put worldmachines-library/_manifests/private-articles.json \
+     --file /tmp/private-articles.json --content-type application/json --remote
+   ```
+4. Run `build.py` and deploy.
 
 ## Submission pipelines
 

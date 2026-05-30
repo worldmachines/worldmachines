@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-05-30 · vgr
+Added a library system for hosting full PDFs. New `worldmachines-library` R2 bucket stores PDFs under `public/` (open access) and `private/` (team-only). Two new API endpoints: `/api/pdf/[key]` streams PDFs gated by path prefix, and `/api/library/private` returns team-only article metadata behind CF Access JWT check. The resources page now shows open-license PDF download badges and dynamically loads a "Team Library" section for authenticated members. First document: Darnton's _The Business of Enlightenment_ (CC BY).
+
 ## 2026-05-25 · vgr
 Added a direct-push inbox flow for submitting new writing without going through the web form or a fork/merge. Contributors add lines to `new_writing_inbox.md` in the repo root (`handle | type | url`) and push to main; a GitHub Actions workflow ingests the entries, clears the file, rebuilds the site, and deploys — same pipeline as the web form. Also populated the HANDLES KV with all contributor emails (several were missing due to the May 20 binding fix arriving after initial setup) and synced the Cloudflare Access allowlist to match.
 
