@@ -107,9 +107,13 @@ website/
   style.css                   ← shared styles
   blurbs.md                   ← front-page prose
   admin/handles.html          ← handle registry admin UI
+  join.html                   ← public join-request form → GitHub issue; pre-fills email from session
+  supplements/                ← rendered HTML versions of supplement documents (generated one-off, committed as static)
   functions/api/              ← Cloudflare Pages Functions
-    pdf/[[key]].js            ← serves PDFs from LIBRARY R2; public/ unrestricted, private/ requires CF Access JWT
-    library/private.js        ← returns team-only article manifest (from LIBRARY R2 _manifests/private-articles.json) after auth
+    me.js                     ← auth state: 200+profile if registered, 403+email if not, 401 if unauthenticated
+    join.js                   ← POST join request → creates GitHub issue with wrangler KV approval command
+    pdf/[[key]].js            ← serves files from LIBRARY R2; public/ unrestricted, private/ requires CF Access JWT
+    library/private.js        ← returns team-only article manifest after checking both JWT and HANDLES KV
   scripts/                    ← ingest/build/backfill scripts
   content/articles/           ← one JSON file per submitted article (license:team_only articles excluded from static HTML)
 new_writing_inbox.md          ← direct-push submission inbox (repo root, not in website/)
@@ -137,7 +141,8 @@ Each file in `website/content/articles/` contains:
   "author": "Author Name (books/resources only)",
   "section": "Optional section/grouping label",
   "license": "public_domain | cc_by | cc_by_nc | cc_by_sa | cc_by_nc_sa | cc | team_only | null",
-  "pdf_key": "public/filename.pdf | private/filename.pdf | null"
+  "pdf_key": "public/filename.pdf | private/filename.pdf | null",
+  "format": "essay | short story | paper | book | supplement"
 }
 ```
 
@@ -180,7 +185,10 @@ Full PDFs are stored in the `worldmachines-library` R2 bucket:
 
 **HANDLES KV:** maps contributor email → `{handle, name, url, bio}`. Managed via
 `worldmachines.org/admin/handles` (Access-gated) or `wrangler kv key put --binding HANDLES --remote`.
-The Cloudflare Access email allowlist must also be updated when adding new contributors.
+
+**Adding contributors:** CF Access should be set to allow any email OTP (no allowlist). New contributors
+visit `/join`, submit a request, and a GitHub issue is created with the exact `wrangler kv key put` command
+to approve them. Approving the HANDLES KV entry is the only admin step required.
 
 ## Local credentials
 
