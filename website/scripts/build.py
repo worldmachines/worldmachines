@@ -75,8 +75,15 @@ def contribution_items(articles):
     return items
 
 
+OPEN_LICENSES = {'public_domain', 'cc_by', 'cc_by_nc', 'cc_by_sa', 'cc_by_nc_sa', 'cc'}
+
+
 def resource_items(articles):
-    items = [a for a in articles if a.get('type', 'resource') == 'resource']
+    # Exclude team_only: those are served dynamically after auth check
+    items = [
+        a for a in articles
+        if a.get('type', 'resource') == 'resource' and a.get('license') != 'team_only'
+    ]
     items.sort(key=lambda a: a.get('submitted_at', ''), reverse=True)
     return items
 
@@ -131,12 +138,18 @@ def render_item(a):
     desc       = a.get('description') or ''
     title_html = f'<a href="{url}">{title}</a>' if url else title
     desc_html  = f'\n      <p class="article-description">{escape(desc)}</p>' if desc else ''
+    pdf_key    = a.get('pdf_key') or ''
+    license_   = a.get('license') or ''
+    pdf_html   = (
+        f'\n        <a class="badge badge-pdf" href="/api/pdf/{escape(pdf_key)}" target="_blank">PDF</a>'
+        if pdf_key and license_ in OPEN_LICENSES else ''
+    )
     return f'''\
     <li class="article" data-date="{escape(date_iso)}" data-handle="{escape(a.get("handle") or "")}" data-format="{escape(fmt)}">
       <div class="article-meta">
         <span class="badge {badge_class}">{badge_label}</span>
         <span>{date}</span>
-        <span>· {by}</span>
+        <span>· {by}</span>{pdf_html}
       </div>
       <h2 class="article-title">{title_html}</h2>{desc_html}
     </li>'''
@@ -214,9 +227,78 @@ def build_contributions(articles):
     print(f'Built contributions.html — {len(items)} contribution(s)')
 
 
+PRIVATE_LIBRARY_HTML = '''\
+  <section class="private-library" id="private-library-section" style="display:none">
+    <h2 class="private-library-heading">Team Library</h2>
+    <ul class="articles" id="private-articles-list"></ul>
+  </section>
+  <div id="private-library-signin" style="display:none">
+    <p class="empty-state">Team library is accessible to project members.
+      <a href="/submit">Sign in</a> to view.
+    </p>
+  </div>'''
+
+
+PRIVATE_LIBRARY_SCRIPT = '''\
+  <script>
+    (function () {
+      function fmtDate(iso) {
+        if (!iso) return '';
+        try {
+          var d = new Date(iso);
+          if (!isNaN(d.getTime())) return d.toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'});
+        } catch (e) {}
+        return iso.slice(0, 10) || iso;
+      }
+      function esc(s) {
+        return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+      function renderItem(a) {
+        var title = esc(a.title || a.url || 'Untitled');
+        var url = esc(a.url || '');
+        var by = esc(a.author || a.handle || '');
+        var fmt = a.format || 'book';
+        var dateIso = a.published_at || a.submitted_at || '';
+        var date = fmtDate(dateIso) || dateIso;
+        var titleHtml = url ? '<a href="' + url + '">' + title + '</a>' : title;
+        var descHtml = a.description ? '\n      <p class="article-description">' + esc(a.description) + '</p>' : '';
+        var pdfHtml = a.pdf_key ? '\n        <a class="badge badge-pdf" href="/api/pdf/' + esc(a.pdf_key) + '" target="_blank">PDF</a>' : '';
+        return '<li class="article" data-date="' + esc(dateIso) + '" data-handle="' + esc(a.handle || '') + '" data-format="' + esc(fmt) + '">'
+          + '\n      <div class="article-meta">'
+          + '\n        <span class="badge badge-resource">' + fmt.charAt(0).toUpperCase() + fmt.slice(1) + '</span>'
+          + '\n        <span>' + date + '</span>'
+          + '\n        <span>\xb7 ' + by + '</span>'
+          + pdfHtml
+          + '\n      </div>'
+          + '\n      <h2 class="article-title">' + titleHtml + '</h2>' + descHtml
+          + '\n    </li>';
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('/api/library/private')
+          .then(function (r) {
+            if (r.status === 401) {
+              document.getElementById('private-library-signin').style.display = '';
+              return null;
+            }
+            return r.ok ? r.json() : null;
+          })
+          .then(function (articles) {
+            if (!articles || !articles.length) return;
+            var ul = document.getElementById('private-articles-list');
+            ul.innerHTML = articles.map(renderItem).join('\n');
+            document.getElementById('private-library-section').style.display = '';
+          })
+          .catch(function () {});
+      });
+    })();
+  </script>'''
+
+
 def build_resources(articles):
     items = resource_items(articles)
-    body, script = render_list(items, 'No resources yet.')
+    list_body, sort_script = render_list(items, 'No resources yet.')
+    body = list_body + '\n' + PRIVATE_LIBRARY_HTML
+    script = sort_script + PRIVATE_LIBRARY_SCRIPT
     html = page_shell('Resources', NAV, body, script=script)
     Path('resources.html').write_text(html, encoding='utf-8')
     print(f'Built resources.html — {len(items)} resource(s)')

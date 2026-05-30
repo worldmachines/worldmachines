@@ -13,6 +13,8 @@
   --badge-contribution-text: #7a5200;
   --badge-resource-bg:       #dbeafe;
   --badge-resource-text:     #1e3a8a;
+  --badge-pdf-bg:            #d1fae5;
+  --badge-pdf-text:          #065f46;
   --max-width: 720px;
 }
 
@@ -154,6 +156,7 @@ main {
 }
 .badge-contribution { background: var(--badge-contribution-bg); color: var(--badge-contribution-text); }
 .badge-resource     { background: var(--badge-resource-bg);     color: var(--badge-resource-text); }
+.badge-pdf          { background: var(--badge-pdf-bg);          color: var(--badge-pdf-text); text-decoration: none; }
 
 .article-description {
   font-size: 0.88rem;
@@ -167,6 +170,18 @@ main {
   color: var(--muted);
   font-style: italic;
   font-size: 0.93rem;
+}
+
+.private-library { margin-top: 3rem; }
+.private-library-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
 }
 
 /* ─── Sort controls ──────────────────────────────────────────── */
