@@ -24,6 +24,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">30 May 2026 · vgr</div>
+    <p>Added a library system for hosting full PDFs. New <code>worldmachines-library</code> R2 bucket stores PDFs under <code>public/</code> (open access) and <code>private/</code> (team-only). Two new API endpoints: <code>/api/pdf/[key]</code> streams PDFs gated by path prefix, and <code>/api/library/private</code> returns team-only article metadata behind CF Access JWT check. The resources page now shows open-license PDF download badges and dynamically loads a "Team Library" section for authenticated members. First document: Darnton's <em>The Business of Enlightenment</em> (CC BY).</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">25 May 2026 · vgr</div>
     <p>Added a direct-push inbox flow for submitting new writing without going through the web form or a fork/merge. Contributors add lines to <code>new<em>writing</em>inbox.md</code> in the repo root (<code>handle | type | url</code>) and push to main; a GitHub Actions workflow ingests the entries, clears the file, rebuilds the site, and deploys — same pipeline as the web form. Also populated the HANDLES KV with all contributor emails (several were missing due to the May 20 binding fix arriving after initial setup) and synced the Cloudflare Access allowlist to match.</p>
   </article>
@@ -69,6 +73,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-05-30T18:42:14Z -->
+  <!-- built: 2026-05-30T18:43:21Z -->
 </body>
 </html>
