@@ -20,6 +20,8 @@ Connected to Clément’s “Third Landscape” (52 species on unmanaged land vs
 
 Builds on the ha-ha = invisible-moat stage of [[Canonic infrastructure decays in hilarious drainage]].
 
+Closely related: [[The margin provides sharper insight on historic infrastructure than the canonical center]]
+
 Other examples:
 - language proliferation happens at the linguistic borders, where non-native speakers push language forward, while native speakers in the linguistic centers try to maintain the status quo
 - Economic innovation often happens in the periphery, the border zones between economic centers
