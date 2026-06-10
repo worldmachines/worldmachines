@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-06-10 · aneesh
+Embedding correctness fix for the Oracle preview: EmbeddingGemma's asymmetric prefixes are now applied on both sides — documents in the notes pipeline (`title: … | text: …`) and queries in `/api/embed` (`task: search result | query: …`). Until now both embedded bare text, costing retrieval quality. Merging triggers a full re-embed of the notes parquet (758 notes) via `notes-ingest.yml`. Part of the wm-encyclopedia-kb Oracle/Witness (ADR 0002) Phase 1 work.
+
 ## 2026-05-30 · vgr
 Three things shipped today. (1) **Full-text library**: new `worldmachines-library` R2 bucket serves PDFs under `public/` (open) and `private/` (CF Access JWT gated); article JSON schema gained `license` and `pdf_key` fields; resources page shows download badges and dynamically loads a Team Library section for registered members. First document: Darnton's _The Business of Enlightenment_ (CC BY), plus a companion supplement of all 1,197 French passages translated into English with page and chapter context (viewable at `/supplements/business-of-enlightenment-translations`). (2) **Self-service join flow**: CF Access can now be set to allow any email OTP; unregistered users who authenticate see a "not registered" panel redirecting to `/join`, where they submit a request that creates a GitHub issue with the exact `wrangler kv` approval command — one admin step instead of two. New `/api/me` endpoint provides consistent auth state across submit, profile, and library pages. (3) **ADR 0002** ([PR #13](https://github.com/worldmachines/worldmachines/pull/13)) proposes how to ingest library books into the Oracle, pending Aneesh's input on retrieval quality tradeoffs.
 
