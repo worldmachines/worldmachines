@@ -24,6 +24,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">10 June 2026 · aneesh</div>
+    <p>Embedding correctness fix for the Oracle preview: EmbeddingGemma's asymmetric prefixes are now applied on both sides — documents in the notes pipeline (<code>title: … | text: …</code>) and queries in <code>/api/embed</code> (<code>task: search result | query: …</code>). Until now both embedded bare text, costing retrieval quality. Merging triggers a full re-embed of the notes parquet (758 notes) via <code>notes-ingest.yml</code>. Part of the wm-encyclopedia-kb Oracle/Witness (ADR 0002) Phase 1 work.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">30 May 2026 · vgr</div>
     <p>Three things shipped today. (1) **Full-text library**: new <code>worldmachines-library</code> R2 bucket serves PDFs under <code>public/</code> (open) and <code>private/</code> (CF Access JWT gated); article JSON schema gained <code>license</code> and <code>pdf<em>key</code> fields; resources page shows download badges and dynamically loads a Team Library section for registered members. First document: Darnton's </em>The Business of Enlightenment_ (CC BY), plus a companion supplement of all 1,197 French passages translated into English with page and chapter context (viewable at <code>/supplements/business-of-enlightenment-translations</code>). (2) **Self-service join flow**: CF Access can now be set to allow any email OTP; unregistered users who authenticate see a "not registered" panel redirecting to <code>/join</code>, where they submit a request that creates a GitHub issue with the exact <code>wrangler kv</code> approval command — one admin step instead of two. New <code>/api/me</code> endpoint provides consistent auth state across submit, profile, and library pages. (3) **ADR 0002** (<a href="https://github.com/worldmachines/worldmachines/pull/13">PR #13</a>) proposes how to ingest library books into the Oracle, pending Aneesh's input on retrieval quality tradeoffs.</p>
   </article>
@@ -73,6 +77,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-06-08T16:07:20Z -->
+  <!-- built: 2026-06-10T23:44:22Z -->
 </body>
 </html>
