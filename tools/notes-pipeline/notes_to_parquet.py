@@ -136,11 +136,17 @@ def collect_rows(
 
 
 def embed_input(row: dict, max_chars: int) -> str:
-    parts = [row["title"]]
+    # EmbeddingGemma is asymmetric (model card): documents take the
+    # 'title: {t} | text: {x}' prefix; queries take 'task: search result |
+    # query: {q}'. The query side lives in website/functions/api/embed.js —
+    # the two must stay in lockstep, and changing either means re-embedding
+    # the corpus (push to tools/notes-pipeline/ triggers notes-ingest.yml).
+    parts = []
     if row.get("summary"):
         parts.append(row["summary"])
     parts.append(row["body"][:max_chars])
-    return "\n\n".join(p for p in parts if p).strip()
+    text = "\n\n".join(p for p in parts if p).strip()
+    return f"title: {row['title'] or 'none'} | text: {text}"
 
 
 def embed_batch(client: httpx.Client, account_id: str, token: str, texts: list[str]) -> list[list[float]]:
