@@ -42,6 +42,18 @@
       min-height: 1em;
     }
     .answer:empty { display: none; }
+
+    .citations {
+      margin-top: 0.9rem; font-family: system-ui, sans-serif; font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .citations:empty { display: none; }
+    .citations h3 {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--muted); margin: 0.6rem 0 0.3rem;
+    }
+    .citations ul { margin: 0; padding-left: 1.1rem; }
+    .citations li { margin: 0.15rem 0; }
   </style>
 </head>
 <body>
@@ -71,112 +83,47 @@
       <span class="ask-hint">Cmd/Ctrl + Enter to submit</span>
     </div>
     <div class="answer" id="answer"></div>
+    <div class="citations" id="citations"></div>
   </main>
 
-  <script type="module">
-    import * as duckdb from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.29.0/+esm';
-
-    const PARQUET_URL = '/api/notes-parquet';
-    const EMBED_URL = '/api/embed';
-    const CHAT_URL = '/api/chat';
-    const TOP_K = 6;
-    const CHUNK_BODY_CHARS = 1800;
+  <script>
+    // Retrieval moved server-side: this page now asks the World Machines Oracle
+    // (/api/ask, proxied to the wm-oracle worker) which does the three-tier
+    // descent over the shared lake, the Witness hop for private evidence, and
+    // returns a cited answer. The old in-browser DuckDB-WASM + notes.parquet +
+    // /api/chat path is retired.
+    const ASK_URL = '/api/ask';
 
     const $ = (id) => document.getElementById(id);
     const statusEl = $('status');
     const askBtn = $('ask');
     const questionEl = $('question');
     const answerEl = $('answer');
+    const citationsEl = $('citations');
 
     const setStatus = (msg, isErr = false) => {
       statusEl.textContent = msg;
       statusEl.classList.toggle('err', !!isErr);
     };
 
-    let conn;
-
-    async function boot() {
-      const bundles = duckdb.getJsDelivrBundles();
-      const bundle = await duckdb.selectBundle(bundles);
-      const workerUrl = URL.createObjectURL(
-        new Blob([`importScripts("${bundle.mainWorker}");`], { type: 'text/javascript' })
-      );
-      const worker = new Worker(workerUrl);
-      const logger = new duckdb.ConsoleLogger();
-      const db = new duckdb.AsyncDuckDB(logger, worker);
-      await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
-      URL.revokeObjectURL(workerUrl);
-
-      await db.registerFileURL(
-        'notes.parquet',
-        new URL(PARQUET_URL, window.location.href).toString(),
-        duckdb.DuckDBDataProtocol.HTTP,
-        false,
-      );
-      conn = await db.connect();
-      await conn.query(`CREATE OR REPLACE VIEW notes AS SELECT * FROM read_parquet('notes.parquet');`);
-      setStatus('Ready.');
-      askBtn.disabled = false;
-    }
-
-    async function embedQuestion(text) {
-      const r = await fetch(EMBED_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text }),
-      });
-      if (!r.ok) throw new Error(`embed: ${r.status}`);
-      const { embedding } = await r.json();
-      return embedding;
-    }
-
-    async function retrieveChunks(embedding) {
-      const lit = '[' + embedding.map((v) => v.toFixed(6)).join(',') + ']::FLOAT[]';
-      const sql = `
-        SELECT title, slug, body, category,
-               list_cosine_similarity(embedding, ${lit}) AS sim
-        FROM notes
-        WHERE NOT excluded_from_oracle
-        ORDER BY sim DESC
-        LIMIT ${TOP_K}
-      `;
-      const result = await conn.query(sql);
-      return result.toArray().map((r) => ({
-        title: r.title,
-        slug: r.slug,
-        body: String(r.body || '').slice(0, CHUNK_BODY_CHARS),
-      }));
-    }
-
-    async function streamChat(question, chunks) {
-      const r = await fetch(CHAT_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question, chunks }),
-      });
-      if (!r.ok) throw new Error(`chat: ${r.status}`);
-
-      const reader = r.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = '';
-      while (true) {
-        const { value, done } = await reader.read();
-        if (done) break;
-        buffer += decoder.decode(value, { stream: true });
-        let idx;
-        while ((idx = buffer.indexOf('\n')) !== -1) {
-          const line = buffer.slice(0, idx).trim();
-          buffer = buffer.slice(idx + 1);
-          if (!line.startsWith('data:')) continue;
-          const payload = line.slice(5).trim();
-          if (!payload || payload === '[DONE]') continue;
-          try {
-            const obj = JSON.parse(payload);
-            const piece = obj.response ?? obj.choices?.[0]?.delta?.content ?? '';
-            if (piece) answerEl.textContent += piece;
-          } catch {}
+    function renderCitations(citations) {
+      citationsEl.textContent = '';
+      if (!citations) return;
+      const section = (heading, items) => {
+        if (!items || !items.length) return;
+        const h = document.createElement('h3');
+        h.textContent = heading;
+        const ul = document.createElement('ul');
+        for (const it of items) {
+          const li = document.createElement('li');
+          li.textContent = it;
+          ul.appendChild(li);
         }
-      }
+        citationsEl.appendChild(h);
+        citationsEl.appendChild(ul);
+      };
+      section('Notes', (citations.notes || []).map((n) => n.title || n.id));
+      section('Evidence', (citations.chunks || []).map((c) => c.source_id || c.id));
     }
 
     async function ask() {
@@ -184,11 +131,18 @@
       if (!q) return;
       askBtn.disabled = true;
       answerEl.textContent = '';
+      citationsEl.textContent = '';
       setStatus('Thinking…');
       try {
-        const embedding = await embedQuestion(q);
-        const chunks = await retrieveChunks(embedding);
-        await streamChat(q, chunks);
+        const r = await fetch(ASK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: q }),
+        });
+        const body = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(body.error || `oracle: ${r.status}`);
+        answerEl.textContent = body.answer || '(no answer)';
+        renderCitations(body.citations);
         setStatus('');
       } catch (e) {
         setStatus(`Something went wrong: ${e.message || e}`, true);
@@ -202,7 +156,9 @@
       if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); ask(); }
     });
 
-    boot().catch((e) => setStatus(`Couldn't load: ${e.message || e}`, true));
+    // No async boot needed — the page is ready immediately.
+    askBtn.disabled = false;
+    setStatus('Ask the Oracle anything about World Machines theory.');
   </script>
 </body>
 </html>
