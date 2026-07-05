@@ -43,17 +43,34 @@
     }
     .answer:empty { display: none; }
 
-    .citations {
-      margin-top: 0.9rem; font-family: system-ui, sans-serif; font-size: 0.78rem;
-      color: var(--muted);
+    /* Inline [[note]] / [chunk:id] citation tokens the model left in the
+       answer body — shown, not stripped, per decision 6b. */
+    .cite-inline {
+      background: #f3ecd6; border-radius: 2px; padding: 0 0.15em;
     }
+
+    .citations { margin-top: 1.2rem; }
     .citations:empty { display: none; }
     .citations h3 {
-      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;
-      color: var(--muted); margin: 0.6rem 0 0.3rem;
+      font-family: system-ui, sans-serif; font-size: 0.7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+      margin: 1.1rem 0 0.5rem; padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--border);
     }
-    .citations ul { margin: 0; padding-left: 1.1rem; }
-    .citations li { margin: 0.15rem 0; }
+    .citations h3:first-child { margin-top: 0; }
+    .cite-group { margin-bottom: 0.55rem; }
+    .cite-group-label {
+      font-family: system-ui, sans-serif; font-size: 0.72rem; color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .chip {
+      display: inline-block; font-family: system-ui, sans-serif; font-size: 0.75rem;
+      padding: 0.2rem 0.6rem; border-radius: 999px;
+      background: #fff; border: 1px solid var(--border); color: var(--text);
+    }
+    .chip-note { border-color: #c9b88a; background: #fdfcf8; }
+    .chip-chunk { border-color: var(--border); color: var(--muted); }
   </style>
 </head>
 <body>
@@ -75,11 +92,11 @@
     <p class="oracle-lede">
       Ask the Oracle anything about World Machines theory — the Modernity Machine, the Divergence Machine, historical transitions, liveness, capture resistance. Draws on the project wiki.
     </p>
-    <p class="oracle-status" id="status">Loading…</p>
+    <p class="oracle-status" id="status">Ask the Oracle anything about World Machines theory.</p>
 
     <textarea id="question" spellcheck="true" placeholder="Ask the Oracle…"></textarea>
     <div class="ask-row">
-      <button class="ask-btn" id="ask" disabled>Ask</button>
+      <button class="ask-btn" id="ask">Ask</button>
       <span class="ask-hint">Cmd/Ctrl + Enter to submit</span>
     </div>
     <div class="answer" id="answer"></div>
@@ -87,12 +104,32 @@
   </main>
 
   <script>
-    // Retrieval moved server-side: this page now asks the World Machines Oracle
+    // Retrieval moved server-side: this page asks the World Machines Oracle
     // (/api/ask, proxied to the wm-oracle worker) which does the three-tier
     // descent over the shared lake, the Witness hop for private evidence, and
     // returns a cited answer. The old in-browser DuckDB-WASM + notes.parquet +
-    // /api/chat path is retired.
+    // /api/chat path is retired — this page is self-contained, no CDN imports.
+    //
+    // Unlike the site's single-voice wiki Oracle (wiki/decisions/0001-notes-
+    // oracle-architecture.md), the public Oracle KEEPS citations (decision
+    // "6b"): the response's citations render below as a Sources section, and
+    // any [[note]] / [chunk:id] tokens the model left inline are highlighted
+    // rather than stripped.
     const ASK_URL = '/api/ask';
+
+    // ADR 0005 D3 (wm-encyclopedia-kb): one UUID per browser session, sent on
+    // every ask so the Oracle's QuoteBudget Durable Object can meter verbatim
+    // quoting per session. sessionStorage (not localStorage) so a fresh tab —
+    // the ADR's session unit — gets a fresh id.
+    const SESSION_KEY = 'oracleSessionId';
+    function getSessionId() {
+      let id = sessionStorage.getItem(SESSION_KEY);
+      if (!id) {
+        id = crypto.randomUUID();
+        sessionStorage.setItem(SESSION_KEY, id);
+      }
+      return id;
+    }
 
     const $ = (id) => document.getElementById(id);
     const statusEl = $('status');
@@ -106,24 +143,72 @@
       statusEl.classList.toggle('err', !!isErr);
     };
 
+    // Matches the same inline citation tokens the Oracle's own extractor
+    // looks for (shared/citations.ts): [[note-slug]] and [chunk:id].
+    const INLINE_CITE_RE = /\[\[[^\]|#\n]+\]\]|\[chunk:[^\]\s]+\]/g;
+
+    function renderAnswer(text) {
+      answerEl.textContent = '';
+      let last = 0;
+      let m;
+      INLINE_CITE_RE.lastIndex = 0;
+      while ((m = INLINE_CITE_RE.exec(text))) {
+        if (m.index > last) answerEl.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const span = document.createElement('span');
+        span.className = 'cite-inline';
+        span.textContent = m[0];
+        answerEl.appendChild(span);
+        last = m.index + m[0].length;
+      }
+      if (last < text.length) answerEl.appendChild(document.createTextNode(text.slice(last)));
+    }
+
+    function chip(label, className, tooltip) {
+      const el = document.createElement('span');
+      el.className = `chip ${className}`;
+      el.textContent = label;
+      if (tooltip) el.title = tooltip;
+      return el;
+    }
+
     function renderCitations(citations) {
       citationsEl.textContent = '';
-      if (!citations) return;
-      const section = (heading, items) => {
-        if (!items || !items.length) return;
-        const h = document.createElement('h3');
-        h.textContent = heading;
-        const ul = document.createElement('ul');
-        for (const it of items) {
-          const li = document.createElement('li');
-          li.textContent = it;
-          ul.appendChild(li);
+      const notes = citations?.notes || [];
+      const chunks = citations?.chunks || [];
+      if (!notes.length && !chunks.length) return;
+
+      const heading = document.createElement('h3');
+      heading.textContent = 'Sources';
+      citationsEl.appendChild(heading);
+
+      if (notes.length) {
+        const row = document.createElement('div');
+        row.className = 'chip-row';
+        for (const n of notes) row.appendChild(chip(n.title || n.id, 'chip-note', n.id));
+        citationsEl.appendChild(row);
+      }
+
+      if (chunks.length) {
+        const bySource = new Map();
+        for (const c of chunks) {
+          const key = c.source_id || '(unknown source)';
+          if (!bySource.has(key)) bySource.set(key, []);
+          bySource.get(key).push(c);
         }
-        citationsEl.appendChild(h);
-        citationsEl.appendChild(ul);
-      };
-      section('Notes', (citations.notes || []).map((n) => n.title || n.id));
-      section('Evidence', (citations.chunks || []).map((c) => c.source_id || c.id));
+        for (const [sourceId, items] of bySource) {
+          const group = document.createElement('div');
+          group.className = 'cite-group';
+          const label = document.createElement('div');
+          label.className = 'cite-group-label';
+          label.textContent = sourceId;
+          group.appendChild(label);
+          const row = document.createElement('div');
+          row.className = 'chip-row';
+          items.forEach((c, i) => row.appendChild(chip(`source passage ${i + 1}`, 'chip-chunk', c.id)));
+          group.appendChild(row);
+          citationsEl.appendChild(group);
+        }
+      }
     }
 
     async function ask() {
@@ -136,12 +221,15 @@
       try {
         const r = await fetch(ASK_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Oracle-Session': getSessionId(),
+          },
           body: JSON.stringify({ question: q }),
         });
         const body = await r.json().catch(() => ({}));
         if (!r.ok) throw new Error(body.error || `oracle: ${r.status}`);
-        answerEl.textContent = body.answer || '(no answer)';
+        renderAnswer(body.answer || '(no answer)');
         renderCitations(body.citations);
         setStatus('');
       } catch (e) {
@@ -155,10 +243,6 @@
     questionEl.addEventListener('keydown', (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); ask(); }
     });
-
-    // No async boot needed — the page is ready immediately.
-    askBtn.disabled = false;
-    setStatus('Ask the Oracle anything about World Machines theory.');
   </script>
 </body>
 </html>
