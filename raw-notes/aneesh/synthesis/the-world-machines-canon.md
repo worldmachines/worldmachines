@@ -2,6 +2,10 @@
 summary: "A unified map of the World Machines framework as it has developed across Rao, Velitchkov, Lohse, and Atwater — from the Modernity Machine's 13th-century origins through the Divergence Machine's ascent to the Liveness Machine's horizon — treating the series as a single evolving argument rather than a collection of posts."
 tags: [synthesis, world-machines, modernity-machine, divergence-machine, liveness-machine, venkatesh-rao, velitchkov, lohse, atwater, meta-theory]
 last_updated: 2026-04-09
+machines: [modernity, divergence, liveness]
+authors: [rao, velitchkov, lohse, atwater]
+open_questions: []
+confidence: canon
 ---
 
 # The World Machines Canon — A Unified Map
