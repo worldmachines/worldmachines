@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-07-06 · vgr
+Completed the Oracle/Witness stack transfer from Aneesh's Cloudflare account to Venkat's, and reorganized all five project repos into a single `worldmachines/` container folder (wm-site, wm-infra, wm-oracle, wm-encyclopedia-kb, wm-feeder). The full deploy: R2 buckets provisioned, catalog workers deployed via GitOps CI, 817 notes synced and embedded into both shared and personal DuckLake catalogs, Witness and Oracle workers stood up with fresh credentials, and PR #15 merged — bringing server-side `/api/ask` proxy, citation-enabled oracle.html, and the feeder ingest workflow. Oracle is now fully live on Venkat's account at worldmachines.org.
+
 ## 2026-06-10 · aneesh
 Embedding correctness fix for the Oracle preview: EmbeddingGemma's asymmetric prefixes are now applied on both sides — documents in the notes pipeline (`title: … | text: …`) and queries in `/api/embed` (`task: search result | query: …`). Until now both embedded bare text, costing retrieval quality. Merging triggers a full re-embed of the notes parquet (758 notes) via `notes-ingest.yml`. Part of the wm-encyclopedia-kb Oracle/Witness (ADR 0002) Phase 1 work.
 
