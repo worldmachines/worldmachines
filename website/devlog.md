@@ -46,3 +46,4 @@ Site structure and contributor tooling. Split content into a blurb landing page,
 
 ## 2026-05-04 · vgr
 Project launch. Stood up the full pipeline: Cloudflare Pages hosting at worldmachines.org, Access email-OTP gate for contributors, Pages Functions backed by KV for the handle registry, and GitHub Actions ingest (trafilatura text extraction → build.py HTML generation → Pages deploy).
+
