@@ -2,6 +2,10 @@
 summary: "The canonical public-facing theory page of the World Machines Project — distilling the framework's definition, three-machine simultaneity, lifecycle structure, epistemological stance ('sensemaking triage', not GUT), and five foundational open questions. The reference document for all World Machine essays."
 tags: [world-machines, canonical-source, world-machines-project, big-history, framework, dawn-day-dusk, modernity-machine, divergence-machine, liveness-machine]
 last_updated: 2026-05-05
+machines: [modernity, divergence, liveness]
+authors: [rao]
+open_questions: [q1-inventory, q2-demarcation, q3-fractal, q4-phenomenology, q5-pathologies]
+confidence: canon
 ---
 
 # Theory — World Machines (Canonical)

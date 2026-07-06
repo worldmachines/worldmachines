@@ -1,7 +1,8 @@
 ---
-summary: "Synthesis connecting Kempf's analysis of the English garden as a failed reconciliation of nature and culture with Sathe's thicket and Lohse's nocturnal garden — three visions of what it means to cultivate something that isn't legible to the systems that surround it."
-tags: [synthesis, garden, thicket, kulturkritik, legibility, rousseau, goethe, aneesh-sathe, florian-lohse]
-last_updated: 2026-04-09
+summary: "Synthesis connecting Kempf's analysis of the English garden as a failed reconciliation of nature and culture with Sathe's thicket and Lohse's nocturnal garden — three visions of what it means to cultivate something that isn't legible to the systems that surround it; now anchored by a historical thicket, the Swiss Jura watchmaking fabrique (Landes)."
+tags: [synthesis, garden, thicket, kulturkritik, legibility, rousseau, goethe, aneesh-sathe, florian-lohse, landes, terroir]
+last_updated: 2026-06-10
+sources: [rit-17-multum-in-parvo, rit-18-barrenness-of-the-soil, rit-20-ah-but-he-could]
 ---
 
 # Gardens, Thickets, and the Illegibility Problem
@@ -34,6 +35,21 @@ Julie's Elysium is the most honest version: she admits she created only the illu
 The nocturnal thicket in [[The Best of All Possible Worlds]] makes this concrete: the gardener stumbled in by accident, stays because it makes sense from inside. "I couldn't explain this place to someone who isn't standing in it. That used to bother me. Now I think that's exactly what keeps it alive."
 
 This is what the English garden cannot achieve: something that is kept alive precisely by its illegibility. The English garden's beauty is exportable — Claude glass, picturesque aesthetic, printed guides. The thicket's value is non-exportable.
+
+## A Historical Thicket: The Swiss Jura (Landes)
+
+The thicket has lived mostly as a concept and a near-future prescription. David Landes's *Revolution in Time* (1983) supplies a fully historical instance that behaves exactly as the concept predicts — and one in which Landes uses the wiki's own keyword, *terroir*, unprompted.
+
+The Swiss Jura — three thousand feet up, snowbound from October to May, soil so poor its only "crop" was cattle bought lean and sold fat — became the world's watchmaking heartland not despite its hostility but *through* it ([[rit-18-barrenness-of-the-soil]]). Winter closure made every mountain peasant a polyvalent tinkerer; isolation bred the family-bench apprenticeship; and the skills, in Landes's phrase, "became rooted over time in the *terroir*" — non-portable for two centuries (Patek Philippe still goes to the Vallée de Joux for complications). The seasonal snow closure functioned as a defensive border; the interior was a high-entropy field where skills compounded beyond what any low-cost rival could copy. This is the thicket's geometry: a portal of non-portable conditions around an interior no outsider can reconstruct.
+
+The decisive move is that this thicket *out-competed the legible center*. Geneva's guild apparatus — the canonical legibility regime, with its reserved masterships, citizen-only rolls, and "reiterated regulations and interdictions" — could neither read nor reach the rural *fabrique* growing in Carouge, Savoy, and the Jura ([[rit-17-multum-in-parvo]]). Landes reads the guild's repeated edicts as "evidence in themselves of the limits of control in an area of highly fragmented political sovereignty." And when Geneva and other states tried to *transplant* the success — Waterford's "New Geneva," Constance, Revolutionary Besançon — every top-down graft died, because the terroir was non-portable: "attempts to transplant a shoot of this flourishing tree to other climes quickly failed."
+
+Two refinements the Jura case forces on the synthesis:
+
+1. **A thicket can turn outward without becoming an English garden.** The Jura's interior stayed genuinely illegible (the skills could not be copied), yet its *outputs* flooded every market — screaming-eagle dials for Americans, jump-seconds enamels for the Chinese trade, fashion-thin Lépine calibres for Parisians ([[rit-18-barrenness-of-the-soil]]). Unlike the English garden, which legibilizes its *interior* to be consumed as scenery, the Jura kept the interior opaque and sold only the fruit. This is the productive opposite of the synthesis's "you can't write about your thicket" anxiety: the Jura proves a thicket can trade with the legible world indefinitely *as long as what it exports is the harvest, not the map of the wood*.
+2. **The illegible periphery beats the legible center — until it builds its own metrics.** The Swiss did not stay purely illegible. They built observatory trials, standard ébauches, and emulation societies — a *metric* legibility of their own ([[rit-20-ah-but-he-could]]). The thicket that won then began normalizing itself into a new center, the same arc by which any thicket "can calcify — complexity can become orthodoxy." The Jura is therefore both a vindication of the thicket and a clock on it: the habitat that out-competes the legible center tends, in winning, to become the next legible center.
+
+This is the strongest historical evidence in the wiki that [[The Thicket|thickets]] are not merely a near-future affordance of cheap distribution but a recurring structural form — terroir-protected, illegible to the central apparatus, out-competing it precisely from the margin.
 
 ## Voltaire's Garden as Middle Term
 
@@ -68,3 +84,6 @@ This is the thicket version of [[Homeopathic Critique]]: using legible tools (es
 - [[Florian Lohse]] — entity
 - [[Noble Savages and English Gardeners]] — summary
 - [[The Best of All Possible Worlds]] — summary
+- [[david-s-landes]] — *Revolution in Time*; the Jura *fabrique* as historical thicket
+- [[rit-18-barrenness-of-the-soil]] — the Jura terroir note
+- [[rit-17-multum-in-parvo]] — Geneva's guild legibility failing at the territorial edge

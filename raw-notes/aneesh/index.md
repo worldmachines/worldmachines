@@ -1,13 +1,15 @@
 ---
 summary: "Table of contents for the Essays wiki."
 tags: [index, navigation]
-last_updated: 2026-05-12
+last_updated: 2026-06-10
 ---
 
 # Index
 
 ## Summaries
 
+- [[revolution-in-time]] — Canonical summary of David Landes's *Revolution in Time* (1983): demand-pull twice over — the interest in time measurement led to the clock, and socially organized demand (not talent) decided which nations built the industry; built from 24 hierarchical reading notes ([[rit-01-preface]]…[[rit-24-the-quartz-revolution-ii]]).
+- [[bayo-akomolafe-the-untimely]] — Akomolafe's Long Now talk argues that the untimely is not an alternative clock but the excess produced inside time's own disciplinary machinery: the interval between tick and tock where bodies syncopate, fail, grieve, and become enlisted by futures they cannot plan.
 - [[onto-cartography-bryant-intro-ch1]] — Bryant's polemic against discursive materialism and introduction of onto-cartography — the mapping of structural couplings between machines — covering the Introduction ("For a Renewal of Materialism") and Ch. 1 ("Towards a Post-Human Media Ecology") of *Onto-Cartography* (Edinburgh, 2014).
 - [[onto-cartography-bryant-ch2-3]] — Bryant Ch. 2–3: machines as systems of operations performing transformations on inputs (the operational turn, virtual proper being vs. local manifestations, rigid/plastic spectrum, binary machines, trans-corporeality) and alien phenomenology as structural openness paired with operational closure across all machines, not just consciousness.
 - [[onto-cartography-bryant-ch4-machinic-assemblages]] — Bryant Ch. 4: machinic assemblages, endo- vs. exo-relations, emergent powers (man-horse-stirrup-lance), Andy Clark's extended mind, and entropy as the ontological problem requiring negentropic operations to maintain machine organization.
@@ -109,6 +111,13 @@ last_updated: 2026-05-12
 
 ## Concepts
 
+- [[accommodation-of-modernity]] — Akomolafe's term for modernity as a field that grants legibility by categorizing bodies, thereby making them archivable, surveillable, and governable.
+- [[awkward-grace]] — Akomolafe's account of grace as monstrous, awkward interruption that reworks bodies and time rather than a smooth blessing.
+- [[clock-as-incomplete-discipline]] — The clock disciplines bodies but also produces gaps, upbeats, and fugitive intervals that exceed its count.
+- [[deep-time-without-decentering]] — Akomolafe's critique that long time and deep time can extend temporal scale while preserving the human subject's mastery and centrality.
+- [[idowu-function]] — Akomolafe's use of the Yoruba child-after-twins figure Idowu as the third that holds a binary's charge without resolving it.
+- [[parapolitics-of-the-untimely]] — A politics beside politics: sanctuary, experimentation, and crack-inhabiting that refuses recognition as the primary horizon of change.
+- [[untimely]] — Akomolafe's term for the excess of temporality: not an alternative clock or plan, but the uncounted interval inside time's own disciplinary machinery.
 - [[1913-websters-dictionary]] — Webster's Unabridged Dictionary of 1913 — the richest English dictionary available, recommended by John McPhee and James Somers as the proper generative writing tool.
 - [[abductive-reasoning]] — Inference to the best explanation — the dominant cognitive mode during frame construction in sensemaking, contrasted with deduction and induction.
 - [[AI Homogenization]] — The tendency of AI systems — by design or inadvertently — to impose an 'averageness' on thought and output by surfacing statistically likely responses and suppressing outliers, functioning as the 2025 mechanism of ideological control.
@@ -388,6 +397,7 @@ last_updated: 2026-05-12
 
 ## Entities
 
+- [[bayo-akomolafe]] — Nigerian-born philosopher and writer whose work uses Yoruba cosmology, Black studies, posthumanism, and decolonial thought to theorize fugitivity, failure, and the cracks in modernity.
 - [[adam-smith]] — Adam Smith (1723-1790) is read by Rao as an intellectual descendant of Spinoza who applied the naturalist-empiricist orientation to economics — inaugurating a discipline about noisy, messy reality data rather than divine design.
 - [[Adonis]] — Syrian-Lebanese poet (b. 1930, Ali Ahmad Said Esber), one of the most significant voices in modern Arabic literature, whose persona Mihyar and practice of the iltifat (sudden turn away) Sathe reads as a deliberate architecture of illegibility against nationalist and religious control.
 - [[agnes-callard]] — Contemporary philosopher at the University of Chicago, known for work on aspiration, agency, and Socratic inquiry — most recently 'Open Socrates,' which revives Socratic questioning as a live philosophical practice.
@@ -408,7 +418,7 @@ last_updated: 2026-05-12
 - [[cosimo-de-medici]] — Florentine banker (1389-1464) and de facto ruler of the Florentine Republic, whose ~600,000 florins of intellectual patronage (>30 years of bank profits) funded the early Italian Renaissance and anchors the cost-of-cultural-intent figure in the Lightening of Intent essay.
 - [[david-hume]] — 18th-century Scottish empiricist philosopher who rejected theoretical models of causation in favor of near-pure phenomenology — Sathe reads him as the 'first philosopher of the AI age' for treating only log files of reality as real.
 - [[david-hume]] — David Hume (1711-1776) is read by Rao as a radical intellectual descendant of Spinoza and 'the original philosopher of the AI age' — one who set aside complex theories of causation in favor of near-pure phenomenology.
-- [[david-s-landes]] — Harvard economic historian whose 1986 essay 'What Do Bosses Really Do?' provided the historical framework for understanding the essential coordinating function of managers and entrepreneurs — used by Aneesh Sathe as the analytical template for platform economics.
+- [[david-s-landes]] — Harvard economic historian whose 1986 essay 'What Do Bosses Really Do?' provided the analytical template for platform economics, and whose *Revolution in Time* (1983) — now fully ingested as 24 reading notes — supplies the demand-pull theory of the clock, the anti-Needham case on China, and the nemesis chain of horological incumbents.
 - [[david-spiegelhalter]] — British statistician and science communicator; Emeritus Professor at Cambridge; known for work on risk communication and the philosophical status of probability.
 - [[dwarf-fortress]] — A free, open-ended colony management simulation built by Tarn and Zach Adams over 20+ years — the most complex game ever created, in MoMA's permanent collection, and a paradigm case of emergent complexity and sustained creative audacity.
 - [[edmund-burke]] — Edmund Burke (1729–1797) was the English tradition's answer to the continental counter-Enlightenment, defending the accumulated wisdom of historical institutions against the abstract rationalism of the French Revolution.
@@ -510,6 +520,7 @@ last_updated: 2026-05-12
 
 ## Synthesis
 
+- [[untimely-time-and-spatial-multiplicity]] — Cross-source synthesis connecting Akomolafe's untimely with Massey's dynamic simultaneity and Bryant's temporal topology: the politics of time begins where counting fails.
 - [[ai-homogenization-and-the-counter-enlightenment]] — The USC research on AI homogenizing cognition is the empirical instantiation of exactly what the counter-Enlightenment thinkers feared: the imposition of a single rational-universalist standard that erases the irreducible particularity of different cultures and minds.
 - [[anxiety-as-frame-fixation-bloom-klein]] — Cross-source synthesis: Harold Bloom's Anxiety of Influence and Gary Klein's Frame Fixation describe the same cognitive-existential trap from literary theory and cognitive science respectively — excessive investment in inherited structure that prevents new creation.
 - [[viscous-frontier-and-cost-of-intent]] — Bridges two wiki threads: the Lightening-of-Intent claim that execution cost has fallen while intent-production remains biologically expensive, and the Viscous-Frontier claim that cultural motion occurs at low Reynolds number where reciprocal moves produce zero net displacement. Together they constitute a physical theory of why intent-production is the bottleneck in the Divergence Machine.
@@ -580,6 +591,7 @@ last_updated: 2026-05-12
 - [[the-sensemaker-and-the-explorer]] — Klein's expert sensemaker and the wiki's explorer figure are the same person: both navigate illegible terrain by committing to provisional structures, building from fragments, and treating anomalies as signal — while the tourist and the novice both consume pre-made legibility.
 - [[the-taste-gap-in-ai-systems]] — A cross-essay synthesis: both Sathe's creativity essay (Cave/Fry) and his expertise essay (Giants) converge on the same gap — current AI lacks the experience-grounded judgment that defines genuine expertise and taste — approached from different angles.
 - [[the-world-machines-canon]] — A unified map of the World Machines framework as it has developed across Rao, Velitchkov, Lohse, and Atwater — from the Modernity Machine's 13th-century origins through the Divergence Machine's ascent to the Liveness Machine's horizon — treating the series as a single evolving argument rather than a collection of posts.
+- [[df-history-generation-and-prime-radiant-seeding]] — Dwarf Fortress's world/history generation is a working generative psychohistory engine; its pipeline (substrate-first determinism, selective agent interiority, emergent-not-scripted conflict, hard no-retroactive-history invariant) is a concrete template for seeding the World Machines Prime Radiant — with one decisive disanalogy: DF has no ground truth to be corrected against.
 - [[theorizing-as-sensemaking-weick-klein-convergence]] — Weick's 'theorizing as process' and Klein's sensemaking cycles describe the same epistemic stance from organizational theory and cognitive science: knowledge is perpetual frame-revision, not accumulated product — and premature freezing is the common failure mode.
 - [[tools-that-shape-thought]] — Cross-source synthesis: how the choice of tool — dictionary, documentation, philosophy, productivity system — shapes not just what you can do but what you can think.
 - [[transparency-as-epistemic-virtue]] — Across Bayesian statistics, explainable AI, and scientific method, Aneesh Sathe's essays converge on a single normative principle: making assumptions, causal models, and reasoning chains explicit is an epistemic virtue because it enables correction — and anything that hides assumptions is epistemically dangerous regardless of its output accuracy.
@@ -599,3 +611,8 @@ last_updated: 2026-05-12
 - [[the-ethics-of-place-making]] — Place-making is never neutral; every boundary excludes; every infrastructure distorts the field of action. The synthesis the spatial-epistemology master thread historically deferred — Sathe Delta Quadrant §III, Mbembe, Harvey, Foucault, and Bryant's gravity together force the moral register into the open, with custodianship, heterotopia, and terraformation as three constructive responses each subject to the same constitutive violence as any other act of bounding.
 - [[cosmic-place-making-the-pre-modern-sky]] — Bruno's Hermetic constellations, Indian *nakshatras*, Walbiri songlines, and Tuan's mythical space all describe the same achievement — pre-modern cultures projected place-making outward to the sky and the continent, manufacturing prenotions at cosmic scale that modernity dissolved without replacing, leaving infinity un-interrupted in the very register where the older technologies had worked.
 - [[the-self-as-negentropic-place]] — Sathe's crash-only self, Malabou's plasticity, and Bryant's rigid-plastic spectrum plus negentropic-operations account converge: the self is a maximum-plasticity negentropic machine whose identity is its recovery protocol, not its momentary configuration — and the political stakes of the divergence machine fall hardest on whoever cannot afford that protocol.
+- [[the-protestant-refugee-double-engine]] — Landes's scattered passages assembled into one claim: religion drove horological modernity on both sides of the ledger — Calvinist time-thrift manufacturing demand, persecution-driven Protestant diaspora supplying skill — with the unresolved tension that the exported skill was laundered through the Catholic luxury trade Landes calls a dead end.
+
+## Reading
+
+- **Landes — Revolution in Time (1983)** — 24 hierarchical reading notes (L1) under `Essays/reading/landes-revolution-in-time/`, distilled into [[revolution-in-time]]: [[rit-01-preface]], [[rit-02-introduction]], [[rit-03-a-magnificent-dead-end]], [[rit-04-why-are-the-memorials-late]], [[rit-05-are-you-sleeping-brother-john]], [[rit-06-the-greatest-necessity]], [[rit-07-my-time-is-my-time]], [[rit-08-of-toys-and-ornaments]], [[rit-09-my-time-is-your-time]], [[rit-10-approaching-the-asymptote]], [[rit-11-the-man-who-stayed-to-dinner]], [[rit-12-the-french-connection]], [[rit-13-fame-is-the-spur]], [[rit-14-clocks-in-the-belfry]], [[rit-15-the-good-old-days-that-never-were]], [[rit-16-ups-and-downs-of-international-competition]], [[rit-17-multum-in-parvo]], [[rit-18-barrenness-of-the-soil]], [[rit-19-nor-could-he-compete-with-us]], [[rit-20-ah-but-he-could]], [[rit-21-not-one-in-fifty-thousand]], [[rit-22-who-killed-cock-robin]], [[rit-23-the-quartz-revolution-i]], [[rit-24-the-quartz-revolution-ii]].

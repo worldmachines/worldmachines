@@ -2,6 +2,10 @@
 summary: "The Dawn/Day/Dusk typology for the three co-existing world machines — naming scheme borrowed from the Cleons dynasty in Foundation, used to analyze how machines in different lifecycle phases interact."
 tags: [world-machines, dawn-machine, day-machine, dusk-machine, typology, foundation, venkatesh-rao]
 last_updated: 2026-05-05
+machines: [modernity, divergence, liveness]
+authors: [rao]
+open_questions: [q5-pathologies]
+confidence: canon
 ---
 
 # Dawn / Day / Dusk Machine Typology
