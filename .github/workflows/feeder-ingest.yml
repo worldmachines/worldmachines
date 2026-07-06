@@ -1,0 +1,297 @@
+# wm-feeder ingestion trigger (ADR 0006 D1/D2/D4) — GitHub Action template.
+#
+# This is a TEMPLATE, not something wm-feeder installs for you. Copy it into
+# the contributor's own notes repo (the first installation is Aneesh's
+# contributor's private notes vault; first install is the curator's own, per D4)
+# setup below. Federation-ready: any contributor repo can install this same
+# file with its own token.
+#
+# --------------------------------------------------------------------------
+# SETUP (one-time, per contributor repo)
+# --------------------------------------------------------------------------
+#
+# 1. Ask the feeder operator to mint a Bearer token and set it as a
+#    `wrangler secret put FEEDER_TOKEN` on the target wm-feeder worker (one
+#    token per contributor repo — never share a token across repos).
+#
+# 2. In THIS repo (Settings -> Secrets and variables -> Actions):
+#
+#    Secrets:
+#      FEEDER_TOKEN           - the Bearer token from step 1
+#      CF_R2_TOKEN            - Cloudflare API token, scope "Workers R2
+#                               Storage: Edit", used ONLY to upload the raw
+#                               source and download this run's artifacts —
+#                               same narrowly-scoped-token convention as
+#                               worldmachines/.github/workflows/notes-ingest.yml
+#      CLOUDFLARE_ACCOUNT_ID  - the feeder's Cloudflare account id
+#
+#    Variables:
+#      FEEDER_URL             - the feeder worker's HTTPS URL, e.g.
+#                               https://wm-feeder-dev.<subdomain>.workers.dev
+#      FEEDER_BUCKET          - the feeder's R2 bucket name, e.g.
+#                               wm-feeder-out-dev
+#      NOTES_DEST             - (optional) where accepted notes land in THIS
+#                               repo; default "raw-notes/<AUTHOR>/reading"
+#      AUTHOR                 - contributor handle for the default dest
+#
+# 3. Drop raw sources under `raw_sources/<name>.<ext>`. To control the slug,
+#    title, author, or license class explicitly (recommended — otherwise the
+#    slug is derived from the filename and licenseClass defaults to the
+#    safest value, "private"), add a sidecar JSON file next to it:
+#
+#      raw_sources/decameron.md        <- the raw text, LF or CRLF, either is fine
+#      raw_sources/decameron.meta.json <- optional metadata sidecar
+#
+#      {
+#        "slug": "decameron",
+#        "title": "The Decameron of Giovanni Boccaccio",
+#        "author": "Giovanni Boccaccio",
+#        "licenseClass": "open",
+#        "skipCanonize": false
+#      }
+#
+#    licenseClass must be one of "open" | "quotable" | "private" (ADR 0001
+#    §8's licensing firewall) — this Action fails loudly if it's anything
+#    else. Only *.meta.json is exempt from being ingested as a source itself.
+#
+# --------------------------------------------------------------------------
+# WHAT THIS DOES, per changed raw source on push to main
+# --------------------------------------------------------------------------
+#
+#   a. Uploads the source (CRLF stripped to LF) to the feeder's R2 bucket at
+#      raw/<slug>-<run-id>.txt                          (wrangler r2 object put)
+#   b. POSTs $FEEDER_URL/runs with Authorization: Bearer $FEEDER_TOKEN and
+#      {r2Key, slug, title, author, licenseClass, skipCanonize} to start a
+#      Workflow run (ADR 0006 D1).
+#   c. Polls GET $FEEDER_URL/runs/<run-id> (same auth) until status is
+#      complete/errored/terminated.
+#   d. On complete, downloads every artifact key the run reports in its
+#      output (runs/<run-id>/...) from R2                (wrangler r2 object get)
+#   e. Commits notes/ + sidecars/ + diagnostics.json to
+#      $NOTES_DEST/<slug>/ on branch feeder/<slug> and opens a PR (ADR 0006
+#      D2 — the Action commits, never the worker). canonize-proposals/ (if
+#      any; ADR 0006 D3) is summarized in the PR body only — NEVER
+#      committed to a canon dir; a human reviews and applies them by hand.
+#
+# --------------------------------------------------------------------------
+
+name: Feeder ingestion
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "raw_sources/**"
+  workflow_dispatch:
+    inputs:
+      path:
+        description: "Single raw_sources/ path to (re-)ingest"
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  FEEDER_URL: ${{ vars.FEEDER_URL }}
+  FEEDER_BUCKET: ${{ vars.FEEDER_BUCKET }}
+  AUTHOR: ${{ vars.AUTHOR }}
+  NOTES_DEST: ${{ vars.NOTES_DEST || format('raw-notes/{0}/reading', vars.AUTHOR) }}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      files: ${{ steps.list.outputs.files }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+
+      - name: List changed raw sources
+        id: list
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            FILES=$(jq -cn --arg p "${{ github.event.inputs.path }}" '[$p]')
+          else
+            FILES=$(git diff --name-only --diff-filter=ACMR \
+              "${{ github.event.before }}" "${{ github.event.after }}" -- 'raw_sources/**' \
+              | grep -v '\.meta\.json$' \
+              | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          fi
+          echo "Changed raw sources: $FILES"
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+
+  ingest:
+    needs: discover
+    if: needs.discover.outputs.files != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        file: ${{ fromJson(needs.discover.outputs.files) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve slug/title/author/licenseClass
+        id: meta
+        run: |
+          set -euo pipefail
+          FILE="${{ matrix.file }}"
+          BASE="${FILE%.*}"
+          META="$BASE.meta.json"
+          SLUG_DEFAULT=$(basename "$BASE" | tr '[:upper:]' '[:lower:]' | tr -cs 'a-z0-9' '-' | sed 's/^-\+//; s/-\+$//')
+          TITLE_DEFAULT=$(basename "$BASE")
+
+          if [ -f "$META" ]; then
+            SLUG=$(jq -r --arg d "$SLUG_DEFAULT" '.slug // $d' "$META")
+            TITLE=$(jq -r --arg d "$TITLE_DEFAULT" '.title // $d' "$META")
+            AUTHOR=$(jq -r '.author // ""' "$META")
+            LICENSE=$(jq -r '.licenseClass // "private"' "$META")
+            SKIP_CANONIZE=$(jq -r '.skipCanonize // false' "$META")
+          else
+            SLUG="$SLUG_DEFAULT"
+            TITLE="$TITLE_DEFAULT"
+            AUTHOR=""
+            LICENSE="private"
+            SKIP_CANONIZE="false"
+          fi
+
+          case "$LICENSE" in
+            open|quotable|private) ;;
+            *) echo "::error file=$META::invalid licenseClass \"$LICENSE\" — must be open, quotable, or private"; exit 1 ;;
+          esac
+
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+          echo "title=$TITLE" >> "$GITHUB_OUTPUT"
+          echo "author=$AUTHOR" >> "$GITHUB_OUTPUT"
+          echo "license=$LICENSE" >> "$GITHUB_OUTPUT"
+          echo "skip_canonize=$SKIP_CANONIZE" >> "$GITHUB_OUTPUT"
+
+      - name: Upload LF-normalized source to R2
+        id: upload
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_R2_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          R2_KEY="raw/${{ steps.meta.outputs.slug }}-${{ github.run_id }}.txt"
+          sed 's/\r$//' "${{ matrix.file }}" > /tmp/source.lf.txt
+          npx --yes wrangler@4 r2 object put "$FEEDER_BUCKET/$R2_KEY" \
+            --file /tmp/source.lf.txt --content-type text/plain --remote
+          echo "r2_key=$R2_KEY" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger feeder run
+        id: trigger
+        run: |
+          set -euo pipefail
+          BODY=$(jq -n \
+            --arg r2Key "${{ steps.upload.outputs.r2_key }}" \
+            --arg slug "${{ steps.meta.outputs.slug }}" \
+            --arg title "${{ steps.meta.outputs.title }}" \
+            --arg author "${{ steps.meta.outputs.author }}" \
+            --arg licenseClass "${{ steps.meta.outputs.license }}" \
+            --argjson skipCanonize "${{ steps.meta.outputs.skip_canonize }}" \
+            '{r2Key: $r2Key, slug: $slug, title: $title, author: $author, licenseClass: $licenseClass, skipCanonize: $skipCanonize}')
+
+          RESP=$(curl -sS -f -X POST "$FEEDER_URL/runs" \
+            -H "Authorization: Bearer ${{ secrets.FEEDER_TOKEN }}" \
+            -H "content-type: application/json" \
+            -d "$BODY")
+          RUN_ID=$(echo "$RESP" | jq -r '.id')
+          if [ -z "$RUN_ID" ] || [ "$RUN_ID" = "null" ]; then
+            echo "::error::feeder did not return a run id: $RESP"; exit 1
+          fi
+          echo "Started run $RUN_ID for ${{ steps.meta.outputs.slug }}"
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Poll run status
+        id: poll
+        run: |
+          set -euo pipefail
+          RUN_ID="${{ steps.trigger.outputs.run_id }}"
+          for i in $(seq 1 90); do
+            RESP=$(curl -sS -f "$FEEDER_URL/runs/$RUN_ID" -H "Authorization: Bearer ${{ secrets.FEEDER_TOKEN }}")
+            STATUS=$(echo "$RESP" | jq -r '.status')
+            echo "poll $i/90: run $RUN_ID status=$STATUS"
+            case "$STATUS" in
+              complete)
+                echo "$RESP" > /tmp/run-result.json
+                exit 0
+                ;;
+              errored|terminated)
+                echo "::error::feeder run $RUN_ID ended with status $STATUS"
+                echo "$RESP"
+                exit 1
+                ;;
+            esac
+            sleep 10
+          done
+          echo "::error::feeder run $RUN_ID did not complete within the poll budget (15 min)"
+          exit 1
+
+      - name: Download run artifacts
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_R2_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          RUN_ID="${{ steps.trigger.outputs.run_id }}"
+          mkdir -p /tmp/artifacts
+          jq -r '.output.artifacts[]' /tmp/run-result.json > /tmp/artifact-keys.txt
+          echo "Artifacts for run $RUN_ID:"; cat /tmp/artifact-keys.txt
+
+          while IFS= read -r KEY; do
+            [ -z "$KEY" ] && continue
+            mkdir -p "/tmp/artifacts/$(dirname "$KEY")"
+            npx --yes wrangler@4 r2 object get "$FEEDER_BUCKET/runs/$RUN_ID/$KEY" \
+              --file "/tmp/artifacts/$KEY" --remote
+          done < /tmp/artifact-keys.txt
+
+      - name: Commit notes + sidecars, open PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          SLUG="${{ steps.meta.outputs.slug }}"
+          RUN_ID="${{ steps.trigger.outputs.run_id }}"
+          BRANCH="feeder/$SLUG"
+          DEST="$NOTES_DEST/$SLUG"
+          mkdir -p "$DEST"
+
+          # ADR 0006 D2: notes + sidecars + diagnostics land in the repo.
+          # ADR 0006 D3: canonize-proposals/ is PR-body-only, never committed.
+          [ -d /tmp/artifacts/notes ] && cp -r /tmp/artifacts/notes/. "$DEST/"
+          [ -d /tmp/artifacts/sidecars ] && cp -r /tmp/artifacts/sidecars/. "$DEST/"
+          [ -f /tmp/artifacts/diagnostics.json ] && cp /tmp/artifacts/diagnostics.json "$DEST/"
+
+          git config user.name "wm-feeder-bot"
+          git config user.email "wm-feeder-bot@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add "$DEST"
+
+          if git diff --cached --quiet; then
+            echo "Nothing to commit for $SLUG (run $RUN_ID) — skipping PR."
+            exit 0
+          fi
+
+          git commit -m "feeder: ingest $SLUG (run $RUN_ID)"
+          git push -u origin "$BRANCH" --force-with-lease
+
+          PROPOSALS_SECTION=""
+          if [ -d /tmp/artifacts/canonize-proposals ] && [ -n "$(ls -A /tmp/artifacts/canonize-proposals)" ]; then
+            PROPOSALS_SECTION=$'\n\n## Canonize proposals (review, then apply by hand — not committed)\n'
+            for f in /tmp/artifacts/canonize-proposals/*; do
+              PROPOSALS_SECTION="$PROPOSALS_SECTION"$'\n- `'"runs/$RUN_ID/canonize-proposals/$(basename "$f")"'`'
+            done
+          fi
+
+          BODY="Automated ingestion of \`${{ matrix.file }}\` via wm-feeder run \`$RUN_ID\`.$PROPOSALS_SECTION"
+
+          EXISTING_PR=$(gh pr list --head "$BRANCH" --json number --jq '.[0].number' || true)
+          if [ -n "$EXISTING_PR" ]; then
+            gh pr edit "$EXISTING_PR" --body "$BODY"
+          else
+            gh pr create --base main --head "$BRANCH" --title "Feeder: ingest $SLUG" --body "$BODY"
+          fi
