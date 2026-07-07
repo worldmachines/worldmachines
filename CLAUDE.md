@@ -109,6 +109,7 @@ website/
   admin/handles.html          ← handle registry admin UI
   join.html                   ← public join-request form → GitHub issue; pre-fills email from session
   supplements/                ← rendered HTML versions of supplement documents (generated one-off, committed as static)
+  functions/mcp.js            ← public MCP proxy → wm-oracle worker /mcp (search_corpus, get_note, get_chunks)
   functions/api/              ← Cloudflare Pages Functions
     me.js                     ← auth state: 200+profile if registered, 403+email if not, 401 if unauthenticated
     join.js                   ← POST join request → creates GitHub issue with wrangler KV approval command

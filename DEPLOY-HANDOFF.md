@@ -189,8 +189,9 @@ dev stack — cloud copies of all three services run the new code there):
 
 ```bash
 curl -s https://wm-oracle-dev.vgr-702.workers.dev/healthz
-# MCP (public, no token):
-curl -s -X POST https://wm-oracle-dev.vgr-702.workers.dev/mcp \
+# MCP (public, no token) — served on the site's own domain via the new
+# functions/mcp.js proxy (goes live with the pages deploy in step 3):
+curl -s -X POST https://worldmachines.org/mcp \
   -H 'Content-Type: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
 # Multi-turn ask (history field is the new bit):
@@ -201,7 +202,8 @@ curl -s -X POST https://wm-oracle-dev.vgr-702.workers.dev/api/ask \
 ```
 
 Note: the MCP config printed on the site's /oracle page points at
-`https://wm-oracle-dev.vgr-702.workers.dev/mcp` — it goes live when step 2
-lands. The public MCP embeds queries via Workers AI on each search
-(fractions of a cent); if abuse ever shows up, add an IP rate limit the way
+`https://worldmachines.org/mcp` — `functions/mcp.js` proxies it to
+`ORACLE_URL/mcp`, so it needs steps 2 (worker) and 3 (pages) both landed.
+The public MCP embeds queries via Workers AI on each search (fractions of a
+cent); if abuse ever shows up, add an IP rate limit the way
 ribbonfarm.com/mcp does.
