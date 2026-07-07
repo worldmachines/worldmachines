@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-07-06 · aneesh
+The Oracle page is now a multi-turn chat (8 questions per conversation) with proper markdown rendering, a waiting animation, and redesigned citations: concept notes render as clickable chips that seed follow-up questions, while reading-note and passage citations disappear from the prose and collapse into one clickable source chip per book ("How does X fit into the World Machines worldview?"). Behind it, wm-oracle gained conversation history, a soul document (a persona/worldview prompt layer modeled on ribbonfarm's vgr_zirp approach) so answers synthesize through the machine frame instead of juxtaposing sources, and a public MCP endpoint (`search_corpus` / `get_note` / `get_chunks`) so any agent can explore the corpus — connection instructions live on /oracle. The wm-infra catalog sidecar now maps notes to their source books and serves full note bodies with graph edges. Nav "Project Chat" now points at Discord.
+
 ## 2026-07-06 · vgr
 Completed the Oracle/Witness stack transfer from Aneesh's Cloudflare account to Venkat's, and reorganized all five project repos into a single `worldmachines/` container folder (wm-site, wm-infra, wm-oracle, wm-encyclopedia-kb, wm-feeder). The full deploy: R2 buckets provisioned, catalog workers deployed via GitOps CI, 817 notes synced and embedded into both shared and personal DuckLake catalogs, Witness and Oracle workers stood up with fresh credentials, and PR #15 merged — bringing server-side `/api/ask` proxy, citation-enabled oracle.html, and the feeder ingest workflow. Oracle is now fully live on Venkat's account at worldmachines.org.
 

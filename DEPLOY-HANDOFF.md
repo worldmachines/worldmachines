@@ -151,3 +151,57 @@ ORACLE_URL="https://wm-oracle-dev.vgr-702.workers.dev" ASK_TOKEN="<value>" npm r
 
 Primary deploy doc: `/Users/Venkat/Dropbox/Code/worldmachines/wm-infra/docs/VENKAT-DEPLOY.md`  
 PR to merge after deploy: `https://github.com/worldmachines/worldmachines/pull/15`
+
+---
+
+## 2026-07-06 Update — Oracle chat + MCP + soul document (Aneesh)
+
+Three linked PRs land a coordinated change (all tested end-to-end on Aneesh's
+dev stack — cloud copies of all three services run the new code there):
+
+| Repo | Change |
+|------|--------|
+| `wm-infra` | catalog sidecar: `note_sources`/`source_titles` on `/api/retrieve` (maps notes to their source book), new `POST /api/note` (note body + graph edges) and `POST /api/chunks` (license-gated passages). All additive — old clients unaffected. |
+| `wm-oracle` | `/api/ask` accepts `history` (multi-turn chat, ≤14 msgs); citations tagged with tier + book source; `prompts/soul.v1.md` persona layer (vgr_zirp soul-document pattern) prepended to the system prompt; **public** `POST /mcp` (MCP server: `search_corpus`, `get_note`, `get_chunks` — read-only, no generation, so no token; `/api/ask` keeps `ASK_TOKEN`); wrangler `main` moved to `src/worker.ts`; one retry on Workers-AI 504s. |
+| `worldmachines` | `website/oracle.html` rewritten as a multi-turn chat (markdown rendering, waiting animation, concept chips + one source chip per book, MCP instructions); nav "Project Chat" → Discord. |
+
+**Deploy order after merging (each step is the standard command):**
+
+1. **wm-infra** — redeploy catalogs (CI `apply.yml`, or locally `make apply ENV=dev`,
+   needs Docker). Then **roll both containers** — a live container survives
+   deploys and keeps the old sidecar:
+
+   ```bash
+   source wm-infra/.env.keys
+   curl -X POST https://wm-ducklake-dev.vgr-702.workers.dev/admin/roll \
+     -H "Authorization: Bearer $ADMIN_TOKEN"            # shared
+   curl -X POST https://wm-ducklake-personal-dev.vgr-702.workers.dev/admin/roll \
+     -H "Authorization: Bearer $ADMIN_TOKEN_PERSONAL"   # personal
+   ```
+
+2. **wm-oracle** — `npx wrangler deploy --config oracle/wrangler.jsonc`.
+   No new secrets. (Witness unchanged — no redeploy needed.)
+
+3. **wm-site/website** — `npx wrangler pages deploy . --project-name worldmachines --branch main`.
+   No new Pages env vars (`ORACLE_URL`/`ASK_TOKEN` unchanged).
+
+**Verify:**
+
+```bash
+curl -s https://wm-oracle-dev.vgr-702.workers.dev/healthz
+# MCP (public, no token):
+curl -s -X POST https://wm-oracle-dev.vgr-702.workers.dev/mcp \
+  -H 'Content-Type: application/json' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+# Multi-turn ask (history field is the new bit):
+curl -s -X POST https://wm-oracle-dev.vgr-702.workers.dev/api/ask \
+  -H "Authorization: Bearer $ASK_TOKEN" -H 'Content-Type: application/json' \
+  -d '{"question":"what about China?","history":[{"role":"user","content":"what is a clock?"},{"role":"assistant","content":"A clock is..."}]}'
+# Then /oracle on the site: chat, concept chips, one source chip per book.
+```
+
+Note: the MCP config printed on the site's /oracle page points at
+`https://wm-oracle-dev.vgr-702.workers.dev/mcp` — it goes live when step 2
+lands. The public MCP embeds queries via Workers AI on each search
+(fractions of a cent); if abuse ever shows up, add an IP rate limit the way
+ribbonfarm.com/mcp does.

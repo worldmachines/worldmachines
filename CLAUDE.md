@@ -103,7 +103,7 @@ website/
   submit.html                 ← submission form (Access-gated); greets by name, links to /profile
   profile.html                ← standalone profile edit page (Access-gated)
   contributors.html           ← contributor list; links website, loaded from /api/contributors
-  oracle.html                 ← live Oracle (RAG over raw-notes corpus via DuckDB-WASM + Workers AI)
+  oracle.html                 ← multi-turn Oracle chat (server-side wm-oracle /api/ask via functions/api/ask.js proxy; public MCP instructions in footer)
   style.css                   ← shared styles
   blurbs.md                   ← front-page prose
   admin/handles.html          ← handle registry admin UI
