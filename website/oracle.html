@@ -306,6 +306,10 @@
       let s = esc(text);
       s = s.replace(/\[\[([^\]|#\n]+)\]\]/g, (_, id) => resolver.note(id.trim()));
       s = s.replace(/\[chunk:([^\]\s]+)\]/g, (_, id) => resolver.chunk(id.trim()));
+      // Fallback for chunk ids the model wrapped in wiki brackets
+      // ([[source#seq]]) — the worker normalizes known ones to [chunk:...],
+      // but answers from an older worker can still carry this shape.
+      s = s.replace(/\[\[([^[\]\s|]+#[^[\]\s|]+)\]\]/g, (_, id) => resolver.chunk(id.trim()));
       // Stripped citation tokens leave punctuation debris — tidy it up.
       s = s.replace(/\s+([,.;:!?])/g, '$1');
       s = s.replace(/,\s*([.;:!?])/g, '$1');
