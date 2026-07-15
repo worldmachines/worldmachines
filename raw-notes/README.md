@@ -2,7 +2,9 @@
 
 Working area for rough notes, reading notes, fragments, questions, meeting
 follow-ups, and research dumps. Each person owns `raw-notes/<their-handle>/`
-and writes only there.
+and writes there. One shared area — `raw-notes/commons/` — holds the
+**AI-ingested reading notes** for the books and links the whole club works
+through; those are communal, not owned by any one person.
 
 ## The one rule that matters: prose only, never source text
 
@@ -19,15 +21,24 @@ The curator loads it into the retrieval lake behind the licensing firewall
 ## What goes where
 
 ```
-raw-notes/<you>/
+raw-notes/<you>/            # your personal working area
   *.md                      # free-form notes — no polish required
-  reading/<source-slug>/    # L1 reading notes: one note per section of a
-                            # source (ingestion pipelines land output here)
   concepts/                 # ┐
-  entities/                 # │ canon (wiki) pages — the reviewed layer;
-  summaries/                # │ see "Canon pages are review-gated" below
-  synthesis/                # ┘
+  entities/                 # │ hand-written canon (wiki) proposals — the
+  summaries/                # │ reviewed layer; see "Canon pages are
+  synthesis/                # ┘ review-gated" below
+  reading/<source-slug>/    # only for genuinely PRIVATE reading you're not
+                            # sharing with the club
+
+raw-notes/commons/          # SHARED — the club's communal ingested readings
+  reading/<source-slug>/    # L1 reading notes: one note per section of a
+                            # source (the ingestion pipelines land output here)
+  concepts/ entities/       # ┐ canon derived from those shared sources
+  summaries/ synthesis/     # ┘ (same review gate)
 ```
+
+Everything under `raw-notes/commons/` is attributed to the pseudo-author
+`commons` rather than a person — see `raw-notes/commons/index.md`.
 
 Note filenames are kebab-case; a note's filename stem is its wiki-link id
 (`[[some-note]]` points at `some-note.md`).
@@ -42,15 +53,22 @@ curator reads each proposal and commits only the ones they accept.
 Hand-written canon pages follow the same path: open a PR, a curator
 reviews and merges.
 
-## Book club → book notes
+## Book club → the commons
 
-Reading a book with the club? Write your notes as prose under your own
-folder — a single `raw-notes/<you>/book-notes/<book-slug>.md`, or a
-`reading/<book-slug>/` folder with one note per chapter if you're being
-thorough. Your reactions, arguments, and questions belong here; the book's
-text does not (see the rule above). If the club wants the book itself in
-the oracle's retrieval layer, that's a private RAG bundle to the curator —
-see [RAG-SUBMISSIONS.md §1](https://github.com/worldmachines/wm-encyclopedia-kb/blob/main/docs/RAG-SUBMISSIONS.md).
+Reading a book (or a shared link) with the club works in two layers:
+
+- **AI-ingested reading notes** — the automated, section-by-section digestion
+  of the source — land in the shared **`raw-notes/commons/reading/<slug>/`**,
+  common to everyone, because we all read the same thing. A curator (or the
+  ingestion pipeline) produces these; you don't write them by hand.
+- **Your own reactions, arguments, and questions** stay under your personal
+  folder as prose, and you `[[link]]` them to the shared reading — the lake
+  resolves wiki-links by note-id across folders, so the connection lands.
+
+The book's **text never enters git** either way (see the rule above). If the
+club wants the book itself retrievable by the oracle, that's a private RAG
+bundle to the curator — see
+[RAG-SUBMISSIONS.md §1](https://github.com/worldmachines/wm-encyclopedia-kb/blob/main/docs/RAG-SUBMISSIONS.md).
 Notes and bundle travel separately by design.
 
 ## How notes become wiki + oracle knowledge
@@ -58,13 +76,13 @@ Notes and bundle travel separately by design.
 - **Hand-written notes**: PR into your folder. AI agents may read them and
   propose wiki updates by PR.
 - **Automated reading notes** (a whole paper or book digested into
-  `reading/<slug>/`): two pipelines produce the same shape —
+  `commons/reading/<slug>/`): two pipelines produce the same shape —
   - the **local pipeline**, run as Claude Code agent stages on the
     curator's machine — the step-by-step playbook is
     [INGEST-LOCAL.md](https://github.com/worldmachines/wm-encyclopedia-kb/blob/main/docs/INGEST-LOCAL.md);
   - the **cloud path** ([wm-feeder](https://github.com/worldmachines/wm-feeder)):
     push a source under `raw_sources/` once the feeder workflow is enabled,
-    and it opens a PR of reading notes back into your folder.
+    and it opens a PR of reading notes into `raw-notes/commons/`.
 - **Canon pages**: always through the review gate above — pipelines
   propose, people approve.
 
@@ -80,7 +98,8 @@ run the local ingestion pipeline yourself —
 
 ## Rules
 
-- Each person writes and pushes only inside their own directory.
+- Each person writes and pushes inside their own directory; `raw-notes/commons/`
+  is the one shared area (AI-ingested club readings).
 - Notes do not need to be polished.
 - Prefer Markdown files with descriptive names.
 - Include source links, dates, and context when useful.
@@ -102,6 +121,7 @@ Queried GitHub repo collaborators / org members for `worldmachines/worldmachines
 
 ## Directories
 
+- `commons/` — **shared**: AI-ingested club readings (pseudo-author `commons`)
 - `aneesh/`
 - `florian/`
 - `ivo/`
