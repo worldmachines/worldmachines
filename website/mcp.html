@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP Access — World Machines</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ─── MCP page (design tokens from style.css) ──────────────── */
+    .mcp-lede {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.65;
+    }
+
+    .signin-panel { display: none; }
+
+    /* Generate token row + minted token box */
+    .gen-btn {
+      font-family: system-ui, sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      padding: 0.55rem 1.4rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .gen-btn:hover { background: #333; }
+    .gen-btn:disabled { opacity: 0.5; cursor: default; }
+
+    .token-panel { display: none; margin-top: 1.25rem; }
+    .token-box {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f0ede8;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.6rem 0.75rem;
+    }
+    .token-value {
+      font-family: 'Courier New', monospace;
+      font-size: 0.88rem;
+      color: var(--text);
+      word-break: break-all;
+      flex: 1;
+    }
+    .token-exp {
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* Instructions */
+    .mcp-section { margin-top: 2.75rem; }
+    .mcp-section > h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .platform-head {
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .server-note {
+      font-family: system-ui, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 0.75rem 0 0.35rem;
+    }
+    .server-note strong { color: var(--text); }
+
+    /* Code snippet with copy button */
+    .snippet {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+      background: #1c1c1c;
+    }
+    .snippet-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.3rem 0.6rem;
+      background: #2a2a2a;
+      border-bottom: 1px solid #000;
+    }
+    .snippet-label {
+      font-family: system-ui, sans-serif;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #b9b6b0;
+    }
+    .copy-btn {
+      font-family: system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: none;
+      border: 1px solid #4a4a4a;
+      color: #d8d5cf;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: border-color 0.1s, color 0.1s, background 0.1s;
+    }
+    .copy-btn:hover { border-color: #777; color: #fff; }
+    .copy-btn.copied { background: #065f46; border-color: #065f46; color: #fff; }
+    .snippet pre {
+      margin: 0;
+      padding: 0.7rem 0.75rem;
+      overflow-x: auto;
+    }
+    .snippet code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: #f0ede8;
+      white-space: pre;
+    }
+
+    .explainer {
+      font-family: system-ui, sans-serif;
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 1.75rem;
+      padding: 0.85rem 1rem;
+      background: #fdfcf8;
+      border-left: 3px solid #c9b88a;
+      border-radius: 0 3px 3px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <p class="tagline">Psychohistorical models</p>
+  </header>
+
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://worldmachines.zulipchat.com">Project Chat</a>
+  </nav>
+
+  <div class="form-wrap">
+
+    <!-- Unauthenticated state — no valid CF Access JWT (dormant until Access is configured) -->
+    <div id="signin" class="not-registered-panel signin-panel">
+      <h2>Sign in required</h2>
+      <p>MCP access is available to approved World Machines members. Sign in with an approved email to generate your access token.</p>
+      <p>If you keep landing here, this account isn't recognised by the members gate.</p>
+    </div>
+
+    <!-- Authenticated-but-not-registered state -->
+    <div id="not-registered" class="not-registered-panel" style="display:none">
+      <h2>You're not registered yet</h2>
+      <p>You're signed in as <strong id="nr-email"></strong>, but this account isn't set up as a World Machines contributor yet.</p>
+      <p>Request access and the project admin will get you set up.</p>
+      <a id="nr-join-link" href="/join" class="btn-join">Request access →</a>
+    </div>
+
+    <!-- Registered member experience -->
+    <div id="mcp-main" style="display:none">
+      <p id="welcome" class="welcome-greeting" style="display:none">
+        Welcome, <strong id="welcome-name"></strong>.
+        <a href="/profile" class="profile-link">Edit profile</a>
+      </p>
+
+      <h2>Your MCP access</h2>
+      <p class="mcp-lede">
+        Generate a personal access token, then add the two World Machines MCP servers to your
+        local AI. It reads the corpus directly — no copy-pasting into the chat box.
+      </p>
+
+      <button id="gen-btn" class="gen-btn">Generate my MCP access token</button>
+
+      <div id="token-panel" class="token-panel">
+        <div class="token-box">
+          <span id="token-value" class="token-value"></span>
+          <button class="copy-btn" data-copy="token-value">Copy</button>
+        </div>
+        <div id="token-exp" class="token-exp"></div>
+      </div>
+
+      <div id="gen-message" class="form-message"></div>
+
+      <!-- ─── Add both servers ─────────────────────────────────── -->
+      <div class="mcp-section">
+        <h3>Add both servers</h3>
+
+        <!-- Claude Code (CLI) -->
+        <div class="platform-head">Claude Code (CLI)</div>
+
+        <div class="server-note"><strong>Oracle</strong> — public, no auth (shared notes)</div>
+        <div class="snippet">
+          <div class="snippet-head">
+            <span class="snippet-label">shell</span>
+            <button class="copy-btn" data-copy="cli-oracle">Copy</button>
+          </div>
+          <pre><code id="cli-oracle">claude mcp add --transport http worldmachines-oracle https://wm-oracle-dev.aneeshsathe.workers.dev/mcp</code></pre>
+        </div>
+
+        <div class="server-note"><strong>Witness</strong> — gated, uses your token (approved private verbatim)</div>
+        <div class="snippet">
+          <div class="snippet-head">
+            <span class="snippet-label">shell</span>
+            <button class="copy-btn" data-copy="cli-witness">Copy</button>
+          </div>
+          <pre><code id="cli-witness"></code></pre>
+        </div>
+
+        <!-- Claude Desktop (config JSON) -->
+        <div class="platform-head">Claude Desktop (config JSON)</div>
+        <div class="server-note">Add both to the <strong>mcpServers</strong> block of your Claude Desktop config file.</div>
+        <div class="snippet">
+          <div class="snippet-head">
+            <span class="snippet-label">json</span>
+            <button class="copy-btn" data-copy="desktop-config">Copy</button>
+          </div>
+          <pre><code id="desktop-config"></code></pre>
+        </div>
+
+        <p class="explainer">
+          With both servers added, your local AI reads the full World Machines corpus directly —
+          the shared notes via the Oracle, and your approved private verbatim via the Witness —
+          without going through the Oracle's ask endpoint.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── Snippet templates ────────────────────────────────────────
+    const PLACEHOLDER = 'wmk_…';
+
+    function cliWitness(tok) {
+      return 'claude mcp add --transport http --header "Authorization: Bearer '
+        + tok + '" worldmachines-witness https://wm-witness-dev.aneeshsathe.workers.dev/mcp';
+    }
+
+    function desktopConfig(tok) {
+      return [
+        '{',
+        '  "mcpServers": {',
+        '    "worldmachines-oracle": {',
+        '      "type": "http",',
+        '      "url": "https://wm-oracle-dev.aneeshsathe.workers.dev/mcp"',
+        '    },',
+        '    "worldmachines-witness": {',
+        '      "type": "http",',
+        '      "url": "https://wm-witness-dev.aneeshsathe.workers.dev/mcp",',
+        '      "headers": {',
+        '        "Authorization": "Bearer ' + tok + '"',
+        '      }',
+        '    }',
+        '  }',
+        '}'
+      ].join('\n');
+    }
+
+    function renderSnippets(tok) {
+      document.getElementById('cli-witness').textContent = cliWitness(tok);
+      document.getElementById('desktop-config').textContent = desktopConfig(tok);
+    }
+
+    // Start with a placeholder token; replaced once a real one is minted.
+    renderSnippets(PLACEHOLDER);
+
+    // ── Copy buttons ─────────────────────────────────────────────
+    document.querySelectorAll('.copy-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.copy);
+        if (!target) return;
+        const text = target.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.textContent;
+          btn.textContent = 'Copied';
+          btn.classList.add('copied');
+          setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 1400);
+        }).catch(() => {});
+      });
+    });
+
+    // ── Auth check (mirrors submit.html) ─────────────────────────
+    fetch('/api/me')
+      .then(r => r.json())
+      .then(data => {
+        if (data.error === 'unauthorized') {
+          // No valid Access JWT — dormant-until-Access state (correct).
+          document.getElementById('signin').style.display = 'block';
+          return;
+        }
+        if (data.error === 'not_registered') {
+          document.getElementById('nr-email').textContent = data.email;
+          document.getElementById('nr-join-link').href = '/join?email=' + encodeURIComponent(data.email);
+          document.getElementById('not-registered').style.display = '';
+          return;
+        }
+        if (data.handle) {
+          document.getElementById('mcp-main').style.display = '';
+          document.getElementById('welcome-name').textContent = data.name || data.handle;
+          document.getElementById('welcome').style.display = 'inline';
+        }
+      })
+      .catch(() => {});
+
+    // ── Generate token ───────────────────────────────────────────
+    const genBtn = document.getElementById('gen-btn');
+    const genMsg = document.getElementById('gen-message');
+
+    genBtn.addEventListener('click', async () => {
+      genMsg.className = 'form-message';
+      genMsg.textContent = '';
+      genBtn.disabled = true;
+      genBtn.textContent = 'Generating…';
+
+      try {
+        const res = await fetch('/api/mcp-token', { method: 'POST' });
+        const data = await res.json();
+
+        if (!res.ok) {
+          if (data.error === 'unauthorized') throw new Error('You must sign in with an approved email.');
+          if (data.error === 'not_registered') throw new Error('This account is not a registered contributor yet.');
+          throw new Error(data.error || 'Could not generate a token.');
+        }
+
+        // Show the minted token and inject it into every snippet.
+        document.getElementById('token-value').textContent = data.token;
+        const when = new Date(data.exp * 1000).toLocaleDateString(undefined,
+          { year: 'numeric', month: 'short', day: 'numeric' });
+        document.getElementById('token-exp').textContent = 'Expires ' + when + ' (valid 90 days).';
+        document.getElementById('token-panel').style.display = 'block';
+        renderSnippets(data.token);
+        genBtn.textContent = 'Generate a new token';
+      } catch (err) {
+        genMsg.className = 'form-message error';
+        genMsg.textContent = err.message;
+        genBtn.textContent = 'Generate my MCP access token';
+      } finally {
+        genBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
