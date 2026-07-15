@@ -36,21 +36,25 @@ credentials. This doc is the runbook; the *why* is in
 **Created 2026-07-15 on Aneesh's account** (empty, awaiting data):
 - R2 `worldmachines-notes`, R2 `worldmachines-library`
 - KV `HANDLES` → id `fc2ed69d95644b8298777e3318240e1c`
-- Pages project `worldmachines` → `worldmachines-2rd.pages.dev` (no deploy yet)
+- Pages project `worldmachines` → `worldmachines-2rd.pages.dev` (site deployed 2026-07-15; Oracle verified end-to-end through the site `/api/ask` proxy)
 
 **Config changes in THIS PR:**
 - `website/wrangler.jsonc`: `HANDLES` id → the new Aneesh-account namespace; `ORACLE_URL` → `wm-oracle-dev.aneeshsathe.workers.dev`.
 
 ---
 
-## ⚠️ Load-bearing order — do NOT merge this PR before the secret swap
+## ✅ Deploy secrets swapped (2026-07-15) — merge this PR promptly
 
-`website/wrangler.jsonc` now points `HANDLES` at a namespace that exists **only
-on Aneesh's account**. The `worldmachines` repo's GitHub Actions deploy secrets
-(`CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID`) still point at **Venkat's**
-account. If this PR merges first, `rebuild.yml` will deploy the new binding to
-Venkat's live Pages project, where that KV id doesn't exist → Functions crash
-(1101). **Swap the secrets to Aneesh's account (step A2) BEFORE merging.**
+The `worldmachines` repo's GitHub Actions deploy secrets (`CLOUDFLARE_API_TOKEN`,
+`CF_R2_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CF_AI_TOKEN`) now point at **Aneesh's**
+account, so GitHub-Actions deploys land on Aneesh's Pages project. This PR fixes
+`website/wrangler.jsonc` bindings (`HANDLES` id + `ORACLE_URL`) to match.
+
+**Until this PR merges, `main` still carries the OLD bindings.** So don't push
+`devlog.md` / `blurbs.md` / an article submission to `main` before merging — a
+`main` auto-deploy would push the stale `HANDLES` id onto Aneesh's account and
+1101 the HANDLES functions. Merging this PR is itself the corrective deploy
+(it touches `devlog.md`, so `rebuild.yml` redeploys with the correct bindings).
 
 ---
 
@@ -114,10 +118,10 @@ Venkat's live Pages project, where that KV id doesn't exist → Functions crash
    ```
 
 **A2 · Swap the `worldmachines` repo GitHub Actions secrets → Aneesh's account**
-(`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CF_AI_TOKEN`, `CF_R2_TOKEN`).
-**Do this before merging this PR** (see ⚠️ above). Needs a broad CF API token
-on Aneesh's account (Workers Scripts:Edit, Pages:Edit, Workers AI:Read, R2:Edit,
-KV:Edit, Containers).
+— ✅ **DONE 2026-07-15.** `CLOUDFLARE_API_TOKEN` + `CF_R2_TOKEN` ← Aneesh's CF API
+token (Workers/Pages/R2/KV/AI); `CLOUDFLARE_ACCOUNT_ID` + `CF_AI_TOKEN` ← Aneesh's.
+GitHub-Actions deploys now target Aneesh's account. (Steps 1/3 above — site deploy
++ ASK_TOKEN secret — are also done; A2/step-4 remain here for the record.)
 
 **B · Backfill HANDLES** from Venkat's export into `fc2ed69d…`.
 
