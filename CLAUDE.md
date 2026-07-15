@@ -18,10 +18,11 @@ Live site: **worldmachines.org**.
 
 ### `raw-notes/`
 
-- Each collaborator writes and pushes only inside their own subdirectory.
+- Each collaborator writes and pushes inside their own subdirectory. The one
+  shared exception is `raw-notes/commons/` (below).
 - Notes can be rough, idiosyncratic, incomplete, and written for future AI organization.
 - Suggested note format: Markdown, short files, descriptive filenames, links/citations when available.
-- Current directories:
+- Per-collaborator directories:
   - `raw-notes/aneesh/`
   - `raw-notes/florian/`
   - `raw-notes/ivo/`
@@ -29,6 +30,13 @@ Live site: **worldmachines.org**.
   - `raw-notes/patrick/`
   - `raw-notes/sean/`
   - `raw-notes/venkat/`
+- `raw-notes/commons/` — **shared, communal ingestion area** for reading material
+  the whole group works through (book-club books and member-submitted links).
+  AI-ingested reading notes land here instead of a personal dir, so they are
+  attributed to the pseudo-author `commons` rather than one person. Anyone links
+  to them from their own dir with `[[source-slug]]`. See `raw-notes/commons/index.md`.
+  This is where the ADR-0007 ingestion pipeline writes when run with
+  `author_dir: commons`.
 
 ### `wiki/`
 
