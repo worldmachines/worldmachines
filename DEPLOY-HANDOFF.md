@@ -76,13 +76,35 @@ account, so GitHub-Actions deploys land on Aneesh's Pages project. This PR fixes
    share it privately, not via a public PR). Aneesh bulk-loads it into
    `fc2ed69d95644b8298777e3318240e1c`.
 
-2. **Re-point `worldmachines.org` DNS** to Aneesh's Pages deployment, once he
-   confirms `worldmachines-2rd.pages.dev` is verified. Two options:
-   - *Preferred:* move the `worldmachines.org` zone to Aneesh's account, then add
-     the custom domain in his `worldmachines` Pages project (auto-creates DNS).
-   - *Or:* keep the zone on your account and point it at his Pages project via a
-     CNAME (`worldmachines.org` → `worldmachines-2rd.pages.dev`); Aneesh adds the
-     custom domain on his side and you approve the validation record.
+2. **Point `worldmachines.org` at Aneesh's Pages deployment.**
+   **Chosen approach (2026-07-15): interim CNAME — the zone stays on your
+   account; you keep the registrar.** (When Aneesh tried to add the apex as a
+   custom domain on *his* Pages project, Cloudflare demanded a full zone
+   transfer — apex custom domains require the zone to live on the same account
+   as the project. We're avoiding that registrar move for now.)
+
+   The catch: because of that apex restriction, Aneesh cannot register the bare
+   `worldmachines.org` on his project cross-account. So the interim uses a
+   **`www` subdomain (which Cloudflare *does* allow cross-account) plus an apex
+   redirect**:
+
+   1. **Aneesh** adds `www.worldmachines.org` as a custom domain on his
+      `worldmachines` Pages project. Cloudflare shows a **CNAME target** and a
+      **TXT (DCV) verification** record — he sends you both values.
+   2. **You** (zone on your account) add, in the `worldmachines.org` zone:
+      - the **TXT** DCV record exactly as given, and
+      - a **proxied CNAME** `www` → `worldmachines-2rd.pages.dev`.
+   3. **You** redirect the apex to www — a **Redirect Rule**
+      (`worldmachines.org/*` → `https://www.worldmachines.org/$1`, 301) so bare
+      `worldmachines.org` lands on the Pages-served `www`.
+   4. Aneesh confirms the cert issues and the site serves; done.
+
+   *Clean end state (whenever you're ready for the registrar change):* move the
+   `worldmachines.org` zone to Aneesh's account (repoint the registrar
+   nameservers to his assigned CF NS — **export the current DNS records first**
+   so MX/email and any other records carry over), then add the **apex** custom
+   domain directly on his Pages project. That's the "complete control" target;
+   the interim above is the no-registrar-change stopgap.
 
 3. **(Optional, deferred) `worldmachines-library` PDFs.** The gated team-library
    set lives in your `worldmachines-library` bucket, which Aneesh can't read.
