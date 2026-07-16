@@ -71,6 +71,12 @@
     }
     .chip-note { border-color: #c9b88a; background: #fdfcf8; }
     .chip-chunk { border-color: var(--border); color: var(--muted); }
+    .oracle-mcp { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .oracle-mcp h2 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .oracle-mcp p { font-family: system-ui, sans-serif; font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+    .mcp-cmd { background: #1c1c1c; border-radius: 4px; padding: 0.7rem 0.75rem; overflow-x: auto; margin: 0.75rem 0; }
+    .mcp-cmd code { font-family: 'Courier New', monospace; font-size: 0.8rem; color: #f0ede8; white-space: pre; }
+    .oracle-mcp .mcp-more { margin-top: 0.5rem; }
   </style>
 </head>
 <body>
@@ -101,6 +107,13 @@
     </div>
     <div class="answer" id="answer"></div>
     <div class="citations" id="citations"></div>
+
+    <section class="oracle-mcp">
+      <h2>Use the Oracle from your own AI</h2>
+      <p>Prefer to explore the corpus in Claude, or any MCP client? Add the World Machines <strong>Oracle MCP server</strong> — read-only access to the shared knowledge layer (concept &amp; reading notes, plus open-licensed evidence passages), no login required:</p>
+      <pre class="mcp-cmd"><code>claude mcp add --transport http worldmachines-oracle https://wm-oracle-dev.aneeshsathe.workers.dev/mcp</code></pre>
+      <p class="mcp-more">Your AI then searches and follows the note graph itself. Full setup — Claude Desktop config, and private full-text access for members — is on the <a href="/mcp">MCP access page</a>.</p>
+    </section>
   </main>
 
   <script>

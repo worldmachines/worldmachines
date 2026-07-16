@@ -14,8 +14,6 @@
       line-height: 1.65;
     }
 
-    .signin-panel { display: none; }
-
     /* Generate token row + minted token box */
     .gen-btn {
       font-family: system-ui, sans-serif;
@@ -56,7 +54,7 @@
       margin-top: 0.4rem;
     }
 
-    /* Instructions */
+    /* Sections */
     .mcp-section { margin-top: 2.75rem; }
     .mcp-section > h3 {
       font-size: 1rem;
@@ -76,9 +74,10 @@
     }
     .server-note {
       font-family: system-ui, sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       color: var(--muted);
-      margin: 0.75rem 0 0.35rem;
+      line-height: 1.6;
+      margin: 0.6rem 0 0.35rem;
     }
     .server-note strong { color: var(--text); }
 
@@ -162,63 +161,80 @@
 
   <div class="form-wrap">
 
-    <!-- Unauthenticated state — no valid CF Access JWT (dormant until Access is configured) -->
-    <div id="signin" class="not-registered-panel signin-panel">
-      <h2>Sign in required</h2>
-      <p>MCP access is available to approved World Machines members. Sign in with an approved email to generate your access token.</p>
-      <p>If you keep landing here, this account isn't recognised by the members gate.</p>
-    </div>
+    <h2>MCP access</h2>
+    <p class="mcp-lede">
+      Add a World Machines <strong>Model Context Protocol</strong> (MCP) server to Claude — or any
+      MCP client — and your own AI reads the corpus directly: searching notes, following the graph,
+      and pulling evidence, with no copy-pasting into a chat box.
+    </p>
 
-    <!-- Authenticated-but-not-registered state -->
-    <div id="not-registered" class="not-registered-panel" style="display:none">
-      <h2>You're not registered yet</h2>
-      <p>You're signed in as <strong id="nr-email"></strong>, but this account isn't set up as a World Machines contributor yet.</p>
-      <p>Request access and the project admin will get you set up.</p>
-      <a id="nr-join-link" href="/join" class="btn-join">Request access →</a>
-    </div>
-
-    <!-- Registered member experience -->
-    <div id="mcp-main" style="display:none">
-      <p id="welcome" class="welcome-greeting" style="display:none">
-        Welcome, <strong id="welcome-name"></strong>.
-        <a href="/profile" class="profile-link">Edit profile</a>
+    <!-- ── Oracle: PUBLIC, no login (always visible) ──────────────── -->
+    <div class="mcp-section">
+      <h3>Oracle — public, no login</h3>
+      <p class="server-note">
+        Read-only access to the <strong>shared knowledge layer</strong>: concept &amp; reading notes
+        (the wiki's canon and close readings of sources) plus open-licensed evidence passages.
+        Anyone can add it — no token needed.
       </p>
 
-      <h2>Your MCP access</h2>
-      <p class="mcp-lede">
-        Generate a personal access token, then add the two World Machines MCP servers to your
-        local AI. It reads the corpus directly — no copy-pasting into the chat box.
-      </p>
-
-      <button id="gen-btn" class="gen-btn">Generate my MCP access token</button>
-
-      <div id="token-panel" class="token-panel">
-        <div class="token-box">
-          <span id="token-value" class="token-value"></span>
-          <button class="copy-btn" data-copy="token-value">Copy</button>
+      <div class="platform-head">Claude Code (CLI)</div>
+      <div class="snippet">
+        <div class="snippet-head">
+          <span class="snippet-label">shell</span>
+          <button class="copy-btn" data-copy="cli-oracle">Copy</button>
         </div>
-        <div id="token-exp" class="token-exp"></div>
+        <pre><code id="cli-oracle">claude mcp add --transport http worldmachines-oracle https://wm-oracle-dev.aneeshsathe.workers.dev/mcp</code></pre>
       </div>
 
-      <div id="gen-message" class="form-message"></div>
+      <div class="platform-head">Claude Desktop (config JSON)</div>
+      <div class="snippet">
+        <div class="snippet-head">
+          <span class="snippet-label">json</span>
+          <button class="copy-btn" data-copy="desktop-oracle">Copy</button>
+        </div>
+        <pre><code id="desktop-oracle"></code></pre>
+      </div>
+    </div>
 
-      <!-- ─── Add both servers ─────────────────────────────────── -->
-      <div class="mcp-section">
-        <h3>Add both servers</h3>
+    <!-- ── Witness: MEMBERS ONLY, gated ───────────────────────────── -->
+    <div class="mcp-section">
+      <h3>Witness — members only, private full-text</h3>
+      <p class="server-note">
+        Verbatim access to <strong>private / in-copyright</strong> source material, for approved
+        members. Requires a personal token, generated below once you sign in with an approved email.
+      </p>
 
-        <!-- Claude Code (CLI) -->
-        <div class="platform-head">Claude Code (CLI)</div>
+      <!-- unauthenticated (also the dormant-until-Access state) -->
+      <div id="witness-signin" class="not-registered-panel" style="display:none">
+        <p>Sign in with an approved World Machines email to generate your Witness token. Members only.</p>
+      </div>
 
-        <div class="server-note"><strong>Oracle</strong> — public, no auth (shared notes)</div>
-        <div class="snippet">
-          <div class="snippet-head">
-            <span class="snippet-label">shell</span>
-            <button class="copy-btn" data-copy="cli-oracle">Copy</button>
+      <!-- authenticated but not a registered contributor -->
+      <div id="witness-not-registered" class="not-registered-panel" style="display:none">
+        <p>You're signed in as <strong id="nr-email"></strong>, but this account isn't a registered World Machines contributor yet.</p>
+        <a id="nr-join-link" href="/join" class="btn-join">Request access →</a>
+      </div>
+
+      <!-- registered member -->
+      <div id="witness-main" style="display:none">
+        <p class="welcome-greeting">
+          Signed in as <strong id="welcome-name"></strong>.
+          <a href="/profile" class="profile-link">Edit profile</a>
+        </p>
+
+        <button id="gen-btn" class="gen-btn">Generate my Witness token</button>
+
+        <div id="token-panel" class="token-panel">
+          <div class="token-box">
+            <span id="token-value" class="token-value"></span>
+            <button class="copy-btn" data-copy="token-value">Copy</button>
           </div>
-          <pre><code id="cli-oracle">claude mcp add --transport http worldmachines-oracle https://wm-oracle-dev.aneeshsathe.workers.dev/mcp</code></pre>
+          <div id="token-exp" class="token-exp"></div>
         </div>
 
-        <div class="server-note"><strong>Witness</strong> — gated, uses your token (approved private verbatim)</div>
+        <div id="gen-message" class="form-message"></div>
+
+        <div class="platform-head">Claude Code (CLI) — add the Witness</div>
         <div class="snippet">
           <div class="snippet-head">
             <span class="snippet-label">shell</span>
@@ -227,15 +243,13 @@
           <pre><code id="cli-witness"></code></pre>
         </div>
 
-        <!-- Claude Desktop (config JSON) -->
-        <div class="platform-head">Claude Desktop (config JSON)</div>
-        <div class="server-note">Add both to the <strong>mcpServers</strong> block of your Claude Desktop config file.</div>
+        <div class="platform-head">Claude Desktop — both servers</div>
         <div class="snippet">
           <div class="snippet-head">
             <span class="snippet-label">json</span>
-            <button class="copy-btn" data-copy="desktop-config">Copy</button>
+            <button class="copy-btn" data-copy="desktop-both">Copy</button>
           </div>
-          <pre><code id="desktop-config"></code></pre>
+          <pre><code id="desktop-both"></code></pre>
         </div>
 
         <p class="explainer">
@@ -248,25 +262,40 @@
   </div>
 
   <script>
-    // ── Snippet templates ────────────────────────────────────────
+    const ORACLE_URL = 'https://wm-oracle-dev.aneeshsathe.workers.dev/mcp';
+    const WITNESS_URL = 'https://wm-witness-dev.aneeshsathe.workers.dev/mcp';
     const PLACEHOLDER = 'wmk_…';
 
-    function cliWitness(tok) {
-      return 'claude mcp add --transport http --header "Authorization: Bearer '
-        + tok + '" worldmachines-witness https://wm-witness-dev.aneeshsathe.workers.dev/mcp';
-    }
-
-    function desktopConfig(tok) {
+    // ── Snippet templates ────────────────────────────────────────
+    function oracleDesktop() {
       return [
         '{',
         '  "mcpServers": {',
         '    "worldmachines-oracle": {',
         '      "type": "http",',
-        '      "url": "https://wm-oracle-dev.aneeshsathe.workers.dev/mcp"',
+        '      "url": "' + ORACLE_URL + '"',
+        '    }',
+        '  }',
+        '}'
+      ].join('\n');
+    }
+
+    function cliWitness(tok) {
+      return 'claude mcp add --transport http --header "Authorization: Bearer '
+        + tok + '" worldmachines-witness ' + WITNESS_URL;
+    }
+
+    function desktopBoth(tok) {
+      return [
+        '{',
+        '  "mcpServers": {',
+        '    "worldmachines-oracle": {',
+        '      "type": "http",',
+        '      "url": "' + ORACLE_URL + '"',
         '    },',
         '    "worldmachines-witness": {',
         '      "type": "http",',
-        '      "url": "https://wm-witness-dev.aneeshsathe.workers.dev/mcp",',
+        '      "url": "' + WITNESS_URL + '",',
         '      "headers": {',
         '        "Authorization": "Bearer ' + tok + '"',
         '      }',
@@ -276,21 +305,20 @@
       ].join('\n');
     }
 
-    function renderSnippets(tok) {
+    // Oracle Desktop config is static & public; Witness snippets start as placeholders.
+    document.getElementById('desktop-oracle').textContent = oracleDesktop();
+    function renderWitness(tok) {
       document.getElementById('cli-witness').textContent = cliWitness(tok);
-      document.getElementById('desktop-config').textContent = desktopConfig(tok);
+      document.getElementById('desktop-both').textContent = desktopBoth(tok);
     }
-
-    // Start with a placeholder token; replaced once a real one is minted.
-    renderSnippets(PLACEHOLDER);
+    renderWitness(PLACEHOLDER);
 
     // ── Copy buttons ─────────────────────────────────────────────
     document.querySelectorAll('.copy-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         const target = document.getElementById(btn.dataset.copy);
         if (!target) return;
-        const text = target.textContent;
-        navigator.clipboard.writeText(text).then(() => {
+        navigator.clipboard.writeText(target.textContent).then(() => {
           const orig = btn.textContent;
           btn.textContent = 'Copied';
           btn.classList.add('copied');
@@ -299,30 +327,28 @@
       });
     });
 
-    // ── Auth check (mirrors submit.html) ─────────────────────────
+    // ── Witness gate: toggle only the members section on auth state ──
+    function show(id) { document.getElementById(id).style.display = ''; }
     fetch('/api/me')
       .then(r => r.json())
       .then(data => {
-        if (data.error === 'unauthorized') {
-          // No valid Access JWT — dormant-until-Access state (correct).
-          document.getElementById('signin').style.display = 'block';
-          return;
-        }
         if (data.error === 'not_registered') {
           document.getElementById('nr-email').textContent = data.email;
           document.getElementById('nr-join-link').href = '/join?email=' + encodeURIComponent(data.email);
-          document.getElementById('not-registered').style.display = '';
+          show('witness-not-registered');
           return;
         }
         if (data.handle) {
-          document.getElementById('mcp-main').style.display = '';
           document.getElementById('welcome-name').textContent = data.name || data.handle;
-          document.getElementById('welcome').style.display = 'inline';
+          show('witness-main');
+          return;
         }
+        // unauthorized or any other shape → members sign-in prompt
+        show('witness-signin');
       })
-      .catch(() => {});
+      .catch(() => show('witness-signin'));
 
-    // ── Generate token ───────────────────────────────────────────
+    // ── Generate Witness token ───────────────────────────────────
     const genBtn = document.getElementById('gen-btn');
     const genMsg = document.getElementById('gen-message');
 
@@ -335,25 +361,22 @@
       try {
         const res = await fetch('/api/mcp-token', { method: 'POST' });
         const data = await res.json();
-
         if (!res.ok) {
           if (data.error === 'unauthorized') throw new Error('You must sign in with an approved email.');
           if (data.error === 'not_registered') throw new Error('This account is not a registered contributor yet.');
           throw new Error(data.error || 'Could not generate a token.');
         }
-
-        // Show the minted token and inject it into every snippet.
         document.getElementById('token-value').textContent = data.token;
         const when = new Date(data.exp * 1000).toLocaleDateString(undefined,
           { year: 'numeric', month: 'short', day: 'numeric' });
         document.getElementById('token-exp').textContent = 'Expires ' + when + ' (valid 90 days).';
         document.getElementById('token-panel').style.display = 'block';
-        renderSnippets(data.token);
+        renderWitness(data.token);
         genBtn.textContent = 'Generate a new token';
       } catch (err) {
         genMsg.className = 'form-message error';
         genMsg.textContent = err.message;
-        genBtn.textContent = 'Generate my MCP access token';
+        genBtn.textContent = 'Generate my Witness token';
       } finally {
         genBtn.disabled = false;
       }
