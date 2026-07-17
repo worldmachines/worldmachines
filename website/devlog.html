@@ -24,6 +24,14 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">16 July 2026 · aneesh</div>
+    <p>Put the Oracle's running costs on the Oracle page. A collapsible "health stats" box above the chat reports questions answered and dollars spent, split web vs MCP, against the hourly/daily spend caps that keep a public Oracle affordable — served by a new <code>/api/stats</code> Pages Function proxying the Oracle worker. The meter fails soft by design: any upstream trouble hides the box entirely rather than showing a broken number, so the chat is never blocked by its own dashboard. Asking a question now refreshes the numbers, and hitting a spend cap returns a plain-language "try again later" instead of an HTTP error.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">16 July 2026 · aneesh</div>
+    <p>Consolidated the Oracle-page, MCP, and account-cutover work into one PR (supersedes #17, #20, #23). The Oracle at <code>/oracle</code> is now multi-turn chat with clean citations — <code>[chunk:…]</code> passages collapse into per-book "Sources" chips and concept <code>[[…]]</code> links become explorable buttons, so answers read as prose instead of raw tokens. Adds a public <code>/mcp</code> page (documenting the no-auth Oracle MCP + a gated Witness-token mint via <code>/api/mcp-token</code>, <code>MCP<em>TOKENS</code> KV) and flips the Pages bindings back to Aneesh's account (<code>HANDLES</code> namespace + <code>ORACLE</em>URL</code> → <code>wm-oracle-dev.aneeshsathe.workers.dev</code>); merging is itself the corrective cutover deploy. Also points the "Project Chat" nav link (every page + <code>build.py</code>'s template) at the project Discord (<code>discord.gg/tqUFztN3r</code>) instead of the old Zulip server.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">6 July 2026 · vgr</div>
     <p>Completed the Oracle/Witness stack transfer from Aneesh's Cloudflare account to Venkat's, and reorganized all five project repos into a single <code>worldmachines/</code> container folder (wm-site, wm-infra, wm-oracle, wm-encyclopedia-kb, wm-feeder). The full deploy: R2 buckets provisioned, catalog workers deployed via GitOps CI, 817 notes synced and embedded into both shared and personal DuckLake catalogs, Witness and Oracle workers stood up with fresh credentials, and PR #15 merged — bringing server-side <code>/api/ask</code> proxy, citation-enabled oracle.html, and the feeder ingest workflow. Oracle is now fully live on Venkat's account at worldmachines.org.</p>
   </article>
@@ -81,6 +89,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-07-06T23:00:21Z -->
+  <!-- built: 2026-07-17T19:17:25Z -->
 </body>
 </html>
