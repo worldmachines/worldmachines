@@ -56,7 +56,7 @@ astonishment, as Class Orator over a more capable and more popular rival --
 proof, in Adams's reading, that Harvard's real product was social legibility
 rather than intellect. He says as much outright: the college's advantages were
 "vulgarly called social, rather than mental." This is close to the World
-Machines idea of a decay sequence in miniature -- an institution whose
+Machines idea of a [[decay-sequence]] in miniature -- an institution whose
 stated Functional purpose (education) has receded behind a persisting
 Performative one (producing recognizable, interchangeable gentlemen and
 confirming their standing).
