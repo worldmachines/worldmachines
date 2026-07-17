@@ -8,6 +8,60 @@ Aneesh's CF account, so Aneesh has complete control. Venkat re-points
 
 ---
 
+## Update 2026-07-17 — apex-CNAME incident + revised DNS plan (zone transfer, not `www`)
+
+PR #25 merged 2026-07-17, bindings cut over correctly. Venkat then pointed the
+`worldmachines.org` apex CNAME directly at `worldmachines-2rd.pages.dev`
+(Aneesh's project) rather than following the `www` + redirect stopgap below —
+Cloudflare rejected it: **apex proxied CNAME to a Pages project on a different
+account is banned cross-account (error 1014, "CNAME Cross-User Banned").** Site
+was down for ~1–2 hours.
+
+**Mitigation (done):** apex CNAME reverted to `worldmachines.pages.dev`
+(Venkat's own project, same account as the zone — no cross-user restriction).
+Site is back up on the **pre-cutover bindings** (Venkat's account) as of
+2026-07-17. This is intentionally the old, working state — not the PR #25
+deployment.
+
+**Decision:** skip the `www` + redirect interim (Venkat's action item 2,
+below) in favor of doing the **full zone transfer** now instead. Rationale:
+avoids a permanent `www` in the address bar, and the interim was itself the
+thing that caused today's incident — better to do the real cutover once.
+
+### Zone transfer plan
+
+1. **Venkat** exports current DNS records as a backup (Cloudflare dashboard →
+   `worldmachines.org` zone → DNS → Records → Export, BIND format) before
+   transferring — the zone transfer moves everything, including MX/email
+   records.
+2. **Venkat** initiates a cross-account zone transfer from his Cloudflare
+   account to Aneesh's (`ebef79305d4b32a611e2946cc08f7bd6`) — Account Home (or
+   the zone's own settings) → "Transfer domain to another account."
+3. **Aneesh** accepts the incoming transfer request on his account.
+4. **Whoever controls the registrar** checks whether the zone's assigned
+   nameservers changed post-transfer (currently `andronicus.ns.cloudflare.com`
+   / `connie.ns.cloudflare.com`). If they changed, the registrar's NS records
+   must be updated to match, or the domain drops off the internet — this is
+   the one step that can cause a real outage if missed. If unchanged, skip.
+5. **Aneesh**, once the zone is on his account, adds `worldmachines.org` as an
+   **apex** custom domain directly on his `worldmachines` Pages project —
+   same-account now, so it validates normally (no TXT/DCV dance, no `www`
+   redirect needed).
+6. Verify site loads at `worldmachines.org` on the PR #25 bindings, then this
+   doc's job is done.
+
+**Until the transfer completes, the site continues serving the pre-cutover
+(Venkat's-account) version.** Do not re-attempt a direct apex CNAME to
+Aneesh's project — it will 1014 again.
+
+Also still outstanding regardless of DNS: **Aneesh needs to import the
+HANDLES KV export** Venkat sent him (contributor emails → handles/profiles)
+into namespace `fc2ed69d95644b8298777e3318240e1c`. No rush from the site's
+perspective — the export is a point-in-time snapshot and isn't blocking the
+DNS work above.
+
+---
+
 ## What This Is
 
 The July-6 move stood up a *parallel* copy of the Oracle/Witness/catalog stack

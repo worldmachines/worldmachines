@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-07-17 · vgr
+Merged PR #25 (Oracle/MCP/account cutover), then hit an incident re-pointing DNS: a direct apex CNAME to Aneesh's Pages project (`worldmachines-2rd.pages.dev`) is banned cross-account by Cloudflare (error 1014), taking the site down for ~1–2 hours. Reverted the apex CNAME back to Venkat's own project (`worldmachines.pages.dev`) to restore service on the pre-cutover bindings. Decided to skip the `www` + redirect stopgap in `DEPLOY-HANDOFF.md` and do a full Cloudflare zone transfer of `worldmachines.org` to Aneesh's account instead — see that doc's "Update 2026-07-17" section for the step-by-step plan and outstanding action items for both Venkat and Aneesh.
+
 ## 2026-07-16 · aneesh (2)
 Put the Oracle's running costs on the Oracle page. A collapsible "health stats" box above the chat reports questions answered and dollars spent, split web vs MCP, against the hourly/daily spend caps that keep a public Oracle affordable — served by a new `/api/stats` Pages Function proxying the Oracle worker. The meter fails soft by design: any upstream trouble hides the box entirely rather than showing a broken number, so the chat is never blocked by its own dashboard. Asking a question now refreshes the numbers, and hitting a spend cap returns a plain-language "try again later" instead of an HTTP error.
 
