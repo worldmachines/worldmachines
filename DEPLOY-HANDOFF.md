@@ -1,153 +1,178 @@
-# DEPLOY-HANDOFF.md — Oracle/Witness Stack Deployment (In Progress)
+# DEPLOY-HANDOFF.md — Cutover: worldmachines → Aneesh's Cloudflare account
 
-**Written:** 2026-07-06  
-**Status:** Steps 1–5 complete. Next: Step 6 (lake publish).
+**Written:** 2026-07-15
+**Direction:** move the *whole* stack from Venkat's CF account (`vgr-702`) **back** to
+Aneesh's CF account, so Aneesh has complete control. Venkat re-points
+`worldmachines.org` DNS once the new deployment is verified.
+**Supersedes** the 2026-07-06 Aneesh→Venkat handoff (see git history of this file).
 
 ---
 
 ## What This Is
 
-Deploying the Oracle/Witness stack from Aneesh Sathe's CF account to Venkat's CF account, following `wm-infra/docs/VENKAT-DEPLOY.md`. PR #15 on `worldmachines/worldmachines` (Aneesh's frontend changes) must NOT be merged until the stack is live in Venkat's account.
+The July-6 move stood up a *parallel* copy of the Oracle/Witness/catalog stack
+on Venkat's account but never tore down Aneesh's original — so **the backend is
+already live on Aneesh's account** and needs only a data refresh. The work left
+is the website layer (Pages project, buckets, KV) plus swapping deploy
+credentials. This doc is the runbook; the *why* is in
+`wm-infra/docs/VENKAT-DEPLOY.md` (same steps, mirrored account).
 
-**Venkat's CF account:**
-- Account ID: `7026b5d7c1ad16cb808987576bb07ab2`
-- workers.dev subdomain: `vgr-702.workers.dev`
-- Wrangler OAuth token: already authenticated (`npx wrangler whoami` confirms)
+**Accounts**
 
----
-
-## 5 Repos (all under `/Users/Venkat/Dropbox/Code/worldmachines/`)
-
-| Repo | Path | Branch | Status |
-|------|------|--------|--------|
-| wm-infra | `worldmachines/wm-infra/` | main | clean |
-| wm-oracle | `worldmachines/wm-oracle/` | main | clean |
-| wm-encyclopedia-kb | `worldmachines/wm-encyclopedia-kb/` | main | clean |
-| wm-feeder | `worldmachines/wm-feeder/` | main | clean |
-| wm-site | `worldmachines/wm-site/` | main | clean |
+| | account id | workers.dev subdomain |
+|---|---|---|
+| Aneesh (target) | `ebef79305d4b32a611e2946cc08f7bd6` | `aneeshsathe.workers.dev` |
+| Venkat (current live) | `7026b5d7c1ad16cb808987576bb07ab2` | `vgr-702.workers.dev` |
 
 ---
 
-## Completed Steps
+## Current state (verified 2026-07-15)
 
-### Step 1 — URL Rewrites (done, committed)
+**Already live on Aneesh's account** — no action needed:
+- `wm-oracle-dev` / `wm-witness-dev` (Oracle + Witness workers) — `/api/ask` returns cited answers.
+- `wm-ducklake-dev` / `wm-ducklake-personal-dev` (shared + personal catalogs, workers + R2 buckets).
+- All catalog/oracle secrets (ADMIN / RETRIEVE / ASK / EVIDENCE / CF_AI) present in Aneesh's `.env`.
 
-All `*.aneeshsathe.workers.dev` → `*.vgr-702.workers.dev` in:
+**Created 2026-07-15 on Aneesh's account** (empty, awaiting data):
+- R2 `worldmachines-notes`, R2 `worldmachines-library`
+- KV `HANDLES` → id `fc2ed69d95644b8298777e3318240e1c`
+- Pages project `worldmachines` → `worldmachines-2rd.pages.dev` (site deployed 2026-07-15; Oracle verified end-to-end through the site `/api/ask` proxy)
 
-| File | Change |
-|------|--------|
-| `wm-oracle/oracle/wrangler.jsonc` | `CATALOG_URL` env var |
-| `wm-oracle/witness/wrangler.jsonc` | `CATALOG_URL` env var |
-| `wm-oracle/evals/run.mjs` | `DEFAULT_URL` constant |
-| `wm-oracle/.github/workflows/eval.yml` | `inputs.oracle_url.default` |
-| `wm-encyclopedia-kb/config.yaml` | both `worker_url` entries |
-
-### Step 2 — CODEOWNERS (done, committed)
-
-`wm-infra/.github/CODEOWNERS`: all `@aneeshsathe` → `@vgururao`
-
-### Step 3 — R2 Buckets Created (done)
-
-Both buckets exist in Venkat's CF account:
-- `wm-ducklake-dev`
-- `wm-ducklake-personal-dev`
-
-### Step 4 — Catalog deployed (done via CI)
-
-Both workers deployed to Venkat's account via GitHub Actions `apply.yml`.
-CI secret `CLOUDFLARE_API_TOKEN` set on the `dev` environment of `worldmachines/wm-infra`.
-
-### Step 5 — Secrets set (done)
-
-All secrets set on both workers before first request. Values in `wm-infra/.env.keys`.
+**Config changes in THIS PR:**
+- `website/wrangler.jsonc`: `HANDLES` id → the new Aneesh-account namespace; `ORACLE_URL` → `wm-oracle-dev.aneeshsathe.workers.dev`.
 
 ---
 
-## Remaining Steps (from VENKAT-DEPLOY.md)
+## ✅ Deploy secrets swapped (2026-07-15) — merge this PR promptly
 
-**Step 6 — Publish the encyclopedia**
+The `worldmachines` repo's GitHub Actions deploy secrets (`CLOUDFLARE_API_TOKEN`,
+`CF_R2_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CF_AI_TOKEN`) now point at **Aneesh's**
+account, so GitHub-Actions deploys land on Aneesh's Pages project. This PR fixes
+`website/wrangler.jsonc` bindings (`HANDLES` id + `ORACLE_URL`) to match.
+
+**Until this PR merges, `main` still carries the OLD bindings.** So don't push
+`devlog.md` / `blurbs.md` / an article submission to `main` before merging — a
+`main` auto-deploy would push the stale `HANDLES` id onto Aneesh's account and
+1101 the HANDLES functions. Merging this PR is itself the corrective deploy
+(it touches `devlog.md`, so `rebuild.yml` redeploys with the correct bindings).
+
+---
+
+## Venkat's action items
+
+1. **Export the HANDLES KV** so Aneesh can load it into the new namespace
+   (chosen approach: deploy empty first, backfill from your export). From a
+   shell authenticated to your CF account:
+   ```bash
+   NS=ca021379904746528348029c242faaff   # the HANDLES namespace bound in wrangler.jsonc today
+   npx wrangler kv key list --namespace-id "$NS" --remote > handles-keys.json
+   : > handles-export.ndjson
+   for k in $(jq -r '.[].name' handles-keys.json); do
+     v=$(npx wrangler kv key get "$k" --namespace-id "$NS" --remote)
+     jq -cn --arg key "$k" --arg value "$v" '{key:$key, value:$value}' >> handles-export.ndjson
+   done
+   ```
+   Send `handles-export.ndjson` to Aneesh (it's contributor emails → profiles;
+   share it privately, not via a public PR). Aneesh bulk-loads it into
+   `fc2ed69d95644b8298777e3318240e1c`.
+
+2. **Point `worldmachines.org` at Aneesh's Pages deployment.**
+   **Chosen approach (2026-07-15): interim CNAME — the zone stays on your
+   account; you keep the registrar.** (When Aneesh tried to add the apex as a
+   custom domain on *his* Pages project, Cloudflare demanded a full zone
+   transfer — apex custom domains require the zone to live on the same account
+   as the project. We're avoiding that registrar move for now.)
+
+   The catch: because of that apex restriction, Aneesh cannot register the bare
+   `worldmachines.org` on his project cross-account. So the interim uses a
+   **`www` subdomain (which Cloudflare *does* allow cross-account) plus an apex
+   redirect**:
+
+   1. **Aneesh** adds `www.worldmachines.org` as a custom domain on his
+      `worldmachines` Pages project. Cloudflare shows a **CNAME target** and a
+      **TXT (DCV) verification** record — he sends you both values.
+   2. **You** (zone on your account) add, in the `worldmachines.org` zone:
+      - the **TXT** DCV record exactly as given, and
+      - a **proxied CNAME** `www` → `worldmachines-2rd.pages.dev`.
+   3. **You** redirect the apex to www — a **Redirect Rule**
+      (`worldmachines.org/*` → `https://www.worldmachines.org/$1`, 301) so bare
+      `worldmachines.org` lands on the Pages-served `www`.
+   4. Aneesh confirms the cert issues and the site serves; done.
+
+   *Clean end state (whenever you're ready for the registrar change):* move the
+   `worldmachines.org` zone to Aneesh's account (repoint the registrar
+   nameservers to his assigned CF NS — **export the current DNS records first**
+   so MX/email and any other records carry over), then add the **apex** custom
+   domain directly on his Pages project. That's the "complete control" target;
+   the interim above is the no-registrar-change stopgap.
+
+3. **(Optional, deferred) `worldmachines-library` PDFs.** The gated team-library
+   set lives in your `worldmachines-library` bucket, which Aneesh can't read.
+   Deferred for now (C1). If/when wanted, copy `public/` + `private/` +
+   `_manifests/` to Aneesh, or hand him the source PDFs.
+
+4. **Approve this PR** (touches `website/` → `approval-policy` requires @vgururao).
+
+5. **(After cutover verified) Tear down** the `vgr-702` copy of the stack if you
+   no longer want it billing to your account.
+
+---
+
+## Aneesh's steps (this side)
+
+**A · Refresh data + deploy (needs the R2 API token; local, using wrangler OAuth)**
+1. Mint an R2 API token (Admin R&W, all buckets) → `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY`.
+2. Point the lake at this account: `wm-encyclopedia-kb/config.yaml` `worker_url` → `aneeshsathe`; `wm-oracle` `CATALOG_URL` → `aneeshsathe` (deployed workers already use it; this syncs git).
+3. Full local publish (moves all notes + the 1,721 RAG chunks, current):
+   ```bash
+   cd wm-encyclopedia-kb && set -a && source .env && set +a
+   export R2_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID CF_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID
+   uv run lake sync && uv run lake embed
+   uv run lake publish shared --dry-run && uv run lake publish shared
+   uv run lake publish personal --dry-run && uv run lake publish personal
+   ```
+4. Deploy the site to Aneesh's Pages project + set its secrets:
+   ```bash
+   cd website
+   npx wrangler pages secret put ASK_TOKEN --project-name worldmachines   # = oracle's ASK_TOKEN (.env ASK_TOKEN_DEV)
+   # ORACLE_URL is a var, already in wrangler.jsonc
+   npx wrangler pages deploy . --project-name worldmachines --branch main
+   ```
+
+**A2 · Swap the `worldmachines` repo GitHub Actions secrets → Aneesh's account**
+— ✅ **DONE 2026-07-15.** `CLOUDFLARE_API_TOKEN` + `CF_R2_TOKEN` ← Aneesh's CF API
+token (Workers/Pages/R2/KV/AI); `CLOUDFLARE_ACCOUNT_ID` + `CF_AI_TOKEN` ← Aneesh's.
+GitHub-Actions deploys now target Aneesh's account. (Steps 1/3 above — site deploy
++ ASK_TOKEN secret — are also done; A2/step-4 remain here for the record.)
+
+**B · Backfill HANDLES** from Venkat's export into `fc2ed69d…`.
+
+**C · Notes→catalog CI** (the original ask): a workflow in `wm-encyclopedia-kb`
+that runs `lake sync/embed/publish shared --only notes,edges` on `raw-notes/**`
+changes (scoped so it never wipes the curator-built chunks). Secrets on that repo.
+
+**D · Verify → tell Venkat to re-point DNS.**
+
+---
+
+## Verification (run before DNS cutover)
 
 ```bash
-cd /Users/Venkat/Dropbox/Code/worldmachines/wm-encyclopedia-kb
-source /Users/Venkat/Dropbox/Code/worldmachines/wm-infra/.env.keys
-export R2_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID
-export CF_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID
-
-uv run lake publish shared --dry-run
-uv run lake publish shared
-uv run lake publish personal --dry-run
-uv run lake publish personal
-```
-
-R2 catalog key is `_catalog/catalog.db` (not root `catalog.db`).
-
-**Step 7 — Deploy Witness and Oracle**
-
-```bash
-cd /Users/Venkat/Dropbox/Code/worldmachines/wm-oracle
-source /Users/Venkat/Dropbox/Code/worldmachines/wm-infra/.env.keys
-
-# Witness first (Oracle depends on it)
-npx wrangler deploy --config witness/wrangler.jsonc
-
-EVIDENCE_TOKEN="$(openssl rand -hex 32)"
-printf '%s' "$EVIDENCE_TOKEN" | npx wrangler secret put EVIDENCE_TOKEN --config witness/wrangler.jsonc
-printf '%s' "$RETRIEVE_TOKEN_PERSONAL" | npx wrangler secret put RETRIEVE_TOKEN --config witness/wrangler.jsonc
-
-# Then Oracle
-npx wrangler deploy --config oracle/wrangler.jsonc
-
-ASK_TOKEN="$(openssl rand -hex 32)"
-printf '%s' "$RETRIEVE_TOKEN_SHARED" | npx wrangler secret put RETRIEVE_TOKEN --config oracle/wrangler.jsonc
-printf '%s' "$ASK_TOKEN"             | npx wrangler secret put ASK_TOKEN --config oracle/wrangler.jsonc
-printf '%s' "$EVIDENCE_TOKEN"        | npx wrangler secret put WITNESS_TOKEN --config oracle/wrangler.jsonc
-printf '%s' "https://wm-witness-dev.vgr-702.workers.dev" | npx wrangler secret put WITNESS_URL --config oracle/wrangler.jsonc
-```
-
-Save EVIDENCE_TOKEN and ASK_TOKEN to `wm-infra/.env.keys`.
-
-**Step 8 — Wire wm-site frontend**
-
-```bash
-# 1. Swap Actions secrets on worldmachines/worldmachines GitHub repo:
-#    CLOUDFLARE_API_TOKEN → Venkat's token
-#    CLOUDFLARE_ACCOUNT_ID → 7026b5d7c1ad16cb808987576bb07ab2
-
-# 2. Set Pages project secrets:
-cd /Users/Venkat/Dropbox/Code/worldmachines/wm-site/website
-npx wrangler pages secret put ASK_TOKEN --project-name worldmachines
-# Set ORACLE_URL env var in Pages Settings → Environment variables:
-#   https://wm-oracle-dev.vgr-702.workers.dev
-
-# 3. Merge PR #15 on worldmachines/worldmachines
-
-# 4. Deploy:
-npx wrangler pages deploy . --project-name worldmachines --branch main
+# catalogs
+curl -sf https://wm-ducklake-dev.aneeshsathe.workers.dev/healthz
+curl -sf https://wm-ducklake-personal-dev.aneeshsathe.workers.dev/healthz
+# oracle golden evals (12/12)
+cd wm-oracle
+ORACLE_URL=https://wm-oracle-dev.aneeshsathe.workers.dev ASK_TOKEN=<value> npm run eval
+# site
+open https://worldmachines-2rd.pages.dev
 ```
 
 ---
 
-## Verification (after Step 7)
+## Notes
 
-```bash
-curl -sf "https://wm-ducklake-dev.vgr-702.workers.dev/healthz"
-curl -sf "https://wm-ducklake-personal-dev.vgr-702.workers.dev/healthz"
-# 12/12 golden evals:
-cd /Users/Venkat/Dropbox/Code/worldmachines/wm-oracle
-ORACLE_URL="https://wm-oracle-dev.vgr-702.workers.dev" ASK_TOKEN="<value>" npm run eval
-```
-
----
-
-## Security Notes
-
-- **`QUACK_TOKEN` does not exist** — do not mint; any reference is stale (ADR 0004 D1)
-- **Nothing carries over from Aneesh's account** — all credentials re-minted from scratch
-- Voice feature (PR #15): **Approved by Venkat**
-
----
-
-## Key Reference
-
-Primary deploy doc: `/Users/Venkat/Dropbox/Code/worldmachines/wm-infra/docs/VENKAT-DEPLOY.md`  
-PR to merge after deploy: `https://github.com/worldmachines/worldmachines/pull/15`
+- `QUACK_TOKEN` does not exist (ADR 0004 D1) — do not mint.
+- The catalog's R2 key is `_catalog/catalog.db`, not root `catalog.db` (`lake/r2.py`).
+- `wm-infra` GitOps + `wm-feeder` deploy are phase-2 (direct deploy works now
+  since the workers are already live on Aneesh's account).

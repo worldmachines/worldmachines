@@ -5,6 +5,12 @@
   instead of writing an entry here.
 -->
 
+## 2026-07-16 · aneesh (2)
+Put the Oracle's running costs on the Oracle page. A collapsible "health stats" box above the chat reports questions answered and dollars spent, split web vs MCP, against the hourly/daily spend caps that keep a public Oracle affordable — served by a new `/api/stats` Pages Function proxying the Oracle worker. The meter fails soft by design: any upstream trouble hides the box entirely rather than showing a broken number, so the chat is never blocked by its own dashboard. Asking a question now refreshes the numbers, and hitting a spend cap returns a plain-language "try again later" instead of an HTTP error.
+
+## 2026-07-16 · aneesh
+Consolidated the Oracle-page, MCP, and account-cutover work into one PR (supersedes #17, #20, #23). The Oracle at `/oracle` is now multi-turn chat with clean citations — `[chunk:…]` passages collapse into per-book "Sources" chips and concept `[[…]]` links become explorable buttons, so answers read as prose instead of raw tokens. Adds a public `/mcp` page (documenting the no-auth Oracle MCP + a gated Witness-token mint via `/api/mcp-token`, `MCP_TOKENS` KV) and flips the Pages bindings back to Aneesh's account (`HANDLES` namespace + `ORACLE_URL` → `wm-oracle-dev.aneeshsathe.workers.dev`); merging is itself the corrective cutover deploy. Also points the "Project Chat" nav link (every page + `build.py`'s template) at the project Discord (`discord.gg/tqUFztN3r`) instead of the old Zulip server.
+
 ## 2026-07-06 · vgr
 Completed the Oracle/Witness stack transfer from Aneesh's Cloudflare account to Venkat's, and reorganized all five project repos into a single `worldmachines/` container folder (wm-site, wm-infra, wm-oracle, wm-encyclopedia-kb, wm-feeder). The full deploy: R2 buckets provisioned, catalog workers deployed via GitOps CI, 817 notes synced and embedded into both shared and personal DuckLake catalogs, Witness and Oracle workers stood up with fresh credentials, and PR #15 merged — bringing server-side `/api/ask` proxy, citation-enabled oracle.html, and the feeder ingest workflow. Oracle is now fully live on Venkat's account at worldmachines.org.
 

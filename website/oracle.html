@@ -17,13 +17,145 @@
     }
     .oracle-status.err { color: #a23; }
 
+    /* ── Public cost meter ──────────────────────────────────── */
+    /* Hidden until /api/stats answers with ok:true — a dead meter leaves no
+       trace on the page rather than showing zeros or NaN. */
+    .stats-details {
+      font-family: system-ui, sans-serif; font-size: 0.75rem; color: var(--muted);
+      background: #fdfcf8; border: 1px solid var(--border); border-radius: 4px;
+      padding: 0.5rem 0.75rem; margin-bottom: 1.25rem;
+    }
+    /* Left as a default list-item so the ▸ disclosure marker survives — a flex
+       summary drops ::marker and the box stops reading as expandable. Inline
+       spans then wrap on their own at narrow widths. */
+    .stats-details summary { cursor: pointer; color: var(--text); }
+    .stats-label {
+      font-size: 0.68rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+      margin-right: 0.3rem;
+    }
+    .stats-headline { color: var(--text); margin-right: 0.3rem; }
+    .stats-capped {
+      display: inline-block; font-size: 0.64rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      padding: 0.1rem 0.38rem; border-radius: 2px;
+      white-space: nowrap;
+      background: var(--badge-contribution-bg); color: var(--badge-contribution-text);
+    }
+    /* An author `display` beats the UA's `[hidden] { display: none }`, so every
+       element this page hides by attribute needs the attribute honoured back. */
+    .stats-details [hidden] { display: none; }
+    .stats-body { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--border); }
+    .stats-table { width: 100%; border-collapse: collapse; }
+    .stats-table th, .stats-table td {
+      padding: 0.22rem 0; font-weight: 400; text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .stats-table th:first-child, .stats-table td:first-child { text-align: left; }
+    .stats-table thead th {
+      font-size: 0.64rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted);
+      padding-bottom: 0.35rem;
+    }
+    .stats-table tbody td { color: var(--text); }
+    .stats-table tbody td:first-child { color: var(--muted); }
+    .stats-sessions, .stats-caps {
+      margin: 0; padding-top: 0.55rem; margin-top: 0.55rem;
+      border-top: 1px solid var(--border);
+    }
+    .stats-sessions { color: var(--text); }
+
+    /* ── Transcript ─────────────────────────────────────────── */
+    .turn-user { margin: 1.4rem 0 0.6rem; }
+    .turn-user .turn-label {
+      font-family: system-ui, sans-serif; font-size: 0.68rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+    .turn-user .turn-q { font-size: 1rem; font-style: italic; }
+
+    .answer {
+      margin-top: 0.4rem; padding: 1.1rem 1.2rem;
+      background: #fdfcf8; border-left: 3px solid #c9b88a;
+      font-size: 1rem; line-height: 1.7;
+    }
+    .answer p { margin: 0 0 0.8em; }
+    .answer p:last-child { margin-bottom: 0; }
+    .answer ul, .answer ol { margin: 0 0 0.8em 1.4em; }
+    .answer li { margin-bottom: 0.35em; }
+    .answer h3, .answer h4 {
+      font-family: system-ui, sans-serif; font-size: 0.85rem; font-weight: 600;
+      margin: 1em 0 0.4em;
+    }
+    .answer blockquote {
+      margin: 0 0 0.8em; padding-left: 0.9em;
+      border-left: 2px solid var(--border); color: var(--muted);
+    }
+    .answer code {
+      font-family: ui-monospace, monospace; font-size: 0.88em;
+      background: #f3f0e8; border-radius: 2px; padding: 0 0.25em;
+    }
+
+    /* Inline concept citation — clickable, drops a follow-up into the box. */
+    .cite-concept {
+      font: inherit; font-size: 0.85em; font-family: system-ui, sans-serif;
+      display: inline-block; cursor: pointer; line-height: 1.4;
+      background: #f3ecd6; color: inherit;
+      border: 1px solid #dccf9f; border-radius: 999px;
+      padding: 0 0.55em; margin: 0 0.08em; vertical-align: baseline;
+    }
+    .cite-concept:hover { background: #ecdfb8; }
+
+    /* ── Per-turn sources ───────────────────────────────────── */
+    .citations { margin: 0.7rem 0 0; }
+    .citations h3 {
+      font-family: system-ui, sans-serif; font-size: 0.68rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+      margin: 0.8rem 0 0.4rem;
+    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .chip-note {
+      font: inherit; font-family: system-ui, sans-serif; font-size: 0.75rem;
+      display: inline-block; cursor: pointer;
+      padding: 0.2rem 0.6rem; border-radius: 999px;
+      background: #fdfcf8; border: 1px solid #c9b88a; color: var(--text);
+    }
+    .chip-note:hover { background: #f3ecd6; }
+    .chip-book {
+      font: inherit; font-family: system-ui, sans-serif; font-size: 0.75rem;
+      display: inline-block; cursor: pointer;
+      padding: 0.2rem 0.6rem; border-radius: 999px;
+      background: #fff; border: 1px solid var(--border); color: var(--muted);
+    }
+    .chip-book:hover { border-color: #c9b88a; color: var(--text); }
+
+    /* ── Waiting animation ──────────────────────────────────── */
+    .thinking .answer {
+      font-family: system-ui, sans-serif; font-size: 0.85rem; color: var(--muted);
+    }
+    .dots { display: inline-block; margin-right: 0.45em; }
+    .dots i {
+      display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+      background: #b49b57; margin-right: 3px;
+      animation: dotpulse 1.2s infinite ease-in-out;
+    }
+    .dots i:nth-child(2) { animation-delay: 0.2s; }
+    .dots i:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes dotpulse {
+      0%, 80%, 100% { opacity: 0.25; transform: scale(0.8); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+
+    /* ── Composer ───────────────────────────────────────────── */
+    .composer { margin-top: 1.4rem; }
     #question {
       width: 100%; min-height: 4rem; padding: 0.7rem 0.85rem;
       font: 1rem Georgia, 'Times New Roman', serif;
       border: 1px solid var(--border); border-radius: 3px; background: #fff;
       resize: vertical;
     }
-    .ask-row { display: flex; gap: 0.6rem; align-items: center; margin-top: 0.55rem; }
+    #question:disabled { background: #f4f2ee; color: var(--muted); }
+    .ask-row { display: flex; gap: 0.7rem; align-items: center; margin-top: 0.55rem; flex-wrap: wrap; }
     .ask-btn {
       font: inherit; font-family: system-ui, sans-serif;
       font-weight: 500; font-size: 0.88rem;
@@ -31,46 +163,27 @@
       padding: 0.45rem 1.1rem; border-radius: 3px; cursor: pointer;
     }
     .ask-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .ask-hint {
+    .reset-btn {
+      font: inherit; font-family: system-ui, sans-serif; font-size: 0.78rem;
+      background: none; border: 1px solid var(--border); border-radius: 3px;
+      color: var(--muted); padding: 0.35rem 0.8rem; cursor: pointer;
+    }
+    .reset-btn:hover { border-color: var(--muted); color: var(--text); }
+    .turn-count, .ask-hint {
       font-family: system-ui, sans-serif; font-size: 0.75rem; color: var(--muted);
     }
 
-    .answer {
-      margin-top: 1.4rem; padding: 1.1rem 1.2rem;
-      background: #fdfcf8; border-left: 3px solid #c9b88a;
-      font-size: 1rem; line-height: 1.7; white-space: pre-wrap;
-      min-height: 1em;
+    /* ── MCP note ───────────────────────────────────────────── */
+    .mcp-details {
+      margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border);
+      font-family: system-ui, sans-serif; font-size: 0.82rem; color: var(--muted);
     }
-    .answer:empty { display: none; }
-
-    /* Inline [[note]] / [chunk:id] citation tokens the model left in the
-       answer body — shown, not stripped, per decision 6b. */
-    .cite-inline {
-      background: #f3ecd6; border-radius: 2px; padding: 0 0.15em;
+    .mcp-details summary { cursor: pointer; color: var(--text); }
+    .mcp-details p { margin: 0.6rem 0; }
+    .mcp-details pre {
+      background: #f3f0e8; border-radius: 3px; padding: 0.7rem 0.9rem;
+      overflow-x: auto; font-size: 0.78rem; line-height: 1.5; color: var(--text);
     }
-
-    .citations { margin-top: 1.2rem; }
-    .citations:empty { display: none; }
-    .citations h3 {
-      font-family: system-ui, sans-serif; font-size: 0.7rem; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
-      margin: 1.1rem 0 0.5rem; padding-bottom: 0.35rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .citations h3:first-child { margin-top: 0; }
-    .cite-group { margin-bottom: 0.55rem; }
-    .cite-group-label {
-      font-family: system-ui, sans-serif; font-size: 0.72rem; color: var(--muted);
-      margin-bottom: 0.3rem;
-    }
-    .chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .chip {
-      display: inline-block; font-family: system-ui, sans-serif; font-size: 0.75rem;
-      padding: 0.2rem 0.6rem; border-radius: 999px;
-      background: #fff; border: 1px solid var(--border); color: var(--text);
-    }
-    .chip-note { border-color: #c9b88a; background: #fdfcf8; }
-    .chip-chunk { border-color: var(--border); color: var(--muted); }
   </style>
 </head>
 <body>
@@ -85,37 +198,89 @@
     <a href="/contributors">Contributors</a>
     <a href="/devlog">Devlog</a>
     <a href="/oracle">Oracle</a>
-    <a href="https://worldmachines.zulipchat.com">Project Chat</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
 
   <main class="oracle-shell">
     <p class="oracle-lede">
-      Ask the Oracle anything about World Machines theory — the Modernity Machine, the Divergence Machine, historical transitions, liveness, capture resistance. Draws on the project wiki.
+      Ask the Oracle anything about World Machines theory — the Modernity Machine, the Divergence Machine, historical transitions, liveness, capture resistance. Follow up in conversation; click a concept in an answer to explore it further.
     </p>
-    <p class="oracle-status" id="status">Ask the Oracle anything about World Machines theory.</p>
 
-    <textarea id="question" spellcheck="true" placeholder="Ask the Oracle…"></textarea>
-    <div class="ask-row">
-      <button class="ask-btn" id="ask">Ask</button>
-      <span class="ask-hint">Cmd/Ctrl + Enter to submit</span>
+    <!-- Public cost meter. Hidden until /api/stats answers; filled by JS. -->
+    <details class="stats-details" id="stats" hidden>
+      <summary>
+        <span class="stats-label">worldmachines :: health stats</span>
+        <span class="stats-headline" id="stats-headline"></span>
+        <span class="stats-capped" id="stats-capped" hidden>capped</span>
+      </summary>
+      <div class="stats-body">
+        <table class="stats-table">
+          <thead>
+            <tr><td></td><th scope="col">Web</th><th scope="col">MCP</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>queries today</td><td id="s-web-q-today"></td><td id="s-mcp-q-today"></td></tr>
+            <tr><td>cost today</td><td id="s-web-c-today"></td><td id="s-mcp-c-today"></td></tr>
+            <tr><td>lifetime queries</td><td id="s-web-q-life"></td><td id="s-mcp-q-life"></td></tr>
+            <tr><td>lifetime cost</td><td id="s-web-c-life"></td><td id="s-mcp-c-life"></td></tr>
+          </tbody>
+        </table>
+        <p class="stats-sessions" id="stats-sessions"></p>
+        <p class="stats-caps" id="stats-caps"></p>
+      </div>
+    </details>
+
+    <div id="chat"></div>
+
+    <div class="composer">
+      <p class="oracle-status" id="status"></p>
+      <textarea id="question" spellcheck="true" maxlength="2000" placeholder="Ask the Oracle…"></textarea>
+      <div class="ask-row">
+        <button class="ask-btn" id="ask">Ask</button>
+        <span class="turn-count" id="turns"></span>
+        <button class="reset-btn" id="reset" hidden>New conversation</button>
+        <span class="ask-hint">Cmd/Ctrl + Enter to submit</span>
+      </div>
     </div>
-    <div class="answer" id="answer"></div>
-    <div class="citations" id="citations"></div>
+
+    <details class="mcp-details">
+      <summary>For agents — explore the corpus over MCP</summary>
+      <p>
+        The World Machines corpus is available over the Model Context Protocol —
+        public, no token needed. Agents get three read-only tools:
+        <code>search_corpus</code> (semantic search across concept notes, reading
+        notes, and evidence), <code>get_note</code> (full note body + graph edges
+        to follow), and <code>get_chunks</code> (verbatim open-licensed passages).
+      </p>
+      <p>Claude Code:</p>
+      <pre>claude mcp add worldmachines --transport http https://worldmachines.org/mcp</pre>
+      <p>Any MCP client that takes a JSON config:</p>
+      <pre>{
+  "mcpServers": {
+    "worldmachines": {
+      "type": "http",
+      "url": "https://worldmachines.org/mcp"
+    }
+  }
+}</pre>
+    </details>
   </main>
 
   <script>
-    // Retrieval moved server-side: this page asks the World Machines Oracle
-    // (/api/ask, proxied to the wm-oracle worker) which does the three-tier
-    // descent over the shared lake, the Witness hop for private evidence, and
-    // returns a cited answer. The old in-browser DuckDB-WASM + notes.parquet +
-    // /api/chat path is retired — this page is self-contained, no CDN imports.
+    // Multi-turn chat against the World Machines Oracle (/api/ask, proxied to
+    // the wm-oracle worker). Each ask sends the prior turns as `history`; the
+    // worker re-retrieves per question and answers in conversation context.
     //
-    // Unlike the site's single-voice wiki Oracle (wiki/decisions/0001-notes-
-    // oracle-architecture.md), the public Oracle KEEPS citations (decision
-    // "6b"): the response's citations render below as a Sources section, and
-    // any [[note]] / [chunk:id] tokens the model left inline are highlighted
-    // rather than stripped.
+    // Citation rendering (this page's contract with the worker's citation
+    // shape): canon concept notes are explorable — inline [[slug]] tokens and
+    // the per-turn "Concepts" chips are clickable and drop a follow-up into
+    // the box. Book-backed citations — reading notes, book-summary notes
+    // (both carry `source`), and [chunk:id] passages — are stripped from the
+    // prose entirely and collapse into one clickable "Sources" chip per book,
+    // which asks how that book fits the World Machines worldview.
     const ASK_URL = '/api/ask';
+    const STATS_URL = '/api/stats';
+    const MAX_TURNS = 8;
 
     // ADR 0005 D3 (wm-encyclopedia-kb): one UUID per browser session, sent on
     // every ask so the Oracle's QuoteBudget Durable Object can meter verbatim
@@ -132,92 +297,309 @@
     }
 
     const $ = (id) => document.getElementById(id);
+    const chatEl = $('chat');
     const statusEl = $('status');
     const askBtn = $('ask');
+    const resetBtn = $('reset');
+    const turnsEl = $('turns');
     const questionEl = $('question');
-    const answerEl = $('answer');
-    const citationsEl = $('citations');
+
+    // Raw transcript, oldest first — sent back to the worker as history.
+    let history = [];
 
     const setStatus = (msg, isErr = false) => {
       statusEl.textContent = msg;
       statusEl.classList.toggle('err', !!isErr);
     };
 
-    // Matches the same inline citation tokens the Oracle's own extractor
-    // looks for (shared/citations.ts): [[note-slug]] and [chunk:id].
-    const INLINE_CITE_RE = /\[\[[^\]|#\n]+\]\]|\[chunk:[^\]\s]+\]/g;
+    const questionsAsked = () => history.filter((t) => t.role === 'user').length;
 
-    function renderAnswer(text) {
-      answerEl.textContent = '';
-      let last = 0;
-      let m;
-      INLINE_CITE_RE.lastIndex = 0;
-      while ((m = INLINE_CITE_RE.exec(text))) {
-        if (m.index > last) answerEl.appendChild(document.createTextNode(text.slice(last, m.index)));
-        const span = document.createElement('span');
-        span.className = 'cite-inline';
-        span.textContent = m[0];
-        answerEl.appendChild(span);
-        last = m.index + m[0].length;
-      }
-      if (last < text.length) answerEl.appendChild(document.createTextNode(text.slice(last)));
+    function updateComposer() {
+      const used = questionsAsked();
+      const capped = used >= MAX_TURNS;
+      turnsEl.textContent = used ? `${used} of ${MAX_TURNS} questions` : '';
+      resetBtn.hidden = used === 0;
+      questionEl.disabled = capped;
+      askBtn.disabled = capped;
+      if (capped) setStatus('Conversation limit reached — start a new conversation.');
     }
 
-    function chip(label, className, tooltip) {
-      const el = document.createElement('span');
-      el.className = `chip ${className}`;
-      el.textContent = label;
-      if (tooltip) el.title = tooltip;
+    // ── Public cost meter ───────────────────────────────────────
+    // Runs the Oracle's own numbers in public: questions answered and dollars
+    // spent, web vs MCP, against the spend caps that stop the meter.
+    //
+    // Every failure path is the same path — hide the box. The stats are a
+    // courtesy on a page whose job is answering questions, so a missing meter
+    // is correct behaviour and a meter showing NaN is not. `refreshStats` never
+    // rejects and never touches anything outside #stats.
+    const statsEl = $('stats');
+
+    const money = (n) => `$${Number(n).toFixed(3)}`;
+    const count = (n) => Number(n).toLocaleString();
+
+    // Guards the whole render: one non-finite number anywhere and we hide
+    // rather than paint "$NaN" next to a real dollar figure.
+    const num = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
+
+    function renderStats(s) {
+      const web = s.web || {};
+      const mcp = s.mcp || {};
+      const caps = s.caps || {};
+      const now = s.now || {};
+
+      const cells = [
+        ['s-web-q-today', num(web.queries_today), count],
+        ['s-mcp-q-today', num(mcp.queries_today), count],
+        ['s-web-c-today', num(web.cost_today_usd), money],
+        ['s-mcp-c-today', num(mcp.cost_today_usd), money],
+        ['s-web-q-life', num(web.lifetime_queries), count],
+        ['s-mcp-q-life', num(mcp.lifetime_queries), count],
+        ['s-web-c-life', num(web.lifetime_cost_usd), money],
+        ['s-mcp-c-life', num(mcp.lifetime_cost_usd), money],
+      ];
+      const days = num(s.days_live);
+      const lifetime = num(s.lifetime_cost_usd);
+      const sessions = num(s.sessions);
+      if (cells.some(([, v]) => v === null) || days === null || lifetime === null) {
+        throw new Error('stats: incomplete payload');
+      }
+      for (const [id, v, fmt] of cells) $(id).textContent = fmt(v);
+
+      $('stats-headline').textContent =
+        `Live ${count(days)}d · ${money(lifetime)} lifetime`;
+      $('stats-sessions').textContent =
+        sessions === null ? '' : `${count(sessions)} sessions`;
+      $('stats-sessions').hidden = sessions === null;
+
+      // The caps are the interesting part — they're why the Oracle can be
+      // public at all — so state them even when nothing is tripped.
+      const hourly = num(caps.hourly_usd);
+      const daily = num(caps.daily_usd);
+      const capBits = [];
+      if (hourly !== null) capBits.push(`Hourly $${hourly.toFixed(2)}`);
+      if (daily !== null) capBits.push(`Daily $${daily.toFixed(2)}`);
+      // "America/Los_Angeles" → "PT". Intl gives "PDT"/"PST" depending on the
+      // date; the caps don't shift with DST so the generic form is the honest
+      // one. Falls back to the raw city if the runtime won't name the zone.
+      const resets = (() => {
+        const tz = caps.reset_tz;
+        if (!tz) return '';
+        let name = tz.split('/').pop().replace(/_/g, ' ');
+        try {
+          const part = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'short' })
+            .formatToParts(new Date())
+            .find((p) => p.type === 'timeZoneName');
+          if (part) name = part.value.replace(/^([A-Z])[SD]T$/, '$1T');
+        } catch { /* unknown zone — keep the city */ }
+        return `resets midnight ${name}`;
+      })();
+      $('stats-caps').textContent = [capBits.join(' · '), resets].filter(Boolean).join(' · ');
+      $('stats-caps').hidden = !capBits.length && !resets;
+
+      const capped = now.hourly_capped === true || now.daily_capped === true;
+      const badge = $('stats-capped');
+      badge.textContent = now.daily_capped === true ? 'daily cap reached' : 'hourly cap reached';
+      badge.hidden = !capped;
+
+      statsEl.hidden = false;
+    }
+
+    async function refreshStats() {
+      try {
+        const r = await fetch(STATS_URL, { headers: { Accept: 'application/json' } });
+        if (!r.ok) throw new Error(`stats: ${r.status}`);
+        const s = await r.json();
+        if (!s || s.ok !== true) throw new Error('stats: not ok');
+        renderStats(s);
+      } catch {
+        statsEl.hidden = true; // silent by design — see above
+      }
+    }
+
+    // ── Markdown + citation rendering ──────────────────────────
+    const esc = (s) =>
+      s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+    const titleCase = (slug) =>
+      slug.replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+
+    // Per-turn citation resolver. Concepts (canon notes) stay visible as
+    // clickable chips; everything book-backed — reading notes, book-summary
+    // canon notes (they carry a `source`), and [chunk:] passages — is
+    // STRIPPED from the prose and collapses into one Sources chip per book.
+    function makeResolver(citations) {
+      const notes = new Map(((citations && citations.notes) || []).map((n) => [n.id, n]));
+      const chunks = new Map(((citations && citations.chunks) || []).map((c) => [c.id, c]));
+      const books = new Map(); // source key -> display title (fullest seen)
+      const concepts = new Map(); // id -> title (click-to-explore chips)
+
+      const addBook = (key, title) => {
+        const cur = books.get(key);
+        if (!cur || (title && title.length > cur.length)) books.set(key, title);
+      };
+
+      return {
+        note(id) {
+          const c = notes.get(id);
+          if (c && c.source) {
+            addBook(c.source.source_id, c.source.title);
+            // A canon book-summary note carries the fuller display title.
+            if (c.tier === 'canon') addBook(c.source.source_id, c.title);
+            return '';
+          }
+          if (c && c.tier === 'reading') {
+            addBook('note:' + id, c.title);
+            return '';
+          }
+          const title = c ? c.title : titleCase(id);
+          concepts.set(id, title);
+          return `<button class="cite-concept" type="button">${esc(title)}</button>`;
+        },
+        chunk(id) {
+          const c = chunks.get(id);
+          const sourceId = (c && c.source_id) || id.split('#')[0];
+          addBook(sourceId, (c && c.source_title) || titleCase(id.split('#')[0]));
+          return '';
+        },
+        concepts,
+        books,
+      };
+    }
+
+    // Inline formatting on an ESCAPED string: cite tokens, code, bold, italic.
+    function renderInline(text, resolver) {
+      let s = esc(text);
+      s = s.replace(/\[\[([^\]|#\n]+)\]\]/g, (_, id) => resolver.note(id.trim()));
+      s = s.replace(/\[chunk:([^\]\s]+)\]/g, (_, id) => resolver.chunk(id.trim()));
+      // Fallback for chunk ids the model wrapped in wiki brackets
+      // ([[source#seq]]) — the worker normalizes known ones to [chunk:...],
+      // but answers from an older worker can still carry this shape.
+      s = s.replace(/\[\[([^[\]\s|]+#[^[\]\s|]+)\]\]/g, (_, id) => resolver.chunk(id.trim()));
+      // Stripped citation tokens leave punctuation debris — tidy it up.
+      s = s.replace(/\s+([,.;:!?])/g, '$1');
+      s = s.replace(/,\s*([.;:!?])/g, '$1');
+      s = s.replace(/\(\s*\)/g, '');
+      s = s.replace(/ {2,}/g, ' ');
+      s = s.replace(/`([^`\n]+)`/g, '<code>$1</code>');
+      s = s.replace(
+        /\[([^\]\n]+)\]\((https?:[^)\s]+)\)/g,
+        '<a href="$2" target="_blank" rel="noopener">$1</a>',
+      );
+      s = s.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+      s = s.replace(/(^|[^*\w])\*([^*\n]+)\*(?!\w)/g, '$1<em>$2</em>');
+      return s;
+    }
+
+    // Minimal block-level markdown: headings, lists, blockquotes, paragraphs.
+    function renderMarkdown(text, resolver) {
+      const out = [];
+      let list = null; // {tag, items}
+      const flushList = () => {
+        if (list) {
+          out.push(`<${list.tag}>` + list.items.map((i) => `<li>${i}</li>`).join('') + `</${list.tag}>`);
+          list = null;
+        }
+      };
+      for (const rawLine of text.split('\n')) {
+        const line = rawLine.trimEnd();
+        if (!line.trim()) { flushList(); continue; }
+        const h = line.match(/^(#{1,4})\s+(.*)$/);
+        const ul = line.match(/^\s*[-*•]\s+(.*)$/);
+        const ol = line.match(/^\s*\d+[.)]\s+(.*)$/);
+        const bq = line.match(/^\s*>\s?(.*)$/);
+        if (h) {
+          flushList();
+          out.push(`<h${Math.min(h[1].length + 2, 4)}>${renderInline(h[2], resolver)}</h${Math.min(h[1].length + 2, 4)}>`);
+        } else if (ul || ol) {
+          const tag = ul ? 'ul' : 'ol';
+          if (!list || list.tag !== tag) { flushList(); list = { tag, items: [] }; }
+          list.items.push(renderInline((ul || ol)[1], resolver));
+        } else if (bq) {
+          flushList();
+          out.push(`<blockquote>${renderInline(bq[1], resolver)}</blockquote>`);
+        } else if (list) {
+          // continuation line of the previous list item
+          list.items[list.items.length - 1] += ' ' + renderInline(line.trim(), resolver);
+        } else {
+          out.push(`<p>${renderInline(line.trim(), resolver)}</p>`);
+        }
+      }
+      flushList();
+      return out.join('');
+    }
+
+    // ── Transcript DOM ──────────────────────────────────────────
+    function addUserTurn(q) {
+      const el = document.createElement('div');
+      el.className = 'turn-user';
+      el.innerHTML = `<div class="turn-label">You</div><div class="turn-q"></div>`;
+      el.querySelector('.turn-q').textContent = q;
+      chatEl.appendChild(el);
+    }
+
+    function addThinking() {
+      const el = document.createElement('div');
+      el.className = 'thinking';
+      el.innerHTML =
+        `<div class="answer"><span class="dots"><i></i><i></i><i></i></span>Consulting the Oracle…</div>`;
+      chatEl.appendChild(el);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       return el;
     }
 
-    function renderCitations(citations) {
-      citationsEl.textContent = '';
-      const notes = citations?.notes || [];
-      const chunks = citations?.chunks || [];
-      if (!notes.length && !chunks.length) return;
+    function addOracleTurn(answer, citations) {
+      const resolver = makeResolver(citations);
+      const el = document.createElement('div');
+      el.className = 'turn-oracle';
+      const body = renderMarkdown(answer, resolver);
 
-      const heading = document.createElement('h3');
-      heading.textContent = 'Sources';
-      citationsEl.appendChild(heading);
-
-      if (notes.length) {
-        const row = document.createElement('div');
-        row.className = 'chip-row';
-        for (const n of notes) row.appendChild(chip(n.title || n.id, 'chip-note', n.id));
-        citationsEl.appendChild(row);
+      let sourcesHtml = '';
+      if (resolver.concepts.size) {
+        sourcesHtml +=
+          '<h3>Concepts — click to explore</h3><div class="chip-row">' +
+          [...resolver.concepts.values()]
+            .map((t) => `<button class="chip-note" type="button">${esc(t)}</button>`)
+            .join('') +
+          '</div>';
       }
-
-      if (chunks.length) {
-        const bySource = new Map();
-        for (const c of chunks) {
-          const key = c.source_id || '(unknown source)';
-          if (!bySource.has(key)) bySource.set(key, []);
-          bySource.get(key).push(c);
-        }
-        for (const [sourceId, items] of bySource) {
-          const group = document.createElement('div');
-          group.className = 'cite-group';
-          const label = document.createElement('div');
-          label.className = 'cite-group-label';
-          label.textContent = sourceId;
-          group.appendChild(label);
-          const row = document.createElement('div');
-          row.className = 'chip-row';
-          items.forEach((c, i) => row.appendChild(chip(`source passage ${i + 1}`, 'chip-chunk', c.id)));
-          group.appendChild(row);
-          citationsEl.appendChild(group);
-        }
+      if (resolver.books.size) {
+        sourcesHtml +=
+          '<h3>Sources — click to place in the model</h3><div class="chip-row">' +
+          [...resolver.books.values()]
+            .map((t) => `<button class="chip-book" type="button">${esc(t)}</button>`)
+            .join('') +
+          '</div>';
       }
+      el.innerHTML =
+        `<div class="answer">${body || '(no answer)'}</div>` +
+        (sourcesHtml ? `<div class="citations">${sourcesHtml}</div>` : '');
+      chatEl.appendChild(el);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
+
+    // Clicking a citation drops a follow-up in the box: concepts ask for
+    // depth; books ask how the source fits the World Machines worldview.
+    chatEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cite-concept, .chip-note, .chip-book');
+      if (!btn || questionEl.disabled) return;
+      questionEl.value = btn.classList.contains('chip-book')
+        ? `How does "${btn.textContent}" fit into the World Machines worldview?`
+        : `Tell me more about "${btn.textContent}".`;
+      questionEl.focus();
+    });
+
+    // ── Ask loop ────────────────────────────────────────────────
+    let inFlight = false;
 
     async function ask() {
       const q = questionEl.value.trim();
-      if (!q) return;
+      if (!q || inFlight || questionsAsked() >= MAX_TURNS) return;
+      inFlight = true;
       askBtn.disabled = true;
-      answerEl.textContent = '';
-      citationsEl.textContent = '';
-      setStatus('Thinking…');
+      questionEl.value = '';
+      setStatus('');
+      addUserTurn(q);
+      const thinking = addThinking();
       try {
         const r = await fetch(ASK_URL, {
           method: 'POST',
@@ -225,24 +607,52 @@
             'Content-Type': 'application/json',
             'X-Oracle-Session': getSessionId(),
           },
-          body: JSON.stringify({ question: q }),
+          body: JSON.stringify({ question: q, history }),
         });
         const body = await r.json().catch(() => ({}));
+        // Spend cap tripped. Not a failure — the Oracle is public and the caps
+        // are what makes that affordable — so say so in the worker's own words
+        // and leave the question in the box to retry after the reset. No status
+        // code, no "something went wrong".
+        if (r.status === 429) {
+          thinking.remove();
+          questionEl.value = q;
+          setStatus(body.error || 'The Oracle has hit its spending cap for now — try again later.');
+          refreshStats(); // flips the box to CAPPED
+          return;
+        }
         if (!r.ok) throw new Error(body.error || `oracle: ${r.status}`);
-        renderAnswer(body.answer || '(no answer)');
-        renderCitations(body.citations);
-        setStatus('');
+        thinking.remove();
+        addOracleTurn(body.answer || '(no answer)', body.citations);
+        history.push({ role: 'user', content: q }, { role: 'assistant', content: body.answer || '' });
+        refreshStats(); // the numbers just moved
       } catch (e) {
+        thinking.remove();
+        questionEl.value = q; // let the user retry without retyping
         setStatus(`Something went wrong: ${e.message || e}`, true);
       } finally {
+        inFlight = false;
         askBtn.disabled = false;
+        updateComposer();
       }
     }
 
+    function resetConversation() {
+      history = [];
+      chatEl.textContent = '';
+      questionEl.value = '';
+      setStatus('');
+      updateComposer();
+      questionEl.focus();
+    }
+
     askBtn.addEventListener('click', ask);
+    resetBtn.addEventListener('click', resetConversation);
     questionEl.addEventListener('keydown', (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); ask(); }
     });
+    updateComposer();
+    refreshStats();
   </script>
 </body>
 </html>
