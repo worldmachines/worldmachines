@@ -17,6 +17,54 @@
     }
     .oracle-status.err { color: #a23; }
 
+    /* ── Public cost meter ──────────────────────────────────── */
+    /* Hidden until /api/stats answers with ok:true — a dead meter leaves no
+       trace on the page rather than showing zeros or NaN. */
+    .stats-details {
+      font-family: system-ui, sans-serif; font-size: 0.75rem; color: var(--muted);
+      background: #fdfcf8; border: 1px solid var(--border); border-radius: 4px;
+      padding: 0.5rem 0.75rem; margin-bottom: 1.25rem;
+    }
+    /* Left as a default list-item so the ▸ disclosure marker survives — a flex
+       summary drops ::marker and the box stops reading as expandable. Inline
+       spans then wrap on their own at narrow widths. */
+    .stats-details summary { cursor: pointer; color: var(--text); }
+    .stats-label {
+      font-size: 0.68rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+      margin-right: 0.3rem;
+    }
+    .stats-headline { color: var(--text); margin-right: 0.3rem; }
+    .stats-capped {
+      display: inline-block; font-size: 0.64rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      padding: 0.1rem 0.38rem; border-radius: 2px;
+      white-space: nowrap;
+      background: var(--badge-contribution-bg); color: var(--badge-contribution-text);
+    }
+    /* An author `display` beats the UA's `[hidden] { display: none }`, so every
+       element this page hides by attribute needs the attribute honoured back. */
+    .stats-details [hidden] { display: none; }
+    .stats-body { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--border); }
+    .stats-table { width: 100%; border-collapse: collapse; }
+    .stats-table th, .stats-table td {
+      padding: 0.22rem 0; font-weight: 400; text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .stats-table th:first-child, .stats-table td:first-child { text-align: left; }
+    .stats-table thead th {
+      font-size: 0.64rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted);
+      padding-bottom: 0.35rem;
+    }
+    .stats-table tbody td { color: var(--text); }
+    .stats-table tbody td:first-child { color: var(--muted); }
+    .stats-sessions, .stats-caps {
+      margin: 0; padding-top: 0.55rem; margin-top: 0.55rem;
+      border-top: 1px solid var(--border);
+    }
+    .stats-sessions { color: var(--text); }
+
     /* ── Transcript ─────────────────────────────────────────── */
     .turn-user { margin: 1.4rem 0 0.6rem; }
     .turn-user .turn-label {
@@ -158,6 +206,30 @@
       Ask the Oracle anything about World Machines theory — the Modernity Machine, the Divergence Machine, historical transitions, liveness, capture resistance. Follow up in conversation; click a concept in an answer to explore it further.
     </p>
 
+    <!-- Public cost meter. Hidden until /api/stats answers; filled by JS. -->
+    <details class="stats-details" id="stats" hidden>
+      <summary>
+        <span class="stats-label">worldmachines :: health stats</span>
+        <span class="stats-headline" id="stats-headline"></span>
+        <span class="stats-capped" id="stats-capped" hidden>capped</span>
+      </summary>
+      <div class="stats-body">
+        <table class="stats-table">
+          <thead>
+            <tr><td></td><th scope="col">Web</th><th scope="col">MCP</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>queries today</td><td id="s-web-q-today"></td><td id="s-mcp-q-today"></td></tr>
+            <tr><td>cost today</td><td id="s-web-c-today"></td><td id="s-mcp-c-today"></td></tr>
+            <tr><td>lifetime queries</td><td id="s-web-q-life"></td><td id="s-mcp-q-life"></td></tr>
+            <tr><td>lifetime cost</td><td id="s-web-c-life"></td><td id="s-mcp-c-life"></td></tr>
+          </tbody>
+        </table>
+        <p class="stats-sessions" id="stats-sessions"></p>
+        <p class="stats-caps" id="stats-caps"></p>
+      </div>
+    </details>
+
     <div id="chat"></div>
 
     <div class="composer">
@@ -207,6 +279,7 @@
     // prose entirely and collapse into one clickable "Sources" chip per book,
     // which asks how that book fits the World Machines worldview.
     const ASK_URL = '/api/ask';
+    const STATS_URL = '/api/stats';
     const MAX_TURNS = 8;
 
     // ADR 0005 D3 (wm-encyclopedia-kb): one UUID per browser session, sent on
@@ -249,6 +322,98 @@
       questionEl.disabled = capped;
       askBtn.disabled = capped;
       if (capped) setStatus('Conversation limit reached — start a new conversation.');
+    }
+
+    // ── Public cost meter ───────────────────────────────────────
+    // Runs the Oracle's own numbers in public: questions answered and dollars
+    // spent, web vs MCP, against the spend caps that stop the meter.
+    //
+    // Every failure path is the same path — hide the box. The stats are a
+    // courtesy on a page whose job is answering questions, so a missing meter
+    // is correct behaviour and a meter showing NaN is not. `refreshStats` never
+    // rejects and never touches anything outside #stats.
+    const statsEl = $('stats');
+
+    const money = (n) => `$${Number(n).toFixed(3)}`;
+    const count = (n) => Number(n).toLocaleString();
+
+    // Guards the whole render: one non-finite number anywhere and we hide
+    // rather than paint "$NaN" next to a real dollar figure.
+    const num = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
+
+    function renderStats(s) {
+      const web = s.web || {};
+      const mcp = s.mcp || {};
+      const caps = s.caps || {};
+      const now = s.now || {};
+
+      const cells = [
+        ['s-web-q-today', num(web.queries_today), count],
+        ['s-mcp-q-today', num(mcp.queries_today), count],
+        ['s-web-c-today', num(web.cost_today_usd), money],
+        ['s-mcp-c-today', num(mcp.cost_today_usd), money],
+        ['s-web-q-life', num(web.lifetime_queries), count],
+        ['s-mcp-q-life', num(mcp.lifetime_queries), count],
+        ['s-web-c-life', num(web.lifetime_cost_usd), money],
+        ['s-mcp-c-life', num(mcp.lifetime_cost_usd), money],
+      ];
+      const days = num(s.days_live);
+      const lifetime = num(s.lifetime_cost_usd);
+      const sessions = num(s.sessions);
+      if (cells.some(([, v]) => v === null) || days === null || lifetime === null) {
+        throw new Error('stats: incomplete payload');
+      }
+      for (const [id, v, fmt] of cells) $(id).textContent = fmt(v);
+
+      $('stats-headline').textContent =
+        `Live ${count(days)}d · ${money(lifetime)} lifetime`;
+      $('stats-sessions').textContent =
+        sessions === null ? '' : `${count(sessions)} sessions`;
+      $('stats-sessions').hidden = sessions === null;
+
+      // The caps are the interesting part — they're why the Oracle can be
+      // public at all — so state them even when nothing is tripped.
+      const hourly = num(caps.hourly_usd);
+      const daily = num(caps.daily_usd);
+      const capBits = [];
+      if (hourly !== null) capBits.push(`Hourly $${hourly.toFixed(2)}`);
+      if (daily !== null) capBits.push(`Daily $${daily.toFixed(2)}`);
+      // "America/Los_Angeles" → "PT". Intl gives "PDT"/"PST" depending on the
+      // date; the caps don't shift with DST so the generic form is the honest
+      // one. Falls back to the raw city if the runtime won't name the zone.
+      const resets = (() => {
+        const tz = caps.reset_tz;
+        if (!tz) return '';
+        let name = tz.split('/').pop().replace(/_/g, ' ');
+        try {
+          const part = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'short' })
+            .formatToParts(new Date())
+            .find((p) => p.type === 'timeZoneName');
+          if (part) name = part.value.replace(/^([A-Z])[SD]T$/, '$1T');
+        } catch { /* unknown zone — keep the city */ }
+        return `resets midnight ${name}`;
+      })();
+      $('stats-caps').textContent = [capBits.join(' · '), resets].filter(Boolean).join(' · ');
+      $('stats-caps').hidden = !capBits.length && !resets;
+
+      const capped = now.hourly_capped === true || now.daily_capped === true;
+      const badge = $('stats-capped');
+      badge.textContent = now.daily_capped === true ? 'daily cap reached' : 'hourly cap reached';
+      badge.hidden = !capped;
+
+      statsEl.hidden = false;
+    }
+
+    async function refreshStats() {
+      try {
+        const r = await fetch(STATS_URL, { headers: { Accept: 'application/json' } });
+        if (!r.ok) throw new Error(`stats: ${r.status}`);
+        const s = await r.json();
+        if (!s || s.ok !== true) throw new Error('stats: not ok');
+        renderStats(s);
+      } catch {
+        statsEl.hidden = true; // silent by design — see above
+      }
     }
 
     // ── Markdown + citation rendering ──────────────────────────
@@ -445,10 +610,22 @@
           body: JSON.stringify({ question: q, history }),
         });
         const body = await r.json().catch(() => ({}));
+        // Spend cap tripped. Not a failure — the Oracle is public and the caps
+        // are what makes that affordable — so say so in the worker's own words
+        // and leave the question in the box to retry after the reset. No status
+        // code, no "something went wrong".
+        if (r.status === 429) {
+          thinking.remove();
+          questionEl.value = q;
+          setStatus(body.error || 'The Oracle has hit its spending cap for now — try again later.');
+          refreshStats(); // flips the box to CAPPED
+          return;
+        }
         if (!r.ok) throw new Error(body.error || `oracle: ${r.status}`);
         thinking.remove();
         addOracleTurn(body.answer || '(no answer)', body.citations);
         history.push({ role: 'user', content: q }, { role: 'assistant', content: body.answer || '' });
+        refreshStats(); // the numbers just moved
       } catch (e) {
         thinking.remove();
         questionEl.value = q; // let the user retry without retyping
@@ -475,6 +652,7 @@
       if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); ask(); }
     });
     updateComposer();
+    refreshStats();
   </script>
 </body>
 </html>
