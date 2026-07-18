@@ -206,18 +206,33 @@ page's `fetch('/api/me')` can read (the code assumes this; it's how it worked on
 Venkat's account). If `/api/me` still 401s after sign-in, that cookie scoping is
 what to check.
 
+### Also done later in the session
+
+- ✅ **Brandon Pink onboarded** — handle `brandon` confirmed (matches the KV entry
+  and the README's `raw-notes/<handle>/` rule); `raw-notes/brandon/` +
+  `CLAUDE.md` collaborator line **merged** (PR #32). He still has no notes yet, and
+  `brandon` was inferred from the first-name convention — worth a nod from Brandon.
+- **Approval policy widened** — PR #33 (`ci/approval-policy-add-aneesh`) makes
+  `website/` approvable by **either @aneeshsathe or @vgururao** (was @vgururao
+  only) and adds an author-bypass so an owner can merge their own `website/`/`wiki/`
+  PR (GitHub blocks self-*approval*). **Left for Venkat to accept** (not merged, not
+  `[trivial]`): it touches `website/`, so the current policy's check fails until
+  @vgururao approves — the gate enforces that this governance change is his call.
+
 ### Still open after this session
 
-- **Brandon Pink**: no `raw-notes/brandon/` dir, not in `CLAUDE.md` collaborator
-  list, handle `brandon` unconfirmed.
 - **Venkat**: release the transfer lock + verify registrant email + initiate the
-  registrar transfer; and redeploy `worldmachines.org` after PR #30 merges (or
-  accept residual exposure until cutover).
+  registrar transfer; redeploy `worldmachines.org` after PR #30 merges (or accept
+  residual exposure until cutover); **approve PR #33** (approval-policy) and **#30**
+  (security). Once #33 merges, Aneesh can self-clear his own `website/` PRs.
 - **Aneesh**: accept the transfer within 5 days of Venkat starting it; pre-create
   the apex record; after cutover add the apex custom domain + set up the two
-  Access apps.
-- **PRs open**: #29 (this DNS doc), #30 (security + login button). This doc's
-  morning "Update 2026-07-17" steps are refined by the DNS section above.
+  Access apps. After #33 merges, re-trigger #30's `approval-policy` check so it
+  self-clears (author-bypass), then merge.
+- **PRs open**: #29 (DNS doc, Venkat's) · #30 (security + login button) · #31
+  (this evening handoff, extends #29) · #33 (approval-policy). Merged this session:
+  #25 (cutover), #32 (Brandon). This doc's morning "Update 2026-07-17" steps are
+  refined by the DNS section above.
 
 ---
 
