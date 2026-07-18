@@ -24,6 +24,7 @@ Live site: **worldmachines.org**.
 - Suggested note format: Markdown, short files, descriptive filenames, links/citations when available.
 - Per-collaborator directories:
   - `raw-notes/aneesh/`
+  - `raw-notes/brandon/`
   - `raw-notes/florian/`
   - `raw-notes/ivo/`
   - `raw-notes/kyle/`
