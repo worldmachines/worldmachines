@@ -62,6 +62,165 @@ DNS work above.
 
 ---
 
+## Update 2026-07-17 (evening) — Aneesh session: HANDLES loaded, registry-exposure fix, DNS plan corrected, Access deferred
+
+State captured at the end of Aneesh's 2026-07-17 session. Nothing here has been
+executed beyond what's marked ✅ **DONE** or **PR open** — Aneesh paused at this
+point and is not acting further tonight. This section **refines the morning's
+DNS plan above** (the registrar mechanics were off) and adds new items.
+
+### ✅ DONE — HANDLES KV backfilled into Aneesh's account
+
+- Loaded all 9 records from `handles-export.json` into
+  `fc2ed69d95644b8298777e3318240e1c` via `wrangler kv bulk put`. Verified live
+  against `worldmachines-2rd.pages.dev/api/contributors`: **8 unique
+  contributors** (Florian and Venkat each have two emails that collapse to one).
+- Two same-session edits:
+  - `mail@aneeshsathe.com` `url` → `https://aneeshsathe.com` (the scheme is
+    required — `contributors.html` puts `url` straight into the `href` and only
+    strips the scheme for display; `bio` left empty so it doesn't double the
+    domain on its own line).
+  - Added **Brandon Pink** `brndnpink@gmail.com` → handle `brandon` (handle
+    **inferred** from the first-name convention — confirm with Brandon; he has
+    **no `raw-notes/brandon/` dir and no CLAUDE.md collaborator line** yet).
+- Closes Venkat's action item 1 (export) and Aneesh's step B (backfill). The
+  export file is now gitignored (via PR #29).
+
+### ✅ VERIFIED — GitHub Actions deploy secrets already point at Aneesh's account
+
+The starting worry was that CI still held Venkat's credentials. It does not: the
+four repo secrets (`CLOUDFLARE_API_TOKEN`, `CF_R2_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`,
+`CF_AI_TOKEN`) were rotated 2026-07-15 21:35 and are confirmed working — today's
+`rebuild.yml` run deployed bot-commit `911e39c` into account `ebef7930…`
+(Aneesh's) Pages project. No secrets action needed (matches "A2 · DONE" below).
+
+### 🔴 SECURITY — contributor-registry API was publicly exposed → fix in PR #30
+
+- `/api/admin/handles` had **no authentication**, verified live on **both**
+  `worldmachines-2rd.pages.dev` **and** `worldmachines.org`: `GET` returned every
+  record **including emails** (200, unauthenticated); `POST`/`DELETE` (read from
+  source, **not** tested against prod) let anyone add themselves to the submit
+  allowlist or delete contributors.
+- Root cause: the Access policy protected `/admin/*` (the HTML admin page) but
+  the API lives at `/api/admin/*`, which that prefix never matches.
+- **PR #30** (`security/access-login-and-admin-gate`) closes it with an
+  in-function admin-email allowlist keyed on `Cf-Access-Authenticated-User-Email`
+  (**fail-closed** — no header ⇒ 403), independent of any Access app. Same PR
+  adds the member login button + `/login` redirector (see Access below). Touches
+  `website/` → needs Venkat's approval; merge auto-deploys via `rebuild.yml`.
+- ⚠️ **CI split-brain — merging PR #30 does NOT fix the live public domain.**
+  `worldmachines.org` is currently served by **Venkat's** Pages project
+  (`worldmachines.pages.dev`, per the morning update). GitHub CI deploys to
+  **Aneesh's** account, so the merge only fixes `worldmachines-2rd.pages.dev`. To
+  close the hole on `worldmachines.org` before cutover, **Venkat must redeploy
+  his Pages project from updated `main`** — or accept the residual exposure until
+  the domain transfer lands (after which `worldmachines.org` serves Aneesh's
+  fixed deployment).
+
+### DNS — corrected: this is a Cloudflare **Registrar** inter-account transfer
+
+The morning plan's entry point (Account Home → "Transfer domain to another
+account") is right, but two mechanics were off:
+
+- `worldmachines.org` is registered at **Cloudflare Registrar, inside Venkat's
+  account** (whois: `Registrar: Cloudflare, Inc.`). There is **no external
+  registrar** to point elsewhere, and a Cloudflare Registrar domain **must stay
+  on the Cloudflare nameservers assigned to its zone in the same account** — you
+  cannot hand-set NS to Aneesh's `bailey`/`sterling`. So the morning plan's
+  **step 4 ("update the registrar's NS if they changed") has no valid target and
+  is not a separate step** — the inter-account registration transfer re-homes the
+  NS automatically within Cloudflare.
+- Treat it as one operation: **the Registrar inter-account transfer** (moves the
+  registration; the pending zone on Aneesh's account becomes the live one).
+  Docs: <https://developers.cloudflare.com/registrar/account-options/inter-account-transfer/>
+
+Prereqs, checked 2026-07-17:
+
+- ✅ Registered >10 days ago (2026-05-04)
+- ✅ Destination zone already added & **pending** on Aneesh's account
+  (`440e991c…`, created 2026-07-18 UTC; assigned NS `bailey`/`sterling`)
+- ✅ DNSSEC off (no DS/DNSKEY at the registry)
+- ✅ No `pendingDelete` / `redemptionPeriod` / `pendingTransfer`
+- ⚠️ **Transfer lock `clientTransferProhibited` is SET — Venkat must release it**
+- ⚠️ Registrant email must be verified (Venkat's side)
+
+Steps: **Venkat** releases the lock + confirms the registrant email, then Manage
+Domain → Configuration → Start → transfer to account
+`ebef79305d4b32a611e2946cc08f7bd6`. **Aneesh** accepts within **5 days** (Manage
+Domains → View Actions) or it auto-cancels; post-move the registration is
+transfer-locked 30 days.
+
+⚠️ The move carries **WHOIS contacts only — "no other configuration will be
+moved"** — so DNS records do **not** come with it (the morning plan's step-1
+export already covers this). Low risk here: the live zone is near-empty — **apex
+only, no MX, no TXT, no `www`, no subdomains** (probed 2026-07-17), so there's no
+email to break. Aneesh will pre-create the apex record in the pending zone so
+there's no gap at the NS flip. After the move, NS update automatically and Aneesh
+adds `worldmachines.org` as an **apex** custom domain on the Pages project
+(validates directly, same account — this is what error 1014 was blocking).
+
+This corrected plan was posted for Venkat as a comment on **PR #29** (2026-07-17).
+
+### Cloudflare Access — DEFERRED until after the domain transfer (decision 2026-07-17)
+
+No Access app exists on Aneesh's account yet: the `.pages.dev` host has none, and
+`worldmachines.org` login works only because it's still Venkat's deployment with
+Venkat's Access. **Decision: do the Access setup after the transfer, directly on
+`worldmachines.org`.** Rationale: real users are on `worldmachines.org` (Venkat's
+Access still works there), so login isn't actually broken in the interim, and this
+avoids a `.pages.dev`-now + apex-later double setup. The registry hole is already
+handled by PR #30's fail-closed in-function check, independent of Access.
+
+Interim state to expect on `worldmachines-2rd.pages.dev` until Access exists:
+PR #30's "Sign in" button and MCP-token minting are **inert** (no Access ⇒ no
+`CF_Authorization` cookie), and `/admin/handles` returns 403 for everyone — use
+`wrangler kv` for registry edits (that's how the backfill was done).
+
+**When ready (after transfer)**, create two Access apps on Aneesh's account
+(Zero Trust → Access → Applications → Self-hosted). One-time PIN is the login
+method (on by default; first-time Zero Trust use asks you to pick a team name →
+`<team>.cloudflareaccess.com`). Add `worldmachines.org/<path>` rows; add the
+matching `.pages.dev/<path>` rows too only if you want the staging host working.
+
+- **App 1 — members** (permissive, any email). Paths `/login`, `/submit`,
+  `/profile`. Policy: Allow, Include → **Everyone** (still forces OTP = any
+  verified email; HANDLES KV is the real allowlist per `CLAUDE.md`).
+- **App 2 — admin** (restricted). Paths `/admin`, `/api/admin`. Policy: Allow,
+  Include → Emails: `mail@aneeshsathe.com`, `vgururao@gmail.com`,
+  `vgr@ribbonfarm.com` (matches the `ADMIN_EMAILS` default in
+  `functions/api/admin/handles.js`; override via that env var).
+
+Acceptance tests (after apps exist + PR #30 deployed):
+
+```bash
+# registry API must be locked (was 200 leaking emails):
+curl -s -o /dev/null -w "%{http_code}\n" <host>/api/admin/handles       # want 403 / login redirect
+# login button must bounce to OTP:
+curl -sI <host>/login | grep -i location                                 # want cloudflareaccess.com
+```
+
+Then in a browser: `/mcp` → "Sign in →" → OTP → land back on `/mcp` signed in →
+"Generate my Witness token" works. **The one thing to verify live:** the members
+OTP must set a *hostname-level* `CF_Authorization` cookie that the public `/mcp`
+page's `fetch('/api/me')` can read (the code assumes this; it's how it worked on
+Venkat's account). If `/api/me` still 401s after sign-in, that cookie scoping is
+what to check.
+
+### Still open after this session
+
+- **Brandon Pink**: no `raw-notes/brandon/` dir, not in `CLAUDE.md` collaborator
+  list, handle `brandon` unconfirmed.
+- **Venkat**: release the transfer lock + verify registrant email + initiate the
+  registrar transfer; and redeploy `worldmachines.org` after PR #30 merges (or
+  accept residual exposure until cutover).
+- **Aneesh**: accept the transfer within 5 days of Venkat starting it; pre-create
+  the apex record; after cutover add the apex custom domain + set up the two
+  Access apps.
+- **PRs open**: #29 (this DNS doc), #30 (security + login button). This doc's
+  morning "Update 2026-07-17" steps are refined by the DNS section above.
+
+---
+
 ## What This Is
 
 The July-6 move stood up a *parallel* copy of the Oracle/Witness/catalog stack
