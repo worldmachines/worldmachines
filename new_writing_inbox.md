@@ -11,6 +11,8 @@
   2. Format:
        handle | type | url
        handle | type | url | optional description
+     Descriptions are not copied from the linked page. Include the fourth
+     field if you want a description shown on the site.
 
   3. `handle` is your site handle without @ (not your GitHub username) — find
      yours at https://worldmachines.org/contributors

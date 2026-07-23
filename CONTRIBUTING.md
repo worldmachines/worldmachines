@@ -15,11 +15,13 @@ website PR rule below.
 
    ```text
    handle | contribution | https://example.com/your-article
+   handle | contribution | https://example.com/your-article | A short description
    ```
 
    Use your site handle without `@`. Use `contribution` for your own work or
-   `resource` for someone else's work. You may add a short description as a
-   fourth field.
+   `resource` for someone else's work. Add a short description as the fourth
+   field if you want one shown on the site. The ingestion workflow does not
+   infer a description from the linked page's metadata.
 
 3. Commit only the inbox change and push it directly to `main`. Do not run
    `website/scripts/ingest_inbox.py` first: CI owns ingestion and clears the
