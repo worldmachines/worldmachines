@@ -4,6 +4,37 @@
 
 For a full technical overview of the website stack, see [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
+## Submit an article or resource
+
+Use [`new_writing_inbox.md`](new_writing_inbox.md) for a link you want listed
+on the public site. This root-level inbox is an explicit exception to the
+website PR rule below.
+
+1. Find the `---` separator near the end of the inbox.
+2. Add one line **below** it:
+
+   ```text
+   handle | contribution | https://example.com/your-article
+   ```
+
+   Use your site handle without `@`. Use `contribution` for your own work or
+   `resource` for someone else's work. You may add a short description as a
+   fourth field.
+
+3. Commit only the inbox change and push it directly to `main`. Do not run
+   `website/scripts/ingest_inbox.py` first: CI owns ingestion and clears the
+   submitted lines.
+4. Wait for the **Ingest Writing Inbox** action. Confirm that it extracted the
+   expected title, committed an article JSON file, rebuilt the site, and
+   deployed successfully. Then check the article on `worldmachines.org`.
+
+The parser ignores every line above the `---` separator, even if it looks like
+a submission. Agents should not claim publication based only on a successful
+Git push or preview deployment.
+
+Registered contributors may instead use
+[`worldmachines.org/submit`](https://worldmachines.org/submit).
+
 ## Proposals and decisions
 
 Use **GitHub Issues** (labeled `proposal`) for anything that needs group input before work begins — technical plans, feature proposals, infrastructure changes, policy questions.
