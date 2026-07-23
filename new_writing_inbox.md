@@ -24,4 +24,3 @@
 ================================================================ -->
 
 ---
-kyle | contribution | https://bricolage.io/steering-is-harder-than-it-looks/
