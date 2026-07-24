@@ -21,8 +21,14 @@ jobs:
             const repo = context.repo.repo;
             const pull_number = context.payload.pull_request.number;
 
-            const websiteOwner = 'vgururao';
+            // Owners who can approve — or, by authoring, self-clear — each gated area.
+            const websiteApprovers = new Set(['aneeshsathe', 'vgururao'].map(s => s.toLowerCase()));
             const wikiApprovers = new Set(['aneeshsathe', 'florianlohse', 'KyleAMathews', 'vgururao'].map(s => s.toLowerCase()));
+
+            // GitHub blocks a PR author from approving their own PR, so without an
+            // author-bypass an owner could never merge a website/wiki PR they opened.
+            // Authorship by an owner therefore counts as that area's approval.
+            const prAuthor = (context.payload.pull_request.user.login || '').toLowerCase();
 
             const files = await github.paginate(github.rest.pulls.listFiles, {
               owner,
@@ -56,14 +62,15 @@ jobs:
             }
 
             const approvedBy = login => latestReviewByUser.get(login.toLowerCase()) === 'APPROVED';
-            const wikiApproved = [...wikiApprovers].some(login => approvedBy(login));
+            const clearedBy = approvers =>
+              approvers.has(prAuthor) || [...approvers].some(login => approvedBy(login));
 
             const failures = [];
-            if (touchesWebsite && !approvedBy(websiteOwner)) {
-              failures.push('website/ changes require approval from @vgururao.');
+            if (touchesWebsite && !clearedBy(websiteApprovers)) {
+              failures.push('website/ changes require approval from (or authorship by) @aneeshsathe or @vgururao.');
             }
-            if (touchesWiki && !wikiApproved) {
-              failures.push('wiki/ changes require approval from a repo owner/admin: @aneeshsathe, @florianlohse, @KyleAMathews, or @vgururao.');
+            if (touchesWiki && !clearedBy(wikiApprovers)) {
+              failures.push('wiki/ changes require approval from (or authorship by) a repo owner/admin: @aneeshsathe, @florianlohse, @KyleAMathews, or @vgururao.');
             }
 
             if (failures.length) {
