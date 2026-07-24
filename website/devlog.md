@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-07-17 · aneesh
+Wired up member login on Aneesh's account and closed a registry-exposure bug found during the cutover. `/api/admin/handles` (read + write of the contributor registry, emails included) was reachable unauthenticated because the old Access policy covered only `/admin/*`, not the `/api/admin/*` path the API lives on; it now also enforces an admin-email allowlist in-function (`Cf-Access-Authenticated-User-Email`, fail-closed) as defense-in-depth behind a new admin-only Access app. Adds a real "Sign in" button to the Witness/MCP panel (previously a dead-end prompt) and a `/login` redirector behind the members Access app, so a member can authenticate and land back on `/mcp` to mint a Witness token.
+
 ## 2026-07-16 · aneesh (2)
 Put the Oracle's running costs on the Oracle page. A collapsible "health stats" box above the chat reports questions answered and dollars spent, split web vs MCP, against the hourly/daily spend caps that keep a public Oracle affordable — served by a new `/api/stats` Pages Function proxying the Oracle worker. The meter fails soft by design: any upstream trouble hides the box entirely rather than showing a broken number, so the chat is never blocked by its own dashboard. Asking a question now refreshes the numbers, and hitting a spend cap returns a plain-language "try again later" instead of an HTTP error.
 
