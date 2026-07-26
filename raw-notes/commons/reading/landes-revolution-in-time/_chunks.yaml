@@ -1,0 +1,1346 @@
+# Curated chunk sidecar for source `landes-revolution-in-time`
+# (Revolution in Time: Clocks and the Making of the Modern World, David S. Landes;
+# the 2000 revised edition).
+#
+# license_class: private (in-copyright 2000 edition) -> verbatim chunk text is REDACTED
+# from this committed copy, per docs/INGEST-LOCAL.md sec.14 / contrib-kit CURATOR.md
+# sec.5. There is no `text`, `start_quote` or `end_quote` field anywhere below; what
+# remains is text-free provenance: chunk id, label, lake seq, heading, character span,
+# token estimate, and how the span was suggested. Committing in-copyright prose to a
+# repo every collaborator can read is exactly what the licensing firewall exists to
+# prevent (ADR 0001 D8, ADR 0002 D4). The verbatim text exists only in the personal
+# lake -- never in this repo. Same treatment as appleby-relentless-revolution.
+#
+# ############################################################################
+# ## READ THIS BEFORE TRUSTING ANY OFFSET IN THIS FILE                      ##
+# ############################################################################
+# THE OFFSETS BELOW ARE HISTORICAL AND CANNOT CURRENTLY BE RE-VERIFIED AGAINST ANY
+# FILE ON DISK.
+#
+# This source was ingested through the wm-feeder cloud pipeline, not the local
+# agent pipeline. Its scratch artifacts dir (plan.json, per-unit sidecars,
+# source.txt) was never kept, and the extraction the offsets index --
+# `raw_sources/2026-06-09_landes-revolution-in-time.md`, the path recorded on the
+# lake's `sources` row -- is not present anywhere in the checkouts. (The 27 MB source
+# EPUB survives at contraptions/"Revolution in Time - David S. Landes - 2000.epub", but
+# that is the BOOK, not the extraction: re-running an EPUB-to-text conversion will not
+# reproduce the same character indices.) char_start/char_end are therefore provenance of
+# record only: they say where in that vanished extraction each curated passage sat. They
+# index NOTHING you can open today.
+#
+# The lake's `sources` row does record a hash of that extraction:
+#   sha256 44ce348cd742bd29e9d9e768beec7b5e81554b4b82d46eff6afecced9000b9e4
+# It is reproduced here ONLY so a recovered file can be checked for identity. It was
+# NOT verified at backfill time and CANNOT be, because the file it names is gone. Do
+# not read it as a live pin the way the appleby sidecar's pin is live.
+#
+# IF THE BOOK IS EVER RE-EXTRACTED, EVERY OFFSET HERE MUST BE RE-RESOLVED. A new
+# extraction will not reproduce these character indices, and silently reusing them would
+# mis-slice every chunk. Worse than for an open source: because the firewall forbids
+# committing the passage text, this file carries no anchor by which a chunk could be
+# re-located after a re-extraction. Re-resolution would have to go through the personal
+# lake's stored `chunks.text`, which is the only surviving anchor for these spans.
+# ############################################################################
+#
+# NO `why` FIELD. The other sidecars carry the reader agent's one-line rationale for
+# each span. The lake has no column for it and the wm-feeder run's per-unit sidecars
+# (which held `why` alongside start_quote/end_quote) were not retained, so it is
+# unrecoverable for this source. It is omitted rather than reconstructed -- a
+# plausible-sounding `why` written after the fact at backfill time would be a fabricated
+# provenance record, which is worse than an absent one.
+#
+# BACKFILL NOTE: written 2026-07-25, long after the ingest landed without a sidecar,
+# by read-only export from the DuckLake catalog (`chunks` where suggested_by='agent').
+#
+# CURATED ONLY: the 144 chunks below are the curator/agent-selected
+# (`suggested_by=agent`) subset. The lake holds 617 chunks for this source; the other
+# 473 are mechanically derived `#uNN-fKKK` fallback chunks that carry no curatorial
+# judgement. This matches the appleby-relentless-revolution (125 of 675) and
+# dante-divine-comedy (124 of 487) precedents.
+#
+# Units are grouped as in the other sidecars: the chunk ids encode a unit
+# (`landes-revolution-in-time#u<NN>-c<K>`), and each unit maps 1:1 onto one L1 reading
+# note. `note_id`, `note_title` and `span` are taken from that note's own frontmatter
+# (`spans:`), which is the only surviving record of the unit boundaries -- the feeder's
+# plan.json is gone, so the original unit slugs are not recorded and no `unit_id` field
+# is emitted.
+#
+# CAVEAT ON `cites:` COVERAGE: the feeder curated 6 chunks per unit (144 total) but each
+# L1 note's `cites:` frontmatter lists only 3 of them (72 total). Every id below with
+# `-c4`, `-c5` or `-c6` is a real curated, embedded lake chunk that no note cites. They
+# are recorded here because they are part of this source's curated provenance; do not
+# expect a 1:1 match against `cites:` the way the other sidecars have.
+source: landes-revolution-in-time
+units:
+- nn: 1
+  note_id: rit-01-preface
+  note_title: RIT 01 — Prefaces & front matter
+  span: 4824:34934
+  chunks:
+  - id: landes-revolution-in-time#u01-c1
+    label: c1
+    seq: 2
+    heading: Low-frequency clocks made the modern world (Ramsey exchange)
+    char_start: 6300
+    char_end: 7196
+    n_tokens: 224
+    suggested_by: agent
+  - id: landes-revolution-in-time#u01-c2
+    label: c2
+    seq: 4
+    heading: 'Watchmaking as globalization in miniature: Swatch, digitals, Timex, Britain'
+    char_start: 8316
+    char_end: 10397
+    n_tokens: 520
+    suggested_by: agent
+  - id: landes-revolution-in-time#u01-c3
+    label: c3
+    seq: 6
+    heading: Knowledge of time exceeds the timeliness of action
+    char_start: 11452
+    char_end: 13565
+    n_tokens: 528
+    suggested_by: agent
+  - id: landes-revolution-in-time#u01-c4
+    label: c4
+    seq: 9
+    heading: 'Origin story: Cipolla''s striker watch at the Berkeley wine tasting'
+    char_start: 15817
+    char_end: 17552
+    n_tokens: 433
+    suggested_by: agent
+  - id: landes-revolution-in-time#u01-c5
+    label: c5
+    seq: 11
+    heading: 'Dereliction of duty: a historian of industry who never studied clocks'
+    char_start: 18609
+    char_end: 19991
+    n_tokens: 345
+    suggested_by: agent
+  - id: landes-revolution-in-time#u01-c6
+    label: c6
+    seq: 15
+    heading: The triptych and the uncharted-territory claim
+    char_start: 24539
+    char_end: 26793
+    n_tokens: 563
+    suggested_by: agent
+- nn: 2
+  note_id: rit-02-introduction
+  note_title: RIT 02 — Introduction — why the clock matters
+  span: 34934:63520
+  chunks:
+  - id: landes-revolution-in-time#u02-c1
+    label: c1
+    seq: 22
+    heading: Time indications as commands; discipline imprinted from infancy
+    char_start: 35298
+    char_end: 36592
+    n_tokens: 323
+    suggested_by: agent
+  - id: landes-revolution-in-time#u02-c2
+    label: c2
+    seq: 24
+    heading: Astronomy drives precision from pendulum to atomic second
+    char_start: 38064
+    char_end: 39480
+    n_tokens: 354
+    suggested_by: agent
+  - id: landes-revolution-in-time#u02-c3
+    label: c3
+    seq: 26
+    heading: 'Sports timing: ever finer time chopping, 1864-1960'
+    char_start: 40877
+    char_end: 42926
+    n_tokens: 512
+    suggested_by: agent
+  - id: landes-revolution-in-time#u02-c4
+    label: c4
+    seq: 29
+    heading: 'Why the mechanical clock mattered: time discipline vs time obedience'
+    char_start: 46139
+    char_end: 47686
+    n_tokens: 386
+    suggested_by: agent
+  - id: landes-revolution-in-time#u02-c5
+    label: c5
+    seq: 32
+    heading: 'The Great Invention: oscillation and the digital principle'
+    char_start: 49260
+    char_end: 50881
+    n_tokens: 405
+    suggested_by: agent
+  - id: landes-revolution-in-time#u02-c6
+    label: c6
+    seq: 38
+    heading: Not the escapement but countable beats — the heart of the clock
+    char_start: 58025
+    char_end: 58911
+    n_tokens: 221
+    suggested_by: agent
+- nn: 3
+  note_id: rit-03-a-magnificent-dead-end
+  note_title: RIT 03 — A Magnificent Dead End (Ch. 1)
+  span: 63520:112749
+  chunks:
+  - id: landes-revolution-in-time#u03-c1
+    label: c1
+    seq: 44
+    heading: 'Su Sung''s clock: commission and mechanism'
+    char_start: 66025
+    char_end: 68779
+    n_tokens: 688
+    suggested_by: agent
+  - id: landes-revolution-in-time#u03-c2
+    label: c2
+    seq: 50
+    heading: 'Optative history: two unrelated escapements'
+    char_start: 75346
+    char_end: 77290
+    n_tokens: 486
+    suggested_by: agent
+  - id: landes-revolution-in-time#u03-c3
+    label: c3
+    seq: 51
+    heading: 'Dead end vs. germ: why the European clock had the future'
+    char_start: 77292
+    char_end: 79023
+    n_tokens: 432
+    suggested_by: agent
+  - id: landes-revolution-in-time#u03-c4
+    label: c4
+    seq: 56
+    heading: Who wanted precise time? Almost no one
+    char_start: 85365
+    char_end: 86628
+    n_tokens: 315
+    suggested_by: agent
+  - id: landes-revolution-in-time#u03-c5
+    label: c5
+    seq: 67
+    heading: 'Political, not scientific: the criterion of accuracy'
+    char_start: 102536
+    char_end: 104163
+    n_tokens: 406
+    suggested_by: agent
+  - id: landes-revolution-in-time#u03-c6
+    label: c6
+    seq: 70
+    heading: Calendar as sovereignty; knowledge that dies with its keeper
+    char_start: 105921
+    char_end: 107574
+    n_tokens: 413
+    suggested_by: agent
+- nn: 4
+  note_id: rit-04-why-are-the-memorials-late
+  note_title: RIT 04 — Why Are the Memorials Late? (Ch. 2) — China's second chance refused
+  span: 112749:150325
+  chunks:
+  - id: landes-revolution-in-time#u04-c1
+    label: c1
+    seq: 77
+    heading: 'Ricci''s bait: astronomy and self-ringing bells'
+    char_start: 116632
+    char_end: 119199
+    n_tokens: 641
+    suggested_by: agent
+  - id: landes-revolution-in-time#u04-c2
+    label: c2
+    seq: 79
+    heading: China's second chance at a horological revolution
+    char_start: 120213
+    char_end: 121511
+    n_tokens: 324
+    suggested_by: agent
+  - id: landes-revolution-in-time#u04-c3
+    label: c3
+    seq: 81
+    heading: 'K''ang-hsi''s workshop: poor copies of poor copies'
+    char_start: 123812
+    char_end: 124668
+    n_tokens: 214
+    suggested_by: agent
+  - id: landes-revolution-in-time#u04-c4
+    label: c4
+    seq: 85
+    heading: 'Indifference becomes rejection: the alien device thesis'
+    char_start: 129490
+    char_end: 131057
+    n_tokens: 391
+    suggested_by: agent
+  - id: landes-revolution-in-time#u04-c5
+    label: c5
+    seq: 93
+    heading: Ch'ien-lung rebuffs Macartney; the door invites smashing
+    char_start: 141998
+    char_end: 143360
+    n_tokens: 340
+    suggested_by: agent
+  - id: landes-revolution-in-time#u04-c6
+    label: c6
+    seq: 96
+    heading: Fu-heng's watches and time as the emperor's property
+    char_start: 147138
+    char_end: 149891
+    n_tokens: 688
+    suggested_by: agent
+- nn: 5
+  note_id: rit-05-are-you-sleeping-brother-john
+  note_title: RIT 05 — Are You Sleeping, Brother John? (ch. 3)
+  span: 150325:190761
+  chunks:
+  - id: landes-revolution-in-time#u05-c1
+    label: c1
+    seq: 105
+    heading: 'Refuting Price: demand for time measurement preceded the clock'
+    char_start: 161356
+    char_end: 163226
+    n_tokens: 467
+    suggested_by: agent
+  - id: landes-revolution-in-time#u05-c2
+    label: c2
+    seq: 106
+    heading: Where did the demand come from? Not the peasants — the Church
+    char_start: 163228
+    char_end: 164193
+    n_tokens: 241
+    suggested_by: agent
+  - id: landes-revolution-in-time#u05-c3
+    label: c3
+    seq: 108
+    heading: 'Tertullian''s set hours: liturgy decoupled from the natural cycle'
+    char_start: 166354
+    char_end: 167897
+    n_tokens: 385
+    suggested_by: agent
+  - id: landes-revolution-in-time#u05-c4
+    label: c4
+    seq: 115
+    heading: 'Punctuality as salvation: John of Salisbury and compelled simultaneity'
+    char_start: 176505
+    char_end: 178971
+    n_tokens: 616
+    suggested_by: agent
+  - id: landes-revolution-in-time#u05-c5
+    label: c5
+    seq: 116
+    heading: The night office and the Church's turn to alarm mechanisms
+    char_start: 178973
+    char_end: 180476
+    n_tokens: 375
+    suggested_by: agent
+  - id: landes-revolution-in-time#u05-c6
+    label: c6
+    seq: 120
+    heading: 'Anxiety dreams of missing matins: internalized time discipline'
+    char_start: 184490
+    char_end: 186822
+    n_tokens: 583
+    suggested_by: agent
+- nn: 6
+  note_id: rit-06-the-greatest-necessity
+  note_title: RIT 06 — "The Greatest Necessity for Every Rank of Men" (Ch. 4)
+  span: 190761:235146
+  chunks:
+  - id: landes-revolution-in-time#u06-c1
+    label: c1
+    seq: 127
+    heading: Monastic bells and communal time
+    char_start: 196246
+    char_end: 197719
+    n_tokens: 368
+    suggested_by: agent
+  - id: landes-revolution-in-time#u06-c2
+    label: c2
+    seq: 128
+    heading: Cistercian economics as stimulus to the mechanical clock
+    char_start: 197721
+    char_end: 199019
+    n_tokens: 324
+    suggested_by: agent
+  - id: landes-revolution-in-time#u06-c3
+    label: c3
+    seq: 133
+    heading: Signal multiplication and the urban demand for the clock
+    char_start: 206010
+    char_end: 207958
+    n_tokens: 487
+    suggested_by: agent
+  - id: landes-revolution-in-time#u06-c4
+    label: c4
+    seq: 135
+    heading: Work bells in the textile towns
+    char_start: 209448
+    char_end: 210744
+    n_tokens: 324
+    suggested_by: agent
+  - id: landes-revolution-in-time#u06-c5
+    label: c5
+    seq: 137
+    heading: Silencing the werckclocke and the two-edged sword
+    char_start: 212121
+    char_end: 213622
+    n_tokens: 375
+    suggested_by: agent
+  - id: landes-revolution-in-time#u06-c6
+    label: c6
+    seq: 142
+    heading: Equal hours, numeracy, and the monks' unintended victory
+    char_start: 220476
+    char_end: 223005
+    n_tokens: 632
+    suggested_by: agent
+- nn: 7
+  note_id: rit-07-my-time-is-my-time
+  note_title: RIT 07 — My Time Is My Time (Ch. 5)
+  span: 235146:268961
+  chunks:
+  - id: landes-revolution-in-time#u07-c2
+    label: c2
+    seq: 156
+    heading: Multiplication invites comparison; the market selects for accuracy
+    char_start: 243143
+    char_end: 244142
+    n_tokens: 249
+    suggested_by: agent
+  - id: landes-revolution-in-time#u07-c1
+    label: c1
+    seq: 158
+    heading: Privatization of time as engine of individualism
+    char_start: 244985
+    char_end: 246240
+    n_tokens: 313
+    suggested_by: agent
+  - id: landes-revolution-in-time#u07-c3
+    label: c3
+    seq: 161
+    heading: 'Sacred time-thrift: time saved as the coin of salvation'
+    char_start: 249462
+    char_end: 250469
+    n_tokens: 251
+    suggested_by: agent
+  - id: landes-revolution-in-time#u07-c4
+    label: c4
+    seq: 163
+    heading: Alberti and the merchant's daily time budget
+    char_start: 251493
+    char_end: 252998
+    n_tokens: 376
+    suggested_by: agent
+  - id: landes-revolution-in-time#u07-c5
+    label: c5
+    seq: 166
+    heading: 'Weber''s missed chronometric variable: Protestant watchmaking'
+    char_start: 255667
+    char_end: 256747
+    n_tokens: 270
+    suggested_by: agent
+  - id: landes-revolution-in-time#u07-c6
+    label: c6
+    seq: 174
+    heading: 'The GI watch: synchronization and the soldier''s own time'
+    char_start: 267753
+    char_end: 268895
+    n_tokens: 285
+    suggested_by: agent
+- nn: 8
+  note_id: rit-08-of-toys-and-ornaments
+  note_title: RIT 08 — Of Toys and Ornaments and Serious Things (ch. 6)
+  span: 268961:312318
+  chunks:
+  - id: landes-revolution-in-time#u08-c1
+    label: c1
+    seq: 177
+    heading: 'The German path: tribute clocks and tabernacle toys'
+    char_start: 271518
+    char_end: 273130
+    n_tokens: 403
+    suggested_by: agent
+  - id: landes-revolution-in-time#u08-c2
+    label: c2
+    seq: 179
+    heading: 'Against functional logic: the death of the German clock industry'
+    char_start: 273496
+    char_end: 275779
+    n_tokens: 570
+    suggested_by: agent
+  - id: landes-revolution-in-time#u08-c3
+    label: c3
+    seq: 183
+    heading: 'Ornament vs instrument: French cases, puritan watches, the watch as monitor'
+    char_start: 279702
+    char_end: 282392
+    n_tokens: 672
+    suggested_by: agent
+  - id: landes-revolution-in-time#u08-c4
+    label: c4
+    seq: 186
+    heading: 'Seizing time in flight: Brahe, the clepsydra, and the proto-stopwatch'
+    char_start: 284291
+    char_end: 285614
+    n_tokens: 330
+    suggested_by: agent
+  - id: landes-revolution-in-time#u08-c5
+    label: c5
+    seq: 190
+    heading: 'The earth is the original clock: longitude as time difference'
+    char_start: 290229
+    char_end: 291372
+    n_tokens: 285
+    suggested_by: agent
+  - id: landes-revolution-in-time#u08-c6
+    label: c6
+    seq: 199
+    heading: 'The longitude mobilization: science and craft not yet ruptured'
+    char_start: 305720
+    char_end: 307830
+    n_tokens: 527
+    suggested_by: agent
+- nn: 9
+  note_id: rit-09-my-time-is-your-time
+  note_title: RIT 09 — My Time Is Your Time (ch. 7)
+  span: 312318:358271
+  chunks:
+  - id: landes-revolution-in-time#u09-c1
+    label: c1
+    seq: 204
+    heading: 'Averages deceive: the verge''s hidden variance and the oscillator task'
+    char_start: 317345
+    char_end: 318598
+    n_tokens: 313
+    suggested_by: agent
+  - id: landes-revolution-in-time#u09-c2
+    label: c2
+    seq: 205
+    heading: From Burgi's anticipation to Huygens's pendulum sweep
+    char_start: 318600
+    char_end: 320859
+    n_tokens: 564
+    suggested_by: agent
+  - id: landes-revolution-in-time#u09-c3
+    label: c3
+    seq: 214
+    heading: 'Correcting the sun: equation of time and the triumph of mean time'
+    char_start: 334723
+    char_end: 337008
+    n_tokens: 571
+    suggested_by: agent
+  - id: landes-revolution-in-time#u09-c4
+    label: c4
+    seq: 218
+    heading: 'Eureka: Huygens''s balance spring and the Thuret affair'
+    char_start: 342114
+    char_end: 344048
+    n_tokens: 483
+    suggested_by: agent
+  - id: landes-revolution-in-time#u09-c5
+    label: c5
+    seq: 221
+    heading: 'Hooke''s buried chronometer: his own worst enemy'
+    char_start: 346455
+    char_end: 348178
+    n_tokens: 430
+    suggested_by: agent
+  - id: landes-revolution-in-time#u09-c6
+    label: c6
+    seq: 224
+    heading: Instant obsolescence and the material basis of punctuality
+    char_start: 350120
+    char_end: 351420
+    n_tokens: 325
+    suggested_by: agent
+- nn: 10
+  note_id: rit-10-approaching-the-asymptote
+  note_title: RIT 10 — Approaching the Asymptote (ch. 8)
+  span: 358271:388996
+  chunks:
+  - id: landes-revolution-in-time#u10-c1
+    label: c1
+    seq: 230
+    heading: 'The asymptote: the last gains are the hardest'
+    char_start: 358298
+    char_end: 359252
+    n_tokens: 238
+    suggested_by: agent
+  - id: landes-revolution-in-time#u10-c2
+    label: c2
+    seq: 232
+    heading: 'Temperature: scientists deny, craftsmen know, compensation arrives'
+    char_start: 360272
+    char_end: 362990
+    n_tokens: 679
+    suggested_by: agent
+  - id: landes-revolution-in-time#u10-c3
+    label: c3
+    seq: 235
+    heading: 'Wheel-cutting engines: turning an art into an industry'
+    char_start: 365915
+    char_end: 367922
+    n_tokens: 501
+    suggested_by: agent
+  - id: landes-revolution-in-time#u10-c4
+    label: c4
+    seq: 239
+    heading: Facio's rubies and the Clockmakers' Company patent fight
+    char_start: 371304
+    char_end: 373582
+    n_tokens: 569
+    suggested_by: agent
+  - id: landes-revolution-in-time#u10-c5
+    label: c5
+    seq: 243
+    heading: 'Graham''s dead-beat: two centuries of supremacy'
+    char_start: 378847
+    char_end: 380252
+    n_tokens: 351
+    suggested_by: agent
+  - id: landes-revolution-in-time#u10-c6
+    label: c6
+    seq: 248
+    heading: The detent escapement realizes Huygens's dream of a sea clock
+    char_start: 386464
+    char_end: 388861
+    n_tokens: 599
+    suggested_by: agent
+- nn: 11
+  note_id: rit-11-the-man-who-stayed-to-dinner
+  note_title: RIT 11 — The Man Who Stayed to Dinner (ch. 9)
+  span: 388996:420668
+  chunks:
+  - id: landes-revolution-in-time#u11-c1
+    label: c1
+    seq: 250
+    heading: 'The wounded dog: powder of sympathy as living clock'
+    char_start: 389479
+    char_end: 390684
+    n_tokens: 301
+    suggested_by: agent
+  - id: landes-revolution-in-time#u11-c2
+    label: c2
+    seq: 251
+    heading: 'Newton: longitude belongs to astronomers, not watchmakers'
+    char_start: 390759
+    char_end: 392171
+    n_tokens: 353
+    suggested_by: agent
+  - id: landes-revolution-in-time#u11-c3
+    label: c3
+    seq: 255
+    heading: 'The man who stayed to dinner: Halley, Graham, and British openness'
+    char_start: 396305
+    char_end: 397757
+    n_tokens: 363
+    suggested_by: agent
+  - id: landes-revolution-in-time#u11-c4
+    label: c4
+    seq: 261
+    heading: The lunar-distance method and its four requirements
+    char_start: 404538
+    char_end: 405942
+    n_tokens: 351
+    suggested_by: agent
+  - id: landes-revolution-in-time#u11-c5
+    label: c5
+    seq: 268
+    heading: The board's legal ground and the Barbados vindication
+    char_start: 414904
+    char_end: 417384
+    n_tokens: 620
+    suggested_by: agent
+  - id: landes-revolution-in-time#u11-c6
+    label: c6
+    seq: 270
+    heading: 'Not the ancestor: Harrison''s legacy as proof of feasibility'
+    char_start: 418015
+    char_end: 419599
+    n_tokens: 396
+    suggested_by: agent
+- nn: 12
+  note_id: rit-12-the-french-connection
+  note_title: RIT 12 — The French Connection (Ch. 10)
+  span: 420668:455288
+  chunks:
+  - id: landes-revolution-in-time#u12-c1
+    label: c1
+    seq: 274
+    heading: 'Longitude as open science: prizes are not the rewards of secrecy'
+    char_start: 422926
+    char_end: 425074
+    n_tokens: 537
+    suggested_by: agent
+  - id: landes-revolution-in-time#u12-c2
+    label: c2
+    seq: 279
+    heading: 'Berthoud''s 1766 report: precision lives in execution, not design'
+    char_start: 431069
+    char_end: 433017
+    n_tokens: 487
+    suggested_by: agent
+  - id: landes-revolution-in-time#u12-c3
+    label: c3
+    seq: 281
+    heading: Le Roy invents the detached escapement (1748)
+    char_start: 434244
+    char_end: 435514
+    n_tokens: 317
+    suggested_by: agent
+  - id: landes-revolution-in-time#u12-c4
+    label: c4
+    seq: 285
+    heading: 'Gould''s verdict: inspiration, not prototype'
+    char_start: 440282
+    char_end: 441221
+    n_tokens: 234
+    suggested_by: agent
+  - id: landes-revolution-in-time#u12-c5
+    label: c5
+    seq: 287
+    heading: Le Roy's reproducibility manifesto
+    char_start: 443325
+    char_end: 444800
+    n_tokens: 368
+    suggested_by: agent
+  - id: landes-revolution-in-time#u12-c6
+    label: c6
+    seq: 294
+    heading: 'Monopoly purveyor, no emulation: why France lost the chronometer'
+    char_start: 454298
+    char_end: 455227
+    n_tokens: 232
+    suggested_by: agent
+- nn: 13
+  note_id: rit-13-fame-is-the-spur
+  note_title: RIT 13 — Fame Is the Spur (ch. 11)
+  span: 455288:504512
+  chunks:
+  - id: landes-revolution-in-time#u13-c1
+    label: c1
+    seq: 295
+    heading: 'Arnold''s rise: royal favor and the ring repeater'
+    char_start: 455306
+    char_end: 456764
+    n_tokens: 364
+    suggested_by: agent
+  - id: landes-revolution-in-time#u13-c2
+    label: c2
+    seq: 301
+    heading: Earnshaw's spring detent wins on cost and performance
+    char_start: 464605
+    char_end: 466752
+    n_tokens: 536
+    suggested_by: agent
+  - id: landes-revolution-in-time#u13-c3
+    label: c3
+    seq: 303
+    heading: 'The patent race: Wright''s shop and the Registrar stakeout'
+    char_start: 468102
+    char_end: 470015
+    n_tokens: 478
+    suggested_by: agent
+  - id: landes-revolution-in-time#u13-c4
+    label: c4
+    seq: 307
+    heading: 'Banks vs Earnshaw: patronage against the plebeian'
+    char_start: 474707
+    char_end: 477127
+    n_tokens: 605
+    suggested_by: agent
+  - id: landes-revolution-in-time#u13-c5
+    label: c5
+    seq: 318
+    heading: 'Chronometer output: British scale vs French finish'
+    char_start: 493209
+    char_end: 495018
+    n_tokens: 452
+    suggested_by: agent
+  - id: landes-revolution-in-time#u13-c6
+    label: c6
+    seq: 321
+    heading: 'The makers wrought too well: precision outruns nature'
+    char_start: 498297
+    char_end: 501092
+    n_tokens: 698
+    suggested_by: agent
+- nn: 14
+  note_id: rit-14-clocks-in-the-belfry
+  note_title: RIT 14 — Clocks in the Belfry (Ch. 12)
+  span: 504512:528601
+  chunks:
+  - id: landes-revolution-in-time#u14-c1
+    label: c1
+    seq: 324
+    heading: Turret clock building as construction work by ad hoc teams
+    char_start: 504534
+    char_end: 505742
+    n_tokens: 302
+    suggested_by: agent
+  - id: landes-revolution-in-time#u14-c2
+    label: c2
+    seq: 326
+    heading: 'A new profession: del Orologio, service, and the loanable clockmaker'
+    char_start: 506286
+    char_end: 507725
+    n_tokens: 359
+    suggested_by: agent
+  - id: landes-revolution-in-time#u14-c3
+    label: c3
+    seq: 327
+    heading: Ramon Sans's Perpignan account book, 1356
+    char_start: 507727
+    char_end: 508615
+    n_tokens: 222
+    suggested_by: agent
+  - id: landes-revolution-in-time#u14-c4
+    label: c4
+    seq: 330
+    heading: 'The Perpignan work-yard: iron, furnaces, and a hundred workers'
+    char_start: 511971
+    char_end: 514121
+    n_tokens: 537
+    suggested_by: agent
+  - id: landes-revolution-in-time#u14-c5
+    label: c5
+    seq: 332
+    heading: The clock fails; humans fail; why clocks were invented
+    char_start: 514998
+    char_end: 516691
+    n_tokens: 423
+    suggested_by: agent
+  - id: landes-revolution-in-time#u14-c6
+    label: c6
+    seq: 337
+    heading: The Cambrai show clock and the blinded-shepherd legend
+    char_start: 522353
+    char_end: 523700
+    n_tokens: 336
+    suggested_by: agent
+- nn: 15
+  note_id: rit-15-the-good-old-days-that-never-were
+  note_title: RIT 15 — The Good Old Days That Never Were (Ch. 13)
+  span: 528601:570783
+  chunks:
+  - id: landes-revolution-in-time#u15-c1
+    label: c1
+    seq: 343
+    heading: Division of labour was father, not daughter, to the thought
+    char_start: 530487
+    char_end: 531596
+    n_tokens: 277
+    suggested_by: agent
+  - id: landes-revolution-in-time#u15-c2
+    label: c2
+    seq: 353
+    heading: 'Guild ideology: the village zero-sum ethic urbanized'
+    char_start: 546652
+    char_end: 548740
+    n_tokens: 522
+    suggested_by: agent
+  - id: landes-revolution-in-time#u15-c3
+    label: c3
+    seq: 355
+    heading: 'Augsburg wage arithmetic: rationing labour below marginal product'
+    char_start: 550831
+    char_end: 552156
+    n_tokens: 331
+    suggested_by: agent
+  - id: landes-revolution-in-time#u15-c4
+    label: c4
+    seq: 359
+    heading: 'Georg Roll: the interloper at Friedberg'
+    char_start: 556671
+    char_end: 559145
+    n_tokens: 618
+    suggested_by: agent
+  - id: landes-revolution-in-time#u15-c5
+    label: c5
+    seq: 364
+    heading: The Gribelin raid and the impotence of reiterated law
+    char_start: 565128
+    char_end: 568079
+    n_tokens: 737
+    suggested_by: agent
+  - id: landes-revolution-in-time#u15-c6
+    label: c6
+    seq: 366
+    heading: 'Political fragmentation: freedom as symptom and condition of the trade'
+    char_start: 569003
+    char_end: 570719
+    n_tokens: 429
+    suggested_by: agent
+- nn: 16
+  note_id: rit-16-ups-and-downs-of-international-competition
+  note_title: RIT 16 — The Ups and Downs of International Competition (Ch. 14)
+  span: 570783:614800
+  chunks:
+  - id: landes-revolution-in-time#u16-c1
+    label: c1
+    seq: 367
+    heading: 'Britain takes the lead: unincorporated areas, Huguenot exodus, and Tompion'
+    char_start: 570831
+    char_end: 572427
+    n_tokens: 399
+    suggested_by: agent
+  - id: landes-revolution-in-time#u16-c2
+    label: c2
+    seq: 375
+    heading: 'Berthoud''s 1786 diagnosis: the French style triumphs, the French industry dies'
+    char_start: 583958
+    char_end: 585594
+    n_tokens: 409
+    suggested_by: agent
+  - id: landes-revolution-in-time#u16-c3
+    label: c3
+    seq: 384
+    heading: The factory as jail, the clock as the lock
+    char_start: 597633
+    char_end: 598950
+    n_tokens: 329
+    suggested_by: agent
+  - id: landes-revolution-in-time#u16-c4
+    label: c4
+    seq: 386
+    heading: 'Scale and division of labour: half the world''s watches'
+    char_start: 601040
+    char_end: 602905
+    n_tokens: 466
+    suggested_by: agent
+  - id: landes-revolution-in-time#u16-c5
+    label: c5
+    seq: 387
+    heading: Proto-mass-production and the Achilles' heel of calibre fragmentation
+    char_start: 603015
+    char_end: 604625
+    n_tokens: 402
+    suggested_by: agent
+  - id: landes-revolution-in-time#u16-c6
+    label: c6
+    seq: 391
+    heading: 'Smuggling as a recurring motif: the watch as the perfect contraband'
+    char_start: 609750
+    char_end: 610664
+    n_tokens: 228
+    suggested_by: agent
+- nn: 17
+  note_id: rit-17-multum-in-parvo
+  note_title: RIT 17 — Multum in Parvo (Ch. 15)
+  span: 614800:675255
+  chunks:
+  - id: landes-revolution-in-time#u17-c1
+    label: c1
+    seq: 409
+    heading: 'Birth of etablissage: the putting-out system of the watch trade'
+    char_start: 638186
+    char_end: 639749
+    n_tokens: 390
+    suggested_by: agent
+  - id: landes-revolution-in-time#u17-c2
+    label: c2
+    seq: 410
+    heading: Limits of control in fragmented sovereignty
+    char_start: 639751
+    char_end: 641548
+    n_tokens: 449
+    suggested_by: agent
+  - id: landes-revolution-in-time#u17-c3
+    label: c3
+    seq: 411
+    heading: Rural outworkers and unequal exchange with Savoy
+    char_start: 641550
+    char_end: 643259
+    n_tokens: 427
+    suggested_by: agent
+  - id: landes-revolution-in-time#u17-c4
+    label: c4
+    seq: 413
+    heading: The law of nemesis and failed transplants
+    char_start: 644759
+    char_end: 646427
+    n_tokens: 417
+    suggested_by: agent
+  - id: landes-revolution-in-time#u17-c5
+    label: c5
+    seq: 415
+    heading: Merchant power, seasonal rhythm, and the cabinotier's psyche
+    char_start: 648832
+    char_end: 651521
+    n_tokens: 672
+    suggested_by: agent
+  - id: landes-revolution-in-time#u17-c6
+    label: c6
+    seq: 427
+    heading: Commercial opportunism, output figures, rise and collapse
+    char_start: 669120
+    char_end: 671778
+    n_tokens: 664
+    suggested_by: agent
+- nn: 18
+  note_id: rit-18-barrenness-of-the-soil
+  note_title: RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)
+  span: 675255:719075
+  chunks:
+  - id: landes-revolution-in-time#u18-c1
+    label: c1
+    seq: 432
+    heading: Winter closure forges the jack-of-all-trades Jura peasant
+    char_start: 676863
+    char_end: 679091
+    n_tokens: 557
+    suggested_by: agent
+  - id: landes-revolution-in-time#u18-c2
+    label: c2
+    seq: 433
+    heading: JeanRichard legend and the etablissage system
+    char_start: 679093
+    char_end: 681080
+    n_tokens: 496
+    suggested_by: agent
+  - id: landes-revolution-in-time#u18-c3
+    label: c3
+    seq: 436
+    heading: Skills rooted in the terroir — Vallee de Joux complications
+    char_start: 682811
+    char_end: 684291
+    n_tokens: 370
+    suggested_by: agent
+  - id: landes-revolution-in-time#u18-c4
+    label: c4
+    seq: 439
+    heading: Japy mechanizes the ebauche
+    char_start: 687177
+    char_end: 689150
+    n_tokens: 493
+    suggested_by: agent
+  - id: landes-revolution-in-time#u18-c5
+    label: c5
+    seq: 440
+    heading: The 1818 prize essay on standardization
+    char_start: 689154
+    char_end: 691094
+    n_tokens: 485
+    suggested_by: agent
+  - id: landes-revolution-in-time#u18-c6
+    label: c6
+    seq: 449
+    heading: A congeries of sub-branches
+    char_start: 704066
+    char_end: 704862
+    n_tokens: 199
+    suggested_by: agent
+- nn: 19
+  note_id: rit-19-nor-could-he-compete-with-us
+  note_title: RIT 19 — "Nor Could He Compete with Us" (ch. 17, pp. 293–309)
+  span: 719075:760103
+  chunks:
+  - id: landes-revolution-in-time#u19-c1
+    label: c1
+    seq: 459
+    heading: Pitt's 1797 watch tax shrivels demand
+    char_start: 719105
+    char_end: 721090
+    n_tokens: 496
+    suggested_by: agent
+  - id: landes-revolution-in-time#u19-c2
+    label: c2
+    seq: 464
+    heading: 'Race to the bottom: the micro/macro quality trap'
+    char_start: 728657
+    char_end: 730310
+    n_tokens: 413
+    suggested_by: agent
+  - id: landes-revolution-in-time#u19-c3
+    label: c3
+    seq: 469
+    heading: Dent's 1842 complacency — the chapter-title boast
+    char_start: 736327
+    char_end: 738771
+    n_tokens: 611
+    suggested_by: agent
+  - id: landes-revolution-in-time#u19-c4
+    label: c4
+    seq: 474
+    heading: 'Ingold defeated: charter denied, no link to Waltham'
+    char_start: 743685
+    char_end: 745776
+    n_tokens: 522
+    suggested_by: agent
+  - id: landes-revolution-in-time#u19-c5
+    label: c5
+    seq: 475
+    heading: Railway time, telegraph, and Greenwich standardization
+    char_start: 745778
+    char_end: 748361
+    n_tokens: 645
+    suggested_by: agent
+  - id: landes-revolution-in-time#u19-c6
+    label: c6
+    seq: 477
+    heading: Resistance to chronometric change as identity defense
+    char_start: 750207
+    char_end: 752190
+    n_tokens: 495
+    suggested_by: agent
+- nn: 20
+  note_id: rit-20-ah-but-he-could
+  note_title: RIT 20 — "Ah, But He Could!" (ch. 18)
+  span: 760103:803212
+  chunks:
+  - id: landes-revolution-in-time#u20-c1
+    label: c1
+    seq: 485
+    heading: Greenwich conservatism vs the Swiss performance definition of chronometer
+    char_start: 761926
+    char_end: 762937
+    n_tokens: 252
+    suggested_by: agent
+  - id: landes-revolution-in-time#u20-c2
+    label: c2
+    seq: 490
+    heading: Leschot did not invent interchangeable parts
+    char_start: 767863
+    char_end: 768896
+    n_tokens: 258
+    suggested_by: agent
+  - id: landes-revolution-in-time#u20-c3
+    label: c3
+    seq: 494
+    heading: Adrien Philippe, the Comte de Patek, and the stem-wind breakthrough
+    char_start: 773913
+    char_end: 774907
+    n_tokens: 248
+    suggested_by: agent
+  - id: landes-revolution-in-time#u20-c4
+    label: c4
+    seq: 501
+    heading: 'Against the New Economic History: failure is not fate'
+    char_start: 784079
+    char_end: 785806
+    n_tokens: 431
+    suggested_by: agent
+  - id: landes-revolution-in-time#u20-c5
+    label: c5
+    seq: 503
+    heading: 'Prisoners of the past: the Usher & Cole polished arbors'
+    char_start: 787026
+    char_end: 788340
+    n_tokens: 328
+    suggested_by: agent
+  - id: landes-revolution-in-time#u20-c6
+    label: c6
+    seq: 510
+    heading: Protestant literacy and the Jura seedbed of Ben Franklins
+    char_start: 797739
+    char_end: 798798
+    n_tokens: 264
+    suggested_by: agent
+- nn: 21
+  note_id: rit-21-not-one-in-fifty-thousand
+  note_title: RIT 21 — Not One in Fifty Thousand (Ch. 19)
+  span: 803212:843231
+  chunks:
+  - id: landes-revolution-in-time#u21-c1
+    label: c1
+    seq: 517
+    heading: 'Tolerance is the key: why interchangeable moving parts demand machines'
+    char_start: 811503
+    char_end: 813188
+    n_tokens: 421
+    suggested_by: agent
+  - id: landes-revolution-in-time#u21-c2
+    label: c2
+    seq: 519
+    heading: 'The American system: cultural matrix over cost calculations'
+    char_start: 814263
+    char_end: 815638
+    n_tokens: 343
+    suggested_by: agent
+  - id: landes-revolution-in-time#u21-c3
+    label: c3
+    seq: 523
+    heading: 'Yankee clocks in England: prejudice, price, and the customs windfall'
+    char_start: 819624
+    char_end: 822030
+    n_tokens: 601
+    suggested_by: agent
+  - id: landes-revolution-in-time#u21-c4
+    label: c4
+    seq: 529
+    heading: 'Second-generation machines: cutting the Gordian knot of human judgement'
+    char_start: 829643
+    char_end: 830924
+    n_tokens: 320
+    suggested_by: agent
+  - id: landes-revolution-in-time#u21-c5
+    label: c5
+    seq: 532
+    heading: Statistical sorting instead of craft fitting
+    char_start: 832719
+    char_end: 833572
+    n_tokens: 213
+    suggested_by: agent
+  - id: landes-revolution-in-time#u21-c6
+    label: c6
+    seq: 538
+    heading: 'Favre-Perret''s experiment: not one in fifty thousand'
+    char_start: 841014
+    char_end: 843169
+    n_tokens: 538
+    suggested_by: agent
+- nn: 22
+  note_id: rit-22-who-killed-cock-robin
+  note_title: RIT 22 — "Who Killed Cock Robin?" (ch. 20, pp. 347–364)
+  span: 843231:887305
+  chunks:
+  - id: landes-revolution-in-time#u22-c1
+    label: c1
+    seq: 540
+    heading: Interchangeability was a myth until the 1930s
+    char_start: 845012
+    char_end: 846718
+    n_tokens: 426
+    suggested_by: agent
+  - id: landes-revolution-in-time#u22-c2
+    label: c2
+    seq: 542
+    heading: 'The Swiss strategy: selective mechanization and versatility'
+    char_start: 847916
+    char_end: 850302
+    n_tokens: 596
+    suggested_by: agent
+  - id: landes-revolution-in-time#u22-c3
+    label: c3
+    seq: 546
+    heading: Watch consumption as the best proxy of modernization
+    char_start: 854347
+    char_end: 855650
+    n_tokens: 325
+    suggested_by: agent
+  - id: landes-revolution-in-time#u22-c4
+    label: c4
+    seq: 549
+    heading: Interwar cartelization of the Swiss industry
+    char_start: 858555
+    char_end: 861066
+    n_tokens: 627
+    suggested_by: agent
+  - id: landes-revolution-in-time#u22-c5
+    label: c5
+    seq: 551
+    heading: Waltham regressed to an earlier mode of production
+    char_start: 862596
+    char_end: 863607
+    n_tokens: 252
+    suggested_by: agent
+  - id: landes-revolution-in-time#u22-c6
+    label: c6
+    seq: 564
+    heading: Tariffs, smuggling, and the Catch-22 of enforcement
+    char_start: 883442
+    char_end: 885252
+    n_tokens: 452
+    suggested_by: agent
+- nn: 23
+  note_id: rit-23-the-quartz-revolution-i
+  note_title: RIT 23 — The Quartz Revolution, Part I (Ch. 21)
+  span: 887305:929276
+  chunks:
+  - id: landes-revolution-in-time#u23-c1
+    label: c1
+    seq: 568
+    heading: 'Timex: selling cheap time through a quarter-million outlets'
+    char_start: 889025
+    char_end: 890336
+    n_tokens: 327
+    suggested_by: agent
+  - id: landes-revolution-in-time#u23-c2
+    label: c2
+    seq: 579
+    heading: 'The Neuchatel observatory drama: quartz humbles mechanical chronometry, 1961-67'
+    char_start: 909291
+    char_end: 910544
+    n_tokens: 313
+    suggested_by: agent
+  - id: landes-revolution-in-time#u23-c3
+    label: c3
+    seq: 581
+    heading: '26 April 1968: the chronometry competition suspended, the regleurs retired'
+    char_start: 910982
+    char_end: 911872
+    n_tokens: 222
+    suggested_by: agent
+  - id: landes-revolution-in-time#u23-c4
+    label: c4
+    seq: 582
+    heading: 'Science defeated art: Swiss had the labs but not the entrepreneurship'
+    char_start: 911874
+    char_end: 913483
+    n_tokens: 402
+    suggested_by: agent
+  - id: landes-revolution-in-time#u23-c5
+    label: c5
+    seq: 586
+    heading: 98 per cent complacency meets the exponential learning curve
+    char_start: 917404
+    char_end: 918714
+    n_tokens: 327
+    suggested_by: agent
+  - id: landes-revolution-in-time#u23-c6
+    label: c6
+    seq: 593
+    heading: Elegy for the mechanical movement
+    char_start: 927667
+    char_end: 929276
+    n_tokens: 402
+    suggested_by: agent
+- nn: 24
+  note_id: rit-24-the-quartz-revolution-ii
+  note_title: RIT 24 — The Quartz Revolution, II (ch. 21, second half + conclusion)
+  span: 929276:971400
+  chunks:
+  - id: landes-revolution-in-time#u24-c1
+    label: c1
+    seq: 595
+    heading: 'Romantics on both barricades: Wardin vs. Finegold'
+    char_start: 930855
+    char_end: 933766
+    n_tokens: 727
+    suggested_by: agent
+  - id: landes-revolution-in-time#u24-c2
+    label: c2
+    seq: 596
+    heading: Swiss collapse in numbers as Japan rushes by
+    char_start: 933768
+    char_end: 934853
+    n_tokens: 271
+    suggested_by: agent
+  - id: landes-revolution-in-time#u24-c3
+    label: c3
+    seq: 599
+    heading: Inversion of the hierarchy of tasks
+    char_start: 937783
+    char_end: 939075
+    n_tokens: 323
+    suggested_by: agent
+  - id: landes-revolution-in-time#u24-c4
+    label: c4
+    seq: 602
+    heading: 'The Jura shrivels: Renan and the human cost'
+    char_start: 941770
+    char_end: 944024
+    n_tokens: 563
+    suggested_by: agent
+  - id: landes-revolution-in-time#u24-c5
+    label: c5
+    seq: 610
+    heading: How the Swatch was made cheap
+    char_start: 956708
+    char_end: 959015
+    n_tokens: 576
+    suggested_by: agent
+  - id: landes-revolution-in-time#u24-c6
+    label: c6
+    seq: 617
+    heading: 'The book''s closing: the timekeeper remains'
+    char_start: 969198
+    char_end: 971272
+    n_tokens: 518
+    suggested_by: agent

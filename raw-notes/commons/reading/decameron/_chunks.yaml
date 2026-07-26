@@ -1,0 +1,1371 @@
+# Curated chunk sidecar for source `decameron`
+# (The Decameron, Giovanni Boccaccio, c.1353; John Payne's English translation via
+# Project Gutenberg).
+#
+# license_class: open -> verbatim chunk text is RETAINED in this committed copy, per
+# docs/INGEST-LOCAL.md sec.14: for open sources the curated spans are committed with
+# their full text. Payne's translation (1886) and the Gutenberg edition are both public
+# domain, so sec.14's redaction rule does not reach this source and nothing is stripped.
+#
+# ############################################################################
+# ## READ THIS BEFORE TRUSTING ANY OFFSET IN THIS FILE                      ##
+# ############################################################################
+# THE OFFSETS BELOW ARE HISTORICAL AND CANNOT CURRENTLY BE RE-VERIFIED AGAINST ANY
+# FILE ON DISK.
+#
+# This source was ingested through the wm-feeder cloud pipeline, not the local
+# agent pipeline. Its scratch artifacts dir (plan.json, per-unit sidecars,
+# source.txt) was never kept, and the extraction the offsets index --
+# `raw_sources/decameron.md`, ~1.70 MB, the path recorded on the lake's `sources`
+# row -- is not present anywhere in the checkouts. char_start/char_end are therefore
+# provenance of record only: they say where in that vanished extraction each curated
+# passage sat. They index NOTHING you can open today.
+#
+# The lake's `sources` row does record a hash of that extraction:
+#   sha256 2ea06c501d631b25f920c61c824adf166d4ed057c583b42b41002c2ec6972748
+# It is reproduced here ONLY so a recovered file can be checked for identity. It was
+# NOT verified at backfill time and CANNOT be, because the file it names is gone. Do
+# not read it as a live pin the way the dante / adams sidecars' pins are live.
+#
+# IF THE DECAMERON IS EVER RE-EXTRACTED, EVERY OFFSET HERE MUST BE RE-RESOLVED. A new
+# extraction (different boilerplate trim, different line wrapping, different tooling)
+# will not reproduce these character indices, and silently reusing them would mis-slice
+# every chunk. The `text:` bodies below -- not the integers -- are the durable record:
+# they are exact copies of what the lake stores, and can be re-located in any future
+# extraction by whitespace-tolerant search.
+# ############################################################################
+#
+# NO `why` FIELD. The other sidecars carry the reader agent's one-line rationale for
+# each span. The lake has no column for it and the wm-feeder run's per-unit sidecars
+# (which held `why` alongside start_quote/end_quote) were not retained, so it is
+# unrecoverable for this source. It is omitted rather than reconstructed -- a
+# plausible-sounding `why` written after the fact at backfill time would be a fabricated
+# provenance record, which is worse than an absent one.
+#
+# BACKFILL NOTE: written 2026-07-25, long after the ingest landed without a sidecar,
+# by read-only export from the DuckLake catalog (`chunks` where suggested_by='agent').
+#
+# CURATED ONLY: the 48 chunks below are the curator/agent-selected
+# (`suggested_by=agent`) subset. The lake holds 1038 chunks for this source; the other
+# 990 are mechanically derived `#uNN-fKKK` fallback chunks that carry no curatorial
+# judgement. This matches the dante-divine-comedy (124 of 487) and
+# appleby-relentless-revolution (125 of 675) precedents.
+#
+# Units are grouped as in the other sidecars: the chunk ids encode a unit
+# (`decameron#u<NN>-c<K>`), and each unit maps 1:1 onto one L1 reading note. `note_id`,
+# `note_title` and `span` are taken from that note's own frontmatter (`spans:`), which
+# is the only surviving record of the unit boundaries -- the feeder's plan.json is gone,
+# so the original unit slugs are not recorded and no `unit_id` field is emitted.
+# Chunk ids match each reading note's `cites:` field.
+source: decameron
+units:
+- nn: 1
+  note_id: dec-proem
+  note_title: DEC 01 — Proem & Author's Introduction
+  span: 31287:37178
+  chunks:
+  - id: decameron#u01-c1
+    label: c1
+    seq: 1
+    heading: Opening moral axiom — compassion of the afflicted
+    char_start: 31296
+    char_end: 31520
+    n_tokens: 56
+    suggested_by: agent
+    text: |-
+      A kindly thing it is to have compassion of the afflicted and albeit it
+      well beseemeth every one, yet of those is it more particularly
+      required who have erst had need of comfort and have found it in any,
+      amongst whom, if ever
+  - id: decameron#u01-c2
+    label: c2
+    seq: 3
+    heading: Love as involuntary weather — abated of its own motion
+    char_start: 32638
+    char_end: 32951
+    n_tokens: 78
+    suggested_by: agent
+    text: |-
+      my love,--beyond every
+      other fervent and which nor stress of reasoning nor counsel, no, nor
+      yet manifest shame nor peril that might ensue thereof, had availed
+      either to break or to bend,--of its own motion, in process of time, on
+      such wise abated that of itself at this present it hath left me only
+      that pleasance
+  - id: decameron#u01-c3
+    label: c3
+    seq: 5
+    heading: Women enmewed — gendered constraint passage
+    char_start: 34589
+    char_end: 34910
+    n_tokens: 80
+    suggested_by: agent
+    text: |-
+      constrained by the wishes,
+      the pleasures, the commandments of fathers, mothers, brothers and
+      husbands, abide most time enmewed in the narrow compass of their
+      chambers and sitting in a manner idle, willing and willing not in one
+      breath, revolve in themselves various thoughts which it is not
+      possible should still be merry
+  - id: decameron#u01-c4
+    label: c4
+    seq: 7
+    heading: Men's mobility vs women's enclosure — the asymmetry of relief
+    char_start: 35227
+    char_end: 35767
+    n_tokens: 135
+    suggested_by: agent
+    text: |-
+      They, if any melancholy or heaviness of thought oppress them, have
+      many means of easing it or doing it away, for that to them, an they
+      have a mind thereto, there lacketh not commodity of going about
+      hearing and seeing many things, fowling, hunting, fishing, riding,
+      gaming and trafficking; each of which means hath, altogether or in
+      part, power to draw the mind unto itself and to divert it from
+      troublous thought, at least for some space of time, whereafter, one
+      way or another, either solacement superveneth or else the annoy
+      groweth less
+- nn: 2
+  note_id: dec-day-01
+  note_title: DEC 02 — Day the First
+  span: 37178:186551
+  chunks:
+  - id: decameron#u02-c1
+    label: c1
+    seq: 10
+    heading: 1348 Florence plague opens — swellings and dissolution of law
+    char_start: 39140
+    char_end: 46344
+    n_tokens: 1801
+    suggested_by: agent
+    text: |-
+      I say, then, that the years [of the era] of the fruitful Incarnation
+      of the Son of God had attained to the number of one thousand three
+      hundred and forty-eight, when into the notable city of Florence, fair
+      over every other of Italy, there came the death-dealing pestilence,
+      which, through the operation of the heavenly bodies or of our own
+      iniquitous dealings, being sent down upon mankind for our correction
+      by the just wrath of God, had some years before appeared in the parts
+      of the East and after having bereft these latter of an innumerable
+      number of inhabitants, extending without cease from one place to
+      another, had now unhappily spread towards the West. And thereagainst
+      no wisdom availing nor human foresight (whereby the city was purged of
+      many impurities by officers deputed to that end and it was forbidden
+      unto any sick person to enter therein and many were the counsels
+      given[4] for the preservation of health) nor yet humble
+      supplications, not once but many times both in ordered processions and
+      on other wise made unto God by devout persons,--about the coming in of
+      the Spring of the aforesaid year, it began on horrible and miraculous
+      wise to show forth its dolorous effects. Yet not as it had done in the
+      East, where, if any bled at the nose, it was a manifest sign of
+      inevitable death; nay, but in men and women alike there appeared, at
+      the beginning of the malady, certain swellings, either on the groin or
+      under the armpits, whereof some waxed of the bigness of a common
+      apple, others like unto an egg, some more and some less, and these the
+      vulgar named plague-boils. From these two parts the aforesaid
+      death-bearing plague-boils proceeded, in brief space, to appear and
+      come indifferently in every part of the body; wherefrom, after awhile,
+      the fashion of the contagion began to change into black or livid
+      blotches, which showed themselves in many [first] on the arms and
+      about the thighs and [after spread to] every other part of the person,
+      in some large and sparse and in others small and thick-sown; and like
+      as the plague-boils had been first (and yet were) a very certain token
+      of coming death, even so were these for every one to whom they came.
+
+      [Footnote 4: Syn. provisions made or means taken (_consigli dati_).
+      Boccaccio constantly uses _consiglio_ in this latter sense.]
+
+      To the cure of these maladies nor counsel[5] of physician nor virtue
+      of any medicine appeared to avail or profit aught; on the
+      contrary,--whether it was that the nature of the infection suffered it
+      not or that the ignorance of the physicians (of whom, over and above
+      the men of art, the number, both men and women, who had never had any
+      teaching of medicine, was become exceeding great,) availed not to know
+      whence it arose and consequently took not due measures thereagainst,--not
+      only did few recover thereof, but well nigh all died within the third
+      day from the appearance of the aforesaid signs, this sooner and that
+      later, and for the most part without fever or other accident.[6] And
+      this pestilence was the more virulent for that, by communication with
+      those who were sick thereof, it gat hold upon the sound, no otherwise
+      than fire upon things dry or greasy, whenas they are brought very near
+      thereunto. Nay, the mischief was yet greater; for that not only did
+      converse and consortion with the sick give to the sound infection of
+      cause of common death, but the mere touching of the clothes or of
+      whatsoever other thing had been touched or used of the sick appeared
+      of itself to communicate the malady to the toucher. A marvellous thing
+      to hear is that which I have to tell and one which, had it not been
+      seen of many men's eyes and of mine own, I had scarce dared credit,
+      much less set down in writing, though I had heard it from one worthy
+      of belief. I say, then, that of such efficience was the nature of the
+      pestilence in question in communicating itself from one to another,
+      that, not only did it pass from man to man, but this, which is much
+      more, it many times visibly did;--to wit, a thing which had pertained
+      to a man sick or dead of the aforesaid sickness, being touched by an
+      animal foreign to the human species, not only infected this latter
+      with the plague, but in a very brief space of time killed it. Of this
+      mine own eyes (as hath a little before been said) had one day, among
+      others, experience on this wise; to wit, that the rags of a poor man,
+      who had died of the plague, being cast out into the public way, two
+      hogs came up to them and having first, after their wont, rooted amain
+      among them with their snouts, took them in their mouths and tossed
+      them about their jaws; then, in a little while, after turning round
+      and round, they both, as if they had taken poison, fell down dead upon
+      the rags with which they had in an ill hour intermeddled.
+
+      [Footnote 5: Syn. help, remedy.]
+
+      [Footnote 6: _Accidente_, what a modern physician would call
+      "complication." "Symptom" does not express the whole meaning of the
+      Italian word.]
+
+      From these things and many others like unto them or yet stranger
+      divers fears and conceits were begotten in those who abode alive,
+      which well nigh all tended to a very barbarous conclusion, namely, to
+      shun and flee from the sick and all that pertained to them, and thus
+      doing, each thought to secure immunity for himself. Some there were
+      who conceived that to live moderately and keep oneself from all excess
+      was the best defence against such a danger; wherefore, making up their
+      company, they lived removed from every other and shut themselves up in
+      those houses where none had been sick and where living was best; and
+      there, using very temperately of the most delicate viands and the
+      finest wines and eschewing all incontinence, they abode with music and
+      such other diversions as they might have, never suffering themselves
+      to speak with any nor choosing to hear any news from without of death
+      or sick folk. Others, inclining to the contrary opinion, maintained
+      that to carouse and make merry and go about singing and frolicking and
+      satisfy the appetite in everything possible and laugh and scoff at
+      whatsoever befell was a very certain remedy for such an ill. That
+      which they said they put in practice as best they might, going about
+      day and night, now to this tavern, now to that, drinking without stint
+      or measure; and on this wise they did yet more freely in other folk's
+      houses, so but they scented there aught that liked or tempted them, as
+      they might lightly do, for that every one--as he were to live no
+      longer--had abandoned all care of his possessions, as of himself,
+      wherefore the most part of the houses were become common good and
+      strangers used them, whenas they happened upon them, like as the very
+      owner might have done; and with all this bestial preoccupation, they
+      still shunned the sick to the best of their power.
+
+      In this sore affliction and misery of our city, the reverend authority
+      of the laws, both human and divine, was all in a manner dissolved and
+      fallen into decay, for [lack of] the ministers and executors thereof,
+      who, like other men, were all either dead or sick or else left so
+      destitute of followers that they were unable to exercise any office,
+      wherefore every one had license to do whatsoever pleased him.
+  - id: decameron#u02-c2
+    label: c2
+    seq: 12
+    heading: Abandonment of the sick — kinship bonds severed
+    char_start: 48159
+    char_end: 49336
+    n_tokens: 294
+    suggested_by: agent
+    text: |-
+      Indeed, leaving be that townsman avoided townsman and that well nigh
+      no neighbour took thought unto other and that kinsfolk seldom or never
+      visited one another and held no converse together save from afar, this
+      tribulation had stricken such terror to the hearts of all, men and
+      women alike, that brother forsook brother, uncle nephew and sister
+      brother and oftentimes wife husband; nay (what is yet more
+      extraordinary and well nigh incredible) fathers and mothers refused to
+      visit or tend their very children, as they had not been theirs. By
+      reason whereof there remained unto those (and the number of them, both
+      males and females, was incalculable) who fell sick, none other succour
+      than that which they owed either to the charity of friends (and of
+      these there were few) or the greed of servants, who tended them,
+      allured by high and extravagant wage; albeit, for all this, these
+      latter were not grown many, and those men and women of mean
+      understanding and for the most part unused to such offices, who served
+      for well nigh nought but to reach things called for by the sick or to
+      note when they died; and in the doing of these services many of them
+      perished with their gain.
+  - id: decameron#u02-c3
+    label: c3
+    seq: 22
+    heading: Pampinea's speech — the case for withdrawal to the country
+    char_start: 63079
+    char_end: 69830
+    n_tokens: 1687
+    suggested_by: agent
+    text: |-
+      "Dear my ladies, you may, like myself, have many times heard that
+      whoso honestly useth his right doth no one wrong; and it is the
+      natural right of every one who is born here below to succour, keep and
+      defend his own life as best he may, and in so far is this allowed that
+      it hath happened whiles that, for the preservation thereof, men have
+      been slain without any fault. If this much be conceded of the laws,
+      which have in view the well-being of all mortals, how much more is it
+      lawful for us and whatsoever other, without offence unto any, to take
+      such means as we may for the preservation of our lives? As often as I
+      consider our fashions of this morning and those of many other mornings
+      past and bethink me what and what manner discourses are ours, I feel,
+      and you likewise must feel, that each of us is in fear for herself.
+      Nor do I anywise wonder at this; but I wonder exceedingly, considering
+      that we all have a woman's wit, that we take no steps to provide
+      ourselves against that which each of us justly feareth. We abide here,
+      to my seeming, no otherwise than as if we would or should be witness
+      of how many dead bodies are brought hither for burial or to hearken if
+      the friars of the place, whose number is come well nigh to nought,
+      chant their offices at the due hours or by our apparel to show forth
+      unto whosoever appeareth here the nature and extent of our distresses.
+      If we depart hence, we either see dead bodies or sick persons carried
+      about or those, whom for their misdeeds the authority of the public
+      laws whilere condemned to exile, overrun the whole place with unseemly
+      excesses, as if scoffing at the laws, for that they know the executors
+      thereof to be either dead or sick; whilst the dregs of our city,
+      fattened with our blood, style themselves _pickmen_ and ruffle it
+      everywhere in mockery of us, riding and running all about and flouting
+      us with our distresses in ribald songs. We hear nothing here but 'Such
+      an one is dead' or 'Such an one is at the point of death'; and were
+      there any to make them, we should hear dolorous lamentations on all
+      sides. And if we return to our houses, I know not if it is with you as
+      with me, but, for my part, when I find none left therein of a great
+      household, save my serving-maid, I wax fearful and feel every hair of
+      my body stand on end; and wherever I go or abide about the house,
+      meseemeth I see the shades of those who are departed and who wear not
+      those countenances that I was used to see, but terrify me with a
+      horrid aspect, I know not whence newly come to them.
+
+      By reason of these things I feel myself alike ill at ease here and
+      abroad and at home, more by token that meseemeth none, who hath, as we
+      have, the power and whither to go, is left here, other than ourselves;
+      or if any such there be, I have many a time both heard and perceived
+      that, without making any distinction between things lawful and
+      unlawful, so but appetite move them, whether alone or in company, both
+      day and night, they do that which affordeth them most delight. Nor is
+      it the laity alone who do thus; nay, even those who are shut in the
+      monasteries, persuading themselves that what befitteth and is lawful
+      to others alike sortable and unforbidden unto them,[17] have broken
+      the laws of obedience and giving themselves to carnal delights,
+      thinking thus to escape, are grown lewd and dissolute. If thus, then,
+      it be, as is manifestly to be seen, what do we here? What look we for?
+      What dream we? Why are we more sluggish and slower to provide for our
+      safety than all the rest of the townsfolk? Deem we ourselves of less
+      price than others, or do we hold our life to be bounden in our bodies
+      with a stronger chain than is theirs and that therefore we need reck
+      nothing of aught that hath power to harm it? We err, we are deceived;
+      what folly is ours, if we think thus! As often as we choose to call to
+      mind the number and quality of the youths and ladies overborne of this
+      cruel pestilence, we may see a most manifest proof thereof.
+
+      [Footnote 17: This phrase may also be read "persuading themselves that
+      that (_i.e._ their breach of the laws of obedience, etc.) beseemeth
+      them and is forbidden only to others" (_faccendosi a credere che
+      quello a lor si convenga e non si disdica che all' altre_); but the
+      reading in the text appears more in harmony with the general sense and
+      is indeed indicated by the punctuation of the Giunta Edition of 1527,
+      which I generally follow in case of doubt.]
+
+      Wherefore, in order that we may not, through wilfulness or
+      nonchalance, fall into that wherefrom we may, peradventure, an we but
+      will, by some means or other escape, I know not if it seem to you as
+      it doth to me, but methinketh it were excellently well done that we,
+      such as we are, depart this city, as many have done before us, and
+      eschewing, as we would death, the dishonourable example of others,
+      betake ourselves quietly to our places in the country, whereof each of
+      us hath great plenty, and there take such diversion, such delight and
+      such pleasance as we may, without anywise overpassing the bounds of
+      reason. There may we hear the small birds sing, there may we see the
+      hills and plains clad all in green and the fields full of corn wave
+      even as doth the sea; there may we see trees, a thousand sorts, and
+      there is the face of heaven more open to view, the which, angered
+      against us though it be, nevertheless denieth not unto us its eternal
+      beauties, far goodlier to look upon than the empty walls of our city.
+      Moreover, there is the air far fresher[18] and there at this season is
+      more plenty of that which behoveth unto life and less is the sum of
+      annoys, for that, albeit the husbandmen die there, even as do the
+      townsfolk here, the displeasance is there the less, insomuch as houses
+      and inhabitants are rarer than in the city.
+
+      [Footnote 18: Syn. cooler.]
+
+      Here, on the other hand, if I deem aright, we abandon no one; nay, we
+      may far rather say with truth that we ourselves are abandoned, seeing
+      that our kinsfolk, either dying or fleeing from death, have left us
+      alone in this great tribulation, as it were we pertained not unto
+      them. No blame can therefore befall the ensuing of this counsel; nay,
+      dolour and chagrin and belike death may betide us, an we ensue it not.
+      Wherefore, an it please you, methinketh we should do well to take our
+      maids and letting follow after us with the necessary gear, sojourn
+      to-day in this place and to-morrow in that, taking such pleasance and
+      diversion as the season may afford, and on this wise abide till such
+      time (an we be not earlier overtaken of death) as we shall see what
+      issue Heaven reserveth unto these things. And I would remind you that
+      it is no more forbidden unto us honourably to depart than it is unto
+      many others of our sex to abide in dishonour."
+  - id: decameron#u02-c4
+    label: c4
+    seq: 58
+    heading: Melchizedek's three-rings parable to Saladin
+    char_start: 128761
+    char_end: 130613
+    n_tokens: 463
+    suggested_by: agent
+    text: |-
+      An I mistake not, I mind me to have many a time heard tell that there
+      was once a great man and a rich, who among other very precious jewels
+      in his treasury, had a very goodly and costly ring, whereunto being
+      minded, for its worth and beauty, to do honour and wishing to leave it
+      in perpetuity to his descendants, he declared that whichsoever of his
+      sons should, at his death, be found in possession thereof, by his
+      bequest unto him, should be recognized as his heir and be held of all
+      the others in honour and reverence as chief and head. He to whom the
+      ring was left by him held a like course with his own descendants and
+      did even as his father had done. In brief the ring passed from hand to
+      hand, through many generations, and came at last into the possession
+      of a man who had three goodly and virtuous sons, all very obedient to
+      their father wherefore he loved them all three alike. The young men,
+      knowing the usance of the ring, each for himself, desiring to be the
+      most honoured among his folk, as best he might, besought his father,
+      who was now an old man, to leave him the ring, whenas he came to die.
+      The worthy man, who loved them all alike and knew not himself how to
+      choose to which he had liefer leave the ring, bethought himself,
+      having promised it to each, to seek to satisfy all three and privily
+      let make by a good craftsman other two rings, which were so like unto
+      the first that he himself scarce knew which was the true. When he came
+      to die, he secretly gave each one of his sons his ring, wherefore each
+      of them, seeking after their father's death, to occupy the inheritance
+      and the honour and denying it to the others, produced his ring, in
+      witness of his right, and the three rings being found so like unto one
+      another that the true might not be known, the question which was the
+      father's very heir abode pending and yet pendeth.
+- nn: 3
+  note_id: dec-day-02
+  note_title: DEC 03 — Day the Second
+  span: 186551:437614
+  chunks:
+  - id: decameron#u03-c1
+    label: c1
+    seq: 110
+    heading: Pampinea on Fortune's hidden ordinance
+    char_start: 214031
+    char_end: 214252
+    n_tokens: 55
+    suggested_by: agent
+    text: |-
+      all the things, which we foolishly style ours, are in her hands and
+      are consequently, according to her hidden ordinance, transmuted by her
+      without cease from one to another and back again, without any method
+      known unto us
+  - id: decameron#u03-c2
+    label: c2
+    seq: 190
+    heading: Alatiel's closing epigram on chastity and renewal
+    char_start: 350578
+    char_end: 350859
+    n_tokens: 70
+    suggested_by: agent
+    text: |-
+      she, who had lain with eight
+      men belike ten thousand times, was put to bed to him for a maid and
+      making him believe that she was so, lived happily with him as his
+      queen awhile after; wherefore it was said, 'Lips for kissing forfeit
+      no favour; nay, they renew as the moon doth ever.
+  - id: decameron#u03-c3
+    label: c3
+    seq: 224
+    heading: Ginevra reveals herself before the Soldan
+    char_start: 411261
+    char_end: 411710
+    n_tokens: 112
+    suggested_by: agent
+    text: |-
+      the latter threw himself, weeping, on his knees before him and putting
+      off, as it were at one and the same time, his manly voice and
+      masculine demeanour, said, 'My lord, I am the wretched misfortunate
+      Ginevra, who have these six years gone wandering in man's disguise
+      about the world, having been foully and wickedly aspersed by this
+      traitor Ambrogiuolo and given by yonder cruel and unjust man to one
+      of his servants to be slain and eaten of wolves
+  - id: decameron#u03-c4
+    label: c4
+    seq: 235
+    heading: Bartolomea refuses to return — the saints' days speech
+    char_start: 429772
+    char_end: 429944
+    n_tokens: 43
+    suggested_by: agent
+    text: |-
+      here be neither saints'
+      days nor vigils; wherefore here I mean to abide; so get you gone in
+      God's name as quickliest you may, or I will cry out that you would
+      fain force me
+- nn: 4
+  note_id: dec-day-03
+  note_title: DEC 04 — Day the Third
+  span: 437614:638264
+  chunks:
+  - id: decameron#u04-c1
+    label: c1
+    seq: 250
+    heading: Masetto's garden-paradise plan
+    char_start: 449083
+    char_end: 451121
+    n_tokens: 509
+    suggested_by: agent
+    text: |-
+      Having fixed upon this device, he set out
+      with an axe he had about his neck, without telling any whither he was
+      bound, and betook himself, in the guise of a beggarman, to the
+      convent, where being come, he entered in and as luck would have it,
+      found the bailiff in the courtyard. Him he accosted with signs such as
+      dumb folk use and made a show of asking food of him for the love of
+      God and that in return he would, an it were needed, cleave wood for
+      him. The bailiff willingly gave him to eat and after set before him
+      divers logs that Nuto had not availed to cleave, but of all which
+      Masetto, who was very strong, made a speedy despatch. By and by, the
+      bailiff, having occasion to go to the coppice, carried him thither and
+      put him to cutting faggots; after which, setting the ass before him,
+      he gave him to understand by signs that he was to bring them home.
+      This he did very well; wherefore the bailiff kept him there some days,
+      so he might have him do certain things for which he had occasion. One
+      day it chanced that the abbess saw him and asked the bailiff who he
+      was. 'Madam,' answered he, 'this is a poor deaf and dumb man, who came
+      hither the other day to ask an alms; so I took him in out of charity
+      and have made him do sundry things of which we had need. If he knew
+      how to till the hortyard and chose to abide with us, I believe we
+      should get good service of him; for that we lack such an one and he is
+      strong and we could make what we would of him; more by token that you
+      would have no occasion to fear his playing the fool with yonder lasses
+      of yours.' 'I' faith,' rejoined the abbess, 'thou sayst sooth. Learn
+      if he knoweth how to till and study to keep him here; give him a pair
+      of shoes and some old hood or other and make much of him, caress him,
+      give him plenty to eat.' Which the bailiff promised to do. Masetto was
+      not so far distant but he heard all this, making a show the while of
+      sweeping the courtyard, and said merrily in himself, 'An you put me
+      therein, I will till you your hortyard as it was never tilled yet.
+  - id: decameron#u04-c2
+    label: c2
+    seq: 260
+    heading: King Agilulf polls the horsekeeper
+    char_start: 468330
+    char_end: 468591
+    n_tokens: 65
+    suggested_by: agent
+    text: |-
+      he did nought to him but poll, with a pair of
+      scissors he had brought with him, somewhat on one side of his hair,
+      which they then wore very long, so by that token he might know him
+      again on the morrow; and this done, he withdrew and returned to his
+      own chamber.
+  - id: decameron#u04-c3
+    label: c3
+    seq: 302
+    heading: Tedaldo's anti-clerical sermon
+    char_start: 547375
+    char_end: 548237
+    n_tokens: 215
+    suggested_by: agent
+    text: |-
+      Friars of old were very pious and worthy men, but those who nowadays
+      style themselves friars and would be held such have nothing of the
+      monk but the gown; nor is this latter even that of a true friar, for
+      that,--whereas of the founders of the monastic orders they[177] were
+      ordained strait and poor and of coarse stuff and demonstrative[178] of
+      the spirit of the wearers, who testified that they held things
+      temporal in contempt whenas they wrapped their bodies in so mean a
+      habit,--those of our time have them made full and double and glossy
+      and of the finest cloth and have brought them to a quaint pontifical
+      cut, insomuch that they think it no shame to flaunt it withal
+      peacock-wise, in the churches and public places, even as do the laity
+      with their apparel; and like as with the sweep-net the fisher goeth
+      about to take many fishes in the river at one cast
+- nn: 5
+  note_id: dec-day-04
+  note_title: DEC 05 — Day the Fourth
+  span: 638264:808367
+  chunks:
+  - id: decameron#u05-c1
+    label: c1
+    seq: 374
+    heading: Ghismonda's defence — nobility of worth
+    char_start: 667882
+    char_end: 668376
+    n_tokens: 123
+    suggested_by: agent
+    text: |-
+      Worth it was that first
+      distinguished between us, who were all and still are born equal;
+      wherefore those who had and used the greatest sum thereof were called
+      noble and the rest abode not noble. And albeit contrary usance hath
+      since obscured this primary law, yet is it nowise done away nor
+      blotted out from nature and good manners; wherefore he who doth
+      worthily manifestly showeth himself a gentleman, and if any call him
+      otherwise, not he who is called, but he who calleth committeth
+      default
+  - id: decameron#u05-c2
+    label: c2
+    seq: 378
+    heading: Ghismonda's last words over the heart
+    char_start: 672205
+    char_end: 673474
+    n_tokens: 317
+    suggested_by: agent
+    text: |-
+      Alack, sweetest harbourage of all my
+      pleasures, accursed be his cruelty who maketh me now to see thee with
+      the eyes of the body! Enough was it for me at all hours to behold thee
+      with those of the mind. Thou hast finished thy course and hast
+      acquitted thyself on such wise as was vouchsafed thee of fortune; thou
+      art come to the end whereunto each runneth; thou hast left the toils
+      and miseries of the world, and of thy very enemy thou hast that
+      sepulchre which thy worth hath merited. There lacked nought to thee to
+      make thy funeral rites complete save her tears whom in life thou so
+      lovedst, the which that thou mightest have, God put it into the heart
+      of my unnatural father to send thee to me and I will give them to
+      thee, albeit I had purposed to die with dry eyes and visage undismayed
+      of aught; and having given them to thee, I will without delay so do
+      that my soul, thou working it,[221] shall rejoin that soul which thou
+      erst so dearly guardedst. And in what company could I betake me more
+      contentedly or with better assurance to the regions unknown than with
+      it?[222] Certain am I that it abideth yet herewithin[223] and vieweth
+      the seats of its delights and mine and as that which I am assured
+      still loveth me, awaiteth my soul, whereof it is over all beloved
+  - id: decameron#u05-c3
+    label: c3
+    seq: 416
+    heading: Lisabetta's pot of basil — the tending
+    char_start: 732416
+    char_end: 733229
+    n_tokens: 203
+    suggested_by: agent
+    text: |-
+      taking a great and goodly pot, of
+      those wherein they plant marjoram or sweet basil, she set the head
+      therein, folded in a fair linen cloth, and covered it with earth, in
+      which she planted sundry heads of right fair basil of Salerno; nor did
+      she ever water these with other water than that of her tears or rose
+      or orange-flower water. Moreover she took wont to sit still near the
+      pot and to gaze amorously upon it with all her desire, as upon that
+      which held her Lorenzo hid; and after she had a great while looked
+      thereon, she would bend over it and fall to weeping so sore and so
+      long that her tears bathed all the basil, which, by dint of long and
+      assiduous tending, as well as by reason of the fatness of the earth,
+      proceeding from the rotting head that was therein, waxed passing fair
+      and very sweet of savour
+  - id: decameron#u05-c4
+    label: c4
+    seq: 447
+    heading: The eaten heart — the lady's defiance
+    char_start: 781164
+    char_end: 781454
+    n_tokens: 72
+    suggested_by: agent
+    text: |-
+      God forfend that ever other victual should follow upon such noble meat
+      the heart of so valiant and so courteous a gentleman as was Sir
+      Guillaume de Guardestaing!' Then, rising to her feet, without any
+      manner of hesitation, she let herself fall backward through a window
+      which was behind her
+- nn: 6
+  note_id: dec-day-05
+  note_title: DEC 06 — Day the Fifth
+  span: 808367:968629
+  chunks:
+  - id: decameron#u06-c1
+    label: c1
+    seq: 469
+    heading: Love transforms Cimon from brute to man
+    char_start: 816207
+    char_end: 817432
+    n_tokens: 306
+    suggested_by: agent
+    text: |-
+      Love's arrow having, then, through Iphigenia's beauty,
+      penetrated into Cimon's heart, whereinto no teaching had ever availed
+      to win an entrance, in a very brief time, proceeding from one idea to
+      another, he made his father marvel and all his kinsfolk and every
+      other that knew him. In the first place he besought his father that he
+      would cause him go bedecked with clothes and every other thing, even
+      as his brothers, the which Aristippus right gladly did. Then,
+      consorting with young men of condition and learning the fashions and
+      carriage that behoved unto gentlemen and especially unto lovers, he
+      first, to the utmost wonderment of every one, in a very brief space of
+      time, not only learned the first [elements of] letters, but became
+      very eminent among the students of philosophy, and after (the love
+      which he bore Iphigenia being the cause of all this) he not only
+      reduced his rude and rustical manner of speech to seemliness and
+      civility, but became a past master of song and sound[264] and
+      exceeding expert and doughty in riding and martial exercises, both by
+      land and by sea. In short, not to go recounting every particular of
+      his merits, the fourth year was not accomplished from the day of his
+      first falling in love
+  - id: decameron#u06-c2
+    label: c2
+    seq: 471
+    heading: Love as mightier than fortune — Pamfilo's eulogy
+    char_start: 817692
+    char_end: 818243
+    n_tokens: 137
+    suggested_by: agent
+    text: |-
+      the lofty virtues implanted by heaven in his generous soul had
+      been bounden with exceeding strong bonds of jealous fortune and shut
+      in some straitest corner of his heart, all which bonds Love, as a
+      mightier than fortune, broke and burst in sunder and in its quality of
+      awakener and quickener of drowsed and sluggish wits, urged forth into
+      broad daylight the virtues aforesaid, which had till then been
+      overdarkened with a barbarous obscurity, thus manifestly discovering
+      from how mean a room it can avail to uplift those souls that are
+      subject unto it
+  - id: decameron#u06-c3
+    label: c3
+    seq: 523
+    heading: Ruggieri rebukes King Frederick — clemency over passion
+    char_start: 899588
+    char_end: 900550
+    n_tokens: 240
+    suggested_by: agent
+    text: |-
+      like as defaults merit punishment, even so do good
+      offices merit recompense, let alone grace and clemency. Knowest thou
+      who these are thou wouldst have burnt?' The king answered no, and
+      Ruggieri continued, 'Then I will have thee know them, so thou mayst
+      see how discreetly[280] thou sufferest thyself to be carried away by
+      the transports of passion. The young man is the son of Landolfo di
+      Procida, own brother to Messer Gian di Procida,[281] by whose means
+      thou art king and lord of this island, and the damsel is the daughter
+      of Marino Bolgaro, to whose influence thou owest it that thine
+      officers have not been driven forth of Ischia. Moreover, they are
+      lovers who have long loved one another and constrained of love, rather
+      than of will to do despite to thine authority, have done this sin, if
+      that can be called sin which young folk do for love. Wherefore, then,
+      wilt thou put them to death, whenas thou shouldst rather honour them
+      with the greatest favours
+  - id: decameron#u06-c4
+    label: c4
+    seq: 548
+    heading: 'Federigo''s confession: the falcon already served'
+    char_start: 940753
+    char_end: 942021
+    n_tokens: 317
+    suggested_by: agent
+    text: |-
+      Madam, since it pleased
+      God that I should set my love on you, I have in many things reputed
+      fortune contrary to me and have complained of her; but all the ill
+      turns she hath done me have been a light matter in comparison with
+      that which she doth me at this present and for which I can never more
+      be reconciled to her, considering that you are come hither to my poor
+      house, whereas you deigned not to come what while I was rich, and seek
+      of me a little boon, the which she hath so wrought that I cannot grant
+      you; and why this cannot be I will tell you briefly. When I heard that
+      you, of your favour, were minded to dine with me, I deemed it a light
+      thing and a seemly, having regard to your worth and the nobility of
+      your station, to honour you, as far as in me lay, with some choicer
+      victual than that which is commonly set before other folk; wherefore,
+      remembering me of the falcon which you ask of me and of his
+      excellence, I judged him a dish worthy of you. This very morning,
+      then, you have had him roasted upon the trencher, and indeed I had
+      accounted him excellently well bestowed; but now, seeing that you
+      would fain have had him on other wise, it is so great a grief to me
+      that I cannot oblige you therein that methinketh I shall never forgive
+      myself therefor
+  - id: decameron#u06-c5
+    label: c5
+    seq: 550
+    heading: Giovanna chooses worth over wealth
+    char_start: 943550
+    char_end: 943786
+    n_tokens: 59
+    suggested_by: agent
+    text: |-
+      I
+      would liefer have a man that lacketh of riches than riches that lack
+      of a man.' Her brethren, hearing her mind and knowing Federigo for a
+      man of great merit, poor though he was, gave her, with all her wealth,
+      to him, even as she would
+- nn: 7
+  note_id: dec-day-06
+  note_title: DEC 07 — Day the Sixth
+  span: 968629:1051951
+  chunks:
+  - id: decameron#u07-c1
+    label: c1
+    seq: 570
+    heading: Licisca's verdict on bridal innocence
+    char_start: 971160
+    char_end: 972322
+    n_tokens: 290
+    suggested_by: agent
+    text: |-
+      Mark this brute of a man who dareth to speak before me,
+      whereas I am! Let me speak." Then, turning again to the queen,
+      "Madam," quoth she, "this fellow would teach me, forsooth, to know
+      Sicofante's wife and neither more nor less than as if I had not been
+      familiar with her, would fain give me to believe that, the first night
+      her husband lay with her, Squire Maul[295] made his entry into Black
+      Hill[296] by force and with effusion of blood; and I say that it is
+      not true; nay, he entered there in peace and to the great contentment
+      of those within. Marry, this fellow is simple enough to believe
+      wenches to be such ninnies that they stand to lose their time, abiding
+      the commodity of their fathers and brothers, who six times out of
+      seven tarry three or four years more than they should to marry them.
+      Well would they fare, forsooth, were they to wait so long! By Christ
+      His faith (and I should know what I say, when I swear thus) I have not
+      a single gossip who went a maid to her husband; and as for the wives,
+      I know full well how many and what tricks they play their husbands;
+      and this blockhead would teach me to know women, as if I had been born
+      yesterday.
+  - id: decameron#u07-c2
+    label: c2
+    seq: 597
+    heading: Guido Cavalcanti's tomb retort
+    char_start: 1016761
+    char_end: 1018003
+    n_tokens: 310
+    suggested_by: agent
+    text: |-
+      Gentlemen, you may say what you will to me in your own house'; then,
+      laying his hand on one of the great tombs aforesaid and being very
+      nimble of body, he took a spring and alighting on the other side, made
+      off, having thus rid himself of them.
+
+      The gentlemen abode looking one upon another and fell a-saying that he
+      was a crack-brain and that this that he had answered them amounted to
+      nought seeing that there where they were they had no more to do than
+      all the other citizens, nor Guido himself less than any of themselves.
+      But Messer Betto turned to them and said, 'It is you who are the
+      crackbrains, if you have not apprehended him. He hath courteously and
+      in a few words given us the sharpest rebuke in the world; for that, an
+      you consider aright, these tombs are the houses of the dead, seeing
+      they are laid and abide therein, and these, saith he, are our house,
+      meaning thus to show us that we and other foolish and unlettered men
+      are, compared with him and other men of learning, worse than dead
+      folk; wherefore, being here, we are in our own house.' Thereupon each
+      understood what Guido had meant to say and was abashed nor ever
+      plagued him more, but held Messer Betto thenceforward a gentleman of a
+      subtle wit and an understanding.
+- nn: 8
+  note_id: dec-day-07
+  note_title: DEC 08 — Day the Seventh
+  span: 1051951:1187152
+  chunks:
+  - id: decameron#u08-c1
+    label: c1
+    seq: 626
+    heading: Tessa's phantom conjuration — coded message as exorcism ritual
+    char_start: 1061944
+    char_end: 1062319
+    n_tokens: 93
+    suggested_by: agent
+    text: |-
+      Phantom, phantom that goest by night, with tail upright[341] thou
+      cam'st to us; now get thee gone with tail upright. Begone into the
+      garden to the foot of the great peach tree; there shalt thou find an
+      anointed twice-anointed one[342] and an hundred turds of my sitting
+      hen;[343] set thy mouth to the flagon and get thee gone again and do
+      thou no hurt to my Gianni nor to me.
+  - id: decameron#u08-c2
+    label: c2
+    seq: 632
+    heading: Peronella and the vat — improvised commerce as cover
+    char_start: 1070638
+    char_end: 1071053
+    n_tokens: 103
+    suggested_by: agent
+    text: |-
+      Quoth Peronella, 'So much the more cause have I to complain;
+      thou, who art a man and goest about and should be versed in the things
+      of the world, thou hast sold a vat for five florins, whilst I, a poor
+      silly woman who hath scarce ever been without the door, seeing the
+      hindrance it gave us in the house, have sold it for seven to an honest
+      man, who entered it but now, as thou camest back, to see if it were
+      sound!'
+  - id: decameron#u08-c3
+    label: c3
+    seq: 642
+    heading: Love as teacher of stratagems — Lauretta's invocation (Story 4)
+    char_start: 1085917
+    char_end: 1086511
+    n_tokens: 148
+    suggested_by: agent
+    text: |-
+      O Love,
+      how great and how various is thy might! How many thy resources and thy
+      devices! What philosopher, what craftsman[348] could ever have availed
+      or might avail to teach those shifts, those feints, those subterfuges
+      which thou on the spur of the moment suggestest to whoso ensueth in
+      thy traces! Certes, all others' teaching is halting compared with
+      thine, as may very well have been apprehended by the devices which
+      have already been set forth and to which, lovesome ladies, I will add
+      one practised by a woman of a simple wit enough and such as I know
+      none but Love could have taught her.
+  - id: decameron#u08-c4
+    label: c4
+    seq: 657
+    heading: The wife unmasks her jealous confessor-husband (Story 5)
+    char_start: 1109293
+    char_end: 1112038
+    n_tokens: 686
+    suggested_by: agent
+    text: |-
+      It rejoiceth me mightily to see
+      a wise man led by the nose by a woman, even as one leadeth a ram by
+      the horns to the shambles, albeit thou art no longer wise nor hast
+      been since the hour when, unknowing why, thou sufferedst the malignant
+      spirit of jealousy to enter thy breast; and the sillier and more
+      besotted thou art, so much the less is my glory thereof. Deemest thou,
+      husband mine, I am as blind of the eyes of the body as thou of those
+      of the mind? Certes, no; I perceived at first sight who was the priest
+      that confessed me and know that thou wast he; but I had it at heart to
+      give thee that which thou wentest seeking, and in sooth I have done
+      it. Wert thou as wise as thou thinkest to be, thou wouldst not have
+      essayed by this means to learn the secrets of thy good wife, but
+      wouldst, without taking vain suspicion, have recognized that which she
+      confessed to thee to be the very truth, without her having sinned in
+      aught. I told thee that I loved a priest, and wast not thou, whom I am
+      much to blame to love as I do, become a priest? I told thee that no
+      door of my house could abide locked, whenas he had a mind to lie with
+      me; and what door in the house was ever kept against thee, whenas thou
+      wouldst come whereas I might be? I told thee that the priest lay with
+      me every night, and when was it that thou layest not with me? And
+      whenassoever thou sentest thy clerk to me, which was thou knowest, as
+      often as thou layest from me, I sent thee word that the priest had not
+      been with me. What other than a crack-brain like thee, who has
+      suffered thyself to be blinded by thy jealousy, had failed to
+      understand these things? Thou hast abidden in the house, keeping
+      watch anights, and thoughtest to have given me to believe that thou
+      wast gone abroad to sup and sleep. Bethink thee henceforth and become
+      a man again, as thou wast wont to be; and make not thyself a laughing
+      stock to whoso knoweth thy fashions, as do I, and leave this
+      unconscionable watching that thou keepest; for I swear to God that, an
+      the fancy took me to make thee wear the horns, I would engage, haddest
+      thou an hundred eyes, as thou hast but two, to do my pleasure on such
+      wise that thou shouldst not be ware thereof.'
+
+      The jealous wretch, who thought to have very adroitly surprised his
+      wife's secrets, hearing this, avouched himself befooled and without
+      answering otherwhat, held the lady for virtuous and discreet; and
+      whenas it behoved him to be jealous, he altogether divested himself of
+      his jealousy, even as he had put it on, what time he had no need
+      thereof. Wherefore the discreet lady, being in a manner licensed to do
+      her pleasures, thenceforward no longer caused her lover to come to her
+      by the roof, as go the cats, but e'en brought him in at the door
+  - id: decameron#u08-c5
+    label: c5
+    seq: 701
+    heading: Tingoccio's ghost — no account taken of gossips in the afterlife
+    char_start: 1179174
+    char_end: 1180537
+    n_tokens: 340
+    suggested_by: agent
+    text: |-
+      whenas I came yonder,
+      there was one who it seemed knew all my sins by heart and bade me
+      betake myself to a certain place, where I bemoaned my offences in
+      exceeding sore punishment and where I found many companions condemned
+      to the same penance as myself. Being among them and remembering me of
+      that which I had done whilere with my gossip, I looked for a much
+      sorer punishment on account thereof than that which had presently been
+      given me and went all shivering for fear, albeit I was in a great fire
+      and an exceeding hot; which one who was by my side perceiving, he said
+      to me, "What aileth thee more than all the others who are here that
+      thou shiverest, being in the fire?" "Marry," said I, "my friend, I am
+      sore in fear of the sentence I expect for a grievous sin I wrought
+      aforetime." The other asked me what sin this was, and I answered, "It
+      was that I lay with a gossip of mine, and that with such a vengeance
+      that it cost me my life"; whereupon quoth he, making merry over my
+      fear, "Go to, fool; have no fear. Here is no manner of account taken
+      of gossips." Which when I heard, I was altogether reassured.' This
+      said and the day drawing near, 'Meuccio,' quoth he, 'abide with God,
+      for I may no longer be with thee,' and was suddenly gone. Meuccio,
+      hearing that no account was taken of gossips in the world to come,
+      began to make mock of his own simplicity
+- nn: 9
+  note_id: dec-day-08
+  note_title: DEC 09 — Day the Eighth
+  span: 1187152:1386512
+  chunks:
+  - id: decameron#u09-c1
+    label: c1
+    seq: 720
+    heading: Maso plants the heliotrope story — Bengodi and magic stones
+    char_start: 1208776
+    char_end: 1211630
+    n_tokens: 713
+    suggested_by: agent
+    text: |-
+      the most of them were found in Berlinzone, a city of the
+      Basques, in a country called Bengodi,[371] where the vines are tied up
+      with sausages and a goose is to be had for a farthing[372] and a
+      gosling into the bargain, and that there was a mountain all of grated
+      Parmesan cheese, whereon abode folk who did nothing but make maccaroni
+      and ravioli[373] and cook them in capon-broth, after which they threw
+      them down thence and whoso got most thereof had most; and that hard by
+      ran a rivulet of vernage,[374] the best ever was drunk, without a drop
+      of water therein. 'Marry,' cried Calandrino, 'that were a fine
+      country; but tell me, what is done with the capons that they boil for
+      broth?' Quoth Maso, 'The Basques eat them all.' Then said Calandrino,
+      'Wast thou ever there?' 'Was I ever there, quotha!' replied Maso. 'If
+      I have been there once I have been there a thousand times.' 'And how
+      many miles is it distant hence?' asked Calandrino; and Maso, 'How
+      many? a million or more; you might count them all night and not know.'
+      'Then,' said Calandrino, 'it must be farther off than the Abruzzi?'
+      'Ay, indeed,' answered Maso; 'it is a trifle farther.'
+
+      [Footnote 371: _i.e._ Good cheer.]
+
+      [Footnote 372: A play upon the double meaning of _a denajo_, which
+      signifies also "for money."]
+
+      [Footnote 373: A kind of rissole made of eggs, sweet herbs and
+      cheese.]
+
+      [Footnote 374: _Vernaccia_, a kind of rich white wine like Malmsey.]
+
+      Calandrino, like a simpleton as he was, hearing Maso tell all this
+      with an assured air and without laughing, gave such credence thereto
+      as can be given to whatsoever verity is most manifest and so, holding
+      it for truth, said, 'That is overfar for my money; though, were it
+      nearer, I tell thee aright I would go thither with thee once upon a
+      time, if but to see the maccaroni come tumbling headlong down and take
+      my fill thereof. But tell me, God keep thee merry, is there none of
+      those wonder-working stones to be found in these parts?' 'Ay is
+      there,' answered Maso; 'there be two kinds of stones of very great
+      virtue found here; the first are the grits of Settignano and Montisci,
+      by virtue whereof, when they are wrought into millstones, flour is
+      made; wherefore it is said in those parts that grace cometh from God
+      and millstones from Montisci; but there is such great plenty of these
+      grits that they are as little prized with us as emeralds with the folk
+      over yonder, where they have mountains of them bigger than Mount
+      Morello, which shine in the middle of the night, I warrant thee. And
+      thou must know that whoso should cause set fine and perfect
+      millstones, before they are pierced, in rings and carry them to the
+      Soldan might have for them what he would. The other is what we
+      lapidaries call Heliotrope, a stone of exceeding great virtue, for
+      that whoso hath it about him is not seen of any other person whereas
+      he is not
+  - id: decameron#u09-c2
+    label: c2
+    seq: 726
+    heading: Calandrino returns home invisible — and is seen by his wife
+    char_start: 1219416
+    char_end: 1219650
+    n_tokens: 58
+    suggested_by: agent
+    text: |-
+      Calandrino, hearing this and
+      finding that he was seen, was overwhelmed with chagrin and vexation
+      and cried out, 'Alack, wicked woman that thou art, wast thou there?
+      Thou hast undone me; but, by God His faith, I will pay thee therefor!
+  - id: decameron#u09-c3
+    label: c3
+    seq: 769
+    heading: The scholar's speech refusing mercy — power of the pen
+    char_start: 1291309
+    char_end: 1291729
+    n_tokens: 105
+    suggested_by: agent
+    text: |-
+      I
+      swear to God (so may He gladden me to the end of this vengeance that I
+      take of thee, even as He hath made me glad thereof in the beginning!)
+      that I would have written such things of thee, that, being ashamed,
+      not to say before other folk, but before thine own self, thou shouldst
+      have put out thine own eyes, not to see thyself in the glass;
+      wherefore let not the little rivulet twit the sea with having caused
+      it wax.
+  - id: decameron#u09-c4
+    label: c4
+    seq: 791
+    heading: Bruno describes the roving society to Master Simone
+    char_start: 1324767
+    char_end: 1327761
+    n_tokens: 748
+    suggested_by: agent
+    text: |-
+      what time it chanceth that we
+      assemble together, it is a marvellous thing to see the hangings about
+      the saloon where we eat and the tables spread on royal wise and the
+      multitude of noble and goodly servants, as well female as male, at the
+      pleasure of each one who is of the company, and the basons and ewers
+      and flagons and goblets and the vessels of gold and silver, wherein we
+      eat and drink, more by token of the many and various viands that are
+      set before us, each in its season, according to that which each one
+      desireth. I could never avail to set out to you what and how many are
+      the sweet sounds of innumerable instruments and the songs full of
+      melody that are heard there; nor might I tell you how much wax is
+      burned at these suppers nor what and how many are the confections that
+      are consumed there nor how costly are the wines that are drunken. But
+      I would not have you believe, good saltless pumpkinhead mine, that we
+      abide there in this habit and with these clothes that you see us wear
+      every day; nay, there is none of us of so little account but would
+      seem to you an emperor, so richly are we adorned with vestments of
+      price and fine things. But, over all the other pleasures that be there
+      is that of fair ladies, who, so one but will it, are incontinent
+      brought thither from the four quarters of the world. There might you
+      see the Sovereign Lady of the Rascal-Roughs, the Queen of the Basques,
+      the wife of the Soldan, the Empress of the Usbeg Tartars, the
+      Driggledraggletail of Norroway, the Moll-a-green of Flapdoodleland and
+      the Madkate of Woolgathergreen. But why need I enumerate them to you?
+      There be all the queens in the world, even, I may say, to the
+      Sirreverence of Prester John, who hath his horns amiddleward his arse;
+      see you now? There, after we have drunken and eaten confections and
+      walked a dance or two, each lady betaketh herself to her bedchamber
+      with him at whose instance she hath been brought thither. And you must
+      know that these bedchambers are a very paradise to behold, so goodly
+      they are; ay, and they are no less odoriferous than are the
+      spice-boxes of your shop, whenas you let bray cummin-seed, and therein
+      are beds that would seem to you goodlier than that of the Doge of
+      Venice, and in these they betake themselves to rest. Marry, what a
+      working of the treadles, what a hauling-to of the battens to make the
+      cloth close, these weaveresses keep up, I will e'en leave you to
+      imagine; but of those who fare best, to my seeming, are Buffalmacco
+      and myself, for that he most times letteth come thither the Queen of
+      France for himself, whilst I send for her of England, the which are
+      two of the fairest ladies in the world, and we have known so to do
+      that they have none other eye in their head than us.[400] Wherefore
+      you may judge for yourself if we can and should live and go more
+      merrily than other men, seeing we have the love of two such queens,
+      more by token that, whenas we would have a thousand or two thousand
+      florins of them, we get them not.
+- nn: 10
+  note_id: dec-day-09
+  note_title: DEC 10 — Day the Ninth
+  span: 1386512:1492023
+  chunks:
+  - id: decameron#u10-c1
+    label: c1
+    seq: 829
+    heading: Brigata in the plague-emptied coppice
+    char_start: 1387140
+    char_end: 1387544
+    n_tokens: 101
+    suggested_by: agent
+    text: |-
+      they saw the animals, wild goats and
+      deer and others, as if assured of security from the hunters by reason
+      of the prevailing pestilence, stand awaiting them no otherwise than as
+      they were grown without fear or tame, and diverted themselves awhile
+      with them, drawing near, now to this one and now to that, as if they
+      would fain lay hands on them, and making them run and skip. But, the
+      sun now waxing high
+  - id: decameron#u10-c2
+    label: c2
+    seq: 849
+    heading: Calandrino discovers his pregnancy
+    char_start: 1414269
+    char_end: 1414496
+    n_tokens: 56
+    suggested_by: agent
+    text: |-
+      there aileth thee
+      nought but that thou art with child.' When Calandrino heard this, he
+      fell a-roaring for dolour and said, 'Woe's me! Tessa, this is thy
+      doing, for that thou wilt still be uppermost; I told thee how it would
+      be.
+  - id: decameron#u10-c3
+    label: c3
+    seq: 858
+    heading: Fortarrigo's reversal — stripping his master
+    char_start: 1426871
+    char_end: 1427148
+    n_tokens: 69
+    suggested_by: agent
+    text: |-
+      Fortarrigo, with the aid of the countrymen, pulled him off his
+      palfrey and stripping him, clad himself in his clothes; then, mounting
+      to horse, he left him in his shirt and barefoot and returned to Siena,
+      avouching everywhere that he had won the horse and clothes of
+      Angiolieri
+  - id: decameron#u10-c4
+    label: c4
+    seq: 891
+    heading: Solomon's counsel at Goosebridge
+    char_start: 1476011
+    char_end: 1476222
+    n_tokens: 52
+    suggested_by: agent
+    text: |-
+      Marry, I tell
+      thee, comrade, that the counsel given me by Solomon may well prove
+      good and true, for I perceive very plainly that I knew not how to beat
+      my wife; but this muleteer hath shown me what I have to do.
+- nn: 11
+  note_id: dec-day-10
+  note_title: DEC 11 — Day the Tenth
+  span: 1492023:1692283
+  chunks:
+  - id: decameron#u11-c1
+    label: c1
+    seq: 920
+    heading: Nathan offers his life as the supreme generous gift
+    char_start: 1523602
+    char_end: 1524013
+    n_tokens: 102
+    suggested_by: agent
+    text: |-
+      To give an hundred
+      years is no great boon; how much less, then, is it to give the six or
+      eight I have yet to abide here? Take it, then, an it like thee.
+      Prithee, then, take it, an thou have a mind thereto; for that never
+      yet, what while I have lived here, have I found any who hath desired
+      it, nor know I when I may find any such, an thou, who demandest it,
+      take it not. And even should I chance to find any one
+  - id: decameron#u11-c5
+    label: c5
+    seq: 946
+    heading: Count Guy's rebuke of King Charles — self-conquest as magnanimity
+    char_start: 1563914
+    char_end: 1564333
+    n_tokens: 104
+    suggested_by: agent
+    text: |-
+      Certes, Count, I hold every other enemy,
+      however strong, weak and eath enough to the well-lessoned warrior to
+      overcome in comparison with his own appetites; natheless, great as is
+      the travail and inexpressible as is the might it requireth, your words
+      have so stirred me that needs must I, ere many days be past, cause you
+      see by deed that, like as I know how to conquer others, even so do I
+      know how to overcome myself.
+  - id: decameron#u11-c2
+    label: c2
+    seq: 984
+    heading: Fiammetta's eulogy of friendship closing Story 8
+    char_start: 1619805
+    char_end: 1622181
+    n_tokens: 594
+    suggested_by: agent
+    text: |-
+      A most sacred thing, then, is friendship and worthy not only of
+      especial reverence, but to be commended with perpetual praise, as the
+      most discreet mother of magnanimity and honour, the sister of
+      gratitude and charity and the enemy of hatred and avarice, still,
+      without waiting to be entreated, ready virtuously to do unto others
+      that which it would have done to itself. Nowadays its divine effects
+      are very rarely to be seen in any twain, by the fault and to the shame
+      of the wretched cupidity of mankind, which, regarding only its own
+      profit, hath relegated it to perpetual exile, beyond the extremest
+      limits of the earth. What love, what riches, what kinship, what,
+      except friendship, could have made Gisippus feel in his heart the
+      ardour, the tears and the sighs of Titus with such efficacy as to
+      cause him yield up to his friend his betrothed bride, fair and gentle
+      and beloved of him? What laws, what menaces, what fears could have
+      enforced the young arms of Gisippus to abstain, in solitary places and
+      in dark, nay, in his very bed, from the embraces of the fair damsel,
+      she mayhap bytimes inviting him, had friendship not done it? What
+      honours, what rewards, what advancements, what, indeed, but
+      friendship, could have made Gisippus reck not of losing his own
+      kinsfolk and those of Sophronia nor of the unmannerly clamours of the
+      populace nor of scoffs and insults, so that he might pleasure his
+      friend? On the other hand, what, but friendship, could have prompted
+      Titus, whenas he might fairly have feigned not to see, unhesitatingly
+      to compass his own death, that he might deliver Gisippus from the
+      cross to which he had of his own motion procured himself to be
+      condemned? What else could have made Titus, without the least demur,
+      so liberal in sharing his most ample patrimony with Gisippus, whom
+      fortune had bereft of his own? What else could have made him so
+      forward to vouchsafe his sister to his friend, albeit he saw him very
+      poor and reduced to the extreme of misery? Let men, then, covet a
+      multitude of comrades, troops of brethren and children galore and add,
+      by dint of monies, to the number of their servitors, considering not
+      that every one of these, who and whatsoever he may be, is more fearful
+      of every least danger of his own than careful to do away the
+      great[470] from father or brother or master, whereas we see a friend
+      do altogether the contrary.
+  - id: decameron#u11-c3
+    label: c3
+    seq: 997
+    heading: Saladin recognizes Torello and pledges reciprocal honour
+    char_start: 1643389
+    char_end: 1643931
+    n_tokens: 135
+    suggested_by: agent
+    text: |-
+      You are Messer Torello d'Istria and I am one of the
+      three merchants to whom your lady gave these gowns; and now is the
+      time come to certify you what manner merchandise mine is, even as I
+      told you, at my parting from you, might chance to betide.' Messer
+      Torello, hearing this, was at once rejoiced and ashamed; rejoiced to
+      have had such a guest and ashamed for that himseemed he had
+      entertained him but scurvily. Then said Saladin, 'Messer Torello,
+      since God hath sent you hither to me, henceforth consider that not I,
+      but you are master here.
+  - id: decameron#u11-c4
+    label: c4
+    seq: 1017
+    heading: Griselda's dismissal speech — returning the ring
+    char_start: 1677118
+    char_end: 1678016
+    n_tokens: 224
+    suggested_by: agent
+    text: |-
+      My lord, I ever
+      knew my mean estate to be nowise sortable with your nobility, and for
+      that which I have been with you I have still confessed myself indebted
+      to you and to God, nor have I ever made nor held it mine, as given to
+      me, but have still accounted it but as a loan. It pleaseth you to
+      require it again and it must and doth please me to restore it to you.
+      Here is your ring wherewith you espoused me; take it. You bid me carry
+      away with me that dowry which I brought hither, which to do you will
+      need no paymaster and I neither purse nor packhorse, for I have not
+      forgotten that you had me naked, and if you account it seemly that
+      this my body, wherein I have carried children begotten of you, be seen
+      of all, I will begone naked; but I pray you, in requital of my
+      maidenhead, which I brought hither and bear not hence with me, that it
+      please you I may carry away at the least one sole shift
+- nn: 12
+  note_id: dec-conclusion
+  note_title: DEC 12 — Conclusion of the Author
+  span: 1692283:1702710
+  chunks:
+  - id: decameron#u12-c1
+    label: c1
+    seq: 1031
+    heading: Wine, fire, arms — harm tracks the user not the tool
+    char_start: 1695689
+    char_end: 1696408
+    n_tokens: 179
+    suggested_by: agent
+    text: |-
+      such as
+      they are, these stories, like everything else, can both harm and
+      profit, according to the disposition of the listener. Who knoweth not
+      that wine, though, according to Cinciglione and Scolajo[485] and many
+      others, an excellent thing for people in health,[486] is hurtful unto
+      whoso hath the fever? Shall we say, then, because it harmeth the
+      fevered, that it is naught? Who knoweth not that fire is most useful,
+      nay, necessary to mortals? Shall we say, because it burneth houses and
+      villages and cities, that it is naught? Arms on like wise assure the
+      welfare of those who desire to live in peace and yet oftentimes slay
+      men, not of any malice of their own, but of the perversity of those
+      who use them wrongfully.
+  - id: decameron#u12-c2
+    label: c2
+    seq: 1032
+    heading: The sun-mire axiom — text cannot contaminate the well-disposed
+    char_start: 1696409
+    char_end: 1696685
+    n_tokens: 69
+    suggested_by: agent
+    text: |-
+      Corrupt mind never understood word healthily,
+      and even as seemly words profit not depraved minds, so those which are
+      not altogether seemly avail not to contaminate the well-disposed, any
+      more than mire can sully the rays of the sun or earthly foulness the
+      beauties of the sky.
+  - id: decameron#u12-c3
+    label: c3
+    seq: 1034
+    heading: The nettles in the field — imperfection as universal condition
+    char_start: 1698600
+    char_end: 1698750
+    n_tokens: 37
+    suggested_by: agent
+    text: |-
+      No field was ever so well tilled but therein or
+      nettles or thistles or somewhat of briers or other weeds might be
+      found mingled with the better herbs.
+  - id: decameron#u12-c4
+    label: c4
+    seq: 1036
+    heading: Tales branded on their forefront — the rubric as navigator
+    char_start: 1699077
+    char_end: 1699199
+    n_tokens: 30
+    suggested_by: agent
+    text: |-
+      They all, not to lead any one into error,
+      bear branded upon the forefront that which they hold hidden within
+      their bosoms.
