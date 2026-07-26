@@ -1,0 +1,2205 @@
+# Curated chunk sidecar for source `adams-education`
+# (The Education of Henry Adams, Henry Adams; the 1918 Massachusetts Historical
+# Society edition ed. Henry Cabot Lodge, via Project Gutenberg eBook #2044, with the
+# Gutenberg boilerplate trimmed from source.txt before offsets were resolved).
+#
+# license_class: open -> verbatim quote text is RETAINED in this committed copy, per
+# docs/INGEST-LOCAL.md sec.14: for open sources the per-unit sidecars are concatenated
+# as-is, full start_quote/end_quote included. The EDITION was checked, not merely the
+# work: Adams died in 1918 and Lodge's editorial matter is contemporaneous with that
+# edition, so there is no in-copyright modern translation or editorial layer (the
+# Candide/Montaigne trap does not apply). sec.14's redaction rule does not reach an
+# open source, so nothing here is stripped.
+#
+# Spans are character offsets into the extraction pinned by MANIFEST.json
+# sha256 6376849a023c5cbfd854eaf41a6cffd0ac7a9773fcb32c9bba3ec989ad409208
+# (1025511 chars; 1025513 bytes on disk -- offsets are character indices into the
+# UTF-8 text and are valid only against that exact extraction). That pin was RECORDED
+# AT INGEST (artifacts/adams-education/MANIFEST.json, produced 2026-07-16) and was
+# RE-VERIFIED at backfill time: sha256 of source.txt on disk still matches, and the
+# lake's own `sources.sha256` for this source matches it too.
+#
+# BACKFILL NOTE: this file was written on 2026-07-25, after the ingest PR (wm-site #27)
+# had already merged without it -- sec.14 requires a committed sidecar and this source
+# shipped without one. It is reconstructed from the scratch per-unit sidecars
+# (artifacts/adams-education/sidecars/chunks-NN.yaml) using the same resolver
+# lake/chunk.py uses (whitespace-tolerant start_quote..end_quote search inside the
+# unit's plan span). All 216 resolved spans were cross-checked against the lake rows
+# written by that resolver at ingest and match exactly.
+#
+# Quote strings are the reader agents' single-line transcriptions, so where the
+# extraction hard-wraps a sentence the quote joins the lines with a space: 183 of the
+# 432 quote strings below are byte-for-byte substrings of source.txt, and the remaining
+# 249 match only after newline-to-space folding (the whitespace-tolerant search
+# lake/chunk.py's `_ws_pattern` performs). None failed to match. Same behaviour, and
+# same caveat, as the dante-divine-comedy sidecar.
+#
+# CURATED ONLY: the 216 chunks below are the curator-selected (`suggested_by=agent`)
+# subset. The lake holds 814 chunks for this source; the other 598 are mechanically
+# derived `#uNN-fKKK` fallback chunks (blank-line blocks filling the gaps between
+# curated spans) that carry no curatorial judgement and are regenerable from
+# plan.json + source.txt. This matches the dante-divine-comedy (124 of 487) and
+# appleby-relentless-revolution (125 of 675) precedents.
+# Chunk ids match each reading note's `cites:` field.
+source: adams-education
+units:
+- nn: 1
+  unit_id: editors-preface
+  note_id: adams-education-editors-preface
+  span: 2228:6165
+  chunks:
+  - id: adams-education#u01-c1
+    label: c1
+    heading: 'The two-book scheme: measuring "man as a force"'
+    char_start: 2574
+    char_end: 3624
+    start_quote: Any schoolboy could see that man as a force must be measured
+    end_quote: subject to correction from any one who should know better.
+    why: This is Adams's own explanation (quoted from Chapter XXIX) of why Chartres and the Education
+      exist as a matched pair, and the historical method -- fixed reference points to measure motion --
+      that generated both.
+  - id: adams-education#u01-c2
+    label: c2
+    heading: 'Reversing Augustine: from unity to multiplicity'
+    char_start: 3873
+    char_end: 4188
+    start_quote: Probably he saw it in advance, for he used to say, half in jest
+    end_quote: reverse the method and work back from unity to multiplicity.
+    why: Adams's self-deprecating comparison to Augustine's Confessions is the preface's clearest diagnosis
+      of why the Education's literary form defeated him.
+  - id: adams-education#u01-c3
+    label: c3
+    heading: 'Practicing his own theory: silence as the mark of sense'
+    char_start: 5437
+    char_end: 5813
+    start_quote: In the end, he preferred to leave the "Education" unpublished, avowedly incomplete
+    end_quote: After midsummer, 1914, the rule was made absolute.
+    why: Ties Adams's personal choice to withhold publication directly to his own theory of history, dated
+      to the eve of World War I -- the preface's emotional turning point.
+  - id: adams-education#u01-c4
+    label: c4
+    heading: Why the Massachusetts Historical Society publishes it now
+    char_start: 5817
+    char_end: 6125
+    start_quote: The Massachusetts Historical Society now publishes the
+    end_quote: reach of students who have occasion to consult them.
+    why: States the editorial rationale for this posthumous edition, framing it as access for students
+      rather than an override of Adams's own judgment.
+- nn: 2
+  unit_id: preface
+  note_id: adams-education-preface
+  span: 6165:9536
+  chunks:
+  - id: adams-education#u02-c1
+    label: c1
+    heading: Rousseau's confessional appeal
+    char_start: 6263
+    char_end: 6773
+    start_quote: I have shown myself as I was;
+    end_quote: 'any one of them tell thee if he dares: ''I was a better man!''"'
+    why: The Rousseau epigraph is the confessional model Adams's manikin method is defined against.
+  - id: adams-education#u02-c2
+    label: c2
+    heading: No American model for high education
+    char_start: 7545
+    char_end: 8002
+    start_quote: the twentieth century finds few recent
+    end_quote: This volume attempts to discuss it.
+    why: 'States the stated occasion for the book: the absence of any American guide to high education.'
+  - id: adams-education#u02-c3
+    label: c3
+    heading: The Ego becomes a manikin
+    char_start: 8067
+    char_end: 8723
+    start_quote: he erected a monument of warning against the Ego.
+    end_quote: faults of the patchwork fitted on their fathers.
+    why: Introduces the manikin/garment conceit that structures the entire autobiography's third-person
+      method.
+  - id: adams-education#u02-c4
+    label: c4
+    heading: The young man as a form of energy
+    char_start: 8742
+    char_end: 9101
+    start_quote: the active-minded young man should ask of his
+    end_quote: the tools and models may be thrown away.
+    why: Recasts education as economy of force rather than moral formation, the book's operative theory
+      of pedagogy.
+  - id: adams-education#u02-c5
+    label: c5
+    heading: Treated as though it had life
+    char_start: 9105
+    char_end: 9480
+    start_quote: The manikin, therefore, has the same value as any other
+    end_quote: Who knows? Possibly it had!
+    why: Closes the preface by justifying the manikin fiction as necessary and half-real, setting the
+      book's ironic tone.
+- nn: 3
+  unit_id: ch-01-quincy
+  note_id: adams-education-ch-01-quincy
+  span: 9536:50616
+  chunks:
+  - id: adams-education#u03-c1
+    label: c1
+    heading: Born already branded
+    char_start: 10047
+    char_end: 11298
+    start_quote: Had he been born in Jerusalem under the shadow of the Temple
+    end_quote: was so queer as to offer a subject of curious speculation to the baby long after he had
+      witnessed the solution.
+    why: 'States the book''s founding conceit: a child born already over-determined by inherited historical
+      identity, before any possibility of consent.'
+  - id: adams-education#u03-c2
+    label: c2
+    heading: The old world thrown into the ash-heap
+    char_start: 13392
+    char_end: 14423
+    start_quote: This problem of education, started in 1838, went on for three
+    end_quote: his new world was ready for use, and only fragments of the old met his eyes.
+    why: Dates with technological precision (railroad, Cunard steamers, telegraph) the moment Adams's
+      inherited eighteenth-century world became obsolete within his own early childhood.
+  - id: adams-education#u03-c3
+    label: c3
+    heading: Town versus country
+    char_start: 19597
+    char_end: 20226
+    start_quote: Town was winter confinement, school, rule, discipline
+    end_quote: and breathed by boys without knowing it.
+    why: Lays out the Boston/Quincy, winter/summer, restraint/liberty dualism Adams treats as the single
+      most decisive force in his own education.
+  - id: adams-education#u03-c4
+    label: c4
+    heading: 'Order through chaos: the thesis sentence'
+    char_start: 28318
+    char_end: 28733
+    start_quote: From cradle to grave this problem of running order through chaos
+    end_quote: taking a new nature in becoming tame.
+    why: Generalizes the chapter's town/country dualism into a stated thesis about education as the perpetual
+      task of imposing order on multiplicity.
+  - id: adams-education#u03-c5
+    label: c5
+    heading: Silent authority
+    char_start: 31668
+    char_end: 32726
+    start_quote: He had shown no temper, no irritation, no personal feeling, and had made no display of
+      force.
+    end_quote: the stoniest glacial and tidal drift known in any Puritan land.
+    why: Defines Adams's criterion for legitimate authority — force exercised without moralizing cant
+      — via the anecdote of his grandfather walking him to school.
+  - id: adams-education#u03-c6
+    label: c6
+    heading: The ancestral chapter ends
+    char_start: 45916
+    char_end: 46420
+    start_quote: The end of this first, or ancestral and Revolutionary, chapter
+    end_quote: its effect on a ten-year-old boy, whose boy-life was fading away with the life of his grandfather,
+      could not be slight.
+    why: Marks the periodization Adams imposes on his own life, closing the 'ancestral and Revolutionary'
+      stage of his education with his grandfather's death.
+- nn: 4
+  unit_id: ch-02-boston
+  note_id: adams-education-ch-02-boston
+  span: 50616:84769
+  chunks:
+  - id: adams-education#u04-c1
+    label: c1
+    heading: Barred from State Street
+    char_start: 54936
+    char_end: 55320
+    start_quote: They were anti-slavery by birth, as
+    end_quote: to order them away from the door.
+    why: States directly why the Adams family, despite name and fortune, remained permanently excluded
+      from Boston's mercantile-Whig establishment.
+  - id: adams-education#u04-c2
+    label: c2
+    heading: The stamp of 1848
+    char_start: 56370
+    char_end: 56776
+    start_quote: There was never a side-path of
+    end_quote: This was their education.
+    why: 'Adams''s explicit generational thesis: that his formative political stamp would prove useless,
+      even a liability, for the era he actually had to live through.'
+  - id: adams-education#u04-c3
+    label: c3
+    heading: Government by 'the best'
+    char_start: 69949
+    char_end: 71315
+    start_quote: Down to 1850, and even later, New
+    end_quote: they guided public opinion, but were little guided by it.
+    why: Lays out the Ciceronian representative system—professions choosing statesmen—that structured
+      the Boston world the boy was raised to inherit.
+  - id: adams-education#u04-c4
+    label: c4
+    heading: Boston had solved the universe
+    char_start: 72826
+    char_end: 74149
+    start_quote: Viewed from Mount Vernon Street, the problem
+    end_quote: The problem was worked out.
+    why: The chapter's sharpest image of Unitarian Boston's total, complacent confidence that politics,
+      religion, and society required no further inquiry.
+  - id: adams-education#u04-c5
+    label: c5
+    heading: What Marx alone saw
+    char_start: 72241
+    char_end: 72593
+    start_quote: Even the violent reaction after 1848,
+    end_quote: just beginning to make itself felt.
+    why: Names the one disruption—industrial, not political—that Boston's confident worldview failed to
+      register, framing the chapter's real historical irony.
+  - id: adams-education#u04-c6
+    label: c6
+    heading: What he actually learned
+    char_start: 84469
+    char_end: 84765
+    start_quote: the happiest hours of the boy's education were
+    end_quote: On the whole he learned most then.
+    why: 'The chapter''s closing irony and thesis in miniature: unsupervised summer reading taught the
+      boy more than years of formal schooling.'
+- nn: 5
+  unit_id: ch-03-washington
+  note_id: adams-education-ch-03-washington
+  span: 84769:113324
+  chunks:
+  - id: adams-education#u05-c1
+    label: c1
+    heading: Boston's education by no standard
+    char_start: 85013
+    char_end: 85346
+    start_quote: The surface was ready to take any form that education should
+    end_quote: and what was true of school was true of society.
+    why: States the chapter's founding claim that Boston's lack of a fixed model shaped Adams's supple
+      but standardless mind.
+  - id: adams-education#u05-c2
+    label: c2
+    heading: Conky Daniels and the snowball war
+    char_start: 89320
+    char_end: 89925
+    start_quote: The terrible Conky Daniels swaggered up, stopped a moment with his
+    end_quote: had taught Savage and Marvin how to die.
+    why: The narrator's proleptic irony reads a boyhood snowball fight as unknowing rehearsal for Civil
+      War deaths.
+  - id: adams-education#u05-c3
+    label: c3
+    heading: The Fugitive Slave Law in Boston
+    char_start: 90487
+    char_end: 90855
+    start_quote: Worst of all, the execution of the Fugitive Slave
+    end_quote: who wanted to miss no reasonable chance of mischief.
+    why: Shows Boston's own enforcement of the Fugitive Slave Law, not school, as what actually radicalized
+      the boy.
+  - id: adams-education#u05-c4
+    label: c4
+    heading: Mount Vernon as product of the crime
+    char_start: 100360
+    char_end: 100660
+    start_quote: Bad roads meant bad morals. The moral of this Virginia road
+    end_quote: stood Mount Vernon and George Washington.
+    why: 'States the chapter''s central unresolved contradiction: Mount Vernon and Washington as product
+      of the same slavery Adams calls wicked.'
+  - id: adams-education#u05-c5
+    label: c5
+    heading: Moral confusion over the Sumner bargain
+    char_start: 107025
+    char_end: 107283
+    start_quote: Thus, before he was fifteen years old, he had managed to get himself
+    end_quote: could be less corrupt than himself.
+    why: The boy's induction into Free Soil machine politics leaves him self-diagnosed as permanently
+      corrupt.
+  - id: adams-education#u05-c6
+    label: c6
+    heading: Nearer the year 1 than the year 1900
+    char_start: 112503
+    char_end: 113320
+    start_quote: Only on looking back, fifty years later, at his own figure
+    end_quote: He knew not even where or how to begin.
+    why: Delivers the chapter's retrospective thesis that this entire education was already obsolete by
+      1900.
+- nn: 6
+  unit_id: ch-04-harvard-college
+  note_id: adams-education-ch-04-harvard-college
+  span: 113324:146101
+  chunks:
+  - id: adams-education#u06-c1
+    label: c1
+    heading: 'The water-mark: a type but not a will'
+    char_start: 114903
+    char_end: 115722
+    start_quote: Harvard College, as far as it educated at all, was a mild and
+    end_quote: a mind on which only a water-mark had been stamped.
+    why: States the chapter's central thesis -- that Harvard's only effect was a negative, will-less social
+      stamp rather than substantive learning.
+  - id: adams-education#u06-c2
+    label: c2
+    heading: The Class of 1858 as a body of judges
+    char_start: 117570
+    char_end: 118632
+    start_quote: The Class of 1858, to which Henry Adams belonged, was a typical collection
+    end_quote: or of will, but a sort of gravitation.
+    why: Adams's fullest characterization of his class as a collective, near-natural tribunal -- the 'type'
+      whose verdict later elects him Orator.
+  - id: adams-education#u06-c3
+    label: c3
+    heading: 'Temperament without mind: the Virginians'
+    char_start: 121132
+    char_end: 121571
+    start_quote: The lesson in education was vital to these young men, who, within ten years,
+    end_quote: without ideas, if one had only the social instinct.
+    why: Frames the Virginian/Bostonian contrast with explicit foreknowledge that these same classmates
+      would soon fight the Civil War over it.
+  - id: adams-education#u06-c4
+    label: c4
+    heading: A negative curriculum, one bright exception
+    char_start: 126167
+    char_end: 126979
+    start_quote: Beyond two or three Greek plays, the student got nothing from the ancient languages.
+    end_quote: which had more influence on his curiosity than the rest of the college instruction altogether.
+    why: Catalogs the curriculum's near-total failure and isolates Agassiz's lectures as the one course
+      that actually reached him.
+  - id: adams-education#u06-c5
+    label: c5
+    heading: 'Social capital as the only capital: taking to the pen'
+    char_start: 138367
+    char_end: 138708
+    start_quote: So Henry Adams, well aware that he could not succeed as a scholar,
+    end_quote: He took to the pen. He wrote.
+    why: Adams's own diagnosis of why he became a writer -- not vocation but the last available use of
+      social capital.
+  - id: adams-education#u06-c6
+    label: c6
+    heading: Self-possession, and 'Education had not begun'
+    char_start: 145538
+    char_end: 146097
+    start_quote: Self-possession was the strongest part of Harvard College, which certainly taught men
+      to stand alone,
+    end_quote: As yet he knew nothing. Education had not begun.
+    why: The chapter's closing formula -- Harvard taught 'self-possession' but nothing to say -- crystallizes
+      the book's negative-education thesis.
+- nn: 7
+  unit_id: ch-05-berlin
+  note_id: adams-education-ch-05-berlin
+  span: 146101:171076
+  chunks:
+  - id: adams-education#u07-c1
+    label: c1
+    heading: 'Education by Shipwreck: the Atlantic Gale'
+    char_start: 149061
+    char_end: 149884
+    start_quote: He learned then a lesson that stood by him better than any university teaching ever did
+    end_quote: whether any could turn out right, was ultimate wisdom.
+    why: Establishes the chapter's guiding irony that the only clear lesson of the crossing was a gale,
+      not any university teaching.
+  - id: adams-education#u07-c2
+    label: c2
+    heading: The University Lecture That Killed the Civil Law
+    char_start: 157312
+    char_end: 158944
+    start_quote: His first lecture was his last.
+    end_quote: could profit an American education.
+    why: 'Adams''s flattest sentence sets up the chapter''s central verdict: the University of Berlin''s
+      lecture system was worthless to an American student.'
+  - id: adams-education#u07-c3
+    label: c3
+    heading: State Education as a Dynamo Machine
+    char_start: 164268
+    char_end: 164736
+    start_quote: No other faculty than the memory seemed to be recognized.
+    end_quote: Its effect on the children was pathetic.
+    why: Adams's explicit machine-metaphor for state schooling, an engine for polarizing the popular mind,
+      is the unit's most direct resonance with the World Machines framework's account of institutional
+      infrastructure.
+  - id: adams-education#u07-c4
+    label: c4
+    heading: 'No Ventilation, No Reason: the Gymnasium''s Toll'
+    char_start: 165642
+    char_end: 166030
+    start_quote: They never breathed fresh air; they had never heard of a playground
+    end_quote: he violated the rules and was invariably rebuked.
+    why: Concretizes the abstract critique of Prussian schooling in the boys' physical suffering under
+      a system optimized for discipline over health or reasoning.
+  - id: adams-education#u07-c5
+    label: c5
+    heading: The Unbidden Beethoven
+    char_start: 168645
+    char_end: 169397
+    start_quote: Sitting thus at his beer-table, mentally impassive, he was one day surprised
+    end_quote: watched it as something apart, accidental, and not to be trusted.
+    why: 'The chapter''s turning point: the one moment of real aesthetic education arrives entirely by
+      accident, in the setting Adams was most contemptuous of.'
+  - id: adams-education#u07-c6
+    label: c6
+    heading: By-Products Better Than Staples
+    char_start: 167595
+    char_end: 167927
+    start_quote: but the curious and perplexing result of the total failure of German education
+    end_quote: accidental, unintended, unforeseen.
+    why: 'States the chapter''s thesis outright: everything Adams actually gained from Berlin came as
+      an unintended by-product of the education he was promised and never received.'
+- nn: 8
+  unit_id: ch-06-rome
+  note_id: adams-education-ch-06-rome
+  span: 171076:202662
+  chunks:
+  - id: adams-education#u08-c1
+    label: c1
+    heading: The Doctrine of Accidental Education
+    char_start: 172796
+    char_end: 173105
+    start_quote: For the next eighteen months the young man pursued
+    end_quote: especially because nothing came amiss.
+    why: 'States outright the working theory that structures the whole chapter: nothing planned teaches
+      him anything, and only chance does.'
+  - id: adams-education#u08-c2
+    label: c2
+    heading: Floundering Between Worlds Passed and Worlds Coming
+    char_start: 174382
+    char_end: 175158
+    start_quote: He was in a fair way to do himself lasting harm, floundering
+    end_quote: an Italian base.
+    why: Catches Adams at the exact seam between a dying mediaeval Germany and Napoleon III's war for
+      Italy, a personal-scale Gramsci-gap image.
+  - id: adams-education#u08-c3
+    label: c3
+    heading: A Moral Foundation for Robbery
+    char_start: 176347
+    char_end: 177276
+    start_quote: His morals were the highest, and he clung to them
+    end_quote: Machiavelli translated into American.
+    why: Shows Adams constructing, in real time, the moral alibi that lets a self-styled reformer support
+      war and robbery in the name of freedom and progress.
+  - id: adams-education#u08-c4
+    label: c4
+    heading: Rome Refuses the Law of Progress
+    char_start: 189793
+    char_end: 190285
+    start_quote: Rome was actual; it was England; it was going to be America.
+    end_quote: and never lead to a sequence.
+    why: 'The chapter''s central intellectual shock: mediaeval Rome will not arrange itself into any orderly,
+      evolutionary scheme.'
+  - id: adams-education#u08-c5
+    label: c5
+    heading: Gibbon's Steps and a Third Failure
+    char_start: 190755
+    char_end: 191673
+    start_quote: Probably it was more vital in May, 1860, than it had been
+    end_quote: to express the failure of a third.
+    why: Frames Rome as the graveyard of two failed civilizational experiments with a third not yet ruled
+      out, a direct civilizational-cycle image.
+  - id: adams-education#u08-c6
+    label: c6
+    heading: Garibaldi, an Instrument of Purposes Not His Own
+    char_start: 198874
+    char_end: 199187
+    start_quote: In the end, if the "Autobiography" tells truth, Garibaldi saw
+    end_quote: and his ambition was unbounded.
+    why: Adams's eyewitness read of Garibaldi as an unwitting instrument of forces bigger than his own
+      intentions undercuts great-man historiography.
+- nn: 9
+  unit_id: ch-07-treason
+  note_id: adams-education-ch-07-treason
+  span: 202662:226631
+  chunks:
+  - id: adams-education#u09-c1
+    label: c1
+    heading: No one wanted or planned the war
+    char_start: 202698
+    char_end: 203556
+    start_quote: WHEN, forty years afterwards, Henry Adams looked back over his
+    end_quote: might dream it as an impossible chance; but none planned it.
+    why: 'States the chapter''s controlling irony in Adams''s retrospective voice: the war was universally
+      unwanted and unforeseen, not designed by anyone.'
+  - id: adams-education#u09-c2
+    label: c2
+    heading: Adams's verdict on the cotton-planter class
+    char_start: 206751
+    char_end: 207382
+    start_quote: The Southern secessionists were certainly
+    end_quote: worked when held by inadequate hands.
+    why: Adams's harshest period judgment of the Southern planter class, offered as a moralized object-lesson
+      in power without balance.
+  - id: adams-education#u09-c3
+    label: c3
+    heading: '"Bad temper, bad manners, poker, and treason"'
+    char_start: 207980
+    char_end: 208560
+    start_quote: He could learn nothing but cross-purpose. The old and typical
+    end_quote: learn nothing but bad temper, bad manners, poker, and treason.
+    why: The line that supplies the chapter's title, condensing Adams's dismissal of the whole Southern
+      school of instruction.
+  - id: adams-education#u09-c4
+    label: c4
+    heading: Portrait of Seward, mask and features fused
+    char_start: 214707
+    char_end: 215952
+    start_quote: A few days after their arrival in December, 1860, the Governor,
+    end_quote: Bostonians thought it provincial. Henry Adams thought it charming.
+    why: The chapter's richest character study, capturing the illegibility of Seward's political vs. personal
+      self and Adams's own fondness for him.
+  - id: adams-education#u09-c5
+    label: c5
+    heading: The break with Sumner and its lasting maxim
+    char_start: 222601
+    char_end: 224086
+    start_quote: Going over the experience again, long after all the great
+    end_quote: the rule that a friend in power is a friend lost.
+    why: 'The chapter''s emotional center: Sumner''s denunciation costs Adams his oldest friend and yields
+      the memoir''s famous political axiom.'
+  - id: adams-education#u09-c6
+    label: c6
+    heading: A single sight of Lincoln at the Inaugural Ball
+    char_start: 221294
+    char_end: 222014
+    start_quote: He saw Mr. Lincoln but once; at the melancholy function called an Inaugural Ball.
+    end_quote: the new President but that all the education he could get would not be enough.
+    why: Adams's only direct observation of Lincoln, rendering him as a figure needing education rather
+      than commanding the crisis.
+- nn: 10
+  unit_id: ch-08-diplomacy
+  note_id: adams-education-ch-08-diplomacy
+  span: 226631:263614
+  chunks:
+  - id: adams-education#u10-c1
+    label: c1
+    heading: The law vanishes, leaving a lawless world
+    char_start: 226949
+    char_end: 227330
+    start_quote: The Civil Law lasted a brief day; the Common Law
+    end_quote: millions they would have got no answers. No one could help.
+    why: 'States the chapter''s founding rupture: one education (legal training) ends abruptly with nothing
+      yet in place to replace it.'
+  - id: adams-education#u10-c2
+    label: c2
+    heading: Cabin-boy to an eighteenth-century diplomat
+    char_start: 231510
+    char_end: 232093
+    start_quote: Luckily for the cabin-boy, he was alone.
+    end_quote: whose idea of American diplomacy was that of the eighteenth century.
+    why: 'Names the generational mismatch at the chapter''s core: a diplomatic style inherited from 1778
+      and 1809 deployed unchanged against an 1861 crisis.'
+  - id: adams-education#u10-c3
+    label: c3
+    heading: England recognizes Confederate belligerency
+    char_start: 236615
+    char_end: 237091
+    start_quote: On May 13, he met the official announcement that England
+    end_quote: and nearly all were glad of it, though not often saying so.
+    why: 'The chapter''s hinge event: a single day''s news overturns Henry''s inherited assumption of
+      English anti-slavery sympathy.'
+  - id: adams-education#u10-c4
+    label: c4
+    heading: The Trent Affair and the end of trying to be useful
+    char_start: 248303
+    char_end: 250220
+    start_quote: One of these, and to him the most important, was to put an end forever to the idea of
+      being "useful."
+    end_quote: Henry Adams escaped, but he never tried to be useful again.
+    why: Marks Henry's decisive turn toward deliberate obscurity as a survival strategy, framed as a permanent
+      lesson rather than a passing embarrassment.
+  - id: adams-education#u10-c5
+    label: c5
+    heading: 'Mount Felix: the one source of warmth'
+    char_start: 252069
+    char_end: 252726
+    start_quote: Mrs. Russell Sturgis was one of the women to whom an intelligent boy attaches himself
+      as closely as he can.
+    end_quote: she was in this social polar winter, the single source of warmth and light.
+    why: The chapter's sole sustained counter-current to isolation, singled out explicitly as its own
+      kind of 'liberal education.'
+- nn: 11
+  unit_id: ch-09-foes-or-friends
+  note_id: adams-education-ch-09-foes-or-friends
+  span: 263614:298185
+  chunks:
+  - id: adams-education#u11-c1
+    label: c1
+    heading: London hatred of England, masked
+    char_start: 264179
+    char_end: 265373
+    start_quote: Never could any good come from that besotted race!
+    end_quote: The suspense was hideous and unendurable.
+    why: Opens the unit's core tension between young Adams's private fury at England and the diplomatic
+      mask he is required to wear.
+  - id: adams-education#u11-c2
+    label: c2
+    heading: Self-restraint among friends
+    char_start: 267854
+    char_end: 269384
+    start_quote: The effort of facing a hostile society was bad enough, but that of facing friends was
+      worse.
+    end_quote: betray no joy over the "lickings" of an enemy--in the enemy's presence.
+    why: 'States the chapter''s title theme directly: performing composure among nominal friends demands
+      more discipline than facing open enemies.'
+  - id: adams-education#u11-c3
+    label: c3
+    heading: Reading motive beneath diplomatic lies
+    char_start: 274305
+    char_end: 275628
+    start_quote: No professional diplomatists worried about falsehoods.
+    end_quote: tossed and gored on the horns of this jovial, slashing, devil-may-care British bull.
+    why: 'Defines the diplomatic skill Adams is absorbing: discount every stated word and infer the hidden
+      motive, illustrated through Palmerston''s reputation for treachery.'
+  - id: adams-education#u11-c4
+    label: c4
+    heading: The Butler crisis and Palmerston's unexplained retreat
+    char_start: 281239
+    char_end: 283866
+    start_quote: Palmerston wants a quarrel!
+    end_quote: he behaved like a well-bred gentleman who felt himself in the wrong.
+    why: The chapter's dramatic and diplomatic climax, where a near-certain rupture dissolves for reasons
+      even the participants could never fully reconstruct.
+  - id: adams-education#u11-c5
+    label: c5
+    heading: '"Adams acquired education" at Fryston'
+    char_start: 289061
+    char_end: 289329
+    start_quote: Then, at last, if never before, Adams acquired education.
+    end_quote: and their astonishment grew apace.
+    why: Marks the pivot from diplomatic to aesthetic education, framing Swinburne's talk as the most
+      instructive thing Adams encountered all year.
+  - id: adams-education#u11-c6
+    label: c6
+    heading: Dwarfed by genius
+    char_start: 293276
+    char_end: 293604
+    start_quote: Adams could no more interest Algernon Swinburne than he could interest Encke's comet.
+    end_quote: one could only receive; one had nothing to give--nothing even to offer.
+    why: Adams's starkest self-assessment in the unit, casting his own presence as negligible before Swinburne's
+      genius.
+- nn: 12
+  unit_id: ch-10-political-morality
+  note_id: adams-education-ch-10-political-morality
+  span: 298185:344208
+  chunks:
+  - id: adams-education#u12-c1
+    label: c1
+    heading: Thurlow Weed's creed of distrust
+    char_start: 303800
+    char_end: 304221
+    start_quote: He took them and played them for their face-value;
+    end_quote: I never advise a young man to begin by thinking so.
+    why: Sets the chapter's governing axiom about political trust that the rest of the narrative tests
+      against the British statesmen.
+  - id: adams-education#u12-c2
+    label: c2
+    heading: Evarts and the economy of truth
+    char_start: 305303
+    char_end: 305792
+    start_quote: Evarts was as individual as Weed was impersonal;
+    end_quote: One sought education in order to adjust the dose.
+    why: Supplies the second, competing philosophy of political morality that Adams weighs throughout
+      the chapter.
+  - id: adams-education#u12-c3
+    label: c3
+    heading: The chaos beneath the appearance of design
+    char_start: 315467
+    char_end: 316247
+    start_quote: Here, then, appeared in its fullest force, the practical
+    end_quote: 'the deliberate dishonesty of three famous men: Palmerston, Russell, and Gladstone.'
+    why: 'States the chapter''s core thesis directly: apparent statesmanlike forethought concealed only
+      the sheer chaos of human nature.'
+  - id: adams-education#u12-c4
+    label: c4
+    heading: Gladstone's Newcastle speech
+    char_start: 321799
+    char_end: 322310
+    start_quote: We know quite well that the people of the Northern States
+    end_quote: they have made, what is more than either, they have made a nation....
+    why: The single most consequential utterance in the diplomatic crisis, and the trigger for Adams's
+      search for a moral standard for judging politicians.
+  - id: adams-education#u12-c5
+    label: c5
+    heading: The archive overturns the verdict
+    char_start: 333741
+    char_end: 334249
+    start_quote: Forty years afterwards, when every one except himself, who
+    end_quote: One's diplomatic education was a long mistake.
+    why: Marks the moment private correspondence, read decades later, proves the young secretary's theory
+      of coordinated bad faith was wrong.
+  - id: adams-education#u12-c6
+    label: c6
+    heading: Politics cannot stop to study psychology
+    char_start: 343539
+    char_end: 344204
+    start_quote: Politics cannot stop to study psychology. Its methods are
+    end_quote: Every student would, like the private secretary, answer for himself alone.
+    why: Delivers the chapter's closing, deflationary verdict on the possibility of political certainty.
+- nn: 13
+  unit_id: ch-11-the-battle-of-the-rams
+  note_id: adams-education-ch-11-the-battle-of-the-rams
+  span: 344208:369985
+  chunks:
+  - id: adams-education#u13-c1
+    label: c1
+    heading: The vertigo of wielding unmeasured power
+    char_start: 348224
+    char_end: 348764
+    start_quote: One began to dream the sensation of wielding unmeasured power.
+    end_quote: that it was massed and guided as it had not been before.
+    why: Marks the chapter's core claim that watching the Union's power take shape from London was itself
+      the unrepeatable climax of Adams's education.
+  - id: adams-education#u13-c2
+    label: c2
+    heading: Vicksburg news reaches a London drawing-room
+    char_start: 349943
+    char_end: 351419
+    start_quote: News of Vicksburg and Gettysburg reached London one Sunday afternoon
+    end_quote: the capture of Vicksburg had not yet penetrated Delane's thick cortex of fixed ideas.
+    why: Dramatizes the gap between American triumph and British obliviousness through the Milnes reception
+      scene.
+  - id: adams-education#u13-c3
+    label: c3
+    heading: '"This is war": the ultimatum and its private gloss'
+    char_start: 355788
+    char_end: 356731
+    start_quote: Little by little, Minister Adams lost hope.
+    end_quote: but is pointing it out to the world, to complete the record.
+    why: Records the chapter's famous diplomatic sentence alongside the son's own drafted explanation
+      of its logic.
+  - id: adams-education#u13-c4
+    label: c4
+    heading: 'Russell yields: the rams are stopped'
+    char_start: 357226
+    char_end: 357849
+    start_quote: Russell's reply to this note of September 5 reached the Legation on September 8
+    end_quote: he never felt a doubt as to the nature of the battle.
+    why: The Legation reads Russell's capitulation as a diplomatic mirror of Grant's military victory.
+  - id: adams-education#u13-c5
+    label: c5
+    heading: 'Thirty years on: Russell reconsidered'
+    char_start: 364590
+    char_end: 365100
+    start_quote: The student was wrong. Russell proved that he had been feeble, timid, mistaken, senile,
+      but not dishonest.
+    end_quote: one must preserve the status quo.
+    why: The chapter's central epistemic reversal, where new evidence overturns Adams's decades-old verdict
+      on Russell.
+  - id: adams-education#u13-c6
+    label: c6
+    heading: Gladstone on the incomprehensibility of politicians
+    char_start: 369484
+    char_end: 369787
+    start_quote: I always hold," said Mr. Gladstone, "that politicians are the men whom, as a rule, it
+      is most difficult to comprehend";
+    end_quote: Earl Russell was certainly not one of the two.
+    why: Closes the chapter by undercutting the whole apparatus of diplomatic education with Gladstone's
+      own confession of unknowing.
+- nn: 14
+  unit_id: ch-12-eccentricity
+  note_id: adams-education-ch-12-eccentricity
+  span: 369985:399116
+  chunks:
+  - id: adams-education#u14-c1
+    label: c1
+    heading: The American mind as a 'thinking-machine' versus English eccentricity
+    char_start: 370965
+    char_end: 371792
+    start_quote: For several years, under the keenest incitement to watchfulness, he observed
+    end_quote: a mere cutting instrument, practical, economical, sharp, and direct.
+    why: States the chapter's core contrast between English eccentricity and the legible, economical American
+      mind, as seen through European eyes.
+  - id: adams-education#u14-c2
+    label: c2
+    heading: 'Eccentric by law: England''s institutionalized deviance'
+    char_start: 371796
+    char_end: 372557
+    start_quote: The English themselves hardly conceived that their mind was
+    end_quote: It made the chief charm of English society as well as its chief terror.
+    why: The chapter's thesis statement that English society was 'eccentric by law and for sake of the
+      eccentricity itself,' with eccentricity as social currency rather than stigma.
+  - id: adams-education#u14-c3
+    label: c3
+    heading: Mason as the Confederacy's ironic bulwark
+    char_start: 379795
+    char_end: 380983
+    start_quote: This eccentricity did not mean strength. The proof of it was
+    end_quote: but he never lifted a finger against Mason, who became his bulwark of defence.
+    why: 'The diplomatic case study proving the thesis: the Confederacy''s eccentric envoy Mason unwittingly
+      protected the Union Legation by his own incompetence.'
+  - id: adams-education#u14-c4
+    label: c4
+    heading: Bright dismantles Roebuck in the Commons
+    char_start: 384383
+    char_end: 385284
+    start_quote: With Roebuck's doings, the private secretary had no concern
+    end_quote: The scene was interesting, but the result was not in doubt.
+    why: The vivid set-piece dramatizing eccentricity's defeat by sober force, witnessed firsthand by
+      Adams as private secretary.
+  - id: adams-education#u14-c5
+    label: c5
+    heading: Bright's 'Privilege' speech
+    char_start: 389620
+    char_end: 390403
+    start_quote: Privilege thinks it has a great interest in the American
+    end_quote: has shuddered at what might happen to old Europe if this great experiment should succeed.
+    why: Direct quotation of Bright's oratory, Adams's central evidence that apparent verbal violence
+      could be calibrated skill rather than eccentricity.
+  - id: adams-education#u14-c6
+    label: c6
+    heading: A conclusion correct from the facts, and wrong
+    char_start: 398043
+    char_end: 399112
+    start_quote: The sum of these experiences in 1863 left the conviction that
+    end_quote: as though he were the ancient mariner, and they saurians of the prime.
+    why: Adams's retrospective admission that his 1863 diagnosis, though evidentially sound, missed the
+      imminent collapse of 'old Europe' after 1870 — the chapter's governing irony.
+- nn: 15
+  unit_id: ch-13-the-perfection-of-human-society
+  note_id: adams-education-ch-13-the-perfection-of-human-society
+  span: 399116:427552
+  chunks:
+  - id: adams-education#u15-c1
+    label: c1
+    heading: An American Peer of the Realm, and nothing to do
+    char_start: 399172
+    char_end: 400012
+    start_quote: MINISTER ADAMS'S success in stopping the rebel rams fixed his
+    end_quote: would have caused his father or grandfather to stare with incredulous envy.
+    why: 'Establishes the chapter''s premise: with the diplomatic crisis resolved, Adams''s remaining
+      years in London are purely social, not professional, education.'
+  - id: adams-education#u15-c2
+    label: c2
+    heading: A score of mutually strange societies
+    char_start: 405491
+    char_end: 407333
+    start_quote: He saw far enough to note a score of societies
+    end_quote: it was not a hansom cab, to be got into, or out of, at dinner-time.
+    why: Adams's central sociological finding, that London society is many disjoint, illegible circles
+      rather than one climbable hierarchy, in his own vivid 'maggot in cheese' image.
+  - id: adams-education#u15-c3
+    label: c3
+    heading: Castiglione mobbed, Garibaldi worshipped
+    char_start: 408121
+    char_end: 409649
+    start_quote: One was at Devonshire House, an ordinary, unpremeditated
+    end_quote: their curves were too complex for mere arithmetic.
+    why: The two social 'events' Adams claims actually meant something to him in seven years, both scandals
+      that exceed his interpretive framework.
+  - id: adams-education#u15-c4
+    label: c4
+    heading: Motley's paradox stated
+    char_start: 412307
+    char_end: 413133
+    start_quote: Lothrop Motley, who stood among the very best, said to him
+    end_quote: he could not think that Motley meant to praise the English cuisine.
+    why: States the titular claim Adams spends the chapter dismantling and sets up the paragraph-by-paragraph
+      disproof that follows.
+  - id: adams-education#u15-c5
+    label: c5
+    heading: The hearth-rug ideal of belonging
+    char_start: 416964
+    char_end: 417593
+    start_quote: he conceived that the perfection of human society required that a man should enter a
+    end_quote: extraordinary charm both in women and in men.
+    why: Adams's wry, concentrated self-portrait of a rehearsed social pose that only becomes charming
+      after decades he cannot afford.
+  - id: adams-education#u15-c6
+    label: c6
+    heading: Intimates are predestined
+    char_start: 422286
+    char_end: 423504
+    start_quote: Intimates are predestined.
+    end_quote: must have started under the Heptarchy.
+    why: Closes the chapter by weighing official social duty as waste against the one chance-born friendship
+      that actually mattered, framed explicitly as unplanned.
+- nn: 16
+  unit_id: ch-14-dilettantism
+  note_id: adams-education-ch-14-dilettantism
+  span: 427552:459138
+  chunks:
+  - id: adams-education#u16-c1
+    label: c1
+    heading: Diplomacy and law close themselves off
+    char_start: 432077
+    char_end: 432635
+    start_quote: Nothing was easier to say, but even his father admitted two
+    end_quote: For once all his advisers agreed that diplomacy was not possible.
+    why: 'States the structural bind driving the whole chapter: Adams''s very qualifications foreclose
+      the two obvious careers.'
+  - id: adams-education#u16-c2
+    label: c2
+    heading: Lincoln's assassination reaches Rome
+    char_start: 430144
+    char_end: 430572
+    start_quote: The assassination of President Lincoln fell on the party while
+    end_quote: The Minister did not recall them to London.
+    why: Captures the numb disconnection from history that recurs as a motif, and ties the death directly
+      to the chapter's education theme.
+  - id: adams-education#u16-c3
+    label: c3
+    heading: Art as anti-education
+    char_start: 438798
+    char_end: 439563
+    start_quote: Of all supposed English tastes, that of art was the most
+    end_quote: Hunt had no time to sweep out the rubbish of Adams's mind.
+    why: The chapter's explicit thesis that English art connoisseurship, unlike a real discipline, has
+      no structure or endpoint and yields no education.
+  - id: adams-education#u16-c4
+    label: c4
+    heading: The verdict on the disputed drawing
+    char_start: 451702
+    char_end: 452435
+    start_quote: For forty years Adams kept this drawing on his mantelpiece,
+    end_quote: his education had profited by it to that extent--his amusement even more.
+    why: 'The payoff of the Sotheby''s/British Museum episode: Adams''s deliberate refusal to resolve
+      the drawing''s authenticity after watching every expert contradict the last.'
+  - id: adams-education#u16-c5
+    label: c5
+    heading: Chapter's closing self-diagnosis
+    char_start: 458364
+    char_end: 459134
+    start_quote: Surely, here was something to ponder over, as a step in
+    end_quote: he must begin a new education, in a new place, with a new purpose.
+    why: The chapter's explicit summary verdict, naming both English dilettantism and American antiquarianism
+      as false starts and setting up the pivot to come.
+- nn: 17
+  unit_id: ch-15-darwinism
+  note_id: adams-education-ch-15-darwinism
+  span: 459138:486030
+  chunks:
+  - id: adams-education#u17-c1
+    label: c1
+    heading: Darwinist Before the Letter
+    char_start: 459383
+    char_end: 461185
+    start_quote: At that moment Darwin was convulsing society.
+    end_quote: in order to contradict even such triflers as Tyndall and Huxley.
+    why: 'Opens the chapter''s frame: Adams embraces Darwinism less from evidence than from social pressure
+      and generational restlessness.'
+  - id: adams-education#u17-c2
+    label: c2
+    heading: The Instinct That Abhors Time
+    char_start: 469003
+    char_end: 470340
+    start_quote: The peculiar flavor of the scenery has something to do with
+    end_quote: was called Siluria. Life began and ended there.
+    why: Adams's meditation on Wenlock Edge collapses geological deep time into a single vertiginous present,
+      making Pteraspis his literal ancestor.
+  - id: adams-education#u17-c3
+    label: c3
+    heading: Pure Inference, Like Paley's Watch
+    char_start: 473366
+    char_end: 474295
+    start_quote: Adams could see nothing in the theory of Sir Charles but pure
+    end_quote: Uniformity that was not uniform; and Selection that did not select.
+    why: Adams concludes that Lyell's uniformitarian geology offers no more proof than natural theology's
+      argument from design, undercutting the Darwinism he claims to hold.
+  - id: adams-education#u17-c4
+    label: c4
+    heading: A Darwinian for Fun
+    char_start: 475509
+    char_end: 475970
+    start_quote: Out of his millions of millions of ancestors, back to the Cambrian mollusks
+    end_quote: He was a Darwinian for fun.
+    why: Adams's confession that he does not care whether truth is true marks his stance as ironic and
+      psychological rather than doctrinal, a hinge for his later theory of multiplicity.
+  - id: adams-education#u17-c5
+    label: c5
+    heading: Law as Evolution, Evolution as Unity
+    char_start: 477048
+    char_end: 477428
+    start_quote: For the young men whose lives were cast in the generation between
+    end_quote: though he should sacrifice five thousand millions more in money, and a million more lives.
+    why: Adams equates Natural Selection with a civic Law of aggregation and unity, willing to pay in
+      blood and treasure for a single ordering telos — the Modernity Machine's legibility drive stated
+      as personal creed.
+  - id: adams-education#u17-c6
+    label: c6
+    heading: No More Education Than in 1858
+    char_start: 484674
+    char_end: 485283
+    start_quote: The case was no better when he got back to London
+    end_quote: of the Adelphi Hotel in November, 1858.
+    why: 'The chapter''s ironic close: years of Darwinism, geology, and diplomacy leave Adams, by his
+      own account, exactly where he started.'
+- nn: 18
+  unit_id: ch-16-the-press
+  note_id: adams-education-ch-16-the-press
+  span: 486030:521816
+  chunks:
+  - id: adams-education#u18-c1
+    label: c1
+    heading: Landing in a Changed Country
+    char_start: 486063
+    char_end: 486891
+    start_quote: AT ten o'clock of a July night, in heat that made the tropical
+    end_quote: Towards midnight they found shelter once more in their native land.
+    why: 'Opens the chapter''s frame: Adams and Motley find their own native shore stranger than an ancient
+      trading galley would, setting up the chapter''s theme of return as estrangement.'
+  - id: adams-education#u18-c2
+    label: c2
+    heading: The Earthworm and the Caravan
+    char_start: 487064
+    char_end: 488188
+    start_quote: Society in America was always trying, almost as blindly as an earthworm, to realize and
+      understand itself
+    end_quote: a distinct superiority in power over the old industrial elements--agriculture, handwork,
+      and learning
+    why: States the chapter's central diagnosis of a society groping to understand itself just as coal,
+      iron, and steam eclipse the older agricultural and intellectual order, leaving Adams an "estray."
+  - id: adams-education#u18-c3
+    label: c3
+    heading: Surveying the New York Press
+    char_start: 500214
+    char_end: 501866
+    start_quote: with or without money he met the difficulty that, after getting to Washington
+    end_quote: the same circle of readers that he reached in the North American Review.
+    why: The concrete map of New York papers and editors Adams surveys and is shut out of, which is why
+      he falls back on Washington correspondence -- literally "the press" of the chapter's title.
+  - id: adams-education#u18-c4
+    label: c4
+    heading: Andrew Johnson's Moral Certainty
+    char_start: 505060
+    char_end: 505755
+    start_quote: None doubted. All were great men; some, no doubt, were greater than others
+    end_quote: gave Andrew Johnson the look of a true President, but actually made him one.
+    why: Crystallizes Adams's theory of Southern political charisma as self-assurance that substitutes
+      for and even manufactures legitimate authority, drawn from his one meeting with the President.
+  - id: adams-education#u18-c5
+    label: c5
+    heading: A Friend in Power Is a Friend Lost
+    char_start: 509726
+    char_end: 510148
+    start_quote: As a rule, officials dread interference. The strongest often resent it most.
+    end_quote: Apparent exceptions exist, and McCulloch was one of them.
+    why: Delivers the chapter's sharpest aphorism on institutional power and flattery, framing Treasury
+      Secretary McCulloch as the rare official who admits equals rather than resenting them.
+  - id: adams-education#u18-c6
+    label: c6
+    heading: Sumner's Reflecting, Unabsorbing Mind
+    char_start: 518085
+    char_end: 518816
+    start_quote: Sumner's mind had reached the calm of water which receives and reflects images without
+      absorbing them
+    end_quote: while, with other Senators for the most part, it was still acute.
+    why: Adams's most extended character study in the chapter, diagnosing Sumner's solipsism as both a
+      personal pathology and a resource -- "accumulated capital" -- for a newspaperman.
+- nn: 19
+  unit_id: ch-17-president-grant
+  note_id: adams-education-ch-17-president-grant
+  span: 521816:548781
+  chunks:
+  - id: adams-education#u19-c1
+    label: c1
+    heading: Stealing the "Session" format for the North American Review
+    char_start: 529220
+    char_end: 530499
+    start_quote: The Edinburgh article finished, he set himself to work on a scheme for the North American
+      Review.
+    end_quote: A good deal of authentic history slipped into these papers.
+    why: Shows Adams manufacturing a bid for political influence through an invented journalistic format,
+      the concrete expression of his reforming ambitions before Grant crushes them.
+  - id: adams-education#u19-c2
+    label: c2
+    heading: The nation's hope that Grant would be a second Washington
+    char_start: 532983
+    char_end: 534106
+    start_quote: At least four-fifths of the American people--Adams among the
+    end_quote: 'echoed that famous phrase: "Let us have peace."'
+    why: States the collective illusion — Grant as a restorer of order like Washington — that the rest
+      of the chapter systematically dismantles.
+  - id: adams-education#u19-c3
+    label: c3
+    heading: The Cabinet announcements shatter the illusion
+    char_start: 537429
+    char_end: 538075
+    start_quote: He was to hear a long list of Cabinet announcements not much
+    end_quote: A great soldier might be a baby politician.
+    why: 'The chapter''s turning point: within minutes Adams''s projected future collapses, and he reads
+      Grant''s incompetent nominations as proof the soldier cannot govern.'
+  - id: adams-education#u19-c4
+    label: c4
+    heading: Badeau's portrait of Grant's intermittent mind
+    char_start: 541386
+    char_end: 542168
+    start_quote: To him, Grant appeared as an intermittent energy, immensely powerful when awake
+    end_quote: They were not sure that he did think.
+    why: 'The book''s most quoted psychological analysis of Grant: ideas assemble in him via his staff''s
+      indirect suggestion until he claims them as his own, a mind his own officers could not be certain
+      thought at all.'
+  - id: adams-education#u19-c5
+    label: c5
+    heading: Grant, Garibaldi, and the type that upsets Darwin
+    char_start: 543119
+    char_end: 546025
+    start_quote: Thus far in life he had met with but one man of the same intellectual or
+    end_quote: The progress of evolution from President Washington to President Grant, was alone evidence
+      enough to upset Darwin.
+    why: 'Adams''s central argumentative payoff: generalizing Grant into a pre-intellectual ''force of
+      nature'' type whose elevation to the presidency makes evolutionary progress, and by extension education,
+      look like a fraud.'
+  - id: adams-education#u19-c6
+    label: c6
+    heading: A policy of drift, and Adams for sale
+    char_start: 547773
+    char_end: 548777
+    start_quote: Grant avowed from the start a policy of drift; and a policy of drift attaches only barnacles.
+    end_quote: Luck went dead against him. For once, he was fifty years in advance of his time.
+    why: 'The chapter''s closing diagnosis: Grant''s administration offers no program to attach to, and
+      Adams''s admission that he was straightforwardly ''for sale'' with no buyer closes off his reforming
+      ambitions.'
+- nn: 20
+  unit_id: ch-18-free-fight
+  note_id: adams-education-ch-18-free-fight
+  span: 548781:580345
+  chunks:
+  - id: adams-education#u20-c1
+    label: c1
+    heading: Washington's sensual spring, against Boston's chill
+    char_start: 548822
+    char_end: 550129
+    start_quote: THE old New Englander was apt to be a solitary animal, but the
+    end_quote: Few Americans were so poor as to question them.
+    why: Establishes the chapter's one unclouded pleasure — Washington's spring — as the emotional baseline
+      against which the ensuing political collapse reads as loss.
+  - id: adams-education#u20-c2
+    label: c2
+    heading: The Gold Conspiracy's impenetrable mystery
+    char_start: 552442
+    char_end: 553253
+    start_quote: The mystery that shrouded the famous, classical attempt of Jay Gould to corner gold
+    end_quote: The plea was professionally inadmissible.
+    why: Introduces the Erie/Gold Conspiracy investigation that drives the chapter's first half and shows
+      Adams's method as an amateur journalist-investigator.
+  - id: adams-education#u20-c3
+    label: c3
+    heading: 'Free fight: four friends matched in pairs'
+    char_start: 571660
+    char_end: 572881
+    start_quote: That Sumner and Hoar, the two New Englanders in great position
+    end_quote: What value had the fight in education?
+    why: States the chapter's organizing structure explicitly — Sumner-Fish and Chase-Hoar as paired duels
+      — and gives the title 'Free Fight' its literal referent.
+  - id: adams-education#u20-c4
+    label: c4
+    heading: The system of 1789 had broken down
+    char_start: 575540
+    char_end: 576211
+    start_quote: The political dilemma was as clear in 1870 as it was likely to be in 1970.
+    end_quote: the poorest in the world--the clumsiest--the most inefficient.
+    why: 'The chapter''s thesis statement: the constitutional order has died in substance while its forms
+      are patched along, the passage''s clearest resonance with World Machines'' decay/interregnum vocabulary.'
+  - id: adams-education#u20-c5
+    label: c5
+    heading: Becoming a pirate of the press
+    char_start: 579210
+    char_end: 580341
+    start_quote: Yet he shortened his spring, for he needed to get back to
+    end_quote: Under the excitement of chase he was becoming a pirate himself, and liked it.
+    why: Closes the chapter on Adams's own transformation from earnest reformer to a journalist who exploits
+      publicity mechanics for effect, the personal cost of the environment just described.
+- nn: 21
+  unit_id: ch-19-chaos
+  note_id: adams-education-ch-19-chaos
+  span: 580345:610793
+  chunks:
+  - id: adams-education#u21-c1
+    label: c1
+    heading: 'The sister''s death: "the last lesson"'
+    char_start: 587456
+    char_end: 588298
+    start_quote: The last lesson--the sum and term of education--began then.
+    end_quote: until after ten days of fiendish torture she died in convulsion.
+    why: Adams marks his sister's death as the point where experience stopped teaching gently and Nature
+      first appeared as raw, uncatalogued force.
+  - id: adams-education#u21-c2
+    label: c2
+    heading: 'Nature''s gesture: a phantasm of force'
+    char_start: 589892
+    char_end: 590959
+    start_quote: The first serious consciousness of Nature's gesture--her attitude towards life
+    end_quote: but He could not be a Person.
+    why: 'States the chapter''s central philosophical claim in full: that Nature''s violence is unreasoned
+      and unreasoning, incompatible with a personal God.'
+  - id: adams-education#u21-c3
+    label: c3
+    heading: Mont Blanc as chaos of anarchic forces
+    char_start: 591489
+    char_end: 592062
+    start_quote: For the first time in his life, Mont Blanc for a moment looked to him what it was
+    end_quote: leaving a new world to learn.
+    why: 'The book''s title concept becomes literal: even the sublime Alpine landscape briefly shows itself
+      as purposeless chaos before its usual illusions are restored.'
+  - id: adams-education#u21-c4
+    label: c4
+    heading: Ten days from peace to war
+    char_start: 592066
+    char_end: 592422
+    start_quote: On July 4, all Europe had been in peace; on July 14, Europe was
+    end_quote: 'Bismarck: himself hardly knew how he did it.'
+    why: 'The Franco-Prussian War''s outbreak is the chapter''s public-history counterpart to the private
+      catastrophe: sudden, ungoverned, and opaque even to its principal actors.'
+  - id: adams-education#u21-c5
+    label: c5
+    heading: Eliot's unanswerable logic
+    char_start: 601093
+    char_end: 601494
+    start_quote: '"But, Mr. President," urged Adams, "I know nothing about Mediaeval History."'
+    end_quote: could not meet it without overstepping his privileges.
+    why: Adams's induction into teaching hinges on a single piece of airtight non-reasoning, capturing
+      the chapter's theme that institutional reward follows no logic tied to genuine competence.
+  - id: adams-education#u21-c6
+    label: c6
+    heading: 'The begonia: showy but not useful'
+    char_start: 598501
+    char_end: 598836
+    start_quote: Here was a tour de force he had never dreamed himself equal to performing
+    end_quote: except to call him a begonia.
+    why: Adams's bitterest joke about his own unrewarded journalism crystallizes the chapter's running
+      irony that achievement and recognition never coincide.
+- nn: 22
+  unit_id: ch-20-failure
+  note_id: adams-education-ch-20-failure
+  span: 610793:642074
+  chunks:
+  - id: adams-education#u22-c1
+    label: c1
+    heading: A teacher affects eternity
+    char_start: 614005
+    char_end: 614866
+    start_quote: A parent gives life, but as parent, gives no more.
+    end_quote: history had either to be taught as such--or falsified.
+    why: 'States the moral crux of Adams''s professorship: that teaching history forces an unwanted metaphysical
+      choice with ethical consequences he cannot escape.'
+  - id: adams-education#u22-c2
+    label: c2
+    heading: Cultivating the tenth mind
+    char_start: 617317
+    char_end: 617861
+    start_quote: The number of students whose minds were
+    end_quote: though necessarily at the expense of the other nine.
+    why: Describes the concrete, elitist pedagogical experiment Adams ran and explicitly whom he sacrificed
+      to run it.
+  - id: adams-education#u22-c3
+    label: c3
+    heading: Self-assessed failure at 1877
+    char_start: 622600
+    char_end: 623275
+    start_quote: The uses of adversity are beyond measure strange.
+    end_quote: he should be sore at his failure.
+    why: Adams's own dated verdict on the professorship, the passage the chapter's title and argument
+      hinge on.
+  - id: adams-education#u22-c4
+    label: c4
+    heading: Meeting Clarence King at Estes Park
+    char_start: 636188
+    char_end: 636790
+    start_quote: One of these men was Clarence King on his way up to the camp.
+    end_quote: and talked till far towards dawn.
+    why: The chance encounter that introduces Clarence King, a figure who recurs through the rest of the
+      book, framed by Adams as an instant, unchosen friendship.
+  - id: adams-education#u22-c5
+    label: c5
+    heading: King as the fulfilled American type
+    char_start: 637905
+    char_end: 638591
+    start_quote: A new friend is always a miracle, but at thirty-three years
+    end_quote: the same obstacles to overcome.
+    why: Adams's retrospective elevation of King into a symbolic counterpart, converging the American
+      west and the European east in one friendship.
+  - id: adams-education#u22-c6
+    label: c6
+    heading: Closing the first movement
+    char_start: 641717
+    char_end: 642070
+    start_quote: No more education was possible for either man.
+    end_quote: Henceforth, he went on, submissive.
+    why: The chapter's final lines, marking the deliberate close of the book's opening movement before
+      the twenty-year narrative gap.
+- nn: 23
+  unit_id: ch-21-twenty-years-after
+  note_id: adams-education-ch-21-twenty-years-after
+  span: 642074:677739
+  chunks:
+  - id: adams-education#u23-c1
+    label: c1
+    heading: The book's thesis on education, restated
+    char_start: 642127
+    char_end: 643715
+    start_quote: this is a story of education, not of adventure!
+    end_quote: compelled to waste three-fourths of their energy in doing it.
+    why: States the book's operating thesis -- that education is about training a mind to react well,
+      not accumulating facts -- right before the narrative jumps twenty years forward to test that claim
+      against Adams's own life.
+  - id: adams-education#u23-c2
+    label: c2
+    heading: Refusing a new education
+    char_start: 647439
+    char_end: 648465
+    start_quote: The future attracted him less. Lying there for a week he reflected
+    end_quote: leaving no stock to graft on.
+    why: Marks Adams's explicit refusal of further education on his return voyage, framing the rest of
+      the chapter as denouement rather than discovery.
+  - id: adams-education#u23-c3
+    label: c3
+    heading: The Teutonic and the next term
+    char_start: 651881
+    char_end: 652995
+    start_quote: He had not crossed the Atlantic for a dozen years
+    end_quote: one might double scale and speed indefinitely without passing bounds.
+    why: Adams turns the Atlantic crossing into a proto-quantitative extrapolation of technological acceleration,
+      previewing the 'law of acceleration' the book's closing chapters develop explicitly.
+  - id: adams-education#u23-c4
+    label: c4
+    heading: Kipling and the old conundrum
+    char_start: 653476
+    char_end: 654802
+    start_quote: Kipling and the American were not one, but two, and could not be glued together.
+    end_quote: Genius has to pay itself that unwilling self-respect.
+    why: Names the persistent, unresolved split between American and European identity that recurs throughout
+      Adams's memoir, here triggered by his shipboard encounter with Kipling.
+  - id: adams-education#u23-c5
+    label: c5
+    heading: An election nobody wanted to win
+    char_start: 656128
+    char_end: 656637
+    start_quote: The two candidates were singular persons, of whom it was the common saying
+    end_quote: I prefer to look on at his proceedings from the safe summit of some neighboring hill.
+    why: Captures the affectless, low-stakes character of Gilded Age presidential politics as Adams experienced
+      it -- an election neither side particularly wanted to win.
+  - id: adams-education#u23-c6
+    label: c6
+    heading: The Rock Creek memorial as mirror
+    char_start: 674653
+    char_end: 675566
+    start_quote: The interest of the figure was not in its meaning, but in the response of the observer.
+    end_quote: The American layman had lost sight of ideals; the American priest had lost sight of faith.
+    why: Adams's meditation on the Rock Creek memorial shows the statue functioning as a pure mirror for
+      the viewer's own belief or its absence, becoming the chapter's central image of a society that has
+      lost a shared symbolic language.
+- nn: 24
+  unit_id: ch-22-chicago
+  note_id: adams-education-ch-22-chicago
+  span: 677739:707710
+  chunks:
+  - id: adams-education#u24-c1
+    label: c1
+    heading: The Panic as force without an author
+    char_start: 692708
+    char_end: 693460
+    start_quote: When Adams went to his bank to draw a hundred dollars of his own money on deposit,
+    end_quote: an emotion--a panic--that meant nothing.
+    why: States the chapter's core diagnostic move -- reading the 1893 Panic as an anonymous mechanical
+      force rather than anyone's decision, the same lens Adams then turns on Chicago.
+  - id: adams-education#u24-c2
+    label: c2
+    heading: 'Brooks Adams''s law of history: civilization follows the exchanges'
+    char_start: 694526
+    char_end: 695414
+    start_quote: Brooks had discovered or developed a law of history that civilization followed the
+    end_quote: and Henry made note of it for study.
+    why: Brooks Adams's exchange-driven theory of historical instability gives Henry a systemic, non-biographical
+      account of causation that anticipates the chapter's reading of Chicago and the gold-standard vote
+      alike.
+  - id: adams-education#u24-c3
+    label: c3
+    heading: 'The Exposition as Babel: a rupture in historical continuity'
+    char_start: 696171
+    char_end: 696861
+    start_quote: The Exposition itself defied philosophy.
+    end_quote: had ever ruffled the surface of the Lakes.
+    why: Captures Adams's first reaction to the Fair -- that its bare existence, not any exhibit, was
+      the astonishing fact -- and frames the Exposition as an open question about whether American civilization
+      is still capable of choosing form.
+  - id: adams-education#u24-c4
+    label: c4
+    heading: 'The dynamo: did it pull or did it push?'
+    char_start: 701249
+    char_end: 701704
+    start_quote: One lingered long among the dynamos, for they were
+    end_quote: expected answers and was astonished to get none.
+    why: 'The chapter''s center of gravity: the historian''s vocabulary fails before the dynamo, the direct
+      seed of the book''s later Dynamo-and-Virgin meditation on where technological force comes from and
+      where it is going.'
+  - id: adams-education#u24-c5
+    label: c5
+    heading: Mourning the eighteenth century
+    char_start: 704720
+    char_end: 705193
+    start_quote: He had stood up for his eighteenth century, his Constitution
+    end_quote: become little better than a crank.
+    why: Adams's personal elegy for eighteenth-century republicanism, admitted to be obsolete even as
+      he keeps defending it out of habit rather than conviction.
+  - id: adams-education#u24-c6
+    label: c6
+    heading: Crossing the chasm into the capitalistic machine
+    char_start: 706889
+    char_end: 707516
+    start_quote: Such great revolutions commonly
+    end_quote: controlling the new energies that America adored.
+    why: Names the 1893 transition explicitly as the triumph of 'the capitalistic system with all its
+      necessary machinery,' the chapter's closing image of one infrastructural order replacing another.
+- nn: 25
+  unit_id: ch-23-silence
+  note_id: adams-education-ch-23-silence
+  span: 707710:739368
+  chunks:
+  - id: adams-education#u25-c1
+    label: c1
+    heading: 'Education without capital: King versus Whitney'
+    char_start: 711790
+    char_end: 713261
+    start_quote: Barely forty years had passed since all these men started in a bunch to race for power
+    end_quote: Whitney, who was no better educated than Adams, had achieved phenomenal success.
+    why: 'States the chapter''s opening paradox directly: neither King''s ideal scientific education nor
+      Whitney''s ordinary one reliably predicted success.'
+  - id: adams-education#u25-c2
+    label: c2
+    heading: Statistics and the failure of positivist certainty
+    char_start: 718547
+    char_end: 719442
+    start_quote: Taking for granted that the alternative to art was arithmetic, he plunged deep into statistics
+    end_quote: The method did not result in faith.
+    why: Adams's attempt to find a firmer ground than history in quantification collapses when even the
+      statisticians lack confidence in their own figures.
+  - id: adams-education#u25-c3
+    label: c3
+    heading: 'The human factor: Pteraspis and the persistence of massacre'
+    char_start: 720370
+    char_end: 721617
+    start_quote: The human factor was worse still.
+    end_quote: The robbery might be natural and inevitable, but the murder seemed altogether archaic.
+    why: 'The chapter''s bleakest claim: continuous massacre and war show that human conduct beneath the
+      surface of ''progress'' is unchanged since antiquity.'
+  - id: adams-education#u25-c4
+    label: c4
+    heading: Normandy through Mrs. Lodge's eyes
+    char_start: 725257
+    char_end: 725753
+    start_quote: Where Mrs. Lodge summoned, one followed with gratitude
+    end_quote: through the medium of younger eyes and fresher minds.
+    why: The pivotal, almost accidental moment that breaks Adams's German-lecture-room historiography
+      and seeds the later medieval study.
+  - id: adams-education#u25-c5
+    label: c5
+    heading: The Pursuit of Ignorance in Silence
+    char_start: 735394
+    char_end: 736157
+    start_quote: Although none of these great geniuses had shown faith in silence as a cure for their
+      own ills or ignorance
+    end_quote: and so the pilgrimage began anew!
+    why: Adams's own coinage for the chapter's governing irony -- silence as society's method for shelving
+      its old men -- and the hinge into the chapter's second half of travel.
+  - id: adams-education#u25-c6
+    label: c6
+    heading: News of the Maine at Karnak
+    char_start: 738053
+    char_end: 738799
+    start_quote: Adams cared little to see Egypt again, but he was glad to see Hay
+    end_quote: One lay in the sands and watched the expression of the Sphinx.
+    why: Closes the chapter and the unit on the news that triggers the Spanish-American War, framed through
+      Adams's studied silence and deep time.
+- nn: 26
+  unit_id: ch-24-indian-summer
+  note_id: adams-education-ch-24-indian-summer
+  span: 739368:773121
+  chunks:
+  - id: adams-education#u26-c1
+    label: c1
+    heading: Indian summer of a diplomatic life
+    char_start: 739411
+    char_end: 739984
+    start_quote: The summer of the Spanish War began the Indian summer of life
+    end_quote: singularly interesting to the last survivor of the Legation of 1861.
+    why: 'Establishes the chapter''s title and elegiac frame: Adams at sixty savoring a hard-won historical
+      vantage point as the last living witness of the 1861 Legation.'
+  - id: adams-education#u26-c2
+    label: c2
+    heading: Chaos cannot be taught
+    char_start: 742639
+    char_end: 743065
+    start_quote: Never before had Adams been able to discern the working of law
+    end_quote: left him a little cold towards the other diplomatic results of the war.
+    why: States the chapter's epistemological hinge — that Adams's sense of historical 'law' is a personal
+      proof, not a teachable method, since chaos cannot be taught.
+  - id: adams-education#u26-c3
+    label: c3
+    heading: Hay on a Senate that dishes every treaty
+    char_start: 765304
+    char_end: 766591
+    start_quote: A treaty of peace, in any normal state of things," said Hay, "ought to be ratified
+    end_quote: Is it worth while--for me--to keep up this useless labor?
+    why: Hay's own first-hand account, in dialogue, of why the Senate had made treaty-making nearly impossible
+      — the book's most concrete political complaint in the unit.
+  - id: adams-education#u26-c4
+    label: c4
+    heading: 'La Farge: ''Adams, you reason too much!'''
+    char_start: 756287
+    char_end: 757088
+    start_quote: One was never quite sure of his whole meaning until too late
+    end_quote: Adams had never met a perfectly trained mind.
+    why: Characterizes La Farge's indirect, nuance-driven mind against Adams's Bostonian reasoning, a
+      dialectic that recurs across the book.
+  - id: adams-education#u26-c5
+    label: c5
+    heading: The Boer War as inherited family grievance
+    char_start: 761231
+    char_end: 761678
+    start_quote: He had been taught from childhood, even in England, that his forbears
+    end_quote: whatever might be the case with George III.
+    why: Shows Adams's politics as inseparable from ancestral identity — the Boer War reopens an argument
+      he feels his great-grandfather already settled in 1776.
+  - id: adams-education#u26-c6
+    label: c6
+    heading: Kepler, Newton, and a formula for Congress
+    char_start: 769674
+    char_end: 770237
+    start_quote: If Kepler and Newton could take liberties with the sun and moon
+    end_quote: he could look only for derision at best.
+    why: 'The unit''s pivotal turn: Adams resolves to seek a mathematical law of historical attraction,
+      the germ of the dynamic theory of history that dominates the book''s later chapters.'
+- nn: 27
+  unit_id: ch-25-the-dynamo-and-the-virgin
+  note_id: adams-education-ch-25-the-dynamo-and-the-virgin
+  span: 773121:796277
+  chunks:
+  - id: adams-education#u27-c1
+    label: c1
+    heading: The dynamo becomes a symbol of infinity
+    char_start: 775609
+    char_end: 776915
+    start_quote: Then he showed his scholar the great hall of dynamos, and
+    end_quote: the dynamo was not so human as some, but it was the most expressive.
+    why: 'The chapter''s most famous move: the dynamo displaces the Cross as the object of quasi-religious
+      awe, given by "inherited instinct".'
+  - id: adams-education#u27-c2
+    label: c2
+    heading: Langley and the anarchical new rays
+    char_start: 777339
+    char_end: 777972
+    start_quote: The forces were interchangeable if not reversible, but
+    end_quote: his Science. The force was wholly new.
+    why: Shows even the era's master physicist disowning the new forces as parricidal and occult, framing
+      radium as a rupture with all prior science.
+  - id: adams-education#u27-c3
+    label: c3
+    heading: Translating rays into faith
+    char_start: 781893
+    char_end: 782769
+    start_quote: The historian was thus reduced to his last resources.
+    end_quote: though the rays were unborn and the women were dead.
+    why: 'States Adams''s governing method: after every causal history fails, force felt as attraction
+      becomes the one measure that lets Cross, dynamo, and Virgin be compared.'
+  - id: adams-education#u27-c4
+    label: c4
+    heading: The Virgin as animated dynamo, lost to America
+    char_start: 783377
+    char_end: 784388
+    start_quote: This problem in dynamics gravely perplexed an American
+    end_quote: all she needed was to be fecund.
+    why: Names the chapter's central thesis — the Woman as supreme generative force — and America's Puritan-driven
+      amnesia toward it, fig-leaves and all.
+  - id: adams-education#u27-c5
+    label: c5
+    heading: 'St. Gaudens: channel of taste, not force'
+    char_start: 790663
+    char_end: 791616
+    start_quote: Yet in mind and person St. Gaudens was a survival of the 1500s
+    end_quote: to St. Gaudens she remained as before a channel of taste.
+    why: The Amiens set-piece where two sympathetic men before the same cathedral split force from taste,
+      dramatizing how thoroughly the old energy has drained out of American-trained perception.
+  - id: adams-education#u27-c6
+    label: c6
+    heading: The Virgin as the greatest force the Western world ever felt
+    char_start: 792907
+    char_end: 793944
+    start_quote: Yet in mechanics, whatever the mechanicians might think, both
+    end_quote: its complex source and shifting channels; its values, equivalents, conversions.
+    why: The chapter's closing thesis statement, explicitly defining the historian's task as tracing force's
+      "source and shifting channels" rather than narrating cause and effect.
+- nn: 28
+  unit_id: ch-26-twilight
+  note_id: adams-education-ch-26-twilight
+  span: 796277:820679
+  chunks:
+  - id: adams-education#u28-c1
+    label: c1
+    heading: Society prices Ming vases above the fate of China
+    char_start: 796694
+    char_end: 798138
+    start_quote: Of all branches of education, the science of gauging people and events by their relative
+      importance defies study most insolently
+    end_quote: The value of a Ming vase was more serious than universal war.
+    why: 'States the chapter''s opening paradox: society''s price mechanism inverts real historical significance,
+      dwarfing the Boxer Rebellion crisis beneath the market value of royal curios.'
+  - id: adams-education#u28-c2
+    label: c2
+    heading: Hay saves China alone and "History broke in halves"
+    char_start: 798860
+    char_end: 799889
+    start_quote: When Hay suddenly ignored European leadership, took the lead himself, rescued the Legations
+      and saved China
+    end_quote: the American blushed to be told of his submissions in the past. History broke in halves.
+    why: The chapter's central diplomatic event — Hay's unilateral rescue of the Legations, which Adams
+      frames as an epochal rupture in American standing.
+  - id: adams-education#u28-c3
+    label: c3
+    heading: The historian's twilight wilderness
+    char_start: 805845
+    char_end: 806274
+    start_quote: To the practical man, such an attempt is idiotic, and probably the practical man is in
+      the right to-day
+    end_quote: leading further and further into a wilderness where twilight is short and the shadows are
+      dense.
+    why: 'Names the chapter''s title image directly: the historian''s solitary, decades-ahead triangulation
+      as against the practical man''s short horizon.'
+  - id: adams-education#u28-c4
+    label: c4
+    heading: King drops out; the three friends near the end
+    char_start: 806275
+    char_end: 806822
+    start_quote: Already Hay literally staggered in his tracks for weariness. More worn than he, Clarence
+      King dropped.
+    end_quote: Non doles, Paete! One is ashamed of it even in the acting.
+    why: 'The chapter''s emotional pivot: Clarence King''s collapse and the shared, unspoken recognition
+      among Adams, Hay, and King that death is near.'
+  - id: adams-education#u28-c5
+    label: c5
+    heading: Unity always wins, yet complexity keeps deepening
+    char_start: 811049
+    char_end: 812061
+    start_quote: All one's life, one had struggled for unity, and unity had always won.
+    end_quote: science itself warned him to begin it again from the beginning.
+    why: States the chapter's governing paradox in Adams's own terms — the seed of his later dynamic theory
+      of history, and the clearest World-Machines resonance in the unit.
+  - id: adams-education#u28-c6
+    label: c6
+    heading: '"Larger synthesis is suicide"'
+    char_start: 818790
+    char_end: 819504
+    start_quote: Yet the admission seemed close at hand.
+    end_quote: a point must always be soon reached where larger synthesis is suicide.
+    why: Adams's explicit epistemological verdict against forcing scientific or historical multiplicity
+      into a single unifying theory.
+- nn: 29
+  unit_id: ch-27-teufelsdrockh
+  note_id: adams-education-ch-27-teufelsdrockh
+  span: 820679:847772
+  chunks:
+  - id: adams-education#u29-c1
+    label: c1
+    heading: Paris as chaos to be kept pace with
+    char_start: 820718
+    char_end: 822484
+    start_quote: INEVITABLE Paris beckoned, and resistance became more and more
+    end_quote: Only the young have time to linger in the rear.
+    why: 'Opens the chapter by establishing Adams''s method for 1901: not mastering Paris''s multiplicity
+      but racing to stay in front of it.'
+  - id: adams-education#u29-c2
+    label: c2
+    heading: The larger synthesis of order and anarchy
+    char_start: 828263
+    char_end: 829026
+    start_quote: Adams proclaimed that in the last synthesis, order and anarchy
+    end_quote: reaching the largest synthesis in its ultimate contradiction.
+    why: States outright the chapter's private philosophy -- order and anarchy resolving into chaos --
+      that frames everything Adams observes on the trip.
+  - id: adams-education#u29-c3
+    label: c3
+    heading: Russia as inert, radium-like residuum
+    char_start: 833460
+    char_end: 834632
+    start_quote: Studied in the dry light of conservative Christian anarchy, Russia
+    end_quote: 'Gorky was more than enough: Kropotkin answered every purpose.'
+    why: The chapter's central physics-of-civilization image, casting Russia as pure inertia rather than
+      a political or moral category.
+  - id: adams-education#u29-c4
+    label: c4
+    heading: The new Teufelsdrockh at Hammerfest
+    char_start: 841582
+    char_end: 842091
+    start_quote: As one approached the end--the spot where, seventy years before, a futile
+    end_quote: glared at the permanent electric lights of Hammerfest.
+    why: The chapter's titular set-piece, explicitly naming the Carlylean allusion the chapter title borrows
+      and staging Adams as a second, electrically-interrupted Teufelsdrockh.
+  - id: adams-education#u29-c5
+    label: c5
+    heading: McKinley's death outracing the sun
+    char_start: 842234
+    char_end: 843292
+    start_quote: At best, a week in these dim Northern seas, without means of
+    end_quote: The electro-dynamo-social universe worked better than the sun.
+    why: 'Adams''s sharpest single claim about acceleration: assassination news reaching him by telegraph
+      inside the Arctic Circle faster than natural light could explain.'
+  - id: adams-education#u29-c6
+    label: c6
+    heading: The empire of Coal versus Russian inertia
+    char_start: 847011
+    char_end: 847409
+    start_quote: From Hammerfest to Cherbourg on one shore of the ocean--from Halifax to
+    end_quote: resting on the eternal law of inertia, held its own.
+    why: 'Closes the chapter by naming the chapter''s real antagonist pairing outright: one continuous
+      industrial empire of Coal set against Russia''s older power of inertia.'
+- nn: 30
+  unit_id: ch-28-the-height-of-knowledge
+  note_id: adams-education-ch-28-the-height-of-knowledge
+  span: 847772:867336
+  chunks:
+  - id: adams-education#u30-c1
+    label: c1
+    heading: Clarence King's death and Hay's refrain
+    char_start: 848976
+    char_end: 849426
+    start_quote: '"There you have it in the face!" he said--"the best and brightest man'
+    end_quote: alone and uncared-for, in a California tavern. Ca vous amuse, la vie?
+    why: Personalizes the chapter's opening theme of tragedy absorbed without pause, through Hay's own
+      eulogy for King.
+  - id: adams-education#u30-c2
+    label: c2
+    heading: Power is poison
+    char_start: 852362
+    char_end: 853225
+    start_quote: Power is poison. Its effect on Presidents had been always tragic, chiefly as an
+    end_quote: must have limit somewhere in face of the control of the infinite.
+    why: States the chapter's central thesis about power's corrosive effect on any mind, however well-balanced.
+  - id: adams-education#u30-c3
+    label: c3
+    heading: 'Seneca and Nero: a friend in power is a friend lost'
+    char_start: 851313
+    char_end: 851724
+    start_quote: the wisest courtier that ever lived--Lucius Seneca himself--must have remained in some
+      shade
+    end_quote: a friend in power was a friend lost--a fact very much worth insisting upon
+    why: Generalizes Adams's and Hay's loss of intimacy with Roosevelt into an archetypal parable of the
+      tutor destroyed by his powerful pupil.
+  - id: adams-education#u30-c4
+    label: c4
+    heading: Modern politics as a struggle of forces
+    char_start: 859326
+    char_end: 860447
+    start_quote: The work of domestic progress is done by masses of mechanical power--steam, electric,
+    end_quote: the men tend to succumb to their own motive forces.
+    why: Adams's clearest statement here of politics as impersonal mechanical infrastructure rather than
+      personal agency, directly resonant with the world-machine concept.
+  - id: adams-education#u30-c5
+    label: c5
+    heading: The height of knowledge is the depth of ignorance
+    char_start: 866525
+    char_end: 867332
+    start_quote: Never had the proportions of his ignorance looked so appalling.
+    end_quote: Only by comparison of their ignorance could the student measure his own.
+    why: Delivers the chapter's titular irony and its closing epistemological verdict.
+  - id: adams-education#u30-c6
+    label: c6
+    heading: Boston's fragmenting consensus, held by money alone
+    char_start: 854827
+    char_end: 855362
+    start_quote: The old ones were quite difficult enough--State Street and the banks exacted one stamp
+    end_quote: until money had all it could do to hold the machine together.
+    why: Diagnoses New England's social order as a coalition of competing factions kept together only
+      by economic force, not shared standards.
+- nn: 31
+  unit_id: ch-29-the-abyss-of-ignorance
+  note_id: adams-education-ch-29-the-abyss-of-ignorance
+  span: 867336:887062
+  chunks:
+  - id: adams-education#u31-c1
+    label: c1
+    heading: 'Force through history: occult attraction to Pascal''s ennui'
+    char_start: 869635
+    char_end: 870748
+    start_quote: This was the work of the dynamo and the Virgin of Chartres.
+    end_quote: and would fill the mind with its venom.
+    why: Establishes the chapter's central object — the unresolved mystery of Force — and surveys history's
+      successive, inadequate explanations for it.
+  - id: adams-education#u31-c2
+    label: c2
+    heading: The Virgin's reply at Chartres
+    char_start: 871426
+    char_end: 871882
+    start_quote: My dear outcast, what is it you seek?
+    end_quote: you see how I am surrounded by the masters of the schools! Ask them!
+    why: The Virgin's own voice stakes her claim to Force as simple, personal Love and hands off the rest
+      to the Schools, setting up the Unity/Multiplicity split that structures the chapter.
+  - id: adams-education#u31-c3
+    label: c3
+    heading: 'St. Thomas: Love as Unity, the Schools as Multiplicity'
+    char_start: 872377
+    char_end: 872900
+    start_quote: '"To me," said St. Thomas, "Christ and the Mother are one'
+    end_quote: give it Form, Unity, and Motive.
+    why: Supplies the chapter's clearest formal statement of the Unity/Multiplicity division that Adams
+      will later map onto his own century.
+  - id: adams-education#u31-c4
+    label: c4
+    heading: 'The kinetic theory of gases: Unity is Multiplicity'
+    char_start: 878491
+    char_end: 878961
+    start_quote: Thus, unless one mistook the meaning of motion, which might
+    end_quote: Why was one to be forced to affirm it?
+    why: The argument's hinge and the source of the chapter's title image — science's own "final synthesis"
+      collapses Unity into Multiplicity.
+  - id: adams-education#u31-c5
+    label: c5
+    heading: The mind as an acrobat over the abyss
+    char_start: 884529
+    char_end: 885177
+    start_quote: The mind, like the body, kept its unity unless it happened to lose balance
+    end_quote: crossing a chasm on a slack-rope, and commonly breaking his neck.
+    why: Restates the Unity/Multiplicity problem as a fact about consciousness itself, via the chapter's
+      most vivid image of psychological precarity.
+  - id: adams-education#u31-c6
+    label: c6
+    heading: Two books as two points of relation
+    char_start: 886209
+    char_end: 887027
+    start_quote: Eight or ten years of study had led Adams to think he might use the century 1150-1250
+    end_quote: subject to correction from any one who should know better.
+    why: 'The chapter''s resolution: unable to answer Unity vs. Multiplicity philosophically, Adams converts
+      it into the fixed-point method for his two-book historiographical project.'
+- nn: 32
+  unit_id: ch-30-vis-inertiae
+  note_id: adams-education-ch-30-vis-inertiae
+  span: 887062:913372
+  chunks:
+  - id: adams-education#u32-c1
+    label: c1
+    heading: 'Russia as glacier: the central figure of vis inertiae'
+    char_start: 896751
+    char_end: 897218
+    start_quote: The Atlantic would have to deal with a vast continental mass of inert motion, like a
+    end_quote: What was movement of inertia, and what its laws?
+    why: 'This is the chapter''s title image made explicit: Russia as an unredirectable glacial mass,
+      and the question -- vis nova against vis inertiae -- that the rest of the chapter tries to answer.'
+  - id: adams-education#u32-c2
+    label: c2
+    heading: From the dictionary of physics to a theory of mind
+    char_start: 897420
+    char_end: 898261
+    start_quote: The dictionary said that inertia was a property of matter, by which matter
+    end_quote: but the greater the bulk to move, the greater must be the force to accelerate or deflect
+      it.
+    why: The moment Adams explicitly imports mechanical-physics vocabulary into historiography, the seed
+      of his book's later formal "Dynamic Theory of History."
+  - id: adams-education#u32-c3
+    label: c3
+    heading: 'Ranking the two inertias: race and sex'
+    char_start: 898694
+    char_end: 899957
+    start_quote: Race-inertia seemed to be fairly constant, and made the chief trouble in the Russian
+      future.
+    end_quote: American woman had interest infinitely greater than that of any race whatever, Russian
+      or Chinese, Asiatic or African.
+    why: 'Adams''s own statement of the chapter''s real stakes: he ranks the inertia of sex above the
+      inertia of race as the more vital American problem.'
+  - id: adams-education#u32-c4
+    label: c4
+    heading: '"The American man is a failure! You are all failures!"'
+    char_start: 902024
+    char_end: 902753
+    start_quote: '"The American man is a failure! You are all failures!" he said.'
+    end_quote: he could not lay his hands on another half-dozen their equals.
+    why: The chapter's central argument staged as social comedy at a real dinner party, with named friends
+      turning Adams's diagnosis back on the men.
+  - id: adams-education#u32-c5
+    label: c5
+    heading: Set free like Clerk Maxwell's perfect gas
+    char_start: 905465
+    char_end: 906567
+    start_quote: The woman had been set free--volatilized like Clerk Maxwell's perfect gas;
+    end_quote: All these new women had been created since 1840; all were to show their meaning before
+      1940.
+    why: The chapter's most vivid image of the American woman's expansion without direction -- freed in
+      bulk but, in Adams's account, still without a field to occupy.
+  - id: adams-education#u32-c6
+    label: c6
+    heading: 'Closing image: the horseshoe crab in Quincy Bay'
+    char_start: 913099
+    char_end: 913368
+    start_quote: One was almost glad to act the part of horseshoe crab in Quincy Bay,
+    end_quote: with the gar-fish and the shark, unable to change.
+    why: The chapter's closing retreat from prophecy into geological patience, refusing to resolve whether
+      sex-inertia can ever be redirected.
+- nn: 33
+  unit_id: ch-31-the-grammar-of-science
+  note_id: adams-education-ch-31-the-grammar-of-science
+  span: 913372:938589
+  chunks:
+  - id: adams-education#u33-c1
+    label: c1
+    heading: Gibbs's endorsement sends Adams to Pearson
+    char_start: 913746
+    char_end: 914495
+    start_quote: By chance it happened that Raphael Pumpelly helped the winds
+    end_quote: what Karl Pearson could have taught Willard Gibbs.
+    why: 'Establishes the pretext for the whole chapter: Adams reads the Grammar of Science only because
+      Willard Gibbs, a mind he reveres, found help in it.'
+  - id: adams-education#u33-c2
+    label: c2
+    heading: 'Pearson''s dictum: Chaos is the law of nature'
+    char_start: 917226
+    char_end: 918317
+    start_quote: Order and reason, beauty and benevolence, are characteristics and
+    end_quote: Chaos was the law of nature; Order was the dream of man.
+    why: The chapter's thesis statement in Pearson's own words, restricting science to sense-impressions
+      and declaring order a human invention rather than a fact of nature.
+  - id: adams-education#u33-c3
+    label: c3
+    heading: Curie's radium as metaphysical bomb
+    char_start: 920296
+    char_end: 920683
+    start_quote: the man of science must have been sleepy indeed who did not jump
+    end_quote: for the unknowable was known.
+    why: Names the empirical event - radium - that forces the admission of chaos beyond the senses, anchoring
+      the chapter's abstract argument in a dated laboratory fact.
+  - id: adams-education#u33-c4
+    label: c4
+    heading: 'Poincare: geometry as convenience, not truth'
+    char_start: 927300
+    char_end: 927788
+    start_quote: In short, the mind has the faculty of creating symbols
+    end_quote: Euclidian Geometry is, and will remain, the most convenient.
+    why: France's most rigorous scientist reduces even mathematical truth to convention, the chapter's
+      most extreme statement of relativism.
+  - id: adams-education#u33-c5
+    label: c5
+    heading: '1900: the continuity snapped'
+    char_start: 931027
+    char_end: 931336
+    start_quote: Its first violent acceleration in historical times had ended
+    end_quote: Only in 1900, the continuity snapped.
+    why: The chapter's turning-point sentence, dating the rupture between the old lawful universe and
+      the new multiverse with unusual precision.
+  - id: adams-education#u33-c6
+    label: c6
+    heading: The pearl oyster's self-made universe
+    char_start: 933519
+    char_end: 933888
+    start_quote: man's mind had behaved like a young pearl oyster, secreting its universe
+    end_quote: he achieved it, and justly thought it a work of art.
+    why: The chapter's closing metaphor reframes every scientific Unity - Newton's, Kelvin's, even Pearson's
+      craving for order - as a psychological artifact the mind builds and loves rather than discovers.
+- nn: 34
+  unit_id: ch-32-vis-nova
+  note_id: adams-education-ch-32-vis-nova
+  span: 938589:961880
+  chunks:
+  - id: adams-education#u34-c1
+    label: c1
+    heading: Europe's conspiracy of silence over the coming war
+    char_start: 939231
+    char_end: 939864
+    start_quote: Manchuria knew every step into war; Japan had completed every
+    end_quote: professed to know directly from the Winter Palace that there would be no war.
+    why: 'Establishes the chapter''s opening data-point: concealed diplomatic inertia as itself a measurable
+      historical force, set against the coming Russo-Japanese War.'
+  - id: adams-education#u34-c2
+    label: c2
+    heading: Roosevelt's unguarded candor at the White House supper
+    char_start: 943532
+    char_end: 943877
+    start_quote: he said all that he thought about Russians and Japanese
+    end_quote: '"I could do it myself; I could stop it to-morrow!"'
+    why: Gives Adams's contrasting case of visible, undisguised political force against Russian and European
+      secrecy.
+  - id: adams-education#u34-c3
+    label: c3
+    heading: The new American as servant of the powerhouse
+    char_start: 947783
+    char_end: 948325
+    start_quote: The new American showed his parentage proudly; he was the child of steam
+    end_quote: was the servant of the Church, and the features would follow the parentage.
+    why: States outright the chapter's central historical claim that steam-power now organizes American
+      life as totally as the Church organized the twelfth century, the book's dynamo/Virgin dualism recast
+      as civilizational infrastructure.
+  - id: adams-education#u34-c4
+    label: c4
+    heading: The automobile as instrument for measuring the Virgin's force
+    char_start: 953263
+    char_end: 953794
+    start_quote: He had set aside the summer for study of the Virgin, not as a sentiment but as a motive
+      power, which
+    end_quote: as she controlled the seeker of history.
+    why: 'Makes explicit Adams''s governing method for the second half of the chapter: treating devotion
+      to the Virgin as a literal, quantifiable physical force akin to gravitation.'
+  - id: adams-education#u34-c5
+    label: c5
+    heading: Plehve's assassination read against the Virgin's glass
+    char_start: 959234
+    char_end: 959897
+    start_quote: Martyrs, murderers, Caesars, saints and assassins--half in glass
+    end_quote: but which was he--the murderer or the murdered?
+    why: The chapter's turning point, where the collision of medieval sanctity and contemporary political
+      violence collapses Adams's detached force-measurement into vertigo and moral crisis.
+  - id: adams-education#u34-c6
+    label: c6
+    heading: Resolving to build a Dynamic Theory of History
+    char_start: 961022
+    char_end: 961876
+    start_quote: The old formulas had failed, and a new one had to be made, but, after all, the
+    end_quote: to shape after his own needs the values of a Dynamic Theory of History.
+    why: 'The chapter''s stated payoff and hinge into the book''s next movement: Adams''s explicit decision
+      to construct his own formula of history rather than rely on inherited ones.'
+- nn: 35
+  unit_id: ch-33-a-dynamic-theory-of-history
+  note_id: adams-education-ch-33-a-dynamic-theory-of-history
+  span: 961880:991932
+  chunks:
+  - id: adams-education#u35-c1
+    label: c1
+    heading: The theory's founding definition of Force and Progress
+    char_start: 961934
+    char_end: 962240
+    start_quote: A DYNAMIC theory, like most theories, begins by begging the
+    end_quote: so is a mathematical point, though without dimensions or known existence.
+    why: 'States the chapter''s entire premise in one breath: Progress redefined as economy of Forces,
+      with man himself classed as merely one force among others.'
+  - id: adams-education#u35-c2
+    label: c2
+    heading: Man as spider captured by nature's forces
+    char_start: 962855
+    char_end: 963949
+    start_quote: For convenience as an image, the theory may liken man to a
+    end_quote: all these forces formed his thought, induced his action, and even shaped his figure.
+    why: 'The chapter''s controlling image: man does not master force, he is passively formed by fire,
+      water, animals, and grain acting on him.'
+  - id: adams-education#u35-c3
+    label: c3
+    heading: Rome torn apart by excess of force, not its absence
+    char_start: 970417
+    char_end: 971239
+    start_quote: A dynamic law requires that two masses--nature and man--must go on
+    end_quote: It was induced by its dynamic necessities to economize the gods.
+    why: Adams's clearest statement that civilizational collapse is mechanical excess, not decline — the
+      seed of a Dawn/Day/Dusk-style reading of Rome's fall.
+  - id: adams-education#u35-c4
+    label: c4
+    heading: Constantine's Cross as an overcapitalized trust
+    char_start: 971601
+    char_end: 972622
+    start_quote: The empire loudly asserted its motive.
+    end_quote: using the Cross as a train of artillery, which, to his mind, it was.
+    why: Adams's most audacious metaphor, collapsing religion, capital, and military force into one act
+      of institutional capture via the Edict of Milan.
+  - id: adams-education#u35-c5
+    label: c5
+    heading: Bacon reverses the relation of thought to force
+    char_start: 983524
+    char_end: 984396
+    start_quote: This persistence of thought-inertia is the leading idea of
+    end_quote: unity must be left to shift for itself.
+    why: Names the single methodological inversion Adams credits for all of modern science, the chapter's
+      hinge between the old and new dynamic order.
+  - id: adams-education#u35-c6
+    label: c6
+    heading: The acceleration culminates in supersensual forces by 1900
+    char_start: 989206
+    char_end: 989465
+    start_quote: The stupendous acceleration after 1800 ended in 1900 with the
+    end_quote: a priest of Isis before the Cross of Christ.
+    why: The chapter's forward-looking payoff and closest approach to a dated, falsifiable claim about
+      force outrunning human comprehension.
+- nn: 36
+  unit_id: ch-34-a-law-of-acceleration
+  note_id: adams-education-ch-34-a-law-of-acceleration
+  span: 991932:1012050
+  chunks:
+  - id: adams-education#u36-c1
+    label: c1
+    heading: 'The dynamic theory: history as accelerating mass'
+    char_start: 992249
+    char_end: 992700
+    start_quote: The image needed here is that of a new centre, or
+    end_quote: reducible to this formula if we knew the facts.
+    why: States the chapter's central method — treating history as a physical system of accelerating attraction
+      — the thesis everything else in the chapter tests.
+  - id: adams-education#u36-c2
+    label: c2
+    heading: Coal-output as the dynamometer of progress
+    char_start: 994227
+    char_end: 994551
+    start_quote: The coal-output of the world, speaking roughly, doubled every
+    end_quote: may be tested in a thousand ways without greatly reducing it.
+    why: Supplies the chapter's actual empirical instrument, anchoring the abstract 'law' in a measurable
+      ten-year doubling ratio.
+  - id: adams-education#u36-c3
+    label: c3
+    heading: A law as constant as mechanics
+    char_start: 1001416
+    char_end: 1001977
+    start_quote: A law of acceleration, definite and constant as any law of
+    end_quote: and resistance to superior mass is futile and fatal.
+    why: Elevates the observed pattern into an unyielding law, the rhetorical hinge that makes acceleration
+      inescapable rather than merely observed.
+  - id: adams-education#u36-c4
+    label: c4
+    heading: 'Forces grasped his wrists: the felt vertigo of acceleration'
+    char_start: 1003026
+    char_end: 1003601
+    start_quote: Power leaped from every atom, and enough of it to supply
+    end_quote: without calculating the chances of a bomb.
+    why: Dramatizes the human cost of the law in Adams's own ironic self-portrait, showing acceleration
+      as lived vertigo rather than abstract statistic.
+  - id: adams-education#u36-c5
+    label: c5
+    heading: 'Teacher becomes pupil: the new American as a sort of God'
+    char_start: 1008073
+    char_end: 1008633
+    start_quote: For this new creation, born since 1900, a historian
+    end_quote: would know how to control unlimited power.
+    why: Marks the historian's renunciation of pedagogical authority and his startling forecast of near-godlike
+      future capability — the chapter's most oracular claim.
+  - id: adams-education#u36-c6
+    label: c6
+    heading: The mind must jump into a new phase
+    char_start: 1011596
+    char_end: 1012046
+    start_quote: The movement from unity into multiplicity, between 1200 and 1900,
+    end_quote: but it would need to jump.
+    why: Closes the argument on a phase-transition image that directly resonates with WMP's account of
+      eras reaching a forced discontinuity.
+- nn: 37
+  unit_id: ch-35-nunc-age
+  note_id: adams-education-ch-35-nunc-age
+  span: 1012050:1025511
+  chunks:
+  - id: adams-education#u37-c1
+    label: c1
+    heading: New York's hysteria of power, 1904
+    char_start: 1012083
+    char_end: 1014091
+    start_quote: NEARLY forty years had passed since the ex-private secretary
+    end_quote: and no Constantine the Great was in sight.
+    why: Opens the chapter's central image - a city and civilization exploding with power it cannot yet
+      understand or govern - that frames everything that follows.
+  - id: adams-education#u37-c2
+    label: c2
+    heading: The Trusts and the search for a new man
+    char_start: 1014390
+    char_end: 1015231
+    start_quote: The Trusts and Corporations stood for the larger part of the new power
+    end_quote: The new man could be only a child born of contact between the new and the old energies.
+    why: 'States Adams''s core method for the chapter: reading Roosevelt''s antitrust fight as a physical
+      contest over what kind of human the new corporate power will produce.'
+  - id: adams-education#u37-c3
+    label: c3
+    heading: The dynamic theory as a dated forecast
+    char_start: 1016875
+    char_end: 1017530
+    start_quote: For his dynamic theory of history he cared no more than for the kinetic theory of gas
+    end_quote: as accurately as that of the November meteoroids.
+    why: The book's most explicit statement of the dynamic theory of history as a dated, falsifiable forecast
+      of civilizational motion.
+  - id: adams-education#u37-c4
+    label: c4
+    heading: Nature's sympathy for death
+    char_start: 1017979
+    char_end: 1018517
+    start_quote: Nature has educated herself to a singular sympathy for death.
+    end_quote: probably from its instinctive dread of its marine enemies.
+    why: The nature-and-death meditation that pivots the chapter from public history to the private grief
+      of Hay's decline.
+  - id: adams-education#u37-c5
+    label: c5
+    heading: '"The rest is silence" - Hay''s death'
+    char_start: 1023470
+    char_end: 1024769
+    start_quote: You must hold out for the peace negotiations,
+    end_quote: it was only the quiet summons to follow--the assent to dismissal.
+    why: The emotional climax of the chapter - Hay's last words to Adams and the news of his death, rendered
+      through Shakespeare's line.
+  - id: adams-education#u37-c6
+    label: c6
+    heading: The end of the three friends' education
+    char_start: 1024770
+    char_end: 1025418
+    start_quote: It was time to go. The three friends had begun life together
+    end_quote: sensitive and timid natures could regard without a shudder.
+    why: The book's closing lines, ending the shared 'education' of the three friends and the memoir itself.

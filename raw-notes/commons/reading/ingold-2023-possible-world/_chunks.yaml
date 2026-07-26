@@ -1,0 +1,381 @@
+# Curated chunk sidecar for source `ingold-2023-possible-world`
+# ("On not knowing and paying attention: How to walk in a possible world", Tim Ingold,
+# Irish Journal of Sociology 2023, Vol. 31(1), pp. 20-36).
+#
+# license_class: private (in-copyright 2023 journal article) -> verbatim quote text is
+# REDACTED from this committed copy, per docs/INGEST-LOCAL.md sec.14 / contrib-kit
+# CURATOR.md sec.5. start_quote/end_quote are deliberately absent; what remains is
+# text-free provenance: chunk id, label, heading, the resolved character span into
+# source.txt, and why the passage is load-bearing. Committing in-copyright prose to a
+# repo every collaborator can read is exactly what the licensing firewall exists to
+# prevent (ADR 0001 D8, ADR 0002 D4). The full-verbatim sidecars exist only in the
+# curator's scratch artifacts dir and the personal lake -- never in this repo. This is
+# the same treatment as appleby-relentless-revolution, and the inverse of the open
+# dante-divine-comedy / adams-education sidecars.
+#
+# Spans are character offsets into artifacts/ingold-2023-possible-world/source.txt
+# (50115 bytes on disk; 49644 chars -- offsets are character indices into the UTF-8
+# text and are valid only against that exact extraction).
+# PIN PROVENANCE: this ingest predates contrib-kit and produced NO MANIFEST.json, so no
+# sha256 was recorded at ingest time. The pin below was COMPUTED AT BACKFILL TIME
+# (2026-07-25) from source.txt as it stands on disk:
+#   sha256 49a57b973c1c75a615f73e788d1fb9b07c452f390ad29848d89c0a9755ebedfa
+# It is trustworthy rather than merely asserted because it independently equals the
+# `sources.sha256` the lake recorded when `wmlake chunk` read that same file at ingest
+# -- two independent records of the same extraction agreeing.
+#
+# BACKFILL NOTE: written 2026-07-25, after the ingest had already landed without a
+# sidecar. Reconstructed from the scratch per-unit sidecars
+# (artifacts/ingold-2023-possible-world/sidecars/chunks-NN.yaml) using the same
+# resolver lake/chunk.py uses; all 42 resolved spans were cross-checked against the
+# lake rows written by that resolver at ingest and match exactly.
+#
+# CURATED ONLY: the 42 chunks below are the curator-selected (`suggested_by=agent`)
+# subset. The lake holds 66 chunks for this source; the other 24 are mechanically
+# derived `#uNN-fKKK` fallback chunks, regenerable from plan.json + source.txt.
+# Chunk ids match each reading note's `cites:` field.
+source: ingold-2023-possible-world
+units:
+- nn: 1
+  unit_id: abstract-and-keywords
+  note_id: ingold-2023-possible-world-abstract-and-keywords
+  span: 421:2176
+  chunks:
+  - id: ingold-2023-possible-world#u01-c1
+    label: c1
+    heading: Knowledge turns away, wisdom turns toward
+    char_start: 430
+    char_end: 768
+    why: States the essay's foundational opposition between knowledge-as-certainty and wisdom-as-attention,
+      and the paradox that a fully certain world could not sustain life.
+  - id: ingold-2023-possible-world#u01-c2
+    label: c2
+    heading: Attention as anticipatory, intention as predictive
+    char_start: 895
+    char_end: 1191
+    why: Names the essay's operative conceptual pair (intentional/predictive vs. attentional/anticipatory
+      action) that the rest of the argument depends on.
+  - id: ingold-2023-possible-world#u01-c3
+    label: c3
+    heading: Not-knowing is wisdom, not ignorance
+    char_start: 1193
+    char_end: 1707
+    why: Delivers the essay's corrective claim and names the institutions (education, science, the state)
+      that manufacture ignorance by collapsing not-knowing into it.
+- nn: 2
+  unit_id: man-in-the-moon-knowledge-and-wisdom
+  note_id: ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom
+  span: 2176:8100
+  chunks:
+  - id: ingold-2023-possible-world#u02-c1
+    label: c1
+    heading: 'The frame poem: the man with the telescope'
+    char_start: 2197
+    char_end: 2679
+    why: The concrete image of patient, uncertain observation that anchors the whole essay's argument
+      for wisdom over knowledge.
+  - id: ingold-2023-possible-world#u02-c2
+    label: c2
+    heading: Ingold's gloss on the poem
+    char_start: 2681
+    char_end: 3670
+    why: Ingold's own reading of the poem — attention, uncertainty, generational encounter, wonder, education
+      — functions as the essay's thesis statement.
+  - id: ingold-2023-possible-world#u02-c3
+    label: c3
+    heading: Self and soul defined
+    char_start: 4568
+    char_end: 5970
+    why: The essay's foundational definitions of self (interior, theorizing, modern) against soul (ancient,
+      open, vortex-like), closed with Serres's aphorism.
+  - id: ingold-2023-possible-world#u02-c4
+    label: c4
+    heading: Knowledge as citadel, wisdom as exposure
+    char_start: 5972
+    char_end: 7471
+    why: 'The essay''s sharpest, most WM-resonant formulation: knowledge as self-enclosing citadel-building
+      versus wisdom''s defenseless openness, restated as a chain of paired oppositions.'
+  - id: ingold-2023-possible-world#u02-c5
+    label: c5
+    heading: 'Balance restored: investigate, but do not possess'
+    char_start: 7473
+    char_end: 8085
+    why: The essay's closing ethical turn — knowledge may investigate the moon, but wisdom refuses to
+      'take possession' of it — resolving the frame back onto the opening image.
+- nn: 3
+  unit_id: turn-towards-world-uncertainty-possibility
+  note_id: ingold-2023-possible-world-turn-towards-world-uncertainty-possibility
+  span: 8100:15319
+  chunks:
+  - id: ingold-2023-possible-world#u03-c1
+    label: c1
+    heading: Wisdom lies beyond the facts
+    char_start: 8312
+    char_end: 9047
+    why: States the unit's opening thesis that wisdom is not reducible to facts or data, framing everything
+      that follows.
+  - id: ingold-2023-possible-world#u03-c2
+    label: c2
+    heading: Post-truth anxiety and the trial of conscience
+    char_start: 9049
+    char_end: 9918
+    why: Shows Ingold distinguishing post-truth anxiety about manipulated facts from his claim that truth
+      was never limited to facts in the first place.
+  - id: ingold-2023-possible-world#u03-c3
+    label: c3
+    heading: Re-embedding science in wisdom
+    char_start: 10666
+    char_end: 11342
+    why: 'The unit''s ethical core: data extraction from the world is ''deeply unethical'' and science
+      must recover a practice of correspondence and care.'
+  - id: ingold-2023-possible-world#u03-c4
+    label: c4
+    heading: Uncertainty as excess, not deficit
+    char_start: 12927
+    char_end: 14133
+    why: The unit's central reframing — uncertainty about the future is life's excess rather than a knowledge
+      gap, and thus becomes possibility.
+  - id: ingold-2023-possible-world#u03-c5
+    label: c5
+    heading: Bergson against probability
+    char_start: 14135
+    char_end: 14930
+    why: Supplies the theoretical warrant (Bergson) for why science's chance/determination binary cannot
+      capture genuine possibility.
+  - id: ingold-2023-possible-world#u03-c6
+    label: c6
+    heading: The moon that never repeats
+    char_start: 14931
+    char_end: 15317
+    why: The essay's closing image, making the abstract claim about uncertainty-as-possibility concrete
+      and vivid.
+- nn: 4
+  unit_id: potential-fulfilment-doing-undergoing
+  note_id: ingold-2023-possible-world-potential-fulfilment-doing-undergoing
+  span: 15319:20547
+  chunks:
+  - id: ingold-2023-possible-world#u04-c1
+    label: c1
+    heading: Fulfilling potential vs. the Pintupi 'one-possibility thing'
+    char_start: 15343
+    char_end: 16006
+    why: States the unit's governing contrast — potential as something progressively fulfilled and exhausted
+      (Geertz) — that the rest of the unit argues against.
+  - id: ingold-2023-possible-world#u04-c2
+    label: c2
+    heading: Life as a 'one-possibility thing' that carries on
+    char_start: 16008
+    char_end: 16966
+    why: Gives the Pintupi counter-model in full — life not moving from a starting-point to a destination
+      but replenished as it carries on — which anchors the whole unit's argument.
+  - id: ingold-2023-possible-world#u04-c3
+    label: c3
+    heading: The astronomer's arc vs. the rocket's line
+    char_start: 17362
+    char_end: 18116
+    why: The telescope-not-a-gun analogy is Ingold's key image for possibility as continually replenished
+      attention rather than a target reached and discharged.
+  - id: ingold-2023-possible-world#u04-c4
+    label: c4
+    heading: 'Dewey: undergoing overflows doing'
+    char_start: 18757
+    char_end: 19646
+    why: Supplies the philosophical source (Dewey) and the mechanism — undergoing exceeding doing — that
+      Ingold builds his own argument on.
+  - id: ingold-2023-possible-world#u04-c5
+    label: c5
+    heading: 'Transverse doing, longitudinal possibility: becoming rather than being'
+    char_start: 19648
+    char_end: 20545
+    why: The unit's culminating claim — life as longitudinal becoming that yields further possibility
+      for other entangled lives rather than spent objectives — is the passage most directly resonant with
+      WMP's non-teleological, relational framing.
+- nn: 5
+  unit_id: two-sides-of-attention-falling-forwards
+  note_id: ingold-2023-possible-world-two-sides-of-attention-falling-forwards
+  span: 20547:27954
+  chunks:
+  - id: ingold-2023-possible-world#u05-c1
+    label: c1
+    heading: Attunement and Gibson's education of attention
+    char_start: 20711
+    char_end: 21656
+    why: Defines attunement via Gibson's ecological perception and craft skill, the essay's first pole
+      of attention.
+  - id: ingold-2023-possible-world#u05-c2
+    label: c2
+    heading: Exposure as being pulled out of position
+    char_start: 22574
+    char_end: 23311
+    why: Defines exposure via Masschelein's etymology, the essay's second pole of attention, framing perception
+      as vulnerability rather than mastery.
+  - id: ingold-2023-possible-world#u05-c3
+    label: c3
+    heading: The moonstruck gaze (Merleau-Ponty)
+    char_start: 23321
+    char_end: 23946
+    why: Supplies the essay's paradigm case of exposure as symbiotic perception rather than detached information-uptake.
+  - id: ingold-2023-possible-world#u05-c4
+    label: c4
+    heading: 'Falling forwards: walking as controlled jeopardy'
+    char_start: 24531
+    char_end: 25145
+    why: The essay's title image and central illustration of how exposure and attunement alternate in
+      one fixed direction.
+  - id: ingold-2023-possible-world#u05-c5
+    label: c5
+    heading: Anticipation versus prediction
+    char_start: 26677
+    char_end: 27933
+    why: States the unit's theoretical payoff distinguishing open-ended anticipation from prediction's
+      logic of certainty, the passage closest to WMP's forecasting/possibility concerns.
+- nn: 6
+  unit_id: passage-of-generations-astonishment-surprise
+  note_id: ingold-2023-possible-world-passage-of-generations-astonishment-surprise
+  span: 27954:34617
+  chunks:
+  - id: ingold-2023-possible-world#u06-c1
+    label: c1
+    heading: Generations as a braid, not a stack
+    char_start: 30489
+    char_end: 31410
+    why: 'This is the essay''s constructive move: replacing stacked generational layers with an overlapping
+      braid, anchored to Bergson''s image of one generation leaning over the next as an act of care.'
+  - id: ingold-2023-possible-world#u06-c2
+    label: c2
+    heading: The stack metaphor and stratigraphic thinking
+    char_start: 29592
+    char_end: 30053
+    why: Names the target of the essay's critique — the layered/stratigraphic model of generations that
+      the braid figure is built to replace.
+  - id: ingold-2023-possible-world#u06-c3
+    label: c3
+    heading: The moon-watcher anecdote
+    char_start: 31822
+    char_end: 32157
+    why: The personal anecdote that hinges the unit from the generations argument into the astonishment/surprise
+      argument.
+  - id: ingold-2023-possible-world#u06-c4
+    label: c4
+    heading: Not-knowing, ignorance, and the methodology of distance
+    char_start: 32268
+    char_end: 33605
+    why: States the essay's core conceptual distinction (astonishment/surprise, not-knowing/ignorance)
+      and glosses scientific methodology as a device for holding the world at a distance.
+  - id: ingold-2023-possible-world#u06-c5
+    label: c5
+    heading: Scientists vs. the perpetually astonished
+    char_start: 33692
+    char_end: 34615
+    why: The unit's climactic contrast between prediction-bound science and the openness of indigenous
+      peoples and children, closing on the essay's emotional register.
+- nn: 7
+  unit_id: correspondence-interaction-understanding-undercommoning
+  note_id: ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning
+  span: 34617:42155
+  chunks:
+  - id: ingold-2023-possible-world#u07-c1
+    label: c1
+    heading: Correspondence as joining-with, not joining-up
+    char_start: 34779
+    char_end: 35859
+    why: States Ingold's technical definition of correspondence against the logico-mathematical/'joining-up'
+      sense and gives the moon-watching example that anchors the whole unit.
+  - id: ingold-2023-possible-world#u07-c2
+    label: c2
+    heading: Transverse interaction vs. longitudinal correspondence
+    char_start: 35861
+    char_end: 36902
+    why: 'The unit''s formal core: interaction is bounded, interest-driven, and oscillates between fixed
+      points, while correspondence is open-ended and multilinear.'
+  - id: ingold-2023-possible-world#u07-c3
+    label: c3
+    heading: 'The middle voice: doing as undergoing'
+    char_start: 36904
+    char_end: 37929
+    why: Supplies the grammatical mechanism (Benveniste's middle voice) that makes correspondence neither
+      active nor passive, illustrated by walking and moon-watching.
+  - id: ingold-2023-possible-world#u07-c4
+    label: c4
+    heading: Understanding vs. undercommoning
+    char_start: 39040
+    char_end: 40154
+    why: Pivots the essay from the correspondence/interaction distinction to the existential choice between
+      settled understanding and Harney and Moten's undercommoning.
+  - id: ingold-2023-possible-world#u07-c5
+    label: c5
+    heading: 'Erin Manning: autism, artists, and prolonged astonishment'
+    char_start: 40156
+    char_end: 41278
+    why: Gives the essay's most concrete illustration of sustained, uncategorized attention, extending
+      it from autistic perception to artistic perception.
+  - id: ingold-2023-possible-world#u07-c6
+    label: c6
+    heading: Thinking as astonishment, not categorization
+    char_start: 41280
+    char_end: 42149
+    why: Closes the unit by returning to the telescope/moon image, casting thinking itself as a risk-laden
+      reaching-out that categorization extinguishes.
+- nn: 8
+  unit_id: real-problems-real-freedom-conclusion
+  note_id: ingold-2023-possible-world-real-problems-real-freedom-conclusion
+  span: 42155:45544
+  chunks:
+  - id: ingold-2023-possible-world#u08-c1
+    label: c1
+    heading: Fake problems contain their own solutions; real problems do not
+    char_start: 42222
+    char_end: 42586
+    why: Sets up the fake/real problem contrast (solved-in-advance puzzles vs. the path and life) that
+      grounds the essay's parallel distinction between fake and real freedom.
+  - id: ingold-2023-possible-world#u08-c2
+    label: c2
+    heading: Real freedom as singular, attentive correspondence, not a menu of objectives
+    char_start: 42587
+    char_end: 43690
+    why: 'The essay''s core argument: fake freedom offers predetermined objectives dressed as choice,
+      while real freedom is attentive correspondence with how things and others want to go, collapsing
+      freedom and necessity into one.'
+  - id: ingold-2023-possible-world#u08-c3
+    label: c3
+    heading: Education, science, and the state as machines for the production of ignorance
+    char_start: 43692
+    char_end: 44297
+    why: 'Ingold''s institutional critique: these institutions sell a legibility-style promise of predictive
+      certainty and safety that is itself illusory, and in doing so manufacture the very ignorance they
+      claim to remedy.'
+  - id: ingold-2023-possible-world#u08-c4
+    label: c4
+    heading: Not-knowing reframed as wisdom rather than deficiency
+    char_start: 44589
+    char_end: 45086
+    why: 'Names the positive counter-term to the ignorance-producing machines: not-knowing as wisdom,
+      and attention as the practice that follows from it.'
+  - id: ingold-2023-possible-world#u08-c5
+    label: c5
+    heading: Walking in the moon's company, and Rilke's astonishment
+    char_start: 45087
+    char_end: 45542
+    why: 'The essay''s closing image and epigraph: companionship with the unknown (walking with the moon)
+      over conquest of it (planting a flag), capped by Rilke''s astonishment and an open, uncanny final
+      question.'
+- nn: 9
+  unit_id: back-matter-references
+  note_id: ingold-2023-possible-world-back-matter-references
+  span: 45544:49644
+  chunks:
+  - id: ingold-2023-possible-world#u09-c1
+    label: c1
+    heading: Text assembled from fragments of three earlier books
+    char_start: 45874
+    char_end: 46100
+    why: Discloses that the essay's material is drawn from Ingold's The Life of Lines (2015), Anthropology
+      and/as Education (2018), and Imagining for Real (2022), which is essential provenance for tracing
+      the essay's arguments to their fuller original sources.
+  - id: ingold-2023-possible-world#u09-c2
+    label: c2
+    heading: Origin as a 2020 UCC keynote on walking and attention
+    char_start: 45601
+    char_end: 46698
+    why: Fixes the essay's occasion (a March 2020 keynote at a University College Cork workshop on non-procedural
+      methodologies) which explains its essayistic, address-to-an-audience register.
