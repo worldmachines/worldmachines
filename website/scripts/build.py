@@ -20,6 +20,7 @@ NAV = '''\
     <a href="/theory">Theory</a>
     <a href="/contributions">Contributions</a>
     <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
     <a href="/contributors">Contributors</a>
     <a href="/devlog">Devlog</a>
     <a href="/oracle">Oracle</a>

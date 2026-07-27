@@ -5,6 +5,12 @@
   instead of writing an entry here.
 -->
 
+## 2026-07-27 · aneesh
+Added **Evolution** to the site navigation and reshaped `/evolution/` into an easy-to-browse field reference for the *Darwin’s Dangerous Idea* book club rather than a formal course. The new topic guide opens with a plain-language causal map, lets readers enter by question, moves technical model details behind optional disclosures, improves keyboard/mobile access, and retains simulations, a glossary, and expert sources for deeper dives.
+
+## 2026-07-24 · aneesh
+Moved the `worldmachines.org` registration from Venkat's Cloudflare account to Aneesh's, completing the custom-domain cutover left pending since the July 16 bindings flip. The EPP auth-code route was a dead end — the domain was already at Cloudflare Registrar, so there was no registrar-to-registrar transfer to make and the zone could never leave `pending` in the receiving account; the working path is Cloudflare's inter-account transfer, which the *source* account initiates and the target accepts within five days. That move carries WHOIS contacts only, so the zone arrived holding stale A/AAAA records Cloudflare had auto-imported from Venkat's proxied DNS — all Cloudflare-owned IPs, which trips error 1000 and took the site down until they were deleted and the Pages custom domain provisioned its own proxied apex CNAME to `worldmachines-2rd.pages.dev`. Oracle, MCP, and every binding were unaffected: they already lived in Aneesh's account.
+
 ## 2026-07-17 · aneesh
 Updated the `approval-policy` workflow so website/ changes can be approved by **either** @aneeshsathe or @vgururao (previously @vgururao only), and added an author-bypass: because GitHub blocks a PR author from approving their own PR, an owner who *opens* a website/ or wiki/ PR now self-clears that gate — otherwise an owner could never merge their own gated PR. Reflects the stack's move to Aneesh's account while keeping Venkat as a co-owner of the site gate. (This PR itself still requires Venkat's approval, since it touches website/ under the current policy.)
 
