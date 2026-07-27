@@ -24,6 +24,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">17 July 2026 · aneesh</div>
+    <p>Updated the <code>approval-policy</code> workflow so website/ changes can be approved by **either** @aneeshsathe or @vgururao (previously @vgururao only), and added an author-bypass: because GitHub blocks a PR author from approving their own PR, an owner who *opens* a website/ or wiki/ PR now self-clears that gate — otherwise an owner could never merge their own gated PR. Reflects the stack's move to Aneesh's account while keeping Venkat as a co-owner of the site gate. (This PR itself still requires Venkat's approval, since it touches website/ under the current policy.)</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">16 July 2026 · aneesh</div>
     <p>Put the Oracle's running costs on the Oracle page. A collapsible "health stats" box above the chat reports questions answered and dollars spent, split web vs MCP, against the hourly/daily spend caps that keep a public Oracle affordable — served by a new <code>/api/stats</code> Pages Function proxying the Oracle worker. The meter fails soft by design: any upstream trouble hides the box entirely rather than showing a broken number, so the chat is never blocked by its own dashboard. Asking a question now refreshes the numbers, and hitting a spend cap returns a plain-language "try again later" instead of an HTTP error.</p>
   </article>
@@ -89,6 +93,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-07-23T21:10:38Z -->
+  <!-- built: 2026-07-27T06:55:09Z -->
 </body>
 </html>
