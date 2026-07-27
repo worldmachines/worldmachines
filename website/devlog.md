@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-07-26 · aneesh
+Added an unlisted learning lab at `/evolution/` for the *Darwin’s Dangerous Idea* book club: six progressive lessons pair current evolutionary theory with retrieval checks, deterministic selection/drift simulations, a printable field guide, and an independently verified expert bibliography. It separates durable consensus from live debates around evo-devo, inheritance, multilevel selection, genomics, and the Extended Evolutionary Synthesis so readers can learn mechanisms without mistaking new emphasis for a scientific revolution.
+
 ## 2026-07-17 · aneesh
 Updated the `approval-policy` workflow so website/ changes can be approved by **either** @aneeshsathe or @vgururao (previously @vgururao only), and added an author-bypass: because GitHub blocks a PR author from approving their own PR, an owner who *opens* a website/ or wiki/ PR now self-clears that gate — otherwise an owner could never merge their own gated PR. Reflects the stack's move to Aneesh's account while keeping Venkat as a co-owner of the site gate. (This PR itself still requires Venkat's approval, since it touches website/ under the current policy.)
 
