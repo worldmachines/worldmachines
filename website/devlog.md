@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-07-27 · aneesh (2)
+Expanded the Evolution guide with a substantial Biology toolkit that teaches DNA, genes, traits, inheritance, populations, variation, selection, drift, and ancestry before the advanced material. Added `/evolution/dennett`, a wide-ranging 2026 companion to *Darwin’s Dangerous Idea* that connects contemporary evolutionary science with consciousness, agency, culture, AI, meaning, ethics, and a carefully sourced constellation of successors and critics—including explicit World Machines guardrails against historical fatalism and simplistic memetics.
+
 ## 2026-07-27 · aneesh
 Added **Evolution** to the site navigation and reshaped `/evolution/` into an easy-to-browse field reference for the *Darwin’s Dangerous Idea* book club rather than a formal course. The new topic guide opens with a plain-language causal map, lets readers enter by question, moves technical model details behind optional disclosures, improves keyboard/mobile access, and retains simulations, a glossary, and expert sources for deeper dives.
 
