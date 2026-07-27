@@ -72,7 +72,7 @@
       const random = mulberry32(seed + generation * 101 + dark * 17);
       const lightToDark = light > 0 && (dark === 0 || random() < 0.5);
       if (lightToDark) { light--; dark++; } else if (dark > 0) { dark--; light++; }
-      feedback.textContent = `One randomly chosen mutation direction changed a ${lightToDark ? 'light beetle to dark' : 'dark beetle to light'}. The habitat was not consulted.`;
+      feedback.textContent = `A new ${lightToDark ? 'dark' : 'light'} inherited variant appeared in the offspring pool. The habitat was not consulted; mutation changed the options available to selection.`;
       render();
     });
     $('.reset-sim', beetleGame).addEventListener('click', () => { dark = light = 20; generation = 0; seed++; feedback.textContent = ''; render(); });
@@ -121,7 +121,8 @@
         const points = path.map((p, g) => `${pad + g * (width-pad-8)/40},${8 + (1-p)*(height-pad-8)}`).join(' ');
         const line = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
         line.setAttribute('points', points); line.setAttribute('fill', 'none');
-        line.setAttribute('stroke', i === 0 ? '#176b58' : '#b7b5af');
+        line.setAttribute('stroke', i === 0 ? '#176b58' : '#77736d');
+        if (i !== 0) line.setAttribute('stroke-dasharray', i % 2 ? '3 3' : '6 3');
         line.setAttribute('stroke-width', i === 0 ? '2.5' : '1');
         chart.appendChild(line);
       });
@@ -141,20 +142,4 @@
     }));
   });
 
-  let stored = {};
-  try {
-    stored = JSON.parse(localStorage.getItem('evolution-course-progress') || '{}');
-    if (!stored || typeof stored !== 'object' || Array.isArray(stored)) stored = {};
-    const lesson = document.body.dataset.lesson;
-    if (lesson) {
-      stored[lesson] = { visited: true, date: new Date().toISOString().slice(0, 10) };
-      localStorage.setItem('evolution-course-progress', JSON.stringify(stored));
-    }
-  } catch (_) {
-    stored = {}; // Progress is optional; lessons and activities still work without storage.
-  }
-  $$('[data-progress]').forEach(el => {
-    const count = Object.values(stored).filter(item => item && item.visited).length;
-    el.textContent = `${count} of 6 lessons visited on this device`;
-  });
 })();

@@ -15,6 +15,7 @@
     <a href="/theory">Theory</a>
     <a href="/contributions">Contributions</a>
     <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
     <a href="/contributors">Contributors</a>
     <a href="/devlog">Devlog</a>
     <a href="/oracle">Oracle</a>
@@ -23,6 +24,14 @@
   <main>
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
+  <article class="devlog-entry">
+    <div class="devlog-meta">27 July 2026 · aneesh</div>
+    <p>Added **Evolution** to the site navigation and reshaped <code>/evolution/</code> into an easy-to-browse field reference for the *Darwin’s Dangerous Idea* book club rather than a formal course. The new topic guide opens with a plain-language causal map, lets readers enter by question, moves technical model details behind optional disclosures, improves keyboard/mobile access, and retains simulations, a glossary, and expert sources for deeper dives.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">24 July 2026 · aneesh</div>
+    <p>Moved the <code>worldmachines.org</code> registration from Venkat's Cloudflare account to Aneesh's, completing the custom-domain cutover left pending since the July 16 bindings flip. The EPP auth-code route was a dead end — the domain was already at Cloudflare Registrar, so there was no registrar-to-registrar transfer to make and the zone could never leave <code>pending</code> in the receiving account; the working path is Cloudflare's inter-account transfer, which the *source* account initiates and the target accepts within five days. That move carries WHOIS contacts only, so the zone arrived holding stale A/AAAA records Cloudflare had auto-imported from Venkat's proxied DNS — all Cloudflare-owned IPs, which trips error 1000 and took the site down until they were deleted and the Pages custom domain provisioned its own proxied apex CNAME to <code>worldmachines-2rd.pages.dev</code>. Oracle, MCP, and every binding were unaffected: they already lived in Aneesh's account.</p>
+  </article>
   <article class="devlog-entry">
     <div class="devlog-meta">17 July 2026 · aneesh</div>
     <p>Updated the <code>approval-policy</code> workflow so website/ changes can be approved by **either** @aneeshsathe or @vgururao (previously @vgururao only), and added an author-bypass: because GitHub blocks a PR author from approving their own PR, an owner who *opens* a website/ or wiki/ PR now self-clears that gate — otherwise an owner could never merge their own gated PR. Reflects the stack's move to Aneesh's account while keeping Venkat as a co-owner of the site gate. (This PR itself still requires Venkat's approval, since it touches website/ under the current policy.)</p>
@@ -93,6 +102,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-07-27T06:55:09Z -->
+  <!-- built: 2026-07-27T07:01:44Z -->
 </body>
 </html>
