@@ -1,0 +1,2329 @@
+# Curated chunk sidecar for source `chaucer-canterbury-tales`
+# (The Canterbury Tales, and Other Poems, Geoffrey Chaucer, edited for popular
+# perusal by the Rev. D. Laing Purves; Project Gutenberg eBook #2383).
+#
+# license_class: open -> verbatim quote text is RETAINED in this committed copy,
+# per INGEST-LOCAL.md sec.14: for open sources the per-unit sidecars are
+# concatenated as-is, full start_quote/end_quote included. The edition itself was
+# checked, not merely the underlying work -- Purves (d. 1873) modernized spelling
+# only, there is no modern in-copyright translator, and Gutenberg hosts only
+# editions it has verified as public domain in the US. Same basis as the
+# dante-divine-comedy and more-utopia sidecars; the inverse of
+# appleby-relentless-revolution, which is redacted because that source is private.
+#
+# Spans are character offsets into the extraction pinned by MANIFEST.json
+# sha256 db43d35fa4c660a2fa5d8c1481658819be58c7c177145b8ccf2b21a95ab5f49e
+# (1651686 chars; 1673926 bytes on disk -- offsets are character indices
+# into the UTF-8 text and are valid only against that exact extraction).
+# The Gutenberg header occupies chars 0:1047 and is outside every unit span,
+# so no chunk -- curated or fallback -- covers Project Gutenberg boilerplate; the
+# trailing PG license was stripped from the extraction before offset resolution.
+# Per-chunk char_start/char_end were resolved by locating start_quote/end_quote
+# within each unit's span; all 232 curated chunks resolved to a single unambiguous
+# span. Of the 464 quote strings, 430 match the extraction byte-for-byte and
+# 34 match only after newline-to-space folding. Chunk ids match each reading
+# note's `cites:` field.
+source: chaucer-canterbury-tales
+units:
+- nn: 1
+  unit_id: editors-preface
+  note_id: chaucer-canterbury-tales-editors-preface
+  span: 1047:15546
+  chunks:
+  - id: chaucer-canterbury-tales#u01-c1
+    label: c1
+    heading: Spenser as Chaucer's poetic heir
+    char_start: 5216
+    char_end: 5884
+    start_quote: Although two centuries divide them, yet Spenser is the direct and really the immediate
+    end_quote: the tenure of its very life from the fountain far away in other and ruder scenes.
+    why: 'States the preface''s organizing premise: Chaucer and Spenser form one continuous poetic infrastructure,
+      justifying their pairing in a single volume.'
+  - id: chaucer-canterbury-tales#u01-c2
+    label: c2
+    heading: The bulk of the Faerie Queene
+    char_start: 6635
+    char_end: 7142
+    start_quote: If we add together the three great poems of antiquity
+    end_quote: has opposed a formidable barrier to its popularity
+    why: Quantifies the scale problem (measured against Homer and Virgil combined) that motivates the
+      edition's abridgement strategy.
+  - id: chaucer-canterbury-tales#u01-c3
+    label: c3
+    heading: Modernizing spelling without modernizing Chaucer
+    char_start: 8812
+    char_end: 9570
+    start_quote: In this volume, therefore, the text of Chaucer has been presented in nineteenth-century
+      garb.
+    end_quote: has been discarded for that of the reader’s own day.
+    why: 'The preface''s core methodological claim: strip archaic spelling for legibility while preserving
+      old forms wherever meter, rhyme, or meaning require them.'
+  - id: chaucer-canterbury-tales#u01-c4
+    label: c4
+    heading: Against the 'coarse buffoon' charge
+    char_start: 11899
+    char_end: 12685
+    start_quote: Before a perusal of these hundred pages, will melt away for ever the lingering tradition
+      or prejudice
+    end_quote: the artist has lost himself in his work.
+    why: 'The preface''s polemical center: rehabilitating Chaucer''s reputation and framing the Tales
+      as depicting his times rather than the poet himself.'
+  - id: chaucer-canterbury-tales#u01-c5
+    label: c5
+    heading: The editor's admission of fallibility
+    char_start: 14097
+    char_end: 14551
+    start_quote: The Editor is conscious that in the 12,000 or 13,000 notes, as
+    end_quote: for the object contemplated.
+    why: Closes the preface by owning the scale and imperfection of the annotation labor, a candid coda
+      to the legibility-making project described throughout.
+- nn: 2
+  unit_id: life-of-chaucer
+  note_id: chaucer-canterbury-tales-life-of-chaucer
+  span: 15546:70537
+  chunks:
+  - id: chaucer-canterbury-tales#u02-c1
+    label: c1
+    heading: Chaucer as unifier of the English tongue
+    char_start: 15574
+    char_end: 17603
+    start_quote: NOT in point of genius only, but even in point of time, Chaucer
+    end_quote: there was practically but one speech — there was, and ever since has been, but one people.
+    why: 'States the essay''s grandest claim for Chaucer''s historical significance: fusing two linguistic
+      strands into one English vernacular.'
+  - id: chaucer-canterbury-tales#u02-c2
+    label: c2
+    heading: Old biographers versus the archival record
+    char_start: 64895
+    char_end: 66304
+    start_quote: The old biographers of Chaucer, founding on what they took
+    end_quote: there is no evidence that he espoused the opinions of the zealous Reformer
+    why: Explicitly contrasts a dramatic invented biography built on literary inference with a sober reconstruction
+      from administrative records, a small-scale history-machine displacing a great-men narrative.
+  - id: chaucer-canterbury-tales#u02-c3
+    label: c3
+    heading: The Clerk speaks for Chaucer on Petrarch's death
+    char_start: 36139
+    char_end: 36759
+    start_quote: When, therefore, the Clerk of Oxford is made to say that he will
+    end_quote: own person, though dramatically the words are on the Clerk’s lips.
+    why: Shows the essay's speculative method for arguing Chaucer met Petrarch, reading a fictional narrator's
+      mourning as the poet's own voice.
+  - id: chaucer-canterbury-tales#u02-c4
+    label: c4
+    heading: Dismissal follows the fall of his patron's faction
+    char_start: 44504
+    char_end: 46145
+    start_quote: The contest between the Dukes of Gloucester and Lancaster, and their adherents, for the
+      control of the
+    end_quote: he retained his pensions, and drew them regularly twice a year at the Exchequer until 1388.
+    why: Demonstrates Chaucer's civil-service fortunes rising and falling directly with court factional
+      struggle, narrated through customs and pension records.
+  - id: chaucer-canterbury-tales#u02-c5
+    label: c5
+    heading: The Tabard Inn frame and Harry Bailly's contest
+    char_start: 57372
+    char_end: 58695
+    start_quote: The poet, the evening before he starts on a pilgrimage to the
+    end_quote: has been gracefully chosen by the Host to lead the spirited competition of story-telling.
+    why: Lays out the storytelling-contest frame device that structures the entire Canterbury Tales project,
+      contrasted by the essay with Boccaccio's Decameron.
+- nn: 3
+  unit_id: general-prologue
+  note_id: chaucer-canterbury-tales-general-prologue
+  span: 70537:121576
+  chunks:
+  - id: chaucer-canterbury-tales#u03-c1
+    label: c1
+    heading: April, natural compulsion, and the turn to pilgrimage
+    char_start: 70553
+    char_end: 71451
+    start_quote: WHEN that Aprilis, with his showers swoot*,
+    end_quote: That them hath holpen*, when that they were sick.
+    why: Establishes the poem's opening move — grounding pilgrimage in seasonal, bodily compulsion before
+      any devotional motive is named — and the fellowship that becomes the frame's cast.
+  - id: chaucer-canterbury-tales#u03-c2
+    label: c2
+    heading: The Knight, the unqualified ideal
+    char_start: 72593
+    char_end: 73906
+    start_quote: A KNIGHT there was, and that a worthy man,
+    end_quote: He was a very perfect gentle knight.
+    why: The Prologue's positive benchmark of chivalric virtue against which the later self-interested
+      clerical portraits are implicitly judged.
+  - id: chaucer-canterbury-tales#u03-c3
+    label: c3
+    heading: The Monk discards the rule
+    char_start: 79060
+    char_end: 79746
+    start_quote: This ilke* monk let olde thinges pace,
+    end_quote: As Austin bid? how shall the world be served?
+    why: 'Shows institutional decay in miniature: a religious office openly repudiating its founding discipline
+      for worldly comfort, and the narrator''s ironic endorsement of it.'
+  - id: chaucer-canterbury-tales#u03-c4
+    label: c4
+    heading: The Friar prices absolution
+    char_start: 81420
+    char_end: 81951
+    start_quote: He was an easy man to give penance,
+    end_quote: Men must give silver to the poore freres.
+    why: States the confession-for-payment logic almost as explicit doctrine, the satire's clearest exposure
+      of sacrament reduced to transaction.
+  - id: chaucer-canterbury-tales#u03-c5
+    label: c5
+    heading: The Pardoner's fraudulent relics
+    char_start: 105583
+    char_end: 105852
+    start_quote: But with these relics, whenne that he fond
+    end_quote: He made the parson and the people his apes.
+    why: 'The satire''s sharpest point: fabricated sacred objects used specifically to extract money from
+      a poor, legitimate parish priest.'
+  - id: chaucer-canterbury-tales#u03-c6
+    label: c6
+    heading: The Host's storytelling contract
+    char_start: 109864
+    char_end: 110229
+    start_quote: That each of you, to shorten with your way
+    end_quote: Shall have a supper *at your aller cost*
+    why: The literal contract that converts the pilgrimage into a tale-telling competition, generating
+      the frame structure for the entire work.
+- nn: 4
+  unit_id: knights-tale-part-1
+  note_id: chaucer-canterbury-tales-knights-tale-part-1
+  span: 121576:170428
+  chunks:
+  - id: chaucer-canterbury-tales#u04-c1
+    label: c1
+    heading: The widow's plea to Theseus
+    char_start: 124286
+    char_end: 124559
+    start_quote: Lord, to whom fortune hath given
+    end_quote: Upon us wretched women let now fall.
+    why: Sets the tale's moral frame — conquest legitimated by mercy — and names Fortune's instability
+      as the condition of all worldly rank.
+  - id: chaucer-canterbury-tales#u04-c2
+    label: c2
+    heading: Palamon wounded by sight of Emily
+    char_start: 132964
+    char_end: 133230
+    start_quote: This prison caused me not for to cry;
+    end_quote: Is cause of all my crying and my woe.
+    why: Establishes courtly love as an involuntary physical wound rather than a choice, the trigger for
+      the cousins' entire rivalry.
+  - id: chaucer-canterbury-tales#u04-c3
+    label: c3
+    heading: 'Arcite: love as a law above law'
+    char_start: 136280
+    char_end: 136510
+    start_quote: That who shall give a lover any law?
+    end_quote: A man must needes love, maugre his head.
+    why: States the tale's key tension between an irrepressible personal drive and constructed obligation
+      (sworn brotherhood, positive law) most explicitly.
+  - id: chaucer-canterbury-tales#u04-c4
+    label: c4
+    heading: The narrator's question to lovers
+    char_start: 144662
+    char_end: 144852
+    start_quote: Who lieth the worse, Arcite or Palamon?
+    end_quote: But see his lady shall he never mo’.
+    why: Turns the romance into a formal disputation, exposing the tale's kinship with scholastic debate
+      poetry and leaving the paradox unresolved.
+  - id: chaucer-canterbury-tales#u04-c5
+    label: c5
+    heading: Destiny, minister general
+    char_start: 160012
+    char_end: 160428
+    start_quote: The Destiny, minister general,
+    end_quote: Be it of war, or peace, or hate, or love,
+    why: Generalizes the widow's talk of Fortune into a full Boethian cosmology governing human desire,
+      the tale's philosophical undertow.
+  - id: chaucer-canterbury-tales#u04-c6
+    label: c6
+    heading: Theseus decrees the tournament
+    char_start: 168635
+    char_end: 169520
+    start_quote: My will is this, for plain conclusion
+    end_quote: The listes shall I make here in this place.
+    why: 'The tale''s decisive institutional move: private, unsanctioned duel converted into a scheduled,
+      legible, ruled tournament rather than settled by immediate execution.'
+- nn: 5
+  unit_id: knights-tale-part-2
+  note_id: chaucer-canterbury-tales-knights-tale-part-2
+  span: 170428:244941
+  chunks:
+  - id: chaucer-canterbury-tales#u05-c1
+    label: c1
+    heading: 'The temple of Mars: iconography of war as machinery of ruin'
+    char_start: 175870
+    char_end: 177060
+    start_quote: There saw I first the dark imagining
+    end_quote: The town destroy’d, that there was nothing left.
+    why: The temple's painted catalogue of betrayal, atrocity, and ruin functions as the operating logic
+      of Mars that the tournament will later enact — a machine of war depicted before it is triggered.
+  - id: chaucer-canterbury-tales#u05-c2
+    label: c2
+    heading: Theseus rewrites the terms of combat
+    char_start: 202609
+    char_end: 203860
+    start_quote: The lord hath of his high discretion
+    end_quote: Go now your way; this is the lordes will.
+    why: Theseus's proclamation converts a promised mortal battle into a rule-bound, casualty-limited,
+      judged tournament — sovereign power exercised as the imposition of legibility on raw violence.
+  - id: chaucer-canterbury-tales#u05-c3
+    label: c3
+    heading: Arcite's death and bequest of Emily to Palamon
+    char_start: 213923
+    char_end: 215842
+    start_quote: Nought may the woful spirit in mine heart
+    end_quote: His laste word was; “Mercy, Emily!”
+    why: 'The tale''s emotional climax: Arcite, having just won Emily by combat, reverses the outcome
+      in his dying breath by naming his rival Palamon as more worthy of her love.'
+  - id: chaucer-canterbury-tales#u05-c4
+    label: c4
+    heading: 'Egeus on mutability: "a throughfare full of woe"'
+    char_start: 217305
+    char_end: 217634
+    start_quote: “Right as there died never man,” quoth he,
+    end_quote: Death is an end of every worldly sore.”
+    why: Egeus's consolation frames individual death as the universal condition of all who have ever lived,
+      setting up Theseus's cosmic oration that follows.
+  - id: chaucer-canterbury-tales#u05-c5
+    label: c5
+    heading: 'Theseus''s First Mover speech: the chain of love and universal decay'
+    char_start: 224720
+    char_end: 226635
+    start_quote: The firste mover of the cause above
+    end_quote: Then may ye see that all things have an end.
+    why: 'The tale''s philosophical capstone: a Boethian cosmology in which oak, stone, rivers, and "greate
+      townes" alike must wane, recasting Arcite''s death as instance of a universal, providentially bound
+      decay.'
+- nn: 6
+  unit_id: millers-tale
+  note_id: chaucer-canterbury-tales-millers-tale
+  span: 244941:289438
+  chunks:
+  - id: chaucer-canterbury-tales#u06-c1
+    label: c1
+    heading: The Miller breaks the order of tale-telling
+    char_start: 245617
+    char_end: 246084
+    start_quote: The Miller that fordrunken was all pale,
+    end_quote: With which I will now quite* the Knighte’s tale.”
+    why: Stages the fabliau's class-inflected intrusion on the Host's planned hierarchy of tellers, the
+      tale's founding carnivalesque gesture.
+  - id: chaucer-canterbury-tales#u06-c2
+    label: c2
+    heading: The narrator's apologia for churlish tales
+    char_start: 247852
+    char_end: 248841
+    start_quote: What should I more say, but that this Millere
+    end_quote: And eke men should not make earnest of game*.
+    why: Chaucer's own defense of including low, bawdy material alongside noble tales, framing the deliberate
+      polyphony of the collection.
+  - id: chaucer-canterbury-tales#u06-c3
+    label: c3
+    heading: Nicholas's chamber of astrological instruments
+    char_start: 250215
+    char_end: 250718
+    start_quote: His Almagest,<1> and bookes great and small,
+    end_quote: Full often blessed was his merry throat.
+    why: Establishes Nicholas's learned apparatus of prediction that he will later weaponize as pure fraud
+      against the credulous carpenter.
+  - id: chaucer-canterbury-tales#u06-c4
+    label: c4
+    heading: Nicholas seduces Alison
+    char_start: 254025
+    char_end: 254802
+    start_quote: And privily he caught her by the queint,*
+    end_quote: That she her love him granted at the last,
+    why: The tale's blunt, fast seduction scene sets the adulterous plot in motion and contrasts with
+      Absolon's elaborate, failed courtship.
+  - id: chaucer-canterbury-tales#u06-c5
+    label: c5
+    heading: The fabricated flood prophecy
+    char_start: 266379
+    char_end: 266972
+    start_quote: “Now, John,” quoth Nicholas, “I will not lie,
+    end_quote: For sorrow of this he fell almost adown,
+    why: 'The hinge of the entire plot: astrological authority repurposed as a private hoax to manipulate
+      John, the tale''s clearest instance of legibility-as-deception.'
+  - id: chaucer-canterbury-tales#u06-c6
+    label: c6
+    heading: The window kiss and its aftermath
+    char_start: 277263
+    char_end: 277719
+    start_quote: Dark was the night as pitch or as the coal,
+    end_quote: And Absolon went forth at sorry pace.
+    why: The tale's most famous comic reversal, triggering Absolon's revenge and the collapse of the whole
+      scheme through bodily humiliation.
+- nn: 7
+  unit_id: reeves-tale
+  note_id: chaucer-canterbury-tales-reeves-tale
+  span: 289438:318101
+  chunks:
+  - id: chaucer-canterbury-tales#u07-c1
+    label: c1
+    heading: Will outliving the body
+    char_start: 290553
+    char_end: 290981
+    start_quote: We olde men, I dread, so fare we
+    end_quote: Yet in our ashes cold does fire reek
+    why: States the prologue's central idea — desire persisting past physical capacity — and is the emotional
+      key to the Reeve's whole retaliatory motive.
+  - id: chaucer-canterbury-tales#u07-c2
+    label: c2
+    heading: The Reeve announces his revenge
+    char_start: 292562
+    char_end: 292944
+    start_quote: This drunken miller hath y-told us here
+    end_quote: But in his own he cannot see a balk.
+    why: Makes explicit that the tale is deliberate retaliation ('quiting') for the Miller's story, framing
+      the whole tale's tit-for-tat logic.
+  - id: chaucer-canterbury-tales#u07-c3
+    label: c3
+    heading: Simkin the miller introduced
+    char_start: 294433
+    char_end: 295453
+    start_quote: A miller was there dwelling many a day,
+    end_quote: His name was *hoten deinous Simekin*
+    why: Establishes the proud, armed, habitually thieving miller whose downfall the plot exists to engineer.
+  - id: chaucer-canterbury-tales#u07-c4
+    label: c4
+    heading: The cradle trick
+    char_start: 309441
+    char_end: 310193
+    start_quote: And up he rose, and softely he went
+    end_quote: But fair and well she crept in by the clerk,
+    why: The single small deception (moving the cradle) that converts the night into the tale's central
+      farce of mistaken beds.
+  - id: chaucer-canterbury-tales#u07-c5
+    label: c5
+    heading: The dark, chaotic fight
+    char_start: 313162
+    char_end: 314085
+    start_quote: Awake, Simon, the fiend is on me fall;
+    end_quote: And smote the miller on the pilled* skull;
+    why: Delivers the physical comedy of the climax — the wife blindly striking her own husband while
+      trying to defend him.
+  - id: chaucer-canterbury-tales#u07-c6
+    label: c6
+    heading: The tale's moral coda
+    char_start: 314417
+    char_end: 314879
+    start_quote: Thus is the proude miller well y-beat,
+    end_quote: 'A guiler shall himself beguiled be:'
+    why: States the fabliau's governing proverb and closes the revenge loop the Reeve opened in his prologue.
+- nn: 8
+  unit_id: cooks-tale
+  note_id: chaucer-canterbury-tales-cooks-tale
+  span: 318101:324469
+  chunks:
+  - id: chaucer-canterbury-tales#u08-c1
+    label: c1
+    heading: The Cook's gleeful endorsement
+    char_start: 318230
+    char_end: 319093
+    start_quote: “Aha!” quoth he, “for Christes passion,
+    end_quote: A little jape that fell in our city.”
+    why: Establishes the Cook's voice and motive for speaking, and the pilgrimage's game of tale answering
+      tale.
+  - id: chaucer-canterbury-tales#u08-c2
+    label: c2
+    heading: The Host's mock-indictment of the Cook's trade
+    char_start: 319141
+    char_end: 319481
+    start_quote: Roger, tell on; and look that it be good,
+    end_quote: For in thy shop doth many a fly go loose.
+    why: Turns the tale-telling game's mockery back on the teller himself, the pilgrimage's characteristic
+      leveling irony.
+  - id: chaucer-canterbury-tales#u08-c3
+    label: c3
+    heading: '"Sooth play quad play"'
+    char_start: 319639
+    char_end: 319895
+    start_quote: “Thou sayst full sooth,” quoth Roger, “by my fay;
+    end_quote: Though that my tale be of an hostelere.
+    why: States the fragment's governing proverb about jesting truth and flags Roger's unease at the joke
+      turned on him.
+  - id: chaucer-canterbury-tales#u08-c4
+    label: c4
+    heading: Perkin Revellour introduced
+    char_start: 320576
+    char_end: 321033
+    start_quote: A prentice whilom dwelt in our city,
+    end_quote: Well was the wenche that with him might meet.
+    why: The tale's central portrait of appetite and vitality against which the shop's legible economy
+      will be measured.
+  - id: chaucer-canterbury-tales#u08-c5
+    label: c5
+    heading: The master's proverb and dismissal
+    char_start: 322495
+    char_end: 322963
+    start_quote: But at the last his master him bethought,
+    end_quote: And bade him go, with sorrow and mischance.
+    why: The narrative's moral hinge, casting Perkin's expulsion as institutional self-preservation via
+      proverbial wisdom.
+- nn: 9
+  unit_id: man-of-laws-tale
+  note_id: chaucer-canterbury-tales-man-of-laws-tale
+  span: 324469:386300
+  chunks:
+  - id: chaucer-canterbury-tales#u09-c1
+    label: c1
+    heading: The Host's tirade on wasted time
+    char_start: 325195
+    char_end: 325957
+    start_quote: “Lordings,” quoth he, “I warn you all this rout
+    end_quote: Let us not moulde thus in idleness.
+    why: Frames the pilgrimage's narrative urgency in Senecan terms of irrecoverable time, the moral hinge
+      that compels the Man of Law to begin.
+  - id: chaucer-canterbury-tales#u09-c2
+    label: c2
+    heading: Refusing the tales of Canace and Apollonius
+    char_start: 327903
+    char_end: 328491
+    start_quote: But certainly no worde writeth he
+    end_quote: Nor I will none rehearse, if that I may.
+    why: Shows the teller's deliberate curatorial ethics and the implicit literary rebuke of Gower for
+      having told these incest tales.
+  - id: chaucer-canterbury-tales#u09-c3
+    label: c3
+    heading: The exordium on poverty
+    char_start: 330362
+    char_end: 330669
+    start_quote: O scatheful harm, condition of poverty,
+    end_quote: Or steal, or beg, or borrow thy dispence
+    why: The borrowed De Contemptu Mundi material that supplies the Tale's opening moral frame before
+      the narrative of Constance begins.
+  - id: chaucer-canterbury-tales#u09-c4
+    label: c4
+    heading: The Sultaness's council speech
+    char_start: 341880
+    char_end: 342631
+    start_quote: “Lordes,” she said, “ye knowen every one,
+    end_quote: And I shall make us safe for evermore.”
+    why: The old religious order's leader vowing violent resistance rather than accept her son's conversion,
+      the engine of the massacre that follows.
+  - id: chaucer-canterbury-tales#u09-c5
+    label: c5
+    heading: Apostrophe to the cruel Firmament
+    char_start: 340186
+    char_end: 340827
+    start_quote: O firste moving cruel Firmament,
+    end_quote: Where thou wert well, from thennes art thou weiv’d.
+    why: The poem's most explicit staging of astrological determinism as a rival, imperfectly-read system
+      for foreseeing catastrophe.
+  - id: chaucer-canterbury-tales#u09-c6
+    label: c6
+    heading: 'Providence catalogue: Daniel, Jonah, Mary of Egypt'
+    char_start: 349046
+    char_end: 350779
+    start_quote: Men mighten aske, why she was not slain?
+    end_quote: God sent his foison* at her greate need.
+    why: The tale's central providential argument by biblical accumulation, delivered as Constance drifts
+      unprovisioned and unkilled at sea.
+- nn: 10
+  unit_id: wife-of-baths-tale
+  note_id: chaucer-canterbury-tales-wife-of-baths-tale
+  span: 386300:455860
+  chunks:
+  - id: chaucer-canterbury-tales#u10-c1
+    label: c1
+    heading: Experience against scriptural authority on remarriage
+    char_start: 386618
+    char_end: 387037
+    start_quote: Husbands at the church door have I had five,
+    end_quote: That I not wedded shoulde be but once.
+    why: 'States the Prologue''s founding method: reading Scripture against itself to defend lived experience
+      over inherited textual authority.'
+  - id: chaucer-canterbury-tales#u10-c2
+    label: c2
+    heading: 'The neighbour''s-wife tirade: every accusation a trap'
+    char_start: 398474
+    char_end: 399379
+    start_quote: What dost thou at my neigheboure’s house?
+    end_quote: That is assailed upon every side.
+    why: Compresses the era's contradictory misogynist slanders into a single impossible double bind,
+      voiced satirically through the imagined jealous husband.
+  - id: chaucer-canterbury-tales#u10-c3
+    label: c3
+    heading: '"We will be at our large"'
+    char_start: 402944
+    char_end: 403374
+    start_quote: Where that we go; we will be at our large.
+    end_quote: How merrily that other folkes fare?
+    why: The clearest single statement of the autonomy thesis the whole Prologue and Tale build toward,
+      resisting external surveillance and control.
+  - id: chaucer-canterbury-tales#u10-c4
+    label: c4
+    heading: Burning Jenkin's book of wicked wives
+    char_start: 425799
+    char_end: 426936
+    start_quote: To readen on this cursed book all night,
+    end_quote: Now will I die, I may no longer speak.
+    why: The Prologue's dramatic climax, where she physically destroys the curated textual authority used
+      to discipline her and wins the marriage's governance.
+  - id: chaucer-canterbury-tales#u10-c5
+    label: c5
+    heading: 'The knight''s answer: sovereignty'
+    char_start: 442567
+    char_end: 442805
+    start_quote: “My liege lady, generally,” quoth he,
+    end_quote: Do as you list, I am here at your will.”
+    why: The Tale's structural payoff — the answer the whole quest was built to elicit, naming sovereignty
+      as women's deepest desire.
+  - id: chaucer-canterbury-tales#u10-c6
+    label: c6
+    heading: Gentillesse comes from deeds, not blood
+    char_start: 448009
+    char_end: 449210
+    start_quote: Is not annexed to possession, Since folk do not their operation
+    end_quote: That he is gentle that doth gentle deedes.
+    why: The Tale's independent philosophical argument, extending the Prologue's anti-authoritarian logic
+      from gender to inherited class nobility.
+- nn: 11
+  unit_id: friars-tale
+  note_id: chaucer-canterbury-tales-friars-tale
+  span: 455860:478102
+  chunks:
+  - id: chaucer-canterbury-tales#u11-c1
+    label: c1
+    heading: The Friar's opening jab at summoners
+    char_start: 455897
+    char_end: 456679
+    start_quote: This worthy limitour, this noble Frere,
+    end_quote: That of a Sompnour may no good be said;
+    why: Sets up the tale as an act of retaliation in the ongoing Friar–Summoner feud and states its thesis
+      in advance.
+  - id: chaucer-canterbury-tales#u11-c2
+    label: c2
+    heading: The summoner's bribery network
+    char_start: 460074
+    char_end: 460976
+    start_quote: This false thief, the Sompnour (quoth the Frere),
+    end_quote: A thief, and eke a Sompnour, and a bawd.
+    why: Lays out the corrupt machinery of informants, feigned summonses, and extortion that makes the
+      ecclesiastical court an engine of private profit.
+  - id: chaucer-canterbury-tales#u11-c3
+    label: c3
+    heading: The devil's account of his own power
+    char_start: 467228
+    char_end: 468111
+    start_quote: For sometimes we be Godde’s instruments
+    end_quote: And to th’apostle servant eke was I.”
+    why: 'The tale''s clearest statement of orthodox demonology: devils act only by divine permission,
+      testing rather than freely damning.'
+  - id: chaucer-canterbury-tales#u11-c4
+    label: c4
+    heading: The carter's empty curse
+    char_start: 470394
+    char_end: 471670
+    start_quote: The Sompnour said, “Here shall we have a prey,”
+    end_quote: Here win I nothing upon this carriage.”
+    why: Establishes the tale's governing rule — a curse only binds if truly meant — through comic false
+      alarm before it is played for real.
+  - id: chaucer-canterbury-tales#u11-c5
+    label: c5
+    heading: The widow's sincere curse and the summoner's end
+    char_start: 473777
+    char_end: 475059
+    start_quote: “Pay me,” quoth he, “or, by the sweet Saint Anne,
+    end_quote: Body and soul, he with the devil went,
+    why: 'The tale''s climax: the same rule about sincerity that spared the carter now damns the summoner,
+      delivering the tale''s moral payoff.'
+- nn: 12
+  unit_id: sompnours-tale
+  note_id: chaucer-canterbury-tales-sompnours-tale
+  span: 478102:513310
+  chunks:
+  - id: chaucer-canterbury-tales#u12-c1
+    label: c1
+    heading: Friars swarming from Satan's tail
+    char_start: 479415
+    char_end: 479740
+    start_quote: Right so as bees swarmen out of a hive,
+    end_quote: He clapt his tail again, and lay full still.
+    why: The prologue's grotesque comic vision sets the tale's anti-fraternal register before the narrative
+      proper begins.
+  - id: chaucer-canterbury-tales#u12-c2
+    label: c2
+    heading: The erased ledger of donors
+    char_start: 481832
+    char_end: 482954
+    start_quote: His fellow had a staff tipped with horn,
+    end_quote: 'That he before had written in his tables:'
+    why: The friars' fake record-keeping — names inscribed to encourage giving, then rubbed out — is the
+      tale's clearest image of piety as extraction machinery, resonant with mock legibility.
+  - id: chaucer-canterbury-tales#u12-c3
+    label: c3
+    heading: The Cambyses exemplum on wrath
+    char_start: 496904
+    char_end: 498558
+    start_quote: Irous Cambyses was eke dronkelew,
+    end_quote: His son was slain, there is no more to say.
+    why: The friar's own showpiece sermon against ire, which he will contradict moments later, is the
+      tale's central dramatic irony.
+  - id: chaucer-canterbury-tales#u12-c4
+    label: c4
+    heading: Thomas's answer
+    char_start: 501984
+    char_end: 502379
+    start_quote: “Ah,” thought this friar, “that shall go with me.”
+    end_quote: That might have let a fart of such a soun’.
+    why: The narrative's pivotal comic reversal, where the extorted layman answers the friar's greed with
+      his body.
+  - id: chaucer-canterbury-tales#u12-c5
+    label: c5
+    heading: Jankin's cart-wheel demonstration
+    char_start: 507467
+    char_end: 509062
+    start_quote: “My lord,” quoth he, “when that the weather is fair,
+    end_quote: He beareth him so fair and holily.”
+    why: The mock-scholastic 'proof' dividing the fart among the convent is the tale's satirical payload,
+      form of reasoning applauded over its absurd content.
+- nn: 13
+  unit_id: clerks-tale
+  note_id: chaucer-canterbury-tales-clerks-tale
+  span: 513310:576561
+  chunks:
+  - id: chaucer-canterbury-tales#u13-c1
+    label: c1
+    heading: The Host demands a plain, merry tale
+    char_start: 513345
+    char_end: 514254
+    start_quote: SIR Clerk of Oxenford,” our Hoste said, “Ye ride as still and coy, as doth a maid
+    end_quote: That we may understande what ye say.”
+    why: Frames the tale as popular entertainment drawn from high literary source (Petrarch), setting
+      up the register-gap the envoy later exploits.
+  - id: chaucer-canterbury-tales#u13-c2
+    label: c2
+    heading: Walter's flaw and the people's fear of a failed succession
+    char_start: 517797
+    char_end: 518445
+    start_quote: I blame him thus, that he consider’d not
+    end_quote: He to the marquis said as ye shall hear.
+    why: Establishes the marquis's refusal to marry and the commons' anxiety over legitimate succession
+      that drives the entire marriage plot.
+  - id: chaucer-canterbury-tales#u13-c3
+    label: c3
+    heading: Griselda's vow of unconditional obedience
+    char_start: 530956
+    char_end: 531665
+    start_quote: “I say this, be ye ready with good heart
+    end_quote: For to be dead; though me were loth to dey.”
+    why: 'The pre-marriage oath is the tale''s operative contract: total advance consent to whatever Walter
+      wills, which everything that follows literally executes.'
+  - id: chaucer-canterbury-tales#u13-c4
+    label: c4
+    heading: Griselda's farewell to her infant daughter
+    char_start: 541023
+    char_end: 541347
+    start_quote: 'And thus she said in her benigne voice:'
+    end_quote: For this night shalt thou dien for my sake.
+    why: 'The emotional crux of the testing: patience performed at the moment she believes her child is
+      being taken to be killed.'
+  - id: chaucer-canterbury-tales#u13-c5
+    label: c5
+    heading: Griselda surrenders her clothing and departs
+    char_start: 556027
+    char_end: 557434
+    start_quote: “My Lord, ye know that in my father’s place
+    end_quote: Of you, mine owen Lord, lest I you grieve.”
+    why: The public stripping scene explicitly echoes Job's bare arrival and departure, casting domestic
+      tyranny as divine trial.
+  - id: chaucer-canterbury-tales#u13-c6
+    label: c6
+    heading: Chaucer's L'Envoy undercuts the moral
+    char_start: 572025
+    char_end: 572328
+    start_quote: “Griseld’ is dead, and eke her patience,
+    end_quote: 'Let no humility your tongues nail:'
+    why: Chaucer's own comic coda inverts the Clerk's solemn moral, instructing wives to defy rather than
+      emulate Griselda.
+- nn: 14
+  unit_id: merchants-tale
+  note_id: chaucer-canterbury-tales-merchants-tale
+  span: 576561:640953
+  chunks:
+  - id: chaucer-canterbury-tales#u14-c1
+    label: c1
+    heading: The Merchant's bitter prologue
+    char_start: 576602
+    char_end: 577403
+    start_quote: Weeping and wailing, care and other sorrow,
+    end_quote: We wedded men live in sorrow and care;
+    why: 'Establishes the tale''s unreliable, embittered frame: everything that follows about marriage
+      is filtered through one man''s grievance.'
+  - id: chaucer-canterbury-tales#u14-c2
+    label: c2
+    heading: A wife as durable property
+    char_start: 582560
+    char_end: 583720
+    start_quote: A wife is Godde’s gifte verily;
+    end_quote: His paradise terrestre and his disport.
+    why: The mock-theological praise of wives ranks a wife among durable possessions, exposing marriage-as-sacrament
+      as marriage-as-acquisition.
+  - id: chaucer-canterbury-tales#u14-c3
+    label: c3
+    heading: Justinus on the impossibility of full advance knowledge
+    char_start: 592646
+    char_end: 593682
+    start_quote: Senec, among his other wordes wise,
+    end_quote: And all this asketh leisure to inquere.
+    why: The tale's clearest statement that a spouse's true character resists being rendered legible in
+      advance, however carefully one 'inquires.'
+  - id: chaucer-canterbury-tales#u14-c4
+    label: c4
+    heading: The walled garden and the single silver key
+    char_start: 616153
+    char_end: 617043
+    start_quote: He had a garden walled all with stone;
+    end_quote: With which, when that him list, he it unshet.
+    why: 'The tale''s central control-mechanism: a wife enclosed behind a single-key system, the literal
+      apparatus that the counterfeited key will later defeat.'
+  - id: chaucer-canterbury-tales#u14-c5
+    label: c5
+    heading: Pluto and Proserpina's marital debate
+    char_start: 626596
+    char_end: 627323
+    start_quote: Ne see ye not this honourable knight?
+    end_quote: For lack of answer, none of them shall dien.
+    why: The fairy-court argument over women's truthfulness pre-scripts and rigs the human outcome below,
+      making the ending's 'evidence' meaningless before it occurs.
+  - id: chaucer-canterbury-tales#u14-c6
+    label: c6
+    heading: Restored sight as unreliable witness
+    char_start: 633803
+    char_end: 634133
+    start_quote: First when his sight is newe come again,
+    end_quote: He which that misconceiveth oft misdeemeth.
+    why: 'The tale''s sharpest turn: eyewitness sight itself, the strongest form of legibility, is reframed
+      as untrustworthy, dissolving January''s only claim to certainty.'
+- nn: 15
+  unit_id: squires-tale
+  note_id: chaucer-canterbury-tales-squires-tale
+  span: 640953:682296
+  chunks:
+  - id: chaucer-canterbury-tales#u15-c1
+    label: c1
+    heading: 'The Host''s prologue: a wife kept secret'
+    char_start: 641062
+    char_end: 642038
+    start_quote: Now such a wife I pray God keep me fro’.
+    end_quote: Since women connen utter such chaffare <1>),
+    why: Establishes the frame-tale's comic anxiety about women's gossip and hidden knowledge that the
+      falcon's tale later answers from the opposite direction.
+  - id: chaucer-canterbury-tales#u15-c2
+    label: c2
+    heading: 'The mirror, ring, and sword: instruments of total legibility'
+    char_start: 648843
+    char_end: 650452
+    start_quote: This mirror eke, that I have in mine hond,
+    end_quote: It faileth not, while it is in your hold.”
+    why: 'The tale''s conceptual core: magical objects that promise to collapse concealment entirely,
+      resonating with legibility as a recurring civilizational fantasy.'
+  - id: chaucer-canterbury-tales#u15-c3
+    label: c3
+    heading: The court's jangling debate over the brass horse
+    char_start: 652137
+    char_end: 653132
+    start_quote: Diverse folk diversely they deem’d;
+    end_quote: Of sundry doubts they jangle thus and treat.
+    why: A comic essay on collective folk explanation confronting an inexplicable technology, invoking
+      myth, optics, and magic all at once.
+  - id: chaucer-canterbury-tales#u15-c4
+    label: c4
+    heading: 'The falcon''s indictment: the serpent under flowers'
+    char_start: 667461
+    char_end: 667945
+    start_quote: Right as a serpent hides him under flow’rs,
+    end_quote: 'That, save the fiend, none wiste what he meant:'
+    why: The emotional center of Part II, exposing courtly love's performative vocabulary as indistinguishable
+      from genuine feeling until betrayal reveals it.
+  - id: chaucer-canterbury-tales#u15-c5
+    label: c5
+    heading: 'Nature''s newfangleness: the caged-bird moral'
+    char_start: 672070
+    char_end: 672704
+    start_quote: That alle thing repairing to his kind
+    end_quote: No gentleness of bloode may them bind.
+    why: The tale's closest approach to a stated moral, naturalizing inconstancy via Boethius just before
+      the narrative breaks off unfinished.
+- nn: 16
+  unit_id: franklins-tale
+  note_id: chaucer-canterbury-tales-franklins-tale
+  span: 682296:733138
+  chunks:
+  - id: chaucer-canterbury-tales#u16-c1
+    label: c1
+    heading: Love and mastery cannot coexist
+    char_start: 687657
+    char_end: 688395
+    start_quote: For one thing, Sires, safely dare I say,
+    end_quote: Thinges that rigour never should attain.
+    why: States the tale's founding premise that love and marriage require mutual freedom rather than
+      mastery, generalizing Arviragus and Dorigen's private pact into a universal claim.
+  - id: chaucer-canterbury-tales#u16-c2
+    label: c2
+    heading: Dorigen's complaint against the rocks
+    char_start: 692805
+    char_end: 694244
+    start_quote: Eternal God! that through thy purveyance
+    end_quote: These rockes slay mine hearte for the fear.
+    why: The tale's one moment of genuine theological unease, questioning providence and left deliberately
+      unresolved by the narrator.
+  - id: chaucer-canterbury-tales#u16-c3
+    label: c3
+    heading: The rash promise to Aurelius
+    char_start: 698815
+    char_end: 699212
+    start_quote: Looke, what day that endelong* Bretagne
+    end_quote: For well I wot that it shall ne’er betide.
+    why: The impossible condition Dorigen sets in jest is the exact hinge on which the tale's entire crisis
+      turns.
+  - id: chaucer-canterbury-tales#u16-c4
+    label: c4
+    heading: Aurelius releases Dorigen
+    char_start: 723421
+    char_end: 724245
+    start_quote: Madame, say to your lord Arviragus,
+    end_quote: That ever yet I knew in all my life.
+    why: The squire's renunciation of his prize, moved by the couple's own gentility, is the tale's climactic
+      act of gentillesse.
+  - id: chaucer-canterbury-tales#u16-c5
+    label: c5
+    heading: The clerk forgives the debt
+    char_start: 727633
+    char_end: 727954
+    start_quote: Sir, I release thee thy thousand pound,
+    end_quote: It is enough; and farewell, have good day.
+    why: Completes the cascade of unrewarded generosity, with the hired magician outdoing both knight
+      and squire in gentility.
+  - id: chaucer-canterbury-tales#u16-c6
+    label: c6
+    heading: The Franklin's unresolved question
+    char_start: 728003
+    char_end: 728195
+    start_quote: Lordings, this question would I aske now,
+    end_quote: I can* no more, my tale is at an end.
+    why: The tale explicitly refuses to adjudicate its own moral, converting the narrative into an open
+      demande d'amour for the audience.
+- nn: 17
+  unit_id: doctors-tale
+  note_id: chaucer-canterbury-tales-doctors-tale
+  span: 733138:748384
+  chunks:
+  - id: chaucer-canterbury-tales#u17-c1
+    label: c1
+    heading: Nature's boast in forming Virginia
+    char_start: 734357
+    char_end: 735252
+    start_quote: For nature had with sov’reign diligence
+    end_quote: Thus seemeth me that Nature woulde say.
+    why: Establishes Virginia as Nature's own perfect, legible creation, the pedestal from which her destruction
+      by human corruption gains its force.
+  - id: chaucer-canterbury-tales#u17-c2
+    label: c2
+    heading: Appius conspires with Claudius
+    char_start: 739437
+    char_end: 740737
+    start_quote: Now was there then a justice in that town,
+    end_quote: And gave him giftes precious and dear.
+    why: Shows the corruption assembling itself privately, with bribery and secrecy, before it ever touches
+      the public machinery of the court.
+  - id: chaucer-canterbury-tales#u17-c3
+    label: c3
+    heading: The rigged judgment
+    char_start: 741802
+    char_end: 743313
+    start_quote: The judge answer’d, “Of this, in his absence,
+    end_quote: 'The clerk shall have his thrall: thus I award.”'
+    why: 'The tale''s central image of legal form emptied of function: a promised fair hearing collapses
+      instantly into an unexamined verdict.'
+  - id: chaucer-canterbury-tales#u17-c4
+    label: c4
+    heading: Virginius tells his daughter the sentence
+    char_start: 743769
+    char_end: 744481
+    start_quote: “Daughter,” quoth he, “Virginia by name,
+    end_quote: Thus hath he falsely judged thee to-day.”
+    why: Reframes the killing as an act of paternal love rather than cruelty, the tale's key moral pivot.
+  - id: chaucer-canterbury-tales#u17-c5
+    label: c5
+    heading: Virginia consents to die a maid
+    char_start: 744567
+    char_end: 745380
+    start_quote: “O mercy, deare father,” quoth the maid.
+    end_quote: Blessed be God, that I shall die a maid.
+    why: Gives Virginia agency in her own death, casting chastity-preserved-by-death as her chosen achievement,
+      not just imposed fate.
+  - id: chaucer-canterbury-tales#u17-c6
+    label: c6
+    heading: The people's reckoning and the moral
+    char_start: 745863
+    char_end: 747271
+    start_quote: And when the judge it saw, as saith the story,
+    end_quote: Forsake sin, ere sinne you forsake.
+    why: Closes the exemplum with collective justice overturning corrupted legal process and the tale's
+      explicit moral tag on sin's inevitable exposure.
+- nn: 18
+  unit_id: pardoners-tale
+  note_id: chaucer-canterbury-tales-pardoners-tale
+  span: 748384:787051
+  chunks:
+  - id: chaucer-canterbury-tales#u18-c1
+    label: c1
+    heading: The relic performance
+    char_start: 752223
+    char_end: 754161
+    start_quote: Then show I forth my longe crystal stones,
+    end_quote: To offer to my relics in this place.
+    why: Shows the granular mechanics of the Pardoner's fraud — the manufactured 'legible' signs of piety
+      used to extract money.
+  - id: chaucer-canterbury-tales#u18-c2
+    label: c2
+    heading: Confession of pure avarice
+    char_start: 754359
+    char_end: 756620
+    start_quote: By this gaud* have I wonne year by year
+    end_quote: Of this mattere it ought enough suffice.
+    why: The Pardoner's flat admission that his preaching serves only his own covetousness is the ethical
+      center of the whole unit.
+  - id: chaucer-canterbury-tales#u18-c3
+    label: c3
+    heading: The Old Man's lament
+    char_start: 770279
+    char_end: 770912
+    start_quote: This olde man gan look on his visage,
+    end_quote: Alas! when shall my bones be at rest?
+    why: The tale's lyrical high point and its most ambiguous figure, read variously as Death, the Wandering
+      Jew, or memento mori incarnate.
+  - id: chaucer-canterbury-tales#u18-c4
+    label: c4
+    heading: Gold instead of Death
+    char_start: 772416
+    char_end: 772895
+    start_quote: See ye that oak? right there ye shall him find.
+    end_quote: That down they sat them by the precious hoard.
+    why: The tale's structural pivot, where the hunt for Death is replaced by the treasure that will become
+      their executioner.
+  - id: chaucer-canterbury-tales#u18-c5
+    label: c5
+    heading: The mutual destruction
+    char_start: 776731
+    char_end: 778737
+    start_quote: And forth he went, no longer would he tarry,
+    end_quote: For which anon they sterved* both the two.
+    why: The climactic exemplum passage in which avarice literally kills all three men, enacting the sermon's
+      theme.
+  - id: chaucer-canterbury-tales#u18-c6
+    label: c6
+    heading: The Host's crude rebuff
+    char_start: 781603
+    char_end: 782030
+    start_quote: Thou wouldest make me kiss thine olde breech,
+    end_quote: They shall be shrined in a hogge’s turd.”
+    why: 'The frame''s punchline: plain scatological refusal answering the Pardoner''s unrepentant attempt
+      to monetize his own confessed fraud.'
+- nn: 19
+  unit_id: shipmans-tale
+  note_id: chaucer-canterbury-tales-shipmans-tale
+  span: 787051:811649
+  chunks:
+  - id: chaucer-canterbury-tales#u19-c1
+    label: c1
+    heading: The Shipman silences the Parson
+    char_start: 787847
+    char_end: 788395
+    start_quote: Nay, by my father’s soul, that shall he not,
+    end_quote: There is but little Latin in my maw.”
+    why: Establishes the anti-clerical, anti-philosophical frame the Shipman sets for his own tale, opening
+      the fabliau's suspicion of pious speech.
+  - id: chaucer-canterbury-tales#u19-c2
+    label: c2
+    heading: The merchant's counting-house
+    char_start: 792798
+    char_end: 793462
+    start_quote: The thirde day the merchant up ariseth,
+    end_quote: And thus he sat, till it was passed prime.
+    why: The merchant's private ritual of reckoning books and bags behind a shut door is the tale's central
+      image of legibility as a technology of control that the plot will show can be circumvented entirely.
+  - id: chaucer-canterbury-tales#u19-c3
+    label: c3
+    heading: The wife's complaint and request
+    char_start: 797527
+    char_end: 798651
+    start_quote: And well ye wot, that women naturally
+    end_quote: As foul as e’er had Ganilion
+    why: Lays out the wife's grievance against her husband and her decision to borrow from the monk, the
+      hinge on which the whole plot turns.
+  - id: chaucer-canterbury-tales#u19-c4
+    label: c4
+    heading: The monk's oath and the embrace
+    char_start: 798669
+    char_end: 799304
+    start_quote: This gentle monk answer’d in this mannere;
+    end_quote: Go now, and be as true as I shall be
+    why: Fuses the monk's sworn secrecy directly into physical seduction, showing pious form used as cover
+      for private appetite.
+  - id: chaucer-canterbury-tales#u19-c5
+    label: c5
+    heading: Money as the merchant's plough
+    char_start: 802770
+    char_end: 803356
+    start_quote: Answer’d and said, “O cousin mine, Dan John,
+    end_quote: After my might full fain would I you please.”
+    why: States outright the mercantile logic of credit and reputation that the wife will later turn back
+      on her own husband.
+  - id: chaucer-canterbury-tales#u19-c6
+    label: c6
+    heading: Payment in bed
+    char_start: 808907
+    char_end: 809606
+    start_quote: But since I see I stand in such disjoint,
+    end_quote: Turn hitherward, and make better cheer.”
+    why: The tale's punchline, collapsing marital and mercantile debt into a single currency and delivering
+      the story's thesis in the wife's own voice.
+- nn: 20
+  unit_id: prioresss-tale
+  note_id: chaucer-canterbury-tales-prioresss-tale
+  span: 811649:826247
+  chunks:
+  - id: chaucer-canterbury-tales#u20-c1
+    label: c1
+    heading: The Host invites the Prioress
+    char_start: 812301
+    char_end: 812606
+    start_quote: My Lady Prioresse, by your leave,
+    end_quote: and said as ye shall hear.
+    why: Frames the tale's genteel courtly transition and the Prioress's own gentle, deferential voice
+      before her register shifts to devotional invocation.
+  - id: chaucer-canterbury-tales#u20-c2
+    label: c2
+    heading: The Marian invocation
+    char_start: 812865
+    char_end: 813910
+    start_quote: O Lord our Lord! thy name how marvellous
+    end_quote: Help me to tell it to thy reverence.
+    why: Establishes the tale's theological premise — children's uncomprehending praise as purest praise
+      — that the plot will literalize in the murdered clergyon.
+  - id: chaucer-canterbury-tales#u20-c3
+    label: c3
+    heading: The clergyon learns the hymn by rote
+    char_start: 815809
+    char_end: 817458
+    start_quote: This little child his little book learning,
+    end_quote: On Christ’s mother was set all his intent.
+    why: Shows the innocence-through-ritual-repetition that sanctifies the child before his murder, and
+      the compulsive singing through the Jewery that provokes it.
+  - id: chaucer-canterbury-tales#u20-c4
+    label: c4
+    heading: Satan's incitement and the murder
+    char_start: 817767
+    char_end: 818406
+    start_quote: Our firste foe, the serpent Satanas,
+    end_quote: And cut his throat, and in a pit him cast.
+    why: The tale's core blood-libel act, staged as cosmic conspiracy rather than individual crime — the
+      passage that most directly carries the ritual-murder legend form.
+  - id: chaucer-canterbury-tales#u20-c5
+    label: c5
+    heading: The child explains the miracle
+    char_start: 821986
+    char_end: 823361
+    start_quote: My throat is cut unto my necke-bone,”
+    end_quote: And still he lay, as he had been y-bound.
+    why: The miracle's own explanation in the child's voice, and the abbot's removal of the grain that
+      ends it — the passage that fuses grotesque violence with doctrinal vindication.
+  - id: chaucer-canterbury-tales#u20-c6
+    label: c6
+    heading: Invocation of Hugh of Lincoln
+    char_start: 823745
+    char_end: 824042
+    start_quote: O younge Hugh of Lincoln!
+    end_quote: For reverence of his mother Mary.
+    why: Chaucer explicitly ties the fiction to a real, repeatedly recycled blood-libel accusation, showing
+      how the legend form recirculates as institutional common sense.
+- nn: 21
+  unit_id: sir-thopas
+  note_id: chaucer-canterbury-tales-sir-thopas
+  span: 826247:840668
+  chunks:
+  - id: chaucer-canterbury-tales#u21-c1
+    label: c1
+    heading: The Host mocks the silent pilgrim and demands a tale
+    char_start: 826553
+    char_end: 827408
+    start_quote: And saide thus; “What man art thou?” quoth he;
+    end_quote: Some dainty thing, me thinketh by thy cheer.”
+    why: This is Chaucer's only extended physical self-portrait in the work, delivered ironically through
+      the Host's teasing voice, and it sets up the parody by having the aloof pilgrim promise only an
+      old, half-remembered rhyme.
+  - id: chaucer-canterbury-tales#u21-c2
+    label: c2
+    heading: Sir Thopas's excessive, luxury-catalogue description
+    char_start: 827974
+    char_end: 828877
+    start_quote: Listen, lordings, in good intent,
+    end_quote: That coste many a jane.
+    why: 'The opening stanzas show the parody''s core technique: a hero assembled entirely from itemized
+      romance furniture (saffron hair, cordovan shoes, ciclatoun robe) named with mock-precise commercial
+      detail.'
+  - id: chaucer-canterbury-tales#u21-c3
+    label: c3
+    heading: The elf-queen dream and vow
+    char_start: 830384
+    char_end: 831465
+    start_quote: Sir Thopas fell in love-longing
+    end_quote: By dale and eke by down.”
+    why: The sudden, disproportionate love-longing triggered by a bird's song, followed by a grandiose
+      vow to an elf-queen he has never met, exemplifies the tale's inflated, motiveless sentiment.
+  - id: chaucer-canterbury-tales#u21-c4
+    label: c4
+    heading: The giant Oliphaunt's threat and Thopas's retreat
+    char_start: 831794
+    char_end: 832854
+    start_quote: Till that there came a great giaunt,
+    end_quote: And through his fair bearing.
+    why: The tale's one moment of real danger is immediately deflated into a bare retreat dressed as heroic
+      'fair bearing,' the clearest single joke against chivalric convention in the excerpt.
+  - id: chaucer-canterbury-tales#u21-c5
+    label: c5
+    heading: Thopas ranked above the great romance heroes
+    char_start: 835680
+    char_end: 835902
+    start_quote: Men speak of romances of price
+    end_quote: But Sir Thopas, he bears the flow’r Of royal chivalry.
+    why: Naming genuine romance heroes only to declare this doggerel knight their superior is the parody's
+      clearest deadpan punchline and shows the catalogue technique used for maximum comic effect.
+- nn: 22
+  unit_id: tale-of-melibeus
+  note_id: chaucer-canterbury-tales-tale-of-melibeus
+  span: 840668:883100
+  chunks:
+  - id: chaucer-canterbury-tales#u22-c1
+    label: c1
+    heading: The Host silences the verse tale
+    char_start: 840713
+    char_end: 841707
+    start_quote: No more of this, for Godde’s dignity!” Quoth oure Hoste; “for thou makest me
+    end_quote: In which there be some mirth or some doctrine.”
+    why: Frames the whole prose Tale as a deliberate genre-shift, staged as the Host's impatience with
+      Chaucer's own verse.
+  - id: chaucer-canterbury-tales#u22-c2
+    label: c2
+    heading: Chaucer's defense of 'sentence' over wording
+    char_start: 842109
+    char_end: 842621
+    start_quote: As thus, ye wot that ev’ry Evangelist, That telleth us the pain* of Jesus Christ,
+    end_quote: I mean of Mark and Matthew, Luke and John; But doubteless their sentence is all one.
+    why: States the tale's own translation ethic — fidelity to meaning over verbatim wording — which also
+      justifies the editor's later compression of the treatise.
+  - id: chaucer-canterbury-tales#u22-c3
+    label: c3
+    heading: The old counsellor on the irreversibility of war
+    char_start: 852661
+    char_end: 853255
+    start_quote: “Lordings,” quoth he, “there is full many a man that crieth, ‘War! war!’ that wot full
+      little what war
+    end_quote: must have great counsel and great deliberation.”
+    why: 'The tale''s clearest statement of asymmetric risk: war is easy to begin and impossible to foresee
+      the end of, so it demands deliberation precisely because it can''t be undone.'
+  - id: chaucer-canterbury-tales#u22-c4
+    label: c4
+    heading: Prudence's rule for revising a counsel
+    char_start: 858392
+    char_end: 858856
+    start_quote: As to changing his counsel, a man may do so without reproach, if the cause cease
+    end_quote: any condition that may betide, that counsel is wicked.
+    why: 'A rare medieval statement of decision-hygiene: any counsel too rigid to ever be revised is inherently
+      corrupt.'
+  - id: chaucer-canterbury-tales#u22-c5
+    label: c5
+    heading: Prudence's plea for courteous judgement
+    char_start: 877892
+    char_end: 879020
+    start_quote: ye must deem [decide] more courteously, that is to say, ye must give more easy sentences
+      and judgements.
+    end_quote: without mercy shall be done to him, that hath no mercy of another wight.’”
+    why: 'The tale''s moral center: mercy justified both pragmatically (loyalty over fear) and theologically
+      (reciprocal divine judgement).'
+  - id: chaucer-canterbury-tales#u22-c6
+    label: c6
+    heading: Melibeus's act of forgiveness
+    char_start: 879534
+    char_end: 880437
+    start_quote: “Albeit so, that of your pride and high presumption and folly, an of your negligence
+      and unconning, [ignorance] ye
+    end_quote: that he will forgive us our guilts, and bring us to the bliss that never hath end.” Amen.
+    why: Resolves the tale's argument through an enacted pardon rather than further citation, tying earthly
+      mercy explicitly to hoped-for divine mercy.
+- nn: 23
+  unit_id: monks-tale
+  note_id: chaucer-canterbury-tales-monks-tale
+  span: 883100:931633
+  chunks:
+  - id: chaucer-canterbury-tales#u23-c1
+    label: c1
+    heading: The Host's complaint against clerical celibacy
+    char_start: 885749
+    char_end: 886769
+    start_quote: I pray to God give him confusion
+    end_quote: God wot, no lusheburghes <6> paye ye.
+    why: Sets the ironic frame — a worldly, well-fed Monk needled about squandered virility is about to
+      deliver a hundred solemn tragedies on pride and downfall.
+  - id: chaucer-canterbury-tales#u23-c2
+    label: c2
+    heading: The Monk's definition of tragedy
+    char_start: 887208
+    char_end: 887646
+    start_quote: Tragedy *is to say* a certain story,
+    end_quote: Lo, this declaring ought enough suffice.
+    why: States the genre's formal shape — prosperity followed by causeless fall — that every subsequent
+      exemplum in the catalogue instantiates.
+  - id: chaucer-canterbury-tales#u23-c3
+    label: c3
+    heading: 'Opening stanza: Fortune''s wheel as thesis'
+    char_start: 888825
+    char_end: 889152
+    start_quote: I will bewail, in manner of tragedy,
+    end_quote: Beware by these examples true and old.
+    why: 'The catalogue''s operating thesis in miniature: causality collapsed entirely into Fortune''s
+      capricious wheel, a great-men historiography with no infrastructure behind it.'
+  - id: chaucer-canterbury-tales#u23-c4
+    label: c4
+    heading: 'Zenobia: from sceptre to distaff'
+    char_start: 906237
+    char_end: 906665
+    start_quote: Alas, Fortune! she that whilom was
+    end_quote: Shall bear a distaff, *her cost for to quite.*
+    why: The catalogue's sharpest gendered reversal — a warrior-queen's fall staged specifically as a
+      return to women's domestic labor.
+  - id: chaucer-canterbury-tales#u23-c5
+    label: c5
+    heading: Croesus's dream interpreted
+    char_start: 920434
+    char_end: 920815
+    start_quote: “The tree,” quoth she, “the gallows is to mean,
+    end_quote: His daughter, which that called was Phanie.
+    why: A rare moment of dramatic irony in the catalogue, where prophecy is correctly read and still
+      ignored, right before Fortune's stroke lands.
+  - id: chaucer-canterbury-tales#u23-c6
+    label: c6
+    heading: Ugolino's starving children
+    char_start: 923815
+    char_end: 924976
+    start_quote: His youngest son, that three years was of age,
+    end_quote: They laid them in his lap adown, and died.
+    why: The catalogue's emotional climax, adapted from Dante's Inferno, showing the Fortune-wheel schema
+      can still generate genuine pathos rather than mere moral bookkeeping.
+- nn: 24
+  unit_id: nuns-priests-tale
+  note_id: chaucer-canterbury-tales-nuns-priests-tale
+  span: 931633:975938
+  chunks:
+  - id: chaucer-canterbury-tales#u24-c1
+    label: c1
+    heading: The Host rejects tragedy, demands comedy
+    char_start: 932309
+    char_end: 932825
+    start_quote: “Yea,” quoth our Hoste, “by Saint Paule’s bell.
+    end_quote: For therein is there no sport nor game;
+    why: 'Sets the tale''s explicit generic mandate: comedy chosen over tragedy, framing everything that
+      follows.'
+  - id: chaucer-canterbury-tales#u24-c2
+    label: c2
+    heading: Chanticleer's mock-heroic portrait
+    char_start: 936579
+    char_end: 936919
+    start_quote: In which she had a cock, hight Chanticleer;
+    end_quote: Than is a clock, or an abbay horloge.
+    why: The elevated, epic-heraldic description of a barnyard rooster is the tale's core comic device.
+  - id: chaucer-canterbury-tales#u24-c3
+    label: c3
+    heading: Partelote's humoral theory of dreams
+    char_start: 940268
+    char_end: 941166
+    start_quote: Nothing but vanity, God wot, in sweven is,
+    end_quote: Lo, Cato, which that was so wise a man,
+    why: Stages the naturalistic, medically-argued side of the dream debate against Chanticleer's authority-based
+      rebuttal.
+  - id: chaucer-canterbury-tales#u24-c4
+    label: c4
+    heading: The narrator raises and refuses the free-will crux
+    char_start: 955117
+    char_end: 955974
+    start_quote: Witness on him that any perfect clerk is,
+    end_quote: My tale is of a cock, as ye may hear,
+    why: Explicitly invokes the predestination/free-will debate via Augustine, Boethius, and Bradwardine,
+      then declines to resolve it, holding the binary open.
+  - id: chaucer-canterbury-tales#u24-c5
+    label: c5
+    heading: Flattery springs the trap
+    char_start: 959272
+    char_end: 960009
+    start_quote: This Chanticleer his wings began to beat,
+    end_quote: And on his back toward the wood him bare.
+    why: Identifies the actual causal mechanism of the fall as flattery-induced vanity, not fate or the
+      prophetic dream.
+  - id: chaucer-canterbury-tales#u24-c6
+    label: c6
+    heading: The explicit moral instruction
+    char_start: 964732
+    char_end: 965077
+    start_quote: Lo, what it is for to be reckeless
+    end_quote: Take the fruit, and let the chaff be still.
+    why: Gives the tale's own explicit hermeneutic instruction for how a beast-fable should be read, citing
+      scriptural warrant.
+- nn: 25
+  unit_id: second-nuns-tale
+  note_id: chaucer-canterbury-tales-second-nuns-tale
+  span: 975938:1005958
+  chunks:
+  - id: chaucer-canterbury-tales#u25-c1
+    label: c1
+    heading: The devil's snare of idleness
+    char_start: 976417
+    char_end: 976766
+    start_quote: For he, that with his thousand cordes sly
+    end_quote: Well ought we work, and idleness withstand.
+    why: Sets the moral frame — busy virtue versus idle vice — that the entire legend of the tirelessly
+      active Cecilia is built to answer.
+  - id: chaucer-canterbury-tales#u25-c2
+    label: c2
+    heading: The translator's apology
+    char_start: 979801
+    char_end: 980112
+    start_quote: Yet pray I you, that reade what I write,
+    end_quote: And pray you that you will my work amend.
+    why: States the narrator's self-understanding as faithful translator rather than inventor, authorizing
+      the legend's flat, non-realist mode of storytelling.
+  - id: chaucer-canterbury-tales#u25-c3
+    label: c3
+    heading: Cecilia reveals her guardian angel
+    char_start: 982785
+    char_end: 983678
+    start_quote: “O sweet and well-beloved spouse dear,
+    end_quote: And shew to you his joy and his brightness.”
+    why: 'The narrative hinge: Cecilia''s wedding-night disclosure turns the marriage plot into the engine
+      of Valerian''s conversion.'
+  - id: chaucer-canterbury-tales#u25-c4
+    label: c4
+    heading: The bladder full of wind
+    char_start: 997068
+    char_end: 997392
+    start_quote: Almachius saide; “Takest thou no heed
+    end_quote: May all the boast of it be laid full low.”
+    why: Cecilia's signature rhetorical move — exposing imperial power as inflated and hollow — is the
+      tale's clearest statement of her weapon against Rome.
+  - id: chaucer-canterbury-tales#u25-c5
+    label: c5
+    heading: Stone gods and the judge's blindness
+    char_start: 1000303
+    char_end: 1001021
+    start_quote: There lacketh nothing to thine outward eyen
+    end_quote: For in effect they be not worth a mite.”
+    why: 'Cecilia''s idol argument shows her method: dismantling the prefect''s authority by exposing
+      the gap between naming and reality.'
+  - id: chaucer-canterbury-tales#u25-c6
+    label: c6
+    heading: The botched beheading and three-day vigil
+    char_start: 1001750
+    char_end: 1002494
+    start_quote: Three strokes in the neck he smote her tho,
+    end_quote: That she had foster’d them, she gan to preach.
+    why: The martyrdom's climax, where Cecilia's survival and continued teaching fold bodily suffering
+      back into the tale's governing ideal of ceaseless devout activity.
+- nn: 26
+  unit_id: canon-yeomans-tale
+  note_id: chaucer-canterbury-tales-canon-yeomans-tale
+  span: 1005958:1057788
+  chunks:
+  - id: chaucer-canterbury-tales#u26-c1
+    label: c1
+    heading: The Canon's sweat-marked entrance
+    char_start: 1006280
+    char_end: 1007319
+    start_quote: So sweated, that it wonder was to see;
+    end_quote: But it was joye for to see him sweat;
+    why: The Canon's body visibly bears the cost of his craft before any dialogue reveals what that craft
+      is, framing the whole tale's satire as legible in physical symptom.
+  - id: chaucer-canterbury-tales#u26-c2
+    label: c2
+    heading: The boast of paving the road with gold
+    char_start: 1009498
+    char_end: 1009656
+    start_quote: That all the ground on which we be riding
+    end_quote: And pave it all of silver and of gold.”
+    why: The Yeoman's opening boast about his lord's power is the claim the rest of the Prologue and Tale
+      exist to deflate.
+  - id: chaucer-canterbury-tales#u26-c3
+    label: c3
+    heading: The craft that never concludes
+    char_start: 1011955
+    char_end: 1012514
+    start_quote: And, for all that, we fail of our desire
+    end_quote: It will us make beggars at the last.”
+    why: 'States the tale''s operating thesis directly: perpetual toil and borrowed gold in service of
+      a science that structurally cannot succeed.'
+  - id: chaucer-canterbury-tales#u26-c4
+    label: c4
+    heading: The Yeoman's own seven years of ruin
+    char_start: 1015816
+    char_end: 1016677
+    start_quote: With this Canon I dwelt have seven year,
+    end_quote: Let every man beware by me for ever.
+    why: The Yeoman's autobiographical confession is the credential that authorizes the whole Tale, turning
+      personal ruin into testimony and warning.
+  - id: chaucer-canterbury-tales#u26-c5
+    label: c5
+    heading: The hidden coal releases its silver
+    char_start: 1039130
+    char_end: 1039480
+    start_quote: And whenne that this canon’s beechen coal
+    end_quote: For of the sleight he nothing understood.
+    why: 'Shows the fraud''s actual mechanism: a staged, verifiable-seeming result manufactured by concealment
+      rather than by any real transmutation.'
+  - id: chaucer-canterbury-tales#u26-c6
+    label: c6
+    heading: The moral against contesting God's secrecy
+    char_start: 1052867
+    char_end: 1053218
+    start_quote: Then thus conclude I, since that God of heaven
+    end_quote: Of his will, certes never shall he thrive,
+    why: The closing theological verdict reframes the fraud just narrated as proof that pursuing the stone
+      is to make God an adversary, sealing the tale's moral.
+- nn: 27
+  unit_id: manciples-tale
+  note_id: chaucer-canterbury-tales-manciples-tale
+  span: 1057788:1078471
+  chunks:
+  - id: chaucer-canterbury-tales#u27-c1
+    label: c1
+    heading: The Manciple's bribe of wine silences the Cook
+    char_start: 1061899
+    char_end: 1062462
+    start_quote: And weet ye what? I have here in my gourd
+    end_quote: And thanked him in such wise as he could.
+    why: Shows the frame-tale mechanism by which drink defuses a real threat of conflict between pilgrims,
+      setting up the tale's own theme of speech and its consequences.
+  - id: chaucer-canterbury-tales#u27-c2
+    label: c2
+    heading: 'Nature cannot be caged: bird, cat, and she-wolf'
+    char_start: 1067222
+    char_end: 1068357
+    start_quote: Take any bird, and put it in a cage,
+    end_quote: In time when *her lust* to have a make.
+    why: The tale's central philosophical claim that instinct overmasters constraint and comfort, directly
+      resonant with conatus and capture-resistance.
+  - id: chaucer-canterbury-tales#u27-c3
+    label: c3
+    heading: The crow's plain accusation
+    char_start: 1071292
+    char_end: 1071760
+    start_quote: “By God,” quoth he, “I singe not amiss.
+    end_quote: For on thy bed thy wife I saw him swive.”
+    why: The fable's pivotal moment where truthful speech, not falsehood, triggers catastrophe.
+  - id: chaucer-canterbury-tales#u27-c4
+    label: c4
+    heading: Phoebus's rash act and self-indictment
+    char_start: 1072120
+    char_end: 1073045
+    start_quote: His bow he bent, and set therein a flo,*
+    end_quote: That unadvised smit’st the guilteless!
+    why: Delivers the tale's explicit moral against rashness, spoken by the very character whose rashness
+      caused the tragedy.
+  - id: chaucer-canterbury-tales#u27-c5
+    label: c5
+    heading: The mother's catechism on guarding the tongue
+    char_start: 1075059
+    char_end: 1076391
+    start_quote: My son, think on the crow, in Godde’s name.
+    end_quote: A tongue cutteth friendship all in two.
+    why: The proverb-laden moral coda that converts the fable into the Manciple's personal, self-protective
+      code of silence.
+- nn: 28
+  unit_id: parsons-tale
+  note_id: chaucer-canterbury-tales-parsons-tale
+  span: 1078471:1139353
+  chunks:
+  - id: chaucer-canterbury-tales#u28-c1
+    label: c1
+    heading: The Parson refuses to tell a fable
+    char_start: 1080004
+    char_end: 1080810
+    start_quote: Thou gettest fable none y-told for me,
+    end_quote: To knit up all this feast, and make an end.
+    why: 'Marks the frame-narrative''s generic break: the last teller declines the tale-telling game itself
+      in favor of a prose penitential treatise.'
+  - id: chaucer-canterbury-tales#u28-c2
+    label: c2
+    heading: Hell as the collapse of honour
+    char_start: 1088221
+    char_end: 1088641
+    start_quote: Land of misease, because there be three
+    end_quote: no more reverence shall be done there to a king than to a knave
+    why: 'Shows the treatise''s method for depicting hell: systematically inverting the present world''s
+      goods (honour, riches, delights) into their opposites.'
+  - id: chaucer-canterbury-tales#u28-c3
+    label: c3
+    heading: Pride made visible in scant hosen
+    char_start: 1105525
+    char_end: 1106497
+    start_quote: Upon the other side, to speak of the horrible disordinate scantness of clothing
+    end_quote: corrupt by the fire of Saint Anthony, or by canker, or other such mischance.
+    why: The most vivid and socially specific passage in the sermon, treating fashionable dress as an
+      involuntary outward confession of inward pride.
+  - id: chaucer-canterbury-tales#u28-c4
+    label: c4
+    heading: Confession may not be divided
+    char_start: 1119192
+    char_end: 1120217
+    start_quote: Also thou shalt shrive thee of all thy sins to one man, and not a
+    end_quote: let no blot be behind, let no sin be untold as far as thou hast remembrance.
+    why: States the procedural rule at the heart of confession's exhaustiveness — sin must be rendered
+      completely legible to one confessor, not partitioned or hidden.
+  - id: chaucer-canterbury-tales#u28-c5
+    label: c5
+    heading: The chapter on Gluttony, in full
+    char_start: 1114272
+    char_end: 1116595
+    start_quote: After Avarice cometh Gluttony, which is express against the
+    end_quote: These be the five fingers of the devil’s hand, by which he draweth folk to the sin.
+    why: One of the few chapters the editor preserved whole, giving a compact, self-contained model of
+      the treatise's enumerative method applied to a single deadly sin.
+  - id: chaucer-canterbury-tales#u28-c6
+    label: c6
+    heading: Chaucer's Retraction names and revokes his works
+    char_start: 1135807
+    char_end: 1136984
+    start_quote: Now pray I to you all that hear this little treatise or read it, that
+    end_quote: many a song and many a lecherous lay, of the which Christ for his great mercy forgive me
+      the sins.
+    why: The closing prayer applies the sermon's own doctrine of confession to Chaucer himself, naming
+      and revoking his secular works including the Canterbury Tales, and ending the entire collection.
+- nn: 29
+  unit_id: court-of-love
+  note_id: chaucer-canterbury-tales-court-of-love
+  span: 1139353:1204257
+  chunks:
+  - id: chaucer-canterbury-tales#u29-c1
+    label: c1
+    heading: The Castle of Love
+    char_start: 1146266
+    char_end: 1146800
+    start_quote: So them apace I journey’d forth among,
+    end_quote: All was as bright as stars in winter be’n;
+    why: Establishes the Court's splendor and permanence as a rival built order to any earthly institution
+      before a single statute is sworn.
+  - id: chaucer-canterbury-tales#u29-c2
+    label: c2
+    heading: The Twenty Statutes, codified
+    char_start: 1153377
+    char_end: 1154263
+    start_quote: The first statute that on the book was spread,
+    end_quote: All this was whole the Kinge’s ordinance.
+    why: Shows love administered as enumerated, sworn law rather than felt sentiment — the poem's central
+      conceit of love-as-institution.
+  - id: chaucer-canterbury-tales#u29-c3
+    label: c3
+    heading: The forbidden statutes of women
+    char_start: 1163400
+    char_end: 1164457
+    start_quote: The officer, called Rigour — who is incorruptible by
+    end_quote: There may no man statute of women know.
+    why: 'Reveals the Court''s deliberately gendered and asymmetric legibility: one sex bound by a readable
+      code, the other governed by law kept permanently sealed from men.'
+  - id: chaucer-canterbury-tales#u29-c4
+    label: c4
+    heading: The monks and nuns protest their vows
+    char_start: 1179866
+    char_end: 1180771
+    start_quote: “Well may we curse our abbeys and our place,
+    end_quote: Fortune, we curse thy wheel of variance!
+    why: 'The poem''s sharpest protest: natural appetite chafing against a vow imposed in youth without
+      consent, desire staged as something that persists against external capture.'
+  - id: chaucer-canterbury-tales#u29-c5
+    label: c5
+    heading: The birds' Matins to the God of Love
+    char_start: 1191045
+    char_end: 1192115
+    start_quote: On May Day, when the lark began to rise,
+    end_quote: And then the wren began to skip and dance.
+    why: The comic climax where the actual form of the Latin liturgy is retained intact while its object
+      is swapped from God to Cupid.
+- nn: 30
+  unit_id: cuckoo-and-nightingale
+  note_id: chaucer-canterbury-tales-cuckoo-and-nightingale
+  span: 1204257:1223860
+  chunks:
+  - id: chaucer-canterbury-tales#u30-c1
+    label: c1
+    heading: Invocation of the God of Love's arbitrary power
+    char_start: 1207691
+    char_end: 1208667
+    start_quote: THE God of Love, ah! benedicite,
+    end_quote: And most his might he sheddeth ever in May.
+    why: Frames the whole debate by establishing Love as a capricious, all-powerful sovereign before either
+      bird speaks, and the editor's note ties its opening couplet directly to the Knight's Tale.
+  - id: chaucer-canterbury-tales#u30-c2
+    label: c2
+    heading: Falling into the trance; the ill-omened cuckoo
+    char_start: 1211813
+    char_end: 1212301
+    start_quote: And for delight, I wote never how,
+    end_quote: Full little joy have I now of thy cry.”
+    why: Establishes the liminal dream-state that lets the narrator understand bird-speech, and the ominous
+      convention of hearing the cuckoo before the nightingale that sets the debate in motion.
+  - id: chaucer-canterbury-tales#u30-c3
+    label: c3
+    heading: The Nightingale's defense of Love's virtues
+    char_start: 1215023
+    char_end: 1215412
+    start_quote: For thereof truly cometh all gladness,
+    end_quote: Were lother* to be shamed than to die.
+    why: 'The poem''s clearest statement of the courtly-love thesis: Love as the source of every gentle
+      social virtue, the Nightingale''s core argument in the debate.'
+  - id: chaucer-canterbury-tales#u30-c4
+    label: c4
+    heading: The Cuckoo's indictment of Love as rage and dotage
+    char_start: 1215672
+    char_end: 1216126
+    start_quote: Nightingale, thou speakest wondrous fair,
+    end_quote: Pride, mischief, povert’, and woodness.*
+    why: Gives the anti-love position real rhetorical force rather than making the Cuckoo a straw man,
+      which is what makes the debate genuinely contested.
+  - id: chaucer-canterbury-tales#u30-c5
+    label: c5
+    heading: The dreamer intervenes; the Nightingale's vow
+    char_start: 1217920
+    char_end: 1218545
+    start_quote: Methought then I start up anon,
+    end_quote: That all this May I will thy singer be.”
+    why: The poem's turning point where the dreamer abandons neutrality and acts, converting the abstract
+      debate into a personal alliance between narrator and Nightingale.
+  - id: chaucer-canterbury-tales#u30-c6
+    label: c6
+    heading: The birds defer judgment to a parliament at Woodstock
+    char_start: 1220493
+    char_end: 1221217
+    start_quote: 'Then spake one bird for all, by one assent:'
+    end_quote: At Woodstock upon the green lay.”
+    why: The closing procedural device the headnote identifies as the hinge linking this poem to 'The
+      Assembly of Fowls' — resolution deferred from rhetoric to formal convocation.
+- nn: 31
+  unit_id: assembly-of-fowls
+  note_id: chaucer-canterbury-tales-assembly-of-fowls
+  span: 1223860:1278056
+  chunks:
+  - id: chaucer-canterbury-tales#u31-c1
+    label: c1
+    heading: The paradox of bookish love
+    char_start: 1228347
+    char_end: 1229159
+    start_quote: THE life so short, the craft so long to learn,
+    end_quote: But God save such a lord! I can no more.
+    why: States the poem's founding paradox — Love known only through reading, not experience — that frames
+      the whole dream as textually generated.
+  - id: chaucer-canterbury-tales#u31-c2
+    label: c2
+    heading: The twin gates of the garden
+    char_start: 1235023
+    char_end: 1235628
+    start_quote: Through me men go into the blissful place
+    end_quote: Th’eschewing is the only remedy.
+    why: The Dante-echoing dual inscriptions stage love's promise and danger as an undecidable fork the
+      dreamer cannot resolve unaided.
+  - id: chaucer-canterbury-tales#u31-c3
+    label: c3
+    heading: The royal tercel's plea
+    char_start: 1249787
+    char_end: 1250458
+    start_quote: 'This royal tercel spake, and tarried not:'
+    end_quote: My deare heart, have on my woe some ruth.
+    why: The fullest instance of high courtly-love rhetoric in the poem, offered by the highest-ranked
+      suitor as total self-surrender to the formel.
+  - id: chaucer-canterbury-tales#u31-c4
+    label: c4
+    heading: The lower birds' comic rebellion
+    char_start: 1259385
+    char_end: 1260527
+    start_quote: Now fy, churl!” quoth the gentle tercelet,
+    end_quote: Go! lewed be thou, while the world may dare!”
+    why: The class-inflected squabble among tercelet, cuckoo, and merlin punctures the courtly register
+      and turns the assembly into demotic farce.
+  - id: chaucer-canterbury-tales#u31-c5
+    label: c5
+    heading: Nature's ruling and the formel's deferral
+    char_start: 1260781
+    char_end: 1262492
+    start_quote: But, finally, this is my conclusion, —
+    end_quote: Ye get no more, although ye *do me dey.*
+    why: 'The poem''s actual resolution: Nature cedes the decision to the formel''s own will, and the
+      formel refuses to choose at all, asking a year''s respite.'
+- nn: 32
+  unit_id: flower-and-leaf
+  note_id: chaucer-canterbury-tales-flower-and-leaf
+  span: 1278056:1315516
+  chunks:
+  - id: chaucer-canterbury-tales#u32-c1
+    label: c1
+    heading: 'Editorial headnote: the allegory''s key'
+    char_start: 1281436
+    char_end: 1282618
+    start_quote: They which honour the Flower, a thing fading
+    end_quote: both for the invention and the moral.” It is
+    why: States the poem's Flower/Leaf allegorical key in plain terms before the verse itself does, framing
+      how the entire unit should be read.
+  - id: chaucer-canterbury-tales#u32-c2
+    label: c2
+    heading: The hidden arbour
+    char_start: 1285989
+    char_end: 1286268
+    start_quote: And shapen was this arbour, roof and all,
+    end_quote: Within or no; but one within well might
+    why: Establishes the narrator's concealed vantage point — seeing without being seen — that frames
+      the whole pageant as watched spectacle.
+  - id: chaucer-canterbury-tales#u32-c3
+    label: c3
+    heading: The storm destroys the flowers
+    char_start: 1300329
+    char_end: 1301177
+    start_quote: As about noon the sun so fervently
+    end_quote: Dry on them, so dropping was [all] their weed.
+    why: The poem's dramatic center, where the Flower/Leaf allegory is enacted through weather rather
+      than stated as doctrine.
+  - id: chaucer-canterbury-tales#u32-c4
+    label: c4
+    heading: The lady in white's moral
+    char_start: 1309494
+    char_end: 1310364
+    start_quote: For knights should ever be persevering,
+    end_quote: Be put to no such occupation.”
+    why: 'The poem''s explicit thesis: laurel rewards perseverance in honour while the flower cannot endure
+      the least storm, converting imagery into stated doctrine.'
+  - id: chaucer-canterbury-tales#u32-c5
+    label: c5
+    heading: Closing envoi
+    char_start: 1311540
+    char_end: 1311666
+    start_quote: O little book! thou art so uncunning,
+    end_quote: How dar’st thou put thyself in press, <26> for dread?
+    why: The conventional modesty topos closing the poem, ironically resonant given the poem's now-doubted
+      attribution to Chaucer.
+- nn: 33
+  unit_id: house-of-fame
+  note_id: chaucer-canterbury-tales-house-of-fame
+  span: 1315516:1398532
+  chunks:
+  - id: chaucer-canterbury-tales#u33-c1
+    label: c1
+    heading: The eagle needles the poet about his hermit-like routine
+    char_start: 1332437
+    char_end: 1332771
+    start_quote: For when thy labour all done is,
+    end_quote: Although thine abstinence is lite
+    why: A rare direct autobiographical glimpse of Chaucer's daily life as a customs official who reads
+      alone until dazed, framed as the eagle's affectionate rebuke.
+  - id: chaucer-canterbury-tales#u33-c2
+    label: c2
+    heading: Fame's arbitrary verdicts on the first petitioners
+    char_start: 1356848
+    char_end: 1357740
+    start_quote: They hadde good fame each deserved,
+    end_quote: Good nor harm, nor that nor this
+    why: States outright the poem's central claim that fame is granted or withheld with no relation to
+      actual desert, purely because it 'list' (pleases) the goddess.
+  - id: chaucer-canterbury-tales#u33-c3
+    label: c3
+    heading: The House of Rumour's wickerwork anatomy
+    char_start: 1373619
+    char_end: 1375877
+    start_quote: Was made of twigges sallow
+    end_quote: As is the sea of wells and springs
+    why: The physical description of the whirling house of twigs, with its thousand holes and endless
+      categories of tidings, is the poem's central image of an indiscriminate information-infrastructure.
+  - id: chaucer-canterbury-tales#u33-c4
+    label: c4
+    heading: How a tiding swells from mouth to mouth
+    char_start: 1379171
+    char_end: 1380083
+    start_quote: But all the wonder most was this;
+    end_quote: Till all a city burnt up is.
+    why: The clearest model in the poem of rumor as a distributed, authorless process of accretion, likened
+      explicitly to fire spreading unchecked through a city.
+  - id: chaucer-canterbury-tales#u33-c5
+    label: c5
+    heading: The temple-burner's confession
+    char_start: 1369845
+    char_end: 1370430
+    start_quote: That burnt the temple of Isidis,
+    end_quote: The temple set I all afire.
+    why: The Herostratus-figure states plainly that infamy substitutes for merited fame, crystallizing
+      the poem's thesis that renown answers only to salience.
+- nn: 34
+  unit_id: troilus-book-1
+  note_id: chaucer-canterbury-tales-troilus-book-1
+  span: 1398532:1421176
+  chunks:
+  - id: chaucer-canterbury-tales#u34-c1
+    label: c1
+    heading: 'Proem: invocation to Tisiphone'
+    char_start: 1404834
+    char_end: 1405597
+    start_quote: THE double sorrow <1> of Troilus to tell,
+    end_quote: And to a sorry tale a sorry cheer.
+    why: Establishes the narrator's self-abasing role as servant to Love's sufferers and the poem's rise-and-fall
+      structure before the plot begins.
+  - id: chaucer-canterbury-tales#u34-c2
+    label: c2
+    heading: Calchas' treason and Cressida's peril
+    char_start: 1407649
+    char_end: 1408199
+    start_quote: In Troy, during the siege, dwelt “a lord of great authority, a
+    end_quote: was in great fear for her life.
+    why: The poem's one moment of political/oracular stakes — Calchas' foreknowledge of Troy's fall and
+      his daughter's resulting exposure — that sets Cressida's vulnerable position before Troilus ever
+      sees her.
+  - id: chaucer-canterbury-tales#u34-c3
+    label: c3
+    heading: 'The eye pierced: love at first sight'
+    char_start: 1411283
+    char_end: 1413669
+    start_quote: Within the temple went he forth playing,
+    end_quote: Blessed be Love, that thus can folk convert!
+    why: The poem's central turning point, staging Troilus's fall into love as sudden, involuntary, and
+      explicitly framed as the God of Love's vengeance on a former scorner.
+  - id: chaucer-canterbury-tales#u34-c4
+    label: c4
+    heading: The Song of Troilus
+    char_start: 1415732
+    char_end: 1416716
+    start_quote: If no love is, O God! why feel I so?
+    end_quote: For heat of cold, for cold of heat, I die!”
+    why: The poem's lyric core, articulating love's self-contradictions in a passage drawn from Chaucer's
+      Italian source and central to the poem's psychological analysis.
+  - id: chaucer-canterbury-tales#u34-c5
+    label: c5
+    heading: Pandarus's whetstone argument
+    char_start: 1418394
+    char_end: 1419429
+    start_quote: “Yea, Troilus, hearken to me,” quoth Pandare,
+    end_quote: As men may see; and so the wise man deemeth.”
+    why: Displays Pandarus's characteristic method — proverb and contrary-based persuasion rather than
+      moral authority — that will drive his manipulations through the rest of the poem.
+  - id: chaucer-canterbury-tales#u34-c6
+    label: c6
+    heading: 'Nettle and lily: joy next to sorrow'
+    char_start: 1420136
+    char_end: 1420496
+    start_quote: “For thilke* ground, that bears the weedes wick’
+    end_quote: And also joy is next the fine* of sorrow.”
+    why: Pandarus's proverb of consoling opposites encapsulates the poem's promised arc from woe to weal,
+      a promise the later books will overturn.
+- nn: 35
+  unit_id: troilus-book-2
+  note_id: chaucer-canterbury-tales-troilus-book-2
+  span: 1421176:1444631
+  chunks:
+  - id: chaucer-canterbury-tales#u35-c1
+    label: c1
+    heading: 'Proem: relativism of love''s customs'
+    char_start: 1421765
+    char_end: 1422176
+    start_quote: For ev’ry wighte that to Rome went
+    end_quote: That have in love done or said *like in all;”*
+    why: States the poem's defense of Pandarus's mediated courtship as a matter of custom rather than
+      fault, framing the whole book's premise.
+  - id: chaucer-canterbury-tales#u35-c2
+    label: c2
+    heading: Troilus rides home in triumph
+    char_start: 1430314
+    char_end: 1431000
+    start_quote: This Troilus sat upon his bay steed
+    end_quote: It was a heaven on him for to see.*
+    why: The visual spectacle that first turns Cressida's private thoughts toward Troilus, pivoting the
+      book from persuasion-by-words to persuasion-by-sight.
+  - id: chaucer-canterbury-tales#u35-c3
+    label: c3
+    heading: Cressida's soliloquy on independence
+    char_start: 1434545
+    char_end: 1435148
+    start_quote: I am mine owen woman, well at ease,
+    end_quote: By all right I may do to me no shame.”
+    why: The load-bearing passage of self-persuasion, showing Cressida reasoning through desire versus
+      autonomy in her own voice rather than simply submitting to Pandarus's pressure.
+  - id: chaucer-canterbury-tales#u35-c4
+    label: c4
+    heading: The eagle dream
+    char_start: 1439034
+    char_end: 1439424
+    start_quote: And as she slept, anon right then *her mette*
+    end_quote: And forth he flew, with hearte left for heart.
+    why: Supplies the poem's supernatural ratification of the heart-exchange about to be arranged by human
+      stratagem, closing Cressida's arc for the book.
+  - id: chaucer-canterbury-tales#u35-c5
+    label: c5
+    heading: Pandarus's craft-lecture on the love letter
+    char_start: 1440065
+    char_end: 1441147
+    start_quote: Touching thy letter, thou art wise enough,
+    end_quote: It *’cordeth not,* so were it but a jape.”
+    why: Makes explicit the poem's self-consciousness about rhetoric — that a persuasive appearance of
+      natural feeling must itself be carefully crafted.
+- nn: 36
+  unit_id: troilus-book-3
+  note_id: chaucer-canterbury-tales-troilus-book-3
+  span: 1444631:1478474
+  chunks:
+  - id: chaucer-canterbury-tales#u36-c1
+    label: c1
+    heading: 'Proem: hymn to Venus as cosmic binder'
+    char_start: 1444742
+    char_end: 1446703
+    start_quote: O Blissful light, of which the beames clear
+    end_quote: As why this fish, not that, comes to the weir.
+    why: Frames the whole book's love-plot as an instance of a universal, world-ordering force, the poem's
+      own version of an invisible infrastructure holding disparate things together.
+  - id: chaucer-canterbury-tales#u36-c2
+    label: c2
+    heading: Troilus's tongue-tied confession
+    char_start: 1449215
+    char_end: 1449982
+    start_quote: In changed voice, right for his very dread,
+    end_quote: Y-wis, I suffer not the lesse pain.
+    why: The rehearsed courtly speech collapses into the stammered 'Mercy, mercy, my dear heart!' — the
+      poem's central irony about desire overwhelming rhetorical mastery.
+  - id: chaucer-canterbury-tales#u36-c3
+    label: c3
+    heading: Pandarus's confession of his own contrivance
+    char_start: 1454627
+    char_end: 1456177
+    start_quote: That is to say, for thee I am become,
+    end_quote: And she fordone,* and thou right naught y-won.”
+    why: Pandarus names his role as engineered contrivance ('mine engine') and spells out the reputational
+      catastrophe exposure would cause, the clearest statement of secrecy as protective architecture against
+      a judging public.
+  - id: chaucer-canterbury-tales#u36-c4
+    label: c4
+    heading: The consummation
+    char_start: 1468235
+    char_end: 1468585
+    start_quote: This Troilus her gan in armes strain,
+    end_quote: Been yolden,* y-wis, I were now not here!”
+    why: The plot's hinge moment — physical union achieved — rendered in the poem's own terms of yielding
+      and capture.
+  - id: chaucer-canterbury-tales#u36-c5
+    label: c5
+    heading: 'The aubade: cursing the Day'
+    char_start: 1472984
+    char_end: 1473771
+    start_quote: O cruel Day! accuser of the joy
+    end_quote: We will thee not, us needs no day to have.”
+    why: The dawn-song set piece casts visibility itself as the enemy of the lovers' bond, mirroring the
+      secrecy-as-protection theme running through Pandarus's plotting.
+  - id: chaucer-canterbury-tales#u36-c6
+    label: c6
+    heading: Troilus's hymn to Love as cosmic order
+    char_start: 1475569
+    char_end: 1476296
+    start_quote: Love, that of Earth and Sea hath governance!
+    end_quote: All this doth Love, ay heried* be his might!
+    why: The Boethian song makes explicit the proem's claim that Love is the binding force preventing
+      cosmic and elemental chaos, the philosophical payload behind the human plot.
+- nn: 37
+  unit_id: troilus-book-4
+  note_id: chaucer-canterbury-tales-troilus-book-4
+  span: 1478474:1510097
+  chunks:
+  - id: chaucer-canterbury-tales#u37-c1
+    label: c1
+    heading: The parliament grants the exchange over Hector's objection
+    char_start: 1481063
+    char_end: 1482093
+    start_quote: Hector, which that full well the Greekes heard,
+    end_quote: And to deliver Antenor they pray’d.
+    why: Stages Cressida's fate as an institutional/transactional decision overriding individual objection
+      and love, the engine of the book's tragedy.
+  - id: chaucer-canterbury-tales#u37-c2
+    label: c2
+    heading: Troilus's address to his own weary ghost
+    char_start: 1484145
+    char_end: 1485956
+    start_quote: O weary ghost, that errest to and fro!
+    end_quote: That I thee hadde where I would in Troy!”
+    why: 'The emotional core of the unit: Troilus''s grief rendered as a wish to dissolve selfhood entirely
+      and follow Cressida in death.'
+  - id: chaucer-canterbury-tales#u37-c3
+    label: c3
+    heading: Pandarus's counsel that new love replaces old
+    char_start: 1486751
+    char_end: 1487780
+    start_quote: This town is full of ladies all about,
+    end_quote: Some case* shall put it out of remembrance.
+    why: States the poem's cynical counter-ethic of love as replaceable, which Troilus explicitly rejects,
+      sharpening the book's central debate.
+  - id: chaucer-canterbury-tales#u37-c4
+    label: c4
+    heading: Troilus's Boethian meditation on fate and free choice
+    char_start: 1497661
+    char_end: 1498645
+    start_quote: 'For right thus was his argument alway:'
+    end_quote: That I n’ot* whose opinion I may hold.
+    why: A sustained scholastic argument on divine prescience and necessity dropped into the romance,
+      framing Troilus's loss as possibly predetermined rather than contingent.
+  - id: chaucer-canterbury-tales#u37-c5
+    label: c5
+    heading: Cressida's oaths of eternal fidelity
+    char_start: 1506828
+    char_end: 1508130
+    start_quote: Cressida, with a sigh, right in this wise
+    end_quote: And I with body and soul sink in hell!”
+    why: Cressida's extravagant vows, invoking gods and rivers to guarantee her truth, generate the passage's
+      dramatic irony against the tale's known outcome.
+  - id: chaucer-canterbury-tales#u37-c6
+    label: c6
+    heading: The lovers' final exchange and parting
+    char_start: 1508481
+    char_end: 1510095
+    start_quote: Grand mercy, good heart mine, y-wis,” quoth she;
+    end_quote: out of the chamber went.”
+    why: Closes the book on Cressida's practical, time-bound promise to return, immediately followed by
+      Troilus's anguished departure, setting up the book's unresolved suspense.
+- nn: 38
+  unit_id: troilus-book-5
+  note_id: chaucer-canterbury-tales-troilus-book-5
+  span: 1510097:1553979
+  chunks:
+  - id: chaucer-canterbury-tales#u38-c1
+    label: c1
+    heading: The Fates announce the ending in advance
+    char_start: 1510114
+    char_end: 1510434
+    start_quote: APPROACHE gan the fatal destiny
+    end_quote: Till Lachesis his thread no longer twine.
+    why: The book opens by handing the outcome to Jove and the Fates before any action occurs, framing
+      everything that follows as foreclosed rather than chosen.
+  - id: chaucer-canterbury-tales#u38-c2
+    label: c2
+    heading: Troilus's lament to the empty palace
+    char_start: 1516359
+    char_end: 1517003
+    start_quote: 'Then said he thus: “O palace desolate!'
+    end_quote: farewell shrine, of which the saint is out!”
+    why: Troilus performs mourning as liturgy over Criseyde's shuttered house before any proof of betrayal
+      exists, showing his grief precedes and outruns the facts.
+  - id: chaucer-canterbury-tales#u38-c3
+    label: c3
+    heading: Diomede's calculated wooing
+    char_start: 1521841
+    char_end: 1522413
+    start_quote: “What will ye more, lovesome lady dear?
+    end_quote: Yea, lever* than be a lord of Greekes twelve!”
+    why: Diomede's speech is the clearest evidence of seduction staged as tactical argument — dismissing
+      Troy's prospects, flattering her, closing with performed modesty.
+  - id: chaucer-canterbury-tales#u38-c4
+    label: c4
+    heading: Criseyde's refusal to decide
+    char_start: 1525561
+    char_end: 1525944
+    start_quote: I say not therefore that I will you love;
+    end_quote: I may you see, or *do my hearte brest!”*
+    why: Criseyde's reply to Diomede is the poem's exact rendering of ambivalence-as-strategy, immediately
+      undercut by her private prayer to see Troy again, capturing the psychology of her drift.
+  - id: chaucer-canterbury-tales#u38-c5
+    label: c5
+    heading: The inventory of surrendered tokens
+    char_start: 1527120
+    char_end: 1527750
+    start_quote: And after this, the story telleth us
+    end_quote: Men say, I n’ot,* that she gave him her heart.
+    why: The narrator's reluctant, hedged tally of horse, brooch, sleeve, and finally heart renders betrayal
+      as gradual erosion rather than a single dramatic act, and shows the poem's own discomfort narrating
+      it.
+  - id: chaucer-canterbury-tales#u38-c6
+    label: c6
+    heading: Death and the contemptus mundi turn
+    char_start: 1535905
+    char_end: 1537000
+    start_quote: And when that he was slain in this mannere,
+    end_quote: Where as Mercury sorted* him to dwell.
+    why: Troilus's soul rising through the spheres to laugh at earthly mourning is the hinge where the
+      poem's value system flips from courtly tragedy into Boethian/Christian renunciation.
+- nn: 39
+  unit_id: chaucers-dream
+  note_id: chaucer-canterbury-tales-chaucers-dream
+  span: 1553979:1587090
+  chunks:
+  - id: chaucer-canterbury-tales#u39-c1
+    label: c1
+    heading: 'Editorial headnote: disputed authorship and the allegorical key'
+    char_start: 1553999
+    char_end: 1555989
+    start_quote: This pretty allegory, or rather conceit, containing one or two
+    end_quote: writing this poem on the occasion of the Duke’s marriage, and in weaving his own love-fortunes
+      with those of the principal figures.
+    why: Establishes both the poem's contested attribution and the Speght tradition of reading it as coded
+      political-marital allegory, the frame that governs how the whole poem is meant to be interpreted.
+  - id: chaucer-canterbury-tales#u39-c2
+    label: c2
+    heading: The glass-walled isle
+    char_start: 1556450
+    char_end: 1557993
+    start_quote: WHEN Flora, the queen of pleasance,
+    end_quote: It seemed like none earthly thing;
+    why: The poem's founding image, an artificial glass-enclosed paradise of ageless ladies with mechanical
+      singing birds, sets the uncanny, hermetic register the whole dream operates within.
+  - id: chaucer-canterbury-tales#u39-c3
+    label: c3
+    heading: The queen's abduction and near-death
+    char_start: 1561577
+    char_end: 1562673
+    start_quote: Even with that so came this knight,
+    end_quote: And from great pain so quit* my heart.
+    why: The queen's own narration of being seized and nearly dying renders the poem's marriage-allegory
+      as an experience of violent capture rather than courtship, the crux of its darker political reading.
+  - id: chaucer-canterbury-tales#u39-c4
+    label: c4
+    heading: The hearse and the weeping ladies
+    char_start: 1573690
+    char_end: 1574058
+    start_quote: “Come within, come see her hearse
+    end_quote: They be as cloth that dy’d is new.”
+    why: Stages collective grief as ritualized coercion immediately before the prince's suicide, the poem's
+      grimmest passage and the hinge into its resurrection climax.
+  - id: chaucer-canterbury-tales#u39-c5
+    label: c5
+    heading: The bird's resurrection
+    char_start: 1578894
+    char_end: 1579587
+    start_quote: And where his fellow lay thus dead,
+    end_quote: Took, singing, from us, and their leave;
+    why: The miracle that resolves the whole plot is first proved on a bird before being extended to the
+      human dead, giving the poem's happy ending its distinctive procedural, quasi-empirical texture.
+  - id: chaucer-canterbury-tales#u39-c6
+    label: c6
+    heading: The poet's closing prayer
+    char_start: 1584646
+    char_end: 1585063
+    start_quote: Or elles, without more I pray,
+    end_quote: 'In her good will: Amen, amen!'
+    why: Returns the frame from political allegory to the poet's private wish, asking that the dream be
+      lived rather than merely interpreted.
+- nn: 40
+  unit_id: legend-of-good-women-prologue
+  note_id: chaucer-canterbury-tales-legend-of-good-women-prologue
+  span: 1587090:1624927
+  chunks:
+  - id: chaucer-canterbury-tales#u40-c1
+    label: c1
+    heading: Old books as the key of remembrance
+    char_start: 1590814
+    char_end: 1592338
+    start_quote: A THOUSAND times I have hearde tell,
+    end_quote: These bookes, where we have none other preve.
+    why: Frames the whole prologue's epistemology of textual authority just before that authority is turned
+      against the narrator's own books.
+  - id: chaucer-canterbury-tales#u40-c2
+    label: c2
+    heading: The daisy devotion
+    char_start: 1592865
+    char_end: 1594152
+    start_quote: Now have I then such a condition,
+    end_quote: Sufficient this flow’r to praise aright!
+    why: Establishes the narrator's private flower-cult whose object is later revealed to be Alcestis
+      herself, the poem's central irony.
+  - id: chaucer-canterbury-tales#u40-c3
+    label: c3
+    heading: The ballad of displaced heroines
+    char_start: 1603069
+    char_end: 1603887
+    start_quote: Hide, Absolon, thy gilte* tresses clear;
+    end_quote: Hypsipyle, betrayed by Jasoun,
+    why: The roll-call of legendary women eclipsed by 'my lady' previews the cast of the Legend collection
+      this prologue exists to commission.
+  - id: chaucer-canterbury-tales#u40-c4
+    label: c4
+    heading: The God of Love's indictment
+    char_start: 1606620
+    char_end: 1607698
+    start_quote: “For thou,” quoth he, “art thereto nothing able,
+    end_quote: So cruelly, that it shall well be seen.
+    why: The poem's central accusation scene, naming Troilus and Criseyde and the Romance of the Rose
+      translation as offenses against Love's law.
+  - id: chaucer-canterbury-tales#u40-c5
+    label: c5
+    heading: Alcestis's mirror for princes
+    char_start: 1609688
+    char_end: 1611551
+    start_quote: For he that king or lord is naturel,
+    end_quote: your ire, and be somewhat tractable!
+    why: Alcestis's plea turns on a fully worked political argument about legitimate rule versus tyranny,
+      which is what actually wins the pardon.
+  - id: chaucer-canterbury-tales#u40-c6
+    label: c6
+    heading: The penance is pronounced
+    char_start: 1615023
+    char_end: 1615779
+    start_quote: Thou shalt, while that thou livest, year by year,
+    end_quote: On my behalf, at Eltham, or at Sheen.
+    why: The judgment resolves into the literal commission for the Legend of Good Women, tied to the real
+      dedicatee Queen Anne and named royal residences.
+- nn: 41
+  unit_id: miscellaneous-poems
+  note_id: chaucer-canterbury-tales-miscellaneous-poems
+  span: 1624927:1651686
+  chunks:
+  - id: chaucer-canterbury-tales#u41-c1
+    label: c1
+    heading: A.B.C. — opening stanza to the Virgin
+    char_start: 1624991
+    char_end: 1625405
+    start_quote: ALMIGHTY and all-merciable* Queen,
+    end_quote: Vanquish’d me hath my cruel adversair.
+    why: Establishes the acrostic Marian prayer's register and its alphabetical constraint (stanza A)
+      that structures the whole poem.
+  - id: chaucer-canterbury-tales#u41-c2
+    label: c2
+    heading: Goodly Ballad — courtly submission refrain
+    char_start: 1635907
+    char_end: 1636254
+    start_quote: MOTHER of nurture, best belov’d of all,
+    end_quote: My heart and all, with ev’ry circumstance, All wholly to be under your governance.
+    why: Sets up the poem's governing refrain of total courtly submission before the daisy conceit takes
+      over in later stanzas.
+  - id: chaucer-canterbury-tales#u41-c3
+    label: c3
+    heading: Lak of Stedfastnesse — the world turned upside down
+    char_start: 1639471
+    char_end: 1640897
+    start_quote: SOMETIME this world was so steadfast and stable,
+    end_quote: And wed thy folk again to steadfastness!
+    why: The unit's clearest legitimacy-crisis text — old bonds of word and virtue collapsed, addressed
+      directly to a reigning king, resonant with a gramsci-gap-style interregnum.
+  - id: chaucer-canterbury-tales#u41-c4
+    label: c4
+    heading: Envoy to Bukton — citing the Wife of Bath
+    char_start: 1642101
+    char_end: 1642493
+    start_quote: This little writ, proverbes, or figure,
+    end_quote: In freedom, for full hard is to be bond.
+    why: Chaucer redirects a private friend to his own Wife of Bath's Tale as authority on marriage, a
+      rare self-referential gesture tying this unit back to the Canterbury Tales proper.
+  - id: chaucer-canterbury-tales#u41-c5
+    label: c5
+    heading: Complaint to His Purse — love-complaint turned petition
+    char_start: 1644365
+    char_end: 1645452
+    start_quote: To you, my purse, and to none other wight,
+    end_quote: Have mind upon my supplication!
+    why: The full poem and royal envoy together show the comic pivot from courtly love-complaint diction
+      onto an empty purse, ending in a direct petition to Henry IV that reportedly won Chaucer his annuity.
+  - id: chaucer-canterbury-tales#u41-c6
+    label: c6
+    heading: Truth — flee from the press
+    char_start: 1645693
+    char_end: 1646151
+    start_quote: FLEE from the press, and dwell with soothfastness;
+    end_quote: And truth thee shall deliver, it is no dread.* *doubt
+    why: The poem's opening stanza states its Boethian argument for inward constancy against Fortune,
+      reportedly composed on Chaucer's deathbed.
