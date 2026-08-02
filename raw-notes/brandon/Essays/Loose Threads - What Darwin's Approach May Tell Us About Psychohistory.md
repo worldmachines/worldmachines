@@ -2,8 +2,6 @@
 
 *Brandon Pink · August 2026. Written after the SIGPSY July meeting on historicism, read against chapter 4 of Dennett's* Darwin's Dangerous Idea.
 
-*Related literature notes: [[Institutional Capacity and Internet Transition]] · [[Networks vs. Hierarchies as a Historical Change Dynamic]]*
-
 ## Psychohistory and the Protocol Institute
 
 Since June of this year I have been sitting in on the Psychohistory Special Interest Group (SIGPSY), a working group that grew out of Venkatesh Rao's World Machines project at the Protocol Institute. The name is a joke that is not entirely a joke. Asimov's psychohistory was a mathematics of civilizations so powerful that Hari Seldon could chart the fall of an empire and the length of the dark age that followed it. Nobody in the group believes something like that version of psychohistory is currently available. However, we believe a real-world implementation of psychohistory could be possible. It would look less like Seldon and more like long-range climate forecasting: probabilistic, range-based, less confident the further out you push, and still genuinely useful. A certain kind of pattern tends to produce a certain kind of outcome in a certain kind of context, even if the exact date is impossible to claim.
