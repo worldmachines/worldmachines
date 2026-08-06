@@ -48,6 +48,7 @@ cannot read. It verifies the Access JWT itself and returns a clean 401.
 |---|---|---|
 | `/login*` | members | — (it is only a redirector) |
 | `/profile*`, `/submit*` | members | — (static pages) |
+| `/wiki*` | members | — (static pages; members-only for now by decision 2026-08-06) |
 | `/api/profile`, `/api/submit`, `/api/mcp-token`, `/api/library/private` | members | identity + HANDLES record |
 | `/api/pdf/private/*` | members | identity + HANDLES record |
 | `/api/pdf/public/*` | — | none (public) |

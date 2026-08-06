@@ -102,6 +102,9 @@ const MEMBER_PATHS = [
   '/api/mcp-token*',
   '/api/library/private*',
   '/api/pdf/private/*',
+  // Members-only for now by decision (2026-08-06): the wiki renders everyone's
+  // raw notes, so it stays behind login until the club opts to open it.
+  '/wiki*',
 ];
 
 // The original bug: a policy on /admin/* only, while the API lives at
