@@ -67,6 +67,24 @@ const FALLBACK_HOSTNAMES = ['worldmachines.org', 'worldmachines-2rd.pages.dev'];
 
 const MEMBERS_APP = 'World Machines members';
 const ADMIN_APP = 'World Machines admin';
+
+// Access rejects more than 5 destinations per application (code 12130; the
+// dashboard greys out "add domain" at the same point). A logical app whose
+// hostname × path matrix exceeds that is split into "<name>", "<name> (2)", …
+// all attached to the same reusable policy, which is invisible to members —
+// Access SSO reissues the session token per app on the same hostname.
+const MAX_DESTINATIONS = 5;
+
+function chunkApp(name, uris) {
+  const chunks = [];
+  for (let i = 0; i < uris.length; i += MAX_DESTINATIONS) {
+    chunks.push({
+      name: chunks.length === 0 ? name : `${name} (${chunks.length + 1})`,
+      uris: uris.slice(i, i + MAX_DESTINATIONS),
+    });
+  }
+  return chunks;
+}
 const MEMBERS_POLICY = 'World Machines members — email allowlist';
 const ADMIN_POLICY = 'World Machines admin — email allowlist';
 
@@ -265,7 +283,7 @@ const policyBody = (name, emails) => ({
 // ── Diffing ───────────────────────────────────────────────────────────
 
 const sameSet = (a, b) =>
-  a.length === b.length && [...a].sort().join(' ') === [...b].sort().join(' ');
+  a.length === b.length && [...a].sort().join('\u0000') === [...b].sort().join('\u0000');
 
 function existingUris(app) {
   if (Array.isArray(app.destinations)) return app.destinations.filter((d) => d.type === 'public').map((d) => d.uri);
@@ -384,7 +402,8 @@ async function main() {
     return { ...p, existing, ...diffPolicy(existing, p.body) };
   });
 
-  const desiredApps = [
+  const desiredApps = [];
+  for (const spec of [
     {
       name: MEMBERS_APP,
       policyName: MEMBERS_POLICY,
@@ -397,7 +416,19 @@ async function main() {
       uris: destinationsFor(hostnames, ADMIN_PATHS),
       denyUrl: null,
     },
-  ];
+  ]) {
+    for (const chunk of chunkApp(spec.name, spec.uris)) {
+      desiredApps.push({ ...spec, name: chunk.name, uris: chunk.uris });
+    }
+  }
+
+  // A previous run with more hostnames may have left higher-numbered chunk
+  // apps behind. Never delete — surface them for a human.
+  const staleChunks = apps.filter(
+    (x) =>
+      [MEMBERS_APP, ADMIN_APP].some((base) => new RegExp(`^${base} \\(\\d+\\)$`).test(x.name)) &&
+      !desiredApps.some((d) => d.name === x.name)
+  );
 
   const appPlan = desiredApps.map((a) => {
     const existing = apps.find((x) => x.name === a.name) || null;
@@ -446,6 +477,9 @@ async function main() {
   log(`Members            : ${memberEmails.length} emails from ${opts.emails ? '--emails' : `${KV_BINDING} KV`}`);
   log(`Admins             : ${admins.join(', ')}`);
   log(`Session duration   : ${opts.session}`);
+  for (const s of staleChunks) {
+    log(`  ! stale chunk app "${s.name}" (${existingUris(s).length} destinations) — no longer needed; delete it in Zero Trust → Access → Applications`);
+  }
   log();
 
   for (const p of policyPlan) {

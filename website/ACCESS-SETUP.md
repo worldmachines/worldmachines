@@ -114,9 +114,13 @@ Read three lines of that output carefully:
 node scripts/provision-access.mjs --apply
 ```
 
-It creates two reusable policies and two applications, then prints their
-**AUD tags**. Re-running writes nothing once state matches, so it is safe in a
-loop or a workflow.
+It creates two reusable policies and the applications, then prints their
+**AUD tags**. Access caps an application at 5 destinations, so a logical app
+whose hostname × path matrix exceeds that is split into "World Machines
+members", "World Machines members (2)", … — all attached to the same policy.
+Members never notice: Access SSO carries one session across the chunk apps.
+Re-running writes nothing once state matches, so it is safe in a loop or a
+workflow.
 
 ### 4. Set the Pages variables — do not skip this
 
@@ -131,7 +135,7 @@ Variables and Secrets → add to **Production and Preview**:
 | Variable | Value |
 |---|---|
 | `ACCESS_TEAM_DOMAIN` | `<team>.cloudflareaccess.com` (printed by the script) |
-| `ACCESS_AUD` | the two AUD tags, comma-separated (printed by the script) |
+| `ACCESS_AUD` | every AUD tag the script prints (each member chunk app + admin), comma-separated |
 | `ADMIN_EMAILS` | `mail@aneeshsathe.com` — keep it equal to the admin Access policy |
 
 Or:
