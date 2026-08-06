@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> <b>/</b> <span>Real Problems; Real Freedom</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Real Problems; Real Freedom</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-real-problems-real-freedom-conclusion.md">source on GitHub</a></div>
-  <div class="note-summary">Ingold closes the essay by distinguishing fake freedom, which smuggles in a predetermined objective the way a jigsaw puzzle smuggles in its solution, from real freedom as the attentive, singular correspondence of the path — then indicts education, science, and the state as machines that manufacture the ignorance they claim to cure, proposing not-knowing as wisdom instead.</div>
-  <div class="tags"><span class="tag">real-vs-fake-freedom</span><span class="tag">not-knowing</span><span class="tag">attention</span><span class="tag">correspondence</span><span class="tag">predetermination</span><span class="tag">legibility-critique</span><span class="tag">production-of-ignorance</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>, <a class="wikilink" href="/wiki/aneesh/concepts/argument-of-progress">argument-of-progress</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-real-problems-real-freedom-conclusion.md">source on GitHub</a></div>
+    <div class="note-summary">Ingold closes the essay by distinguishing fake freedom, which smuggles in a predetermined objective the way a jigsaw puzzle smuggles in its solution, from real freedom as the attentive, singular correspondence of the path — then indicts education, science, and the state as machines that manufacture the ignorance they claim to cure, proposing not-knowing as wisdom instead.</div>
     <div class="prose">
 <p>The essay&#x27;s conclusion draws a final distinction — between fake problems and real ones, and, by extension, between fake freedom and real freedom — then uses it to indict the institutions that promise us safety through predictive knowledge, before closing on not-knowing reframed as wisdom rather than deficiency, walking in the moon&#x27;s company rather than planting a flag on it.</p>
 <h2 id="themes">Themes</h2>
@@ -48,16 +56,48 @@
 <p>The turn toward not-knowing as wisdom reframes the whole distinction in existential terms — not deficiency but a form of attention, &quot;paying attention to things.&quot;</p>
 <p>The closing passage delivers the essay&#x27;s governing image (walking with the moon rather than planting a flag on it) and ends on Rilke&#x27;s astonishment, leaving the reader with an open, slightly uncanny question rather than a resolved argument.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>819</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom">The Man in the Moon: Knowledge, Wisdom, Self and Soul</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility">Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Supports</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">legibility-vs-complexity-the-master-tension</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/argument-of-progress">argument-of-progress</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">real-vs-fake-freedom</span><a class="tag" href="/wiki/topics/not-knowing">not-knowing</a><a class="tag" href="/wiki/topics/attention">attention</a><a class="tag" href="/wiki/topics/correspondence">correspondence</a><span class="tag tag-lone" title="Only this note uses it">predetermination</span><span class="tag tag-lone" title="Only this note uses it">legibility-critique</span><a class="tag" href="/wiki/topics/production-of-ignorance">production-of-ignorance</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

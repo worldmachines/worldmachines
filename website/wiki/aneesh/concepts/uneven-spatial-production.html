@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Uneven Spatial Production (Harvey)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Uneven Spatial Production (Harvey)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/uneven-spatial-production.md">source on GitHub</a></div>
-  <div class="note-summary">Harvey&#x27;s account: capital concentrates selectively and produces space unevenly — some places are built to flourish because they are profitable, others are disinvested and sacrificed, resulting in commodified place rather than lived place.</div>
-  <div class="tags"><span class="tag">harvey</span><span class="tag">marxist-geography</span><span class="tag">space</span><span class="tag">capital</span><span class="tag">urbanism</span><span class="tag">inequality</span><span class="tag">place-commodification</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/uneven-spatial-production.md">source on GitHub</a></div>
+    <div class="note-summary">Harvey&#x27;s account: capital concentrates selectively and produces space unevenly — some places are built to flourish because they are profitable, others are disinvested and sacrificed, resulting in commodified place rather than lived place.</div>
     <div class="prose">
 <p><strong>Source</strong>: David Harvey, <em>Social Justice and the City</em> (1973); <em>The Condition of Postmodernity</em> (1989); deployed in <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe">aneesh-sathe</a>, <em>We Need Homes in the Delta Quadrant</em> (2025), §III</p>
 <h2 id="the-concept">The Concept</h2>
@@ -67,22 +76,54 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/territorialization">territorialization</a> — the Deleuzian complement: capital as de-territorializing force</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">8</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/achille-mbembe">Achille Mbembe (b. 1957)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/david-harvey">David Harvey</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/henri-lefebvre">Henri Lefebvre (1901–1991)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/lefebvre-spatial-triad">Lefebvre&#x27;s Spatial Triad</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/necropolitics">Necropolitics (Mbembe)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08a-european-imperialism-in-africa-and-asia">Capitalism&#x27;s Imperial Turn: The Scramble for Africa and Japan&#x27;s Meiji Counter-Model</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>594</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">9</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/necropolitics">Necropolitics (Mbembe)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-harvey">David Harvey</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12b-eastern-europe-and-indias-transformation">Eastern Europe&#x27;s Shock Therapy and India&#x27;s Long Road from Empire to Boom</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-lefebvre">Henri Lefebvre (1901–1991)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/achille-mbembe">Achille Mbembe (b. 1957)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08a-european-imperialism-in-africa-and-asia">Capitalism&#x27;s Imperial Turn: The Scramble for Africa and Japan&#x27;s Meiji Counter-Model</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/lefebvre-spatial-triad">Lefebvre&#x27;s Spatial Triad</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/necropolitics">Necropolitics (Mbembe)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-gravity-as-power">Bryant&#x27;s Gravity as Power</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/heterotopias">Heterotopias (Foucault)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeland-attachment">Homeland Attachment</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/harvey">harvey</a><a class="tag" href="/wiki/topics/marxist-geography">marxist-geography</a><a class="tag" href="/wiki/topics/space">space</a><span class="tag tag-lone" title="Only this note uses it">capital</span><a class="tag" href="/wiki/topics/urbanism">urbanism</a><a class="tag" href="/wiki/topics/inequality">inequality</a><span class="tag tag-lone" title="Only this note uses it">place-commodification</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

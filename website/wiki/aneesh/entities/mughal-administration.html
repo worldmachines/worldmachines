@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Mughal Administration</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Mughal Administration</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/mughal-administration.md">source on GitHub</a></div>
-  <div class="note-summary">The administrative apparatus of the Mughal Empire, notable for its matrix reporting structure where provincial officials reported directly to the central government rather than to the provincial governor — a designed mechanism for central control and diffused accountability.</div>
-  <div class="tags"><span class="tag">history</span><span class="tag">Mughal-Empire</span><span class="tag">governance</span><span class="tag">India</span><span class="tag">administration</span><span class="tag">medieval</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/mughal-administration.md">source on GitHub</a></div>
+    <div class="note-summary">The administrative apparatus of the Mughal Empire, notable for its matrix reporting structure where provincial officials reported directly to the central government rather than to the provincial governor — a designed mechanism for central control and diffused accountability.</div>
     <div class="prose">
-<p>The <strong>Mughal Empire</strong> (1526–1857) developed a sophisticated administrative structure that exemplifies <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bureaucratic Diffusion of Responsibility&quot;">Bureaucratic Diffusion of Responsibility</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Antimeme&quot;">antimemetic</span> governance design.</p>
+<p>The <strong>Mughal Empire</strong> (1526–1857) developed a sophisticated administrative structure that exemplifies <a class="wikilink" href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility" title="Written [[Bureaucratic Diffusion of Responsibility]], resolved to bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a> and <a class="wikilink" href="/wiki/aneesh/concepts/antimeme" title="Written [[Antimeme]], resolved to antimeme">antimemetic</a> governance design.</p>
 <h2 id="structure">Structure</h2>
 <p>The empire was divided into provinces (subas), each headed by a <strong>subahdar</strong> (governor). However, key provincial officials reported directly to the central Mughal court rather than to the subahdar:</p>
 <ul>
@@ -52,15 +61,15 @@
 <h2 id="antimemetic-design">Antimemetic Design</h2>
 <p>The complexity of Mughal administration made the locus of decision-making opaque even to other officials. External observers (and even the peasantry) could not easily identify who was responsible for specific policies or failures. This made the administrative machinery antimemetic: high-impact but hard to blame.</p>
 <p>When popular anger arose, it was directed at visible figures — the emperor or the provincial governor — not at the distributed machinery of bakhshis, sadrs, and diwans doing the actual work of governance.</p>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Memetic vs Antimemetic Structures&quot;">Memetic vs Antimemetic Structures</span> and <a class="wikilink" href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics">Royalty, Administration, and Antimemetics</a>.</p>
+<p>See <a class="wikilink" href="/wiki/aneesh/concepts/memetic-vs-antimemetic-structures" title="Written [[Memetic vs Antimemetic Structures]], resolved to memetic-vs-antimemetic-structures">Memetic vs Antimemetic Structures</a> and <a class="wikilink" href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics">Royalty, Administration, and Antimemetics</a>.</p>
 <h2 id="historical-context">Historical Context</h2>
 <p>The Mughal system borrowed from and adapted earlier Islamic administrative traditions (Sultanate Delhi, Timurid Persia). The structure evolved across emperors: Akbar&#x27;s administrative reforms (Ain-i-Akbari system) are the most documented version.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Antimeme&quot;">Antimeme</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bureaucratic Diffusion of Responsibility&quot;">Bureaucratic Diffusion of Responsibility</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Memetic vs Antimemetic Structures&quot;">Memetic vs Antimemetic Structures</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ibn Khaldun&quot;">Ibn Khaldun</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/antimeme" title="Written [[Antimeme]], resolved to antimeme">Antimeme</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility" title="Written [[Bureaucratic Diffusion of Responsibility]], resolved to bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/memetic-vs-antimemetic-structures" title="Written [[Memetic vs Antimemetic Structures]], resolved to memetic-vs-antimemetic-structures">Memetic vs Antimemetic Structures</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/ibn-khaldun" title="Written [[Ibn Khaldun]], resolved to ibn-khaldun">Ibn Khaldun</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
@@ -68,13 +77,46 @@
 <li>Douglas E. Streusand, <em>Islamic Gunpowder Empires</em></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>280</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">6</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics">Royalty, Administration, and Antimemetics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/antimeme">Antimeme</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/memetic-vs-antimemetic-structures">Memetic vs Antimemetic Structures</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ming-dynasty-grand-secretaries">Ming Dynasty Grand Secretaries</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ulama">Ulama</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/antimeme">Antimeme</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/memetic-vs-antimemetic-structures">Memetic vs Antimemetic Structures</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics">Royalty, Administration, and Antimemetics</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/ming-dynasty-grand-secretaries">Ming Dynasty Grand Secretaries</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/defenestration-of-prague">Defenestration of Prague</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/ibn-khaldun">Ibn Khaldun (1332-1406)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/history">history</a><span class="tag tag-lone" title="Only this note uses it">Mughal-Empire</span><a class="tag" href="/wiki/topics/governance">governance</a><a class="tag" href="/wiki/topics/india">India</a><a class="tag" href="/wiki/topics/administration">administration</a><a class="tag" href="/wiki/topics/medieval">medieval</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

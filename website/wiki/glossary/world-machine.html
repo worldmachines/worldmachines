@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,10 +26,21 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/" aria-current="page">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/" aria-current="page">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/glossary/">Glossary</a> <b>/</b> <span>World Machine</span></nav>
+  <div class="spread">
   <article class="note glossary-entry">
+    <p class="eyebrow">Glossary term</p>
     <h1>World Machine</h1>
     <div class="note-byline"><span class="status status-developing">developing</span> · also called <em>World Machines</em> · developed by Venkat, Aneesh, Commons · updated 5 August 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/glossary/world-machine.md">source on GitHub</a></div>
     <div class="prose">
@@ -65,14 +76,29 @@
 <li>Is the shortening of lifespans a real trend or an artifact of having better records for recent machines?</li>
 </ul>
     </div>
+    <p class="note-foot">A glossary entry is a definition under construction. To sharpen it, edit <code>raw-notes/commons/glossary/</code> and open a PR — see the <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/glossary/README.md">glossary README</a>.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-foot">A glossary entry is a definition under construction. To sharpen it, edit <code>raw-notes/commons/glossary/</code> and open a PR — see the <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/glossary/README.md">glossary README</a>.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>notes use it</span></div>
+      <div class="bearing"><b>504</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>The notes behind it</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">55</span></li>
+      </ul>
+      <p class="rail-hint">Notes named for this term. The definition is the summary; these are the argument.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Used in</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

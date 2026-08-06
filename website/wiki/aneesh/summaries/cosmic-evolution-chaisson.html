@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Cosmic Evolution: State of the Science — Eric J. Chaisson (2009)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Cosmic Evolution: State of the Science — Eric J. Chaisson (2009)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/cosmic-evolution-chaisson.md">source on GitHub</a></div>
-  <div class="note-summary">Eric Chaisson argues that energy rate density — the rate of free energy flow per unit mass — provides a universal, empirically measurable metric for complexity across all systems, unifying physical, biological, and cultural evolution under a single thermodynamic framework.</div>
-  <div class="tags"><span class="tag">cosmic-evolution</span><span class="tag">complexity</span><span class="tag">thermodynamics</span><span class="tag">energy</span><span class="tag">big-history</span><span class="tag">chaisson</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/cosmic-evolution-chaisson.md">source on GitHub</a></div>
+    <div class="note-summary">Eric Chaisson argues that energy rate density — the rate of free energy flow per unit mass — provides a universal, empirically measurable metric for complexity across all systems, unifying physical, biological, and cultural evolution under a single thermodynamic framework.</div>
     <div class="prose">
 <p><strong>Source</strong>: Chapter 1 in <em>Cosmos and Culture</em>, NASA SP-2009-4802, eds. S.J. Dick and M.L. Lupisella<br>
 <strong>Author</strong>: Eric J. Chaisson (Harvard)</p>
@@ -96,11 +105,11 @@
 <blockquote><p>&quot;For we, too, partake in the cosmic-evolutionary narrative, an epic-class story of rich natural history for the new millennium.&quot;</p></blockquote>
 <h2 id="intellectual-lineage">Intellectual Lineage</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heraclitus&quot;">Heraclitus</span> — &quot;everything flows&quot; as anticipation of cosmic evolution</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/heraclitus" title="No note is called &quot;Heraclitus&quot; yet — see who is asking for it">Heraclitus</a> — &quot;everything flows&quot; as anticipation of cosmic evolution</li>
 <li>Robert Chambers (1844) — pre-Darwinian pre-evolutionary synthesis</li>
 <li>Harlow Shapley (1930) — &quot;cosmography&quot;</li>
 <li>Herbert Spencer — complexity in cultural evolution</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alfred North Whitehead&quot;">Alfred North Whitehead</span> — organic philosophy</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/alfred-north-whitehead" title="No note is called &quot;Alfred North Whitehead&quot; yet — see who is asking for it">Alfred North Whitehead</a> — organic philosophy</li>
 <li>E.O. Wilson — &quot;consilience&quot;</li>
 <li>Thomas Gold, David Layzer — arrow of time / cosmic expansion driving energy gradients</li>
 <li>Ilya Prigogine — dissipative structures</li>
@@ -115,19 +124,63 @@
 </ul>
 <h2 id="cross-source-connections">Cross-Source Connections</h2>
 <ul>
-<li>Chaisson&#x27;s &quot;energy rate density&quot; as complexity metric resonates with Rao&#x27;s liveness concept — high liveness may correspond to high energy rate density, see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span></li>
+<li>Chaisson&#x27;s &quot;energy rate density&quot; as complexity metric resonates with Rao&#x27;s liveness concept — high liveness may correspond to high energy rate density, see <a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a></li>
 <li>The &quot;Life Era&quot; thesis — life becoming a cosmological actor — is a macro-version of Rao&#x27;s &quot;New Nature&quot;: technology as a new natural force</li>
-<li>Distributed emergence across phases connects to Lohse&#x27;s history machine — see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span></li>
-<li>The arc from Radiation Era to Life Era echoes Berlin&#x27;s anti-monism: complexity increases by divergence, not convergence — see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Against the Current - Berlin&quot;">Against the Current - Berlin</span></li>
+<li>Distributed emergence across phases connects to Lohse&#x27;s history machine — see <a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a></li>
+<li>The arc from Radiation Era to Life Era echoes Berlin&#x27;s anti-monism: complexity increases by divergence, not convergence — see <a class="wikilink-wanted" href="/wiki/wanted/against-the-current-berlin" title="No note is called &quot;Against the Current - Berlin&quot; yet — see who is asking for it">Against the Current - Berlin</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>876</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">12</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/energy-rate-density">Energy Rate Density</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nonequilibrium-thermodynamics">Nonequilibrium Thermodynamics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/arrow-of-time">Arrow of Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/eric-chaisson">Eric Chaisson</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse">History Machines in the Margins — Florian Lohse (2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmic-evolution">Cosmic Evolution</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/life-era">Life Era</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/engineering-liveness-venkatesh-rao">Engineering Liveness — Venkatesh Rao (2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/new-nature-as-life-era">New Nature as Life Era — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-15-darwinism">Darwinism, Deep Time, and the Failure of Uniformity</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/energy-rate-density">Energy Rate Density</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/eric-chaisson">Eric Chaisson</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/arrow-of-time">Arrow of Time</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmic-evolution">Cosmic Evolution</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/cosmic-evolution">cosmic-evolution</a><a class="tag" href="/wiki/topics/complexity">complexity</a><a class="tag" href="/wiki/topics/thermodynamics">thermodynamics</a><a class="tag" href="/wiki/topics/energy">energy</a><a class="tag" href="/wiki/topics/big-history">big-history</a><a class="tag" href="/wiki/topics/chaisson">chaisson</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

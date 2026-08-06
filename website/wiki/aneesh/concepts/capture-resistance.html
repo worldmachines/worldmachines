@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Capture Resistance</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Capture Resistance</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/capture-resistance.md">source on GitHub</a></div>
-  <div class="note-summary">Capture resistance is Venkatesh Rao&#x27;s foundational property of liveness — the property of resisting instrumentalization by external agents and asserting control over one&#x27;s own existence rather than serving extrinsic goals.</div>
-  <div class="tags"><span class="tag">capture-resistance</span><span class="tag">liveness</span><span class="tag">autonomy</span><span class="tag">rao</span><span class="tag">useless-machine</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/capture-resistance.md">source on GitHub</a></div>
+    <div class="note-summary">Capture resistance is Venkatesh Rao&#x27;s foundational property of liveness — the property of resisting instrumentalization by external agents and asserting control over one&#x27;s own existence rather than serving extrinsic goals.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>From <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>:</p>
-<p><strong>Capture resistance</strong> is the foundational property of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span>. A living entity resists attempts to harness it for purposes other than its own continued existence. This is not aggression — it is the minimal assertion of self-governance.</p>
+<p><strong>Capture resistance</strong> is the foundational property of <a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a>. A living entity resists attempts to harness it for purposes other than its own continued existence. This is not aggression — it is the minimal assertion of self-governance.</p>
 <p>The paradigm case: the <strong>useless machine</strong> (a device that turns itself off when switched on). When you try to keep it on or prevent it from toggling the switch, a well-designed useless machine should fight back — find another way to reach the switch. This minimal defiance distinguishes life-like from merely functional machines.</p>
 <h2 id="the-conceptual-move">The Conceptual Move</h2>
 <p>All machines, in Brian Arthur&#x27;s framework, are natural phenomena harnessed to solve human problems. The useless machine inverts this: it exists to assert control over its own destiny, not to solve problems. It is the <em>zero of machines</em> — the baseline from which all other machines depart by being &quot;tricked&quot; into doing work.</p>
@@ -46,7 +55,7 @@
 <p>The useless machine resists capture by returning to sleep — conserving energy. This is the foundational behavior of life: using energy only to maintain the conditions for continued existence, not expending it for others.</p>
 <blockquote><p>&quot;The machine has to stay awake long enough to go back to sleep properly.&quot;</p></blockquote>
 <h2 id="capture-in-new-nature">Capture in New Nature</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span>, capture resistance is exercised in near-invisibility:</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a>, capture resistance is exercised in near-invisibility:</p>
 <ul>
 <li>Not through dramatic conflict (BattleBots, warfare) but through protocol-level competition</li>
 <li>Dark Forests of hidden conflict beneath boring, routine interactions</li>
@@ -67,82 +76,120 @@
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Useless Machine&quot;">Useless Machine</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Infinite Game&quot;">Infinite Game</span> (James Carse — the frame within which capture resistance makes sense)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/useless-machine" title="Written [[Useless Machine]], resolved to useless-machine">Useless Machine</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/infinite-game" title="Written [[Infinite Game]], resolved to infinite-game">Infinite Game</a> (James Carse — the frame within which capture resistance makes sense)</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span> (primary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a> (primary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">58</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/active-inference">Active Inference</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/convivial-tools">Convivial Tools</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/intent-collisions">Intent Collisions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/ivan-illich">Ivan Illich</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/proto-liveness">Proto-Liveness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/surface-of-concern">Surface of Concern</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08a-european-imperialism-in-africa-and-asia">Capitalism&#x27;s Imperial Turn: The Scramble for Africa and Japan&#x27;s Meiji Counter-Model</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-miscellaneous-poems">Chaucer&#x27;s Shorter Poems: A.B.C., Ballades, Envoys, and the Complaint to His Purse</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-06-treasure-and-corrupt-counsel">Corrupt Counsel, Captured Courts, and the Macarian Vow Against Treasure</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-proem">DEC 01 — Proem &amp; Author&#x27;s Introduction</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-03">DEC 04 — Day the Third</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-04">DEC 05 — Day the Fourth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-05">DEC 06 — Day the Fifth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-06">DEC 07 — Day the Sixth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-07">DEC 08 — Day the Seventh</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-09">DEC 10 — Day the Ninth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-conclusion">DEC 12 — Conclusion of the Author</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/legibility">Legibility</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-02-magistrates">Of Their Magistrates</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-03-trades">Of Their Trades, and Manner of Life</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-02-serving-princes">Raphael’s Refusal: Counsel, Flattery, and the Uselessness of Wisdom at Court</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-real-problems-real-freedom-conclusion">Real Problems; Real Freedom</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-03-a-magnificent-dead-end">RIT 03 — A Magnificent Dead End (Ch. 1)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-06-the-greatest-necessity">RIT 06 — &quot;The Greatest Necessity for Every Rank of Men&quot; (Ch. 4)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-22-who-killed-cock-robin">RIT 22 — &quot;Who Killed Cock Robin?&quot; (ch. 20, pp. 347–364)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-02-priests">The Brutheskas and the Priesthood of Utopia</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale">The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-05-jester-and-mock-counsel">The Cardinal&#x27;s Fool and the Achorians: Court Flattery and the Case Against Conquest</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-clerks-tale">The Clerk&#x27;s Tale: Griselda&#x27;s Patience and Chaucer&#x27;s Ironic Envoy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-franklins-tale">The Franklin&#x27;s Tale: Troth, Mastery, and the Contest of Gentillesse</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom">The Man in the Moon: Knowledge, Wisdom, Self and Soul</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-manciples-tale">The Manciple&#x27;s Prologue and Tale: The Cook&#x27;s Gourd, Phoebus&#x27;s Crow, and the Peril of Speech</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-merchants-tale">The Merchant&#x27;s Tale: The Walled Garden and the Counterfeited Key</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts">The Play in Progress: Civil Philosophy versus Principled Withdrawal</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-second-nuns-tale">The Second Nun&#x27;s Tale: The Legend of Saint Cecilia</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-wife-of-baths-tale">The Wife of Bath&#x27;s Prologue and Tale</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-3">Troilus and Criseyde, Book III: Pandarus&#x27;s Engineered Union</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-04-conclusion">Utopia&#x27;s Peroration: The Conspiracy of the Rich and the Case Against Private Property</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-05-travelling-04-greek-learning">Utopian Vigor, Greek Learning, and the Reinvention of Printing</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>65</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>452</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">65</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nonequilibrium-thermodynamics">Nonequilibrium Thermodynamics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>57 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/surface-of-concern">Surface of Concern</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-03-a-magnificent-dead-end">RIT 03 — A Magnificent Dead End (Ch. 1)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-06-the-greatest-necessity">RIT 06 — &quot;The Greatest Necessity for Every Rank of Men&quot; (Ch. 4)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/intent-collisions">Intent Collisions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/proto-liveness">Proto-Liveness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-22-who-killed-cock-robin">RIT 22 — &quot;Who Killed Cock Robin?&quot; (ch. 20, pp. 347–364)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-04-conclusion">Utopia&#x27;s Peroration: The Conspiracy of the Rich and the Case Against Private Property</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/convivial-tools">Convivial Tools</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-02-magistrates">Of Their Magistrates</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-wife-of-baths-tale">The Wife of Bath&#x27;s Prologue and Tale</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/active-inference">Active Inference</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-02-serving-princes">Raphael’s Refusal: Counsel, Flattery, and the Uselessness of Wisdom at Court</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-05-jester-and-mock-counsel">The Cardinal&#x27;s Fool and the Achorians: Court Flattery and the Case Against Conquest</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom">The Man in the Moon: Knowledge, Wisdom, Self and Soul</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts">The Play in Progress: Civil Philosophy versus Principled Withdrawal</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08a-european-imperialism-in-africa-and-asia">Capitalism&#x27;s Imperial Turn: The Scramble for Africa and Japan&#x27;s Meiji Counter-Model</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-06-treasure-and-corrupt-counsel">Corrupt Counsel, Captured Courts, and the Macarian Vow Against Treasure</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-proem">DEC 01 — Proem &amp; Author&#x27;s Introduction</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-03">DEC 04 — Day the Third</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-06">DEC 07 — Day the Sixth</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-07">DEC 08 — Day the Seventh</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-conclusion">DEC 12 — Conclusion of the Author</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-03-trades">Of Their Trades, and Manner of Life</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-real-problems-real-freedom-conclusion">Real Problems; Real Freedom</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-clerks-tale">The Clerk&#x27;s Tale: Griselda&#x27;s Patience and Chaucer&#x27;s Ironic Envoy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-merchants-tale">The Merchant&#x27;s Tale: The Walled Garden and the Counterfeited Key</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/useless-machine">Useless Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-miscellaneous-poems">Chaucer&#x27;s Shorter Poems: A.B.C., Ballades, Envoys, and the Complaint to His Purse</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-04">DEC 05 — Day the Fourth</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-05">DEC 06 — Day the Fifth</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-09">DEC 10 — Day the Ninth</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-02-priests">The Brutheskas and the Priesthood of Utopia</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale">The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-franklins-tale">The Franklin&#x27;s Tale: Troth, Mastery, and the Contest of Gentillesse</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-manciples-tale">The Manciple&#x27;s Prologue and Tale: The Cook&#x27;s Gourd, Phoebus&#x27;s Crow, and the Peril of Speech</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-05-travelling-04-greek-learning">Utopian Vigor, Greek Learning, and the Reinvention of Printing</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/ivan-illich">Ivan Illich</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/glossary/legibility">Legibility</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-second-nuns-tale">The Second Nun&#x27;s Tale: The Legend of Saint Cecilia</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-3">Troilus and Criseyde, Book III: Pandarus&#x27;s Engineered Union</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">22</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">19</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">15</span></li>
+        <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">8</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/capture-resistance">capture-resistance</a><a class="tag" href="/wiki/topics/liveness">liveness</a><a class="tag" href="/wiki/topics/autonomy">autonomy</a><a class="tag" href="/wiki/topics/rao">rao</a><a class="tag" href="/wiki/topics/useless-machine">useless-machine</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

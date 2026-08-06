@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17.md">source on GitHub</a></div>
-  <div class="note-summary">In Cary&#x27;s translation, Dante and Virgil cross the three rings of Hell&#x27;s circle of violence — the river of boiling blood guarded by centaurs, the trackless wood of suicides devoured by Harpies, and the burning sand of blasphemers, sodomites, and usurers (with the Old Man of Crete&#x27;s allegory and Dante&#x27;s reunion with Brunetto Latini along the way) — before summoning the fraud-monster Geryon to carry them down toward the eighth circle.</div>
-  <div class="tags"><span class="tag">inferno</span><span class="tag">circle-of-violence</span><span class="tag">wood-of-suicides</span><span class="tag">old-man-of-crete</span><span class="tag">brunetto-latini</span><span class="tag">geryon-fraud</span><span class="tag">florentine-politics</span><span class="tag">contrapasso</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence">anxiety-of-influence</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17.md">source on GitHub</a></div>
+    <div class="note-summary">In Cary&#x27;s translation, Dante and Virgil cross the three rings of Hell&#x27;s circle of violence — the river of boiling blood guarded by centaurs, the trackless wood of suicides devoured by Harpies, and the burning sand of blasphemers, sodomites, and usurers (with the Old Man of Crete&#x27;s allegory and Dante&#x27;s reunion with Brunetto Latini along the way) — before summoning the fraud-monster Geryon to carry them down toward the eighth circle.</div>
     <div class="prose">
 <p>This unit carries Dante and Virgil down the shattered cliff guarded by the Minotaur into the seventh circle&#x27;s three concentric rings of violence: first the river of boiling blood (patrolled by centaurs — Chiron, Nessus, Pholus) holding tyrants and manslayers up to varying depths according to guilt; then the trackless Wood of Suicides, where souls locked inside gnarled, bleeding trees are torn at by Harpies and hunted down by black hounds; then the burning plain of fire-rain, home to blasphemers (Capaneus), the violent against nature, and usurers, interrupted by the Old Man of Crete&#x27;s weeping statue and a long, charged conversation with Dante&#x27;s former teacher Brunetto Latini. The unit closes with the monster Geryon — the image of Fraud — surfacing to ferry the pilgrims down toward the eighth circle, the action cut off just as Canto XVIII begins.</p>
 <h2 id="themes">Themes</h2>
@@ -46,13 +54,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The centaur Nessus&#x27;s tour of the blood-river names its inhabitants by degree of submersion — Alexander and Dionysius, Azzolino, Obizzo d&#x27;Este, an assassin &quot;honour&#x27;d on the bank of Thames,&quot; and further on Attila, Sextus, and Pyrrhus — but it&#x27;s Virgil&#x27;s own framing of the river, and the poet&#x27;s outburst against &quot;blind lust&quot; and &quot;foolish wrath,&quot; that states the ring&#x27;s thesis outright. In the wood, the betrayed courtier&#x27;s confession is the unit&#x27;s most sustained first-person voice, moving from loyal service to the destructive envy of &quot;Caesar&#x27;s household&quot; to his own verdict on his death: &quot;unjust toward myself.&quot; The Old Man of Crete passage is the unit&#x27;s most conceptually dense image, folding a full civilizational decline into a single weeping colossus whose fissures generate Hell&#x27;s geography. Brunetto Latini&#x27;s prophecy — &quot;follow but thy star, / Thou canst not miss at last a glorious haven&quot; — pairs tenderness with a sharp warning about the &quot;ungrateful and malignant race&quot; of Florence, setting up the later, harsher civic lament from the three whirling Florentine spirits: &quot;An upstart multitude and sudden gains, / Pride and excess, O Florence!&quot; — followed immediately by their plea to be remembered among the living. Finally, Geryon&#x27;s arrival is staged as a set-piece of pure visual description, its ornamented, deceptively human face the unit&#x27;s clearest emblem of Fraud as a category, right before the pilgrims mount its back for the plunge toward the eighth circle.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>939</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence">anxiety-of-influence</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/inferno">inferno</a><span class="tag tag-lone" title="Only this note uses it">circle-of-violence</span><span class="tag tag-lone" title="Only this note uses it">wood-of-suicides</span><span class="tag tag-lone" title="Only this note uses it">old-man-of-crete</span><span class="tag tag-lone" title="Only this note uses it">brunetto-latini</span><span class="tag tag-lone" title="Only this note uses it">geryon-fraud</span><a class="tag" href="/wiki/topics/florentine-politics">florentine-politics</a><a class="tag" href="/wiki/topics/contrapasso">contrapasso</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

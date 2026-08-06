@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii.md">source on GitHub</a></div>
-  <div class="note-summary">Rao introduces the &#x27;Argument of Progress&#x27; as the Divergence Machine&#x27;s alternative to Fiat Progress narratives, using Spinoza vs. Leibniz and Hume vs. Smith to trace how Progress became a non-stationary, pluralist, reality-driven argument.</div>
-  <div class="tags"><span class="tag">venkatesh-rao</span><span class="tag">divergence-machine</span><span class="tag">progress</span><span class="tag">spinoza</span><span class="tag">leibniz</span><span class="tag">hume</span><span class="tag">adam-smith</span><span class="tag">contraptions</span><span class="tag">book-club</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii.md">source on GitHub</a></div>
+    <div class="note-summary">Rao introduces the &#x27;Argument of Progress&#x27; as the Divergence Machine&#x27;s alternative to Fiat Progress narratives, using Spinoza vs. Leibniz and Hume vs. Smith to trace how Progress became a non-stationary, pluralist, reality-driven argument.</div>
     <div class="prose">
 <p><strong>Source</strong>: Contraptions newsletter, February 22, 2026<br>
 <strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></p>
 <h2 id="central-argument">Central Argument</h2>
 <p>Capital-P Progress in the Modernity Machine era was a &quot;Fiat Progress&quot; — uncontroversial, yoked to fiat idealism, underwritten by the state, governed by established moral rubrics. Good times were rewards for good behavior.</p>
-<p>The Divergence Machine era (1600-2000) planted seeds for a fundamentally different understanding of Progress: the <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Argument of Progress&quot;">Argument of Progress</span></strong>. This is Progress understood as a dynamic, pluralist, <em>non-stationary</em> discourse — a partially cooperative mutual exploration of novelty on an <em>expanding</em> frontier, not a debate with winners and losers.</p>
+<p>The Divergence Machine era (1600-2000) planted seeds for a fundamentally different understanding of Progress: the <strong><a class="wikilink" href="/wiki/aneesh/concepts/argument-of-progress" title="Written [[Argument of Progress]], resolved to argument-of-progress">Argument of Progress</a></strong>. This is Progress understood as a dynamic, pluralist, <em>non-stationary</em> discourse — a partially cooperative mutual exploration of novelty on an <em>expanding</em> frontier, not a debate with winners and losers.</p>
 <p>The two March book-club reads — <em>The Courtier and the Heretic</em> (Leibniz vs. Spinoza) and <em>The Infidel and the Professor</em> (Hume and Adam Smith) — frame this as an intellectual genealogy: Spinoza → Hume → Smith, with Leibniz as the brilliant reactionary who made the first great error.</p>
 <h2 id="fiat-progress-vs-the-argument-of-progress">Fiat Progress vs. the Argument of Progress</h2>
 <div class="table-wrap"><table>
@@ -81,7 +90,7 @@
 <p>The intellectual entanglement between the two is neither a debate nor a dialectic. They were &quot;two important centers in a polycentric narrative with a gradually moving &#x27;average&#x27; state.&quot; Spinoza was on the &quot;hot&quot; side (history moving in his direction); Leibniz was on the &quot;cold&quot; side. The sum was greater than the parts — but not in a positive-sum game sense. A <em>non-stationary</em> argument: not moving on a static metaphysical canvas, but on an <em>expanding reality canvas</em>.</p>
 <blockquote><p>&quot;The evolving argument <em>invented new ways to talk about new things worth talking about.</em>&quot;</p></blockquote>
 <h2 id="hume-and-smith-the-argument-matures">Hume and Smith: The Argument Matures</h2>
-<p><a class="wikilink" href="/wiki/aneesh/entities/david-hume">david-hume</a> (1711-1776) and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Adam Smith&quot;">Adam Smith</span> (1723-1790) are intellectual descendants of Spinoza; Leibniz (as philosopher) had already faded into irrelevance a generation later, partly because of Voltaire&#x27;s <em>Candide</em>.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/david-hume">david-hume</a> (1711-1776) and <a class="wikilink" href="/wiki/aneesh/entities/adam-smith" title="Written [[Adam Smith]], resolved to adam-smith">Adam Smith</a> (1723-1790) are intellectual descendants of Spinoza; Leibniz (as philosopher) had already faded into irrelevance a generation later, partly because of Voltaire&#x27;s <em>Candide</em>.</p>
 <ul>
 <li><strong>Hume</strong>: Went much further than most, &quot;setting aside complex theories of causation in favor of near-pure phenomenology.&quot; Only willing to treat &quot;the log files of reality&quot; as reality. &quot;He&#x27;s the original philosopher of the AI age, offering the first of what has now become an endless series of &#x27;bitter lessons&#x27; delivered by the Argument of Progress.&quot; The Kronecker parallel: &quot;God created the integers, everything else is the work of man.&quot;</li>
 <li><strong>Adam Smith</strong>: Applied the same orientation to economics — the &quot;invisible hand&quot; inaugurates a discipline <em>about</em> noisy, messy reality data, with only weak emergent constitutive laws. The opposite of divine design.</li>
@@ -104,30 +113,56 @@
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Argument of Progress&quot;">Argument of Progress</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/argument-of-progress" title="Written [[Argument of Progress]], resolved to argument-of-progress">Argument of Progress</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/fiat-progress">fiat-progress</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/david-hume">david-hume</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Adam Smith&quot;">Adam Smith</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ontological Dread&quot;">Ontological Dread</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Non-Stationary Argument&quot;">Non-Stationary Argument</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Progress is Not a Game&quot;">Progress is Not a Game</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/adam-smith" title="Written [[Adam Smith]], resolved to adam-smith">Adam Smith</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ontological-dread" title="Written [[Ontological Dread]], resolved to ontological-dread">Ontological Dread</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/non-stationary-argument" title="No note is called &quot;Non-Stationary Argument&quot; yet — see who is asking for it">Non-Stationary Argument</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/progress-is-not-a-game" title="No note is called &quot;Progress is Not a Game&quot; yet — see who is asking for it">Progress is Not a Game</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">5</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>1305</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">5</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/argument-of-progress">Argument of Progress</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/progress">progress</a><a class="tag" href="/wiki/topics/spinoza">spinoza</a><a class="tag" href="/wiki/topics/leibniz">leibniz</a><a class="tag" href="/wiki/topics/hume">hume</a><a class="tag" href="/wiki/topics/adam-smith">adam-smith</a><a class="tag" href="/wiki/topics/contraptions">contraptions</a><a class="tag" href="/wiki/topics/book-club">book-club</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

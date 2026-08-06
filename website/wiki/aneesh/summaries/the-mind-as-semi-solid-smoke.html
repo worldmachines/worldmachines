@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Mind as Semi-Solid Smoke</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Mind as Semi-Solid Smoke</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-mind-as-semi-solid-smoke.md">source on GitHub</a></div>
-  <div class="note-summary">Turns the space-and-place lens inward: the mind is an imperfect, self-conjured place whose navigational landmarks are semi-solid smoke — a feature enabled by normative self-blindness that makes Socratic inquiry both necessary and initially threatening.</div>
-  <div class="tags"><span class="tag">mind</span><span class="tag">cognition</span><span class="tag">place-making</span><span class="tag">normative-self-blindness</span><span class="tag">navigation</span><span class="tag">Agnes-Callard</span><span class="tag">neuroscience</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-mind-as-semi-solid-smoke.md">source on GitHub</a></div>
+    <div class="note-summary">Turns the space-and-place lens inward: the mind is an imperfect, self-conjured place whose navigational landmarks are semi-solid smoke — a feature enabled by normative self-blindness that makes Socratic inquiry both necessary and initially threatening.</div>
     <div class="prose">
 <p><strong>Source</strong>: https://aneeshsathe.com/the-mind-as-semi-solid-smoke/<br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span><br>
+<strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a><br>
 <strong>Date</strong>: 2025-07-07</p>
 <h2 id="central-argument">Central Argument</h2>
-<p>The mind is the inward application of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> framework. From the outside it appears as a unified place (our identity); probe it and it dissolves fractally into smaller, more loosely anchored places. The navigational landmarks we use internally — &quot;insta-places&quot; conjured from experience — are treated as solid even when they are not. This is not a bug but a feature: <strong>normative self-blindness</strong> keeps us moving. Understanding this makes Socratic inquiry psychologically easier to adopt.</p>
+<p>The mind is the inward application of the <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> framework. From the outside it appears as a unified place (our identity); probe it and it dissolves fractally into smaller, more loosely anchored places. The navigational landmarks we use internally — &quot;insta-places&quot; conjured from experience — are treated as solid even when they are not. This is not a bug but a feature: <strong>normative self-blindness</strong> keeps us moving. Understanding this makes Socratic inquiry psychologically easier to adopt.</p>
 <h2 id="key-concepts">Key Concepts</h2>
 <h3 id="biological-basis-of-place-making">Biological Basis of Place-Making</h3>
 <ul>
@@ -59,7 +68,7 @@
 <li>Accept: places loosely formed in the past (errors) or not yet defined in the future (unknowns).</li>
 <li>Cannot accept: that a current insta-place might be false <em>right now</em> — that would undermine the very stance from which we operate.</li>
 </ul>
-<h3 id="normative-self-blindness-after-agnes-callard">Normative Self-Blindness (after <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span>)</h3>
+<h3 id="normative-self-blindness-after-agnes-callard">Normative Self-Blindness (after <a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a>)</h3>
 <ul>
 <li>The built-in refusal to saw off the branch we stand on.</li>
 <li>A trick to gloss over detail and keep moving — functionally useful, epistemically dangerous.</li>
@@ -75,26 +84,66 @@
 </ul>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — framework being applied inward</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">Normative Self-Blindness</span> — central concept from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Insta-Places&quot;">Insta-Places</span> — cognitive shorthand mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — requires accepting semi-solid smoke epistemics</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Navigation and Cognition&quot;">Navigation and Cognition</span> — evolutionary continuity from chemotaxis to human landmarks</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Identity as Place&quot;">Identity as Place</span> — the outer shell that grounds all inner navigation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chatbots, Bats &amp; Broken Oracles&quot;">Chatbots, Bats &amp; Broken Oracles</span> — companion essay on AI as external Socratic partner</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — framework being applied inward</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">Normative Self-Blindness</a> — central concept from <a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/insta-places" title="Written [[Insta-Places]], resolved to insta-places">Insta-Places</a> — cognitive shorthand mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — requires accepting semi-solid smoke epistemics</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/navigation-and-cognition" title="Written [[Navigation and Cognition]], resolved to navigation-and-cognition">Navigation and Cognition</a> — evolutionary continuity from chemotaxis to human landmarks</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/identity-as-place" title="Written [[Identity as Place]], resolved to identity-as-place">Identity as Place</a> — the outer shell that grounds all inner navigation</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/chatbots-bats-and-broken-oracles" title="No note is called &quot;Chatbots, Bats &amp; Broken Oracles&quot; yet — see who is asking for it">Chatbots, Bats &amp; Broken Oracles</a> — companion essay on AI as external Socratic partner</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>467</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">12</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/navigation-and-cognition">Navigation and Cognition</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/biology-of-meaning-making">Biology of Meaning-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-as-place">Identity as Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">mind</span><a class="tag" href="/wiki/topics/cognition">cognition</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/normative-self-blindness">normative-self-blindness</a><a class="tag" href="/wiki/topics/navigation">navigation</a><a class="tag" href="/wiki/topics/agnes-callard">Agnes-Callard</a><a class="tag" href="/wiki/topics/neuroscience">neuroscience</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

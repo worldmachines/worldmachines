@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Levels of Philosophical Engagement</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Levels of Philosophical Engagement</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/levels-of-philosophical-engagement.md">source on GitHub</a></div>
-  <div class="note-summary">A five-tier functional taxonomy of philosophical frameworks organized by the degree of identity disruption they address, from survival tactics to meta-systems theory.</div>
-  <div class="tags"><span class="tag">philosophy</span><span class="tag">taxonomy</span><span class="tag">identity</span><span class="tag">systems-thinking</span><span class="tag">epistemology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/levels-of-philosophical-engagement.md">source on GitHub</a></div>
+    <div class="note-summary">A five-tier functional taxonomy of philosophical frameworks organized by the degree of identity disruption they address, from survival tactics to meta-systems theory.</div>
     <div class="prose">
 <h2 id="the-taxonomy">The Taxonomy</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span>, a functional (not qualitative) hierarchy:</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a>, a functional (not qualitative) hierarchy:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Level</th><th>Type</th><th>Orientation</th><th>Trigger Condition</th></tr></thead>
 <tbody>
@@ -53,24 +62,58 @@
 <li>The hierarchy is <strong>functional</strong>, not hierarchical in the normative sense. Level V is not superior to Level I — it is simply appropriate to a different need.</li>
 </ul>
 <h2 id="critical-observations">Critical Observations</h2>
-<p>The taxonomy is notably pragmatist in spirit — it resembles <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;William James&quot;">William James</span>&#x27;s &quot;cash value&quot; view of ideas. A philosophy is true/useful insofar as it works for the identity state at hand.</p>
-<p><strong>What the taxonomy omits</strong>: the possibility that sustained engagement at a single level produces depth and expertise unavailable to the person who moves fluidly across levels. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hedgehog&quot;">Hedgehog</span> figure (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fox-Hedgehog Distinction&quot;">Fox-Hedgehog Distinction</span>) might argue that Level V thinking requires years of residence, not brief maintenance visits.</p>
+<p>The taxonomy is notably pragmatist in spirit — it resembles <a class="wikilink-wanted" href="/wiki/wanted/william-james" title="No note is called &quot;William James&quot; yet — see who is asking for it">William James</a>&#x27;s &quot;cash value&quot; view of ideas. A philosophy is true/useful insofar as it works for the identity state at hand.</p>
+<p><strong>What the taxonomy omits</strong>: the possibility that sustained engagement at a single level produces depth and expertise unavailable to the person who moves fluidly across levels. The <a class="wikilink-wanted" href="/wiki/wanted/hedgehog" title="No note is called &quot;Hedgehog&quot; yet — see who is asking for it">Hedgehog</a> figure (see <a class="wikilink" href="/wiki/aneesh/concepts/fox-hedgehog-distinction" title="Written [[Fox-Hedgehog Distinction]], resolved to fox-hedgehog-distinction">Fox-Hedgehog Distinction</a>) might argue that Level V thinking requires years of residence, not brief maintenance visits.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Philosophy as Maintenance&quot;">Philosophy as Maintenance</span> — the framework this taxonomy serves</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> — what calibrates which level is selected</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fox-Hedgehog Distinction&quot;">Fox-Hedgehog Distinction</span> — tension with depth-over-breadth view</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;William James&quot;">William James</span> — pragmatist resonance</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/philosophy-as-maintenance" title="Written [[Philosophy as Maintenance]], resolved to philosophy-as-maintenance">Philosophy as Maintenance</a> — the framework this taxonomy serves</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> — what calibrates which level is selected</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fox-hedgehog-distinction" title="Written [[Fox-Hedgehog Distinction]], resolved to fox-hedgehog-distinction">Fox-Hedgehog Distinction</a> — tension with depth-over-breadth view</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/william-james" title="No note is called &quot;William James&quot; yet — see who is asking for it">William James</a> — pragmatist resonance</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>278</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-plato-plateau">The Plato Plateau</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fox-hedgehog-distinction">Fox-Hedgehog Distinction</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-crash">Identity Crash</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/philosophy-as-maintenance">Philosophy as Maintenance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/kierkegaard">Kierkegaard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/tools-that-shape-thought">Tools That Shape Thought</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-plato-plateau">The Plato Plateau</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-crash">Identity Crash</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/gtd-and-anxiety-regulation">GTD and Anxiety Regulation</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/hacky-mindset">Hacky Mindset</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/kierkegaard">Kierkegaard</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/taxonomy">taxonomy</a><a class="tag" href="/wiki/topics/identity">identity</a><a class="tag" href="/wiki/topics/systems-thinking">systems-thinking</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

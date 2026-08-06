@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Sompnour&#x27;s Tale: A Friar&#x27;s Comeuppance</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Sompnour&#x27;s Tale: A Friar&#x27;s Comeuppance</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sompnours-tale.md">source on GitHub</a></div>
-  <div class="note-summary">In revenge for the Friar&#x27;s tale, the Sompnour tells a fabliau of a hypocritical mendicant friar who fleeces a bedridden parishioner while preaching against wrath, is repaid with a monstrous fart, and is then mocked further when a lord&#x27;s squire &quot;proves,&quot; in a parody of scholastic demonstration, how the fart&#x27;s sound and stink can be divided equally among the friar&#x27;s whole convent.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">canterbury-tales</span><span class="tag">fabliau</span><span class="tag">anti-fraternal-satire</span><span class="tag">estates-satire</span><span class="tag">mendicant-friars</span><span class="tag">scholastic-parody</span><span class="tag">medieval-comedy</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-friars-tale">chaucer-canterbury-tales-friars-tale</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sompnours-tale.md">source on GitHub</a></div>
+    <div class="note-summary">In revenge for the Friar&#x27;s tale, the Sompnour tells a fabliau of a hypocritical mendicant friar who fleeces a bedridden parishioner while preaching against wrath, is repaid with a monstrous fart, and is then mocked further when a lord&#x27;s squire &quot;proves,&quot; in a parody of scholastic demonstration, how the fart&#x27;s sound and stink can be divided equally among the friar&#x27;s whole convent.</div>
     <div class="prose">
 <p>Stung by the Friar&#x27;s tale about a corrupt summoner, the Sompnour retaliates with a prologue vision of hell as a friar&#x27;s nest under Satan&#x27;s tail, then tells a fabliau set in Holderness: a begging friar, having preached up donations for masses (&quot;trentals&quot;) and kept his companion busy recording (and secretly erasing) the names of donors, arrives at the house of the bedridden Thomas. Through flattery of Thomas&#x27;s wife, a long, self-serving sermon against ire (wrath) stuffed with classical exempla, and finally outright extortion for his convent&#x27;s building fund, the friar wears out Thomas&#x27;s patience — until Thomas, asked to grope for a hidden &quot;gift&quot; beneath him, delivers a spectacular fart instead. The enraged friar complains to the local lord, whose squire Jankin then &quot;resolves&quot; the philosophical problem of dividing the fart equally among the friar&#x27;s twelve brethren via an elaborate cart-wheel demonstration, to universal applause.</p>
 <h2 id="themes">Themes</h2>
@@ -45,15 +53,32 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The prologue&#x27;s vision of friars swarming from the devil&#x27;s tail (&quot;Right so as bees swarmen out of a hive... He clapt his tail again, and lay full still&quot;) sets the tone of gleeful anti-fraternal contempt before the tale proper even begins. Within the tale, the account of the friar&#x27;s companion recording and then erasing donors&#x27; names (&quot;His fellow had a staff tipped with horn... That he before had written in his tables&quot;) exposes the mechanics of manufactured trust. The Cambyses exemplum (&quot;Irous Cambyses was eke dronkelew... His son was slain, there is no more to say&quot;) is the friar&#x27;s own homiletic showpiece against wrath, made ironic by his subsequent explosion of temper. The fart itself (&quot;Ah, thought this friar, that shall go with me... That might have let a fart of such a soun&#x27;&quot;) is the tale&#x27;s structural hinge, converting the friar&#x27;s greed into physical humiliation. Finally, Jankin&#x27;s cart-wheel demonstration (&quot;My lord, quoth he, when that the weather is fair... He beareth him so fair and holily&quot;) delivers the tale&#x27;s real satirical payload: reasoned form applied to a preposterous end, applauded as if it were genuine philosophy.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>756</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-friars-tale">chaucer-canterbury-tales-friars-tale</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><a class="tag" href="/wiki/topics/fabliau">fabliau</a><span class="tag tag-lone" title="Only this note uses it">anti-fraternal-satire</span><a class="tag" href="/wiki/topics/estates-satire">estates-satire</a><a class="tag" href="/wiki/topics/mendicant-friars">mendicant-friars</a><span class="tag tag-lone" title="Only this note uses it">scholastic-parody</span><span class="tag tag-lone" title="Only this note uses it">medieval-comedy</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

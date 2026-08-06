@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> <b>/</b> <span>The Two Sides of Attention: From Exposure to Falling Forwards</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Two Sides of Attention: From Exposure to Falling Forwards</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-two-sides-of-attention-falling-forwards.md">source on GitHub</a></div>
-  <div class="note-summary">Attention has two sides — exposure (submission to a restless, unfinished world) and attunement (a perceiver&#x27;s honed responsiveness to a settled one) — which alternate in one fixed direction, illustrated by the bodily jeopardy of walking and used to distinguish open-ended anticipation from closed prediction.</div>
-  <div class="tags"><span class="tag">attention</span><span class="tag">exposure-and-attunement</span><span class="tag">affordance</span><span class="tag">phenomenology-of-perception</span><span class="tag">anticipation-vs-prediction</span><span class="tag">walking-as-skill</span><span class="tag">possibility</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/summaries/walking-the-world-machines-atwater">walking-the-world-machines-atwater</a>, <a class="wikilink" href="/wiki/aneesh/concepts/wayfinding-as-practice">wayfinding-as-practice</a>, <a class="wikilink" href="/wiki/aneesh/concepts/kinesthetic-knowledge-of-place">kinesthetic-knowledge-of-place</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-two-sides-of-attention-falling-forwards.md">source on GitHub</a></div>
+    <div class="note-summary">Attention has two sides — exposure (submission to a restless, unfinished world) and attunement (a perceiver&#x27;s honed responsiveness to a settled one) — which alternate in one fixed direction, illustrated by the bodily jeopardy of walking and used to distinguish open-ended anticipation from closed prediction.</div>
     <div class="prose">
 <p>Ingold argues that attention has two complementary sides — exposure and attunement — and traces how they alternate, in one fixed direction, through the practical case of walking on two feet, using that alternation to distinguish the open-ended “anticipation” proper to a life lived forwards from the closed logic of prediction.</p>
 <h2 id="themes">Themes</h2>
@@ -49,17 +57,51 @@
 <p><strong>On falling forwards (walking).</strong> The passage running from “Let us take as an example one of the most ubiquitous of all human activities” through the closing image of an “alternation that continues for as long as the walk goes on” is the essay&#x27;s title image: every step is a controlled fall, exposure resolved into attunement and then risked again.</p>
 <p><strong>On anticipation versus prediction (Dewey, Derrida).</strong> The final curated passage, from “Literally, to aspire is to draw breath” to Ingold&#x27;s insistence that anticipation means “to look where you are going, not to ﬁx an end point,” is the unit&#x27;s clearest theoretical payoff: it separates a forward-looking, improvisatory orientation to an open future from the probabilistic closure of prediction.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>743</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-potential-fulfilment-doing-undergoing">Replenishing Potential, Not Fulfilling It: Doing and Undergoing</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning">Correspondence versus Interaction, Understanding versus Undercommoning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Contradicts</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/active-inference">active-inference</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/summaries/walking-the-world-machines-atwater">walking-the-world-machines-atwater</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/wayfinding-as-practice">wayfinding-as-practice</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/kinesthetic-knowledge-of-place">kinesthetic-knowledge-of-place</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/attention">attention</a><span class="tag tag-lone" title="Only this note uses it">exposure-and-attunement</span><span class="tag tag-lone" title="Only this note uses it">affordance</span><span class="tag tag-lone" title="Only this note uses it">phenomenology-of-perception</span><a class="tag" href="/wiki/topics/anticipation-vs-prediction">anticipation-vs-prediction</a><span class="tag tag-lone" title="Only this note uses it">walking-as-skill</span><a class="tag" href="/wiki/topics/possibility">possibility</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

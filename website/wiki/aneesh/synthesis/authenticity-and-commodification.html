@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,26 +26,35 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Authenticity and Commodification</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Authenticity and Commodification</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/authenticity-and-commodification.md">source on GitHub</a></div>
-  <div class="note-summary">A synthesis connecting Byung-Chul Han&#x27;s critique of narrative commodification with Montaigne&#x27;s personal essay form, and asking whether authentic expression is structurally possible in attention-economy contexts.</div>
-  <div class="tags"><span class="tag">authenticity</span><span class="tag">commodification</span><span class="tag">narrative</span><span class="tag">montaigne</span><span class="tag">han</span><span class="tag">essay</span><span class="tag">social-media</span><span class="tag">synthesis</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/authenticity-and-commodification.md">source on GitHub</a></div>
+    <div class="note-summary">A synthesis connecting Byung-Chul Han&#x27;s critique of narrative commodification with Montaigne&#x27;s personal essay form, and asking whether authentic expression is structurally possible in attention-economy contexts.</div>
     <div class="prose">
 <h2 id="the-problem">The Problem</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Byung-Chul Han&quot;">Byung-Chul Han</span> argues in <em>The Crisis of Narration</em> that storytelling has become storyselling — narrative optimized to manufacture consumers. The mechanism is the attention economy: platforms reward engagement, and engagement rewards emotional manipulation, not truth-telling. The result is a world where every story is a pitch.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/byung-chul-han" title="Written [[Byung-Chul Han]], resolved to byung-chul-han">Byung-Chul Han</a> argues in <em>The Crisis of Narration</em> that storytelling has become storyselling — narrative optimized to manufacture consumers. The mechanism is the attention economy: platforms reward engagement, and engagement rewards emotional manipulation, not truth-telling. The result is a world where every story is a pitch.</p>
 <h2 id="the-structural-question">The Structural Question</h2>
 <p>Is authentic expression structurally possible under current conditions, or does the infrastructure of attention-economy publishing inevitably commodify even well-intentioned writing?</p>
 <p>Three positions:</p>
 <ol>
 <li><p><strong>Hard structuralism (Han)</strong>: the platform optimizes for engagement, which is incompatible with authentic expression. Writing for an audience on social media is always already storyselling.</p></li>
-<li><p><strong>Soft resistance</strong>: certain forms are more structurally resistant than others. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Personal Essay as Form&quot;">personal essay</span> — meandering, non-teleological, frank — is harder to optimize for conversion. It can survive on the margins.</p></li>
+<li><p><strong>Soft resistance</strong>: certain forms are more structurally resistant than others. The <a class="wikilink" href="/wiki/aneesh/concepts/personal-essay-as-form" title="Written [[Personal Essay as Form]], resolved to personal-essay-as-form">personal essay</a> — meandering, non-teleological, frank — is harder to optimize for conversion. It can survive on the margins.</p></li>
 <li><p><strong>Individual heroics</strong>: authenticity is a matter of intention and practice, not infrastructure. Some writers are authentic on Instagram; some are dishonest in personal essays.</p></li>
 </ol>
-<p>The author of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Looking Forward to Montaigne&quot;">Looking Forward to Montaigne</span> takes position 2: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> as evidence that the form itself resists commodification.</p>
+<p>The author of <a class="wikilink" href="/wiki/aneesh/summaries/looking-forward-to-montaigne" title="Written [[Looking Forward to Montaigne]], resolved to looking-forward-to-montaigne">Looking Forward to Montaigne</a> takes position 2: <a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> as evidence that the form itself resists commodification.</p>
 <h2 id="the-montaigne-test">The Montaigne Test</h2>
 <p>What specifically makes Montaigne&#x27;s writing resistant to storyselling?</p>
 <ul>
@@ -55,27 +64,56 @@
 <li><strong>Provisional conclusions</strong>: &quot;what do I know?&quot; is bad marketing. Confident claims sell; epistemic humility doesn&#x27;t.</li>
 </ul>
 <h2 id="the-old-internet-parallel">The Old Internet Parallel</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Old Internet&quot;">The Old Internet</span> had similar structural properties: most writers had no monetization, no brand, small audiences. The structural condition of non-commerciality enabled authenticity. When the platforms arrived with advertising models and follower counts, the same structural commodification pressure Han describes took hold.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/the-old-internet" title="Written [[The Old Internet]], resolved to the-old-internet">The Old Internet</a> had similar structural properties: most writers had no monetization, no brand, small audiences. The structural condition of non-commerciality enabled authenticity. When the platforms arrived with advertising models and follower counts, the same structural commodification pressure Han describes took hold.</p>
 <p>This suggests authenticity is less a virtue than a structural property — it thrives in low-commercial-pressure environments and withers under optimization.</p>
 <h2 id="thesis-candidate">Thesis Candidate</h2>
 <p><strong>Authentic expression is not primarily a moral achievement but a structural one. To write authentically in the current environment requires either (a) economic independence from audience, (b) choosing forms that are structurally resistant to optimization, or (c) writing for small audiences where performance pressure is low. Montaigne had (a) and (b). The old internet had (c). Social media has eliminated all three for most writers.</strong></p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Byung-Chul Han&quot;">Byung-Chul Han</span> — source of storyselling critique</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> — the counter-example</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Storyselling vs. Storytelling&quot;">Storyselling vs. Storytelling</span> — the core distinction</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Personal Essay as Form&quot;">Personal Essay as Form</span> — the resistant form</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Old Internet&quot;">The Old Internet</span> — the recent structural parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Construction Through Writing&quot;">Self-Construction Through Writing</span> — authentic writing as self-construction, not self-performance</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/byung-chul-han" title="Written [[Byung-Chul Han]], resolved to byung-chul-han">Byung-Chul Han</a> — source of storyselling critique</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> — the counter-example</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/storyselling-vs-storytelling" title="Written [[Storyselling vs. Storytelling]], resolved to storyselling-vs-storytelling">Storyselling vs. Storytelling</a> — the core distinction</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/personal-essay-as-form" title="Written [[Personal Essay as Form]], resolved to personal-essay-as-form">Personal Essay as Form</a> — the resistant form</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-old-internet" title="Written [[The Old Internet]], resolved to the-old-internet">The Old Internet</a> — the recent structural parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/self-construction-through-writing" title="Written [[Self-Construction Through Writing]], resolved to self-construction-through-writing">Self-Construction Through Writing</a> — authentic writing as self-construction, not self-performance</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>458</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/looking-forward-to-montaigne">Looking Forward to Montaigne</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/storyselling-vs-storytelling">Storyselling vs. Storytelling</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/byung-chul-han">Byung-Chul Han</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-old-internet">The Old Internet</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/byung-chul-han">Byung-Chul Han</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/looking-forward-to-montaigne">Looking Forward to Montaigne</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-essay-as-form">Personal Essay as Form</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/storyselling-vs-storytelling">Storyselling vs. Storytelling</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/authenticity">authenticity</a><a class="tag" href="/wiki/topics/commodification">commodification</a><a class="tag" href="/wiki/topics/narrative">narrative</a><a class="tag" href="/wiki/topics/montaigne">montaigne</a><a class="tag" href="/wiki/topics/han">han</a><a class="tag" href="/wiki/topics/essay">essay</a><a class="tag" href="/wiki/topics/social-media">social-media</a><a class="tag" href="/wiki/topics/synthesis">synthesis</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

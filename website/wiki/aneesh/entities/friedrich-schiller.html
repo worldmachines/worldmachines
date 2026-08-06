@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,24 +26,33 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Friedrich Schiller (1759–1805)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Friedrich Schiller (1759–1805)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/friedrich-schiller.md">source on GitHub</a></div>
-  <div class="note-summary">Friedrich Schiller (1759–1805) developed Kulturkritik&#x27;s aesthetic turn, proposing the play drive (Spieltrieb) and aesthetic education as the cure for modern self-alienation — while his own theory of the sublime reveals that this &#x27;cure&#x27; generates more culture rather than reconciling nature and culture.</div>
-  <div class="tags"><span class="tag">schiller</span><span class="tag">kulturkritik</span><span class="tag">aesthetics</span><span class="tag">play-drive</span><span class="tag">sublime</span><span class="tag">enlightenment</span><span class="tag">aesthetic-education</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/friedrich-schiller.md">source on GitHub</a></div>
+    <div class="note-summary">Friedrich Schiller (1759–1805) developed Kulturkritik&#x27;s aesthetic turn, proposing the play drive (Spieltrieb) and aesthetic education as the cure for modern self-alienation — while his own theory of the sublime reveals that this &#x27;cure&#x27; generates more culture rather than reconciling nature and culture.</div>
     <div class="prose">
 <h2 id="biographical-context">Biographical Context</h2>
 <ul>
 <li>Son of a gardener</li>
 <li>Playwright, poet, philosopher — contemporary of Goethe and Kant</li>
-<li>Key texts for <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span>: <em>Letters on the Aesthetic Education of Man</em> (1794), &quot;On Naïve and Sentimental Poetry&quot; (1795), &quot;Concerning the Sublime&quot; (1801)</li>
+<li>Key texts for <a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a>: <em>Letters on the Aesthetic Education of Man</em> (1794), &quot;On Naïve and Sentimental Poetry&quot; (1795), &quot;Concerning the Sublime&quot; (1801)</li>
 <li>Strong interest in horticulture: reviewed garden calendar for 1795; identified Hohenheim Park near Stuttgart as his horticultural ideal</li>
 </ul>
 <h2 id="schillers-kulturkritik-per-kempf">Schiller&#x27;s Kulturkritik (per Kempf)</h2>
-<p>Schiller positions his work as &quot;an answer to the French Revolution gone awry.&quot; Where <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> blamed cultural overrefinement in general, Schiller identifies <strong>overspecialization</strong> as the specific culprit of self-alienation. Like Rousseau, he sees the Enlightenment as both cause and cure.</p>
+<p>Schiller positions his work as &quot;an answer to the French Revolution gone awry.&quot; Where <a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> blamed cultural overrefinement in general, Schiller identifies <strong>overspecialization</strong> as the specific culprit of self-alienation. Like Rousseau, he sees the Enlightenment as both cause and cure.</p>
 <p>His norm, however, is not original nature (which he sees as a wretched &quot;troglodyte&quot; state) but <strong>the Greeks of antiquity</strong>, whose &quot;wholeness of being is irretrievably lost&quot; (&quot;AE,&quot; p. 102).</p>
 <h2 id="the-drive-theory">The Drive Theory</h2>
 <p>Schiller&#x27;s <em>Aesthetic Education</em> proposes that modern humans are split between two drives:</p>
@@ -52,7 +61,7 @@
 <li><strong>Formal drive</strong> (Formtrieb): the rational, universal, abstract</li>
 </ul>
 <p>The <strong>play drive</strong> (Spieltrieb) sublates both, producing &quot;living form&quot; (lebende Gestalt) — the incarnation of beauty. Key claim: &quot;It is only through beauty that man makes his way to freedom&quot; (&quot;AE,&quot; p. 90).</p>
-<p>This is Schiller&#x27;s reformulation of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nature-Culture Dialectic&quot;">Nature-Culture Dialectic</span>: the synthesis is achieved not through nature (Rousseau) nor through pure reason, but through <em>art</em>.</p>
+<p>This is Schiller&#x27;s reformulation of the <a class="wikilink" href="/wiki/aneesh/concepts/nature-culture-dialectic" title="Written [[Nature-Culture Dialectic]], resolved to nature-culture-dialectic">Nature-Culture Dialectic</a>: the synthesis is achieved not through nature (Rousseau) nor through pure reason, but through <em>art</em>.</p>
 <h2 id="the-garden-as-integrative-ideal">The Garden as Integrative Ideal</h2>
 <p>Schiller&#x27;s horticultural ideal is a &quot;middle way between the rigidity of the French style of garden and the anarchy of the so-called English garden&quot; — explicitly attributed to Hirschfeld&#x27;s <em>Theory of Garden Design</em> (1779). The Hohenheim Park &quot;combines such disparate elements into a whole&quot; — it is &quot;soulfully inspired and artistically exalted nature, which satisfies not just the untutored person but even the person spoiled by culture.&quot;</p>
 <p>This garden is an &quot;integrative ideal&quot; — it appeals to both intellect and feeling. But Schiller is &quot;disregarding actuality for the sake of appearance and effect&quot;: the ideal is a postulate, not a description.</p>
@@ -75,23 +84,65 @@
 </table></div>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> — concept central to Schiller&#x27;s work</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> — predecessor and foil</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> — contemporary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The English Garden as Epistemic Object&quot;">The English Garden as Epistemic Object</span> — Hohenheim Park as Schiller&#x27;s horticultural ideal</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nature-Culture Dialectic&quot;">Nature-Culture Dialectic</span> — the tension Schiller&#x27;s Spieltrieb tries to resolve</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Alienation and Modernity&quot;">Self-Alienation and Modernity</span> — overspecialization as Schiller&#x27;s diagnosis</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span> — summary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Franz R. Kempf&quot;">Franz R. Kempf</span> — scholar</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> — concept central to Schiller&#x27;s work</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> — predecessor and foil</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> — contemporary</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object" title="Written [[The English Garden as Epistemic Object]], resolved to the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a> — Hohenheim Park as Schiller&#x27;s horticultural ideal</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/nature-culture-dialectic" title="Written [[Nature-Culture Dialectic]], resolved to nature-culture-dialectic">Nature-Culture Dialectic</a> — the tension Schiller&#x27;s Spieltrieb tries to resolve</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/self-alienation-and-modernity" title="No note is called &quot;Self-Alienation and Modernity&quot; yet — see who is asking for it">Self-Alienation and Modernity</a> — overspecialization as Schiller&#x27;s diagnosis</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/franz-r-kempf" title="Written [[Franz R. Kempf]], resolved to franz-r-kempf">Franz R. Kempf</a> — scholar</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>676</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">10</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeopathic-critique">Homeopathic Critique</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nature-culture-dialectic">Nature-Culture Dialectic</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sturm-und-drang">Sturm und Drang</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/noble-savage">Noble Savage</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/schiller">schiller</a><a class="tag" href="/wiki/topics/kulturkritik">kulturkritik</a><a class="tag" href="/wiki/topics/aesthetics">aesthetics</a><span class="tag tag-lone" title="Only this note uses it">play-drive</span><span class="tag tag-lone" title="Only this note uses it">sublime</span><a class="tag" href="/wiki/topics/enlightenment">enlightenment</a><a class="tag" href="/wiki/topics/aesthetic-education">aesthetic-education</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

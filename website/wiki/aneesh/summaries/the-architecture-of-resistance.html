@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Architecture of Resistance</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Architecture of Resistance</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 5 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-architecture-of-resistance.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe traces three historical moments — Spinoza&#x27;s Amsterdam, Adonis&#x27;s Beirut, and 2025&#x27;s AI-mediated internet — to argue that resistance against the averaging power of dominant systems requires cultivating &#x27;thickets&#x27;: deliberately opaque, friction-rich habitats that protect divergence.</div>
-  <div class="tags"><span class="tag">resistance</span><span class="tag">legibility</span><span class="tag">spinoza</span><span class="tag">adonis</span><span class="tag">ai-homogenization</span><span class="tag">dark-forest</span><span class="tag">thicket</span><span class="tag">conatus</span><span class="tag">individualism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 5 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-architecture-of-resistance.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe traces three historical moments — Spinoza&#x27;s Amsterdam, Adonis&#x27;s Beirut, and 2025&#x27;s AI-mediated internet — to argue that resistance against the averaging power of dominant systems requires cultivating &#x27;thickets&#x27;: deliberately opaque, friction-rich habitats that protect divergence.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a href="https://aneeshsathe.com/the-architecture-of-resistance/">aneeshsathe.com, 2025-12-23</a><br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span></p>
-<blockquote><p><strong>Canonical refinement (2026)</strong>: This essay equates the <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">thicket</a> with the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dark Forest Internet&quot;">Dark Forest Internet</span> as its &quot;emergent institutional version.&quot; The follow-up essay <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Birth of Thickets&quot;">The Birth of Thickets</span> sharpens the typology: thickets are <em>natural and protective</em>; &quot;dark forest&quot; is reclaimed for the <em>extractive</em> operation (platform-priests, influencer economies, the Inquisition) that captures or imitates thickets. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dark Forestry&quot;">Dark Forestry</span> for the reclaimed term.</p></blockquote>
+<strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a></p>
+<blockquote><p><strong>Canonical refinement (2026)</strong>: This essay equates the <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">thicket</a> with the <a class="wikilink-wanted" href="/wiki/wanted/dark-forest-internet" title="No note is called &quot;Dark Forest Internet&quot; yet — see who is asking for it">Dark Forest Internet</a> as its &quot;emergent institutional version.&quot; The follow-up essay <a class="wikilink-wanted" href="/wiki/wanted/the-birth-of-thickets" title="No note is called &quot;The Birth of Thickets&quot; yet — see who is asking for it">The Birth of Thickets</a> sharpens the typology: thickets are <em>natural and protective</em>; &quot;dark forest&quot; is reclaimed for the <em>extractive</em> operation (platform-priests, influencer economies, the Inquisition) that captures or imitates thickets. See <a class="wikilink" href="/wiki/aneesh/concepts/dark-forestry" title="Written [[Dark Forestry]], resolved to dark-forestry">Dark Forestry</a> for the reclaimed term.</p></blockquote>
 <h2 id="central-argument">Central Argument</h2>
 <p>The history of power is a history of <a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a> — the project of making individuals, landscapes, and ideas searchable, mappable, and predictable. Each dominant system imposes an &quot;average&quot; (theological, nationalist, statistical) to render the outlier visible and legible. Resistance, across all three historical moments, takes the form of cultivating <strong>opacity</strong>: Spinoza through intellectual rigor, <a class="wikilink" href="/wiki/aneesh/entities/adonis">Adonis</a> through radical anonymity, and the 2025 resistant intellectual through the deliberate architecture of the <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a>.</p>
 <h2 id="three-historical-moments">Three Historical Moments</h2>
@@ -50,14 +59,14 @@
 <h3 id="2-adonis-mihyar-in-the-levant-mid-20th-c">2. Adonis / Mihyar in the Levant (mid-20th c.)</h3>
 <ul>
 <li>The mechanism of control: nationalist scripts and religious orthodoxies freezing identity as a &quot;Citizen-as-Monument&quot;</li>
-<li><a class="wikilink" href="/wiki/aneesh/entities/adonis">Adonis</a>&#x27;s counter-move through <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mihyar&quot;">Mihyar</span>: the <em>iltifat</em> (the sudden turn away). Not asserting a new identity but performing a &quot;movement of erasure&quot; — radical anonymity that remains &quot;unsearchable by the collective grammar&quot;</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/adonis">Adonis</a>&#x27;s counter-move through <a class="wikilink-wanted" href="/wiki/wanted/mihyar" title="No note is called &quot;Mihyar&quot; yet — see who is asking for it">Mihyar</a>: the <em>iltifat</em> (the sudden turn away). Not asserting a new identity but performing a &quot;movement of erasure&quot; — radical anonymity that remains &quot;unsearchable by the collective grammar&quot;</li>
 <li>A stable interior is merely another coordinate for the state to map</li>
 </ul>
 <h3 id="3-the-digital-terraformed-plain-2025">3. The Digital Terraformed Plain (2025)</h3>
 <ul>
 <li>The mechanism of control: <a class="wikilink" href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a> — predictive models that surface the statistical mean and suppress the outlier, a &quot;disindividuation disguised as efficiency&quot;</li>
 <li>The counter-move: <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — a &quot;deliberate architecture of complexity, an insistence on terroir and the messy, non-replicable context of the local&quot;</li>
-<li>Framing: the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dark Forest Internet&quot;">Dark Forest Internet</span> as the emergent ecosystem of resistance</li>
+<li>Framing: the <a class="wikilink-wanted" href="/wiki/wanted/dark-forest-internet" title="No note is called &quot;Dark Forest Internet&quot; yet — see who is asking for it">Dark Forest Internet</a> as the emergent ecosystem of resistance</li>
 </ul>
 <h2 id="key-claims">Key Claims</h2>
 <ol>
@@ -76,8 +85,8 @@
 <li><strong><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a></strong> — <em>Ethics</em>; conatus, intellectual freedom, <em>cherem</em></li>
 <li><strong><a class="wikilink" href="/wiki/aneesh/entities/adonis">Adonis</a></strong> (Ali Ahmad Said Esber) — <em>Mihyar of Damascus: His Songs</em>; the <em>iltifat</em> as epistemic practice</li>
 <li><strong><a class="wikilink" href="/wiki/aneesh/entities/jean-baudrillard">Jean Baudrillard</a></strong> — implied in the consumer identity / simulation critique (more explicit in <em>The End of Identity</em>)</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James C. Scott&quot;">James C. Scott</span></strong> — <em>Seeing Like a State</em> (legibility as state power) is the intellectual background here, though not cited</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Yuk Hui&quot;">Yuk Hui</span></strong> / <a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a> — the &quot;Leibnizian bureaucracy of optimization&quot; framing</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/james-c-scott" title="No note is called &quot;James C. Scott&quot; yet — see who is asking for it">James C. Scott</a></strong> — <em>Seeing Like a State</em> (legibility as state power) is the intellectual background here, though not cited</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/yuk-hui" title="No note is called &quot;Yuk Hui&quot; yet — see who is asking for it">Yuk Hui</a></strong> / <a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a> — the &quot;Leibnizian bureaucracy of optimization&quot; framing</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
@@ -87,7 +96,7 @@
 <li><a class="wikilink" href="/wiki/aneesh/entities/adonis">Adonis</a> — entity page</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a> — entity page</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a> — the 2025 mechanism of control</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dark Forest Internet&quot;">Dark Forest Internet</span> — the existing ecosystem version of the thicket</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/dark-forest-internet" title="No note is called &quot;Dark Forest Internet&quot; yet — see who is asking for it">Dark Forest Internet</a> — the existing ecosystem version of the thicket</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> — Rao&#x27;s frame: the thicket as what the divergence machine produces</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a> — parallel typology from <em>The Shelter as Epistemic Engine</em></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> — spatial resistance; moving through walls rather than doors parallels moving through the thicket rather than the plain</li>
@@ -99,23 +108,69 @@
 <li>Doesn&#x27;t address whether the thicket can scale without becoming a new average</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">9</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/heterotopias">Heterotopias (Foucault)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>24</b><span>linked from</span></div>
+      <div class="bearing"><b>13</b><span>links out</span></div>
+      <div class="bearing"><b>761</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">24</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility">Legibility</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>16 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/adonis">Adonis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/heterotopias">Heterotopias (Foucault)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-making-and-resistance-the-constructive-side">Place-Making and Resistance: The Constructive Side</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-opacity-turn-thicket-nakatomi-iltifat">The Opacity Turn: Thicket, Nakatomi, Iltifat</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/stripping-the-layers-from-spinoza-to-ai">Stripping the Layers: From Spinoza to AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-information-ecology">The Information Ecology — Noise, Lore, Libraries, and the Crisis of Navigation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">15</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility">Legibility</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/resistance">resistance</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/spinoza">spinoza</a><a class="tag" href="/wiki/topics/adonis">adonis</a><a class="tag" href="/wiki/topics/ai-homogenization">ai-homogenization</a><a class="tag" href="/wiki/topics/dark-forest">dark-forest</a><a class="tag" href="/wiki/topics/thicket">thicket</a><a class="tag" href="/wiki/topics/conatus">conatus</a><a class="tag" href="/wiki/topics/individualism">individualism</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

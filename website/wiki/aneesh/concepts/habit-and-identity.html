@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Habit and Identity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Habit and Identity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/habit-and-identity.md">source on GitHub</a></div>
-  <div class="note-summary">The observation that identity aspiration often precedes capability — we adopt the tools, dress, or rituals of who we want to become before we are that person.</div>
-  <div class="tags"><span class="tag">identity</span><span class="tag">habit</span><span class="tag">behavior</span><span class="tag">psychology</span><span class="tag">creative-practice</span><span class="tag">james-clear</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/habit-and-identity.md">source on GitHub</a></div>
+    <div class="note-summary">The observation that identity aspiration often precedes capability — we adopt the tools, dress, or rituals of who we want to become before we are that person.</div>
     <div class="prose">
-<p>The Scrivener vignette in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Protocols, Wagons, and Associated Acrobatics&quot;">On Protocols, Wagons, and Associated Acrobatics</span> is a compact illustration of a broader phenomenon: <strong>identity precedes capability</strong>. The author wanted Scrivener not because he was a writer, but because owning it would signal — to himself — the identity he aspired to.</p>
+<p>The Scrivener vignette in <a class="wikilink" href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics" title="Written [[On Protocols, Wagons, and Associated Acrobatics]], resolved to on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a> is a compact illustration of a broader phenomenon: <strong>identity precedes capability</strong>. The author wanted Scrivener not because he was a writer, but because owning it would signal — to himself — the identity he aspired to.</p>
 <h2 id="the-pattern">The Pattern</h2>
 <ol>
 <li>Adopt a tool, ritual, or label associated with an identity you desire.</li>
@@ -44,26 +53,55 @@
 <li>The gap between aspired and actual identity closes over time — or it doesn&#x27;t.</li>
 </ol>
 <h2 id="james-clears-framework">James Clear&#x27;s Framework</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James Clear&quot;">James Clear</span> in <em>Atomic Habits</em> argues explicitly for identity-based habits: instead of &quot;I want to write every day,&quot; say &quot;I am a writer.&quot; The behavior change is downstream of the identity claim. The Scrivener story is a pre-Clear enactment of this logic.</p>
+<p><a class="wikilink-wanted" href="/wiki/wanted/james-clear" title="No note is called &quot;James Clear&quot; yet — see who is asking for it">James Clear</a> in <em>Atomic Habits</em> argues explicitly for identity-based habits: instead of &quot;I want to write every day,&quot; say &quot;I am a writer.&quot; The behavior change is downstream of the identity claim. The Scrivener story is a pre-Clear enactment of this logic.</p>
 <h2 id="the-protocol-constraint">The Protocol Constraint</h2>
 <p>The author adds a gamification layer: he would only <em>buy</em> Scrivener (closing the identity gap materially) if he wrote every day for a month. This creates a finite game within an infinite one — a structured challenge that bootstraps the infinite-game behavior.</p>
 <h2 id="relevant-tension">Relevant Tension</h2>
 <p>This identity-first logic can be criticized: you can be a &quot;writer&quot; who never actually writes. Identity aspiration is necessary but not sufficient. The essay acknowledges this — the aspiration must be paired with the protocol (showing up, getting back on the wagon).</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Infinite Game&quot;">Infinite Game</span> — the protocol that keeps identity aspiration from becoming mere cosplay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Construction Through Writing&quot;">Self-Construction Through Writing</span> — the deeper claim: writing <em>makes</em> the identity, not just expresses it</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ludic Feedback Loops&quot;">Ludic Feedback Loops</span> — what sustains behavior once identity is adopted</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Protocols, Wagons, and Associated Acrobatics&quot;">On Protocols, Wagons, and Associated Acrobatics</span> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/infinite-game" title="Written [[Infinite Game]], resolved to infinite-game">Infinite Game</a> — the protocol that keeps identity aspiration from becoming mere cosplay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/self-construction-through-writing" title="Written [[Self-Construction Through Writing]], resolved to self-construction-through-writing">Self-Construction Through Writing</a> — the deeper claim: writing <em>makes</em> the identity, not just expresses it</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ludic-feedback-loops" title="Written [[Ludic Feedback Loops]], resolved to ludic-feedback-loops">Ludic Feedback Loops</a> — what sustains behavior once identity is adopted</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics" title="Written [[On Protocols, Wagons, and Associated Acrobatics]], resolved to on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a> — source essay</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>287</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/infinite-game">Infinite Game</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/self-construction-through-writing">Self-Construction Through Writing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ludic-feedback-loops">Ludic Feedback Loops</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/infinite-game">Infinite Game</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/robert-peake">Robert Peake</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/self-construction-through-writing">Self-Construction Through Writing</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/identity">identity</a><a class="tag" href="/wiki/topics/habit">habit</a><span class="tag tag-lone" title="Only this note uses it">behavior</span><a class="tag" href="/wiki/topics/psychology">psychology</a><a class="tag" href="/wiki/topics/creative-practice">creative-practice</a><span class="tag tag-lone" title="Only this note uses it">james-clear</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

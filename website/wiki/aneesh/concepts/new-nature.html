@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>New Nature</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>New Nature</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/new-nature.md">source on GitHub</a></div>
-  <div class="note-summary">New Nature is Venkatesh Rao&#x27;s term for regimes of reality governed by technologically mediated laws that are nearly as inviolable, immutable, and persistent as those of physical nature — analogous to Old Nature but constituted by artificial rather than physical laws.</div>
-  <div class="tags"><span class="tag">new-nature</span><span class="tag">technology</span><span class="tag">ecology</span><span class="tag">rao</span><span class="tag">tangled-bank</span><span class="tag">darwinism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/new-nature.md">source on GitHub</a></div>
+    <div class="note-summary">New Nature is Venkatesh Rao&#x27;s term for regimes of reality governed by technologically mediated laws that are nearly as inviolable, immutable, and persistent as those of physical nature — analogous to Old Nature but constituted by artificial rather than physical laws.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>From <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>:</p>
@@ -49,10 +58,10 @@
 <ul>
 <li>Vicious competitiveness in near-invisibility</li>
 <li>Dark Forests of hidden conflict beneath protocol grammars</li>
-<li>Entities asserting <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span> against each other in routine, boring interaction</li>
+<li>Entities asserting <a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a> against each other in routine, boring interaction</li>
 </ul>
 <h2 id="what-murder-in-new-nature-is-not">What Murder in New Nature Is Not</h2>
-<p>The &quot;Bloodsport Planet&quot; aesthetics of stylized Darwinism — Platonic fitness ideals, guns and masculinity, sanitized spectatorship of violence — is exactly the <em>wrong</em> model. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Werner Herzog&quot;">Werner Herzog</span>&#x27;s critique applies: it is &quot;badly pronounced and half-finished sentences out of a stupid suburban novel.&quot;</p>
+<p>The &quot;Bloodsport Planet&quot; aesthetics of stylized Darwinism — Platonic fitness ideals, guns and masculinity, sanitized spectatorship of violence — is exactly the <em>wrong</em> model. <a class="wikilink" href="/wiki/aneesh/entities/werner-herzog" title="Written [[Werner Herzog]], resolved to werner-herzog">Werner Herzog</a>&#x27;s critique applies: it is &quot;badly pronounced and half-finished sentences out of a stupid suburban novel.&quot;</p>
 <p>Real Darwinian competition is illegible, bleak, routine. The stylized version can rule a stadium; it cannot rule a live planet.</p>
 <h2 id="relation-to-old-nature">Relation to Old Nature</h2>
 <p>If New Nature is like Old Nature, we should expect:</p>
@@ -63,31 +72,73 @@
 </ul>
 <p>The useless machine is the &quot;e. coli of artificial liveness&quot; — the genesis species of New Nature. More than Conway&#x27;s Game of Life, it captures the essence: implacably defended uselessness.</p>
 <h2 id="relation-to-chaissons-life-era">Relation to Chaisson&#x27;s Life Era</h2>
-<p>Chaisson&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Life Era&quot;">Life Era</span> thesis describes civilization becoming a cosmological actor — technology and life merging into a &quot;technoculture&quot; that dominates matter as matter once dominated radiation. This is structurally the same as Rao&#x27;s New Nature, though Chaisson frames it as progress and Rao frames it as ecology (with all of ecology&#x27;s murderousness).</p>
+<p>Chaisson&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/life-era" title="Written [[Life Era]], resolved to life-era">Life Era</a> thesis describes civilization becoming a cosmological actor — technology and life merging into a &quot;technoculture&quot; that dominates matter as matter once dominated radiation. This is structurally the same as Rao&#x27;s New Nature, though Chaisson frames it as progress and Rao frames it as ecology (with all of ecology&#x27;s murderousness).</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rewilding Technology&quot;">Rewilding Technology</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Technological Tangled Bank&quot;">Technological Tangled Bank</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Capture Resistance&quot;">Capture Resistance</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Life Era&quot;">Life Era</span> (Chaisson&#x27;s parallel concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/rewilding-technology" title="Written [[Rewilding Technology]], resolved to rewilding-technology">Rewilding Technology</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/technological-tangled-bank" title="No note is called &quot;Technological Tangled Bank&quot; yet — see who is asking for it">Technological Tangled Bank</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance" title="Written [[Capture Resistance]], resolved to capture-resistance">Capture Resistance</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/life-era" title="Written [[Life Era]], resolved to life-era">Life Era</a> (Chaisson&#x27;s parallel concept)</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span> (primary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a> (primary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/openness-and-freedom-tuan">Openness and Freedom (Tuan)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>13</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>462</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">13</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/life-era">Life Era</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rewilding-technology">Rewilding Technology</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>5 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/engineering-liveness-venkatesh-rao">Engineering Liveness — Venkatesh Rao (2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/new-nature-as-life-era">New Nature as Life Era — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/openness-and-freedom-tuan">Openness and Freedom (Tuan)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/useless-machine">Useless Machine</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/cosmic-evolution-chaisson">Cosmic Evolution: State of the Science — Eric J. Chaisson (2009)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse">History Machines in the Margins — Florian Lohse (2025)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/eric-chaisson">Eric Chaisson</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/new-nature">new-nature</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/ecology">ecology</a><a class="tag" href="/wiki/topics/rao">rao</a><span class="tag tag-lone" title="Only this note uses it">tangled-bank</span><a class="tag" href="/wiki/topics/darwinism">darwinism</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

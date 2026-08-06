@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Operations, Not Substance</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Operations, Not Substance</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/operations-not-substance.md">source on GitHub</a></div>
-  <div class="note-summary">Bryant&#x27;s ontological shift from asking what a thing IS (its properties, essence, substance) to what a thing DOES (its operations, inputs, outputs).</div>
-  <div class="tags"><span class="tag">bryant</span><span class="tag">onto-cartography</span><span class="tag">ooo</span><span class="tag">ontology</span><span class="tag">machines</span><span class="tag">process-philosophy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/operations-not-substance.md">source on GitHub</a></div>
+    <div class="note-summary">Bryant&#x27;s ontological shift from asking what a thing IS (its properties, essence, substance) to what a thing DOES (its operations, inputs, outputs).</div>
     <div class="prose">
 <p>The core ontological shift in <a class="wikilink" href="/wiki/aneesh/entities/levi-bryant">levi-bryant</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/onto-cartography">onto-cartography</a>: instead of asking what a thing <em>is</em> — its essential properties, its predicates, the qualities inhering in a subject — we ask what it <em>does</em>. &quot;The first question to ask of any machine is not &#x27;what are its properties?&#x27;, but rather &#x27;what does it <em>do</em>?&#x27;&quot; (<em>Onto-Cartography</em>, p. 38–39).</p>
 <h2 id="the-shift">The Shift</h2>
@@ -70,25 +79,56 @@
 <li>Tension with phenomenological traditions that emphasize <em>lived</em> qualities (Husserl&#x27;s qualia, Merleau-Ponty&#x27;s embodied perception) — Bryant would say qualities are real but they are <em>manifestations</em>, not intrinsic properties.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">11</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/corporeal-incorporeal-machines">Corporeal and Incorporeal Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/george-molnar">George Molnar</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch2-3">Onto-Cartography Ch 2–3: What Is a Machine? / Alien Phenomenology</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/pluripotency-and-exaptation">Pluripotency and Exaptation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/rigid-plastic-machines">Rigid and Plastic Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/stacy-alaimo">Stacy Alaimo</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/structural-openness-operational-closure">Structural Openness and Operational Closure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/for-itself-machine">The For-Itself of a Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/virtual-proper-being">Virtual Proper Being</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/withdrawal-harman">Withdrawal (Harman / OOO)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>581</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">11</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/structural-openness-operational-closure">Structural Openness and Operational Closure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rigid-plastic-machines">Rigid and Plastic Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/pluripotency-and-exaptation">Pluripotency and Exaptation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/for-itself-machine">The For-Itself of a Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/corporeal-incorporeal-machines">Corporeal and Incorporeal Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/virtual-proper-being">Virtual Proper Being</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/withdrawal-harman">Withdrawal (Harman / OOO)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/george-molnar">George Molnar</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch2-3">Onto-Cartography Ch 2–3: What Is a Machine? / Alien Phenomenology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/stacy-alaimo">Stacy Alaimo</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/alien-phenomenology">Alien Phenomenology</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/rigid-plastic-machines">Rigid and Plastic Machines</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/structural-openness-operational-closure">Structural Openness and Operational Closure</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/thermodynamic-politics">Thermodynamic Politics</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/pluripotency-and-exaptation">Pluripotency and Exaptation</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/bryant">bryant</a><a class="tag" href="/wiki/topics/onto-cartography">onto-cartography</a><a class="tag" href="/wiki/topics/ooo">ooo</a><a class="tag" href="/wiki/topics/ontology">ontology</a><a class="tag" href="/wiki/topics/machines">machines</a><a class="tag" href="/wiki/topics/process-philosophy">process-philosophy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,56 +26,112 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
   <main class="wiki">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <span>The Divine Comedy</span></nav>
+  <p class="eyebrow">Book</p>
   <h1>The Divine Comedy</h1>
-  <p class="lede small">Dante Alighieri (Cary tr.) · c.1320 · 21 reading notes · source id <code>dante-divine-comedy</code></p>
-  <p class="lede">Section-by-section reading notes produced by the club's ingestion pipeline and reviewed by a curator. The book's own text is never stored in the repo — these are notes <em>about</em> it, in reading order.</p>
-  <ul class="rows">
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05">Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</a>
-        <p class="row-gloss">Dante, lost in a dark wood and blocked by three beasts, is rescued by the shade of Virgil (sent at the intercession of Beatrice, Lucia, and Rachel) and led through the inscribed gate of Hell, past the neutral souls and Charon&#x27;s crossing, in…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11">Through Gluttony, Avarice, and Wrath to the Gates of Dis</a>
-        <p class="row-gloss">Dante and Virgil pass through the circles of gluttony, avarice-and-prodigality, and wrath, are refused entry at the walled city of Dis until a heavenly messenger forces the gate, meet the arch-heretics Farinata degli Uberti and Cavalcante d…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17">Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</a>
-        <p class="row-gloss">In Cary&#x27;s translation, Dante and Virgil cross the three rings of Hell&#x27;s circle of violence — the river of boiling blood guarded by centaurs, the trackless wood of suicides devoured by Harpies, and the burning sand of blasphemers, sodomites,…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23">Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</a>
-        <p class="row-gloss">Dante and Virgil cross the fraud-pits of Malebolge from the panderers and flatterers through the simoniac popes, the backward-twisted diviners, the pitch-boiled barrators harried by a slapstick company of devils, and into the leaden-gilded …</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-24-27">Thieves, Serpents, and Fraudulent Counselors</a>
-        <p class="row-gloss">Dante and Virgil climb into the seventh and eighth chasms of Malebolge, watching serpent-tormented thieves melt and swap bodies before hearing the flame-wrapped Ulysses recount his final forbidden voyage and Guido da Montefeltro recount how…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-28-31">Sowers of Discord and Falsifiers: Malebolge&#x27;s Ninth Chasm to the Giants&#x27; Well (Inf. XXVIII–XXXI)</a>
-        <p class="row-gloss">Dante and Virgil cross the eighth and ninth chasms of Malebolge, where sowers of discord (Mohammed, Bertrand de Born) are eternally hacked apart and falsifiers of metal, person, coin, and word (Griffolino, Capocchio, Gianni Schicchi, Myrrha…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-32-34">The Ninth Circle: Traitors in the Ice and the Sight of Lucifer</a>
-        <p class="row-gloss">Dante and Virgil cross the frozen lake of Cocytus, where traitors to kindred, country, guests, and benefactors lie sealed in ice by degrees of guilt, hearing Count Ugolino&#x27;s account of starving with his sons in the Tower of Hunger before th…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-01-05">Paradiso I–V: Invocation, the Sphere of the Moon, and the Ascent to Mercury</a>
-        <p class="row-gloss">Guided by Beatrice, Dante ascends past the sphere of fire into the heaven of the Moon, where natural philosophy explains the moon&#x27;s dark spots and the soul&#x27;s power to rise, the shade of Piccarda Donati (and the empress Constance) illustrate…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-06-10">The Eagle, the Cross, and the Sun: Paradiso VI (cont.)–X</a>
-        <p class="row-gloss">In the close of Canto VI and the whole of Cantos VII through X, Justinian narrates the Roman eagle-standard&#x27;s history and damns both Guelphs and Ghibellines for misusing it, Beatrice resolves the paradox of a just act justly avenged by expl…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-11-14">Paradise, Cantos XI–XIV: Francis, Dominic, and the Ascent to Mars</a>
-        <p class="row-gloss">In the Heaven of the Sun, Thomas Aquinas eulogizes St. Francis while lamenting the Dominican order&#x27;s decay, Bonaventura mirrors him with a eulogy of St. Dominic and a lament for the Franciscans&#x27; decline, Aquinas then explains Solomon&#x27;s king…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a>
-        <p class="row-gloss">In the sphere of Mars, Dante&#x27;s crusader ancestor Cacciaguida praises the austere, close-knit Florence of his own boyhood against the corrupt, swollen city of Dante&#x27;s day, then delivers a precise prophecy of Dante&#x27;s coming exile and the Come…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-19-22">The Eagle of Jupiter and the Ladder of Saturn: Justice, Pagan Salvation, and Institutional Decay</a>
-        <p class="row-gloss">In the eagle of just rulers formed from the spirits of Jupiter and the golden ladder of contemplatives in Saturn, Dante confronts the limits of human justice, learns that a pagan Trojan (Ripheus) and a pagan Roman emperor (Trajan) sit among…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a>
-        <p class="row-gloss">Dante is examined in turn by Saints Peter, James, and John on the theological virtues of Faith, Hope, and Charity in the Heaven of the Fixed Stars, meets Adam who corrects the legend of the Fall and describes humanity&#x27;s first vanished langu…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33">The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</a>
-        <p class="row-gloss">Beatrice finishes her discourse on the angels&#x27; creation and fall and denounces preachers who trade the Gospel for fables and jests, after which Dante rises into the Empyrean&#x27;s river of light, beholds the blessed as a vast celestial rose, is…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-01-04">Purgatory, Cantos I–IV: Cato, Casella, and the Late-Repentant on the Mountain&#x27;s Shore</a>
-        <p class="row-gloss">Newly escaped from Hell, Dante and Virgil are received on the shore of Mount Purgatory by its guardian Cato, watch an angel ferry a boatload of souls (including Dante&#x27;s musician friend Casella) across the sea, and among the late-repentant e…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-05-09">The Late-Repentant, Sordello&#x27;s Lament, and the Gate of Purgatory</a>
-        <p class="row-gloss">Dante and Virgil pass through the crowd of the violently-slain-but-late-repentant (Jacopo del Cassero, Buonconte da Montefeltro, La Pia), are joined by the proud shade Sordello whose greeting of a fellow Mantuan triggers Dante&#x27;s furious apo…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-10-14">Purgatorio X–XIV: The Terraces of Pride and Envy</a>
-        <p class="row-gloss">On the first terrace of Purgatory the pilgrim views marble carvings of humility and studies the Proud bent double under stones, converses with Omberto Aldobrandeschi and the illuminator Oderisi on the transience of earthly fame, watches Vir…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-15-19">Wrath&#x27;s Smoke, Sloth&#x27;s Haste, and the Root of All Sin: Purgatorio XV–XIX</a>
-        <p class="row-gloss">On the terrace of wrath Dante and Virgil hear Marco Lombardo&#x27;s discourse on free will and the corrupt fusion of Church and Empire, then pass through the terrace of sloth where Virgil expounds love as the root of every virtue and vice, befor…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a>
-        <p class="row-gloss">On the fifth terrace Dante hears Hugh Capet curse the avarice of the French royal line he founded, feels the mountain shake and hears the Gloria as a purified soul (revealed to be Statius) rises free, and then climbs with Statius — who reco…</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-25-28">Purgatory, Cantos XXV–XXVIII: Statius on the Soul, the Fire of Lust, and the Threshold of the Earthly Paradise</a>
-        <p class="row-gloss">Dante ascends the seventh terrace of Purgatory, where Statius expounds a scholastic account of embryonic ensoulment and the formation of aerial shadow-bodies, the penitent lustful purge themselves in fire while crying out counter-exemplars …</p></li>
-      <li class="row"><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33">The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</a>
-        <p class="row-gloss">In the Earthly Paradise, Dante witnesses an elaborate allegorical pageant of the Church, loses Virgil and is reproved by the newly arrived Beatrice for his infidelity to her memory, confesses and is plunged into Lethe, then beholds the page…</p></li>
-  </ul>
+  <p class="lede small">Dante Alighieri (Cary tr.) · c.1320 · source id <code>dante-divine-comedy</code></p>
+  <p class="lede">Section-by-section reading notes produced by the club's ingestion pipeline and reviewed by a curator. The book's own text is never stored in the repo — these are notes <em>about</em> it, in reading order. The figure on each row is how many other notes link to it.</p>
+  <section>
+    <h2 class="register"><span>In reading order</span><span class="section-aside">21 notes</span></h2>
+    <ul class="plate">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05">Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">Dante, lost in a dark wood and blocked by three beasts, is rescued by the shade of Virgil (sent at the intercession of Beatrice, Lucia, and Rachel) and led through the inscribed gate of Hell…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11">Through Gluttony, Avarice, and Wrath to the Gates of Dis</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">Dante and Virgil pass through the circles of gluttony, avarice-and-prodigality, and wrath, are refused entry at the walled city of Dis until a heavenly messenger forces the gate, meet the ar…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17">Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">In Cary&#x27;s translation, Dante and Virgil cross the three rings of Hell&#x27;s circle of violence — the river of boiling blood guarded by centaurs, the trackless wood of suicides devoured by Harpie…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23">Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">Dante and Virgil cross the fraud-pits of Malebolge from the panderers and flatterers through the simoniac popes, the backward-twisted diviners, the pitch-boiled barrators harried by a slapst…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-24-27">Thieves, Serpents, and Fraudulent Counselors</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">Dante and Virgil climb into the seventh and eighth chasms of Malebolge, watching serpent-tormented thieves melt and swap bodies before hearing the flame-wrapped Ulysses recount his final for…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-28-31">Sowers of Discord and Falsifiers: Malebolge&#x27;s Ninth Chasm to the Giants&#x27; Well (Inf. XXVIII–XXXI)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">Dante and Virgil cross the eighth and ninth chasms of Malebolge, where sowers of discord (Mohammed, Bertrand de Born) are eternally hacked apart and falsifiers of metal, person, coin, and wo…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-32-34">The Ninth Circle: Traitors in the Ice and the Sight of Lucifer</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">Dante and Virgil cross the frozen lake of Cocytus, where traitors to kindred, country, guests, and benefactors lie sealed in ice by degrees of guilt, hearing Count Ugolino&#x27;s account of starv…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-01-05">Paradiso I–V: Invocation, the Sphere of the Moon, and the Ascent to Mercury</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">Guided by Beatrice, Dante ascends past the sphere of fire into the heaven of the Moon, where natural philosophy explains the moon&#x27;s dark spots and the soul&#x27;s power to rise, the shade of Picc…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-06-10">The Eagle, the Cross, and the Sun: Paradiso VI (cont.)–X</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">In the close of Canto VI and the whole of Cantos VII through X, Justinian narrates the Roman eagle-standard&#x27;s history and damns both Guelphs and Ghibellines for misusing it, Beatrice resolve…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-11-14">Paradise, Cantos XI–XIV: Francis, Dominic, and the Ascent to Mars</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">In the Heaven of the Sun, Thomas Aquinas eulogizes St. Francis while lamenting the Dominican order&#x27;s decay, Bonaventura mirrors him with a eulogy of St. Dominic and a lament for the Francisc…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">In the sphere of Mars, Dante&#x27;s crusader ancestor Cacciaguida praises the austere, close-knit Florence of his own boyhood against the corrupt, swollen city of Dante&#x27;s day, then delivers a pre…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-19-22">The Eagle of Jupiter and the Ladder of Saturn: Justice, Pagan Salvation, and Institutional Decay</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">In the eagle of just rulers formed from the spirits of Jupiter and the golden ladder of contemplatives in Saturn, Dante confronts the limits of human justice, learns that a pagan Trojan (Rip…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">Dante is examined in turn by Saints Peter, James, and John on the theological virtues of Faith, Hope, and Charity in the Heaven of the Fixed Stars, meets Adam who corrects the legend of the …</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33">The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">Beatrice finishes her discourse on the angels&#x27; creation and fall and denounces preachers who trade the Gospel for fables and jests, after which Dante rises into the Empyrean&#x27;s river of light…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-01-04">Purgatory, Cantos I–IV: Cato, Casella, and the Late-Repentant on the Mountain&#x27;s Shore</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">Newly escaped from Hell, Dante and Virgil are received on the shore of Mount Purgatory by its guardian Cato, watch an angel ferry a boatload of souls (including Dante&#x27;s musician friend Casel…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-05-09">The Late-Repentant, Sordello&#x27;s Lament, and the Gate of Purgatory</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">Dante and Virgil pass through the crowd of the violently-slain-but-late-repentant (Jacopo del Cassero, Buonconte da Montefeltro, La Pia), are joined by the proud shade Sordello whose greetin…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-10-14">Purgatorio X–XIV: The Terraces of Pride and Envy</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">On the first terrace of Purgatory the pilgrim views marble carvings of humility and studies the Proud bent double under stones, converses with Omberto Aldobrandeschi and the illuminator Oder…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-15-19">Wrath&#x27;s Smoke, Sloth&#x27;s Haste, and the Root of All Sin: Purgatorio XV–XIX</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">On the terrace of wrath Dante and Virgil hear Marco Lombardo&#x27;s discourse on free will and the corrupt fusion of Church and Empire, then pass through the terrace of sloth where Virgil expound…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">On the fifth terrace Dante hears Hugh Capet curse the avarice of the French royal line he founded, feels the mountain shake and hears the Gloria as a purified soul (revealed to be Statius) r…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-25-28">Purgatory, Cantos XXV–XXVIII: Statius on the Soul, the Fire of Lust, and the Threshold of the Earthly Paradise</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">Dante ascends the seventh terrace of Purgatory, where Statius expounds a scholastic account of embryonic ensoulment and the formation of aerial shadow-bodies, the penitent lustful purge them…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33">The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      <p class="plate-gloss">In the Earthly Paradise, Dante witnesses an elaborate allegorical pageant of the Church, loses Virgil and is reproved by the newly arrived Beatrice for his infidelity to her memory, confesse…</p>
+      </li>
+    </ul>
+  </section>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

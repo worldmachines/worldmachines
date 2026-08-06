@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Martin Heidegger</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Martin Heidegger</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/martin-heidegger.md">source on GitHub</a></div>
-  <div class="note-summary">German phenomenologist (1889–1976), author of Being and Time; his later work on dwelling, technology, and language is the philosophical source for applying phenomenological concepts to knowledge work and product design.</div>
-  <div class="tags"><span class="tag">philosophy</span><span class="tag">phenomenology</span><span class="tag">Heidegger</span><span class="tag">existentialism</span><span class="tag">German-philosophy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/martin-heidegger.md">source on GitHub</a></div>
+    <div class="note-summary">German phenomenologist (1889–1976), author of Being and Time; his later work on dwelling, technology, and language is the philosophical source for applying phenomenological concepts to knowledge work and product design.</div>
     <div class="prose">
 <h2 id="biographical">Biographical</h2>
 <p>German philosopher (1889–1976). Major works: <em>Being and Time</em> (1927), <em>Poetry, Language, Thought</em> (1971). Associated with phenomenology, existential philosophy, and later philosophy of technology.</p>
@@ -47,13 +56,13 @@
 <li>&quot;To free&quot; means to spare — to preserve something in its own nature</li>
 <li>Boundaries are generative (&quot;that from which something begins its presencing&quot;), not merely limiting</li>
 </ul>
-<p>Source for <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 7, 2025: Building Dwelling Thinking&quot;">Jan. 7, 2025: Building Dwelling Thinking</span>.</p>
+<p>Source for <a class="wikilink" href="/wiki/aneesh/summaries/jan-7-2025-building-dwelling-thinking" title="Written [[Jan. 7, 2025: Building Dwelling Thinking]], resolved to jan-7-2025-building-dwelling-thinking">Jan. 7, 2025: Building Dwelling Thinking</a>.</p>
 <h2 id="concepts-in-this-wiki">Concepts in this Wiki</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling as Philosophical Concept&quot;">Dwelling as Philosophical Concept</span> — the central contribution</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Place vs Space (Heidegger)&quot;">Place vs Space (Heidegger)</span> — the distinction between ordered places and domain-level spaces</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sparing and Freeing&quot;">Sparing and Freeing</span> — his positive definition of freedom</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Boundary as Beginning&quot;">Boundary as Beginning</span> — the Heideggerian inversion of what boundaries do</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept" title="Written [[Dwelling as Philosophical Concept]], resolved to dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a> — the central contribution</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/place-vs-space-heidegger" title="No note is called &quot;Place vs Space (Heidegger)&quot; yet — see who is asking for it">Place vs Space (Heidegger)</a> — the distinction between ordered places and domain-level spaces</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sparing-and-freeing" title="Written [[Sparing and Freeing]], resolved to sparing-and-freeing">Sparing and Freeing</a> — his positive definition of freedom</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/boundary-as-beginning" title="No note is called &quot;Boundary as Beginning&quot; yet — see who is asking for it">Boundary as Beginning</a> — the Heideggerian inversion of what boundaries do</li>
 </ul>
 <h2 id="influences-and-interlocutors">Influences and Interlocutors</h2>
 <ul>
@@ -61,27 +70,64 @@
 <li>Influenced: Hannah Arendt (on world and action), Hans-Georg Gadamer (hermeneutics), later architectural theory</li>
 </ul>
 <h2 id="application-in-this-wiki">Application in this Wiki</h2>
-<p>Applied in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 7, 2025: Building Dwelling Thinking&quot;">Jan. 7, 2025: Building Dwelling Thinking</span> to product design and data science: the builder&#x27;s ethical obligation is to create places where users can dwell — think and explore freely — rather than spaces that constrain.</p>
+<p>Applied in <a class="wikilink" href="/wiki/aneesh/summaries/jan-7-2025-building-dwelling-thinking" title="Written [[Jan. 7, 2025: Building Dwelling Thinking]], resolved to jan-7-2025-building-dwelling-thinking">Jan. 7, 2025: Building Dwelling Thinking</a> to product design and data science: the builder&#x27;s ethical obligation is to create places where users can dwell — think and explore freely — rather than spaces that constrain.</p>
 <h2 id="tension-with-other-sources">Tension with Other Sources</h2>
-<p>Heidegger&#x27;s concept of dwelling presupposes a stable relationship between person and place. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Worker&quot;">Knowledge Worker</span> whose tools are frequently changing, or the AI agent landscape described in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study&quot;">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</span>, complicates this: can one truly dwell when the place is an algorithm optimizing for engagement?</p>
+<p>Heidegger&#x27;s concept of dwelling presupposes a stable relationship between person and place. The <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-worker" title="Written [[Knowledge Worker]], resolved to knowledge-worker">Knowledge Worker</a> whose tools are frequently changing, or the AI agent landscape described in <a class="wikilink" href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study" title="Written [[Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study]], resolved to jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a>, complicates this: can one truly dwell when the place is an algorithm optimizing for engagement?</p>
 <h2 id="related-entities">Related Entities</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> — parallel thinker on private intellectual space</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Virginia Woolf&quot;">Virginia Woolf</span> — her &quot;room of one&#x27;s own&quot; intersects with dwelling</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> — parallel thinker on private intellectual space</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/virginia-woolf" title="No note is called &quot;Virginia Woolf&quot; yet — see who is asking for it">Virginia Woolf</a> — her &quot;room of one&#x27;s own&quot; intersects with dwelling</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/christian-norberg-schulz">Christian Norberg-Schulz (1926–2000)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/paul-ricoeur">Paul Ricoeur (1913–2005)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>328</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">10</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-worker">Knowledge Worker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sparing-and-freeing">Sparing and Freeing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-7-2025-building-dwelling-thinking">Jan. 7, 2025: Building Dwelling Thinking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/christian-norberg-schulz">Christian Norberg-Schulz (1926–2000)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/paul-ricoeur">Paul Ricoeur (1913–2005)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/composable-knowledge">Composable Knowledge</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-7-2025-building-dwelling-thinking">Jan. 7, 2025: Building Dwelling Thinking</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-worker">Knowledge Worker</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/sparing-and-freeing">Sparing and Freeing</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><a class="tag" href="/wiki/topics/heidegger">Heidegger</a><a class="tag" href="/wiki/topics/existentialism">existentialism</a><span class="tag tag-lone" title="Only this note uses it">German-philosophy</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

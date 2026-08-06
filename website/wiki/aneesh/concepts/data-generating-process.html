@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,21 +26,30 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Data Generating Process (DGP)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Data Generating Process (DGP)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/data-generating-process.md">source on GitHub</a></div>
-  <div class="note-summary">The full causal chain — from real-world phenomenon to observed number — that produces data; making it explicit is a foundational epistemic requirement in Bayesian statistics, causal inference, and trustworthy data science.</div>
-  <div class="tags"><span class="tag">bayesian-statistics</span><span class="tag">causal-inference</span><span class="tag">scientific-method</span><span class="tag">DAGs</span><span class="tag">epistemology</span><span class="tag">data-science</span><span class="tag">measurement</span><span class="tag">causality</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/data-generating-process.md">source on GitHub</a></div>
+    <div class="note-summary">The full causal chain — from real-world phenomenon to observed number — that produces data; making it explicit is a foundational epistemic requirement in Bayesian statistics, causal inference, and trustworthy data science.</div>
     <div class="prose">
 <p>The causal mechanism — or hypothesis about a causal mechanism — by which the data points we observe came to exist. More concretely, the DGP is the complete causal chain from a real-world phenomenon to a number in an analyst&#x27;s spreadsheet: encompassing instrument design, measurement, collection, cleaning, and the experimental conditions that determine what comparisons are valid.</p>
 <p>In scientific contexts, the DGP is often unknown: we observe outcomes and must infer the process that produced them. Understanding it is the foundational epistemic requirement of trustworthy data science and honest scientific inference.</p>
 <h2 id="two-components-of-the-empirical-dgp">Two Components of the Empirical DGP</h2>
 <h3 id="measurement-how-we-measure">Measurement (How We Measure)</h3>
 <ul>
-<li>Instrument design and calibration (e.g., <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Point Spread Function and Measurement Fidelity&quot;">Point Spread Function and Measurement Fidelity</span> in fluorescence microscopy)</li>
+<li>Instrument design and calibration (e.g., <a class="wikilink-wanted" href="/wiki/wanted/point-spread-function-and-measurement-fidelity" title="No note is called &quot;Point Spread Function and Measurement Fidelity&quot; yet — see who is asking for it">Point Spread Function and Measurement Fidelity</a> in fluorescence microscopy)</li>
 <li>Sensor noise and drift</li>
 <li>Feature extraction choices</li>
 <li>Labeling decisions in supervised learning</li>
@@ -52,12 +61,12 @@
 <li>Confounder identification and control</li>
 <li>Pre-registration of hypotheses</li>
 </ul>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Causal Inference&quot;">Causal Inference</span> for the formal framework.</p>
+<p>See <a class="wikilink" href="/wiki/aneesh/concepts/causal-inference" title="Written [[Causal Inference]], resolved to causal-inference">Causal Inference</a> for the formal framework.</p>
 <h2 id="role-in-bayesian-statistics">Role in Bayesian Statistics</h2>
 <p>Bayesian modeling requires you to construct a DGP hypothesis before analysis:</p>
 <ol>
 <li>Identify candidate causal variables</li>
-<li>Propose causal directions (encoded in a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DAG (Directed Acyclic Graph)&quot;">DAG (Directed Acyclic Graph)</span>)</li>
+<li>Propose causal directions (encoded in a <a class="wikilink" href="/wiki/aneesh/concepts/dag-directed-acyclic-graph" title="Written [[DAG (Directed Acyclic Graph)]], resolved to dag-directed-acyclic-graph">DAG (Directed Acyclic Graph)</a>)</li>
 <li>Choose likelihood functions that represent how each variable generates its children</li>
 <li>Test whether data generated from your model matches the data you actually observe</li>
 </ol>
@@ -65,7 +74,7 @@
 <p>This explicit DGP requirement is what makes Bayesian inference <em>transparent</em>: someone else can inspect your DGP, challenge it, and correct it.</p>
 <h2 id="contrast-with-frequentist-approach">Contrast with Frequentist Approach</h2>
 <p>Frequentist tests also assume a DGP (e.g., the t-test assumes normally distributed data with equal variance), but this assumption is embedded in the test machinery rather than stated explicitly. The DGP is smuggled in, preventing scrutiny and correction.</p>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> describes the t-test experience: &quot;You put in your data, click t-test, and woosh! You see stars.&quot; The DGP assumption has already been made, invisibly.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> describes the t-test experience: &quot;You put in your data, click t-test, and woosh! You see stars.&quot; The DGP assumption has already been made, invisibly.</p>
 <h2 id="scientific-virtue">Scientific Virtue</h2>
 <p>Making the DGP explicit serves three functions:</p>
 <ol>
@@ -73,40 +82,75 @@
 <li><strong>Enables model checking</strong>: posterior predictive checks test whether your DGP generates data like what you observed</li>
 <li><strong>Enables updating</strong>: if the DGP is wrong, it can be fixed; if it is hidden, it cannot</li>
 </ol>
-<p>This is what <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Richard McElreath&quot;">Richard McElreath</span> means by &quot;honest anarchy&quot;: science as public, contestable theorizing about how the world generates data.</p>
+<p>This is what <a class="wikilink" href="/wiki/aneesh/entities/richard-mcelreath" title="Written [[Richard McElreath]], resolved to richard-mcelreath">Richard McElreath</a> means by &quot;honest anarchy&quot;: science as public, contestable theorizing about how the world generates data.</p>
 <h2 id="why-the-dgp-gets-skipped">Why the DGP Gets Skipped</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Leo Breiman&quot;">Leo Breiman</span> identified the &quot;two cultures&quot; problem in 2001: analysts who prioritize algorithmic accuracy often bypass DGP understanding. The proliferation of one-click ML tooling has deepened this temptation. Speed, habit, and misplaced trust in tool defaults all contribute.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/leo-breiman" title="Written [[Leo Breiman]], resolved to leo-breiman">Leo Breiman</a> identified the &quot;two cultures&quot; problem in 2001: analysts who prioritize algorithmic accuracy often bypass DGP understanding. The proliferation of one-click ML tooling has deepened this temptation. Speed, habit, and misplaced trust in tool defaults all contribute.</p>
 <h2 id="implications-for-ai">Implications for AI</h2>
 <p>The DGP concept surfaces in two distinct AI contexts:</p>
-<p><strong>Data-Centric AI</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Centric AI&quot;">Data-Centric AI</span> (Andrew Ng) holds that improvements to the DGP — tighter labels, cleaner provenance, fixed sensor drift — often yield more performance gain than model architecture changes. This is only intelligible if you understand the DGP first.</p>
-<p><strong>Explainable AI</strong>: The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI-Human Causal Prediction Machine&quot;">AI-Human Causal Prediction Machine</span> works when the AI&#x27;s causal model (what features cause what outcomes) is made explicit to the user. The XAI disagreement problem is in part a DGP problem: different methods make different assumptions about how model outputs were generated, producing conflicting attributions.</p>
+<p><strong>Data-Centric AI</strong>: <a class="wikilink" href="/wiki/aneesh/concepts/data-centric-ai" title="Written [[Data-Centric AI]], resolved to data-centric-ai">Data-Centric AI</a> (Andrew Ng) holds that improvements to the DGP — tighter labels, cleaner provenance, fixed sensor drift — often yield more performance gain than model architecture changes. This is only intelligible if you understand the DGP first.</p>
+<p><strong>Explainable AI</strong>: The <a class="wikilink" href="/wiki/aneesh/concepts/ai-human-causal-prediction-machine" title="Written [[AI-Human Causal Prediction Machine]], resolved to ai-human-causal-prediction-machine">AI-Human Causal Prediction Machine</a> works when the AI&#x27;s causal model (what features cause what outcomes) is made explicit to the user. The XAI disagreement problem is in part a DGP problem: different methods make different assumptions about how model outputs were generated, producing conflicting attributions.</p>
 <h2 id="organizational-dimension">Organizational Dimension</h2>
 <p>In startups and research organizations, DGP knowledge is distributed across domain experts, instrumentation specialists, and statisticians. The data scientist&#x27;s role is horizontal coordination: synthesizing these perspectives before any analysis begins. Leadership must create the culture that makes this coordination possible.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DAG (Directed Acyclic Graph)&quot;">DAG (Directed Acyclic Graph)</span> — the formal representation of a DGP</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bayesian Statistics&quot;">Bayesian Statistics</span> — the framework that requires explicit DGPs</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frequentist Statistics&quot;">Frequentist Statistics</span> — the framework that hides DGPs</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Causal Inference&quot;">Causal Inference</span> — the goal of DGP reasoning</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Measurement and Epistemology&quot;">Measurement and Epistemology</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confounding Variables&quot;">Confounding Variables</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency in Scientific Method&quot;">Transparency in Scientific Method</span> — the meta-value DGP explicitness serves</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Centric AI&quot;">Data-Centric AI</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Richard McElreath&quot;">Richard McElreath</span> — the intellectual anchor for Bayesian DGP</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Leo Breiman&quot;">Leo Breiman</span> — the &quot;two cultures&quot; diagnosis</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Andrew Ng&quot;">Andrew Ng</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Breiman&#x27;s Two Cultures&quot;">Breiman&#x27;s Two Cultures</span></li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Road to Bayesian Stats&quot;">My Road to Bayesian Stats</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/dag-directed-acyclic-graph" title="Written [[DAG (Directed Acyclic Graph)]], resolved to dag-directed-acyclic-graph">DAG (Directed Acyclic Graph)</a> — the formal representation of a DGP</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/bayesian-statistics" title="Written [[Bayesian Statistics]], resolved to bayesian-statistics">Bayesian Statistics</a> — the framework that requires explicit DGPs</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frequentist-statistics" title="Written [[Frequentist Statistics]], resolved to frequentist-statistics">Frequentist Statistics</a> — the framework that hides DGPs</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/causal-inference" title="Written [[Causal Inference]], resolved to causal-inference">Causal Inference</a> — the goal of DGP reasoning</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/measurement-and-epistemology" title="No note is called &quot;Measurement and Epistemology&quot; yet — see who is asking for it">Measurement and Epistemology</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/confounding-variables" title="Written [[Confounding Variables]], resolved to confounding-variables">Confounding Variables</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/transparency-in-scientific-method" title="Written [[Transparency in Scientific Method]], resolved to transparency-in-scientific-method">Transparency in Scientific Method</a> — the meta-value DGP explicitness serves</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-centric-ai" title="Written [[Data-Centric AI]], resolved to data-centric-ai">Data-Centric AI</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/richard-mcelreath" title="Written [[Richard McElreath]], resolved to richard-mcelreath">Richard McElreath</a> — the intellectual anchor for Bayesian DGP</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/leo-breiman" title="Written [[Leo Breiman]], resolved to leo-breiman">Leo Breiman</a> — the &quot;two cultures&quot; diagnosis</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/andrew-ng" title="Written [[Andrew Ng]], resolved to andrew-ng">Andrew Ng</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/breimans-two-cultures" title="No note is called &quot;Breiman&#x27;s Two Cultures&quot; yet — see who is asking for it">Breiman&#x27;s Two Cultures</a></li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/my-road-to-bayesian-stats" title="Written [[My Road to Bayesian Stats]], resolved to my-road-to-bayesian-stats">My Road to Bayesian Stats</a></li>
 <li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a> (Aneesh Sathe, 2025)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>14</b><span>links out</span></div>
+      <div class="bearing"><b>704</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">8</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/my-road-to-bayesian-stats">My Road to Bayesian Stats</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bayesian-statistics">Bayesian Statistics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/transparency-in-scientific-method">Transparency in Scientific Method</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dag-directed-acyclic-graph">DAG (Directed Acyclic Graph)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/richard-mcelreath">Richard McElreath</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/frequentist-statistics">Frequentist Statistics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/explainability-across-domains">Explainability Across Domains</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/bayesian-statistics">Bayesian Statistics</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/my-road-to-bayesian-stats">My Road to Bayesian Stats</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/causal-inference">Causal Inference</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/dag-directed-acyclic-graph">DAG (Directed Acyclic Graph)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/transparency-in-scientific-method">Transparency in Scientific Method</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/richard-mcelreath">Richard McElreath</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/bayesian-statistics">bayesian-statistics</a><a class="tag" href="/wiki/topics/causal-inference">causal-inference</a><a class="tag" href="/wiki/topics/scientific-method">scientific-method</a><a class="tag" href="/wiki/topics/dags">DAGs</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/data-science">data-science</a><a class="tag" href="/wiki/topics/measurement">measurement</a><a class="tag" href="/wiki/topics/causality">causality</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

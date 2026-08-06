@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Knight&#x27;s Tale (Part One): Theseus, Fortune, and the Rivalry of Palamon and Arcite</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Knight&#x27;s Tale (Part One): Theseus, Fortune, and the Rivalry of Palamon and Arcite</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-1.md">source on GitHub</a></div>
-  <div class="note-summary">Duke Theseus of Athens conquers Thebes to avenge grieving widows, takes the cousins Palamon and Arcite captive, and must arbitrate when their sworn brotherhood shatters into rivalry over his sister-in-law Emily, resolving the feud not with more bloodshed but with a decreed hundred-a-side tournament a year hence.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">canterbury-tales</span><span class="tag">knights-tale</span><span class="tag">courtly-love</span><span class="tag">fortune-and-fate</span><span class="tag">chivalry</span><span class="tag">medieval-romance</span><span class="tag">boethian-philosophy</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-1.md">source on GitHub</a></div>
+    <div class="note-summary">Duke Theseus of Athens conquers Thebes to avenge grieving widows, takes the cousins Palamon and Arcite captive, and must arbitrate when their sworn brotherhood shatters into rivalry over his sister-in-law Emily, resolving the feud not with more bloodshed but with a decreed hundred-a-side tournament a year hence.</div>
     <div class="prose">
 <p>This unit covers the first half of the Knight&#x27;s Tale: Duke Theseus of Athens, fresh from conquering the Amazons and marrying Hippolyta, is intercepted by a company of grieving widows whose husbands died besieging Thebes and whose bodies the tyrant Creon refuses burial. Theseus marches on Thebes, kills Creon, and among the dead finds two wounded Theban cousins of royal blood, Palamon and Arcite, whom he imprisons for life without ransom. Years into their captivity, both glimpse Emily, Hippolyta&#x27;s sister, from their tower window and fall instantly and violently in love, which destroys the sworn brotherhood between them. Arcite is freed but banished on pain of death; Palamon remains imprisoned. Arcite, unable to bear separation from Emily, sneaks back into Athens disguised as a squire named Philostrate and rises in Theseus&#x27;s household; Palamon eventually escapes and the two collide by chance in a grove, where Theseus discovers them dueling. Rather than execute them as their own confessions warrant, Theseus — moved by the pleading of the queen, Emily, and the court ladies — converts the private, lawless duel into a formal, ruled institution: a tournament a year hence, each cousin to arrive with a hundred knights, with Emily going to the victor.</p>
 <h2 id="themes">Themes</h2>
@@ -46,13 +54,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The widow&#x27;s plea (c1) sets the tale&#x27;s moral register from the start: conquest is legitimated by the mercy it performs, and Fortune&#x27;s instability is named outright as the condition of all worldly &quot;estate.&quot; Palamon&#x27;s confession that he was &quot;hurt right now thorough mine eye&quot; (c2) establishes love-at-first-sight as physical wound rather than decision, a pattern repeated more violently in Arcite. Arcite&#x27;s claim that love outranks &quot;positive law, and such decree&quot; (c3) is the tale&#x27;s clearest statement of desire as a force above constructed obligation, the very force that breaks the cousins&#x27; sworn brotherhood. The narrator&#x27;s direct question to the audience (c4) turns the romance momentarily into disputation, refusing to adjudicate whose suffering is worse. The Destiny digression (c5) universalizes the widow&#x27;s Fortune-talk into a full providential framework governing &quot;our appetites here.&quot; Finally, Theseus&#x27;s decree (c6) resolves the plot&#x27;s central crisis by legislating the duel into a tournament — the tale&#x27;s key move from lawless private violence to legible public contest.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>856</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><a class="tag" href="/wiki/topics/knights-tale">knights-tale</a><a class="tag" href="/wiki/topics/courtly-love">courtly-love</a><a class="tag" href="/wiki/topics/fortune-and-fate">fortune-and-fate</a><a class="tag" href="/wiki/topics/chivalry">chivalry</a><a class="tag" href="/wiki/topics/medieval-romance">medieval-romance</a><a class="tag" href="/wiki/topics/boethian-philosophy">boethian-philosophy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

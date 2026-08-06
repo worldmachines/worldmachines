@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/more-utopia/">Utopia</a> <b>/</b> <span>The Play in Progress: Civil Philosophy versus Principled Withdrawal</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Play in Progress: Civil Philosophy versus Principled Withdrawal</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts.md">source on GitHub</a></div>
-  <div class="note-summary">The persona More argues, through the analogy of an actor who must not interrupt a comedy with a tragic speech, that a philosopher should adopt a pliable &#x27;civil philosophy&#x27; that plays its part inside a corrupt court to make outcomes only as little bad as possible, while Raphael Hythloday rejects this as complicity — his honesty forecloses the compromise, court participation launders others&#x27; guilt onto him regardless, and Plato&#x27;s simile of a man sheltering from unstoppable rain shows that self-preserving withdrawal is the only integrity left available.</div>
-  <div class="tags"><span class="tag">civil-philosophy</span><span class="tag">courts-of-princes</span><span class="tag">compromise-vs-integrity</span><span class="tag">institutional-corruption</span><span class="tag">plato</span><span class="tag">withdrawal-vs-engagement</span><span class="tag">thomas-more</span><span class="tag">utopia-book-one</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>, <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a>, <a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">not-my-lever</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts.md">source on GitHub</a></div>
+    <div class="note-summary">The persona More argues, through the analogy of an actor who must not interrupt a comedy with a tragic speech, that a philosopher should adopt a pliable &#x27;civil philosophy&#x27; that plays its part inside a corrupt court to make outcomes only as little bad as possible, while Raphael Hythloday rejects this as complicity — his honesty forecloses the compromise, court participation launders others&#x27; guilt onto him regardless, and Plato&#x27;s simile of a man sheltering from unstoppable rain shows that self-preserving withdrawal is the only integrity left available.</div>
     <div class="prose">
 <p>In this continuation of Book One&#x27;s dialogue on counsel, More&#x27;s persona and Raphael Hythloday debate whether philosophy has any place in the courts of princes. More-persona proposes a &quot;civil philosophy&quot; — pliable, occasion-sensitive, content to play its assigned part in the ongoing &quot;comedy&quot; of court life rather than disrupt it with unwelcome tragic truths — and urges Hythloday to &quot;cast about&quot; so that, if he cannot make things go well, he can at least make them as little ill as possible. Hythloday refuses: he cannot lie, so his only options inside a court are silence (which reads as treasonous connivance) or repetition of unwelcome truths, and proximity to &quot;ill company&quot; will corrupt or discredit him regardless of his own conduct. He closes by invoking Plato&#x27;s simile of a man who, powerless to stop a rainstorm, is wisest to stay indoors and preserve himself rather than get soaked trying to reason with people who enjoy the wet.</p>
 <h2 id="themes">Themes</h2>
@@ -51,17 +59,47 @@
 <li>Plato&#x27;s rain simile closes the unit on withdrawal as the last honest posture available to a man who cannot change what he is powerless to change.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/thomas-more">Thomas More</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>752</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/thomas-more">Thomas More</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-02-serving-princes">Raphael’s Refusal: Counsel, Flattery, and the Uselessness of Wisdom at Court</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-05-jester-and-mock-counsel">The Cardinal&#x27;s Fool and the Achorians: Court Flattery and the Case Against Conquest</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-introduction">Thomas More&#x27;s Life and the Making of *Utopia*</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-04-conclusion">Utopia&#x27;s Peroration: The Conspiracy of the Rich and the Case Against Private Property</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-06-treasure-and-corrupt-counsel">Corrupt Counsel, Captured Courts, and the Macarian Vow Against Treasure</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">not-my-lever</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/civil-philosophy">civil-philosophy</a><span class="tag tag-lone" title="Only this note uses it">courts-of-princes</span><span class="tag tag-lone" title="Only this note uses it">compromise-vs-integrity</span><span class="tag tag-lone" title="Only this note uses it">institutional-corruption</span><span class="tag tag-lone" title="Only this note uses it">plato</span><span class="tag tag-lone" title="Only this note uses it">withdrawal-vs-engagement</span><a class="tag" href="/wiki/topics/thomas-more">thomas-more</a><a class="tag" href="/wiki/topics/utopia-book-one">utopia-book-one</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

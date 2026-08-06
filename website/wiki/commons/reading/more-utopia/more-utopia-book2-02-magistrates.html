@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/more-utopia/">Utopia</a> <b>/</b> <span>Of Their Magistrates</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Of Their Magistrates</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book2-02-magistrates.md">source on GitHub</a></div>
-  <div class="note-summary">More&#x27;s Utopia describes a tiered elective magistracy — Syphogrants, Tranibors, and a lifelong Prince chosen by secret ballot — engineered with procedural chokepoints (mandatory multi-stage consultation, a one-day cooling-off rule before any debate, and a capital ban on off-channel political meetings) specifically to prevent the Prince and Tranibors from conspiring to seize and enslave the state.</div>
-  <div class="tags"><span class="tag">utopia</span><span class="tag">thomas-more</span><span class="tag">political-institutions</span><span class="tag">elections</span><span class="tag">checks-on-power</span><span class="tag">deliberation</span><span class="tag">legibility</span><span class="tag">anti-tyranny-design</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>, <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book2-02-magistrates.md">source on GitHub</a></div>
+    <div class="note-summary">More&#x27;s Utopia describes a tiered elective magistracy — Syphogrants, Tranibors, and a lifelong Prince chosen by secret ballot — engineered with procedural chokepoints (mandatory multi-stage consultation, a one-day cooling-off rule before any debate, and a capital ban on off-channel political meetings) specifically to prevent the Prince and Tranibors from conspiring to seize and enslave the state.</div>
     <div class="prose">
 <p>This unit lays out Utopia&#x27;s system of civil government: a bottom-up electoral hierarchy (thirty families choose a Syphogrant/Philarch; ten Syphogrants and their families choose a Tranibor/Archphilarch; two hundred Syphogrants choose a Prince by secret ballot from a slate of four) paired with a deliberately engineered procedural architecture — staged consultation, a mandatory cooling-off period before debate, and criminal penalties for off-channel political meetings — whose explicit purpose is to keep the Prince and Tranibors from conspiring together to seize the state and enslave the people.</p>
 <h2 id="themes">Themes</h2>
@@ -45,18 +53,46 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The opening paragraph (c1) is pure administrative architecture: the nested electoral pyramid and the secrecy of the Prince&#x27;s election. The second (c2) pairs the Prince&#x27;s life tenure with its revocability, the Tranibors&#x27; annual reappointment, the rotating Syphogrant observers, the three-day debate minimum, and the capital penalty for unauthorized political meetings — the full toolkit of proceduralized restraint. The third (c3) states the design intent outright: preventing conspiracy between Prince and Tranibors by routing all major decisions back through the family-Syphogrant-senate-island chain. The fourth (c4) supplies the psychological rationale for the one-day rule, reading like an early anatomy of confirmation bias and status-preserving stubbornness in deliberative bodies.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-06-treasure-and-corrupt-counsel">Corrupt Counsel, Captured Courts, and the Macarian Vow Against Treasure</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-06-slaves-marriages">Slaves, Marriages, Voluntary Death, and the Rule of Plain Law in Utopia</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/utopus">Utopus</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>646</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-06-treasure-and-corrupt-counsel">Corrupt Counsel, Captured Courts, and the Macarian Vow Against Treasure</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-06-slaves-marriages">Slaves, Marriages, Voluntary Death, and the Rule of Plain Law in Utopia</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/utopus">Utopus</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-01-towns-amaurot">Amaurot: The Legible Anatomy of a Utopian Town</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-09-island-of-utopia">The Shape of Utopia: Utopus&#x27;s Island and Its Ordered Countryside</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/utopia">utopia</a><a class="tag" href="/wiki/topics/thomas-more">thomas-more</a><span class="tag tag-lone" title="Only this note uses it">political-institutions</span><span class="tag tag-lone" title="Only this note uses it">elections</span><span class="tag tag-lone" title="Only this note uses it">checks-on-power</span><span class="tag tag-lone" title="Only this note uses it">deliberation</span><a class="tag" href="/wiki/topics/legibility">legibility</a><span class="tag tag-lone" title="Only this note uses it">anti-tyranny-design</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

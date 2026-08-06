@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Why &#x27;Cost Disease&#x27; Is the Secret Force Behind America&#x27;s Toxic Solitude</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Why &#x27;Cost Disease&#x27; Is the Secret Force Behind America&#x27;s Toxic Solitude</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/baumol-cost-disease-toxic-solitude.md">source on GitHub</a></div>
-  <div class="note-summary">Alex Mayyasi argues that Baumol&#x27;s cost disease is the underappreciated structural cause of America&#x27;s rising social isolation — making communal, labor-intensive experiences increasingly expensive while scalable, solitude-inducing products get cheaper.</div>
-  <div class="tags"><span class="tag">baumol-cost-disease</span><span class="tag">social-isolation</span><span class="tag">economics</span><span class="tag">third-places</span><span class="tag">technology</span><span class="tag">political-economy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/baumol-cost-disease-toxic-solitude.md">source on GitHub</a></div>
+    <div class="note-summary">Alex Mayyasi argues that Baumol&#x27;s cost disease is the underappreciated structural cause of America&#x27;s rising social isolation — making communal, labor-intensive experiences increasingly expensive while scalable, solitude-inducing products get cheaper.</div>
     <div class="prose">
 <p><strong>Source</strong>: Alex Mayyasi via Derek Thompson&#x27;s Substack, April 7, 2026<br>
 <strong>URL</strong>: https://open.substack.com/pub/derekthompson/p/why-cost-disease-is-the-secret-force<br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alex Mayyasi&quot;">Alex Mayyasi</span></p>
+<strong>Author</strong>: <a class="wikilink-wanted" href="/wiki/wanted/alex-mayyasi" title="No note is called &quot;Alex Mayyasi&quot; yet — see who is asking for it">Alex Mayyasi</a></p>
 <h2 id="central-argument">Central Argument</h2>
-<p>The epidemic of American loneliness has a structural economic cause that technology- and values-based narratives miss: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span>. Because social experiences are labor-intensive and non-scalable, they become progressively more expensive in a growing economy — while digital, solitude-inducing products benefit from exponential productivity gains and become cheaper. The profit motive therefore systematically favors anti-social businesses. Addressing this requires active policy intervention.</p>
+<p>The epidemic of American loneliness has a structural economic cause that technology- and values-based narratives miss: <a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a>. Because social experiences are labor-intensive and non-scalable, they become progressively more expensive in a growing economy — while digital, solitude-inducing products benefit from exponential productivity gains and become cheaper. The profit motive therefore systematically favors anti-social businesses. Addressing this requires active policy intervention.</p>
 <h2 id="key-claims">Key Claims</h2>
 <ol>
 <li><p><strong>Two-tier economy</strong>: The economy bifurcates into scalable sectors (electronics, streaming, food delivery) that get cheaper over time, and labor-intensive sectors (restaurants, concerts, childcare, theater) that get more expensive. Social life sits almost entirely in the latter.</p></li>
@@ -52,9 +61,9 @@
 <blockquote><p>&quot;Because of cost disease, most of the world&#x27;s most powerful corporations and most driven entrepreneurs are well capitalized and incentivized to increase our solitude, while purveyors of long nights with friends are outliers who succeed despite strong headwinds.&quot;</p></blockquote>
 <h2 id="intellectual-lineage">Intellectual Lineage</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;William Baumol&quot;">William Baumol</span></strong> — originator of the cost disease framework; investigated performing arts economics for JFK administration</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Robert Putnam&quot;">Robert Putnam</span></strong> / <em>Bowling Alone</em> — cited as representative of the values-based narrative the piece argues is incomplete</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alex Mayyasi&quot;">Alex Mayyasi</span></strong> — author; also wrote <em>Planet Money: A Guide to the Economic Forces That Shape Your Life</em></li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/william-baumol" title="Written [[William Baumol]], resolved to william-baumol">William Baumol</a></strong> — originator of the cost disease framework; investigated performing arts economics for JFK administration</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/robert-putnam" title="Written [[Robert Putnam]], resolved to robert-putnam">Robert Putnam</a></strong> / <em>Bowling Alone</em> — cited as representative of the values-based narrative the piece argues is incomplete</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/alex-mayyasi" title="No note is called &quot;Alex Mayyasi&quot; yet — see who is asking for it">Alex Mayyasi</a></strong> — author; also wrote <em>Planet Money: A Guide to the Economic Forces That Shape Your Life</em></li>
 </ul>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <ul>
@@ -65,23 +74,36 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span> — the central economic mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Third Places&quot;">Third Places</span> — the specific type of social infrastructure threatened</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Robert Putnam&quot;">Robert Putnam</span> — the values-based narrative critique</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Infrastructure&quot;">Social Infrastructure</span> — policy concept for the &quot;cure&quot;</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anti-Social Business Model&quot;">Anti-Social Business Model</span> — the structural incentive pattern</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scalability and Social Life&quot;">Scalability and Social Life</span> — the core asymmetry</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Facebook Algorithm and Sociality&quot;">Facebook Algorithm and Sociality</span> — the case study</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cost Disease and the Retreat from Public Life&quot;">Cost Disease and the Retreat from Public Life</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a> — the central economic mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/third-places" title="Written [[Third Places]], resolved to third-places">Third Places</a> — the specific type of social infrastructure threatened</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/robert-putnam" title="Written [[Robert Putnam]], resolved to robert-putnam">Robert Putnam</a> — the values-based narrative critique</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/social-infrastructure" title="Written [[Social Infrastructure]], resolved to social-infrastructure">Social Infrastructure</a> — policy concept for the &quot;cure&quot;</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anti-social-business-model" title="Written [[Anti-Social Business Model]], resolved to anti-social-business-model">Anti-Social Business Model</a> — the structural incentive pattern</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/scalability-and-social-life" title="Written [[Scalability and Social Life]], resolved to scalability-and-social-life">Scalability and Social Life</a> — the core asymmetry</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/facebook-algorithm-and-sociality" title="No note is called &quot;Facebook Algorithm and Sociality&quot; yet — see who is asking for it">Facebook Algorithm and Sociality</a> — the case study</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/cost-disease-and-the-retreat-from-public-life" title="Written [[Cost Disease and the Retreat from Public Life]], resolved to cost-disease-and-the-retreat-from-public-life">Cost Disease and the Retreat from Public Life</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>570</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">baumol-cost-disease</span><a class="tag" href="/wiki/topics/social-isolation">social-isolation</a><a class="tag" href="/wiki/topics/economics">economics</a><a class="tag" href="/wiki/topics/third-places">third-places</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/political-economy">political-economy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

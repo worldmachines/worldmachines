@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/florian/">Florian</a> <b>/</b> <span>The margins provides sharper insight on historic infrastructure than the canonical center</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The margins provides sharper insight on historic infrastructure than the canonical center</h1>
-  <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 2 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/The%20margin%20provides%20sharper%20insight%20on%20historic%20infrastructure%20than%20the%20canonical%20center.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 2 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/The%20margin%20provides%20sharper%20insight%20on%20historic%20infrastructure%20than%20the%20canonical%20center.md">source on GitHub</a></div>
     <div class="prose">
 <h2 id="claim">Claim</h2>
 <blockquote><p>The historical record that matters most is often produced by observers considered irrelevant in their own time — the future is already around, in “dull notes in the margins” that later become primary sources.</p></blockquote>
@@ -48,22 +58,31 @@
 <li>In general systematically more generative observations from canonical centers than from the margins</li>
 </ul>
 <h2 id="sources">Sources</h2>
-<p>Published in “<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins&quot;">History Machines in the Margins</span>” (Notefields, October 2025). Primary.</p>
+<p>Published in “<a class="wikilink-wanted" href="/wiki/wanted/history-machines-in-the-margins" title="No note is called &quot;History Machines in the Margins&quot; yet — see who is asking for it">History Machines in the Margins</a>” (Notefields, October 2025). Primary.</p>
 <h2 id="open-questions-gaps">Open questions / gaps</h2>
 <ul>
 <li>Thin link to the rest of the corpus. Deliberate separate thread, or does it want a bridge to the moats cluster — or is it doing different work entirely?</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 2 June 2026 by florianlohse — <a href="https://github.com/worldmachines/worldmachines/commit/d1dc628222e95810e7718a281b38a26106258289">extracted raw notes from florians essays</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/florian/divergence-grows-in-peripheral-fields-not-in-the-fortified-center">Divergence grows in peripheral fields, not in the fortified center</a> <span class="muted">Florian</span></li>
-      <li><a href="/wiki/florian/divergent-self-knowledge-requires-embedded-embodied-non-reproducible-inquiry">Divergent self knowledge requires embedded, embodied, non-reproducible inquiry</a> <span class="muted">Florian</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 2 June 2026 by florianlohse — <a href="https://github.com/worldmachines/worldmachines/commit/d1dc628222e95810e7718a281b38a26106258289">extracted raw notes from florians essays</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>215</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/florian/divergence-grows-in-peripheral-fields-not-in-the-fortified-center">Divergence grows in peripheral fields, not in the fortified center</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/florian/divergent-self-knowledge-requires-embedded-embodied-non-reproducible-inquiry">Divergent self knowledge requires embedded, embodied, non-reproducible inquiry</a><span class="rail-where">Florian</span></li>
+      </ul>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

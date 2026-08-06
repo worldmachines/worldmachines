@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Algorithmic Curation as Place-Making</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Algorithmic Curation as Place-Making</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/algorithmic-curation-as-place-making.md">source on GitHub</a></div>
-  <div class="note-summary">The argument that algorithmic curation (Netflix recommendations, social media feeds) is a form of place-making — it converts open possibility-space into a shaped, constrained landscape — with the same risks as any bad place: disorientation and constraint without knowledge.</div>
-  <div class="tags"><span class="tag">algorithms</span><span class="tag">social-media</span><span class="tag">place-making</span><span class="tag">curation</span><span class="tag">epistemology</span><span class="tag">orientation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/algorithmic-curation-as-place-making.md">source on GitHub</a></div>
+    <div class="note-summary">The argument that algorithmic curation (Netflix recommendations, social media feeds) is a form of place-making — it converts open possibility-space into a shaped, constrained landscape — with the same risks as any bad place: disorientation and constraint without knowledge.</div>
     <div class="prose">
 <h2 id="the-core-argument">The Core Argument</h2>
-<p>Algorithmic curation is a form of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">place-making</span>. When a platform&#x27;s algorithm suggests content, it:</p>
+<p>Algorithmic curation is a form of <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">place-making</a>. When a platform&#x27;s algorithm suggests content, it:</p>
 <ul>
 <li>Interrupts pure possibility-space (all possible content).</li>
 <li>Creates a curated <em>place</em> defined by the user&#x27;s behavioral history.</li>
@@ -53,42 +62,82 @@
 <li>Signal is provided without information (gesture toward relevance, no actual meaning-making).</li>
 <li>The place is curated to maximize engagement (anxiety, outrage) rather than understanding.</li>
 </ol>
-<p>This is the mechanism behind <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span>: users receive signal that <em>feels</em> like information but delivers no genuine orientation — leaving them hungry.</p>
+<p>This is the mechanism behind <a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a>: users receive signal that <em>feels</em> like information but delivers no genuine orientation — leaving them hungry.</p>
 <h2 id="contrast-socratic-place-making">Contrast: Socratic Place-Making</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> is good place-making because:</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> is good place-making because:</p>
 <ul>
 <li>Both parties are oriented toward knowledge (shared goal).</li>
 <li>Places are created by examination and agreement, not behavioral prediction.</li>
 <li>The place-maker is accountable to the person being placed.</li>
 </ul>
 <h2 id="the-printing-press-parallel">The Printing Press Parallel</h2>
-<p>Early modern Europe faced analogous bad place-making: mystical texts created &quot;places&quot; that felt meaningful but lacked empirical grounding. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span> is the extreme case — placed by click-bait mysticism rather than observation. Culture corrected by developing critical tools for evaluating sources.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span></p>
+<p>Early modern Europe faced analogous bad place-making: mystical texts created &quot;places&quot; that felt meaningful but lacked empirical grounding. <a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a> is the extreme case — placed by click-bait mysticism rather than observation. Culture corrected by developing critical tools for evaluating sources.</p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a></p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — algorithmic curation as a form of place-making</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tools and Worldview Commitment&quot;">Tools and Worldview Commitment</span> — algorithms as tools that commit users to worldviews</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span> — what bad place-making produces</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — good place-making as contrast</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span> — historical parallel</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thinking with Places&quot;">Thinking with Places</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — algorithmic curation as a form of place-making</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/tools-and-worldview-commitment" title="Written [[Tools and Worldview Commitment]], resolved to tools-and-worldview-commitment">Tools and Worldview Commitment</a> — algorithms as tools that commit users to worldviews</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a> — what bad place-making produces</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — good place-making as contrast</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a> — historical parallel</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/thinking-with-places" title="Written [[Thinking with Places]], resolved to thinking-with-places">Thinking with Places</a>, <a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">7</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/spaciousness-and-crowding">Spaciousness and Crowding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/touristic-place-making">Touristic Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>16</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>380</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">16</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/printing-press-and-information-overload">Printing Press and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/thinking-with-places">Thinking with Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/tools-and-worldview-commitment">Tools and Worldview Commitment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>8 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/signal-to-orientation-ladder">Signal-to-Orientation Ladder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/waldenponding">Waldenponding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/touristic-place-making">Touristic Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/spaciousness-and-crowding">Spaciousness and Crowding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/information-overload-across-eras">Information Overload Across Eras</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cost-disease-and-the-retreat-from-public-life">Cost Disease and the Retreat from Public Life</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/giordano-bruno">Giordano Bruno (1548-1600)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/naming-as-place-making">Naming as Place-Making</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/algorithms">algorithms</a><a class="tag" href="/wiki/topics/social-media">social-media</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/curation">curation</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/orientation">orientation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

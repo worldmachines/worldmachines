@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Counter-Enlightenment</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Counter-Enlightenment</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/counter-enlightenment.md">source on GitHub</a></div>
-  <div class="note-summary">The counter-Enlightenment is the tradition of thinkers — Vico, Hamann, Herder, Maistre, Burke — who challenged the Enlightenment&#x27;s rationalist, universalist, and progressive assumptions, often in defense of particularity, tradition, and the limits of reason.</div>
-  <div class="tags"><span class="tag">counter-enlightenment</span><span class="tag">berlin</span><span class="tag">intellectual-history</span><span class="tag">pluralism</span><span class="tag">rationalism</span><span class="tag">herder</span><span class="tag">vico</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/counter-enlightenment.md">source on GitHub</a></div>
+    <div class="note-summary">The counter-Enlightenment is the tradition of thinkers — Vico, Hamann, Herder, Maistre, Burke — who challenged the Enlightenment&#x27;s rationalist, universalist, and progressive assumptions, often in defense of particularity, tradition, and the limits of reason.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>The counter-Enlightenment is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span>&#x27;s term for the intellectual tradition that challenged the core assumptions of mainstream Enlightenment rationalism from within the 18th and 19th centuries. Berlin&#x27;s use is descriptive and rehabilitative — he argues these thinkers identified real problems that the dominant tradition suppressed, and that they deserve serious philosophical engagement rather than dismissal as irrationalist reaction.</p>
+<p>The counter-Enlightenment is <a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a>&#x27;s term for the intellectual tradition that challenged the core assumptions of mainstream Enlightenment rationalism from within the 18th and 19th centuries. Berlin&#x27;s use is descriptive and rehabilitative — he argues these thinkers identified real problems that the dominant tradition suppressed, and that they deserve serious philosophical engagement rather than dismissal as irrationalist reaction.</p>
 <h2 id="core-enlightenment-assumptions-under-attack">Core Enlightenment Assumptions Under Attack</h2>
 <p>The counter-Enlightenment thinkers targeted three interlocking assumptions:</p>
 <ol>
@@ -46,20 +55,20 @@
 </ol>
 <h2 id="key-thinkers">Key Thinkers</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span></strong> — each civilization must be understood on its own terms, through imaginative participation (<em>fantasia</em>); there is no view from nowhere; <em>verum ipsum factum</em></li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Georg Hamann&quot;">Johann Georg Hamann</span></strong> — language precedes and shapes reason; Enlightenment abstraction distorts lived experience; &quot;all truth is particular, never general&quot;; &quot;passion alone gives to abstractions hands, feet, wings&quot;</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span></strong> — cultures have incommensurable but equally valid ends; coined <em>Einfühlung</em> (empathy) as the method for understanding other cultures; each culture has its own <em>Schwerpunkt</em></li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Joseph de Maistre&quot;">Joseph de Maistre</span></strong> — reactionary wing; reason cannot ground society; authority must be absolute because men are naturally evil; &quot;all social order in the end rests upon one man, the executioner&quot;</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Edmund Burke&quot;">Edmund Burke</span></strong> — analogously in the English tradition; the accumulated wisdom of traditions exceeds what any individual rational plan can capture</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Justus Möser&quot;">Justus Möser</span></strong> — the first historical sociologist; <em>Zeitstil</em> and <em>Volksstil</em>; local variety as the precondition of freedom</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a></strong> — each civilization must be understood on its own terms, through imaginative participation (<em>fantasia</em>); there is no view from nowhere; <em>verum ipsum factum</em></li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/johann-georg-hamann" title="Written [[Johann Georg Hamann]], resolved to johann-georg-hamann">Johann Georg Hamann</a></strong> — language precedes and shapes reason; Enlightenment abstraction distorts lived experience; &quot;all truth is particular, never general&quot;; &quot;passion alone gives to abstractions hands, feet, wings&quot;</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a></strong> — cultures have incommensurable but equally valid ends; coined <em>Einfühlung</em> (empathy) as the method for understanding other cultures; each culture has its own <em>Schwerpunkt</em></li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/joseph-de-maistre" title="Written [[Joseph de Maistre]], resolved to joseph-de-maistre">Joseph de Maistre</a></strong> — reactionary wing; reason cannot ground society; authority must be absolute because men are naturally evil; &quot;all social order in the end rests upon one man, the executioner&quot;</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/edmund-burke" title="Written [[Edmund Burke]], resolved to edmund-burke">Edmund Burke</a></strong> — analogously in the English tradition; the accumulated wisdom of traditions exceeds what any individual rational plan can capture</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/justus-moser" title="Written [[Justus Möser]], resolved to justus-moser">Justus Möser</a></strong> — the first historical sociologist; <em>Zeitstil</em> and <em>Volksstil</em>; local variety as the precondition of freedom</li>
 <li><strong>The <em>Sturm und Drang</strong></em> — the German literary movement (Schiller, Lenz, Klinger, Goethe) that expressed the counter-Enlightenment spirit in literary form</li>
 </ul>
 <h2 id="berlins-ambivalence">Berlin&#x27;s Ambivalence</h2>
-<p>Berlin takes these thinkers seriously without endorsing their conclusions. He is most sympathetic to Vico and Herder — whose pluralism anticipates his own <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — and most critical of Maistre and the authoritarian tradition. The counter-Enlightenment insights are valuable; the political consequences they were put to (nationalism, fascism, reaction) are catastrophic.</p>
+<p>Berlin takes these thinkers seriously without endorsing their conclusions. He is most sympathetic to Vico and Herder — whose pluralism anticipates his own <a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — and most critical of Maistre and the authoritarian tradition. The counter-Enlightenment insights are valuable; the political consequences they were put to (nationalism, fascism, reaction) are catastrophic.</p>
 <h2 id="contemporary-relevance">Contemporary Relevance</h2>
 <p>The counter-Enlightenment critique resonates with contemporary concerns about:</p>
 <ul>
-<li><strong>AI homogenization</strong>: LLMs trained on dominant linguistic patterns suppress minority reasoning styles and epistemologies — a technological enactment of the universalism the counter-Enlightenment opposed (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span>)</li>
+<li><strong>AI homogenization</strong>: LLMs trained on dominant linguistic patterns suppress minority reasoning styles and epistemologies — a technological enactment of the universalism the counter-Enlightenment opposed (see <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a>)</li>
 <li><strong>WEIRD bias</strong>: the empirical finding that psychological research over-represents Western, educated, industrialized, rich, democratic populations — a structural analogue to Enlightenment universalism</li>
 </ul>
 <h2 id="genealogy-of-the-political-consequences">Genealogy of the Political Consequences</h2>
@@ -71,35 +80,97 @@
 <tr><td>Authoritarian</td><td>Maistre, Bonald</td><td>Organic nationalism → fascism and totalitarianism</td></tr>
 </tbody>
 </table></div>
-<p>The Romantic movement was the hinge: depending on whether the &quot;creative self&quot; was identified with the individual or with the nation/race, it produced anarchic individualism or aggressive collective chauvinism. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Romanticism and Political Danger&quot;">Romanticism and Political Danger</span>.</p>
+<p>The Romantic movement was the hinge: depending on whether the &quot;creative self&quot; was identified with the individual or with the nation/race, it produced anarchic individualism or aggressive collective chauvinism. See <a class="wikilink" href="/wiki/aneesh/concepts/romanticism-and-political-danger" title="Written [[Romanticism and Political Danger]], resolved to romanticism-and-political-danger">Romanticism and Political Danger</a>.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> — the thinker who named and excavated this tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — Berlin&#x27;s own philosophical conclusion, deeply shaped by counter-Enlightenment insights</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Monism vs. Pluralism&quot;">Monism vs. Pluralism</span> — the central opposition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Enlightenment Monism&quot;">Enlightenment Monism</span> — the doctrine being opposed</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> — key figure (pluralist wing)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> — key figure (hermeneutic wing)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Georg Hamann&quot;">Johann Georg Hamann</span> — key figure (fideist wing)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Joseph de Maistre&quot;">Joseph de Maistre</span> — key figure (authoritarian wing)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Justus Möser&quot;">Justus Möser</span> — key figure (conservative localist wing)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Edmund Burke&quot;">Edmund Burke</span> — English tradition counterpart</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sturm und Drang&quot;">Sturm und Drang</span> — literary expression</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nationalism&quot;">Nationalism</span> — political product</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Romanticism and Political Danger&quot;">Romanticism and Political Danger</span> — political trajectory</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cultural Incommensurability&quot;">Cultural Incommensurability</span> — the key philosophical thesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> — the thinker who named and excavated this tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — Berlin&#x27;s own philosophical conclusion, deeply shaped by counter-Enlightenment insights</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/monism-vs-pluralism" title="Written [[Monism vs. Pluralism]], resolved to monism-vs-pluralism">Monism vs. Pluralism</a> — the central opposition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/enlightenment-monism" title="Written [[Enlightenment Monism]], resolved to enlightenment-monism">Enlightenment Monism</a> — the doctrine being opposed</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> — key figure (pluralist wing)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> — key figure (hermeneutic wing)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-georg-hamann" title="Written [[Johann Georg Hamann]], resolved to johann-georg-hamann">Johann Georg Hamann</a> — key figure (fideist wing)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/joseph-de-maistre" title="Written [[Joseph de Maistre]], resolved to joseph-de-maistre">Joseph de Maistre</a> — key figure (authoritarian wing)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/justus-moser" title="Written [[Justus Möser]], resolved to justus-moser">Justus Möser</a> — key figure (conservative localist wing)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/edmund-burke" title="Written [[Edmund Burke]], resolved to edmund-burke">Edmund Burke</a> — English tradition counterpart</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sturm-und-drang" title="Written [[Sturm und Drang]], resolved to sturm-und-drang">Sturm und Drang</a> — literary expression</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/nationalism" title="Written [[Nationalism]], resolved to nationalism">Nationalism</a> — political product</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/romanticism-and-political-danger" title="Written [[Romanticism and Political Danger]], resolved to romanticism-and-political-danger">Romanticism and Political Danger</a> — political trajectory</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cultural-incommensurability" title="Written [[Cultural Incommensurability]], resolved to cultural-incommensurability">Cultural Incommensurability</a> — the key philosophical thesis</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a> — the key hermeneutic method</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;WEIRD Bias&quot;">WEIRD Bias</span> — contemporary structural analogue</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/weird-bias" title="Written [[WEIRD Bias]], resolved to weird-bias">WEIRD Bias</a> — contemporary structural analogue</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>30</b><span>linked from</span></div>
+      <div class="bearing"><b>18</b><span>links out</span></div>
+      <div class="bearing"><b>649</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">30</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nationalism">Nationalism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-diversity">Cognitive Diversity</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>22 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/romanticism-and-political-danger">Romanticism and Political Danger</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/epistemic-monoculture">Epistemic Monoculture</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/monism-vs-pluralism">Monism vs. Pluralism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-georg-hamann">Johann Georg Hamann (1730–1788)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/joseph-de-maistre">Joseph de Maistre (1753–1821)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/weird-bias">WEIRD Bias</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cognitive-diversity-as-infrastructure">Cognitive Diversity as Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/enlightenment-monism">Enlightenment Monism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/herders-schwerpunkt">Herder&#x27;s Schwerpunkt</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/llm-training-data-bias">LLM Training Data Bias</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/novalis">Novalis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sturm-und-drang">Sturm und Drang</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/verum-ipsum-factum">Verum Ipsum Factum</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturphilosophie">Naturphilosophie</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/niccolo-machiavelli">Niccolò Machiavelli</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/edmund-burke">Edmund Burke (1729–1797)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/justus-moser">Justus Möser (1720–1794)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/counter-enlightenment-and-nationalism">Counter-Enlightenment and Nationalism — The Dangerous Slide</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein">The Literary and Cognitive Faces of Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">19</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">18</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">18</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">15</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">12</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">8</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><a class="tag" href="/wiki/topics/berlin">berlin</a><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a><a class="tag" href="/wiki/topics/pluralism">pluralism</a><a class="tag" href="/wiki/topics/rationalism">rationalism</a><a class="tag" href="/wiki/topics/herder">herder</a><a class="tag" href="/wiki/topics/vico">vico</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

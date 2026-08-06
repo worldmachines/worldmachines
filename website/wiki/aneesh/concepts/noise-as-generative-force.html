@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,25 +26,34 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Noise as Generative Force</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Noise as Generative Force</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/noise-as-generative-force.md">source on GitHub</a></div>
-  <div class="note-summary">The argument that information noise, misinformation, and apparent chaos in knowledge systems are not purely destructive but can be generative — spurring discovery, debate, and unexpected connection.</div>
-  <div class="tags"><span class="tag">information-theory</span><span class="tag">epistemology</span><span class="tag">creativity</span><span class="tag">complexity</span><span class="tag">knowledge-systems</span><span class="tag">noise</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/noise-as-generative-force.md">source on GitHub</a></div>
+    <div class="note-summary">The argument that information noise, misinformation, and apparent chaos in knowledge systems are not purely destructive but can be generative — spurring discovery, debate, and unexpected connection.</div>
     <div class="prose">
 <p>The standard account of <strong>noise</strong> in information systems is negative: noise is interference, degradation, the enemy of signal. The concept of <strong>noise as generative force</strong> challenges this, arguing that noise — including misinformation, chaos, and apparent meaninglessness — creates conditions for unexpected discovery, productive debate, and creative breakthroughs.</p>
 <h2 id="the-core-reframing">The Core Reframing</h2>
-<p>From the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span>:</p>
+<p>From the <a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a>:</p>
 <blockquote><p>&quot;Although the internet overflows with false information and uninformed opinions, this noise can be generative—spurring conversation, debate, and the unexpected discovery of new ideas.&quot;</p></blockquote>
 <p>The metaphor: <strong>small islands of well-curated information in a sea of noise</strong>. Rather than eliminating the sea, the goal is to navigate it productively — running &quot;reclamation projects in the noisy sea.&quot;</p>
 <h2 id="the-alchemy-analogy">The Alchemy Analogy</h2>
 <p>&quot;Gold of chemistry from leaden alchemy.&quot; Alchemy was noisy, chaotic, and largely wrong — but it produced chemistry. The noise was not merely wasted effort; it was the substrate from which productive knowledge eventually emerged.</p>
 <p>This is distinct from claiming noise is <em>good</em>; it is claiming noise is <em>not only bad</em>.</p>
-<h2 id="connections-to-generative-complexity">Connections to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity&quot;">Generative Complexity</span></h2>
-<p>The parallel with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity&quot;">Generative Complexity</span> is tight:</p>
+<h2 id="connections-to-generative-complexity">Connections to <a class="wikilink" href="/wiki/aneesh/concepts/generative-complexity" title="Written [[Generative Complexity]], resolved to generative-complexity">Generative Complexity</a></h2>
+<p>The parallel with <a class="wikilink" href="/wiki/aneesh/concepts/generative-complexity" title="Written [[Generative Complexity]], resolved to generative-complexity">Generative Complexity</a> is tight:</p>
 <ul>
 <li>Complex systems (Dwarf Fortress, Emacs, AI) appear chaotic/opaque to newcomers</li>
 <li>That opacity is the precondition for emergent discovery</li>
@@ -58,30 +67,58 @@
 <p>This argument does not counsel passivity toward misinformation. The prescription:</p>
 <ol>
 <li><strong>Editorial diligence</strong>: sift the noise productively rather than hoping to eliminate it</li>
-<li><strong>Structural scaffolding</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> create the islands; they do not drain the sea</li>
+<li><strong>Structural scaffolding</strong>: <a class="wikilink" href="/wiki/aneesh/concepts/domain-ontologies" title="Written [[Domain Ontologies]], resolved to domain-ontologies">Domain Ontologies</a> and <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> create the islands; they do not drain the sea</li>
 <li><strong>Human-AI collaboration</strong>: the human provides editorial judgment; AI handles scale; neither alone suffices</li>
 </ol>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library&quot;">Universal Library</span> — the system within which noise is generative</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity&quot;">Generative Complexity</span> — structural analog in creative/technical systems</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Slop&quot;">AI Slop</span> — the contemporary extreme case of noise</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — one tool for constructing islands of meaning</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Editorial Curation&quot;">Editorial Curation</span> — the practice of navigating noise productively</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/universal-library" title="Written [[Universal Library]], resolved to universal-library">Universal Library</a> — the system within which noise is generative</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/generative-complexity" title="Written [[Generative Complexity]], resolved to generative-complexity">Generative Complexity</a> — structural analog in creative/technical systems</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-slop" title="Written [[AI Slop]], resolved to ai-slop">AI Slop</a> — the contemporary extreme case of noise</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> — one tool for constructing islands of meaning</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/editorial-curation" title="No note is called &quot;Editorial Curation&quot; yet — see who is asking for it">Editorial Curation</a> — the practice of navigating noise productively</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span> (summary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress, Emacs, AI — Generative Complexity&quot;">Dwarf Fortress, Emacs, AI — Generative Complexity</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity" title="Written [[Dwarf Fortress, Emacs, AI — Generative Complexity]], resolved to dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress, Emacs, AI — Generative Complexity</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>452</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/universal-library">Universal Library</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/generative-complexity">Generative Complexity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-slop">AI Slop</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/cynefin-framework">Cynefin Framework</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/information-theory">information-theory</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/complexity">complexity</a><a class="tag" href="/wiki/topics/knowledge-systems">knowledge-systems</a><a class="tag" href="/wiki/topics/noise">noise</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

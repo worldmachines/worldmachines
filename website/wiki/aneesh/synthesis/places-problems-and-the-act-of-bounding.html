@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,52 +26,89 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Places, Problems, and the Act of Bounding</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Places, Problems, and the Act of Bounding</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/places-problems-and-the-act-of-bounding.md">source on GitHub</a></div>
-  <div class="note-summary">Drawing a boundary — around a place, a problem, a measurement, or an administrative structure — is the constitutive act that makes knowledge and governance possible, but also the act that forecloses what lies outside the boundary.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">epistemology</span><span class="tag">space-place</span><span class="tag">data-science</span><span class="tag">governance</span><span class="tag">boundaries</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/places-problems-and-the-act-of-bounding.md">source on GitHub</a></div>
+    <div class="note-summary">Drawing a boundary — around a place, a problem, a measurement, or an administrative structure — is the constitutive act that makes knowledge and governance possible, but also the act that forecloses what lies outside the boundary.</div>
     <div class="prose">
 <h2 id="the-common-act">The Common Act</h2>
 <p>Across four of Aneesh Sathe&#x27;s essays, a single constitutive act recurs: <strong>drawing a boundary</strong>.</p>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place Philosophy&quot;">Space and Place Philosophy</span></strong>: A space becomes a place the moment a boundary is drawn — &quot;here.&quot; The place is the bounded zone; the space is what the boundaries define negatively.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs Questions&quot;">Problems vs Questions</span></strong>: A problem is a bounded question — tractable, named, solvable with established methods. Drawing the boundary is what converts an open question into a closed problem.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span></strong>: Feature extraction, experimental design, and measurement all involve drawing boundaries — deciding what counts as data, what constitutes a valid comparison, what the unit of observation is.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Antimeme&quot;">Antimeme</span></strong>: Administrative structures and legal frameworks bound jurisdiction, responsibility, and interpretive authority. The boundary around an official&#x27;s role determines what they can be held accountable for.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-philosophy" title="Written [[Space and Place Philosophy]], resolved to space-and-place-philosophy">Space and Place Philosophy</a></strong>: A space becomes a place the moment a boundary is drawn — &quot;here.&quot; The place is the bounded zone; the space is what the boundaries define negatively.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs Questions]], resolved to problems-vs-questions">Problems vs Questions</a></strong>: A problem is a bounded question — tractable, named, solvable with established methods. Drawing the boundary is what converts an open question into a closed problem.</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/data-generation-process" title="No note is called &quot;Data Generation Process&quot; yet — see who is asking for it">Data Generation Process</a></strong>: Feature extraction, experimental design, and measurement all involve drawing boundaries — deciding what counts as data, what constitutes a valid comparison, what the unit of observation is.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/antimeme" title="Written [[Antimeme]], resolved to antimeme">Antimeme</a></strong>: Administrative structures and legal frameworks bound jurisdiction, responsibility, and interpretive authority. The boundary around an official&#x27;s role determines what they can be held accountable for.</li>
 </ul>
 <h2 id="bounding-as-constitutive-and-foreclosing">Bounding as Constitutive and Foreclosing</h2>
 <p>The act of bounding is <strong>constitutive</strong>: without it, nothing is tractable, knowable, or governable. You cannot analyze what you haven&#x27;t measured; you cannot solve what you haven&#x27;t bounded; you cannot govern what you haven&#x27;t structured.</p>
 <p>But it is also <strong>foreclosing</strong>: the boundary creates the tractable zone by excluding everything outside it. Confounders are variables that matter but fall outside the experimental boundary. Antimemetic power operates in the spaces between jurisdictions — in the gaps the boundaries leave.</p>
 <h2 id="the-scientific-case">The Scientific Case</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Beyond the Dataset&quot;">Beyond the Dataset</span> is centrally about bounding discipline: understanding exactly what your measurements bound (the instrument&#x27;s resolution, the experiment&#x27;s randomization) so you know what your conclusions can and cannot extend to. A crack in the boundary — a confounder, a sensor drift — propagates upward into every conclusion built on the bounded zone.</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset" title="Written [[Beyond the Dataset]], resolved to beyond-the-dataset">Beyond the Dataset</a> is centrally about bounding discipline: understanding exactly what your measurements bound (the instrument&#x27;s resolution, the experiment&#x27;s randomization) so you know what your conclusions can and cannot extend to. A crack in the boundary — a confounder, a sensor drift — propagates upward into every conclusion built on the bounded zone.</p>
 <h2 id="the-philosophical-case">The Philosophical Case</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs Questions&quot;">Problems are Places, Questions are Spaces</span> argues that premature bounding (converting a question into a problem too early) forecloses exploration. The Socratic method is a discipline of <em>refusing</em> to bound — holding the question as a space rather than packaging it as a place.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs Questions]], resolved to problems-vs-questions">Problems are Places, Questions are Spaces</a> argues that premature bounding (converting a question into a problem too early) forecloses exploration. The Socratic method is a discipline of <em>refusing</em> to bound — holding the question as a space rather than packaging it as a place.</p>
 <h2 id="essay-seed">Essay Seed</h2>
 <p><em>The ontology of the boundary</em>: a unified account of how drawing boundaries constitutes tractable objects in governance, science, and epistemology — and what it means to bound well vs. bound badly. What are the criteria for a good boundary? When should you refuse to draw one?</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place Philosophy&quot;">Space and Place Philosophy</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs Questions&quot;">Problems vs Questions</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confounding Variables&quot;">Confounding Variables</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Antimeme&quot;">Antimeme</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bureaucratic Diffusion of Responsibility&quot;">Bureaucratic Diffusion of Responsibility</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-philosophy" title="Written [[Space and Place Philosophy]], resolved to space-and-place-philosophy">Space and Place Philosophy</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs Questions]], resolved to problems-vs-questions">Problems vs Questions</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/data-generation-process" title="No note is called &quot;Data Generation Process&quot; yet — see who is asking for it">Data Generation Process</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/confounding-variables" title="Written [[Confounding Variables]], resolved to confounding-variables">Confounding Variables</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/antimeme" title="Written [[Antimeme]], resolved to antimeme">Antimeme</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility" title="Written [[Bureaucratic Diffusion of Responsibility]], resolved to bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>407</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/bryant-gravity-as-power">Bryant&#x27;s Gravity as Power</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-digital-studiolo">The Digital Studiolo</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/space-place">space-place</a><a class="tag" href="/wiki/topics/data-science">data-science</a><a class="tag" href="/wiki/topics/governance">governance</a><a class="tag" href="/wiki/topics/boundaries">boundaries</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

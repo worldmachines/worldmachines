@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>LLMs as Epistemic Tools</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>LLMs as Epistemic Tools</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/llms-as-epistemic-tools.md">source on GitHub</a></div>
-  <div class="note-summary">The positive case for LLMs as tools for genuine epistemic inquiry — not just problem-solving but Socratic question-exploration — enabled by their conversational affordance, trained humanness, and tolerance for hallucination as exploratory surface.</div>
-  <div class="tags"><span class="tag">AI</span><span class="tag">LLMs</span><span class="tag">epistemology</span><span class="tag">Socratic-method</span><span class="tag">inquiry</span><span class="tag">technology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/llms-as-epistemic-tools.md">source on GitHub</a></div>
+    <div class="note-summary">The positive case for LLMs as tools for genuine epistemic inquiry — not just problem-solving but Socratic question-exploration — enabled by their conversational affordance, trained humanness, and tolerance for hallucination as exploratory surface.</div>
     <div class="prose">
 <h2 id="the-standard-view-and-its-limits">The Standard View (and its Limits)</h2>
 <p>The dominant use of LLMs is problem-solving: write code, get recipes, summarize documents. This is computing in its traditional mode — the user commands, the machine executes, the problem dissolves.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs. Questions&quot;">Problems vs. Questions</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs. Questions]], resolved to problems-vs-questions">Problems vs. Questions</a></p>
 <h2 id="the-upgraded-claim">The Upgraded Claim</h2>
 <p>LLMs introduce a new affordance: <strong>conversational, back-and-forth dialogue in natural language</strong>. This creates the possibility of pursuing <em>questions</em>, not just problems. The computer becomes a surface for exploration rather than a solution dispenser.</p>
 <blockquote><p>&quot;AI lets us explore questions <em>with</em>, rather than merely <em>through</em>, computers.&quot;</p></blockquote>
@@ -58,8 +67,8 @@
 <p>The shift is from &quot;the computer is always right&quot; (old model) to &quot;the computer may be wrong and that&#x27;s an invitation to think.&quot;</p>
 <h2 id="the-space-metaphor">The Space Metaphor</h2>
 <blockquote><p>&quot;Each word we put in ties down the AI to specific vantage points to help us explore.&quot;</p></blockquote>
-<p>A chat session begins as &quot;pure space.&quot; Words act as place-making moves — each one constrains and orients the exploration. This is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> operationalized through language.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span></p>
+<p>A chat session begins as &quot;pure space.&quot; Words act as place-making moves — each one constrains and orients the exploration. This is <a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> operationalized through language.</p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a></p>
 <h2 id="future-development">Future Development</h2>
 <p>As LLMs gain access to structured knowledge databases (established knowledge), they will be able to:</p>
 <ul>
@@ -71,28 +80,69 @@
 <h2 id="tension-critique">Tension / Critique</h2>
 <ul>
 <li>Does Socratic dialogue require genuine disagreement (another agent with its own views) or merely the appearance of it? LLMs may simulate the form without the substance.</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Nagel&quot;">Thomas Nagel</span>&#x27;s bat analogy underscores that shared language is necessary but not sufficient — genuine Socratic exchange may require shared <em>stakes</em>.</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/thomas-nagel" title="Written [[Thomas Nagel]], resolved to thomas-nagel">Thomas Nagel</a>&#x27;s bat analogy underscores that shared language is necessary but not sufficient — genuine Socratic exchange may require shared <em>stakes</em>.</li>
 <li>Who curates &quot;established knowledge&quot;? Power over the reference database is power over the Socratic encounter.</li>
 </ul>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — the mode LLMs enable</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs. Questions&quot;">Problems vs. Questions</span> — LLMs default to problems; the upgrade is questions</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span> — philosophical grounding for what Socratic dialogue requires</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Turing Test&quot;">Turing Test</span> — what LLMs surpass, and why that doesn&#x27;t resolve the deeper question</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — words as place-making moves in a session</li>
-<li>Sources: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chatbots, Bats &amp; Broken Oracles&quot;">Chatbots, Bats &amp; Broken Oracles</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — the mode LLMs enable</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs. Questions]], resolved to problems-vs-questions">Problems vs. Questions</a> — LLMs default to problems; the upgrade is questions</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a> — philosophical grounding for what Socratic dialogue requires</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/turing-test" title="Written [[Turing Test]], resolved to turing-test">Turing Test</a> — what LLMs surpass, and why that doesn&#x27;t resolve the deeper question</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — words as place-making moves in a session</li>
+<li>Sources: <a class="wikilink-wanted" href="/wiki/wanted/chatbots-bats-and-broken-oracles" title="No note is called &quot;Chatbots, Bats &amp; Broken Oracles&quot; yet — see who is asking for it">Chatbots, Bats &amp; Broken Oracles</a>, <a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/route-vs-survey-knowledge">Route vs. Survey Knowledge</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>498</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">11</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-nagel">Thomas Nagel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/tools-and-worldview-commitment">Tools and Worldview Commitment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/technology-as-place-maker">Technology as Place-Maker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/turing-test">Turing Test</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alan-turing">Alan Turing</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/route-vs-survey-knowledge">Route vs. Survey Knowledge</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/socratic-method-and-ai">Socratic Method and AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/chatbots-bats-broken-oracles">Chatbots, Bats &amp; Broken Oracles</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-nagel">Thomas Nagel</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/turing-test">Turing Test</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/llms">LLMs</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/socratic-method">Socratic-method</a><a class="tag" href="/wiki/topics/inquiry">inquiry</a><a class="tag" href="/wiki/topics/technology">technology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

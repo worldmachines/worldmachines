@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>Chanticleer and the Fox: The Nun&#x27;s Priest&#x27;s Tale</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Chanticleer and the Fox: The Nun&#x27;s Priest&#x27;s Tale</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-nuns-priests-tale.md">source on GitHub</a></div>
-  <div class="note-summary">A dreaming rooster&#x27;s fear of a fox becomes the occasion for a mock-heroic beast fable that mounts a full scholastic debate on dream-prophecy and free will only to let vanity and flattery, not philosophy, decide the plot.</div>
-  <div class="tags"><span class="tag">beast-fable</span><span class="tag">mock-epic</span><span class="tag">dream-debate</span><span class="tag">free-will-and-predestination</span><span class="tag">flattery</span><span class="tag">chaucer</span><span class="tag">canterbury-tales</span><span class="tag">medieval-rhetoric</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-4">chaucer-canterbury-tales-troilus-book-4</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-nuns-priests-tale.md">source on GitHub</a></div>
+    <div class="note-summary">A dreaming rooster&#x27;s fear of a fox becomes the occasion for a mock-heroic beast fable that mounts a full scholastic debate on dream-prophecy and free will only to let vanity and flattery, not philosophy, decide the plot.</div>
     <div class="prose">
 <p>After the Host cuts off the Monk&#x27;s parade of tragedies as tedious &quot;heaviness,&quot; he demands something merry instead, and turns to the Nun&#x27;s Priest (&quot;Sir John&quot;), who obliges with the beast-fable of Chanticleer the rooster, his favorite hen Partelote, and the colfox who nearly eats him by flattery. The tale escalates from a widow&#x27;s humble farmyard into an elaborate mock-heroic set piece — a dream, a marital debate on the meaning of dreams, a digression on predestination, a Troy-and-Carthage-scaled abduction, and a reversal engineered by the very rhetorical trick (flattery) that caused the disaster — before closing with an explicit instruction to &quot;take the fruit, and let the chaff be still,&quot; and a bawdy epilogue from the Host.</p>
 <h2 id="themes">Themes</h2>
@@ -47,13 +55,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The Prologue exchange establishes the tale&#x27;s comic mandate against the Monk&#x27;s tragedies — the Host&#x27;s blunt dismissal (&quot;Such talking is not worth a butterfly&quot;) is the hinge the whole tale swings on. The mock-heroic portrait of Chanticleer (castle-wall comb, clock-precise crowing) shows the tale&#x27;s central stylistic joke in miniature. Partelote&#x27;s humoral dream-theory and Chanticleer&#x27;s counter-marshaling of authorities stage the debate as a genuine scholastic set piece rather than a throwaway squabble. The predestination digression is the tale&#x27;s most striking formal move: a real philosophical crux raised and then explicitly parked. The flattery-capture sequence is the plot&#x27;s actual turning point, foregrounding rhetoric over fate or piety as the operative force. And the closing moral instruction (&quot;take the fruit, and let the chaff be still&quot;) makes explicit the interpretive contract the fable has been running on throughout.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>788</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-4">chaucer-canterbury-tales-troilus-book-4</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">beast-fable</span><span class="tag tag-lone" title="Only this note uses it">mock-epic</span><span class="tag tag-lone" title="Only this note uses it">dream-debate</span><a class="tag" href="/wiki/topics/free-will-and-predestination">free-will-and-predestination</a><span class="tag tag-lone" title="Only this note uses it">flattery</span><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><span class="tag tag-lone" title="Only this note uses it">medieval-rhetoric</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

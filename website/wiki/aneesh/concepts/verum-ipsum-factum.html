@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Verum Ipsum Factum</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Verum Ipsum Factum</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/verum-ipsum-factum.md">source on GitHub</a></div>
-  <div class="note-summary">Vico&#x27;s principle &#x27;the true is the made&#x27; (verum ipsum factum): we can fully understand only what we have made, which is why human history is more intelligible to us than nature, and why purely external rational analysis misses the inner life of cultures.</div>
-  <div class="tags"><span class="tag">vico</span><span class="tag">verum-ipsum-factum</span><span class="tag">epistemology</span><span class="tag">hermeneutics</span><span class="tag">counter-enlightenment</span><span class="tag">historical-understanding</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/verum-ipsum-factum.md">source on GitHub</a></div>
+    <div class="note-summary">Vico&#x27;s principle &#x27;the true is the made&#x27; (verum ipsum factum): we can fully understand only what we have made, which is why human history is more intelligible to us than nature, and why purely external rational analysis misses the inner life of cultures.</div>
     <div class="prose">
 <p><strong>Latin</strong>: &quot;The true is (identical with) the made&quot;<br>
-<strong>Source</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span>, <em>De Antiquissima Italorum Sapientia</em> (1710); applied throughout <em>Scienza Nuova</em> (1725, 1730, 1744)</p>
+<strong>Source</strong>: <a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a>, <em>De Antiquissima Italorum Sapientia</em> (1710); applied throughout <em>Scienza Nuova</em> (1725, 1730, 1744)</p>
 <h2 id="the-principle">The Principle</h2>
 <p>Vico&#x27;s epistemological starting point: to know something truly is to know it as its maker knows it — to know how it was made, why, and for what end. From this follows a hierarchy of knowledge:</p>
 <ul>
@@ -54,29 +63,59 @@
 <li>The extension of mathematical method to ethics and politics is therefore doubly wrong: the method can&#x27;t capture what it didn&#x27;t make, and it can&#x27;t capture the internal purposes of human actors</li>
 </ol>
 <h2 id="significance-for-berlin">Significance for Berlin</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> sees <em>verum ipsum factum</em> as Vico&#x27;s &quot;most original contribution to the understanding of society or history&quot; — more significant than the famous cycles theory (<em>corsi e ricorsi</em>). By denying the doctrine of a timeless natural law knowable to any rational man at any time, Vico &quot;boldly denied this doctrine, which has formed the heart of the Western tradition from Aristotle to our own day&quot; (p. 6).</p>
-<p>This is the epistemological foundation for <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span>: if each civilization produces its own knowledge, its own standards of beauty and justice, and these are only accessible from within, then there is no Archimedean point from which to rank them on a single scale.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> sees <em>verum ipsum factum</em> as Vico&#x27;s &quot;most original contribution to the understanding of society or history&quot; — more significant than the famous cycles theory (<em>corsi e ricorsi</em>). By denying the doctrine of a timeless natural law knowable to any rational man at any time, Vico &quot;boldly denied this doctrine, which has formed the heart of the Western tradition from Aristotle to our own day&quot; (p. 6).</p>
+<p>This is the epistemological foundation for <a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a>: if each civilization produces its own knowledge, its own standards of beauty and justice, and these are only accessible from within, then there is no Archimedean point from which to rank them on a single scale.</p>
 <h2 id="contemporary-echoes">Contemporary Echoes</h2>
-<p>The <em>verum ipsum factum</em> principle has an interesting application to AI: LLMs can process and recombine human cultural production, but they did not <em>make</em> any of it in the sense Vico means — they did not participate in the human purposes, fears, and desires that generated the texts. Whether this matters for AI&#x27;s capacity to <em>understand</em> cultural products (as opposed to manipulate them formally) is an open question that Vico would answer negatively. See <a class="wikilink" href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span>.</p>
+<p>The <em>verum ipsum factum</em> principle has an interesting application to AI: LLMs can process and recombine human cultural production, but they did not <em>make</em> any of it in the sense Vico means — they did not participate in the human purposes, fears, and desires that generated the texts. Whether this matters for AI&#x27;s capacity to <em>understand</em> cultural products (as opposed to manipulate them formally) is an open question that Vico would answer negatively. See <a class="wikilink" href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a> and <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a>.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the tradition the principle anchors</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the tradition the principle anchors</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a> — the hermeneutic method <em>verum ipsum factum</em> grounds</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — Berlin&#x27;s doctrine, rooted in Vico&#x27;s epistemology</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hermeneutics&quot;">Hermeneutics</span> — the broader tradition Vico founds</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — Berlin&#x27;s doctrine, rooted in Vico&#x27;s epistemology</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/hermeneutics" title="No note is called &quot;Hermeneutics&quot; yet — see who is asking for it">Hermeneutics</a> — the broader tradition Vico founds</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/language-as-world-making">Language as World-Making</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>605</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">5</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/language-as-world-making">Language as World-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/vico-fantasia-and-ai-limits">Vico&#x27;s Fantasia and the Limits of AI Understanding</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/vico">vico</a><a class="tag" href="/wiki/topics/verum-ipsum-factum">verum-ipsum-factum</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/hermeneutics">hermeneutics</a><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><a class="tag" href="/wiki/topics/historical-understanding">historical-understanding</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

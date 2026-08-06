@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Adam Smith (1723-1790)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Adam Smith (1723-1790)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/adam-smith.md">source on GitHub</a></div>
-  <div class="note-summary">Adam Smith (1723-1790) is read by Rao as an intellectual descendant of Spinoza who applied the naturalist-empiricist orientation to economics — inaugurating a discipline about noisy, messy reality data rather than divine design.</div>
-  <div class="tags"><span class="tag">thinker</span><span class="tag">economist</span><span class="tag">adam-smith</span><span class="tag">scottish-enlightenment</span><span class="tag">divergence-machine</span><span class="tag">empiricism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/adam-smith.md">source on GitHub</a></div>
+    <div class="note-summary">Adam Smith (1723-1790) is read by Rao as an intellectual descendant of Spinoza who applied the naturalist-empiricist orientation to economics — inaugurating a discipline about noisy, messy reality data rather than divine design.</div>
     <div class="prose">
 <h2 id="biographical-context">Biographical Context</h2>
 <ul>
@@ -50,7 +59,7 @@
 <p>This is the Spinozan move applied to economic life: don&#x27;t look for divine design or moral order in economic outcomes; look at what actually happens and build weak heuristics from the data.</p>
 <blockquote><p>&quot;A unified Hume-Smith theory of reality would be: Shit happens, but it&#x27;s not entirely unpredictable and disorderly. There are laws, but they&#x27;re just handy, contingent heuristics, not &#x27;reality&#x27; itself.&quot;</p></blockquote>
 <h2 id="the-hume-smith-collaboration-pattern">The Hume-Smith Collaboration Pattern</h2>
-<p>Where Spinoza and Leibniz were in a partially adversarial relationship, Hume and Smith were &quot;collaborating allies who influenced each other in their campaigns on different parts of the frontier of expanding reality.&quot; This is a different mode of participating in the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Argument of Progress&quot;">Argument of Progress</span> — collaborative frontier expansion rather than adversarial divergence from a common starting point.</p>
+<p>Where Spinoza and Leibniz were in a partially adversarial relationship, Hume and Smith were &quot;collaborating allies who influenced each other in their campaigns on different parts of the frontier of expanding reality.&quot; This is a different mode of participating in the <a class="wikilink" href="/wiki/aneesh/concepts/argument-of-progress" title="Written [[Argument of Progress]], resolved to argument-of-progress">Argument of Progress</a> — collaborative frontier expansion rather than adversarial divergence from a common starting point.</p>
 <p>Both were &quot;primarily oriented towards reality rather than theology, compared to their predecessors.&quot; Both paid attention to moral sentiments — &quot;rugging religious or institutional understandings of morality&quot; — continuing Spinoza&#x27;s project to separate secular and religious philosophy.</p>
 <h2 id="the-darwin-connection">The Darwin Connection</h2>
 <p>The Hume-Smith assault on traditional moral and natural philosophy represents &quot;the beginnings of the intellectual iconoclasm that reach its peak with Darwin.&quot; Darwin&#x27;s <em>real</em> accomplishment was not disproving literalist religion (Hume had done that effectively) but &quot;assaulting the <em>secular</em> philosophical foundations of the modernity machine&quot; — making divergence and variety load-bearing features of reality itself.</p>
@@ -58,28 +67,65 @@
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/david-hume">david-hume</a> — close friend and intellectual collaborator</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a> — intellectual ancestor</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Argument of Progress&quot;">Argument of Progress</span> — Smith&#x27;s work as key instantiation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scottish Enlightenment&quot;">Scottish Enlightenment</span> — institutional context</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/argument-of-progress" title="Written [[Argument of Progress]], resolved to argument-of-progress">Argument of Progress</a> — Smith&#x27;s work as key instantiation</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/scottish-enlightenment" title="No note is called &quot;Scottish Enlightenment&quot; yet — see who is asking for it">Scottish Enlightenment</a> — institutional context</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> — the machine Smith helps build</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ibn Khaldun&quot;">Ibn Khaldun</span> — explicit contrast in Rao&#x27;s text: Smith&#x27;s economics vs. Ibn Khaldun&#x27;s economics</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/ibn-khaldun" title="Written [[Ibn Khaldun]], resolved to ibn-khaldun">Ibn Khaldun</a> — explicit contrast in Rao&#x27;s text: Smith&#x27;s economics vs. Ibn Khaldun&#x27;s economics</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">8</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04a-market-discourse-and-usury">Debating the Market: Discourse, Mercantilism, and the Decline of the Usury Taboo</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch05b-science-enlightenment-and-technology-culture">How Science Became Machines: Invention, Factory Discipline, and the Enlightenment Case for Progress</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>14</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>489</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">14</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/argument-of-progress">Argument of Progress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii">The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>6 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch05b-science-enlightenment-and-technology-culture">How Science Became Machines: Invention, Factory Discipline, and the Enlightenment Case for Progress</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-world-machines-project-rao">The World Machines Project</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04a-market-discourse-and-usury">Debating the Market: Discourse, Mercantilism, and the Decline of the Usury Taboo</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/progress-as-non-stationary-argument">Progress as a Non-Stationary Argument</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/argument-of-progress">Argument of Progress</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">6</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/thinker">thinker</a><a class="tag" href="/wiki/topics/economist">economist</a><a class="tag" href="/wiki/topics/adam-smith">adam-smith</a><a class="tag" href="/wiki/topics/scottish-enlightenment">scottish-enlightenment</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/empiricism">empiricism</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

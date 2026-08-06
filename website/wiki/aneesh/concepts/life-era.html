@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Life Era</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Life Era</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/life-era.md">source on GitHub</a></div>
-  <div class="note-summary">The Life Era is Eric Chaisson&#x27;s name for the cosmological epoch now beginning, in which technologically intelligent life becomes a dominant force in the universe analogous to how matter overcame radiation — making civilization a cosmological actor rather than merely a product of cosmic evolution.</div>
-  <div class="tags"><span class="tag">life-era</span><span class="tag">chaisson</span><span class="tag">cosmic-evolution</span><span class="tag">technology</span><span class="tag">civilization</span><span class="tag">complexity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/life-era.md">source on GitHub</a></div>
+    <div class="note-summary">The Life Era is Eric Chaisson&#x27;s name for the cosmological epoch now beginning, in which technologically intelligent life becomes a dominant force in the universe analogous to how matter overcame radiation — making civilization a cosmological actor rather than merely a product of cosmic evolution.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Eric Chaisson&quot;">Eric Chaisson</span> (2009):</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/entities/eric-chaisson" title="Written [[Eric Chaisson]], resolved to eric-chaisson">Eric Chaisson</a> (2009):</p>
 <p>The <strong>Life Era</strong> is the third major cosmological epoch (following the Radiation Era and Matter Era), defined by the emergence of technologically intelligent life as a dominant force capable of manipulating matter and energy on cosmological timescales.</p>
 <blockquote><p>&quot;Some 14 billion years after the beginning of space and time, the Life Era has now begun, at least locally. Here, the emergence of technologically intelligent life, on Earth and perhaps elsewhere, heralds a whole new era — one where life, in turn, has gradually come to dominate matter.&quot;</p></blockquote>
 <h2 id="the-three-eras">The Three Eras</h2>
@@ -47,12 +56,12 @@
 </ol>
 <h2 id="the-cosmological-claim">The Cosmological Claim</h2>
 <p>This is a strong claim: the emergence of life is not merely biologically significant but <em>cosmologically</em> significant. Life is becoming a new category of force in the universe — not just a product of cosmic evolution but an agent of it.</p>
-<p>The logic: technology enables life to manipulate matter and energy in ways that transcend biological processes alone. The result will likely be a &quot;symbiotically functioning technoculture&quot; — civilization + machines — representing the highest known concentration of complexity (by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Energy Rate Density&quot;">Energy Rate Density</span>) in the universe.</p>
+<p>The logic: technology enables life to manipulate matter and energy in ways that transcend biological processes alone. The result will likely be a &quot;symbiotically functioning technoculture&quot; — civilization + machines — representing the highest known concentration of complexity (by <a class="wikilink" href="/wiki/aneesh/concepts/energy-rate-density" title="Written [[Energy Rate Density]], resolved to energy-rate-density">Energy Rate Density</a>) in the universe.</p>
 <h2 id="the-alternative">The Alternative</h2>
 <p>Chaisson acknowledges the dark alternative: the Life Era &quot;is either... the onset of [the Life Era]... or it will be a passing event in spacetime whereby human life on Earth and its great cultural experiment end.&quot;</p>
 <p>No guarantee of success. High energy rate density is no protection against self-destruction.</p>
 <h2 id="relation-to-new-nature">Relation to New Nature</h2>
-<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span> is the ecological version of the Life Era thesis: both describe technology becoming as inviolable as physical law. The difference:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a> is the ecological version of the Life Era thesis: both describe technology becoming as inviolable as physical law. The difference:</p>
 <ul>
 <li><strong>Chaisson</strong>: The Life Era is (potentially) a positive development — complexity at its highest</li>
 <li><strong>Rao</strong>: New Nature is an ecology — neither good nor bad, as inhumanly indifferent as the jungle</li>
@@ -62,26 +71,56 @@
 <p>This tension is unresolved in Chaisson&#x27;s account and represents a genuine gap in the framework.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cosmic Evolution&quot;">Cosmic Evolution</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Arrow of Time&quot;">Arrow of Time</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Energy Rate Density&quot;">Energy Rate Density</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span> — Rao&#x27;s parallel concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cosmic-evolution" title="Written [[Cosmic Evolution]], resolved to cosmic-evolution">Cosmic Evolution</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/arrow-of-time" title="Written [[Arrow of Time]], resolved to arrow-of-time">Arrow of Time</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/energy-rate-density" title="Written [[Energy Rate Density]], resolved to energy-rate-density">Energy Rate Density</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a> — Rao&#x27;s parallel concept</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cosmic Evolution - Chaisson&quot;">Cosmic Evolution - Chaisson</span> (primary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/cosmic-evolution-chaisson" title="Written [[Cosmic Evolution - Chaisson]], resolved to cosmic-evolution-chaisson">Cosmic Evolution - Chaisson</a> (primary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/proto-liveness">Proto-Liveness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>486</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">6</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/energy-rate-density">Energy Rate Density</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/arrow-of-time">Arrow of Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmic-evolution">Cosmic Evolution</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/proto-liveness">Proto-Liveness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/energy-rate-density">Energy Rate Density</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/cosmic-evolution-chaisson">Cosmic Evolution: State of the Science — Eric J. Chaisson (2009)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/eric-chaisson">Eric Chaisson</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/nonequilibrium-thermodynamics">Nonequilibrium Thermodynamics</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/arrow-of-time">Arrow of Time</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/life-era">life-era</a><a class="tag" href="/wiki/topics/chaisson">chaisson</a><a class="tag" href="/wiki/topics/cosmic-evolution">cosmic-evolution</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/civilization">civilization</a><a class="tag" href="/wiki/topics/complexity">complexity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

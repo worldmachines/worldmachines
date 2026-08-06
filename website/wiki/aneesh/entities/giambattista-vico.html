@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Giambattista Vico</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Giambattista Vico</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/giambattista-vico.md">source on GitHub</a></div>
-  <div class="note-summary">Giambattista Vico (1668–1744) was a Neapolitan philosopher who argued that each civilization must be understood from within through imaginative participation — a proto-hermeneutic challenge to Enlightenment universalism.</div>
-  <div class="tags"><span class="tag">vico</span><span class="tag">counter-enlightenment</span><span class="tag">hermeneutics</span><span class="tag">historical-understanding</span><span class="tag">berlin</span><span class="tag">fantasia</span><span class="tag">verum-ipsum-factum</span><span class="tag">cultural-incommensurability</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/giambattista-vico.md">source on GitHub</a></div>
+    <div class="note-summary">Giambattista Vico (1668–1744) was a Neapolitan philosopher who argued that each civilization must be understood from within through imaginative participation — a proto-hermeneutic challenge to Enlightenment universalism.</div>
     <div class="prose">
 <p><strong>Born</strong>: Naples, 1668<br>
 <strong>Died</strong>: Naples, 1744<br>
@@ -44,40 +53,86 @@
 <h3 id="verum-ipsum-factum"><em>Verum Ipsum Factum</em></h3>
 <p>&quot;The true is the made&quot; — we can fully understand only what we have made. This is why mathematics is perfectly knowable (it is constructed) but nature is not fully knowable (God made it). Crucially: <em>human history</em> is made by humans, and therefore <em>fully intelligible</em> to them — but only if they approach it through imaginative reconstruction (<em>fantasia</em>), not abstract reason.</p>
 <h3 id="fantasia-imaginative-reconstruction"><em>Fantasia</em> (Imaginative Reconstruction)</h3>
-<p>The method for understanding other historical periods and cultures: imaginative projection into the mental world of the people who lived them. You cannot understand Homer through Cartesian analysis; you must <em>become</em> a Greek warrior in imagination. This is the ancestor of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Herder&#x27;s</span> <em>Einfühlung</em> and Dilthey&#x27;s hermeneutics.</p>
+<p>The method for understanding other historical periods and cultures: imaginative projection into the mental world of the people who lived them. You cannot understand Homer through Cartesian analysis; you must <em>become</em> a Greek warrior in imagination. This is the ancestor of <a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Herder&#x27;s</a> <em>Einfühlung</em> and Dilthey&#x27;s hermeneutics.</p>
 <h3 id="the-course-of-nations-corsi-e-ricorsi">The Course of Nations (<em>Corsi e Ricorsi</em>)</h3>
 <p>History moves in cycles: the age of gods → the age of heroes → the age of men → decline → renewal. This is not progress toward a rational endpoint; it is recurrence with variation. No moment in the cycle is more &quot;advanced&quot; than another — they are incommensurable.</p>
 <h3 id="anti-cartesianism">Anti-Cartesianism</h3>
 <p>Vico&#x27;s entire project is a critique of Descartes&#x27;s method. Reason cannot provide foundations for historical and human understanding; imagination, memory, and will are equally essential cognitive faculties that Cartesian rationalism suppresses.</p>
 <h2 id="significance-for-berlin">Significance for Berlin</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> saw Vico as the first genuine pluralist in the Western tradition — the first to claim, on principled grounds, that different cultures embody different values that cannot be ranked on a universal scale. Vico is the fountainhead of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> tradition Berlin excavates in <em>Against the Current</em>.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> saw Vico as the first genuine pluralist in the Western tradition — the first to claim, on principled grounds, that different cultures embody different values that cannot be ranked on a universal scale. Vico is the fountainhead of the <a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> tradition Berlin excavates in <em>Against the Current</em>.</p>
 <h2 id="berlins-direct-quotation-pp-6-7">Berlin&#x27;s Direct Quotation (pp. 6–7)</h2>
 <p>&quot;Vico&#x27;s unsystematic works dealt with many other matters, but his importance in the history of the Enlightenment consists in his insistence on the plurality of cultures and on the consequently fallacious character of the idea that there is one and only one structure of reality which the enlightened philosopher can see as it truly is, and which he can (at least in principle) describe in logically perfect language — a vision that has obsessed thinkers from Plato to Leibniz, Condillac, Russell and his more faithful followers.&quot;</p>
 <h2 id="vico-in-harold-blooms-western-canon">Vico in Harold Bloom&#x27;s Western Canon</h2>
 <p>Bloom uses Vico&#x27;s historical schema to organize <em>The Western Canon</em> (1994). His three ages — Aristocratic, Democratic, and Chaotic (Bloom&#x27;s own elaboration of Vico&#x27;s &quot;Theocratic → Heroic → Human&quot; cycle) — structure the canon&#x27;s progression from Dante through the moderns. The <em>Corsi e Ricorsi</em> pattern maps onto literary history: each age has characteristic burdens and characteristic forms of agon with the tradition.</p>
-<p>This is not a faithful application of Vico — Bloom reads him as a precursor for his own theory of literary struggle and belatedness. Bloom&#x27;s use of Vico is itself an instance of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span>.</p>
+<p>This is not a faithful application of Vico — Bloom reads him as a precursor for his own theory of literary struggle and belatedness. Bloom&#x27;s use of Vico is itself an instance of <a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a>.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the tradition Vico originates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> — who recovered and theorized Vico&#x27;s importance</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> — the inheritor of Vico&#x27;s hermeneutic approach</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — the doctrine Vico anticipates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Verum Ipsum Factum&quot;">Verum Ipsum Factum</span> — his core epistemological principle</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cultural Incommensurability&quot;">Cultural Incommensurability</span> — the thesis his work grounds</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the tradition Vico originates</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> — who recovered and theorized Vico&#x27;s importance</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> — the inheritor of Vico&#x27;s hermeneutic approach</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — the doctrine Vico anticipates</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/verum-ipsum-factum" title="Written [[Verum Ipsum Factum]], resolved to verum-ipsum-factum">Verum Ipsum Factum</a> — his core epistemological principle</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cultural-incommensurability" title="Written [[Cultural Incommensurability]], resolved to cultural-incommensurability">Cultural Incommensurability</a> — the thesis his work grounds</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a> — the method his <em>fantasia</em> anticipates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Harold Bloom&quot;">Harold Bloom</span> — used Vico&#x27;s historical scheme for <em>The Western Canon</em></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Western Canon&quot;">Western Canon</span> — structured by Vico&#x27;s historical ages</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span></li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Influence of Anxiety&quot;">The Influence of Anxiety</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/harold-bloom" title="Written [[Harold Bloom]], resolved to harold-bloom">Harold Bloom</a> — used Vico&#x27;s historical scheme for <em>The Western Canon</em></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/western-canon" title="Written [[Western Canon]], resolved to western-canon">Western Canon</a> — structured by Vico&#x27;s historical ages</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a></li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/the-influence-of-anxiety" title="Written [[The Influence of Anxiety]], resolved to the-influence-of-anxiety">The Influence of Anxiety</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>14</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>631</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">14</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/western-canon">Western Canon</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>6 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/johann-georg-hamann">Johann Georg Hamann (1730–1788)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/enlightenment-monism">Enlightenment Monism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-influence-of-anxiety">The Influence of Anxiety (The Point, ~2022–2024)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/verum-ipsum-factum">Verum Ipsum Factum</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/vico-fantasia-and-ai-limits">Vico&#x27;s Fantasia and the Limits of AI Understanding</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/vico">vico</a><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><a class="tag" href="/wiki/topics/hermeneutics">hermeneutics</a><a class="tag" href="/wiki/topics/historical-understanding">historical-understanding</a><a class="tag" href="/wiki/topics/berlin">berlin</a><a class="tag" href="/wiki/topics/fantasia">fantasia</a><a class="tag" href="/wiki/topics/verum-ipsum-factum">verum-ipsum-factum</a><span class="tag tag-lone" title="Only this note uses it">cultural-incommensurability</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

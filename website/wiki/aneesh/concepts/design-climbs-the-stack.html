@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Design Climbs the Stack</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Design Climbs the Stack</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/design-climbs-the-stack.md">source on GitHub</a></div>
-  <div class="note-summary">The three-century arc by which design has separated from successively higher layers of the production stack — from skill (Jaquet-Droz, Geneva 1750s) to mass craft, to software, to AI generation, and now to intent itself. Each separation commoditises the layer it leaves behind. The Liveness-era rung is lever discipline: design at the level of intent.</div>
-  <div class="tags"><span class="tag">design-climbs-the-stack</span><span class="tag">design</span><span class="tag">auteuring</span><span class="tag">lever-discipline</span><span class="tag">landes</span><span class="tag">jaquet-droz</span><span class="tag">watchmaking</span><span class="tag">intelligence</span><span class="tag">kannan</span><span class="tag">modernity-machine</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/design-climbs-the-stack.md">source on GitHub</a></div>
+    <div class="note-summary">The three-century arc by which design has separated from successively higher layers of the production stack — from skill (Jaquet-Droz, Geneva 1750s) to mass craft, to software, to AI generation, and now to intent itself. Each separation commoditises the layer it leaves behind. The Liveness-era rung is lever discipline: design at the level of intent.</div>
     <div class="prose">
-<p><strong>Articulated by</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> (Section V), 2026, building directly on <a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">Landes</a>&#x27;s <em>Revolution in Time</em> (1983) and extending it through the AI-auteuring and lever-discipline rungs.</p>
+<p><strong>Articulated by</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>, <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> (Section V), 2026, building directly on <a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">Landes</a>&#x27;s <em>Revolution in Time</em> (1983) and extending it through the AI-auteuring and lever-discipline rungs.</p>
 <h2 id="the-thesis">The Thesis</h2>
 <p>Design has been climbing the stack for three centuries. At each rung, the design discipline separates from the layer below it. The layer below, once design has separated, becomes cheap — <em>commoditised by the act of separation itself</em>. The pattern has a direction, and the direction has now reached <strong>intent</strong>.</p>
 <h2 id="the-five-rungs">The Five Rungs</h2>
@@ -84,7 +93,7 @@
 <p>The implication is not that earlier rungs disappear. The watchmaker still exists; mass production still exists; software still exists; AI generation still exists. The implication is that the <em>binding skill</em> has moved up the stack, and the people who command the binding skill at each rung capture the surplus the rung produces.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> — source essay (Section V)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> — source essay (Section V)</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">david-s-landes</a> — the source of the Geneva case</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/auteuring">auteuring</a> — the rung directly below; design separated from generation</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">not-my-lever</a> — the rung above; design separated from intent</li>
@@ -99,28 +108,59 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/crystallized-imagination">crystallized-imagination</a> — what each generated candidate is at the auteuring rung</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">14</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/auteuring">Auteuring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-14-clocks-in-the-belfry">RIT 14 — Clocks in the Belfry (Ch. 12)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-21-not-one-in-fifty-thousand">RIT 21 — Not One in Fifty Thousand (Ch. 19)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>14</b><span>linked from</span></div>
+      <div class="bearing"><b>13</b><span>links out</span></div>
+      <div class="bearing"><b>1338</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">14</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/auteuring">Auteuring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>6 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-21-not-one-in-fifty-thousand">RIT 21 — Not One in Fifty Thousand (Ch. 19)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-14-clocks-in-the-belfry">RIT 14 — Clocks in the Belfry (Ch. 12)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/putting-out-system">Putting-Out System</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/auteuring">Auteuring</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">design-climbs-the-stack</span><a class="tag" href="/wiki/topics/design">design</a><a class="tag" href="/wiki/topics/auteuring">auteuring</a><a class="tag" href="/wiki/topics/lever-discipline">lever-discipline</a><a class="tag" href="/wiki/topics/landes">landes</a><span class="tag tag-lone" title="Only this note uses it">jaquet-droz</span><a class="tag" href="/wiki/topics/watchmaking">watchmaking</a><span class="tag tag-lone" title="Only this note uses it">intelligence</span><span class="tag tag-lone" title="Only this note uses it">kannan</span><a class="tag" href="/wiki/topics/modernity-machine">modernity-machine</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

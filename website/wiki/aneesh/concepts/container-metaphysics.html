@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Container Metaphysics</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Container Metaphysics</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Container%20Metaphysics.md">source on GitHub</a></div>
-  <div class="note-summary">The error of treating a shelter, theory, or framework as a final destination rather than a launchpad — the belief that the anchor is the point, leading to epistemic stasis. In Not My Lever (2026), this error becomes the failure mode of trying to pick up a receded container (e.g., the 2010s Stoic revival) and asking it to hold the weight of the impossible the way Marcus Aurelius&#x27;s container did.</div>
-  <div class="tags"><span class="tag">container-metaphysics</span><span class="tag">place-making</span><span class="tag">epistemology</span><span class="tag">stasis</span><span class="tag">exploration</span><span class="tag">shelter</span><span class="tag">receding-containers</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Container%20Metaphysics.md">source on GitHub</a></div>
+    <div class="note-summary">The error of treating a shelter, theory, or framework as a final destination rather than a launchpad — the belief that the anchor is the point, leading to epistemic stasis. In Not My Lever (2026), this error becomes the failure mode of trying to pick up a receded container (e.g., the 2010s Stoic revival) and asking it to hold the weight of the impossible the way Marcus Aurelius&#x27;s container did.</div>
     <div class="prose">
-<p><strong>Source</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span> (2025-12-17)</p>
+<p><strong>Source</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> (2025-12-17)</p>
 <h2 id="definition">Definition</h2>
 <p>Container Metaphysics is the mistaken view that the function of a shelter — a theory, a home, a foundational framework — is to <em>contain</em> us safely within a fixed boundary. It treats the anchor as the point.</p>
 <p>The error: if the safety of the shelter is the goal, we stop exploring. We become the Tourist who never generates new Place — consuming the intelligibility built by others, inhabiting a static coordinate in perpetuity.</p>
@@ -52,12 +61,12 @@
 <h2 id="relation-to-plasticity">Relation to Plasticity</h2>
 <p><a class="wikilink" href="/wiki/aneesh/concepts/plasticity-vs-flexibility">Container metaphysics</a> is the pathological version of flexibility: taking the forms imposed by the system and treating them as permanent. Genuine <a class="wikilink" href="/wiki/aneesh/concepts/plasticity-vs-flexibility">plasticity</a> requires the willingness to abandon containers when they&#x27;ve served their purpose.</p>
 <h2 id="relation-to-receding-containers">Relation to Receding Containers</h2>
-<p>The 2026 essay <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> extends this concept historically. Where Container Metaphysics names the <em>error</em> of treating a shelter as a destination, <a class="wikilink" href="/wiki/aneesh/concepts/receding-containers">receding-containers</a> traces the historical thinning of the load-bearing metaphysical containers themselves. Container metaphysics is now the error of trying to <em>pick up a receded container</em> and ask it to do work the era no longer permits — the 2010s Stoic revival is the case in point.</p>
+<p>The 2026 essay <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> extends this concept historically. Where Container Metaphysics names the <em>error</em> of treating a shelter as a destination, <a class="wikilink" href="/wiki/aneesh/concepts/receding-containers">receding-containers</a> traces the historical thinning of the load-bearing metaphysical containers themselves. Container metaphysics is now the error of trying to <em>pick up a receded container</em> and ask it to do work the era no longer permits — the 2010s Stoic revival is the case in point.</p>
 <p>The Liveness-era alternative is the <a class="wikilink" href="/wiki/aneesh/concepts/designed-mindset">designed mindset</a>: a framework called up as a <em>callable module</em> for the duration of one project, never claimed as a description of the cosmos.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span> — source</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> — historical extension; the receding-containers thesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> — source</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> — historical extension; the receding-containers thesis</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/receding-containers">receding-containers</a> — the thinning of perma-containers across two millennia</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/designed-mindset">designed-mindset</a> — the Liveness-era replacement for the perma-container</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a> — the constructive alternative</li>
@@ -66,23 +75,54 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/plasticity-vs-flexibility">Plasticity vs. Flexibility</a> — the cognitive version of the same trap</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">9</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/accommodation-of-modernity">Accommodation of Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bryant-pluralism-of-worlds">Bryant&#x27;s Pluralism of Worlds</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>446</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">9</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-pluralism-of-worlds">Bryant&#x27;s Pluralism of Worlds</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/accommodation-of-modernity">Accommodation of Modernity</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/configurancy">Configurancy</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">container-metaphysics</span><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><span class="tag tag-lone" title="Only this note uses it">stasis</span><a class="tag" href="/wiki/topics/exploration">exploration</a><a class="tag" href="/wiki/topics/shelter">shelter</a><a class="tag" href="/wiki/topics/receding-containers">receding-containers</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

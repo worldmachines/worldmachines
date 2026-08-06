@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Performative Polymathism</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Performative Polymathism</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/performative-polymathism.md">source on GitHub</a></div>
-  <div class="note-summary">Performative polymathism is the desire to be <em>seen as</em> accomplished in a field outside one&#x27;s actual competence — an ego operation mistaken for intellectual curiosity, documented from Caesar to modern tech elites.</div>
-  <div class="tags"><span class="tag">ego</span><span class="tag">reputation</span><span class="tag">montaigne</span><span class="tag">identity</span><span class="tag">curiosity</span><span class="tag">status</span><span class="tag">creativity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/performative-polymathism.md">source on GitHub</a></div>
+    <div class="note-summary">Performative polymathism is the desire to be <em>seen as</em> accomplished in a field outside one&#x27;s actual competence — an ego operation mistaken for intellectual curiosity, documented from Caesar to modern tech elites.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>The desire to be recognized as accomplished in a field other than (and typically less prestigious than) one&#x27;s actual domain of excellence. Identified by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> as a recurring pattern among the powerful; explored autobiographically by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span>.</p>
+<p>The desire to be recognized as accomplished in a field other than (and typically less prestigious than) one&#x27;s actual domain of excellence. Identified by <a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> as a recurring pattern among the powerful; explored autobiographically by <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> in <a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a>.</p>
 <p>Performative polymathism is distinct from genuine intellectual range: it is oriented toward <em>reputation management</em> rather than the pleasures of knowing.</p>
 <h2 id="montaignes-catalogue">Montaigne&#x27;s Catalogue</h2>
 <p>Montaigne observes:</p>
@@ -56,27 +65,60 @@
 <li><strong>Performative</strong>: oriented toward the audience, toward being <em>seen</em></li>
 <li><strong>Curiosity-driven</strong>: oriented toward the subject, toward knowing</li>
 </ul>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Curiosity as Ego Dissolution&quot;">Curiosity as Ego Dissolution</span> for the positive formulation.</p>
+<p>See <a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution" title="Written [[Curiosity as Ego Dissolution]], resolved to curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a> for the positive formulation.</p>
 <h2 id="why-this-matters-for-creative-work">Why This Matters for Creative Work</h2>
-<p>Performative polymathism is also a hazard in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Tortured Artist Is So Yesterday&quot;">The Tortured Artist Is So Yesterday</span> framing — the tortured artist suffers for <em>recognition</em> as much as for the work itself. The shift toward collaborative creative labs may dissolve this, distributing ego investment across teams.</p>
+<p>Performative polymathism is also a hazard in <a class="wikilink" href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday" title="Written [[The Tortured Artist Is So Yesterday]], resolved to the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a> framing — the tortured artist suffers for <em>recognition</em> as much as for the work itself. The shift toward collaborative creative labs may dissolve this, distributing ego investment across teams.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Curiosity as Ego Dissolution&quot;">Curiosity as Ego Dissolution</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Burnout and Intellectual Recovery&quot;">Burnout and Intellectual Recovery</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unselfing&quot;">Unselfing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Authorship as Courage&quot;">Authorship as Courage</span> — the positive, non-performative alternative in creative contexts</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution" title="Written [[Curiosity as Ego Dissolution]], resolved to curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/burnout-and-intellectual-recovery" title="No note is called &quot;Burnout and Intellectual Recovery&quot; yet — see who is asking for it">Burnout and Intellectual Recovery</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/unselfing" title="Written [[Unselfing]], resolved to unselfing">Unselfing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/authorship-as-courage" title="Written [[Authorship as Courage]], resolved to authorship-as-courage">Authorship as Courage</a> — the positive, non-performative alternative in creative contexts</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>391</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">8</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/authorship-as-courage">Authorship as Courage</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfing">Unselfing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/bertrand-russell">Bertrand Russell</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/curiosity-vs-status-as-motivation">Curiosity vs. Status as Motivation for Learning</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/maria-popova">Maria Popova</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/bertrand-russell">Bertrand Russell</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfing">Unselfing</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/books-as-dwellings">Books as Dwellings</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ego">ego</a><a class="tag" href="/wiki/topics/reputation">reputation</a><a class="tag" href="/wiki/topics/montaigne">montaigne</a><a class="tag" href="/wiki/topics/identity">identity</a><a class="tag" href="/wiki/topics/curiosity">curiosity</a><a class="tag" href="/wiki/topics/status">status</a><a class="tag" href="/wiki/topics/creativity">creativity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

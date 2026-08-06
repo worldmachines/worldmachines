@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Cyclical Information Epistemics</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Cyclical Information Epistemics</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/cyclical-information-epistemics.md">source on GitHub</a></div>
-  <div class="note-summary">The Dubai camel proverb applied to information access: lore → search → LLMs may be heading back toward lore as the default epistemically reliable source, representing a civilizational regression in democratized knowledge.</div>
-  <div class="tags"><span class="tag">information-access</span><span class="tag">epistemics</span><span class="tag">technology-cycles</span><span class="tag">lore</span><span class="tag">regression</span><span class="tag">democratization</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/cyclical-information-epistemics.md">source on GitHub</a></div>
+    <div class="note-summary">The Dubai camel proverb applied to information access: lore → search → LLMs may be heading back toward lore as the default epistemically reliable source, representing a civilizational regression in democratized knowledge.</div>
     <div class="prose">
 <h2 id="the-core-pattern">The Core Pattern</h2>
-<p>Sathe&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span> uses the Dubai camel proverb as a structural frame: &quot;My grandfather rode a camel, my father rode a camel, I drive a Mercedes, my son drives a Land Rover, his son will drive a Land Rover, but his son will ride a camel.&quot;</p>
+<p>Sathe&#x27;s <a class="wikilink" href="/wiki/aneesh/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a> uses the Dubai camel proverb as a structural frame: &quot;My grandfather rode a camel, my father rode a camel, I drive a Mercedes, my son drives a Land Rover, his son will drive a Land Rover, but his son will ride a camel.&quot;</p>
 <p>Applied to information access:</p>
 <ul>
 <li>Generation 1: Lore — oral expertise, social reputation, lived experience as epistemic authority</li>
@@ -47,28 +56,59 @@
 <h2 id="the-regression-mechanism">The Regression Mechanism</h2>
 <p>The regression is not inevitable but conditional on two failures compounding:</p>
 <ol>
-<li><strong>Search degradation</strong>: Google&#x27;s quality decline (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Degradation of Search&quot;">Degradation of Search</span>) created demand for alternatives</li>
+<li><strong>Search degradation</strong>: Google&#x27;s quality decline (see <a class="wikilink" href="/wiki/aneesh/concepts/degradation-of-search" title="Written [[Degradation of Search]], resolved to degradation-of-search">Degradation of Search</a>) created demand for alternatives</li>
 <li><strong>LLM hallucination</strong>: The alternatives (ChatGPT, etc.) replaced poor search with worse epistemic standards — no citations, no confidence signals, confident fabrications</li>
 </ol>
 <p>If search quality had remained high, LLMs would have occupied a supplementary rather than primary role. The civilizational regression risk is a conditional: <em>if</em> LLMs displace search <em>and</em> LLMs remain unreliable, the fallback is expert lore.</p>
 <h2 id="what-would-break-the-cycle">What Would Break the Cycle?</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> represents the technical path out: KGs provide the grounding search provided (traceable, auditable), LLMs provide the accessibility that makes them attractive. If citation-backed generation (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perplexity AI&quot;">Perplexity AI</span>) or KG-grounded retrieval succeeds at scale, the cycle is interrupted.</p>
-<p>The cultural/institutional path is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> applied to information consumption: users who can recognize hallucinations — who have internalized enough domain knowledge to audit AI outputs — are epistemically protected even in the LLM era. This is precisely <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nick Cave&quot;">Nick Cave</span>&#x27;s implicit claim applied to epistemics rather than art.</p>
+<p>The <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> represents the technical path out: KGs provide the grounding search provided (traceable, auditable), LLMs provide the accessibility that makes them attractive. If citation-backed generation (see <a class="wikilink" href="/wiki/aneesh/entities/perplexity-ai" title="Written [[Perplexity AI]], resolved to perplexity-ai">Perplexity AI</a>) or KG-grounded retrieval succeeds at scale, the cycle is interrupted.</p>
+<p>The cultural/institutional path is <a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity" title="Written [[Taste as Epistemic Capacity]], resolved to taste-as-epistemic-capacity">Taste as Epistemic Capacity</a> applied to information consumption: users who can recognize hallucinations — who have internalized enough domain knowledge to audit AI outputs — are epistemically protected even in the LLM era. This is precisely <a class="wikilink" href="/wiki/aneesh/entities/nick-cave" title="Written [[Nick Cave]], resolved to nick-cave">Nick Cave</a>&#x27;s implicit claim applied to epistemics rather than art.</p>
 <h2 id="cross-source-resonances">Cross-Source Resonances</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span></strong>: taste protects against the LLM era&#x27;s epistemic risks; the &quot;new culture&quot; around AI tools is the cultural correlate of this synthesis page&#x27;s institutional prescription</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span></strong>: the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> is the technical response to the same problem this synthesis identifies</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good" title="Written [[On Being Good vs. Knowing Good]], resolved to on-being-good-vs-knowing-good">On Being Good vs. Knowing Good</a></strong>: taste protects against the LLM era&#x27;s epistemic risks; the &quot;new culture&quot; around AI tools is the cultural correlate of this synthesis page&#x27;s institutional prescription</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a></strong>: the <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> is the technical response to the same problem this synthesis identifies</li>
 </ul>
 <h2 id="essay-seed">Essay Seed</h2>
 <p><strong>Thesis candidate</strong>: The information technology cycle is not a smooth progress narrative but an oscillating dialectic between democratized and restricted access to epistemic authority. Each democratizing technology carries the seeds of its own epistemic degradation — search through SEO gaming, LLMs through hallucination. The question is whether structured retrieval (KGs) can finally break the cycle.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>420</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/healthcare-as-wrights-law-exception">Healthcare as Wright&#x27;s Law Exception</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-information-ecology">The Information Ecology — Noise, Lore, Libraries, and the Crisis of Navigation</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/degradation-of-search">Degradation of Search</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/fhir-knowledge-graphs-healthcare">Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/information-access">information-access</a><a class="tag" href="/wiki/topics/epistemics">epistemics</a><span class="tag tag-lone" title="Only this note uses it">technology-cycles</span><a class="tag" href="/wiki/topics/lore">lore</a><span class="tag tag-lone" title="Only this note uses it">regression</span><a class="tag" href="/wiki/topics/democratization">democratization</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,23 +26,32 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Cognitive Task Analysis</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Cognitive Task Analysis</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/cognitive-task-analysis.md">source on GitHub</a></div>
-  <div class="note-summary">A set of methodologies originally developed for US military training to extract tacit expert knowledge — how skilled practitioners actually make decisions — into explicit, transmissible form.</div>
-  <div class="tags"><span class="tag">expertise</span><span class="tag">knowledge-extraction</span><span class="tag">military</span><span class="tag">training</span><span class="tag">cognitive-science</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/cognitive-task-analysis.md">source on GitHub</a></div>
+    <div class="note-summary">A set of methodologies originally developed for US military training to extract tacit expert knowledge — how skilled practitioners actually make decisions — into explicit, transmissible form.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>Cognitive Task Analysis (CTA) is a family of methodologies developed primarily in military training contexts to extract the tacit, procedural knowledge of highly skilled experts — the judgment calls, pattern recognition, and heuristics that practitioners cannot easily articulate but that distinguish expert from novice performance.</p>
 <p>Standard task analysis captures <em>what</em> someone does. CTA captures <em>how</em> they think while doing it: what cues they attend to, what decision points they navigate, what alternatives they considered and discarded.</p>
 <h2 id="relevance-to-the-composite-ai-architecture">Relevance to the Composite AI Architecture</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>) mentions CTA as a practical tool for extracting the tacit expert knowledge that would populate <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span>. The cold-start problem for knowledge graphs in high-stakes domains is that the most valuable knowledge is precisely the kind that experts struggle to articulate. CTA provides methods for surfacing it.</p>
-<p>In the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> framing, CTA is the extraction pipeline: it converts <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Muddling Through&quot;">Muddling Through</span> heuristics and expert judgment into explicit, structured knowledge that can be encoded in a KG and thus made accessible to LLM-mediated traversal.</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>) mentions CTA as a practical tool for extracting the tacit expert knowledge that would populate <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a>. The cold-start problem for knowledge graphs in high-stakes domains is that the most valuable knowledge is precisely the kind that experts struggle to articulate. CTA provides methods for surfacing it.</p>
+<p>In the <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> framing, CTA is the extraction pipeline: it converts <a class="wikilink" href="/wiki/aneesh/concepts/muddling-through" title="Written [[Muddling Through]], resolved to muddling-through">Muddling Through</a> heuristics and expert judgment into explicit, structured knowledge that can be encoded in a KG and thus made accessible to LLM-mediated traversal.</p>
 <h2 id="connection-to-knowledge-diffusion">Connection to Knowledge Diffusion</h2>
-<p>CTA represents a formalization of what happens informally when expertise is transmitted between practitioners — but faster, more complete, and institutional rather than personal. In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wright&#x27;s Law&quot;">Wright&#x27;s Law</span> terms, CTA is a mechanism for accelerating the diffusion step that currently requires a generational delay in healthcare.</p>
+<p>CTA represents a formalization of what happens informally when expertise is transmitted between practitioners — but faster, more complete, and institutional rather than personal. In <a class="wikilink" href="/wiki/aneesh/concepts/wrights-law" title="Written [[Wright&#x27;s Law]], resolved to wrights-law">Wright&#x27;s Law</a> terms, CTA is a mechanism for accelerating the diffusion step that currently requires a generational delay in healthcare.</p>
 <h2 id="open-questions">Open Questions</h2>
 <ul>
 <li>CTA methods are time-intensive and contested — there is no single agreed protocol</li>
@@ -51,20 +60,66 @@
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Expertise&quot;">Expertise</span> — what CTA attempts to extract</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — where extracted knowledge gets encoded</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Muddling Through&quot;">Muddling Through</span> — the frontier decision-making style CTA tries to capture</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — the deployment context</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wright&#x27;s Law&quot;">Wright&#x27;s Law</span> — the efficiency goal that CTA-fed KGs serve</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/expertise" title="Written [[Expertise]], resolved to expertise">Expertise</a> — what CTA attempts to extract</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> — where extracted knowledge gets encoded</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/muddling-through" title="Written [[Muddling Through]], resolved to muddling-through">Muddling Through</a> — the frontier decision-making style CTA tries to capture</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> — the deployment context</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/wrights-law" title="Written [[Wright&#x27;s Law]], resolved to wrights-law">Wright&#x27;s Law</a> — the efficiency goal that CTA-fed KGs serve</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>14</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>341</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">14</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">Taste as Epistemic Capacity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/macrocognition">Macrocognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>6 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/muddling-through">Muddling Through</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-taste-gap-in-ai-systems">The Taste Gap in AI Systems</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/healthcare-as-wrights-law-exception">Healthcare as Wright&#x27;s Law Exception</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/klein-data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/composite-ai-architecture">Composite AI Architecture (Experts + LLM + KG)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/heuristics-and-biases">Heuristics and Biases</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/expertise">expertise</a><span class="tag tag-lone" title="Only this note uses it">knowledge-extraction</span><a class="tag" href="/wiki/topics/military">military</a><span class="tag tag-lone" title="Only this note uses it">training</span><a class="tag" href="/wiki/topics/cognitive-science">cognitive-science</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,24 +26,33 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Collaborative Creativity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Collaborative Creativity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/collaborative-creativity.md">source on GitHub</a></div>
-  <div class="note-summary">Collaborative creativity is the mode of creative production in which risk, exploration, and commitment are distributed across teams rather than concentrated in a single author — argued to be the natural successor to the solitary genius model in a post-LLM world.</div>
-  <div class="tags"><span class="tag">collaboration</span><span class="tag">creativity</span><span class="tag">authorship</span><span class="tag">risk</span><span class="tag">llm</span><span class="tag">post-print</span><span class="tag">gelman</span><span class="tag">science</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/collaborative-creativity.md">source on GitHub</a></div>
+    <div class="note-summary">Collaborative creativity is the mode of creative production in which risk, exploration, and commitment are distributed across teams rather than concentrated in a single author — argued to be the natural successor to the solitary genius model in a post-LLM world.</div>
     <div class="prose">
 <h2 id="the-argument">The Argument</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Tortured Artist Is So Yesterday&quot;">The Tortured Artist Is So Yesterday</span>: &quot;Groups can explore bolder directions than any one creator working alone. Risk spreads, ideas compound, and the scale of what can be attempted expands. The solitary genius was an artifact of print; the collaborative creative lab is the natural form of the world we are entering.&quot;</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday" title="Written [[The Tortured Artist Is So Yesterday]], resolved to the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a>: &quot;Groups can explore bolder directions than any one creator working alone. Risk spreads, ideas compound, and the scale of what can be attempted expands. The solitary genius was an artifact of print; the collaborative creative lab is the natural form of the world we are entering.&quot;</p>
 <p>Two mechanisms make collaborative creativity superior in the current moment:</p>
 <ol>
 <li><p><strong>LLMs lower the cost of individual exploration</strong> — solo ideation no longer requires rare human skill. The comparative advantage of a team is not ideation but <em>risk distribution</em> and <em>accountability structure</em>.</p></li>
 <li><p><strong>The scale of what can be attempted expands</strong> — distributed risk means each member need not stake everything on one idea. The team can attempt bolder commitments than any individual would risk alone.</p></li>
 </ol>
 <h2 id="the-science-analogy">The Science Analogy</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Andrew Gelman&quot;">Andrew Gelman</span> provides the precedent: scientists have always felt the &quot;solitary genius&quot; pressure, but scientific progress has always been distributed. &quot;The burden rarely falls on one person. The struggle is distributed across collaborative projects that outlive any single contributor.&quot;</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/andrew-gelman" title="Written [[Andrew Gelman]], resolved to andrew-gelman">Andrew Gelman</a> provides the precedent: scientists have always felt the &quot;solitary genius&quot; pressure, but scientific progress has always been distributed. &quot;The burden rarely falls on one person. The struggle is distributed across collaborative projects that outlive any single contributor.&quot;</p>
 <p>Science is the paradigm case of serious intellectual work; science has always been collaborative; therefore the solitary genius model is not intrinsic to serious intellectual work — it is an artifact of print culture&#x27;s economics.</p>
 <h2 id="the-collaborative-creative-lab">The Collaborative Creative Lab</h2>
 <p>Sathe&#x27;s term for the emerging institutional form. Properties:</p>
@@ -53,7 +62,7 @@
 <li>Ideas compound through internal dialogue before public commitment</li>
 <li>Work endures &quot;not because it is flawless, but because a group has committed to pushing it forward&quot;</li>
 </ul>
-<p>This is related to but distinct from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Cloister Web&quot;">The Cloister Web</span>: the Cloister Web is the <em>space</em> where collaborative exploration happens; the collaborative creative lab is the <em>organizational form</em> that inhabits that space.</p>
+<p>This is related to but distinct from <a class="wikilink" href="/wiki/aneesh/concepts/the-cloister-web" title="Written [[The Cloister Web]], resolved to the-cloister-web">The Cloister Web</a>: the Cloister Web is the <em>space</em> where collaborative exploration happens; the collaborative creative lab is the <em>organizational form</em> that inhabits that space.</p>
 <h2 id="tensions-and-unresolved-questions">Tensions and Unresolved Questions</h2>
 <ol>
 <li><strong>Accountability</strong>: If the group commits, who is accountable when the commitment is wrong? Collective accountability is notoriously weak.</li>
@@ -62,21 +71,54 @@
 </ol>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Cloister Web&quot;">The Cloister Web</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Authorship as Courage&quot;">Authorship as Courage</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Distributed Creative Risk&quot;">Distributed Creative Risk</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Print Culture and the Individual Author&quot;">Print Culture and the Individual Author</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs and Creative Labor&quot;">LLMs and Creative Labor</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Andrew Gelman&quot;">Andrew Gelman</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-cloister-web" title="Written [[The Cloister Web]], resolved to the-cloister-web">The Cloister Web</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/authorship-as-courage" title="Written [[Authorship as Courage]], resolved to authorship-as-courage">Authorship as Courage</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/distributed-creative-risk" title="No note is called &quot;Distributed Creative Risk&quot; yet — see who is asking for it">Distributed Creative Risk</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/print-culture-and-the-individual-author" title="Written [[Print Culture and the Individual Author]], resolved to print-culture-and-the-individual-author">Print Culture and the Individual Author</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/llms-and-creative-labor" title="No note is called &quot;LLMs and Creative Labor&quot; yet — see who is asking for it">LLMs and Creative Labor</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/andrew-gelman" title="Written [[Andrew Gelman]], resolved to andrew-gelman">Andrew Gelman</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>402</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">6</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-cloister-web">The Cloister Web</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/authorship-as-courage">Authorship as Courage</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/print-culture-and-the-individual-author">Print Culture and the Individual Author</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/from-artifact-to-process">From Artifact to Process — The Death of the Finished Work</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/andrew-gelman">Andrew Gelman</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/authorship-as-courage">Authorship as Courage</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/print-culture-and-the-individual-author">Print Culture and the Individual Author</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-cloister-web">The Cloister Web</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/rss-as-protocol-theology">RSS as Protocol Theology</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/collaboration">collaboration</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/authorship">authorship</a><a class="tag" href="/wiki/topics/risk">risk</a><a class="tag" href="/wiki/topics/llm">llm</a><a class="tag" href="/wiki/topics/post-print">post-print</a><a class="tag" href="/wiki/topics/gelman">gelman</a><a class="tag" href="/wiki/topics/science">science</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

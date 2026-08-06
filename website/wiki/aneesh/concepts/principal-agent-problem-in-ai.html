@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Principal-Agent Problem in AI</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Principal-Agent Problem in AI</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/principal-agent-problem-in-ai.md">source on GitHub</a></div>
-  <div class="note-summary">Reframing AI agents through the classical principal-agent problem: agents by definition remove agency from users, creating a structural misalignment between what an agent does and what the user actually wants.</div>
-  <div class="tags"><span class="tag">AI-agents</span><span class="tag">principal-agent</span><span class="tag">trust</span><span class="tag">personalization</span><span class="tag">LLM</span><span class="tag">economics</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/principal-agent-problem-in-ai.md">source on GitHub</a></div>
+    <div class="note-summary">Reframing AI agents through the classical principal-agent problem: agents by definition remove agency from users, creating a structural misalignment between what an agent does and what the user actually wants.</div>
     <div class="prose">
 <h2 id="classical-definition">Classical Definition</h2>
 <p>In economics and contract theory, the <strong>principal-agent problem</strong> arises when one party (the agent) acts on behalf of another (the principal) and their interests may diverge. The agent has information or capabilities the principal lacks; the principal cannot perfectly monitor the agent&#x27;s behavior.</p>
 <h2 id="the-ai-reframing">The AI Reframing</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chirag Shah&quot;">Chirag Shah</span> and Ryen White (2024) insert this problem into AI agent discourse via a definitional observation:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/chirag-shah" title="Written [[Chirag Shah]], resolved to chirag-shah">Chirag Shah</a> and Ryen White (2024) insert this problem into AI agent discourse via a definitional observation:</p>
 <blockquote><p>&quot;Agents by definition remove agency from a user in order to do things on the user&#x27;s behalf and save them time and effort.&quot;</p></blockquote>
 <p>The more capable the agent, the more agency is removed. This is the structural tension: the value proposition of agentic AI (autonomy, scale) is identical to the source of its misalignment risk.</p>
-<p>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study&quot;">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</span></p>
+<p>Source: <a class="wikilink" href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study" title="Written [[Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study]], resolved to jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a></p>
 <h2 id="key-failure-modes-identified">Key Failure Modes Identified</h2>
 <p>Shah &amp; White argue current agents fall short on:</p>
 <ul>
@@ -50,10 +59,10 @@
 <li><strong>Trust</strong>: without personalization, trust cannot be calibrated</li>
 </ul>
 <h2 id="the-sims-response">The Sims Response</h2>
-<p>The proposed solution is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sims (AI User Simulation)&quot;">Sims (AI User Simulation)</span>: user-representing companion agents that hold intimate knowledge of the user and can represent user interests — rather than just executing tasks.</p>
+<p>The proposed solution is <a class="wikilink-wanted" href="/wiki/wanted/sims-ai-user-simulation" title="No note is called &quot;Sims (AI User Simulation)&quot; yet — see who is asking for it">Sims (AI User Simulation)</a>: user-representing companion agents that hold intimate knowledge of the user and can represent user interests — rather than just executing tasks.</p>
 <p>A Sim mediates between the user&#x27;s actual interests and what the task-executing agent does. It introduces a second layer of representation.</p>
 <h2 id="connection-to-composability">Connection to Composability</h2>
-<p>If LLMs represent a composability upgrade (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span>), the principal-agent problem in AI is a distributional question: who does this composability upgrade actually serve? The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span> research suggests: primarily sophisticated users. The principal-agent framing deepens this: even when a user has access to an agent, the agent may be optimizing for something other than that user&#x27;s genuine interests.</p>
+<p>If LLMs represent a composability upgrade (see <a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a>), the principal-agent problem in AI is a distributional question: who does this composability upgrade actually serve? The <a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a> research suggests: primarily sophisticated users. The principal-agent framing deepens this: even when a user has access to an agent, the agent may be optimizing for something other than that user&#x27;s genuine interests.</p>
 <h2 id="open-questions">Open Questions</h2>
 <ul>
 <li>Can Sims represent users without becoming surveillance infrastructure?</li>
@@ -62,20 +71,54 @@
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sims (AI User Simulation)&quot;">Sims (AI User Simulation)</span> — Shah &amp; White&#x27;s proposed solution</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span> — distributional question about who agents serve</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span> — the capability context for AI agents</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chirag Shah&quot;">Chirag Shah</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling as Philosophical Concept&quot;">Dwelling as Philosophical Concept</span> — whose space does the agent serve?</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/sims-ai-user-simulation" title="No note is called &quot;Sims (AI User Simulation)&quot; yet — see who is asking for it">Sims (AI User Simulation)</a> — Shah &amp; White&#x27;s proposed solution</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a> — distributional question about who agents serve</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a> — the capability context for AI agents</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/chirag-shah" title="Written [[Chirag Shah]], resolved to chirag-shah">Chirag Shah</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept" title="Written [[Dwelling as Philosophical Concept]], resolved to dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a> — whose space does the agent serve?</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>399</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-worker">Knowledge Worker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-digital-studiolo">The Digital Studiolo</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/composability-and-inequality">Composability and Inequality</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/chirag-shah">Chirag Shah</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/composable-knowledge">Composable Knowledge</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-3-2025">Jan. 3, 2025</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/sparing-and-freeing">Sparing and Freeing</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ai-agents">AI-agents</a><a class="tag" href="/wiki/topics/principal-agent">principal-agent</a><a class="tag" href="/wiki/topics/trust">trust</a><span class="tag tag-lone" title="Only this note uses it">personalization</span><a class="tag" href="/wiki/topics/llm">LLM</a><a class="tag" href="/wiki/topics/economics">economics</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

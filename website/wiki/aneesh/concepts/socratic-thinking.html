@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Socratic Thinking</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Socratic Thinking</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/socratic-thinking.md">source on GitHub</a></div>
-  <div class="note-summary">A framework for thinking as social, questing inquiry — the act of creating navigable places out of pre-answered questions through dialogue, disagreement, and collaborative knowledge-building.</div>
-  <div class="tags"><span class="tag">Socratic-method</span><span class="tag">epistemology</span><span class="tag">dialogue</span><span class="tag">inquiry</span><span class="tag">place-making</span><span class="tag">Agnes-Callard</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/socratic-thinking.md">source on GitHub</a></div>
+    <div class="note-summary">A framework for thinking as social, questing inquiry — the act of creating navigable places out of pre-answered questions through dialogue, disagreement, and collaborative knowledge-building.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<blockquote><p>&quot;Thinking is a social quest for better answers to the sorts of questions that show up for us already answered.&quot; — <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span>, paraphrased</p></blockquote>
+<blockquote><p>&quot;Thinking is a social quest for better answers to the sorts of questions that show up for us already answered.&quot; — <a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a>, paraphrased</p></blockquote>
 <p>Broken down:</p>
 <ul>
 <li><strong>Social</strong>: Done with a partner who disagrees because they hold their own views.</li>
@@ -58,12 +67,12 @@
 <li>&quot;Which show?&quot; (when someone claims to love TV) forces specification — a place is created.</li>
 <li>Disagreement over a list opens the meta-question: &quot;What is it to be entertained?&quot;</li>
 </ul>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thinking with Places&quot;">Thinking with Places</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a>, <a class="wikilink" href="/wiki/aneesh/summaries/thinking-with-places" title="Written [[Thinking with Places]], resolved to thinking-with-places">Thinking with Places</a></p>
 <h2 id="why-pre-answered-questions-are-the-target">Why Pre-Answered Questions Are the Target</h2>
-<p>Pre-answered questions are the hardest to examine because our entire operating stance depends on them. Gravity is obvious — until someone asks why. The first step is admitting that everyone&#x27;s guiding landmarks may be <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">semi-solid smoke</span>.</p>
+<p>Pre-answered questions are the hardest to examine because our entire operating stance depends on them. Gravity is obvious — until someone asks why. The first step is admitting that everyone&#x27;s guiding landmarks may be <a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">semi-solid smoke</a>.</p>
 <h2 id="tools-as-socratic-constraint">Tools as Socratic Constraint</h2>
 <p>Even solo thinking with a tool is quasi-Socratic: the tool interrupts pure space and forces specification. Netflix&#x27;s algorithm, a hammer, a spreadsheet — each enforces a kind of interrogation on possibility-space.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tools and Worldview Commitment&quot;">Tools and Worldview Commitment</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/tools-and-worldview-commitment" title="Written [[Tools and Worldview Commitment]], resolved to tools-and-worldview-commitment">Tools and Worldview Commitment</a></p>
 <h2 id="ai-as-socratic-partner">AI as Socratic Partner</h2>
 <p>Conditions under which LLMs can serve as Socratic co-pilots:</p>
 <ol>
@@ -71,27 +80,82 @@
 <li>Infinite patience; no urge to win</li>
 <li>Ability to hold question-space open without dissolving it into a problem</li>
 </ol>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs as Epistemic Tools&quot;">LLMs as Epistemic Tools</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chatbots, Bats &amp; Broken Oracles&quot;">Chatbots, Bats &amp; Broken Oracles</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/llms-as-epistemic-tools" title="Written [[LLMs as Epistemic Tools]], resolved to llms-as-epistemic-tools">LLMs as Epistemic Tools</a>, <a class="wikilink-wanted" href="/wiki/wanted/chatbots-bats-and-broken-oracles" title="No note is called &quot;Chatbots, Bats &amp; Broken Oracles&quot; yet — see who is asking for it">Chatbots, Bats &amp; Broken Oracles</a></p>
 <h2 id="social-internet-application">Social Internet Application</h2>
 <p>Social internet currently privileges winning. Socratic inquiry as corrective posture: collaborative, willing to challenge and accept. &quot;The dialogue is the real post.&quot;</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a>, <a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a></p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs. Questions&quot;">Problems vs. Questions</span> — the conceptual foundation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — thinking as place-making</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">Normative Self-Blindness</span> — what Socratic thinking must overcome</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs as Epistemic Tools&quot;">LLMs as Epistemic Tools</span> — AI Socratic partners</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span> — primary philosophical source</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Nagel&quot;">Thomas Nagel</span> — bat example as Socratic inquiry on impossible question</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs. Questions]], resolved to problems-vs-questions">Problems vs. Questions</a> — the conceptual foundation</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — thinking as place-making</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">Normative Self-Blindness</a> — what Socratic thinking must overcome</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/llms-as-epistemic-tools" title="Written [[LLMs as Epistemic Tools]], resolved to llms-as-epistemic-tools">LLMs as Epistemic Tools</a> — AI Socratic partners</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a> — primary philosophical source</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/thomas-nagel" title="Written [[Thomas Nagel]], resolved to thomas-nagel">Thomas Nagel</a> — bat example as Socratic inquiry on impossible question</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>23</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>424</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">23</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>15 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/llms-as-epistemic-tools">LLMs as Epistemic Tools</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/printing-press-and-information-overload">Printing Press and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/thinking-with-places">Thinking with Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-nagel">Thomas Nagel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/signal-to-orientation-ladder">Signal-to-Orientation Ladder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/waldenponding">Waldenponding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/biology-of-meaning-making">Biology of Meaning-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-as-place">Identity as Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/hank-green">Hank Green</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/information-overload-across-eras">Information Overload Across Eras</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/socratic-method-and-ai">Socratic Method and AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/chatbots-bats-broken-oracles">Chatbots, Bats &amp; Broken Oracles</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/navigation-and-cognition">Navigation and Cognition</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/socratic-method">Socratic-method</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><span class="tag tag-lone" title="Only this note uses it">dialogue</span><a class="tag" href="/wiki/topics/inquiry">inquiry</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/agnes-callard">Agnes-Callard</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

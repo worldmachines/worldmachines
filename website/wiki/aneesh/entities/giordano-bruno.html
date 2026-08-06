@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Giordano Bruno (1548-1600)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Giordano Bruno (1548-1600)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/giordano-bruno.md">source on GitHub</a></div>
-  <div class="note-summary">Giordano Bruno (1548-1600) is reread by Rao not as an early modern martyr for science, but as a terminal medieval outlier whose fate marks the extinguishing of a freewheeling pre-modern mode, not the birth of a new worldview.</div>
-  <div class="tags"><span class="tag">thinker</span><span class="tag">philosopher</span><span class="tag">giordano-bruno</span><span class="tag">medieval</span><span class="tag">hermeticism</span><span class="tag">memory-art</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/giordano-bruno.md">source on GitHub</a></div>
+    <div class="note-summary">Giordano Bruno (1548-1600) is reread by Rao not as an early modern martyr for science, but as a terminal medieval outlier whose fate marks the extinguishing of a freewheeling pre-modern mode, not the birth of a new worldview.</div>
     <div class="prose">
 <h2 id="standard-reading-vs-raos-reading">Standard Reading vs. Rao&#x27;s Reading</h2>
 <p><strong>Standard reading</strong>: Bruno as early modern martyr — burned by the Inquisition for his infinite-universe cosmology, proto-modern pluralism, anticipating Copernican heliocentrism, a victim of religious intolerance ahead of his time.</p>
@@ -55,33 +64,75 @@
 <h2 id="intellectual-significance">Intellectual Significance</h2>
 <p>Bruno&#x27;s case is a data point for understanding what the Modernity Machine&#x27;s &quot;turning on&quot; actually meant: it didn&#x27;t just enable new thought — it <em>foreclosed</em> certain modes of thought that had been compatible with medieval heterogeneity but were incompatible with both the legibility demands of the modernity machine and the empiricism of the emerging scientific sensibility.</p>
 <h2 id="sathes-use-2025-essay-series">Sathe&#x27;s Use (2025 Essay Series)</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span>, Sathe invokes Bruno as a cautionary example of <strong>printing-press disorientation</strong> — the figure who, lacking quality-filters for the new flood of books, mixed mystical click-bait with Copernican theory and invented an infinite universe without data. Sathe&#x27;s characterization (&quot;He was not [a forefather of modern cosmology]&quot;) serves a rhetorical purpose: to illustrate what happens when signal overwhelms a culture&#x27;s place-making tools.</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a>, Sathe invokes Bruno as a cautionary example of <strong>printing-press disorientation</strong> — the figure who, lacking quality-filters for the new flood of books, mixed mystical click-bait with Copernican theory and invented an infinite universe without data. Sathe&#x27;s characterization (&quot;He was not [a forefather of modern cosmology]&quot;) serves a rhetorical purpose: to illustrate what happens when signal overwhelms a culture&#x27;s place-making tools.</p>
 <p>This is compatible with, though less historically precise than, Rao&#x27;s Yates-grounded reading above. Both converge on Bruno-as-cautionary rather than Bruno-as-proto-modern.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a>, <a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a></p>
 <h2 id="sathes-use-in-we-need-homes-in-the-delta-quadrant-2025">Sathe&#x27;s Use in &quot;We Need Homes in the Delta Quadrant&quot; (2025)</h2>
 <p>In §I, Sathe invokes Bruno in a strikingly different register from his later essays: not as cautionary figure of printing-press disorientation, but as an exemplar of pre-modern sky-as-place. Working in the Hermetic tradition, Bruno &quot;saw constellations as talismans — anchoring points in a metaphysical sky.&quot; Sathe uses Bruno alongside the Indian <em>nakshatras</em> to argue that pre-GPS navigation was already place-making: stars were not merely navigational tools but symbolic structures that converted the undifferentiated sky into a legible, inhabited space. This is Bruno as early technology of orientation, before the Modernity Machine foreclosed that imaginative tradition. The two uses (cautionary in the later essays; generative in this one) are not contradictory — they address different aspects of Bruno&#x27;s position at the edge between medieval and modern spatial understanding.</p>
 <p>→ See <a class="wikilink" href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">we-need-homes-in-the-delta-quadrant</a>, §I</p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ibn Khaldun&quot;">Ibn Khaldun</span> — parallel case: both retrofitted by modernity as proto-moderns, both actually terminal medievals</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span> — Bruno&#x27;s fate marks the transition point</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility as Optimization Target&quot;">Legibility as Optimization Target</span> — the modernity machine&#x27;s demand for legibility is what Bruno&#x27;s tradition couldn&#x27;t survive</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hermeticism&quot;">Hermeticism</span> — the tradition Bruno misread</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span> — Sathe&#x27;s use as cautionary example</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span> — disorientation from information overload</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/ibn-khaldun" title="Written [[Ibn Khaldun]], resolved to ibn-khaldun">Ibn Khaldun</a> — parallel case: both retrofitted by modernity as proto-moderns, both actually terminal medievals</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a> — Bruno&#x27;s fate marks the transition point</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/legibility-as-optimization-target" title="No note is called &quot;Legibility as Optimization Target&quot; yet — see who is asking for it">Legibility as Optimization Target</a> — the modernity machine&#x27;s demand for legibility is what Bruno&#x27;s tradition couldn&#x27;t survive</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/hermeticism" title="No note is called &quot;Hermeticism&quot; yet — see who is asking for it">Hermeticism</a> — the tradition Bruno misread</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a> — Sathe&#x27;s use as cautionary example</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a> — disorientation from information overload</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/kei-kreutler">Kei Kreutler</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>14</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>642</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">14</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/printing-press-and-information-overload">Printing Press and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ibn-khaldun">Ibn Khaldun (1332-1406)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/tools-and-worldview-commitment">Tools and Worldview Commitment</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>6 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/terminal-medievals-vs-early-moderns">Terminal Medievals vs. Early Moderns: The Retrofitting Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/information-overload-across-eras">Information Overload Across Eras</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/kei-kreutler">Kei Kreutler</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii">The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/printing-press-and-information-overload">Printing Press and Information Overload</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/thinker">thinker</a><a class="tag" href="/wiki/topics/philosopher">philosopher</a><a class="tag" href="/wiki/topics/giordano-bruno">giordano-bruno</a><a class="tag" href="/wiki/topics/medieval">medieval</a><span class="tag tag-lone" title="Only this note uses it">hermeticism</span><span class="tag tag-lone" title="Only this note uses it">memory-art</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

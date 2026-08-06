@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>David S. Landes (1924–2013)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>David S. Landes (1924–2013)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/david-s-landes.md">source on GitHub</a></div>
-  <div class="note-summary">Harvard economic historian whose 1986 essay &#x27;What Do Bosses Really Do?&#x27; provided the historical framework for understanding the essential coordinating function of managers and entrepreneurs — used by Aneesh Sathe as the analytical template for platform economics. His 1983 <em>Revolution in Time: Clocks and the Making of the Modern World</em> — now fully ingested across 24 reading notes — argues the clock was demand-pulled into existence by monastic time-discipline, documents the incumbency-failure chain across seven centuries of horology, and supplies the design-climbs-the-stack thesis in Sathe&#x27;s Not My Lever (2026).</div>
-  <div class="tags"><span class="tag">economic-history</span><span class="tag">labor</span><span class="tag">management</span><span class="tag">platforms</span><span class="tag">industrial-revolution</span><span class="tag">watchmaking</span><span class="tag">revolution-in-time</span><span class="tag">horology</span><span class="tag">time-discipline</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/david-s-landes.md">source on GitHub</a></div>
+    <div class="note-summary">Harvard economic historian whose 1986 essay &#x27;What Do Bosses Really Do?&#x27; provided the historical framework for understanding the essential coordinating function of managers and entrepreneurs — used by Aneesh Sathe as the analytical template for platform economics. His 1983 <em>Revolution in Time: Clocks and the Making of the Modern World</em> — now fully ingested across 24 reading notes — argues the clock was demand-pulled into existence by monastic time-discipline, documents the incumbency-failure chain across seven centuries of horology, and supplies the design-climbs-the-stack thesis in Sathe&#x27;s Not My Lever (2026).</div>
     <div class="prose">
 <p>Economic historian at Harvard, known for sweeping histories of technology, capitalism, and industrial development. Author of <em>The Unbound Prometheus</em> (1969, on European industrialization) and <em>The Wealth and Poverty of Nations</em> (1998).</p>
 <h2 id="key-work-referenced">Key Work Referenced</h2>
@@ -43,12 +52,12 @@
 </ul>
 <p>Landes argues against the view that factory owners and bosses were merely exploiters who could be eliminated. Instead, he shows that the &quot;boss&quot; performed an <strong>essential economic function</strong>: organizing production, connecting producers to markets, and solving coordination problems (embezzlement, shirking, quality control) that guild systems and putting-out arrangements could not solve at scale.</p>
 <h2 id="how-sathe-uses-landes">How Sathe Uses Landes</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;What Do Platforms Really Do?&quot;">What Do Platforms Really Do?</span>, Sathe transposes Landes&#x27;s framework to platform economics:</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do" title="Written [[What Do Platforms Really Do?]], resolved to what-do-platforms-really-do">What Do Platforms Really Do?</a>, Sathe transposes Landes&#x27;s framework to platform economics:</p>
 <ul>
 <li>Platforms perform the same functions as Landes&#x27;s factory owners — market creation, labor specialization, management</li>
-<li>They solve the same problems through <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Management&quot;">Algorithmic Management</span> instead of overseers</li>
-<li>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Putting-Out System&quot;">Putting-Out System</span> structure persists in how platforms shift creative risk onto creators</li>
-<li>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Specialization of Ideas&quot;">Specialization of Ideas</span> mirrors Landes&#x27;s analysis of industrial task disaggregation</li>
+<li>They solve the same problems through <a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-management" title="Written [[Algorithmic Management]], resolved to algorithmic-management">Algorithmic Management</a> instead of overseers</li>
+<li>The <a class="wikilink" href="/wiki/aneesh/concepts/putting-out-system" title="Written [[Putting-Out System]], resolved to putting-out-system">Putting-Out System</a> structure persists in how platforms shift creative risk onto creators</li>
+<li>The <a class="wikilink" href="/wiki/aneesh/concepts/specialization-of-ideas" title="Written [[Specialization of Ideas]], resolved to specialization-of-ideas">Specialization of Ideas</a> mirrors Landes&#x27;s analysis of industrial task disaggregation</li>
 </ul>
 <h2 id="key-concepts-borrowed">Key Concepts Borrowed</h2>
 <ul>
@@ -57,7 +66,7 @@
 <li><strong>Putting-out system mechanics</strong>: merchant-manufacturers who shifted capital costs and production risk onto workers</li>
 </ul>
 <h2 id="revolution-in-time-1983-and-the-design-climbs-the-stack-thesis"><em>Revolution in Time</em> (1983) and the Design-Climbs-the-Stack Thesis</h2>
-<p>Sathe&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> (2026) cites Landes&#x27;s <em>Revolution in Time: Clocks and the Making of the Modern World</em> (1983) as the source for the moment <strong>design became the asset and skill became the commodity</strong>. The case study is the eighteenth-century watch trade in Geneva and London.</p>
+<p>Sathe&#x27;s <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> (2026) cites Landes&#x27;s <em>Revolution in Time: Clocks and the Making of the Modern World</em> (1983) as the source for the moment <strong>design became the asset and skill became the commodity</strong>. The case study is the eighteenth-century watch trade in Geneva and London.</p>
 <ul>
 <li><strong>Pierre Jaquet-Droz</strong> in La Chaux-de-Fonds, 1750s, drew movements on paper and sent the drawings to specialised hands: wheel-cutters, jewellers, pinion-makers, springers. The complete watch came from no single hand.</li>
 <li>Before this separation, the design lived in the carpenter&#x27;s hand and eye, inseparable from the making. The watch trade is the cleanest case study because the artefact is small, complex, and irreducibly composite — a setting in which the separation between design and skill is <em>forced</em> rather than chosen.</li>
@@ -87,42 +96,79 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Putting-Out System&quot;">Putting-Out System</span> — historical economic structure Landes describes</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Management&quot;">Algorithmic Management</span> — the contemporary update to his &quot;boss&quot; concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Platforms as Neo-Bosses&quot;">Platforms as Neo-Bosses</span> — synthesis building directly on his framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Specialization of Ideas&quot;">Specialization of Ideas</span> — the platform-era version of task disaggregation</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/putting-out-system" title="Written [[Putting-Out System]], resolved to putting-out-system">Putting-Out System</a> — historical economic structure Landes describes</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-management" title="Written [[Algorithmic Management]], resolved to algorithmic-management">Algorithmic Management</a> — the contemporary update to his &quot;boss&quot; concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/platforms-as-neo-bosses" title="Written [[Platforms as Neo-Bosses]], resolved to platforms-as-neo-bosses">Platforms as Neo-Bosses</a> — synthesis building directly on his framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/specialization-of-ideas" title="Written [[Specialization of Ideas]], resolved to specialization-of-ideas">Specialization of Ideas</a> — the platform-era version of task disaggregation</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/design-climbs-the-stack">design-climbs-the-stack</a> — Sathe&#x27;s 2026 extension of the <em>Revolution in Time</em> thesis</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> — the essay citing <em>Revolution in Time</em></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> — the essay citing <em>Revolution in Time</em></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">clock-as-incomplete-discipline</a> — the concept the Introduction most directly informs (and complicates)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/untimely">untimely</a> — the remainder disciplinary time secretes: monastic anxiety dreams, Saint Monday, the GI&#x27;s watch marking time that is still his</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a> — the clock as the Modernity Machine&#x27;s key device; Mumford&#x27;s epigraph (&quot;a perfection toward which other machines aspire&quot;) heads <em>Revolution in Time</em></li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;What Do Platforms Really Do?&quot;">What Do Platforms Really Do?</span></li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do" title="Written [[What Do Platforms Really Do?]], resolved to what-do-platforms-really-do">What Do Platforms Really Do?</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">16</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/pull-vs-push-machines">Pull vs. Push Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06b-banks-incorporation-and-the-1873-depression">Overtaking Britain: Technology, Finance, and the Long Depression of 1873 in Germany and the United States</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch07-industrial-leviathans-and-their-opponents">The Leviathans of Industry, Their Workers, and the Rise of the Consumer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06a-german-and-american-industrialization">Two Roads to Industrial Ascent: Germany and the United States Overtake Britain</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>22</b><span>linked from</span></div>
+      <div class="bearing"><b>20</b><span>links out</span></div>
+      <div class="bearing"><b>1872</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">22</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/putting-out-system">Putting-Out System</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/pull-vs-push-machines">Pull vs. Push Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/platforms-as-neo-bosses">Platforms as Neo-Bosses</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/what-do-platforms-really-do">What Do Platforms Really Do?</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>14 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-management">Algorithmic Management</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry">Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/specialization-of-ideas">Specialization of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06b-banks-incorporation-and-the-1873-depression">Overtaking Britain: Technology, Finance, and the Long Depression of 1873 in Germany and the United States</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06a-german-and-american-industrialization">Two Roads to Industrial Ascent: Germany and the United States Overtake Britain</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch07-industrial-leviathans-and-their-opponents">The Leviathans of Industry, Their Workers, and the Rise of the Consumer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/putting-out-system">Putting-Out System</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-20-ah-but-he-could">RIT 20 — &quot;Ah, But He Could!&quot; (ch. 18)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/what-do-platforms-really-do">What Do Platforms Really Do?</a><span class="rail-where">6</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/economic-history">economic-history</a><a class="tag" href="/wiki/topics/labor">labor</a><a class="tag" href="/wiki/topics/management">management</a><a class="tag" href="/wiki/topics/platforms">platforms</a><a class="tag" href="/wiki/topics/industrial-revolution">industrial-revolution</a><a class="tag" href="/wiki/topics/watchmaking">watchmaking</a><span class="tag tag-lone" title="Only this note uses it">revolution-in-time</span><a class="tag" href="/wiki/topics/horology">horology</a><a class="tag" href="/wiki/topics/time-discipline">time-discipline</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

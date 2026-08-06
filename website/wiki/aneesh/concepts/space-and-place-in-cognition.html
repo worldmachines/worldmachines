@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Space and Place in Cognition</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Space and Place in Cognition</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/space-and-place-in-cognition.md">source on GitHub</a></div>
-  <div class="note-summary">The central framework across Sathe&#x27;s series: space is undifferentiated possibility; place is an ordered world of meaning created by interrupting space with knowledge-anchored landmarks. Thinking is place-making.</div>
-  <div class="tags"><span class="tag">place-making</span><span class="tag">cognition</span><span class="tag">epistemology</span><span class="tag">Yi-Fu-Tuan</span><span class="tag">space</span><span class="tag">navigation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/space-and-place-in-cognition.md">source on GitHub</a></div>
+    <div class="note-summary">The central framework across Sathe&#x27;s series: space is undifferentiated possibility; place is an ordered world of meaning created by interrupting space with knowledge-anchored landmarks. Thinking is place-making.</div>
     <div class="prose">
 <h2 id="origin">Origin</h2>
 <p>The framework adapts humanistic geography — principally <a class="wikilink" href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a>&#x27;s <em>Space and Place: The Perspective of Experience</em> (1977) — into a theory of cognition and inquiry.</p>
@@ -58,7 +67,7 @@
 </ul>
 <p><strong>Thinking = place-making</strong>: converting ungraspable into knowledge-anchored.</p>
 <h2 id="fractal-structure-of-place">Fractal Structure of Place</h2>
-<p>Places are nested. Identity is the outermost place; closer inspection reveals it dissolves into smaller places the way a city dissolves into neighbourhoods. See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Mind as Semi-Solid Smoke&quot;">The Mind as Semi-Solid Smoke</span>.</p>
+<p>Places are nested. Identity is the outermost place; closer inspection reveals it dissolves into smaller places the way a city dissolves into neighbourhoods. See: <a class="wikilink" href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke" title="Written [[The Mind as Semi-Solid Smoke]], resolved to the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a>.</p>
 <h2 id="tools-as-micro-places">Tools as Micro-Places</h2>
 <p>Every tool is a micro-place. Tools:</p>
 <ul>
@@ -66,33 +75,82 @@
 <li>Foreclose alternative moves.</li>
 <li>Commit the user to a worldview.</li>
 </ul>
-<p>The search bar is open space; Netflix&#x27;s suggestions are a curated place. See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tools and Worldview Commitment&quot;">Tools and Worldview Commitment</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Curation as Place-Making&quot;">Algorithmic Curation as Place-Making</span>.</p>
+<p>The search bar is open space; Netflix&#x27;s suggestions are a curated place. See: <a class="wikilink" href="/wiki/aneesh/concepts/tools-and-worldview-commitment" title="Written [[Tools and Worldview Commitment]], resolved to tools-and-worldview-commitment">Tools and Worldview Commitment</a>, <a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making" title="Written [[Algorithmic Curation as Place-Making]], resolved to algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a>.</p>
 <h2 id="socratic-dialogue-as-cartography">Socratic Dialogue as Cartography</h2>
-<p>Socratic dialogue interrupts space and makes concrete what was nebulous — <em>interrogation as cartography</em>. Each exchange plants a map point in the question-space. See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span>.</p>
+<p>Socratic dialogue interrupts space and makes concrete what was nebulous — <em>interrogation as cartography</em>. Each exchange plants a map point in the question-space. See: <a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a>.</p>
 <h2 id="applied-inward-the-mind">Applied Inward: The Mind</h2>
-<p>Internal cognitive landmarks (&quot;insta-places&quot;) are conjured from experience and treated as solid — even when they are not. This is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">Normative Self-Blindness</span>. The mind is a collection of semi-solid smoke landmarks held together by the functional necessity of acting. See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Mind as Semi-Solid Smoke&quot;">The Mind as Semi-Solid Smoke</span>.</p>
+<p>Internal cognitive landmarks (&quot;insta-places&quot;) are conjured from experience and treated as solid — even when they are not. This is <a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">Normative Self-Blindness</a>. The mind is a collection of semi-solid smoke landmarks held together by the functional necessity of acting. See: <a class="wikilink" href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke" title="Written [[The Mind as Semi-Solid Smoke]], resolved to the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a>.</p>
 <h2 id="applied-outward-social-media">Applied Outward: Social Media</h2>
-<p>Orientation is a biological need: organisms need accurate mental maps to survive. Social platforms create noisy signals that gesture toward places but never deliver genuine orientation — leaving users lost and hungry. See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Signal-to-Orientation Ladder&quot;">Signal-to-Orientation Ladder</span>.</p>
+<p>Orientation is a biological need: organisms need accurate mental maps to survive. Social platforms create noisy signals that gesture toward places but never deliver genuine orientation — leaving users lost and hungry. See: <a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a>, <a class="wikilink" href="/wiki/aneesh/concepts/signal-to-orientation-ladder" title="Written [[Signal-to-Orientation Ladder]], resolved to signal-to-orientation-ladder">Signal-to-Orientation Ladder</a>.</p>
 <h2 id="connections">Connections</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a> — founding source for space/place distinction</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — the method of place-making in inquiry</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">Normative Self-Blindness</span> — what happens when we can&#x27;t see our own places</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Insta-Places&quot;">Insta-Places</span> — internal cognitive shortcuts</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tools and Worldview Commitment&quot;">Tools and Worldview Commitment</span> — tools as micro-places</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span> — biological analog</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Navigation and Cognition&quot;">Navigation and Cognition</span> — evolutionary basis</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — the method of place-making in inquiry</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">Normative Self-Blindness</a> — what happens when we can&#x27;t see our own places</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/insta-places" title="Written [[Insta-Places]], resolved to insta-places">Insta-Places</a> — internal cognitive shortcuts</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/tools-and-worldview-commitment" title="Written [[Tools and Worldview Commitment]], resolved to tools-and-worldview-commitment">Tools and Worldview Commitment</a> — tools as micro-places</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a> — biological analog</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/navigation-and-cognition" title="Written [[Navigation and Cognition]], resolved to navigation-and-cognition">Navigation and Cognition</a> — evolutionary basis</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/tuan-modes-of-experience">Tuan&#x27;s Modes of Experience</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>19</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>447</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">19</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/tuan-modes-of-experience">Tuan&#x27;s Modes of Experience</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>11 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/llms-as-epistemic-tools">LLMs as Epistemic Tools</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/navigation-and-cognition">Navigation and Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/thinking-with-places">Thinking with Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/tools-and-worldview-commitment">Tools and Worldview Commitment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/signal-to-orientation-ladder">Signal-to-Orientation Ladder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-as-place">Identity as Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/chatbots-bats-broken-oracles">Chatbots, Bats &amp; Broken Oracles</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">6</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/cognition">cognition</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/yi-fu-tuan">Yi-Fu-Tuan</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/navigation">navigation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

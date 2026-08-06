@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Longitudinal Becoming vs. Stratigraphic Time</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Longitudinal Becoming vs. Stratigraphic Time</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time.md">source on GitHub</a></div>
-  <div class="note-summary">Ingold runs one opposition -- accumulate-and-exhaust versus overflow-and-replenish -- at both the scale of the individual life-course (funnel vs. longitudinal P-line) and the scale of generations (stratigraphic stack vs. intergenerational braid), assembling a single alternative ontology of time that bears on the wiki&#x27;s argument over the shape of history.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">time</span><span class="tag">generations</span><span class="tag">becoming</span><span class="tag">stratigraphic-thinking</span><span class="tag">possibility</span><span class="tag">world-machines</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time.md">source on GitHub</a></div>
+    <div class="note-summary">Ingold runs one opposition -- accumulate-and-exhaust versus overflow-and-replenish -- at both the scale of the individual life-course (funnel vs. longitudinal P-line) and the scale of generations (stratigraphic stack vs. intergenerational braid), assembling a single alternative ontology of time that bears on the wiki&#x27;s argument over the shape of history.</div>
     <div class="prose">
 <p>Ingold runs a single opposition -- <em>accumulate-and-exhaust</em> versus <em>overflow-and-replenish</em> -- at two scales that his essay never explicitly joins: the individual life-course and the passage of generations. Seen together, they are one alternative ontology of time argued twice. This is the cross-cutting claim neither note makes on its own.</p>
 <h2 id="the-same-figure-at-two-scales">The same figure at two scales</h2>
@@ -47,16 +56,42 @@
 <h2 id="relation-to-the-world-machines-frame">Relation to the World Machines frame</h2>
 <p>This is Ingold&#x27;s contribution to the wiki&#x27;s long argument over the shape of time -- <a class="wikilink" href="/wiki/aneesh/concepts/linear-vs-cyclical-paths">linear-vs-cyclical-paths</a>, <a class="wikilink" href="/wiki/aneesh/concepts/trajectories-as-stories-so-far">trajectories-as-stories-so-far</a>, and <a class="wikilink" href="/wiki/aneesh/concepts/simultaneity-of-multiple-trajectories">simultaneity-of-multiple-trajectories</a>. His braid resists reading history as accumulated sediment or as potential progressively spent, cutting against a purely accumulative reading of progress (<a class="wikilink" href="/wiki/aneesh/concepts/argument-of-progress">argument-of-progress</a>) and against any <a class="wikilink" href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">dawn-day-dusk-machine-typology</a> deployed as a stock-depletion story. The relational, non-teleological co-emergence he describes -- possibility generated through entanglement rather than aimed at a predetermined end -- is close to what the wiki files under <a class="wikilink" href="/wiki/aneesh/concepts/configurancy">Configurancy</a>.</p>
     </div>
+    <p class="note-history">Last changed 7 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/a3929b42bfa85a7fcb06eae4396c079ac5798b83">[trivial] ingest: Ingold 2023 &quot;possible world&quot; — 9 reading notes + 4 canon pages (#18)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 7 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/a3929b42bfa85a7fcb06eae4396c079ac5798b83">[trivial] ingest: Ingold 2023 &quot;possible world&quot; — 9 reading notes + 4 canon pages (#18)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>426</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning">Correspondence versus Interaction, Understanding versus Undercommoning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-serres">Michel Serres</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/time">time</a><a class="tag" href="/wiki/topics/generations">generations</a><a class="tag" href="/wiki/topics/becoming">becoming</a><span class="tag tag-lone" title="Only this note uses it">stratigraphic-thinking</span><a class="tag" href="/wiki/topics/possibility">possibility</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

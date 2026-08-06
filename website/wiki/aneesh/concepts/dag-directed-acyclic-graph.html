@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>DAG (Directed Acyclic Graph)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>DAG (Directed Acyclic Graph)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/dag-directed-acyclic-graph.md">source on GitHub</a></div>
-  <div class="note-summary">A diagram of nodes and directed edges with no cycles, used in causal inference and Bayesian statistics to represent the data generating process — which variables cause which others.</div>
-  <div class="tags"><span class="tag">DAGs</span><span class="tag">causal-inference</span><span class="tag">bayesian-statistics</span><span class="tag">data-generating-process</span><span class="tag">scientific-method</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/dag-directed-acyclic-graph.md">source on GitHub</a></div>
+    <div class="note-summary">A diagram of nodes and directed edges with no cycles, used in causal inference and Bayesian statistics to represent the data generating process — which variables cause which others.</div>
     <div class="prose">
 <p>A graphical representation of causal relationships: nodes represent variables; directed edges (arrows) represent hypothesized causal influence; the &quot;acyclic&quot; constraint means no variable can be its own cause through a chain of effects.</p>
 <h2 id="role-in-bayesian-statistics">Role in Bayesian Statistics</h2>
-<p>In Bayesian modeling, the DAG is the formalization of the <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generating Process&quot;">Data Generating Process</span></strong>: a hypothesis about <em>how the data came to exist</em>. Building a Bayesian model requires constructing a DAG, which forces the analyst to:</p>
+<p>In Bayesian modeling, the DAG is the formalization of the <strong><a class="wikilink" href="/wiki/aneesh/concepts/data-generating-process" title="Written [[Data Generating Process]], resolved to data-generating-process">Data Generating Process</a></strong>: a hypothesis about <em>how the data came to exist</em>. Building a Bayesian model requires constructing a DAG, which forces the analyst to:</p>
 <ol>
 <li>State which variables they believe are causally relevant</li>
 <li>State the direction of causal influence</li>
@@ -45,27 +54,60 @@
 </ol>
 <p>Testing whether the model (DAG) fits the observed data is then a way of validating or falsifying the causal hypothesis.</p>
 <h2 id="as-scientific-infrastructure">As Scientific Infrastructure</h2>
-<p>Even outside Bayesian analysis, DAGs serve a function that <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> calls &quot;laying out your thoughts.&quot; A DAG is a communicable representation of a scientific hypothesis — it can be checked, critiqued, and corrected by others.</p>
+<p>Even outside Bayesian analysis, DAGs serve a function that <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> calls &quot;laying out your thoughts.&quot; A DAG is a communicable representation of a scientific hypothesis — it can be checked, critiqued, and corrected by others.</p>
 <p>This is the epistemic virtue Sathe contrasts with frequentist analysis: frequentist tests execute quickly, hiding their causal assumptions; DAGs make those assumptions legible.</p>
 <h2 id="connection-to-judea-pearl">Connection to Judea Pearl</h2>
-<p>The modern theory of causal inference via DAGs is associated with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Judea Pearl&quot;">Judea Pearl</span> (<em>Causality</em>, 2000; <em>The Book of Why</em>, 2018), though Sathe does not cite Pearl explicitly. Pearl&#x27;s do-calculus provides the formal machinery for inferring interventional effects from observational DAGs.</p>
+<p>The modern theory of causal inference via DAGs is associated with <a class="wikilink-wanted" href="/wiki/wanted/judea-pearl" title="No note is called &quot;Judea Pearl&quot; yet — see who is asking for it">Judea Pearl</a> (<em>Causality</em>, 2000; <em>The Book of Why</em>, 2018), though Sathe does not cite Pearl explicitly. Pearl&#x27;s do-calculus provides the formal machinery for inferring interventional effects from observational DAGs.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bayesian Statistics&quot;">Bayesian Statistics</span> — DAGs as the modeling scaffold</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generating Process&quot;">Data Generating Process</span> — what the DAG represents</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Causal Inference&quot;">Causal Inference</span> — the goal DAGs serve</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency in Scientific Method&quot;">Transparency in Scientific Method</span> — the meta-value DAGs embody</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Judea Pearl&quot;">Judea Pearl</span> — the theoretical anchor for causal DAGs</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Road to Bayesian Stats&quot;">My Road to Bayesian Stats</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/bayesian-statistics" title="Written [[Bayesian Statistics]], resolved to bayesian-statistics">Bayesian Statistics</a> — DAGs as the modeling scaffold</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-generating-process" title="Written [[Data Generating Process]], resolved to data-generating-process">Data Generating Process</a> — what the DAG represents</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/causal-inference" title="Written [[Causal Inference]], resolved to causal-inference">Causal Inference</a> — the goal DAGs serve</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/transparency-in-scientific-method" title="Written [[Transparency in Scientific Method]], resolved to transparency-in-scientific-method">Transparency in Scientific Method</a> — the meta-value DAGs embody</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/judea-pearl" title="No note is called &quot;Judea Pearl&quot; yet — see who is asking for it">Judea Pearl</a> — the theoretical anchor for causal DAGs</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/my-road-to-bayesian-stats" title="Written [[My Road to Bayesian Stats]], resolved to my-road-to-bayesian-stats">My Road to Bayesian Stats</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>281</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">6</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/my-road-to-bayesian-stats">My Road to Bayesian Stats</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bayesian-statistics">Bayesian Statistics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-generating-process">Data Generating Process (DGP)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/transparency-in-scientific-method">Transparency in Scientific Method</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/richard-mcelreath">Richard McElreath</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/bayesian-statistics">Bayesian Statistics</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-generating-process">Data Generating Process (DGP)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/my-road-to-bayesian-stats">My Road to Bayesian Stats</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/richard-mcelreath">Richard McElreath</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/causal-inference">Causal Inference</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/frequentist-statistics">Frequentist Statistics</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dags">DAGs</a><a class="tag" href="/wiki/topics/causal-inference">causal-inference</a><a class="tag" href="/wiki/topics/bayesian-statistics">bayesian-statistics</a><a class="tag" href="/wiki/topics/data-generating-process">data-generating-process</a><a class="tag" href="/wiki/topics/scientific-method">scientific-method</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

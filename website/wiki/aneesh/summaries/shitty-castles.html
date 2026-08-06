@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Shitty Castles: On the Art of Digging Fake Moats</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Shitty Castles: On the Art of Digging Fake Moats</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/shitty-castles.md">source on GitHub</a></div>
-  <div class="note-summary">Florian Lohse&#x27;s essay arguing that elaborate intellectual and material constructions built by people who know they won&#x27;t hold — &#x27;shitty castles&#x27; — are not necessarily hypocritical but can serve pragmatic functions of power, stability, and temporal bridging.</div>
-  <div class="tags"><span class="tag">leibniz</span><span class="tag">spinoza</span><span class="tag">intellectual-honesty</span><span class="tag">power</span><span class="tag">pragmatism</span><span class="tag">zombie-ideas</span><span class="tag">venkatesh-rao</span><span class="tag">late-modernity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/shitty-castles.md">source on GitHub</a></div>
+    <div class="note-summary">Florian Lohse&#x27;s essay arguing that elaborate intellectual and material constructions built by people who know they won&#x27;t hold — &#x27;shitty castles&#x27; — are not necessarily hypocritical but can serve pragmatic functions of power, stability, and temporal bridging.</div>
     <div class="prose">
 <p><strong>Source:</strong> Florian Lohse, <em>Notefields</em> (Substack), March 25, 2026. https://notefields.substack.com/p/shitty-castles</p>
 <h2 id="central-argument">Central Argument</h2>
@@ -77,7 +86,7 @@
 </ul>
 <p>This suggests a general pattern for ideas and frameworks: <strong>functional → performative → ornamental → ridicule</strong>. The more functional flaws you can find in a system, the more likely you&#x27;re facing &quot;a dead facade, not a working fortification.&quot;</p>
 <h2 id="connection-to-venkatesh-rao">Connection to Venkatesh Rao</h2>
-<p>Lohse explicitly cites Rao&#x27;s concept of &quot;energetic zombies&quot; from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span> — ideas from the past that still channel enormous energy while carrying little of the world&#x27;s &quot;evolutionary intelligence.&quot; Leibniz&#x27;s Monads, Chambord, and possibly OpenAI&#x27;s hardware pivot may be &quot;zombie ideas&quot; in their time. But the challenge is: how do you tell a zombie from something worth engaging with?</p>
+<p>Lohse explicitly cites Rao&#x27;s concept of &quot;energetic zombies&quot; from <a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a> — ideas from the past that still channel enormous energy while carrying little of the world&#x27;s &quot;evolutionary intelligence.&quot; Leibniz&#x27;s Monads, Chambord, and possibly OpenAI&#x27;s hardware pivot may be &quot;zombie ideas&quot; in their time. But the challenge is: how do you tell a zombie from something worth engaging with?</p>
 <h2 id="key-quotes">Key Quotes</h2>
 <blockquote><p>&quot;Why would you build a castle that is not a castle? To use the power you still have to create something fancy that is good enough to keep yourself sane until you have a better idea.&quot;</p></blockquote>
 <blockquote><p>&quot;Leibniz fell into Spinozism whenever he allowed himself to be logical; in his published works, accordingly, he took care to be illogical.&quot; — Bertrand Russell (quoted)</p></blockquote>
@@ -88,27 +97,70 @@
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a> — entity</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> — entity</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Zombie Ideas&quot;">Zombie Ideas</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Costly Signaling&quot;">Costly Signaling</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Paradigm Transition Strategies&quot;">Paradigm Transition Strategies</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castle Pattern&quot;">Shitty Castle Pattern</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual Honesty vs Pragmatic Positioning&quot;">Intellectual Honesty vs Pragmatic Positioning</span> — synthesis</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span> — summary (same cluster of ideas)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/zombie-ideas" title="Written [[Zombie Ideas]], resolved to zombie-ideas">Zombie Ideas</a> — concept</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/costly-signaling" title="No note is called &quot;Costly Signaling&quot; yet — see who is asking for it">Costly Signaling</a> — concept</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/paradigm-transition-strategies" title="No note is called &quot;Paradigm Transition Strategies&quot; yet — see who is asking for it">Paradigm Transition Strategies</a> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/shitty-castle-pattern" title="Written [[Shitty Castle Pattern]], resolved to shitty-castle-pattern">Shitty Castle Pattern</a> — concept</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/intellectual-honesty-vs-pragmatic-positioning" title="No note is called &quot;Intellectual Honesty vs Pragmatic Positioning&quot; yet — see who is asking for it">Intellectual Honesty vs Pragmatic Positioning</a> — synthesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a> — summary (same cluster of ideas)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>15</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>811</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">15</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds">The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/florian/canonic-infrastructure-decays-in-hilarious-drainage">Canonic infrastructure decays in hilarious drainage</a><span class="rail-where">Florian</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>7 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/florian/frameworks-can-turn-performative-as-they-become-more-sophisticated">Frameworks can turn performative as they become more sophisticated</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/aneesh/concepts/shitty-castle-pattern">Shitty Castle Pattern</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/zombie-ideas">Zombie Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-world-machines-canon">The World Machines Canon — A Unified Map</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/florian/it-takes-connoisseurship-for-ornamental-baggage-to-identify-dead-frameworks">It takes connoisseurship for ornamental baggage to identify dead frameworks</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/florian/the-afterlife-of-canonical-structures-is-culturally-richer-than-their-main-act">The afterlife of canonical structures is culturally richer than their main act</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds">The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/zombie-ideas">Zombie Ideas</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/leibniz">leibniz</a><a class="tag" href="/wiki/topics/spinoza">spinoza</a><a class="tag" href="/wiki/topics/intellectual-honesty">intellectual-honesty</a><a class="tag" href="/wiki/topics/power">power</a><a class="tag" href="/wiki/topics/pragmatism">pragmatism</a><a class="tag" href="/wiki/topics/zombie-ideas">zombie-ideas</a><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/late-modernity">late-modernity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

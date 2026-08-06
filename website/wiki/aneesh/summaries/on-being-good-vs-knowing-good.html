@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>On Being Good vs. Knowing Good: Perspectives on AI</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>On Being Good vs. Knowing Good: Perspectives on AI</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/on-being-good-vs-knowing-good.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe uses Nick Cave&#x27;s critique of AI creativity to articulate a distinction between AI that knows facts and AI that has taste — and argues that taste, rooted in imperfect experience, cannot be engineered.</div>
-  <div class="tags"><span class="tag">ai-taste</span><span class="tag">expertise</span><span class="tag">creativity</span><span class="tag">healthcare-ai</span><span class="tag">regulation</span><span class="tag">llm-limitations</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/on-being-good-vs-knowing-good.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe uses Nick Cave&#x27;s critique of AI creativity to articulate a distinction between AI that knows facts and AI that has taste — and argues that taste, rooted in imperfect experience, cannot be engineered.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a href="https://aneeshsathe.com/being-good-vs-knowing-good-ai/">aneeshsathe.com, 2024-01-22</a><br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span></p>
+<strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a></p>
 <h2 id="central-argument">Central Argument</h2>
 <p>LLMs exhibit confidence but lack <em>taste</em> — the capacity to distinguish good from bad, to guide toward optimal outcomes, to know when to question the goal itself. This is not a fixable bug but a structural consequence of how they are built: without real-world experience, there is no mechanism for taste to develop. Sathe frames expertise as having two components — knowledge (which AI can approximate) and taste (which it cannot). The practical implication: AI is excellent for eliminating tedious tasks but unsuitable as a genuine thinking partner or advisor.</p>
 <h2 id="key-claims">Key Claims</h2>
@@ -49,15 +58,15 @@
 </ol>
 <h2 id="connections">Connections</h2>
 <ul>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> — the central concept</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Expertise&quot;">Expertise</span> — the two-component model (knowledge + taste)</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span> — the operational distinction</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mission-Critical AI&quot;">Mission-Critical AI</span> — where the stakes of tastelessness are highest</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Regulation&quot;">AI Regulation</span> — the exploration/regulation balance</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nick Cave&quot;">Nick Cave</span> — the unlikely entry point; his letter as cultural artifact</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Stephen Fry&quot;">Stephen Fry</span> — narrator of Cave&#x27;s letter; his own AI skepticism</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs as Spreadsheets Analogy&quot;">LLMs as Spreadsheets Analogy</span> — the productivity-tool framing</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Taste Gap in AI Systems&quot;">The Taste Gap in AI Systems</span> — cross-source theme connecting this to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span></li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity" title="Written [[Taste as Epistemic Capacity]], resolved to taste-as-epistemic-capacity">Taste as Epistemic Capacity</a> — the central concept</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/expertise" title="Written [[Expertise]], resolved to expertise">Expertise</a> — the two-component model (knowledge + taste)</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor" title="Written [[AI as Tool vs. Advisor]], resolved to ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a> — the operational distinction</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/mission-critical-ai" title="Written [[Mission-Critical AI]], resolved to mission-critical-ai">Mission-Critical AI</a> — where the stakes of tastelessness are highest</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/ai-regulation" title="Written [[AI Regulation]], resolved to ai-regulation">AI Regulation</a> — the exploration/regulation balance</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/entities/nick-cave" title="Written [[Nick Cave]], resolved to nick-cave">Nick Cave</a> — the unlikely entry point; his letter as cultural artifact</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/entities/stephen-fry" title="Written [[Stephen Fry]], resolved to stephen-fry">Stephen Fry</a> — narrator of Cave&#x27;s letter; his own AI skepticism</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/llms-as-spreadsheets-analogy" title="No note is called &quot;LLMs as Spreadsheets Analogy&quot; yet — see who is asking for it">LLMs as Spreadsheets Analogy</a> — the productivity-tool framing</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/the-taste-gap-in-ai-systems" title="Written [[The Taste Gap in AI Systems]], resolved to the-taste-gap-in-ai-systems">The Taste Gap in AI Systems</a> — cross-source theme connecting this to <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a></li>
 </ul>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <ul>
@@ -66,15 +75,56 @@
 <li>No engagement with RLHF or Constitutional AI as attempts to instill values/judgment</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/auteuring-and-taste">Auteuring and Taste</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>418</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">11</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">Taste as Epistemic Capacity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/mission-critical-ai">Mission-Critical AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/nick-cave">Nick Cave</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cyclical-information-epistemics">Cyclical Information Epistemics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-taste-gap-in-ai-systems">The Taste Gap in AI Systems</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/auteuring-and-taste">Auteuring and Taste</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-regulation">AI Regulation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/stephen-fry">Stephen Fry</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">Taste as Epistemic Capacity</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/nick-cave">Nick Cave</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">ai-taste</span><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/healthcare-ai">healthcare-ai</a><a class="tag" href="/wiki/topics/regulation">regulation</a><a class="tag" href="/wiki/topics/llm-limitations">llm-limitations</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

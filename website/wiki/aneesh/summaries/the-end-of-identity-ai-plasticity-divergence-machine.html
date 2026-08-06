@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The End of Identity: AI, Plasticity, and the Divergence Machine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The End of Identity: AI, Plasticity, and the Divergence Machine</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe reads the history of philosophy through Venkatesh Rao&#x27;s Divergence Machine framework to argue that AI completes the centuries-long peeling back of identity — stripping the last layer of legible selfhood and demanding genuine plasticity rather than mere flexibility.</div>
-  <div class="tags"><span class="tag">identity</span><span class="tag">divergence-machine</span><span class="tag">ai</span><span class="tag">plasticity</span><span class="tag">flexibility</span><span class="tag">hume</span><span class="tag">baudrillard</span><span class="tag">catherine-malabou</span><span class="tag">venkatesh-rao</span><span class="tag">modernity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe reads the history of philosophy through Venkatesh Rao&#x27;s Divergence Machine framework to argue that AI completes the centuries-long peeling back of identity — stripping the last layer of legible selfhood and demanding genuine plasticity rather than mere flexibility.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a href="https://aneeshsathe.com/the-end-of-identity-ai-plasticity-and-the-divergence-machine/">aneeshsathe.com, 2026-03-08</a><br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span><br>
+<strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a><br>
 <strong>Context</strong>: Written for the Contraptions club, which has been reading from Bruno and Montaigne to Spinoza, Smith, and Hume</p>
 <h2 id="central-argument">Central Argument</h2>
 <p>Philosophy since Spinoza has been systematically peeling back &quot;fiat&quot; layers — theological, narrative, ideological — imposed over raw reality. AI represents the final peel: it processes the raw log files of our know-how without caring about the grand narrative of who we are. The response cannot be flexibility (adapting within a fixed system) but <strong>plasticity</strong> — actively giving and taking form without relying on any centralized system to define what those forms mean. Drawing on <a class="wikilink" href="/wiki/aneesh/entities/catherine-malabou">Catherine Malabou</a>&#x27;s neurophilosophy and <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> framework.</p>
@@ -80,7 +89,7 @@
 <li><strong><a class="wikilink" href="/wiki/aneesh/entities/jean-baudrillard">Jean Baudrillard</a></strong> — consumer identity, simulacra, technology and identity</li>
 <li><strong><a class="wikilink" href="/wiki/aneesh/entities/catherine-malabou">Catherine Malabou</a></strong> — <em>What Should We Do with Our Brain?</em>; flexibility vs. plasticity</li>
 <li><strong><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a></strong> — peeling theological conceits; connects to <em>Architecture of Resistance</em></li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span></strong>, <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span></strong>, <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Adam Smith&quot;">Adam Smith</span></strong> — mentioned as part of the philosophical arc studied in Contraptions club</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a></strong>, <strong><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a></strong>, <strong><a class="wikilink" href="/wiki/aneesh/entities/adam-smith" title="Written [[Adam Smith]], resolved to adam-smith">Adam Smith</a></strong> — mentioned as part of the philosophical arc studied in Contraptions club</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
@@ -91,7 +100,7 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a> — Spinoza&#x27;s drive to persist, suppressed by the statistical mean (connects to <em>Architecture of Resistance</em>)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a> — the mechanism described here from the inside-out</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/fiat-progress">fiat-progress</a> — the concept being dismantled</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ontological Dread&quot;">Ontological Dread</span> — the affective register of identity loss</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ontological-dread" title="Written [[Ontological Dread]], resolved to ontological-dread">Ontological Dread</a> — the affective register of identity loss</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/plasticity-vs-flexibility">Plasticity vs. Flexibility</a> — the core distinction; Malabou&#x27;s contribution</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a> — the condition AI dismantles for the knowledge worker</li>
 </ul>
@@ -102,21 +111,47 @@
 <li>Hume as &quot;proto-AI philosopher&quot; is suggestive but somewhat loose; deserves a standalone concept page</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">7</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>16</b><span>links out</span></div>
+      <div class="bearing"><b>711</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/argument-of-progress">Argument of Progress</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/adam-smith">Adam Smith (1723-1790)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/catherine-malabou">Catherine Malabou</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/identity">identity</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/plasticity">plasticity</a><a class="tag" href="/wiki/topics/flexibility">flexibility</a><a class="tag" href="/wiki/topics/hume">hume</a><a class="tag" href="/wiki/topics/baudrillard">baudrillard</a><a class="tag" href="/wiki/topics/catherine-malabou">catherine-malabou</a><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/modernity">modernity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

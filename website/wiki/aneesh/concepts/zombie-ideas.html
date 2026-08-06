@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Zombie Ideas</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Zombie Ideas</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/zombie-ideas.md">source on GitHub</a></div>
-  <div class="note-summary">Zombie ideas are intellectual frameworks, institutions, and behaviors that continue to consume enormous energy while carrying little of the world&#x27;s evolutionary intelligence — drawn from Venkatesh Rao&#x27;s &#x27;energetic zombie&#x27; concept and extended by Florian Lohse&#x27;s shitty castle analysis.</div>
-  <div class="tags"><span class="tag">zombie-ideas</span><span class="tag">late-modernity</span><span class="tag">venkatesh-rao</span><span class="tag">florian-lohse</span><span class="tag">paradigm-transition</span><span class="tag">energetic-zombie</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/zombie-ideas.md">source on GitHub</a></div>
+    <div class="note-summary">Zombie ideas are intellectual frameworks, institutions, and behaviors that continue to consume enormous energy while carrying little of the world&#x27;s evolutionary intelligence — drawn from Venkatesh Rao&#x27;s &#x27;energetic zombie&#x27; concept and extended by Florian Lohse&#x27;s shitty castle analysis.</div>
     <div class="prose">
 <h2 id="raos-energetic-zombie">Rao&#x27;s Energetic Zombie</h2>
-<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span> (2026) describes <strong>late modernity</strong> as populated by <strong>energetic zombies</strong>: institutions, behaviors, and ideas that carry the zombie quality of the Korean horror film <em>Train to Busan</em> — energetic, mobile, consuming, but no longer carrying the &quot;evolutionary intelligence&quot; of the world&#x27;s developmental direction.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> in <a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a> (2026) describes <strong>late modernity</strong> as populated by <strong>energetic zombies</strong>: institutions, behaviors, and ideas that carry the zombie quality of the Korean horror film <em>Train to Busan</em> — energetic, mobile, consuming, but no longer carrying the &quot;evolutionary intelligence&quot; of the world&#x27;s developmental direction.</p>
 <blockquote><p>&quot;Arguably, the bulk of the energy of the world will continue to flow through late-modern pathways for at least our lifetimes, even if very little of the evolutionary intelligence of the world flows through those pathways (hence &#x27;zombie&#x27; or perhaps &#x27;energetic zombie&#x27; would be a better term).&quot;</p></blockquote>
 <p>Examples: Trumpism, reactionary nationalism, most institutional politics, mainstream media narratives, much of mainstream academic production. These are late-modern phenomena: they have the energy of the old machine, not the aliveness of the new one.</p>
 <p>The zombie distinction: <strong>energy</strong> (mass behavior, resources, institutional weight) vs. <strong>evolutionary intelligence</strong> (the capacity to generate new solutions, genuine novelty, liveness).</p>
 <h2 id="lohses-extension-zombie-ideas-in-history">Lohse&#x27;s Extension: Zombie Ideas in History</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span> (2026) extends this to historical case studies:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> in <a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a> (2026) extends this to historical case studies:</p>
 <ul>
 <li><strong>Leibniz&#x27;s Monad theory</strong>: built knowing it wouldn&#x27;t hold against Spinoza&#x27;s rising influence; a philosophical fortification that consumed enormous intellectual energy but couldn&#x27;t generate the evolutionary intelligence needed for the new world</li>
 <li><strong>Château de Chambord</strong>: a massive castle built after gunpowder had made castles militarily obsolete; enormous energy (220,000 tons of stone, 1,800 workers) without functional military intelligence</li>
@@ -72,24 +81,56 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Late Modernity as Energetic Zombie&quot;">Late Modernity as Energetic Zombie</span> — the concept in Rao&#x27;s world-machine framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castle Pattern&quot;">Shitty Castle Pattern</span> — related concept (zombie ideas vs. intentional shitty castles)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/late-modernity-as-energetic-zombie" title="No note is called &quot;Late Modernity as Energetic Zombie&quot; yet — see who is asking for it">Late Modernity as Energetic Zombie</a> — the concept in Rao&#x27;s world-machine framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/shitty-castle-pattern" title="Written [[Shitty Castle Pattern]], resolved to shitty-castle-pattern">Shitty Castle Pattern</a> — related concept (zombie ideas vs. intentional shitty castles)</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> — entity</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span> — summary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a> — summary</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>535</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/shitty-castles">Shitty Castles: On the Art of Digging Fake Moats</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/shitty-castle-pattern">Shitty Castle Pattern</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/shitty-castles">Shitty Castles: On the Art of Digging Fake Moats</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds">The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/zombie-ideas">zombie-ideas</a><a class="tag" href="/wiki/topics/late-modernity">late-modernity</a><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/florian-lohse">florian-lohse</a><a class="tag" href="/wiki/topics/paradigm-transition">paradigm-transition</a><span class="tag tag-lone" title="Only this note uses it">energetic-zombie</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

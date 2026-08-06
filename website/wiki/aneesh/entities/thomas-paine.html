@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,44 +26,81 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Thomas Paine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Thomas Paine</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/thomas-paine.md">source on GitHub</a></div>
-  <div class="note-summary">English-American political pamphleteer whose writing provided key philosophical underpinnings for the American Revolution — exemplifying the intellectual role in the American independence typology.</div>
-  <div class="tags"><span class="tag">America</span><span class="tag">intellectual-history</span><span class="tag">political-philosophy</span><span class="tag">revolution</span><span class="tag">18th-century</span><span class="tag">pamphlets</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/thomas-paine.md">source on GitHub</a></div>
+    <div class="note-summary">English-American political pamphleteer whose writing provided key philosophical underpinnings for the American Revolution — exemplifying the intellectual role in the American independence typology.</div>
     <div class="prose">
-<p><strong>Thomas Paine</strong> (1737–1809) was an English-born American political activist, philosopher, and pamphleteer. His writing — particularly <em>Common Sense</em> (1776) — provided crucial intellectual framing for the American Revolution. He is cited in the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> essay as one of the two <strong>intellectual</strong> figures (alongside <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Jefferson&quot;">Thomas Jefferson</span>) in the American case of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> typology.</p>
+<p><strong>Thomas Paine</strong> (1737–1809) was an English-born American political activist, philosopher, and pamphleteer. His writing — particularly <em>Common Sense</em> (1776) — provided crucial intellectual framing for the American Revolution. He is cited in the <a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> essay as one of the two <strong>intellectual</strong> figures (alongside <a class="wikilink-wanted" href="/wiki/wanted/thomas-jefferson" title="No note is called &quot;Thomas Jefferson&quot; yet — see who is asking for it">Thomas Jefferson</a>) in the American case of the <a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> typology.</p>
 <h2 id="role-in-the-intellectual-revolutionary-typology">Role in the Intellectual/Revolutionary Typology</h2>
 <p>Paine&#x27;s <em>Common Sense</em> (1776) was a mass-distributed pamphlet making the philosophical case for independence from Britain in language accessible to ordinary colonists. It is one of the most widely read political documents in early American history. His <em>Rights of Man</em> (1791) and <em>The Age of Reason</em> (1794–1807) extended his political and religious philosophy.</p>
-<p>In the typology, Paine represents the <strong>intellectual</strong> who conceptualizes and articulates the framework; <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Samuel Adams&quot;">Samuel Adams</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Patrick Henry&quot;">Patrick Henry</span> represent the <strong>revolutionaries</strong> who galvanized public action around it.</p>
+<p>In the typology, Paine represents the <strong>intellectual</strong> who conceptualizes and articulates the framework; <a class="wikilink-wanted" href="/wiki/wanted/samuel-adams" title="No note is called &quot;Samuel Adams&quot; yet — see who is asking for it">Samuel Adams</a> and <a class="wikilink-wanted" href="/wiki/wanted/patrick-henry" title="No note is called &quot;Patrick Henry&quot; yet — see who is asking for it">Patrick Henry</a> represent the <strong>revolutionaries</strong> who galvanized public action around it.</p>
 <p>The distinction is slightly complicated for Paine: he was himself an activist, not merely a scholar. But his primary contribution was rhetorical-philosophical (making the case) rather than organizational-mobilizing (building the movement).</p>
 <h2 id="historical-risk">Historical Risk</h2>
 <p>The intellectual in the typology risks censorship and isolation; Paine bore this out — his later works (<em>Rights of Man</em>, <em>Age of Reason</em>) made him deeply unpopular, he was tried for seditious libel in Britain, and he died in poverty and disrepute.</p>
 <h2 id="related-figures">Related Figures</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Jefferson&quot;">Thomas Jefferson</span> — fellow intellectual in the American typology</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Samuel Adams&quot;">Samuel Adams</span> — revolutionary counterpart</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/thomas-jefferson" title="No note is called &quot;Thomas Jefferson&quot; yet — see who is asking for it">Thomas Jefferson</a> — fellow intellectual in the American typology</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/samuel-adams" title="No note is called &quot;Samuel Adams&quot; yet — see who is asking for it">Samuel Adams</a> — revolutionary counterpart</li>
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> — typology in which Paine exemplifies the intellectual role</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> — essay where this typology is developed</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> — typology in which Paine exemplifies the intellectual role</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> — essay where this typology is developed</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web — Reshaping the Political Maidan&quot;">Cloister Web — Reshaping the Political Maidan</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan" title="No note is called &quot;Cloister Web — Reshaping the Political Maidan&quot; yet — see who is asking for it">Cloister Web — Reshaping the Political Maidan</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>274</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/cloister-web-reshaping-political-maidan">The Cloister Web: Reshaping the Political Maidan</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/alexander-herzen">Alexander Herzen</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/idea-graphs">Idea-Graphs</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/liang-qichao">Liang Qichao</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/mahatma-gandhi">Mahatma Gandhi</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/rabindranath-tagore">Rabindranath Tagore</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">America</span><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a><a class="tag" href="/wiki/topics/political-philosophy">political-philosophy</a><a class="tag" href="/wiki/topics/revolution">revolution</a><span class="tag tag-lone" title="Only this note uses it">18th-century</span><span class="tag tag-lone" title="Only this note uses it">pamphlets</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

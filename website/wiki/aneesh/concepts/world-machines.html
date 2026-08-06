@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>World Machines</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>World Machines</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 5 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/world-machines.md">source on GitHub</a></div>
-  <div class="note-summary">The world machines concept-object: large-scale historical contraptions (Modernity Machine, Divergence Machine, etc.) that embody the civilizational logic of an era — their lifecycle, phenomenology, and the Gramsci Gap. For the theoretical framework, epistemological status, and canonical table, see <a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework">world-machines-framework</a>.</div>
-  <div class="tags"><span class="tag">world-machines</span><span class="tag">venkatesh-rao</span><span class="tag">historical-theory</span><span class="tag">modernity</span><span class="tag">divergence</span><span class="tag">gramsci-gap</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 5 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/world-machines.md">source on GitHub</a></div>
+    <div class="note-summary">The world machines concept-object: large-scale historical contraptions (Modernity Machine, Divergence Machine, etc.) that embody the civilizational logic of an era — their lifecycle, phenomenology, and the Gramsci Gap. For the theoretical framework, epistemological status, and canonical table, see <a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework">world-machines-framework</a>.</div>
     <div class="prose">
 <blockquote><p><strong>Canonical public reference</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/worldmachines-org-theory">worldmachines-org-theory</a> (worldmachines.org/theory). The public-facing project page is the source of canonical phrasing.</p>
 <p><strong>Distinct from <a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework">world-machines-framework</a></strong>, which covers the meta-level apparatus: epistemological status, canonical table with Dawn/Day/Dusk naming, genealogy, and open questions. This page covers the concept itself — what world machines <em>are</em>, how they behave, and what the current machine landscape looks like.</p></blockquote>
@@ -70,7 +79,7 @@
 <thead><tr><th>Machine</th><th>Construction Period</th><th>Operation Period</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td>Medieval machine</td><td>Pre-1200</td><td>1200–1600</td><td>Collapsed; mainly historical reference</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span></td><td>1200–1600</td><td>1600–2000</td><td>Declining; generating late-modern zombie activity</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a></td><td>1200–1600</td><td>1600–2000</td><td>Declining; generating late-modern zombie activity</td></tr>
 <tr><td><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></td><td>1600–2000</td><td>2000–present</td><td>Early operation (~25 years in)</td></tr>
 <tr><td>AI machine (unnamed)</td><td>~2000–present</td><td>Future</td><td>Being seeded; construction only beginning</td></tr>
 </tbody>
@@ -79,8 +88,8 @@
 <p>Rao is explicit that these numbers and models are <strong>mnemonic devices and intuition pumps</strong>, not rigorous theories of history. The point is to approach texts with a particular sensibility — paying attention to machinic phenomenology, asking which machine&#x27;s logic a given phenomenon expresses.</p>
 <p>World machine temporalities are also increasingly complex: later machines feature multi-temporalities, &quot;bigger balls of wibbly wobbly, timey wimey stuff.&quot; This is why historical time &quot;can and does dilate or contract&quot; and why periodizing into world-machine epochs is a useful caricature, not a precise description.</p>
 <h2 id="the-gramsci-gap">The Gramsci Gap</h2>
-<p>The meta-logic of world machine transitions derives from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci&#x27;s interregnum</span>: &quot;The old is dying and the new cannot yet be born; in this interregnum there arise a great diversity of morbid symptoms.&quot;</p>
-<p>In the world machine framework: what Gramsci described as morbid symptoms are the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Late Modernity as Energetic Zombie&quot;">energetic zombies</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Postmodernity as Intelligent Ghost&quot;">intelligent ghosts</span> of the declining machine. The &quot;new world being born&quot; is actually two things: a completed new world entering full production mode, and the seeds of a further future world being planted.</p>
+<p>The meta-logic of world machine transitions derives from <a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci&#x27;s interregnum</a>: &quot;The old is dying and the new cannot yet be born; in this interregnum there arise a great diversity of morbid symptoms.&quot;</p>
+<p>In the world machine framework: what Gramsci described as morbid symptoms are the <a class="wikilink-wanted" href="/wiki/wanted/late-modernity-as-energetic-zombie" title="No note is called &quot;Late Modernity as Energetic Zombie&quot; yet — see who is asking for it">energetic zombies</a> and <a class="wikilink-wanted" href="/wiki/wanted/postmodernity-as-intelligent-ghost" title="No note is called &quot;Postmodernity as Intelligent Ghost&quot; yet — see who is asking for it">intelligent ghosts</a> of the declining machine. The &quot;new world being born&quot; is actually two things: a completed new world entering full production mode, and the seeds of a further future world being planted.</p>
 <h2 id="relationship-to-adjacent-concepts">Relationship to Adjacent Concepts</h2>
 <ul>
 <li><strong>Modernity machine</strong>: convergent canonicity, homogenization, European centerline</li>
@@ -90,78 +99,115 @@
 </ul>
 <h2 id="see-also">See Also</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Convergent Canonicity&quot;">Convergent Canonicity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Late Modernity as Energetic Zombie&quot;">Late Modernity as Energetic Zombie</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/convergent-canonicity" title="No note is called &quot;Convergent Canonicity&quot; yet — see who is asking for it">Convergent Canonicity</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/late-modernity-as-energetic-zombie" title="No note is called &quot;Late Modernity as Energetic Zombie&quot; yet — see who is asking for it">Late Modernity as Energetic Zombie</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a> (summary)</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> (entity)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">55</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/axial-age">Axial Age</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bronze-age-palace-economy">Bronze Age Palace Economy</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bryant-machine-concept">Bryant&#x27;s Machine Concept</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bryant-pluralism-of-worlds">Bryant&#x27;s Pluralism of Worlds</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/ian-morris">Ian Morris</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/iemp-model">IEMP Model</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/papal-revolution">Papal Revolution</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/secular-cycles">Secular Cycles</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/social-development-index">Social Development Index</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/worlding">Worlding (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/beatrice">Beatrice</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-02-boston">Boston, 1848–1854: Trained for a World Already Closing</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-19-chaos">Chaos (1870)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23">Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-35-nunc-age">Nunc Age: The Trusts, the New Man, and the Death of John Hay</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-01-05">Paradiso I–V: Invocation, the Sphere of the Moon, and the Ascent to Mercury</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-27-teufelsdrockh">Teufelsdrockh (1901)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance">The Abyss of Ignorance</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-05-berlin">The Berlin Failure: Civil Law, the Gymnasium, and an Accidental Beethoven (1858–1859)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-cooks-tale">The Cook&#x27;s Prologue and the Unfinished Tale of Perkin Revellour</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-friars-tale">The Friar&#x27;s Tale</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-28-the-height-of-knowledge">The Height of Knowledge (1902)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-1">The Knight&#x27;s Tale (Part One): Theseus, Fortune, and the Rivalry of Palamon and Arcite</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-2">The Knight&#x27;s Tale, Part 2: The Lists, the Tournament, and the First Mover</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-monks-tale">The Monk&#x27;s Tale: The Catalogue of Fortune&#x27;s Falls</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-09-island-of-utopia">The Shape of Utopia: Utopus&#x27;s Island and Its Ordered Countryside</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-05-travelling-02-pleasure-ethics">The Utopian Ethics of Reasoned Pleasure</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11">Through Gluttony, Avarice, and Wrath to the Gates of Dis</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-3">Troilus and Criseyde, Book III: Pandarus&#x27;s Engineered Union</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/utopus">Utopus</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/virgil">Virgil</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-30-vis-inertiae">Vis Inertiae (1903)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/world-machine">World Machine</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>55</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>664</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Defined as</span></h2>
+      <a class="rail-term" href="/wiki/glossary/world-machine">World Machine</a>
+      <span class="status status-developing">developing</span>
+      <p class="rail-gloss">A civilization-scale contraption — institutions, technologies, practices and assumptions interlocked — that embodies the logic of how the world works for a period of centuries, and…</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">55</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-machine-concept">Bryant&#x27;s Machine Concept</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/papal-revolution">Papal Revolution</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>47 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/worlding">Worlding (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-pluralism-of-worlds">Bryant&#x27;s Pluralism of Worlds</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/axial-age">Axial Age</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-30-vis-inertiae">Vis Inertiae (1903)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance">The Abyss of Ignorance</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-28-the-height-of-knowledge">The Height of Knowledge (1902)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/bronze-age-palace-economy">Bronze Age Palace Economy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-35-nunc-age">Nunc Age: The Trusts, the New Man, and the Death of John Hay</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/secular-cycles">Secular Cycles</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/social-development-index">Social Development Index</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-09-island-of-utopia">The Shape of Utopia: Utopus&#x27;s Island and Its Ordered Countryside</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/beatrice">Beatrice</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-02-boston">Boston, 1848–1854: Trained for a World Already Closing</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-19-chaos">Chaos (1870)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/iemp-model">IEMP Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-friars-tale">The Friar&#x27;s Tale</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/virgil">Virgil</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/ian-morris">Ian Morris</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23">Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-27-teufelsdrockh">Teufelsdrockh (1901)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-05-berlin">The Berlin Failure: Civil Law, the Gymnasium, and an Accidental Beethoven (1858–1859)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-2">The Knight&#x27;s Tale, Part 2: The Lists, the Tournament, and the First Mover</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-monks-tale">The Monk&#x27;s Tale: The Catalogue of Fortune&#x27;s Falls</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-05-travelling-02-pleasure-ethics">The Utopian Ethics of Reasoned Pleasure</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/utopus">Utopus</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/glossary/world-machine">World Machine</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-01-05">Paradiso I–V: Invocation, the Sphere of the Moon, and the Ascent to Mercury</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-cooks-tale">The Cook&#x27;s Prologue and the Unfinished Tale of Perkin Revellour</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-1">The Knight&#x27;s Tale (Part One): Theseus, Fortune, and the Rivalry of Palamon and Arcite</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11">Through Gluttony, Avarice, and Wrath to the Gates of Dis</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-3">Troilus and Criseyde, Book III: Pandarus&#x27;s Engineered Union</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">21</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">19</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">15</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/historical-theory">historical-theory</a><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/divergence">divergence</a><a class="tag" href="/wiki/topics/gramsci-gap">gramsci-gap</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

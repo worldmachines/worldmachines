@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Naturalistic Decision Making (NDM)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Naturalistic Decision Making (NDM)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/naturalistic-decision-making.md">source on GitHub</a></div>
-  <div class="note-summary">The research tradition, founded by Gary Klein and colleagues, that studies decision-making by expert practitioners in real-world conditions — as opposed to the heuristics-and-biases tradition&#x27;s lab studies with novices on toy problems.</div>
-  <div class="tags"><span class="tag">decision-making</span><span class="tag">cognitive-science</span><span class="tag">expertise</span><span class="tag">gary-klein</span><span class="tag">military</span><span class="tag">naturalistic</span><span class="tag">methodology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/naturalistic-decision-making.md">source on GitHub</a></div>
+    <div class="note-summary">The research tradition, founded by Gary Klein and colleagues, that studies decision-making by expert practitioners in real-world conditions — as opposed to the heuristics-and-biases tradition&#x27;s lab studies with novices on toy problems.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>Naturalistic Decision Making is a branch of applied cognitive psychology that studies how skilled practitioners make decisions in real-world conditions: under time pressure, with incomplete information, high stakes, and dynamic environments. Founded in the 1980s–90s primarily by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> and colleagues, initially funded by the US military.</p>
+<p>Naturalistic Decision Making is a branch of applied cognitive psychology that studies how skilled practitioners make decisions in real-world conditions: under time pressure, with incomplete information, high stakes, and dynamic environments. Founded in the 1980s–90s primarily by <a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> and colleagues, initially funded by the US military.</p>
 <h2 id="methodological-core">Methodological Core</h2>
 <p>NDM uses <strong>field study methods</strong> — ethnographic observation, critical decision method interviews, think-aloud protocols with actual experts doing actual work. The unit of analysis is the expert practitioner in naturalistic context, not the undergraduate in a psychology lab.</p>
-<p>This is the key methodological contrast with the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heuristics and Biases&quot;">Heuristics and Biases</span> tradition (Kahneman, Tversky, Thaler): H&amp;B administers toy problems to unskilled subjects in controlled lab settings, labels departures from normative models as &quot;biases.&quot;</p>
+<p>This is the key methodological contrast with the <a class="wikilink" href="/wiki/aneesh/concepts/heuristics-and-biases" title="Written [[Heuristics and Biases]], resolved to heuristics-and-biases">Heuristics and Biases</a> tradition (Kahneman, Tversky, Thaler): H&amp;B administers toy problems to unskilled subjects in controlled lab settings, labels departures from normative models as &quot;biases.&quot;</p>
 <h2 id="core-findings">Core Findings</h2>
 <ol>
 <li><strong>Experts do not deliberate between options in the way classical decision theory predicts.</strong> They pattern-match to past experience, construct a first-plausible-action, mentally simulate it, and execute — or adjust and try the next option. (Recognition-Primed Decision model).</li>
@@ -62,12 +71,12 @@
 <h2 id="key-ndm-frameworks">Key NDM Frameworks</h2>
 <ul>
 <li><strong>Recognition-Primed Decision (RPD) model</strong> — how experts make fast, good decisions via pattern recognition and mental simulation</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span></strong> — how experts construct meaning from ambiguous data</li>
-<li><strong>Critical Decision Method</strong> — interview protocol for extracting tacit expert knowledge (related to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span>)</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a></strong> — how experts construct meaning from ambiguous data</li>
+<li><strong>Critical Decision Method</strong> — interview protocol for extracting tacit expert knowledge (related to <a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a>)</li>
 </ul>
 <h2 id="military-origins-and-applications">Military Origins and Applications</h2>
 <p>NDM grew directly out of US military research needs: how do commanders make good decisions under the fog of war? How do Navy operators decide whether a radar blip is enemy or friendly? This context explains the emphasis on time pressure, incomplete information, and high stakes — all features absent from lab decision studies.</p>
-<p>Applied results include: better training programs for the armed forces, better UI for military and industrial control systems, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Accelerated Expertise&quot;">Accelerated Expertise</span> training programs.</p>
+<p>Applied results include: better training programs for the armed forces, better UI for military and industrial control systems, <a class="wikilink-wanted" href="/wiki/wanted/accelerated-expertise" title="No note is called &quot;Accelerated Expertise&quot; yet — see who is asking for it">Accelerated Expertise</a> training programs.</p>
 <h2 id="expert-novice-differences-in-sensemaking-klein-et-al-2007">Expert-Novice Differences in Sensemaking (Klein et al. 2007)</h2>
 <p>Klein et al.&#x27;s study of information operations specialists found that experts and novices used the <strong>same reasoning strategies</strong> — both abductive, both connection-seeking, both speculative. What differed:</p>
 <ul>
@@ -77,31 +86,78 @@
 <li>Experts could ignore noise more reliably (recognized contraband cigarettes as irrelevant; novices investigated further)</li>
 <li>Experts were ~3x more likely to generate action recommendations than novices</li>
 </ul>
-<p>The implication for training: don&#x27;t teach experts to &quot;think like novices think&quot; (there&#x27;s nothing to import from novice reasoning). Instead, give novices access to richer frames through experience-building and causal relationship expansion. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Just-in-Time Mental Models&quot;">Just-in-Time Mental Models</span>.</p>
+<p>The implication for training: don&#x27;t teach experts to &quot;think like novices think&quot; (there&#x27;s nothing to import from novice reasoning). Instead, give novices access to richer frames through experience-building and causal relationship expansion. See <a class="wikilink" href="/wiki/aneesh/concepts/just-in-time-mental-models" title="Written [[Just-in-Time Mental Models]], resolved to just-in-time-mental-models">Just-in-Time Mental Models</a>.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — founding figure</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — primary theoretical contribution</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking Forms&quot;">Sensemaking Forms</span> — the seven types of sensemaking activity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames and Framing&quot;">Frames and Framing</span> — the cognitive unit underlying NDM</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Macrocognition&quot;">Macrocognition</span> — the macro-level cognitive science framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heuristics and Biases&quot;">Heuristics and Biases</span> — opposing tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> — associated extraction methodology</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fixation Error&quot;">Fixation Error</span> — NDM-identified failure mode</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Just-in-Time Mental Models&quot;">Just-in-Time Mental Models</span> — NDM account of mental model use</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Expertise&quot;">Expertise</span> — what NDM research illuminates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Karl Weick&quot;">Karl Weick</span> — fellow traveler in organizational sensemaking</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — founding figure</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — primary theoretical contribution</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sensemaking-forms" title="Written [[Sensemaking Forms]], resolved to sensemaking-forms">Sensemaking Forms</a> — the seven types of sensemaking activity</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frames-and-framing" title="Written [[Frames and Framing]], resolved to frames-and-framing">Frames and Framing</a> — the cognitive unit underlying NDM</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/macrocognition" title="Written [[Macrocognition]], resolved to macrocognition">Macrocognition</a> — the macro-level cognitive science framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/heuristics-and-biases" title="Written [[Heuristics and Biases]], resolved to heuristics-and-biases">Heuristics and Biases</a> — opposing tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> — associated extraction methodology</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fixation-error" title="Written [[Fixation Error]], resolved to fixation-error">Fixation Error</a> — NDM-identified failure mode</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/just-in-time-mental-models" title="Written [[Just-in-Time Mental Models]], resolved to just-in-time-mental-models">Just-in-Time Mental Models</a> — NDM account of mental model use</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/expertise" title="Written [[Expertise]], resolved to expertise">Expertise</a> — what NDM research illuminates</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/karl-weick" title="Written [[Karl Weick]], resolved to karl-weick">Karl Weick</a> — fellow traveler in organizational sensemaking</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/kinesthetic-knowledge-of-place">Kinesthetic Knowledge of Place (Tuan)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>17</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>723</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">17</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/kinesthetic-knowledge-of-place">Kinesthetic Knowledge of Place (Tuan)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/macrocognition">Macrocognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/abductive-reasoning">Abductive Reasoning</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>9 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/recognition-primed-decision-model">Recognition-Primed Decision Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/heuristics-and-biases">Heuristics and Biases</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-the-unit-of-cognition">Frames as the Unit of Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/klein-data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking — Klein, Phillips, Rall &amp; Peluso (2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/data-and-frames-in-analysis-and-art">Data is Always Constructed: From Sensemaking to Art</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-information-overload">Sensemaking and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein">The Literary and Cognitive Faces of Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">12</span></li>
+        <li><a href="/wiki/aneesh/concepts/abductive-reasoning">Abductive Reasoning</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/sensemaking-forms">Forms of Sensemaking</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/frames-and-framing">Frames and Framing</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/decision-making">decision-making</a><a class="tag" href="/wiki/topics/cognitive-science">cognitive-science</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/gary-klein">gary-klein</a><a class="tag" href="/wiki/topics/military">military</a><span class="tag tag-lone" title="Only this note uses it">naturalistic</span><a class="tag" href="/wiki/topics/methodology">methodology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

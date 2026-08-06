@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/more-utopia/">Utopia</a> <b>/</b> <span>Thomas More&#x27;s Life and the Making of *Utopia*</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Thomas More&#x27;s Life and the Making of *Utopia*</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-introduction.md">source on GitHub</a></div>
-  <div class="note-summary">Henry Morley&#x27;s editorial introduction traces Thomas More&#x27;s life — from Cardinal Morton&#x27;s household and Oxford&#x27;s Greek studies through his legal and parliamentary career and the 1515 Flanders embassy — to the composition, Continental publication, and translation history of <em>Utopia</em>, arguing that beneath its &#x27;veil of a playful fiction&#x27; lies &#x27;a noble English argument&#x27; against the political and social evils of More&#x27;s own England.</div>
-  <div class="tags"><span class="tag">thomas-more</span><span class="tag">utopia</span><span class="tag">tudor-england</span><span class="tag">renaissance-humanism</span><span class="tag">editorial-biography</span><span class="tag">translation-history</span><span class="tag">political-satire</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-introduction.md">source on GitHub</a></div>
+    <div class="note-summary">Henry Morley&#x27;s editorial introduction traces Thomas More&#x27;s life — from Cardinal Morton&#x27;s household and Oxford&#x27;s Greek studies through his legal and parliamentary career and the 1515 Flanders embassy — to the composition, Continental publication, and translation history of <em>Utopia</em>, arguing that beneath its &#x27;veil of a playful fiction&#x27; lies &#x27;a noble English argument&#x27; against the political and social evils of More&#x27;s own England.</div>
     <div class="prose">
 <p>Henry Morley&#x27;s editorial introduction to the Burnet translation traces Sir Thomas More&#x27;s life from his 1478 birth in Milk Street through his formation in Cardinal Morton&#x27;s household, his Oxford Greek studies under Grocyn and Linacre, his legal and parliamentary career, and the 1515 diplomatic embassy to Flanders that supplied Utopia&#x27;s fictional frame, before turning to the book&#x27;s composition, its Louvain first printing under Erasmus&#x27;s editorship, its Basle revision, and the chain of English translations culminating in Gilbert Burnet&#x27;s 1684 version reproduced in this volume.</p>
 <h2 id="themes">Themes</h2>
@@ -51,17 +59,47 @@
 <p>The etymology-and-Hythloday passage is the essay&#x27;s hinge from documented fact to invented fiction — it is also, incidentally, the origin of the word &quot;Utopian&quot; itself as &quot;an impracticable scheme.&quot;</p>
 <p>Erasmus&#x27;s reception closes the introduction on contemporary testimony: his wish that readers &quot;see the true source of all political evils,&quot; and his report of an Antwerp burgomaster who &quot;knows it all by heart,&quot; attest that More&#x27;s contemporaries read the fiction as substantive argument, not mere jeu d&#x27;esprit.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/thomas-more">Thomas More</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>677</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/thomas-more">Thomas More</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-02-serving-princes">Raphael’s Refusal: Counsel, Flattery, and the Uselessness of Wisdom at Court</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-05-jester-and-mock-counsel">The Cardinal&#x27;s Fool and the Achorians: Court Flattery and the Case Against Conquest</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts">The Play in Progress: Civil Philosophy versus Principled Withdrawal</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-04-conclusion">Utopia&#x27;s Peroration: The Conspiracy of the Rich and the Case Against Private Property</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-06-treasure-and-corrupt-counsel">Corrupt Counsel, Captured Courts, and the Macarian Vow Against Treasure</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/thomas-more">thomas-more</a><a class="tag" href="/wiki/topics/utopia">utopia</a><a class="tag" href="/wiki/topics/tudor-england">tudor-england</a><a class="tag" href="/wiki/topics/renaissance-humanism">renaissance-humanism</a><span class="tag tag-lone" title="Only this note uses it">editorial-biography</span><span class="tag tag-lone" title="Only this note uses it">translation-history</span><a class="tag" href="/wiki/topics/political-satire">political-satire</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

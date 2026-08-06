@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Harold Bloom</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Harold Bloom</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/harold-bloom.md">source on GitHub</a></div>
-  <div class="note-summary">Harold Bloom (1930–2019) — Yale literary critic, champion of the Western Canon, author of The Anxiety of Influence; best understood as a mystical thinker in the Kabbalistic-Romantic tradition rather than a conventional academic critic.</div>
-  <div class="tags"><span class="tag">harold-bloom</span><span class="tag">literary-criticism</span><span class="tag">western-canon</span><span class="tag">anxiety-of-influence</span><span class="tag">romanticism</span><span class="tag">shakespeare</span><span class="tag">kabbalah</span><span class="tag">yale</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/harold-bloom.md">source on GitHub</a></div>
+    <div class="note-summary">Harold Bloom (1930–2019) — Yale literary critic, champion of the Western Canon, author of The Anxiety of Influence; best understood as a mystical thinker in the Kabbalistic-Romantic tradition rather than a conventional academic critic.</div>
     <div class="prose">
 <h2 id="biographical-sketch">Biographical Sketch</h2>
 <p>Harold Bloom (1930–2019) was Sterling Professor of Humanities at Yale University. Born in the Bronx to Yiddish-speaking immigrant parents; grew up speaking Yiddish before English. Famous for a prodigious memory (reportedly able to recite most of what he had read) and an extraordinary reading speed.</p>
@@ -42,11 +51,11 @@
 <h3 id="early-career-romantic-revival">Early Career: Romantic Revival</h3>
 <p>1950s–60s: distinguished scholarly work reviving the Romantic poets — Shelley, Blake, Keats — at a time when T.S. Eliot&#x27;s critical authority had somewhat suppressed the Romantics in favor of metaphysical poetry.</p>
 <h3 id="the-anxiety-of-influence-1973">The Anxiety of Influence (1973)</h3>
-<p>Bloom&#x27;s decisive self-invention as an original theorist. Introduced the theory that poetic influence is driven by an agonistic struggle against precursors — sublimated competition for literary immortality. The six revisionary ratios (clinamen, tessera, kenosis, daemonization, askesis, apophrades) describe the moves strong poets make against their predecessors. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span>.</p>
+<p>Bloom&#x27;s decisive self-invention as an original theorist. Introduced the theory that poetic influence is driven by an agonistic struggle against precursors — sublimated competition for literary immortality. The six revisionary ratios (clinamen, tessera, kenosis, daemonization, askesis, apophrades) describe the moves strong poets make against their predecessors. See <a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a>.</p>
 <h3 id="divorce-from-yale-english-department-1970s">&quot;Divorce&quot; from Yale English Department (1970s)</h3>
 <p>Bloom&#x27;s growing alienation from what he called the &quot;School of Resentment&quot; — the various strands of critical theory and historicism (deconstruction, New Historicism, feminist theory, postcolonial theory, New Multiculturalism) that came to dominate academic literary study. He positioned himself as defending aesthetic value against political or ideological reduction of literary criticism.</p>
 <h3 id="the-western-canon-1994">The Western Canon (1994)</h3>
-<p>Bloom&#x27;s public manifesto: a defense of aesthetic criteria for canonical selection, an attack on the &quot;School of Resentment,&quot; and an extended celebration of 26 canonical writers organized by Vico&#x27;s historical ages (Aristocratic, Democratic, Chaotic). This made him the figurehead of the &quot;culture wars&quot; in academia and the wider culture. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Western Canon&quot;">Western Canon</span>.</p>
+<p>Bloom&#x27;s public manifesto: a defense of aesthetic criteria for canonical selection, an attack on the &quot;School of Resentment,&quot; and an extended celebration of 26 canonical writers organized by Vico&#x27;s historical ages (Aristocratic, Democratic, Chaotic). This made him the figurehead of the &quot;culture wars&quot; in academia and the wider culture. See <a class="wikilink" href="/wiki/aneesh/concepts/western-canon" title="Written [[Western Canon]], resolved to western-canon">Western Canon</a>.</p>
 <h3 id="late-popular-phase">Late Popular Phase</h3>
 <p><em>Shakespeare: The Invention of the Human</em> (1998), <em>Genius</em> (2002), <em>The Best Poems of the English Language</em> (2004) — didactic, popular works for general audiences. Widely mocked by academics; deeply loved by many private readers.</p>
 <h2 id="intellectual-character">Intellectual Character</h2>
@@ -67,7 +76,7 @@
 <p>But the source essay observes: academics&#x27; rejection of Bloom mirrors their need to limit Shakespeare&#x27;s preeminence — both are symptoms of the anxiety Bloom himself described.</p>
 <h2 id="whats-missing-in-the-standard-bloom-critique">What&#x27;s Missing in the Standard Bloom Critique</h2>
 <ul>
-<li>His critics rarely engage seriously with the psychological mechanism of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> — they attack the politics</li>
+<li>His critics rarely engage seriously with the psychological mechanism of the <a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> — they attack the politics</li>
 <li>His defense of aesthetic autonomy is not obviously wrong even if his specific canonical judgments are contestable</li>
 <li>The &quot;mystical&quot; dimension of his thought — which is what made him inspiring to non-academic readers — is almost entirely absent from academic treatments</li>
 </ul>
@@ -82,25 +91,64 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> — his major theoretical concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span> — the condition his theory addresses</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span> — the operative mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Western Canon&quot;">Western Canon</span> — his cultural-political project</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> — Bloom&#x27;s organizing historical philosopher</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Influence of Anxiety&quot;">The Influence of Anxiety</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> — the Kierkegaard parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> — his major theoretical concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a> — the condition his theory addresses</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a> — the operative mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/western-canon" title="Written [[Western Canon]], resolved to western-canon">Western Canon</a> — his cultural-political project</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> — Bloom&#x27;s organizing historical philosopher</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-influence-of-anxiety" title="Written [[The Influence of Anxiety]], resolved to the-influence-of-anxiety">The Influence of Anxiety</a> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> — the Kierkegaard parallel</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-25-28">Purgatory, Cantos XXV–XXVIII: Statius on the Soul, the Fire of Lust, and the Threshold of the Earthly Paradise</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>671</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">10</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/western-canon">Western Canon</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-influence-of-anxiety">The Influence of Anxiety (The Point, ~2022–2024)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-25-28">Purgatory, Cantos XXV–XXVIII: Statius on the Soul, the Fire of Lust, and the Threshold of the Earthly Paradise</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein">The Literary and Cognitive Faces of Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/western-canon">Western Canon</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-influence-of-anxiety">The Influence of Anxiety (The Point, ~2022–2024)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/harold-bloom">harold-bloom</a><span class="tag tag-lone" title="Only this note uses it">literary-criticism</span><a class="tag" href="/wiki/topics/western-canon">western-canon</a><a class="tag" href="/wiki/topics/anxiety-of-influence">anxiety-of-influence</a><a class="tag" href="/wiki/topics/romanticism">romanticism</a><span class="tag tag-lone" title="Only this note uses it">shakespeare</span><span class="tag tag-lone" title="Only this note uses it">kabbalah</span><span class="tag tag-lone" title="Only this note uses it">yale</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

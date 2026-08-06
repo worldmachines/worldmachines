@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Third Places</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Third Places</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/third-places.md">source on GitHub</a></div>
-  <div class="note-summary">Third places are the informal social spaces — neither home nor work — where community life happens: bars, cafes, barbershops, parks, libraries. Their decline is a leading indicator of social isolation.</div>
-  <div class="tags"><span class="tag">social-infrastructure</span><span class="tag">third-places</span><span class="tag">community</span><span class="tag">urban-life</span><span class="tag">social-isolation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/third-places.md">source on GitHub</a></div>
+    <div class="note-summary">Third places are the informal social spaces — neither home nor work — where community life happens: bars, cafes, barbershops, parks, libraries. Their decline is a leading indicator of social isolation.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>&quot;Third places&quot; (a term coined by sociologist Ray Oldenburg in <em>The Great Good Place</em>, 1989) refers to the social spaces distinct from home (first place) and work (second place) where informal community life happens. Examples include:</p>
@@ -51,7 +60,7 @@
 <h2 id="why-they-matter">Why They Matter</h2>
 <p>Third places are where weak ties form and sustain themselves. Weak ties — as Granovetter&#x27;s network research shows — are disproportionately valuable for social capital: they connect different communities, transmit diverse information, and create the fabric of civic life. The decline of third places is therefore not merely a comfort issue but a structural damage to social networks.</p>
 <h2 id="threat-from-baumols-cost-disease">Threat from Baumol&#x27;s Cost Disease</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span> is one underappreciated mechanism behind the decline of third places. Because these spaces are labor-intensive and non-scalable, they become progressively more expensive relative to digital alternatives — which are cheap to access, infinitely scalable, and backed by massive capital investment. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol Cost Disease and Toxic Solitude&quot;">Baumol Cost Disease and Toxic Solitude</span>.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a> is one underappreciated mechanism behind the decline of third places. Because these spaces are labor-intensive and non-scalable, they become progressively more expensive relative to digital alternatives — which are cheap to access, infinitely scalable, and backed by massive capital investment. See <a class="wikilink-wanted" href="/wiki/wanted/baumol-cost-disease-and-toxic-solitude" title="No note is called &quot;Baumol Cost Disease and Toxic Solitude&quot; yet — see who is asking for it">Baumol Cost Disease and Toxic Solitude</a>.</p>
 <p>When third places do achieve efficiency gains, they often do so by becoming <em>less social</em> — self-checkout kiosks, seating designed to discourage lingering, elimination of service that would encourage conversation.</p>
 <h2 id="policy-responses">Policy Responses</h2>
 <ul>
@@ -62,23 +71,62 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span> — structural cause of third-place decline</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Infrastructure&quot;">Social Infrastructure</span> — policy frame for protecting third places</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Isolation&quot;">Social Isolation</span> — the outcome when third places disappear</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anti-Social Business Model&quot;">Anti-Social Business Model</span> — what replaces them</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Robert Putnam&quot;">Robert Putnam</span> — theorist of social capital decline</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a> — structural cause of third-place decline</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/social-infrastructure" title="Written [[Social Infrastructure]], resolved to social-infrastructure">Social Infrastructure</a> — policy frame for protecting third places</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/social-isolation" title="No note is called &quot;Social Isolation&quot; yet — see who is asking for it">Social Isolation</a> — the outcome when third places disappear</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anti-social-business-model" title="Written [[Anti-Social Business Model]], resolved to anti-social-business-model">Anti-Social Business Model</a> — what replaces them</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/robert-putnam" title="Written [[Robert Putnam]], resolved to robert-putnam">Robert Putnam</a> — theorist of social capital decline</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/proxemics-and-intimacy">Proxemics and Intimacy</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/spaciousness-and-crowding">Spaciousness and Crowding</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>356</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">10</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/baumols-cost-disease">Baumol&#x27;s Cost Disease</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/social-infrastructure">Social Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/anti-social-business-model">Anti-Social Business Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/scalability-and-social-life">Scalability and Social Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/proxemics-and-intimacy">Proxemics and Intimacy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/spaciousness-and-crowding">Spaciousness and Crowding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/robert-putnam">Robert Putnam</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/william-baumol">William Baumol</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/cost-disease-and-the-retreat-from-public-life">Cost Disease and the Retreat from Public Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/baumol-cost-disease-toxic-solitude">Why &#x27;Cost Disease&#x27; Is the Secret Force Behind America&#x27;s Toxic Solitude</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/baumols-cost-disease">Baumol&#x27;s Cost Disease</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/social-infrastructure">Social Infrastructure</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/scalability-and-social-life">Scalability and Social Life</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/anti-social-business-model">Anti-Social Business Model</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/william-baumol">William Baumol</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/body-as-spatial-axis">Body as Spatial Axis</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/social-infrastructure">social-infrastructure</a><a class="tag" href="/wiki/topics/third-places">third-places</a><a class="tag" href="/wiki/topics/community">community</a><span class="tag tag-lone" title="Only this note uses it">urban-life</span><a class="tag" href="/wiki/topics/social-isolation">social-isolation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Jargon as Compression</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Jargon as Compression</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/jargon-as-compression.md">source on GitHub</a></div>
-  <div class="note-summary">Domain-specific language functions as lossless compression for complex ideas; experts who wield it can extract proportionally more precise output from AI and from information systems generally.</div>
-  <div class="tags"><span class="tag">language</span><span class="tag">epistemology</span><span class="tag">AI</span><span class="tag">expertise</span><span class="tag">communication</span><span class="tag">compression</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/jargon-as-compression.md">source on GitHub</a></div>
+    <div class="note-summary">Domain-specific language functions as lossless compression for complex ideas; experts who wield it can extract proportionally more precise output from AI and from information systems generally.</div>
     <div class="prose">
 <h2 id="core-idea">Core Idea</h2>
 <p>Jargon is not obfuscation — it is <em>precision</em>. Domain vocabulary compresses complex, multi-conditional statements into single terms. &quot;EBITDA&quot; is not gatekeeping; it is a pointer to a specific calculation with specific implications that would require a paragraph to unpack in plain language.</p>
-<p>The concept appears in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 3, 2025&quot;">Jan. 3, 2025</span> as the epistemic mechanism behind <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span>.</p>
+<p>The concept appears in <a class="wikilink" href="/wiki/aneesh/summaries/jan-3-2025" title="Written [[Jan. 3, 2025]], resolved to jan-3-2025">Jan. 3, 2025</a> as the epistemic mechanism behind <a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a>.</p>
 <h2 id="how-it-applies-to-ai">How It Applies to AI</h2>
 <p>When a user queries an AI system:</p>
 <ul>
@@ -45,14 +54,14 @@
 <li>A novice queries in plain language, getting an answer calibrated to that lower resolution</li>
 <li>The AI system cannot reconstruct what the user didn&#x27;t know to ask</li>
 </ul>
-<p>The practical outcome: jargon fluency is a <em>prerequisite</em> for full composability (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span>). Access to a tool doesn&#x27;t grant access to its full capability.</p>
+<p>The practical outcome: jargon fluency is a <em>prerequisite</em> for full composability (see <a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a>). Access to a tool doesn&#x27;t grant access to its full capability.</p>
 <h2 id="implications">Implications</h2>
 <h3 id="for-democratization-narratives">For Democratization Narratives</h3>
 <p>The common claim that AI democratizes expertise assumes the bottleneck is <em>access</em>. Jargon as compression suggests the real bottleneck is often <em>query quality</em> — which correlates with domain expertise, not access.</p>
 <h3 id="for-product-and-interface-design">For Product and Interface Design</h3>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sparing and Freeing&quot;">Sparing and Freeing</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Building Thinking Dwelling as Product Design&quot;">Building Thinking Dwelling as Product Design</span>: good interfaces reduce the burden of query precision, helping users ask better questions without requiring full domain fluency. This is one way to genuinely close (rather than widen) the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span>.</p>
+<p>See <a class="wikilink" href="/wiki/aneesh/concepts/sparing-and-freeing" title="Written [[Sparing and Freeing]], resolved to sparing-and-freeing">Sparing and Freeing</a> and <a class="wikilink" href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design" title="Written [[Building Thinking Dwelling as Product Design]], resolved to building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a>: good interfaces reduce the burden of query precision, helping users ask better questions without requiring full domain fluency. This is one way to genuinely close (rather than widen) the <a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a>.</p>
 <h3 id="for-knowledge-transmission">For Knowledge Transmission</h3>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Transmission&quot;">Knowledge Transmission</span>, jargon plays a dual role:</p>
+<p>In <a class="wikilink-wanted" href="/wiki/wanted/knowledge-transmission" title="No note is called &quot;Knowledge Transmission&quot; yet — see who is asking for it">Knowledge Transmission</a>, jargon plays a dual role:</p>
 <ul>
 <li>Within communities: enables high-bandwidth exchange</li>
 <li>Between communities or expertise levels: creates friction and stratification</li>
@@ -66,21 +75,53 @@
 <p>This is not resolvable by simply &quot;explaining jargon.&quot; Once explained, the novice still lacks the practiced intuition for <em>when</em> and <em>how precisely</em> to apply the term.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span> — the inequality jargon produces in AI contexts</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span> — jargon fluency as prerequisite for full composability</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Worker&quot;">Knowledge Worker</span> — for whom jargon fluency is core competency</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Transmission&quot;">Knowledge Transmission</span> — jargon as both enabler and barrier</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a> — the inequality jargon produces in AI contexts</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a> — jargon fluency as prerequisite for full composability</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-worker" title="Written [[Knowledge Worker]], resolved to knowledge-worker">Knowledge Worker</a> — for whom jargon fluency is core competency</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/knowledge-transmission" title="No note is called &quot;Knowledge Transmission&quot; yet — see who is asking for it">Knowledge Transmission</a> — jargon as both enabler and barrier</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>352</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/composable-knowledge">Composable Knowledge</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-worker">Knowledge Worker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-3-2025">Jan. 3, 2025</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-arrival-of-composable-knowledge">The Arrival of Composable Knowledge</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/composability-and-inequality">Composability and Inequality</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/composable-knowledge">Composable Knowledge</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-3-2025">Jan. 3, 2025</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/principal-agent-problem-in-ai">Principal-Agent Problem in AI</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-worker">Knowledge Worker</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/sparing-and-freeing">Sparing and Freeing</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/language">language</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/communication">communication</a><a class="tag" href="/wiki/topics/compression">compression</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

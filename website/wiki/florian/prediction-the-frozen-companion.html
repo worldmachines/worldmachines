@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/florian/">Florian</a> <b>/</b> <span>Prediction: “The Frozen Companion”</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Prediction: “The Frozen Companion”</h1>
-  <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 18 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/prediction-the-frozen-companion.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 18 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/prediction-the-frozen-companion.md">source on GitHub</a></div>
     <div class="prose">
 <pre><code>By 2076, most premium elderly-care homes will keep their residents’ frozen, deprecated AI companions running on cheap, commodity white-label hardware — because the people who came of age with these tools in the 2020s will have fused their sense of self to a specific model too tightly to ever let it go. An early sign comes in the early 2030s, when popular demand for permanent access to a personal AI spawns an EU “right to preserve” law. The larger claim is about the frontier: today’s proprietary frontier AI commoditises into a buy-anywhere stack — the way bespoke machine controllers became generic driver boards — so the Modernity Machine’s standardising core sinks underground into cheap infrastructure, and genuine divergence blooms on top of that frozen substrate. The split may even turn geopolitical: Europe freezing its companions and diverging above them while the US pushes on into whatever AI becomes next.</code></pre>
 <p><em>What follows is the same forecast broken down by the method behind it, annotated in italics — if you only wanted the prediction, you have it above. It’s deliberately falsifiable: a claim built to be wrong-able, not a safe one.</em></p>
@@ -59,15 +69,24 @@
 <p><strong>Payload — substrate licenses divergence.</strong> The Modernity Machine goes fully underground: today’s Frontier Labs’ business model encapsulates into a generic, buy-anywhere whitelabel hardware/software stack — the way generic CNC driver boards plus standard software replaced bespoke motion controllers. Yesterday’s proprietary frontier becomes a commodity floor, letting regions opt out of the frontier race. A frozen substrate underneath; live divergence blooming on top — divergence grounded at geopolitical scale.</p>
 <p><em>The World Machines reading — what the forecast means inside the framework, kept deliberately separate from the testable claim above.</em></p>
 <hr>
-<p><em>Created by <a href="https://substack.com/@florianlohse">Florian Lohse</a> for <a href="https://worldmachines.org/">World Machine Project</a>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;2026-06-18&quot;">2026-06-18</span></em></p>
+<p><em>Created by <a href="https://substack.com/@florianlohse">Florian Lohse</a> for <a href="https://worldmachines.org/">World Machine Project</a>, <a class="wikilink-wanted" href="/wiki/wanted/2026-06-18" title="No note is called &quot;2026-06-18&quot; yet — see who is asking for it">2026-06-18</a></em></p>
     </div>
+    <p class="note-history">Last changed 18 June 2026 by florianlohse — <a href="https://github.com/worldmachines/worldmachines/commit/d8f7154103eb1cdc9cbeb16c32aa1f4771f4b609">created a sample prediction to test forecasting methodology for the WMP vault/oracle</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 18 June 2026 by florianlohse — <a href="https://github.com/worldmachines/worldmachines/commit/d8f7154103eb1cdc9cbeb16c32aa1f4771f4b609">created a sample prediction to test forecasting methodology for the WMP vault/oracle</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>565</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

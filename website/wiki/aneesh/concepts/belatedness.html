@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Belatedness</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Belatedness</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/belatedness.md">source on GitHub</a></div>
-  <div class="note-summary">The condition of arriving too late — after the greatest works have already been made — that generates the anxiety of influence for every writer who takes the literary tradition seriously.</div>
-  <div class="tags"><span class="tag">harold-bloom</span><span class="tag">literary-theory</span><span class="tag">anxiety-of-influence</span><span class="tag">tradition</span><span class="tag">time</span><span class="tag">creativity</span><span class="tag">precursor</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/belatedness.md">source on GitHub</a></div>
+    <div class="note-summary">The condition of arriving too late — after the greatest works have already been made — that generates the anxiety of influence for every writer who takes the literary tradition seriously.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>In Harold Bloom&#x27;s framework, <strong>belatedness</strong> is the existential condition of the strong writer who recognizes that they have been preceded — that the greatest works have already been made, that the most powerful forms have already been established. To arrive late in a literary tradition is to find one&#x27;s potential originality already anticipated, one&#x27;s best moves already made.</p>
@@ -46,7 +55,7 @@
 <li>By the late 20th century: the weight is enormous; the compensatory response is the <strong>aesthetic of the new</strong> (modernism, avant-garde, experimental forms), which paradoxically becomes its own tradition</li>
 </ul>
 <h2 id="belatedness-and-misreading">Belatedness and Misreading</h2>
-<p>Bloom&#x27;s solution to belatedness is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span>: the strong writer does not try to reproduce or continue the precursor faithfully. They <em>misread</em> — distort, invert, reinterpret — enough to create space for their own originality. The misreading is not a failure of understanding but a willed act of self-preservation.</p>
+<p>Bloom&#x27;s solution to belatedness is <a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a>: the strong writer does not try to reproduce or continue the precursor faithfully. They <em>misread</em> — distort, invert, reinterpret — enough to create space for their own originality. The misreading is not a failure of understanding but a willed act of self-preservation.</p>
 <h2 id="contemporary-cultural-belatedness">Contemporary Cultural Belatedness</h2>
 <p>The source essay extends the concept beyond individual writers to contemporary culture broadly: an era that cannot acknowledge the power of the past — that prefers context-free content, presentism, and the eternal now — is exhibiting compensatory overactivity as a defense against belatedness.</p>
 <blockquote><p>&quot;The contemporary world is burdened with the biggest glut of influences and models ever available to any people in history. Nothing proves this essential paralysis more clearly than our era&#x27;s massive cultural overproduction, than those creative industries that churn out books and television shows and movies yet always remain fixated on contemporary trends, on context-free content, with little or no connection to any deep tradition.&quot;</p></blockquote>
@@ -60,30 +69,70 @@
 <p>Resolution requires not more knowledge or less knowledge, but a different <em>relationship</em> to what is known.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> — the theory that belatedness drives</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Harold Bloom&quot;">Harold Bloom</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span> — the mechanism for surviving belatedness</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Western Canon&quot;">Western Canon</span> — the accumulated weight that produces belatedness</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> — Kierkegaard&#x27;s alternative to seeing this as paralyzing</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Influence of Anxiety&quot;">The Influence of Anxiety</span> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> — the theory that belatedness drives</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/harold-bloom" title="Written [[Harold Bloom]], resolved to harold-bloom">Harold Bloom</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a> — the mechanism for surviving belatedness</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/western-canon" title="Written [[Western Canon]], resolved to western-canon">Western Canon</a> — the accumulated weight that produces belatedness</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> — Kierkegaard&#x27;s alternative to seeing this as paralyzing</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-influence-of-anxiety" title="Written [[The Influence of Anxiety]], resolved to the-influence-of-anxiety">The Influence of Anxiety</a> — source essay</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">8</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05">Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-25-28">Purgatory, Cantos XXV–XXVIII: Statius on the Soul, the Fire of Lust, and the Threshold of the Earthly Paradise</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-16-the-press">The Press (1868): Return to a Machine-Made America</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sir-thopas">The Prologue and Tale of Sir Thopas (First and Second Fits)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>17</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>496</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">17</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/western-canon">Western Canon</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-influence-of-anxiety">The Influence of Anxiety (The Point, ~2022–2024)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>9 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-16-the-press">The Press (1868): Return to a Machine-Made America</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05">Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sir-thopas">The Prologue and Tale of Sir Thopas (First and Second Fits)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-25-28">Purgatory, Cantos XXV–XXVIII: Statius on the Soul, the Fire of Lust, and the Threshold of the Earthly Paradise</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein">The Literary and Cognitive Faces of Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">13</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/western-canon">Western Canon</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/harold-bloom">harold-bloom</a><a class="tag" href="/wiki/topics/literary-theory">literary-theory</a><a class="tag" href="/wiki/topics/anxiety-of-influence">anxiety-of-influence</a><a class="tag" href="/wiki/topics/tradition">tradition</a><a class="tag" href="/wiki/topics/time">time</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/precursor">precursor</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

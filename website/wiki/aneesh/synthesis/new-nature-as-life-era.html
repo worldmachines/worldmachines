@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>New Nature as Life Era — A Synthesis</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>New Nature as Life Era — A Synthesis</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/new-nature-as-life-era.md">source on GitHub</a></div>
-  <div class="note-summary">Rao&#x27;s New Nature and Chaisson&#x27;s Life Era are parallel framings of the same civilizational threshold — both argue that technologically mediated reality is becoming as inviolable as physical nature — but they differ on whether this transition is progress or ecology.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">new-nature</span><span class="tag">life-era</span><span class="tag">rao</span><span class="tag">chaisson</span><span class="tag">civilization</span><span class="tag">technology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/new-nature-as-life-era.md">source on GitHub</a></div>
+    <div class="note-summary">Rao&#x27;s New Nature and Chaisson&#x27;s Life Era are parallel framings of the same civilizational threshold — both argue that technologically mediated reality is becoming as inviolable as physical nature — but they differ on whether this transition is progress or ecology.</div>
     <div class="prose">
 <h2 id="the-parallel-theses">The Parallel Theses</h2>
-<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> (2026) and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Eric Chaisson&quot;">Eric Chaisson</span> (2009) both argue that civilization is crossing a threshold where technology becomes a new natural force:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> (2026) and <a class="wikilink" href="/wiki/aneesh/entities/eric-chaisson" title="Written [[Eric Chaisson]], resolved to eric-chaisson">Eric Chaisson</a> (2009) both argue that civilization is crossing a threshold where technology becomes a new natural force:</p>
 <p><strong>Chaisson&#x27;s Life Era</strong>: &quot;Life is now beginning to lose its [matter&#x27;s] dominance, at least at those isolated locales of hi-tech civilization... Technology, despite all it pitfalls, enables life to manipulate matter, even to control it, much as matter evolved to overwhelm radiation billions of years ago.&quot;</p>
 <p><strong>Rao&#x27;s New Nature</strong>: &quot;Regimes of reality governed by technologically mediated laws that are nearly as inviolable, immutable, and persistent as those of nature.&quot;</p>
 <p>Both are saying: technology has crossed a threshold from being a human tool to being a natural force in its own right.</p>
@@ -52,9 +61,9 @@
 <h2 id="frame-2-rao-ecological-narrative">Frame 2: Rao — Ecological Narrative</h2>
 <p>Rao&#x27;s framing is ecological-and-amoral:</p>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span> is not progress toward a complexity apex but a <em>new ecology</em> with all of ecology&#x27;s murderousness</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a> is not progress toward a complexity apex but a <em>new ecology</em> with all of ecology&#x27;s murderousness</li>
 <li>The correct image is not solarpunk robots in meadows but mussels on a pier piling</li>
-<li>The Life Era doesn&#x27;t culminate in harmony; it generates a new &quot;harmony of overwhelming and collective murder&quot; (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Werner Herzog&quot;">Werner Herzog</span>)</li>
+<li>The Life Era doesn&#x27;t culminate in harmony; it generates a new &quot;harmony of overwhelming and collective murder&quot; (<a class="wikilink" href="/wiki/aneesh/entities/werner-herzog" title="Written [[Werner Herzog]], resolved to werner-herzog">Werner Herzog</a>)</li>
 <li>Technology&#x27;s illegible competitive dynamics are <em>features</em>, not failures — they are what a live ecology looks like</li>
 </ul>
 <h2 id="the-disagreement">The Disagreement</h2>
@@ -72,25 +81,52 @@
 <li>The answer matters for how we respond to it: if it&#x27;s a culmination, we should steward it; if it&#x27;s an ecology, we should participate in it (including its murderous parts)</li>
 </ul>
 <h2 id="implication-the-gramsci-gap-is-the-life-era-transition">Implication: The Gramsci Gap IS the Life Era Transition</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span> (Rao) describes the interregnum between paradigms. The Life Era transition (Chaisson) is the macro-scale version: the transition from Matter Era dominance to Life Era dominance. We are in the Gramsci Gap of cosmic evolution — the morbid symptoms are real, and the new order has not yet fully emerged.</p>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span> adds: we are surrounded by the components of the new order, recording notes in the margins that will look obvious in retrospect.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a> (Rao) describes the interregnum between paradigms. The Life Era transition (Chaisson) is the macro-scale version: the transition from Matter Era dominance to Life Era dominance. We are in the Gramsci Gap of cosmic evolution — the morbid symptoms are real, and the new order has not yet fully emerged.</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a> adds: we are surrounded by the components of the new order, recording notes in the margins that will look obvious in retrospect.</p>
 <h2 id="essay-seed">Essay Seed</h2>
 <p><strong>&quot;The Life Era Has No Manager&quot;</strong>: Against both the techno-optimist (Chaisson&#x27;s hope for a benign technoculture) and the techno-dystopist (the Life Era as catastrophe), there is a third position: the Life Era is simply a new ecology, indifferent to both hopes and fears. Managing it is like managing a jungle. The question is not how to control the Life Era but how to maintain liveness within it.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cosmic Evolution - Chaisson&quot;">Cosmic Evolution - Chaisson</span></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/cosmic-evolution-chaisson" title="Written [[Cosmic Evolution - Chaisson]], resolved to cosmic-evolution-chaisson">Cosmic Evolution - Chaisson</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/viscous-frontier-and-cost-of-intent">The Viscous Frontier and the Cost of Intent</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>649</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/viscous-frontier-and-cost-of-intent">The Viscous Frontier and the Cost of Intent</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/cosmic-evolution-chaisson">Cosmic Evolution: State of the Science — Eric J. Chaisson (2009)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/eric-chaisson">Eric Chaisson</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/new-nature">new-nature</a><a class="tag" href="/wiki/topics/life-era">life-era</a><a class="tag" href="/wiki/topics/rao">rao</a><a class="tag" href="/wiki/topics/chaisson">chaisson</a><a class="tag" href="/wiki/topics/civilization">civilization</a><a class="tag" href="/wiki/topics/technology">technology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

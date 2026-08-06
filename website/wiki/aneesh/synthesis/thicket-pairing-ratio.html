@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The Thicket-Pairing Ratio</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Thicket-Pairing Ratio</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/thicket-pairing-ratio.md">source on GitHub</a></div>
-  <div class="note-summary">The operative variable for the Liveness era, named in &#x27;Not My Lever&#x27;: the ratio of refusals paired with thicket-construction to refusals that vacate space for extraction. A culture in which most refusals are paired matures into the Liveness era&#x27;s Dawn; a culture in which most are unpaired rediscovers learned helplessness at industrial scale and calls it freedom.</div>
-  <div class="tags"><span class="tag">thicket-pairing-ratio</span><span class="tag">lever-discipline</span><span class="tag">the-thicket</span><span class="tag">dark-forestry</span><span class="tag">liveness-era</span><span class="tag">ratio</span><span class="tag">dawn-day-dusk</span><span class="tag">civilizational-variable</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/thicket-pairing-ratio.md">source on GitHub</a></div>
+    <div class="note-summary">The operative variable for the Liveness era, named in &#x27;Not My Lever&#x27;: the ratio of refusals paired with thicket-construction to refusals that vacate space for extraction. A culture in which most refusals are paired matures into the Liveness era&#x27;s Dawn; a culture in which most are unpaired rediscovers learned helplessness at industrial scale and calls it freedom.</div>
     <div class="prose">
-<p><strong>Named in</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> (Section VII), 2026.</p>
+<p><strong>Named in</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>, <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> (Section VII), 2026.</p>
 <h2 id="the-variable">The Variable</h2>
 <p>The <strong>thicket-pairing ratio</strong> is the ratio, across a culture, of:</p>
 <ul>
@@ -96,7 +105,7 @@
 <p>The pairing ratio is what those three threads compute <em>together</em> — a quantity none of them computes alone.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> — source essay (Section VII)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> — source essay (Section VII)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">not-my-lever</a> — the form whose pairing the ratio measures</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — the habitat that constitutes the numerator&#x27;s pairing</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/dark-forestry">dark-forestry</a> — the unpaired form</li>
@@ -106,25 +115,51 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> — the world machine inside which the ratio resolves</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">dawn-day-dusk-machine-typology</a> — the phase framework in which the outcome is named</li>
 <li><a class="wikilink" href="/wiki/aneesh/summaries/worldmachines-org-theory">worldmachines-org-theory</a> — the canonical reference for the phase-pathology question</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Birth of Thickets&quot;">The Birth of Thickets</span> — the companion essay defining the habitat</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/the-birth-of-thickets" title="No note is called &quot;The Birth of Thickets&quot; yet — see who is asking for it">The Birth of Thickets</a> — the companion essay defining the habitat</li>
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/place-making-and-resistance-the-constructive-side">Place-Making and Resistance — The Constructive Side</a> — the broader thread of which thicket-pairing is the latest specification</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">7</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-04-why-are-the-memorials-late">RIT 04 — Why Are the Memorials Late? (Ch. 2) — China&#x27;s second chance refused</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts">The Play in Progress: Civil Philosophy versus Principled Withdrawal</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>14</b><span>links out</span></div>
+      <div class="bearing"><b>1132</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-04-why-are-the-memorials-late">RIT 04 — Why Are the Memorials Late? (Ch. 2) — China&#x27;s second chance refused</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts">The Play in Progress: Civil Philosophy versus Principled Withdrawal</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">thicket-pairing-ratio</span><a class="tag" href="/wiki/topics/lever-discipline">lever-discipline</a><a class="tag" href="/wiki/topics/the-thicket">the-thicket</a><a class="tag" href="/wiki/topics/dark-forestry">dark-forestry</a><a class="tag" href="/wiki/topics/liveness-era">liveness-era</a><span class="tag tag-lone" title="Only this note uses it">ratio</span><a class="tag" href="/wiki/topics/dawn-day-dusk">dawn-day-dusk</a><span class="tag tag-lone" title="Only this note uses it">civilizational-variable</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

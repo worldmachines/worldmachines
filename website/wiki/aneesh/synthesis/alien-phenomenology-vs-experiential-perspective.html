@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Alien Phenomenology vs. Experiential Perspective</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Alien Phenomenology vs. Experiential Perspective</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective.md">source on GitHub</a></div>
-  <div class="note-summary">Bryant&#x27;s alien phenomenology (Onto-Cartography Ch. 3) generalizes &#x27;perspective&#x27; beyond consciousness to all machinic operational closure; Tuan&#x27;s experiential perspective (Space and Place 1977) keeps it firmly human. The disagreement is genuine and productive — the wiki should hold both: Tuan for the inhabiting subject&#x27;s interior, Bryant for the relational-material exterior.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">bryant</span><span class="tag">tuan</span><span class="tag">alien-phenomenology</span><span class="tag">experiential-perspective</span><span class="tag">ooo</span><span class="tag">phenomenology</span><span class="tag">post-humanism</span><span class="tag">philosophical-disagreement</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective.md">source on GitHub</a></div>
+    <div class="note-summary">Bryant&#x27;s alien phenomenology (Onto-Cartography Ch. 3) generalizes &#x27;perspective&#x27; beyond consciousness to all machinic operational closure; Tuan&#x27;s experiential perspective (Space and Place 1977) keeps it firmly human. The disagreement is genuine and productive — the wiki should hold both: Tuan for the inhabiting subject&#x27;s interior, Bryant for the relational-material exterior.</div>
     <div class="prose">
 <h2 id="a-genuine-disagreement">A Genuine Disagreement</h2>
 <p>Most of the Bryant/Tuan synthesis pages in this wiki (<a class="wikilink" href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">place-as-the-human-form-of-worlding</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/naming-as-anchoring">naming-as-anchoring</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">the-gravity-of-infrastructure</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">machinic-assemblage-and-world-machines</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">temporal-topology-and-the-viscous-frontier</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">architecture-and-books-as-crystallized-awareness</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">visibility-touristic-place-and-algorithmic-curation</a>) work out compatibilities and complementarities. This page does the opposite. Bryant and Tuan disagree at the foundation about what <em>perspective</em> is, and the disagreement does not resolve. The wiki has to hold both.</p>
@@ -102,18 +111,44 @@
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">visibility-touristic-place-and-algorithmic-curation</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>31</b><span>links out</span></div>
+      <div class="bearing"><b>1545</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/worlding">Worlding (Bryant)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/alien-phenomenology">Alien Phenomenology</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/architecture-as-crystallized-awareness">Architecture as Crystallized Awareness</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/bryant">bryant</a><a class="tag" href="/wiki/topics/tuan">tuan</a><a class="tag" href="/wiki/topics/alien-phenomenology">alien-phenomenology</a><a class="tag" href="/wiki/topics/experiential-perspective">experiential-perspective</a><a class="tag" href="/wiki/topics/ooo">ooo</a><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><a class="tag" href="/wiki/topics/post-humanism">post-humanism</a><span class="tag tag-lone" title="Only this note uses it">philosophical-disagreement</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

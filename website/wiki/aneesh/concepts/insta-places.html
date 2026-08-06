@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,24 +26,33 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Insta-Places</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Insta-Places</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/insta-places.md">source on GitHub</a></div>
-  <div class="note-summary">Cognitive shortcuts — belief-landmarks conjured from experience and treated as solid regardless of epistemic grounding — that enable rapid navigation but resist in-the-moment revision.</div>
-  <div class="tags"><span class="tag">cognition</span><span class="tag">place-making</span><span class="tag">heuristics</span><span class="tag">navigation</span><span class="tag">normative-self-blindness</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/insta-places.md">source on GitHub</a></div>
+    <div class="note-summary">Cognitive shortcuts — belief-landmarks conjured from experience and treated as solid regardless of epistemic grounding — that enable rapid navigation but resist in-the-moment revision.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>Insta-places are the mind&#x27;s internal analogs to geographical landmarks: cognitive reference points conjured from experience that we treat as solid and reliable, regardless of how well they are actually grounded in knowledge.</p>
-<p>They are &quot;insta-&quot; because they are conjured on demand — not laboriously constructed but rapidly assembled from available experience. They are &quot;places&quot; because they function as navigational anchors in the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">cognitive space-and-place</span> framework.</p>
+<p>They are &quot;insta-&quot; because they are conjured on demand — not laboriously constructed but rapidly assembled from available experience. They are &quot;places&quot; because they function as navigational anchors in the <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">cognitive space-and-place</a> framework.</p>
 <h2 id="how-they-work">How They Work</h2>
 <ol>
 <li>We encounter novel territory (a question, a situation, a decision).</li>
 <li>The mind rapidly assembles a reference point from relevant experience and prior belief.</li>
 <li>This reference point is <em>treated as solid</em> for the purpose of current navigation.</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">Normative Self-Blindness</span> protects the insta-place from in-the-moment revision.</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">Normative Self-Blindness</a> protects the insta-place from in-the-moment revision.</li>
 </ol>
 <h2 id="epistemic-status">Epistemic Status</h2>
 <ul>
@@ -53,7 +62,7 @@
 </ul>
 <h2 id="relation-to-identity">Relation to Identity</h2>
 <p>From the outside, the entire mind appears as a single place (our identity). Identity is itself the outermost, most load-bearing insta-place. Probe it and it fractures into smaller insta-places — a fractal structure of semi-solid smoke.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Identity as Place&quot;">Identity as Place</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Mind as Semi-Solid Smoke&quot;">The Mind as Semi-Solid Smoke</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/identity-as-place" title="Written [[Identity as Place]], resolved to identity-as-place">Identity as Place</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke" title="Written [[The Mind as Semi-Solid Smoke]], resolved to the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a></p>
 <h2 id="examples">Examples</h2>
 <ul>
 <li>The scientist who knows &quot;what makes a good scientist&quot; without having examined the belief.</li>
@@ -62,30 +71,68 @@
 </ul>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">Normative Self-Blindness</span> — the protection mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — the framework insta-places operate within</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — the method that pressures insta-places into re-examination</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Identity as Place&quot;">Identity as Place</span> — identity as the outermost insta-place</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Navigation and Cognition&quot;">Navigation and Cognition</span> — evolutionary continuity of landmark-following</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Mind as Semi-Solid Smoke&quot;">The Mind as Semi-Solid Smoke</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">Normative Self-Blindness</a> — the protection mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — the framework insta-places operate within</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — the method that pressures insta-places into re-examination</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/identity-as-place" title="Written [[Identity as Place]], resolved to identity-as-place">Identity as Place</a> — identity as the outermost insta-place</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/navigation-and-cognition" title="Written [[Navigation and Cognition]], resolved to navigation-and-cognition">Navigation and Cognition</a> — evolutionary continuity of landmark-following</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke" title="Written [[The Mind as Semi-Solid Smoke]], resolved to the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">8</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/landscape-painting-as-place-making">Landscape Painting as Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/touristic-place-making">Touristic Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>15</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>329</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">15</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/navigation-and-cognition">Navigation and Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>7 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/touristic-place-making">Touristic Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-as-place">Identity as Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/landscape-painting-as-place-making">Landscape Painting as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeland-attachment">Homeland Attachment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/naming-as-place-making">Naming as Place-Making</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/cognition">cognition</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/heuristics">heuristics</a><a class="tag" href="/wiki/topics/navigation">navigation</a><a class="tag" href="/wiki/topics/normative-self-blindness">normative-self-blindness</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

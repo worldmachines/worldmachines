@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Unwarranted Faith in Numbers</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Unwarranted Faith in Numbers</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/unwarranted-faith-in-numbers.md">source on GitHub</a></div>
-  <div class="note-summary">An empirically documented cognitive failure in which people — including AI experts — perceive numerical outputs as signals of intelligence or reliability even when the numbers&#x27; meaning is opaque.</div>
-  <div class="tags"><span class="tag">cognitive-bias</span><span class="tag">human-factors</span><span class="tag">explainable-ai</span><span class="tag">trust</span><span class="tag">decision-making</span><span class="tag">numeracy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/unwarranted-faith-in-numbers.md">source on GitHub</a></div>
+    <div class="note-summary">An empirically documented cognitive failure in which people — including AI experts — perceive numerical outputs as signals of intelligence or reliability even when the numbers&#x27; meaning is opaque.</div>
     <div class="prose">
 <p>An empirically documented failure mode in human-AI interaction: both AI experts and non-experts attribute intelligence or correctness to AI outputs <em>specifically because they are numerical</em>, even when the meaning of those numbers is not understood.</p>
 <h2 id="the-study">The Study</h2>
-<p>Documented in research cited in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Briefing: The State of Explainable AI (XAI)&quot;">Briefing: The State of Explainable AI (XAI)</span>: participants shown numerical Q-values for robot actions perceived those values as signals of the robot&#x27;s intelligence — even when the Q-values&#x27; interpretation was never explained. The more specific the number, the more credibility it appeared to convey.</p>
+<p>Documented in research cited in <a class="wikilink-wanted" href="/wiki/wanted/briefing-the-state-of-explainable-ai-xai" title="No note is called &quot;Briefing: The State of Explainable AI (XAI)&quot; yet — see who is asking for it">Briefing: The State of Explainable AI (XAI)</a>: participants shown numerical Q-values for robot actions perceived those values as signals of the robot&#x27;s intelligence — even when the Q-values&#x27; interpretation was never explained. The more specific the number, the more credibility it appeared to convey.</p>
 <p>This is a form of <strong>pseudo-precision</strong>: numbers convey apparent rigor even in the absence of actual comprehension.</p>
 <h2 id="why-this-matters-for-xai">Why This Matters for XAI</h2>
 <p>The standard XAI instinct is: &quot;explain by showing more.&quot; Unwarranted faith in numbers shows this backfires. If you add a confidence score (0.91), a SHAP attribution vector, or an IoU score to an AI output, users may:</p>
@@ -46,9 +55,9 @@
 <li>Suspend their own expert judgment in deference to the number</li>
 <li>Fail to detect model errors that their domain expertise would have caught</li>
 </ol>
-<p>This is the &quot;explainability pitfall&quot; (EP) that <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> is designed to prevent.</p>
+<p>This is the &quot;explainability pitfall&quot; (EP) that <a class="wikilink" href="/wiki/aneesh/concepts/seamful-design" title="Written [[Seamful Design]], resolved to seamful-design">Seamful Design</a> is designed to prevent.</p>
 <h2 id="connection-to-the-betty-crocker-principle">Connection to the Betty Crocker Principle</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>&#x27;s formulation: adding an egg (meaningful user participation) is better than a fully automatic mix. Numerical outputs presented without user action opportunity produce passive acceptance — the AI equivalent of the fully automatic mix.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>&#x27;s formulation: adding an egg (meaningful user participation) is better than a fully automatic mix. Numerical outputs presented without user action opportunity produce passive acceptance — the AI equivalent of the fully automatic mix.</p>
 <h2 id="broader-pattern">Broader Pattern</h2>
 <p>Unwarranted faith in numbers is an instance of authority bias — numerical authority specifically. Related patterns:</p>
 <ul>
@@ -58,22 +67,55 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — the design remedy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Calibrated Explanation&quot;">Calibrated Explanation</span> — the alternative to numerical overload</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the domain where this failure appears</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Human Factors Engineering (HFE)&quot;">Human Factors Engineering (HFE)</span> — the analytical framework that identifies EPs</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Briefing: The State of Explainable AI (XAI)&quot;">Briefing: The State of Explainable AI (XAI)</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/seamful-design" title="Written [[Seamful Design]], resolved to seamful-design">Seamful Design</a> — the design remedy</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/calibrated-explanation" title="Written [[Calibrated Explanation]], resolved to calibrated-explanation">Calibrated Explanation</a> — the alternative to numerical overload</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the domain where this failure appears</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/human-factors-engineering-hfe" title="No note is called &quot;Human Factors Engineering (HFE)&quot; yet — see who is asking for it">Human Factors Engineering (HFE)</a> — the analytical framework that identifies EPs</li>
+<li>Source: <a class="wikilink-wanted" href="/wiki/wanted/briefing-the-state-of-explainable-ai-xai" title="No note is called &quot;Briefing: The State of Explainable AI (XAI)&quot; yet — see who is asking for it">Briefing: The State of Explainable AI (XAI)</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-02-introduction">RIT 02 — Introduction — why the clock matters</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>338</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">8</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/calibrated-explanation">Calibrated Explanation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/seamful-design">Seamful Design</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/explainability-across-domains">Explainability Across Domains</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-02-introduction">RIT 02 — Introduction — why the clock matters</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/briefing-xai-human-ai-decision-making">Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/responsible-ai">Responsible AI (RAI)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/calibrated-explanation">Calibrated Explanation</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/seamful-design">Seamful Design</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-human-causal-prediction-machine">AI-Human Causal Prediction Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/bayesian-statistics">Bayesian Statistics</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/cognitive-bias">cognitive-bias</a><a class="tag" href="/wiki/topics/human-factors">human-factors</a><a class="tag" href="/wiki/topics/explainable-ai">explainable-ai</a><a class="tag" href="/wiki/topics/trust">trust</a><a class="tag" href="/wiki/topics/decision-making">decision-making</a><span class="tag tag-lone" title="Only this note uses it">numeracy</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

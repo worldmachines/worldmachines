@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33.md">source on GitHub</a></div>
-  <div class="note-summary">In the Earthly Paradise, Dante witnesses an elaborate allegorical pageant of the Church, loses Virgil and is reproved by the newly arrived Beatrice for his infidelity to her memory, confesses and is plunged into Lethe, then beholds the pageant&#x27;s chariot corrupted by an eagle, fox, dragon, and finally a harlot and giant, before Beatrice charges him to record it all and he is purified in Eunoe, made fit to rise to the stars.</div>
-  <div class="tags"><span class="tag">dante</span><span class="tag">purgatorio</span><span class="tag">beatrice</span><span class="tag">earthly-paradise</span><span class="tag">allegorical-pageant</span><span class="tag">ecclesiastical-corruption</span><span class="tag">confession-and-purification</span><span class="tag">lethe-and-eunoe</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33.md">source on GitHub</a></div>
+    <div class="note-summary">In the Earthly Paradise, Dante witnesses an elaborate allegorical pageant of the Church, loses Virgil and is reproved by the newly arrived Beatrice for his infidelity to her memory, confesses and is plunged into Lethe, then beholds the pageant&#x27;s chariot corrupted by an eagle, fox, dragon, and finally a harlot and giant, before Beatrice charges him to record it all and he is purified in Eunoe, made fit to rise to the stars.</div>
     <div class="prose">
 <p>This unit carries Dante from the final approach to the Earthly Paradise (Cantos XXIX–XXXIII of the <em>Purgatorio</em>) through the loss of Virgil, the harrowing reunion with Beatrice, confession, immersion in Lethe, a visionary pageant depicting the corruption of the Church, and final purification in Eunoe — ending exactly on the threshold of the <em>Paradise</em> (whose Canto I heading appears with no text following, marking the unit&#x27;s natural close). Structurally it is the hinge of the whole poem: the last purgation before ascent.</p>
 <h2 id="themes">Themes</h2>
@@ -46,13 +54,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The Virgil-loss passage (&quot;But Virgil had bereav&#x27;d us of himself...&quot;) is the emotional pivot of the whole unit — reason&#x27;s guide gone at the precise instant Dante needs to speak of love, replaced by unmediated grief. Beatrice&#x27;s self-naming (&quot;Observe me well. I am, in sooth, I am / Beatrice&quot;) is delivered with &quot;stern majesty&quot; rather than tenderness, setting the tone for the confession that follows. The confession scene itself turns on Dante&#x27;s halting, tear-choked admission and Beatrice&#x27;s insistence that shame, honestly borne, is itself part of justice. The chariot&#x27;s transformation into a monster ridden by a whore and chained to a jealous giant is the unit&#x27;s most historically loaded image — an allegory of ecclesiastical corruption rendered as grotesque bestiary. Beatrice&#x27;s charge to &quot;write, returning to that place&quot; reframes the entire vision as a commission. And the closing lines — regeneration through the second river, &quot;Pure and made apt for mounting to the stars&quot; — close the <em>Purgatorio</em> on a note of completed purification, immediately followed (in the source) by the bare heading for <em>Paradise</em>, Canto I, with no further text in this unit.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>802</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dante">dante</a><a class="tag" href="/wiki/topics/purgatorio">purgatorio</a><a class="tag" href="/wiki/topics/beatrice">beatrice</a><a class="tag" href="/wiki/topics/earthly-paradise">earthly-paradise</a><span class="tag tag-lone" title="Only this note uses it">allegorical-pageant</span><a class="tag" href="/wiki/topics/ecclesiastical-corruption">ecclesiastical-corruption</a><span class="tag tag-lone" title="Only this note uses it">confession-and-purification</span><span class="tag tag-lone" title="Only this note uses it">lethe-and-eunoe</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

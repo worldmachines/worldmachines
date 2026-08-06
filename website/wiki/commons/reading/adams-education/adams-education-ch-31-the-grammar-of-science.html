@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>The Grammar of Science (1903)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Grammar of Science (1903)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science.md">source on GitHub</a></div>
-  <div class="note-summary">Reading Karl Pearson&#x27;s Grammar of Science alongside Poincare, Mach, and Haeckel in the aftermath of Crookes, Roentgen, and Curie, Adams concludes that turn-of-the-century physics has replaced a lawful, unified nineteenth-century universe with an admitted supersensual chaos, dating the rupture precisely to 1900 and closing with the image of the mind&#x27;s own self-made unity - man&#x27;s abstract, woman&#x27;s procreative - destroyed by that chaos.</div>
-  <div class="tags"><span class="tag">karl-pearson</span><span class="tag">grammar-of-science</span><span class="tag">unity-and-multiplicity</span><span class="tag">dynamic-theory-of-history</span><span class="tag">fin-de-siecle-physics</span><span class="tag">radium-and-x-rays</span><span class="tag">henri-poincare</span><span class="tag">chaos-versus-order</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a>, <a class="wikilink" href="/wiki/aneesh/concepts/far-from-equilibrium-systems">far-from-equilibrium-systems</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science.md">source on GitHub</a></div>
+    <div class="note-summary">Reading Karl Pearson&#x27;s Grammar of Science alongside Poincare, Mach, and Haeckel in the aftermath of Crookes, Roentgen, and Curie, Adams concludes that turn-of-the-century physics has replaced a lawful, unified nineteenth-century universe with an admitted supersensual chaos, dating the rupture precisely to 1900 and closing with the image of the mind&#x27;s own self-made unity - man&#x27;s abstract, woman&#x27;s procreative - destroyed by that chaos.</div>
     <div class="prose">
 <p>Prompted by Willard Gibbs&#x27;s admiration for Karl Pearson&#x27;s <em>Grammar of Science</em>, Adams reads it as a symptom rather than a scientific text, tracing how English, German, and French science between 1893 and 1904 - via Crookes&#x27;s psychical research, Roentgen&#x27;s rays, Curie&#x27;s radium, Poincare&#x27;s conventionalism, and Mach&#x27;s rejection of matter - jointly confess that the nineteenth century&#x27;s confident, lawful Unity has given way to an admitted supersensual Chaos, a rupture Adams dates precisely to 1900 and dramatizes at the chapter&#x27;s close as the wreck of the mind&#x27;s self-secreted &quot;unity.&quot;</p>
 <h2 id="themes">Themes</h2>
@@ -51,18 +59,48 @@
 <p>The chapter&#x27;s turning-point sentence tracks the &quot;motion of thought&quot; across five centuries of &quot;swerve&quot; - 310, 1500, and finally: &quot;Only in 1900, the continuity snapped.&quot; This is the closest the chapter comes to a thesis statement.</p>
 <p>The closing pearl-oyster passage - &quot;man&#x27;s mind had behaved like a young pearl oyster, secreting its universe to suit its conditions&quot; until &quot;Man knew it was true because he made it, and he loved it for the same reason&quot; and &quot;he achieved it, and justly thought it a work of art&quot; - reframes every prior scientific Unity as a psychological artifact rather than a discovery, setting up the chapter&#x27;s closing claim that the artifact cannot survive contact with an intractable outer chaos.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>805</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/far-from-equilibrium-systems">far-from-equilibrium-systems</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">karl-pearson</span><span class="tag tag-lone" title="Only this note uses it">grammar-of-science</span><a class="tag" href="/wiki/topics/unity-and-multiplicity">unity-and-multiplicity</a><a class="tag" href="/wiki/topics/dynamic-theory-of-history">dynamic-theory-of-history</a><span class="tag tag-lone" title="Only this note uses it">fin-de-siecle-physics</span><a class="tag" href="/wiki/topics/radium-and-x-rays">radium-and-x-rays</a><span class="tag tag-lone" title="Only this note uses it">henri-poincare</span><span class="tag tag-lone" title="Only this note uses it">chaos-versus-order</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,47 +26,91 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Franz R. Kempf</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Franz R. Kempf</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/franz-r-kempf.md">source on GitHub</a></div>
-  <div class="note-summary">Franz R. Kempf is a literary scholar at Bard College whose 2015 essay on Kulturkritik reframes the Rousseau-Schiller-Goethe tradition as a self-reflexive rhetorical mode rather than a simple nature-vs-culture binary.</div>
-  <div class="tags"><span class="tag">kempf</span><span class="tag">literary-scholar</span><span class="tag">kulturkritik</span><span class="tag">enlightenment</span><span class="tag">bard-college</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/franz-r-kempf.md">source on GitHub</a></div>
+    <div class="note-summary">Franz R. Kempf is a literary scholar at Bard College whose 2015 essay on Kulturkritik reframes the Rousseau-Schiller-Goethe tradition as a self-reflexive rhetorical mode rather than a simple nature-vs-culture binary.</div>
     <div class="prose">
 <h2 id="identity">Identity</h2>
 <p>Literary scholar affiliated with Bard College. Author of &quot;Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe,&quot; <em>Philosophy and Literature</em>, Vol. 39 No. 2 (October 2015), pp. 422–442. DOI: 10.1353/phl.2015.0055.</p>
 <h2 id="key-contribution">Key Contribution</h2>
-<p>Kempf&#x27;s central intervention against existing scholarship on <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span>: most treatments assume a binary nature-vs-culture opposition and a straightforward critical project. Kempf argues instead that Kulturkritik&#x27;s rhetorical strategy posits a <strong>reciprocity</strong> of nature and culture — the two poles are not opposed but mutually constituting, and the critical work depends on this mutual constitution rather than on choosing one over the other.</p>
+<p>Kempf&#x27;s central intervention against existing scholarship on <a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a>: most treatments assume a binary nature-vs-culture opposition and a straightforward critical project. Kempf argues instead that Kulturkritik&#x27;s rhetorical strategy posits a <strong>reciprocity</strong> of nature and culture — the two poles are not opposed but mutually constituting, and the critical work depends on this mutual constitution rather than on choosing one over the other.</p>
 <p>This reframing makes Kulturkritik not a critique of culture in favor of nature, but a <strong>regulative mode of experimental thinking</strong> — a dialectical procedure that keeps both poles in productive tension, enabling self-reflection through the mutual mirroring of self (culture) and other (nature).</p>
 <h2 id="method">Method</h2>
 <p>Kempf traces the Kulturkritik tradition through its horticultural manifestations — the French garden and the English garden — as a way of bringing the aesthetic and the philosophical dimensions of the argument together. The garden is not incidental but central: it is the site where Kulturkritik&#x27;s paradoxes are most clearly enacted and most honestly admitted (Julie confessing she created only &quot;the illusion of natural wilderness&quot;).</p>
 <h2 id="intellectual-lineage-mapped">Intellectual Lineage Mapped</h2>
 <p>Kempf charts a precise intellectual genealogy:</p>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> → initiates the project; the bête and the bourgeois as rhetorical extremes</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Friedrich Schiller&quot;">Friedrich Schiller</span> → responds to the French Revolution going awry; shifts cure from nature to art (aesthetic education)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> → the most skeptical; rejects the English garden; proposes Steigerung (intensification) over synthesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> → initiates the project; the bête and the bourgeois as rhetorical extremes</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/friedrich-schiller" title="Written [[Friedrich Schiller]], resolved to friedrich-schiller">Friedrich Schiller</a> → responds to the French Revolution going awry; shifts cure from nature to art (aesthetic education)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> → the most skeptical; rejects the English garden; proposes Steigerung (intensification) over synthesis</li>
 </ul>
 <p>He also notes extended resonances with Diogenes, Freud, Adorno, <em>The Matrix</em>, Frank Lloyd Wright&#x27;s Fallingwater, and Tom Stoppard&#x27;s <em>Arcadia</em> — suggesting Kulturkritik&#x27;s logic extends well beyond its 18th-century instantiation.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> — the concept he reframes</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span> — summary of his essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Friedrich Schiller&quot;">Friedrich Schiller</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The English Garden as Epistemic Object&quot;">The English Garden as Epistemic Object</span> — concept central to his analysis</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> — the concept he reframes</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a> — summary of his essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/friedrich-schiller" title="Written [[Friedrich Schiller]], resolved to friedrich-schiller">Friedrich Schiller</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object" title="Written [[The English Garden as Epistemic Object]], resolved to the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a> — concept central to his analysis</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>348</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">8</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schiller">Friedrich Schiller (1759–1805)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeopathic-critique">Homeopathic Critique</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nature-culture-dialectic">Nature-Culture Dialectic</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/noble-savage">Noble Savage</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schiller">Friedrich Schiller (1759–1805)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeopathic-critique">Homeopathic Critique</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">kempf</span><span class="tag tag-lone" title="Only this note uses it">literary-scholar</span><a class="tag" href="/wiki/topics/kulturkritik">kulturkritik</a><a class="tag" href="/wiki/topics/enlightenment">enlightenment</a><span class="tag tag-lone" title="Only this note uses it">bard-college</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

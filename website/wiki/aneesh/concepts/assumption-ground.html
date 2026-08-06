@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Assumption-Ground</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Assumption-Ground</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Assumption-Ground.md">source on GitHub</a></div>
-  <div class="note-summary">The web of taken-for-granted beliefs constituting an audience&#x27;s baseline reality — the phenomenological surface against which interesting propositions operate by targeted denial.</div>
-  <div class="tags"><span class="tag">epistemology</span><span class="tag">phenomenology</span><span class="tag">assumptions</span><span class="tag">ethnomethodology</span><span class="tag">interestingness</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Assumption-Ground.md">source on GitHub</a></div>
+    <div class="note-summary">The web of taken-for-granted beliefs constituting an audience&#x27;s baseline reality — the phenomenological surface against which interesting propositions operate by targeted denial.</div>
     <div class="prose">
 <p>The assumption-ground is <a class="wikilink" href="/wiki/aneesh/entities/murray-s-davis">Murray S Davis</a>&#x27;s term (drawing on Garfinkel&#x27;s ethnomethodology and Schutz&#x27;s phenomenology) for the web of taken-for-granted beliefs that constitutes an audience&#x27;s baseline reality. It is the surface against which interesting propositions operate.</p>
 <h2 id="how-it-works">How It Works</h2>
@@ -47,26 +56,52 @@
 <h2 id="relation-to-frames">Relation to Frames</h2>
 <p>The assumption-ground is structurally equivalent to Klein&#x27;s &quot;frames&quot; in <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">data-frame-theory-of-sensemaking</a>: both are pre-theoretical structures that filter reality, organize perception, and resist disruption. Davis&#x27;s contribution is the logical taxonomy of <em>how</em> disruption operates (the <a class="wikilink" href="/wiki/aneesh/concepts/index-of-the-interesting">Index of the Interesting</a>); Klein&#x27;s contribution is the cognitive dynamics of <em>why</em> disruption succeeds or fails (anchoring, elaboration, reframing).</p>
 <h2 id="relevance-to-ai-homogenization">Relevance to AI Homogenization</h2>
-<p>If LLMs compress cognitive diversity toward a statistical mean, they homogenize assumption-grounds across populations. This narrows the space of what can be found <em>interesting</em> — because interestingness depends on the gap between a proposition and its audience&#x27;s assumptions. When everyone shares the same assumption-ground, fewer propositions can achieve the targeted denial that produces intellectual surprise. See <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">ai-homogenization-and-the-counter-enlightenment</a>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Diversity&quot;">Cognitive Diversity</span>.</p>
+<p>If LLMs compress cognitive diversity toward a statistical mean, they homogenize assumption-grounds across populations. This narrows the space of what can be found <em>interesting</em> — because interestingness depends on the gap between a proposition and its audience&#x27;s assumptions. When everyone shares the same assumption-ground, fewer propositions can achieve the targeted denial that produces intellectual surprise. See <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">ai-homogenization-and-the-counter-enlightenment</a>, <a class="wikilink" href="/wiki/aneesh/concepts/cognitive-diversity" title="Written [[Cognitive Diversity]], resolved to cognitive-diversity">Cognitive Diversity</a>.</p>
 <h2 id="source">Source</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/summaries/davis-thats-interesting">davis-thats-interesting</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">6</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/index-of-the-interesting">Index of the Interesting</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/murray-s-davis">Murray S. Davis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/sociology-of-the-interesting">Sociology of the Interesting</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>234</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">6</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/index-of-the-interesting">Index of the Interesting</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/murray-s-davis">Murray S. Davis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sociology-of-the-interesting">Sociology of the Interesting</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/index-of-the-interesting">Index of the Interesting</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/murray-s-davis">Murray S. Davis</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/sociology-of-the-interesting">Sociology of the Interesting</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><a class="tag" href="/wiki/topics/assumptions">assumptions</a><span class="tag tag-lone" title="Only this note uses it">ethnomethodology</span><a class="tag" href="/wiki/topics/interestingness">interestingness</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

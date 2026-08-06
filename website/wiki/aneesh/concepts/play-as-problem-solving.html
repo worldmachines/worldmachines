@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,42 +26,84 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Play as Problem-Solving</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Play as Problem-Solving</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/play-as-problem-solving.md">source on GitHub</a></div>
-  <div class="note-summary">The view that genuine playfulness — exploratory, intrinsically motivated, low-stakes experimentation — is not opposed to effective problem-solving but is its highest form.</div>
-  <div class="tags"><span class="tag">play</span><span class="tag">problem-solving</span><span class="tag">intrinsic-motivation</span><span class="tag">exploration</span><span class="tag">creativity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/play-as-problem-solving.md">source on GitHub</a></div>
+    <div class="note-summary">The view that genuine playfulness — exploratory, intrinsically motivated, low-stakes experimentation — is not opposed to effective problem-solving but is its highest form.</div>
     <div class="prose">
 <h2 id="the-claim">The Claim</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span>: &quot;Being hacky, taking imperfect shortcuts, in the world is immensely satisfying. It is play disguised as problem solving.&quot;</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a>: &quot;Being hacky, taking imperfect shortcuts, in the world is immensely satisfying. It is play disguised as problem solving.&quot;</p>
 <p>The inversion matters: play is not the <em>enemy</em> of serious work but its disguise. The most effective problem-solving preserves the qualities of play — exploration, low-stakes experimentation, intrinsic satisfaction — while achieving real-world outcomes.</p>
 <h2 id="connection-to-anxiety-motor">Connection to Anxiety Motor</h2>
-<p>Play connects to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span>: the anxiety → exploration → action → refreshed identity cycle <em>is</em> a form of play. Exploration is not frivolous — it is the mechanism by which identity and competence are built.</p>
+<p>Play connects to <a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> from <a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a>: the anxiety → exploration → action → refreshed identity cycle <em>is</em> a form of play. Exploration is not frivolous — it is the mechanism by which identity and competence are built.</p>
 <h2 id="richard-stallmans-definition">Richard Stallman&#x27;s Definition</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Richard Stallman&quot;">Richard Stallman</span>&#x27;s definition of hacking as &quot;playfully doing something difficult, whether useful or not&quot; puts play at the center of technical mastery. The author endorses playfulness and difficulty but rejects the &quot;or not&quot; clause — play should still be in service of something (even just a prank). Pure purposeless play is the tree felling in a forest: play without audience or effect.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/richard-stallman" title="Written [[Richard Stallman]], resolved to richard-stallman">Richard Stallman</a>&#x27;s definition of hacking as &quot;playfully doing something difficult, whether useful or not&quot; puts play at the center of technical mastery. The author endorses playfulness and difficulty but rejects the &quot;or not&quot; clause — play should still be in service of something (even just a prank). Pure purposeless play is the tree felling in a forest: play without audience or effect.</p>
 <h2 id="button-pressing-as-play">Button-Pressing as Play</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> connects: hypothesis-driven button-pressing is the play form of technology exploration. It&#x27;s inefficient, but &quot;discovery is a fun way to spike interest.&quot; This is play in the learning context — inefficient but motivationally priming.</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> connects: hypothesis-driven button-pressing is the play form of technology exploration. It&#x27;s inefficient, but &quot;discovery is a fun way to spike interest.&quot; This is play in the learning context — inefficient but motivationally priming.</p>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
-<p>The concept would benefit from engagement with literature on intrinsic motivation (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mihaly Csikszentmihalyi&quot;">Mihaly Csikszentmihalyi</span>&#x27;s flow, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Edward Deci&quot;">Edward Deci</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Richard Ryan&quot;">Richard Ryan</span>&#x27;s self-determination theory). The claim that play <em>is</em> the best problem-solving has empirical support that isn&#x27;t drawn on here.</p>
+<p>The concept would benefit from engagement with literature on intrinsic motivation (<a class="wikilink-wanted" href="/wiki/wanted/mihaly-csikszentmihalyi" title="No note is called &quot;Mihaly Csikszentmihalyi&quot; yet — see who is asking for it">Mihaly Csikszentmihalyi</a>&#x27;s flow, <a class="wikilink-wanted" href="/wiki/wanted/edward-deci" title="No note is called &quot;Edward Deci&quot; yet — see who is asking for it">Edward Deci</a> and <a class="wikilink-wanted" href="/wiki/wanted/richard-ryan" title="No note is called &quot;Richard Ryan&quot; yet — see who is asking for it">Richard Ryan</a>&#x27;s self-determination theory). The claim that play <em>is</em> the best problem-solving has empirical support that isn&#x27;t drawn on here.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hacky Mindset&quot;">Hacky Mindset</span> — play&#x27;s operational expression</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> — the deeper structural parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Richard Stallman&quot;">Richard Stallman</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> — button-pressing as play</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nakatomi Tunnel&quot;">Nakatomi Tunnel</span> — play&#x27;s tactical form</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/hacky-mindset" title="Written [[Hacky Mindset]], resolved to hacky-mindset">Hacky Mindset</a> — play&#x27;s operational expression</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> — the deeper structural parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/richard-stallman" title="Written [[Richard Stallman]], resolved to richard-stallman">Richard Stallman</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> — button-pressing as play</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-tunnel" title="Written [[Nakatomi Tunnel]], resolved to nakatomi-tunnel">Nakatomi Tunnel</a> — play&#x27;s tactical form</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>290</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">6</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hacky-mindset">Hacky Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-tunnel">Nakatomi Tunnel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life">Anxiety, Play, and the Generative Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/richard-stallman">Richard Stallman</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/horseshoe-topology-hack-hacky-hacker">Horseshoe Topology of Hack-Hacky-Hacker</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/fox-hedgehog-distinction">Fox-Hedgehog Distinction</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/hacky-mindset">Hacky Mindset</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/jugaad">Jugaad</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-tunnel">Nakatomi Tunnel</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/richard-stallman">Richard Stallman</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/play">play</a><a class="tag" href="/wiki/topics/problem-solving">problem-solving</a><span class="tag tag-lone" title="Only this note uses it">intrinsic-motivation</span><a class="tag" href="/wiki/topics/exploration">exploration</a><a class="tag" href="/wiki/topics/creativity">creativity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

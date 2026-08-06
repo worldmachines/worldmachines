@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Bertrand Russell</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Bertrand Russell</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/bertrand-russell.md">source on GitHub</a></div>
-  <div class="note-summary">Bertrand Russell (1872–1970) — mathematician, philosopher, Nobel laureate, and prolific public intellectual whose 1930 book The Conquest of Happiness articulates a curiosity-based theory of flourishing.</div>
-  <div class="tags"><span class="tag">russell</span><span class="tag">philosophy</span><span class="tag">mathematics</span><span class="tag">happiness</span><span class="tag">curiosity</span><span class="tag">ethics</span><span class="tag">20th-century</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/bertrand-russell.md">source on GitHub</a></div>
+    <div class="note-summary">Bertrand Russell (1872–1970) — mathematician, philosopher, Nobel laureate, and prolific public intellectual whose 1930 book The Conquest of Happiness articulates a curiosity-based theory of flourishing.</div>
     <div class="prose">
 <p><strong>Born</strong>: 1872, Trellech, Wales<br>
 <strong>Died</strong>: 1970<br>
@@ -43,35 +52,67 @@
 <p>Russell is one of the founders of analytic philosophy and mathematical logic. He is unusual among major philosophers in combining foundational formal work with accessible popular writing on ethics, education, and the good life. In this wiki, he appears primarily through the latter strand.</p>
 <h2 id="the-conquest-of-happiness-1930">The Conquest of Happiness (1930)</h2>
 <p>Russell&#x27;s popular guide to escaping misery and achieving happiness, notable for its empirical, non-moralistic approach. He treats unhappiness as a problem to be solved by examining its causes and addressing them — a pragmatic approach that anticipates cognitive behavioral frameworks.</p>
-<p>The key passage cited in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span>:</p>
+<p>The key passage cited in <a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a>:</p>
 <blockquote><p>&quot;The secret of happiness is this: let your interests be as wide as possible, and let your reactions to the things and persons that interest you be as far as possible friendly rather than hostile.&quot;</p></blockquote>
 <p><strong>Width of interest</strong> as a structural protection against the &quot;bruising boundaries of the ego&quot; — the more subjects you can dissolve into, the less the ego&#x27;s suffering dominates.</p>
 <h2 id="intellectual-lineage-in-this-wiki">Intellectual Lineage in This Wiki</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maria Popova&quot;">Maria Popova</span> wrote an influential essay on Russell&#x27;s <em>Conquest of Happiness</em>, introducing the concept of <strong>&quot;unselfing&quot;</strong> as the mechanism by which wide curiosity produces happiness. She is the mediating voice through which Sathe encounters Russell in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span>.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/maria-popova" title="Written [[Maria Popova]], resolved to maria-popova">Maria Popova</a> wrote an influential essay on Russell&#x27;s <em>Conquest of Happiness</em>, introducing the concept of <strong>&quot;unselfing&quot;</strong> as the mechanism by which wide curiosity produces happiness. She is the mediating voice through which Sathe encounters Russell in <a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a>.</p>
 <h2 id="connection-to-curiosity-as-ego-dissolution">Connection to Curiosity as Ego Dissolution</h2>
-<p>Russell&#x27;s formula maps directly onto <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Curiosity as Ego Dissolution&quot;">Curiosity as Ego Dissolution</span>:</p>
+<p>Russell&#x27;s formula maps directly onto <a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution" title="Written [[Curiosity as Ego Dissolution]], resolved to curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a>:</p>
 <ul>
 <li>&quot;Let your interests be as wide as possible&quot; = multiple sites of ego dissolution</li>
 <li>&quot;Friendly rather than hostile&quot; = openness to dissolution rather than defensiveness</li>
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Curiosity as Ego Dissolution&quot;">Curiosity as Ego Dissolution</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unselfing&quot;">Unselfing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Performative Polymathism&quot;">Performative Polymathism</span> — Russell&#x27;s formula is the antidote</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Burnout and Intellectual Recovery&quot;">Burnout and Intellectual Recovery</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maria Popova&quot;">Maria Popova</span> — the contemporary mediator of Russell in this corpus</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution" title="Written [[Curiosity as Ego Dissolution]], resolved to curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/unselfing" title="Written [[Unselfing]], resolved to unselfing">Unselfing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/performative-polymathism" title="Written [[Performative Polymathism]], resolved to performative-polymathism">Performative Polymathism</a> — Russell&#x27;s formula is the antidote</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/burnout-and-intellectual-recovery" title="No note is called &quot;Burnout and Intellectual Recovery&quot; yet — see who is asking for it">Burnout and Intellectual Recovery</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/maria-popova" title="Written [[Maria Popova]], resolved to maria-popova">Maria Popova</a> — the contemporary mediator of Russell in this corpus</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-05-travelling-03-true-pleasures">True and False Pleasures: The Utopians&#x27; Rational Calculus of Delight</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>323</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfing">Unselfing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/maria-popova">Maria Popova</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/curiosity-vs-status-as-motivation">Curiosity vs. Status as Motivation for Learning</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-05-travelling-03-true-pleasures">True and False Pleasures: The Utopians&#x27; Rational Calculus of Delight</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/maria-popova">Maria Popova</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/performative-polymathism">Performative Polymathism</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfing">Unselfing</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/russell">russell</a><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/mathematics">mathematics</a><a class="tag" href="/wiki/topics/happiness">happiness</a><a class="tag" href="/wiki/topics/curiosity">curiosity</a><a class="tag" href="/wiki/topics/ethics">ethics</a><a class="tag" href="/wiki/topics/20th-century">20th-century</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

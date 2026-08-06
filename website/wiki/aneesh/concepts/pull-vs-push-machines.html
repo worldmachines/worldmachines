@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Pull vs. Push Machines</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Pull vs. Push Machines</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/pull-vs-push-machines.md">source on GitHub</a></div>
-  <div class="note-summary">The distinction between pull machines (convergent, telos-driven, like the Modernity Machine) and push machines (divergent, locally driven, like the Divergence Machine) — a key mechanical metaphor in the World Machines framework, with a book-scale historical case in Landes&#x27;s horology.</div>
-  <div class="tags"><span class="tag">world-machines</span><span class="tag">pull-push</span><span class="tag">convergence</span><span class="tag">divergence</span><span class="tag">modernity-machine</span><span class="tag">divergence-machine</span><span class="tag">landes</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/pull-vs-push-machines.md">source on GitHub</a></div>
+    <div class="note-summary">The distinction between pull machines (convergent, telos-driven, like the Modernity Machine) and push machines (divergent, locally driven, like the Divergence Machine) — a key mechanical metaphor in the World Machines framework, with a book-scale historical case in Landes&#x27;s horology.</div>
     <div class="prose">
 <h2 id="the-distinction">The Distinction</h2>
 <p>A key mechanical metaphor within the <a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework">world-machines-framework</a>, introduced by <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>:</p>
@@ -44,7 +53,7 @@
 <h2 id="the-analogy">The Analogy</h2>
 <p>Rao&#x27;s driving metaphor: think of <strong>front-wheel drive</strong> (pull) vs. <strong>rear-wheel drive with no steering</strong> (push). The latter will go off in random directions. The divergence is structural, not incidental.</p>
 <h2 id="modernity-machine-as-pull">Modernity Machine as Pull</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span> was a pull machine, &quot;pulled along by a <em>telos</em> of Progress™.&quot; All participants — regardless of geography or class — were oriented toward the same endpoints: legibility, rationalization, material abundance, scientific knowledge, nation-state formation. This is why MM history is <em>convergent</em>: the same playbook applies across contexts.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a> was a pull machine, &quot;pulled along by a <em>telos</em> of Progress™.&quot; All participants — regardless of geography or class — were oriented toward the same endpoints: legibility, rationalization, material abundance, scientific knowledge, nation-state formation. This is why MM history is <em>convergent</em>: the same playbook applies across contexts.</p>
 <h2 id="divergence-machine-as-push">Divergence Machine as Push</h2>
 <p>The <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> is a push machine, driven by &quot;individual or small-scale push forces.&quot; This is structurally <em>why</em> it diverges. Divergent history is a much stronger function of <strong>grounding conditions</strong> — local context, initial state, particular contingencies — than convergent history.</p>
 <p>Implication: You cannot write a universal account of the DM era the way you can write a universal account of the MM era. History under the DM is inherently more local, more path-dependent, more sensitive to initial conditions.</p>
@@ -64,7 +73,7 @@
 <li>MM histories can be written with universal categories (legibility, class restructuring, Progress)</li>
 <li>DM histories must track local grounding conditions; universal categories will miss the point</li>
 </ul>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness Machine&quot;">Liveness Machine</span> raises the question: what is the motor character of the third machine? Push and pull are both exogenous metaphors. Liveness suggests something more like <em>emergence</em> — self-organization from feedback — which is neither pushed nor pulled but recursively self-generating.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine" title="Written [[Liveness Machine]], resolved to liveness-machine">Liveness Machine</a> raises the question: what is the motor character of the third machine? Push and pull are both exogenous metaphors. Liveness suggests something more like <em>emergence</em> — self-organization from feedback — which is neither pushed nor pulled but recursively self-generating.</p>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <p>Rao flags this as a &quot;random thought I&#x27;m trying to chase down.&quot; The push/pull distinction is evocative but:</p>
 <ul>
@@ -75,31 +84,65 @@
 <h2 id="cross-references">Cross-References</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework">world-machines-framework</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness Machine&quot;">Liveness Machine</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine" title="Written [[Liveness Machine]], resolved to liveness-machine">Liveness Machine</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">david-s-landes</a> — <em>Revolution in Time</em>: pull built the clock, push won the industry</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">10</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/low-reynolds-culture">Low-Reynolds Culture</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-09-my-time-is-your-time">RIT 09 — My Time Is Your Time (ch. 7)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-10-approaching-the-asymptote">RIT 10 — Approaching the Asymptote (ch. 8)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-12-the-french-connection">RIT 12 — The French Connection (Ch. 10)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-22-who-killed-cock-robin">RIT 22 — &quot;Who Killed Cock Robin?&quot; (ch. 20, pp. 347–364)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>13</b><span>linked from</span></div>
+      <div class="bearing"><b>13</b><span>links out</span></div>
+      <div class="bearing"><b>1048</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">13</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/low-reynolds-culture">Low-Reynolds Culture</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-22-who-killed-cock-robin">RIT 22 — &quot;Who Killed Cock Robin?&quot; (ch. 20, pp. 347–364)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-12-the-french-connection">RIT 12 — The French Connection (Ch. 10)</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>5 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-10-approaching-the-asymptote">RIT 10 — Approaching the Asymptote (ch. 8)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-09-my-time-is-your-time">RIT 09 — My Time Is Your Time (ch. 7)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-world-machines-project-rao">The World Machines Project</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/world-machines">world-machines</a><span class="tag tag-lone" title="Only this note uses it">pull-push</span><a class="tag" href="/wiki/topics/convergence">convergence</a><a class="tag" href="/wiki/topics/divergence">divergence</a><a class="tag" href="/wiki/topics/modernity-machine">modernity-machine</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/landes">landes</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

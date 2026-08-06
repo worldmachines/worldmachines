@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>Harvard College (1854-1858)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Harvard College (1854-1858)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-04-harvard-college.md">source on GitHub</a></div>
-  <div class="note-summary">Henry Adams recounts four intellectually barren but socially formative years at Harvard College (1854-1858), where a near-total curricular failure -- redeemed only by Agassiz&#x27;s lectures and Lowell&#x27;s tutorials -- left him stamped with reflexive self-possession and, inexplicably, elected Class Orator.</div>
-  <div class="tags"><span class="tag">harvard-college</span><span class="tag">henry-adams</span><span class="tag">negative-education</span><span class="tag">class-of-1858</span><span class="tag">north-south-sectionalism</span><span class="tag">louis-agassiz</span><span class="tag">james-russell-lowell</span><span class="tag">self-possession</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-04-harvard-college.md">source on GitHub</a></div>
+    <div class="note-summary">Henry Adams recounts four intellectually barren but socially formative years at Harvard College (1854-1858), where a near-total curricular failure -- redeemed only by Agassiz&#x27;s lectures and Lowell&#x27;s tutorials -- left him stamped with reflexive self-possession and, inexplicably, elected Class Orator.</div>
     <div class="prose">
 <p>Henry Adams narrates his four undergraduate years, class of 1858, as an education that failed by every measure he later valued -- mathematics, the classics, political economy, even his classmates -- and yet left an unmistakable mark: a socially legible &quot;type,&quot; reflexive self-possession, and eventually an inexplicable election as Class Orator. He works through the sources of education available to him one by one -- classmates, a transplanted trio of Virginians led by Robert E. Lee&#x27;s son &quot;Roony,&quot; and his teachers -- and finds each of them &quot;negative&quot; rather than instructive, with the partial exceptions of Louis Agassiz&#x27;s lectures and James Russell Lowell&#x27;s private tutorials, the latter opening &quot;at least a path&quot; toward two years in Europe. The chapter closes on the book&#x27;s recurring irony: after four years and a Class Oration praised mainly for its &quot;perfect self-possession,&quot; Adams concludes flatly that &quot;Education had not begun.&quot;</p>
 <h2 id="themes">Themes</h2>
@@ -50,16 +59,40 @@
 <p>The <strong>&quot;He took to the pen&quot; passage</strong> is Adams&#x27;s own diagnosis of why he became a writer: not vocation but the last available use of an already-settled social position.</p>
 <p>The closing <strong>self-possession passage</strong> delivers the chapter&#x27;s punchline: four years bought &quot;calm&quot; and nerve before an audience, but nothing yet to say -- &quot;Education had not begun.&quot;</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>748</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin">The Dynamo and the Virgin (1900)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">harvard-college</span><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><span class="tag tag-lone" title="Only this note uses it">negative-education</span><span class="tag tag-lone" title="Only this note uses it">class-of-1858</span><span class="tag tag-lone" title="Only this note uses it">north-south-sectionalism</span><span class="tag tag-lone" title="Only this note uses it">louis-agassiz</span><span class="tag tag-lone" title="Only this note uses it">james-russell-lowell</span><span class="tag tag-lone" title="Only this note uses it">self-possession</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

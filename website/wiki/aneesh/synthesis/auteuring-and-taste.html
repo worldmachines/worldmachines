@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Auteuring and Taste</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Auteuring and Taste</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/auteuring-and-taste.md">source on GitHub</a></div>
-  <div class="note-summary">Connects the new concept of <a class="wikilink" href="/wiki/aneesh/concepts/auteuring">auteuring</a> (extreme control over a project driven primarily by taste) with <a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">taste-as-epistemic-capacity</a>, <a class="wikilink" href="/wiki/aneesh/concepts/crystallized-imagination">crystallized-imagination</a>, and Aneesh&#x27;s prior writing on Cave and the engineered-vs-cultivated distinction — arguing that when execution is free and the model produces, taste becomes the production function of the economy, not an ornament on it.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">auteuring</span><span class="tag">taste</span><span class="tag">crystallized-imagination</span><span class="tag">hidalgo</span><span class="tag">nick-cave</span><span class="tag">production-function</span><span class="tag">divergence-machine</span><span class="tag">liveness-machine</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/auteuring-and-taste.md">source on GitHub</a></div>
+    <div class="note-summary">Connects the new concept of <a class="wikilink" href="/wiki/aneesh/concepts/auteuring">auteuring</a> (extreme control over a project driven primarily by taste) with <a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">taste-as-epistemic-capacity</a>, <a class="wikilink" href="/wiki/aneesh/concepts/crystallized-imagination">crystallized-imagination</a>, and Aneesh&#x27;s prior writing on Cave and the engineered-vs-cultivated distinction — arguing that when execution is free and the model produces, taste becomes the production function of the economy, not an ornament on it.</div>
     <div class="prose">
 <h2 id="the-two-threads">The Two Threads</h2>
 <p>The first thread runs through the wiki&#x27;s existing material on taste. <a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">taste-as-epistemic-capacity</a> frames taste not as preference but as a discriminative skill that maps onto truth — a way of knowing that is metabolically expensive to develop, refused by easy reduction to rules, and dependent on long exposure to honest feedback from a domain. The companion essay summary <a class="wikilink" href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good">on-being-good-vs-knowing-good</a> reads Nick Cave on the distinction: knowing the good is not the same as being good, and taste sits closer to the second than the first. The summary <a class="wikilink" href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday">the-tortured-artist-is-so-yesterday</a> extends the argument to the engineered-vs-cultivated divide: the things worth caring about cannot be optimised into existence; they must be raised.</p>
@@ -80,17 +89,43 @@
 <h2 id="essay-seed">Essay Seed</h2>
 <p>A follow-up essay could be a quantitative inversion of the standard productivity story: rather than measuring output per hour of human work, measure <em>picks per hour</em> across pre- and post-substrate regimes. The hypothesis is that picks-per-hour has held roughly constant for individual auteurs across a hundred years, while output per pick has risen by orders of magnitude. The implication: the rate-limiting step is and has been perceptual judgement, and the substrate has done nothing for that step. Industries where this metric reveals the actual bottleneck — film direction, scientific research, founding, editorial work — should already show the auteur pattern. Industries that do not yet show it are industries where the substrate has not yet penetrated below the perceptual cost of judgement, and they will be the next to convert.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>1574</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/auteuring">Auteuring</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/intent-collisions">Intent Collisions</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-viscous-frontier">The Viscous Frontier — Summary</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/bottleneck-reversal">Bottleneck Reversal: Atoms, Ideas, Intents</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/auteuring">auteuring</a><a class="tag" href="/wiki/topics/taste">taste</a><span class="tag tag-lone" title="Only this note uses it">crystallized-imagination</span><a class="tag" href="/wiki/topics/hidalgo">hidalgo</a><span class="tag tag-lone" title="Only this note uses it">nick-cave</span><span class="tag tag-lone" title="Only this note uses it">production-function</span><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/liveness-machine">liveness-machine</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

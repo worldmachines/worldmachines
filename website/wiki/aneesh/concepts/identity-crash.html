@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Identity Crash</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Identity Crash</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/identity-crash.md">source on GitHub</a></div>
-  <div class="note-summary">The collapse of a distributed identity under anxiety overload, triggering a reset via journals, sabbaticals, or quitting — and requiring a condensation point to reconstitute.</div>
-  <div class="tags"><span class="tag">identity</span><span class="tag">anxiety</span><span class="tag">philosophy</span><span class="tag">reset</span><span class="tag">meaning-making</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/identity-crash.md">source on GitHub</a></div>
+    <div class="note-summary">The collapse of a distributed identity under anxiety overload, triggering a reset via journals, sabbaticals, or quitting — and requiring a condensation point to reconstitute.</div>
     <div class="prose">
 <h2 id="core-idea">Core Idea</h2>
 <p>When identity is &quot;smeared across too many anxieties,&quot; the system cannot maintain coherence. The person declares <strong>anxiety bankruptcy</strong> and crashes identity into some safe spot: a journal, a sabbatical, quitting a job.</p>
-<p>This is not failure — it is a maintenance action. Per <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span>, life examination occurs at identity crashes. Philosophy provides a toehold in the abstract sufficient to spur action in the actual.</p>
+<p>This is not failure — it is a maintenance action. Per <a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a>, life examination occurs at identity crashes. Philosophy provides a toehold in the abstract sufficient to spur action in the actual.</p>
 <h2 id="the-rock-soup-analogy">The Rock Soup Analogy</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rock Soup Parable&quot;">Rock Soup Parable</span> applies here: vaporized anxiety (diffuse, unlocalized identity) needs a condensation surface. The condensation point should be:</p>
+<p>The <a class="wikilink-wanted" href="/wiki/wanted/rock-soup-parable" title="No note is called &quot;Rock Soup Parable&quot; yet — see who is asking for it">Rock Soup Parable</a> applies here: vaporized anxiety (diffuse, unlocalized identity) needs a condensation surface. The condensation point should be:</p>
 <ul>
 <li><strong>Disposable</strong> — not precious or commitment-heavy</li>
 <li><strong>Sufficient</strong> — stable enough to allow identity to reconstruct an &quot;ordered world of meaning&quot; around it</li>
@@ -48,30 +57,62 @@
 <h2 id="triggers">Triggers</h2>
 <ul>
 <li>Identity spread across too many competing anxieties</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> motor overwhelmed by noise</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> motor overwhelmed by noise</li>
 <li>Environmental crises or severe internal disruption</li>
 </ul>
 <h2 id="recovery">Recovery</h2>
-<p>Recovery involves selecting a philosophy appropriate to the degree of identity loss (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Levels of Philosophical Engagement&quot;">Levels of Philosophical Engagement</span>) and allowing the anxiety-exploration-action motor to restart from a more focused base.</p>
+<p>Recovery involves selecting a philosophy appropriate to the degree of identity loss (see <a class="wikilink" href="/wiki/aneesh/concepts/levels-of-philosophical-engagement" title="Written [[Levels of Philosophical Engagement]], resolved to levels-of-philosophical-engagement">Levels of Philosophical Engagement</a>) and allowing the anxiety-exploration-action motor to restart from a more focused base.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> — the motor that precedes the crash</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;GTD and Anxiety Regulation&quot;">GTD and Anxiety Regulation</span> — one tool for preventing or managing crashes</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Philosophy as Maintenance&quot;">Philosophy as Maintenance</span> — the recovery mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rock Soup Parable&quot;">Rock Soup Parable</span> — the condensation metaphor</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> — the motor that precedes the crash</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/gtd-and-anxiety-regulation" title="Written [[GTD and Anxiety Regulation]], resolved to gtd-and-anxiety-regulation">GTD and Anxiety Regulation</a> — one tool for preventing or managing crashes</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/philosophy-as-maintenance" title="Written [[Philosophy as Maintenance]], resolved to philosophy-as-maintenance">Philosophy as Maintenance</a> — the recovery mechanism</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/rock-soup-parable" title="No note is called &quot;Rock Soup Parable&quot; yet — see who is asking for it">Rock Soup Parable</a> — the condensation metaphor</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a> — source essay</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/crash-only-thinking-applied-to-self">Crash-Only Thinking Applied to the Self</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>239</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">8</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-plato-plateau">The Plato Plateau</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/philosophy-as-maintenance">Philosophy as Maintenance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/kierkegaard">Kierkegaard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life">Anxiety, Play, and the Generative Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gtd-and-anxiety-regulation">GTD and Anxiety Regulation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/crash-only-thinking-applied-to-self">Crash-Only Thinking Applied to the Self</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-plato-plateau">The Plato Plateau</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/kierkegaard">Kierkegaard</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/levels-of-philosophical-engagement">Levels of Philosophical Engagement</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/philosophy-as-maintenance">Philosophy as Maintenance</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/gtd-and-anxiety-regulation">GTD and Anxiety Regulation</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/identity">identity</a><a class="tag" href="/wiki/topics/anxiety">anxiety</a><a class="tag" href="/wiki/topics/philosophy">philosophy</a><span class="tag tag-lone" title="Only this note uses it">reset</span><a class="tag" href="/wiki/topics/meaning-making">meaning-making</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

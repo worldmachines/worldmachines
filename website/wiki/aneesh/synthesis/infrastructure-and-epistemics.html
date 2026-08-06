@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Infrastructure and Epistemics</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Infrastructure and Epistemics</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/infrastructure-and-epistemics.md">source on GitHub</a></div>
-  <div class="note-summary">A synthesis connecting biotech data infrastructure arguments to broader epistemic themes: how the tools we use to store and access knowledge shape what knowledge is possible.</div>
-  <div class="tags"><span class="tag">infrastructure</span><span class="tag">epistemics</span><span class="tag">reproducibility</span><span class="tag">data</span><span class="tag">biotech</span><span class="tag">science</span><span class="tag">knowledge</span><span class="tag">synthesis</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/infrastructure-and-epistemics.md">source on GitHub</a></div>
+    <div class="note-summary">A synthesis connecting biotech data infrastructure arguments to broader epistemic themes: how the tools we use to store and access knowledge shape what knowledge is possible.</div>
     <div class="prose">
 <h2 id="the-hidden-claim-in-the-biotech-essay">The Hidden Claim in the Biotech Essay</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Why Every Biotech Research Group Needs a Data Lakehouse&quot;">Why Every Biotech Research Group Needs a Data Lakehouse</span> is ostensibly a technical essay about data architecture. But it contains a deeper epistemic claim: <strong>the infrastructure you use to store knowledge determines what knowledge you can produce.</strong></p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse" title="Written [[Why Every Biotech Research Group Needs a Data Lakehouse]], resolved to why-every-biotech-research-group-needs-a-data-lakehouse">Why Every Biotech Research Group Needs a Data Lakehouse</a> is ostensibly a technical essay about data architecture. But it contains a deeper epistemic claim: <strong>the infrastructure you use to store knowledge determines what knowledge you can produce.</strong></p>
 <p>If data ends up on laptops, gets lost when people leave, or exists only as a pretty plot on a poster — <em>that data generates no downstream science</em>. The knowledge it could have enabled is foreclosed by the infrastructure failure.</p>
 <h2 id="the-general-pattern">The General Pattern</h2>
 <p>This is a specific instance of a general principle: epistemic infrastructure shapes what epistemic work is possible.</p>
@@ -48,14 +57,14 @@
 <li><strong>Time-travel and lineage in data systems</strong>: makes claims checkable. Without it, you cannot verify whether an analysis was honest or cherry-picked.</li>
 </ul>
 <h2 id="the-compliance-as-epistemics-angle">The Compliance-as-Epistemics Angle</h2>
-<p>The essay argues for <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span> features (time-travel, lineage) partly on compliance grounds (FDA, EMA audits). But compliance is actually enforcing epistemic norms: it requires that claims be checkable by third parties who didn&#x27;t make them.</p>
+<p>The essay argues for <a class="wikilink" href="/wiki/aneesh/concepts/data-lakehouse" title="Written [[Data Lakehouse]], resolved to data-lakehouse">Data Lakehouse</a> features (time-travel, lineage) partly on compliance grounds (FDA, EMA audits). But compliance is actually enforcing epistemic norms: it requires that claims be checkable by third parties who didn&#x27;t make them.</p>
 <p>This reframes regulatory compliance as applied epistemology: the audit requirement is a structural enforcement of the basic scientific norm that results must be reproducible.</p>
 <h2 id="connection-to-open-formats">Connection to Open Formats</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Open Data Formats&quot;">Open Data Formats</span> are not just pragmatic (avoid vendor lock-in) — they are epistemically significant. Knowledge in open formats is knowledge that can be verified, extended, and built upon. Knowledge in proprietary formats is epistemically quarantined.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/open-data-formats" title="Written [[Open Data Formats]], resolved to open-data-formats">Open Data Formats</a> are not just pragmatic (avoid vendor lock-in) — they are epistemically significant. Knowledge in open formats is knowledge that can be verified, extended, and built upon. Knowledge in proprietary formats is epistemically quarantined.</p>
 <h2 id="the-wagon-connection">The Wagon Connection</h2>
 <p>There is a unexpected structural parallel between the biotech essay and the creative practice essays:</p>
 <ul>
-<li>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Protocols, Wagons, and Associated Acrobatics&quot;">On Protocols, Wagons, and Associated Acrobatics</span>: falling off the wagon loses the accumulated noticing. <em>Getting back on</em> preserves continuity of the creative record.</li>
+<li>In <a class="wikilink" href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics" title="Written [[On Protocols, Wagons, and Associated Acrobatics]], resolved to on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a>: falling off the wagon loses the accumulated noticing. <em>Getting back on</em> preserves continuity of the creative record.</li>
 <li>In biotech: losing data to a laptop breaks the scientific record. Infrastructure (the lakehouse) is what <em>preserves continuity</em> across personnel changes and time.</li>
 </ul>
 <p>In both cases, the protocol/infrastructure serves the same function: ensuring that the accumulated work of the past remains accessible to the future self (or future researcher).</p>
@@ -63,26 +72,48 @@
 <p><strong>The tools we use to store knowledge — whether databases, filing systems, or personal writing practices — are not neutral infrastructure. They are epistemic choices. The choice of open, reproducible, lineage-preserving systems is the choice to keep knowledge available for inquiry. The choice of proprietary, non-reproducible, loss-prone systems is the choice to foreclose it.</strong></p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Open Data Formats&quot;">Open Data Formats</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scientific Reproducibility&quot;">Scientific Reproducibility</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Construction Through Writing&quot;">Self-Construction Through Writing</span> — the personal analog to scientific record-keeping</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Why Every Biotech Research Group Needs a Data Lakehouse&quot;">Why Every Biotech Research Group Needs a Data Lakehouse</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Protocols, Wagons, and Associated Acrobatics&quot;">On Protocols, Wagons, and Associated Acrobatics</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-lakehouse" title="Written [[Data Lakehouse]], resolved to data-lakehouse">Data Lakehouse</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ducklake" title="Written [[DuckLake]], resolved to ducklake">DuckLake</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/open-data-formats" title="Written [[Open Data Formats]], resolved to open-data-formats">Open Data Formats</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/scientific-reproducibility" title="Written [[Scientific Reproducibility]], resolved to scientific-reproducibility">Scientific Reproducibility</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/self-construction-through-writing" title="Written [[Self-Construction Through Writing]], resolved to self-construction-through-writing">Self-Construction Through Writing</a> — the personal analog to scientific record-keeping</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse" title="Written [[Why Every Biotech Research Group Needs a Data Lakehouse]], resolved to why-every-biotech-research-group-needs-a-data-lakehouse">Why Every Biotech Research Group Needs a Data Lakehouse</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics" title="Written [[On Protocols, Wagons, and Associated Acrobatics]], resolved to on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/healthcare-as-wrights-law-exception">Healthcare as Wright&#x27;s Law Exception</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>490</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/healthcare-as-wrights-law-exception">Healthcare as Wright&#x27;s Law Exception</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/from-artifact-to-process">From Artifact to Process — The Death of the Finished Work</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-gloomwheel">The Gloomwheel</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/infrastructure">infrastructure</a><a class="tag" href="/wiki/topics/epistemics">epistemics</a><a class="tag" href="/wiki/topics/reproducibility">reproducibility</a><a class="tag" href="/wiki/topics/data">data</a><a class="tag" href="/wiki/topics/biotech">biotech</a><a class="tag" href="/wiki/topics/science">science</a><a class="tag" href="/wiki/topics/knowledge">knowledge</a><a class="tag" href="/wiki/topics/synthesis">synthesis</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

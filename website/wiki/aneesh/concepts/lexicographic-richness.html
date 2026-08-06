@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,49 +26,92 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Lexicographic Richness</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Lexicographic Richness</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/lexicographic-richness.md">source on GitHub</a></div>
-  <div class="note-summary">The claim that modern dictionaries have optimized for disambiguation at the expense of generativity — and that older, richer lexicographic resources (especially the 1913 Webster&#x27;s) enable a qualitatively different relationship with language.</div>
-  <div class="tags"><span class="tag">language</span><span class="tag">dictionaries</span><span class="tag">lexicography</span><span class="tag">writing-tools</span><span class="tag">McPhee</span><span class="tag">richness</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/lexicographic-richness.md">source on GitHub</a></div>
+    <div class="note-summary">The claim that modern dictionaries have optimized for disambiguation at the expense of generativity — and that older, richer lexicographic resources (especially the 1913 Webster&#x27;s) enable a qualitatively different relationship with language.</div>
     <div class="prose">
 <h2 id="the-argument">The Argument</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span>, channeling <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;John McPhee&quot;">John McPhee</span> via <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James Somers&quot;">James Somers</span>:</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a>, channeling <a class="wikilink" href="/wiki/aneesh/entities/john-mcphee" title="Written [[John McPhee]], resolved to john-mcphee">John McPhee</a> via <a class="wikilink" href="/wiki/aneesh/entities/james-somers" title="Written [[James Somers]], resolved to james-somers">James Somers</a>:</p>
 <blockquote><p>&quot;Modern dictionaries have taken all the fun out and left all the crud in. The old way is the proper way to play with words.&quot;</p></blockquote>
 <p>Modern digital dictionaries (phone, computer) are optimized for one task: determining what a word means in a specific context. They are disambiguation tools. They are not <strong>generative</strong> — they do not open new possibilities or suggest directions you hadn&#x27;t considered.</p>
 <h2 id="what-rich-dictionaries-do">What Rich Dictionaries Do</h2>
-<p>A rich dictionary (the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;1913 Webster&#x27;s Dictionary&quot;">1913 Webster&#x27;s Dictionary</span> being the canonical example):</p>
+<p>A rich dictionary (the <a class="wikilink" href="/wiki/aneesh/concepts/1913-websters-dictionary" title="Written [[1913 Webster&#x27;s Dictionary]], resolved to 1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a> being the canonical example):</p>
 <ul>
 <li>Provides literary, contextually-embedded definitions that make the word <em>live</em></li>
 <li>Suggests synonyms and near-synonyms with nuanced distinctions</li>
 <li>Includes etymology that illuminates the word&#x27;s conceptual history</li>
 <li>Functions as a <em>companion</em> to writing, not just a fact-checker</li>
 </ul>
-<p>Per <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;John McPhee&quot;">John McPhee</span>&#x27;s account: using the dictionary well means <em>arriving at words you didn&#x27;t know you were looking for</em>.</p>
+<p>Per <a class="wikilink" href="/wiki/aneesh/entities/john-mcphee" title="Written [[John McPhee]], resolved to john-mcphee">John McPhee</a>&#x27;s account: using the dictionary well means <em>arriving at words you didn&#x27;t know you were looking for</em>.</p>
 <h2 id="the-documentation-parallel">The Documentation Parallel</h2>
-<p>This concept directly extends <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Documentation as Empathy&quot;">Documentation as Empathy</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span>: a good dictionary is also a form of documentation — one written with care for the future reader-writer, not just for disambiguation efficiency. The 1913 Webster&#x27;s is &quot;divine documentation&quot; for language.</p>
+<p>This concept directly extends <a class="wikilink" href="/wiki/aneesh/concepts/documentation-as-empathy" title="Written [[Documentation as Empathy]], resolved to documentation-as-empathy">Documentation as Empathy</a> and <a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a>: a good dictionary is also a form of documentation — one written with care for the future reader-writer, not just for disambiguation efficiency. The 1913 Webster&#x27;s is &quot;divine documentation&quot; for language.</p>
 <h2 id="the-anti-modern-stance">The Anti-Modern Stance</h2>
-<p>There is a mild technoskeptic thread here: the digitization of reference tools has been a net loss for generative use, even as it improved accessibility and search. The best tool (1913 Webster&#x27;s) requires deliberate installation and is 110 years old. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Small Web&quot;">Small Web</span> longing at the end of the essay is its cultural counterpart.</p>
+<p>There is a mild technoskeptic thread here: the digitization of reference tools has been a net loss for generative use, even as it improved accessibility and search. The best tool (1913 Webster&#x27;s) requires deliberate installation and is 110 years old. The <a class="wikilink" href="/wiki/aneesh/concepts/small-web" title="Written [[Small Web]], resolved to small-web">Small Web</a> longing at the end of the essay is its cultural counterpart.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;1913 Webster&#x27;s Dictionary&quot;">1913 Webster&#x27;s Dictionary</span> — the recommended tool</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Documentation as Empathy&quot;">Documentation as Empathy</span> — structural parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> — the preceding essay in the same series</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;John McPhee&quot;">John McPhee</span> — key reference</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Small Web&quot;">Small Web</span> — adjacent cultural stance</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/1913-websters-dictionary" title="Written [[1913 Webster&#x27;s Dictionary]], resolved to 1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a> — the recommended tool</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/documentation-as-empathy" title="Written [[Documentation as Empathy]], resolved to documentation-as-empathy">Documentation as Empathy</a> — structural parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> — the preceding essay in the same series</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/john-mcphee" title="Written [[John McPhee]], resolved to john-mcphee">John McPhee</a> — key reference</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/small-web" title="Written [[Small Web]], resolved to small-web">Small Web</a> — adjacent cultural stance</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a> — source essay</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>303</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/a-good-dictionary">A Good Dictionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/staged-learning">Staged Learning</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/james-somers">James Somers</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/john-mcphee">John McPhee</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/documentation-as-gift-economy">Documentation as Gift Economy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/tools-that-shape-thought">Tools That Shape Thought</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/a-good-dictionary">A Good Dictionary</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/documentation-as-empathy">Documentation as Empathy</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/james-somers">James Somers</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/john-mcphee">John McPhee</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/small-web">Small Web</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/language">language</a><a class="tag" href="/wiki/topics/dictionaries">dictionaries</a><a class="tag" href="/wiki/topics/lexicography">lexicography</a><a class="tag" href="/wiki/topics/writing-tools">writing-tools</a><a class="tag" href="/wiki/topics/mcphee">McPhee</a><span class="tag tag-lone" title="Only this note uses it">richness</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

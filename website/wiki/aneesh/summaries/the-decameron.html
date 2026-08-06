@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Decameron</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Decameron</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-decameron.md">source on GitHub</a></div>
-  <div class="note-summary">Giovanni Boccaccio&#x27;s hundred-tale cycle (c. 1349–1353): seven young women and three young men flee plague-struck Florence in 1348 to a country estate, where over ten days they govern themselves as a rotating monarchy and tell a hundred stories — a frame that stages storytelling as both consolation and world-maintenance, ranges across wit, fortune, desire, trickery, and magnificence, and closes with the deliberate dissolution of the company and Boccaccio&#x27;s defence of his own book.</div>
-  <div class="tags"><span class="tag">decameron</span><span class="tag">boccaccio</span><span class="tag">frame-narrative</span><span class="tag">plague</span><span class="tag">brigata</span><span class="tag">storytelling</span><span class="tag">fortune</span><span class="tag">wit</span><span class="tag">medieval-florence</span><span class="tag">vernacular-literature</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-decameron.md">source on GitHub</a></div>
+    <div class="note-summary">Giovanni Boccaccio&#x27;s hundred-tale cycle (c. 1349–1353): seven young women and three young men flee plague-struck Florence in 1348 to a country estate, where over ten days they govern themselves as a rotating monarchy and tell a hundred stories — a frame that stages storytelling as both consolation and world-maintenance, ranges across wit, fortune, desire, trickery, and magnificence, and closes with the deliberate dissolution of the company and Boccaccio&#x27;s defence of his own book.</div>
     <div class="prose">
 <p><em>The Decameron</em> (Italian <em>Decamerone</em>, &quot;ten days&#x27; work&quot;) is a collection of one hundred prose tales written by <a class="wikilink" href="/wiki/aneesh/entities/giovanni-boccaccio">giovanni-boccaccio</a> around 1349–1353, in the Tuscan vernacular. It is built as a <strong>frame narrative</strong>: a single fiction (a storytelling company in retreat) contains the hundred embedded tales, ten told on each of ten days. The work stands at the threshold of the European Renaissance, and is read in this wiki both as a literary monument and as an unusually precise pre-modern instance of the World Machines pattern of withdrawal into a curated refuge during an interregnum (see the synthesis <a class="wikilink" href="/wiki/aneesh/synthesis/the-brigata-as-thicket">the-brigata-as-thicket</a>).</p>
 <h2 id="the-frame-plague-flight-and-the-brigata">The Frame: plague, flight, and the brigata</h2>
@@ -73,19 +82,40 @@
 <li><a class="wikilink" href="/wiki/commons/reading/decameron/dec-proem">dec-proem</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-01">dec-day-01</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-02">dec-day-02</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-03">dec-day-03</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-04">dec-day-04</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-05">dec-day-05</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-06">dec-day-06</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-07">dec-day-07</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-08">dec-day-08</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-09">dec-day-09</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-day-10">dec-day-10</a>, <a class="wikilink" href="/wiki/commons/reading/decameron/dec-conclusion">dec-conclusion</a> — the twelve L1 reading notes</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">5</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/giovanni-boccaccio">Giovanni Boccaccio</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-general-prologue">The General Prologue to The Canterbury Tales</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-millers-tale">The Miller&#x27;s Tale</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-reeves-tale">The Reeve&#x27;s Prologue and Tale: Age, Grudge, and the Miller Beguiled</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>18</b><span>links out</span></div>
+      <div class="bearing"><b>1413</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">5</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/giovanni-boccaccio">Giovanni Boccaccio</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-general-prologue">The General Prologue to The Canterbury Tales</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-millers-tale">The Miller&#x27;s Tale</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-reeves-tale">The Reeve&#x27;s Prologue and Tale: Age, Grudge, and the Miller Beguiled</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/decameron">decameron</a><a class="tag" href="/wiki/topics/boccaccio">boccaccio</a><a class="tag" href="/wiki/topics/frame-narrative">frame-narrative</a><a class="tag" href="/wiki/topics/plague">plague</a><a class="tag" href="/wiki/topics/brigata">brigata</a><a class="tag" href="/wiki/topics/storytelling">storytelling</a><a class="tag" href="/wiki/topics/fortune">fortune</a><a class="tag" href="/wiki/topics/wit">wit</a><a class="tag" href="/wiki/topics/medieval-florence">medieval-florence</a><a class="tag" href="/wiki/topics/vernacular-literature">vernacular-literature</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

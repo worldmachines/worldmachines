@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Anxiety of Influence</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Anxiety of Influence</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/anxiety-of-influence.md">source on GitHub</a></div>
-  <div class="note-summary">Harold Bloom&#x27;s theory that poetic creation is driven by an agonistic struggle against literary precursors — the mechanism by which strong writers achieve originality through creative misreading.</div>
-  <div class="tags"><span class="tag">harold-bloom</span><span class="tag">literary-theory</span><span class="tag">influence</span><span class="tag">precursor</span><span class="tag">creativity</span><span class="tag">misreading</span><span class="tag">poetry</span><span class="tag">belatedness</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/anxiety-of-influence.md">source on GitHub</a></div>
+    <div class="note-summary">Harold Bloom&#x27;s theory that poetic creation is driven by an agonistic struggle against literary precursors — the mechanism by which strong writers achieve originality through creative misreading.</div>
     <div class="prose">
 <h2 id="origin">Origin</h2>
 <p>Harold Bloom&#x27;s 1973 book <em>The Anxiety of Influence: A Theory of Poetry</em> introduced this framework. It remains his most intellectually rigorous work — &quot;the work that best sustains rereading&quot; by his own criteria.</p>
@@ -71,36 +80,77 @@
 <p>Taken as a final statement rather than a provocation, the theory can be debilitating: behind every apparent inspiration lurks only repression; behind every apparent originality lurks strategic evasion. This transfers anxiety from the texts to the reader/writer.</p>
 <p>The essay source&#x27;s resolution: anxiety must be metabolized — moved through, not escaped. The writer must allegorize their own anxiety and make it generative material.</p>
 <h2 id="relationship-to-the-western-canon">Relationship to the Western Canon</h2>
-<p>The anxiety of influence provides the <em>mechanism</em> that Bloom&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Western Canon&quot;">Western Canon</span> runs on. Works remain in the canon because writers keep returning to them as precursors — keep misreading them. If no one were made anxious by Shakespeare, Shakespeare would exit the canon.</p>
+<p>The anxiety of influence provides the <em>mechanism</em> that Bloom&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/western-canon" title="Written [[Western Canon]], resolved to western-canon">Western Canon</a> runs on. Works remain in the canon because writers keep returning to them as precursors — keep misreading them. If no one were made anxious by Shakespeare, Shakespeare would exit the canon.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Harold Bloom&quot;">Harold Bloom</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span> — the temporal corollary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span> — the operative mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Western Canon&quot;">Western Canon</span> — the institutional form of accumulated influence</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Precursor and Ephebe&quot;">Precursor and Ephebe</span> — the core Bloomian relationship</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> — Kierkegaard&#x27;s parallel in a different register</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Literary Memory as Spiritual Vocation&quot;">Literary Memory as Spiritual Vocation</span> — Bloom&#x27;s deeper claim about why this matters</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Influence of Anxiety&quot;">The Influence of Anxiety</span> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/harold-bloom" title="Written [[Harold Bloom]], resolved to harold-bloom">Harold Bloom</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a> — the temporal corollary</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a> — the operative mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/western-canon" title="Written [[Western Canon]], resolved to western-canon">Western Canon</a> — the institutional form of accumulated influence</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/precursor-and-ephebe" title="No note is called &quot;Precursor and Ephebe&quot; yet — see who is asking for it">Precursor and Ephebe</a> — the core Bloomian relationship</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> — Kierkegaard&#x27;s parallel in a different register</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/literary-memory-as-spiritual-vocation" title="No note is called &quot;Literary Memory as Spiritual Vocation&quot; yet — see who is asking for it">Literary Memory as Spiritual Vocation</a> — Bloom&#x27;s deeper claim about why this matters</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-influence-of-anxiety" title="Written [[The Influence of Anxiety]], resolved to the-influence-of-anxiety">The Influence of Anxiety</a> — source essay</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">9</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17">Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05">Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-25-28">Purgatory, Cantos XXV–XXVIII: Statius on the Soul, the Fire of Lust, and the Threshold of the Earthly Paradise</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-legend-of-good-women-prologue">The Prologue to the Legend of Good Women</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/virgil">Virgil</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>19</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>634</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">19</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/western-canon">Western Canon</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-influence-of-anxiety">The Influence of Anxiety (The Point, ~2022–2024)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>11 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/entities/virgil">Virgil</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05">Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-legend-of-good-women-prologue">The Prologue to the Legend of Good Women</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/data-and-frames-in-analysis-and-art">Data is Always Constructed: From Sensemaking to Art</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17">Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-25-28">Purgatory, Cantos XXV–XXVIII: Statius on the Soul, the Fire of Lust, and the Threshold of the Earthly Paradise</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein">The Literary and Cognitive Faces of Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">13</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/western-canon">Western Canon</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/harold-bloom">harold-bloom</a><a class="tag" href="/wiki/topics/literary-theory">literary-theory</a><a class="tag" href="/wiki/topics/influence">influence</a><a class="tag" href="/wiki/topics/precursor">precursor</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/misreading">misreading</a><a class="tag" href="/wiki/topics/poetry">poetry</a><a class="tag" href="/wiki/topics/belatedness">belatedness</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

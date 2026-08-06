@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,37 +26,46 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The Play Epistemology — Hacking, Ludics, and the Infinite Game</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Play Epistemology — Hacking, Ludics, and the Infinite Game</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-play-epistemology.md">source on GitHub</a></div>
-  <div class="note-summary">Play, hacking, ludic feedback, the infinite game, and creative practice are not just activities described in the essays — they constitute a coherent epistemology: the claim that playful engagement with difficulty is a privileged method for generating knowledge, identity, and meaning.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">play</span><span class="tag">hacking</span><span class="tag">epistemology</span><span class="tag">creativity</span><span class="tag">ludic</span><span class="tag">infinite-game</span><span class="tag">kierkegaard</span><span class="tag">stallman</span><span class="tag">dwarf-fortress</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-play-epistemology.md">source on GitHub</a></div>
+    <div class="note-summary">Play, hacking, ludic feedback, the infinite game, and creative practice are not just activities described in the essays — they constitute a coherent epistemology: the claim that playful engagement with difficulty is a privileged method for generating knowledge, identity, and meaning.</div>
     <div class="prose">
-<p><strong>Sources</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Work or Play Ludic Feedback Loops&quot;">Work or Play Ludic Feedback Loops</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress Emacs AI Generative Complexity&quot;">Dwarf Fortress Emacs AI Generative Complexity</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best Game Ever Made&quot;">The Best Game Ever Made</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Protocols Wagons and Associated Acrobatics&quot;">On Protocols Wagons and Associated Acrobatics</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Tortured Artist Is So Yesterday&quot;">The Tortured Artist Is So Yesterday</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety Play and the Generative Life&quot;">Anxiety Play and the Generative Life</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Play as Navigational Instrument&quot;">Play as Navigational Instrument</span></p>
+<p><strong>Sources</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a>, <a class="wikilink" href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops" title="Written [[Work or Play Ludic Feedback Loops]], resolved to work-or-play-ludic-feedback-loops">Work or Play Ludic Feedback Loops</a>, <a class="wikilink" href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity" title="Written [[Dwarf Fortress Emacs AI Generative Complexity]], resolved to dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress Emacs AI Generative Complexity</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-best-game-ever-made" title="Written [[The Best Game Ever Made]], resolved to the-best-game-ever-made">The Best Game Ever Made</a>, <a class="wikilink" href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics" title="Written [[On Protocols Wagons and Associated Acrobatics]], resolved to on-protocols-wagons-and-associated-acrobatics">On Protocols Wagons and Associated Acrobatics</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday" title="Written [[The Tortured Artist Is So Yesterday]], resolved to the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a>, <a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life" title="Written [[Anxiety Play and the Generative Life]], resolved to anxiety-play-and-the-generative-life">Anxiety Play and the Generative Life</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/play-as-navigational-instrument" title="Written [[Play as Navigational Instrument]], resolved to play-as-navigational-instrument">Play as Navigational Instrument</a></p>
 <h2 id="the-claim">The Claim</h2>
 <p>Scattered across at least ten essays is a single epistemological argument that has never been stated as such: <strong>play is not a break from serious knowing but a privileged method of knowing</strong>. The essays describe this from multiple angles — biological, existential, creative, professional — but the structure is the same.</p>
 <h2 id="the-three-pillars">The Three Pillars</h2>
 <h3 id="1-play-as-encounter-with-difficulty-kierkegaard-stallman">1. Play as Encounter with Difficulty (Kierkegaard + Stallman)</h3>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety Play and the Generative Life&quot;">Anxiety Play and the Generative Life</span> synthesis already identifies the structural parallel: Kierkegaard&#x27;s anxiety motor and Stallman&#x27;s hacking-as-play both describe how encountering difficulty under conditions of freedom generates identity and competence. What makes play epistemically special is that it combines <strong>genuine stakes</strong> (the problem resists you) with <strong>freedom from terminal outcomes</strong> (you can try again, try differently).</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life" title="Written [[Anxiety Play and the Generative Life]], resolved to anxiety-play-and-the-generative-life">Anxiety Play and the Generative Life</a> synthesis already identifies the structural parallel: Kierkegaard&#x27;s anxiety motor and Stallman&#x27;s hacking-as-play both describe how encountering difficulty under conditions of freedom generates identity and competence. What makes play epistemically special is that it combines <strong>genuine stakes</strong> (the problem resists you) with <strong>freedom from terminal outcomes</strong> (you can try again, try differently).</p>
 <h3 id="2-play-as-feedback-calibration-ludic-loops">2. Play as Feedback Calibration (Ludic Loops)</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Work or Play Ludic Feedback Loops&quot;">Work or Play Ludic Feedback Loops</span> argues that sustainable creative work requires matching task cadence to one&#x27;s biological feedback rhythm. The insight: play is not the absence of work but the <strong>correct frequency of work</strong> — tight enough loops that the dopamine cycle reinforces engagement, loose enough that exploration remains possible. Machine learning training (tight loops) and essay writing (loose loops) are both play when the cadence is right.</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops" title="Written [[Work or Play Ludic Feedback Loops]], resolved to work-or-play-ludic-feedback-loops">Work or Play Ludic Feedback Loops</a> argues that sustainable creative work requires matching task cadence to one&#x27;s biological feedback rhythm. The insight: play is not the absence of work but the <strong>correct frequency of work</strong> — tight enough loops that the dopamine cycle reinforces engagement, loose enough that exploration remains possible. Machine learning training (tight loops) and essay writing (loose loops) are both play when the cadence is right.</p>
 <h3 id="3-play-as-navigation-without-maps-the-infinite-game">3. Play as Navigation Without Maps (The Infinite Game)</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Play as Navigational Instrument&quot;">Play as Navigational Instrument</span> connects ludic feedback loops, the infinite game, and maximal interestingness as complementary navigation instruments. The key move: when you cannot map the territory in advance (because the territory is complex, emergent, or novel), play is the only viable strategy. You navigate by following what is interesting, not what is planned.</p>
+<p><a class="wikilink" href="/wiki/aneesh/synthesis/play-as-navigational-instrument" title="Written [[Play as Navigational Instrument]], resolved to play-as-navigational-instrument">Play as Navigational Instrument</a> connects ludic feedback loops, the infinite game, and maximal interestingness as complementary navigation instruments. The key move: when you cannot map the territory in advance (because the territory is complex, emergent, or novel), play is the only viable strategy. You navigate by following what is interesting, not what is planned.</p>
 <h2 id="the-cases">The Cases</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>Source</th><th>Play-Form</th><th>Epistemic Yield</th></tr></thead>
 <tbody>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span></td><td>The &quot;hacky&quot; middle — lateral, fox-like, playful</td><td>Optimal life posture for navigating complexity</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress Emacs AI Generative Complexity&quot;">Dwarf Fortress Emacs AI Generative Complexity</span></td><td>Emergent simulation play</td><td>Creative surprise, narrative generation</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best Game Ever Made&quot;">The Best Game Ever Made</span></td><td>20-year commitment to a single game</td><td>Audacity as sustained play</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Work or Play Ludic Feedback Loops&quot;">Work or Play Ludic Feedback Loops</span></td><td>Career as dopamine-calibrated play</td><td>Sustainable creative engagement</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Protocols Wagons and Associated Acrobatics&quot;">On Protocols Wagons and Associated Acrobatics</span></td><td>Writing practice as protocol-play</td><td>Identity construction through continuous self-creation</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span></td><td>Curiosity-driven polymathism</td><td>Happiness, ego dissolution, genuine learning</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Tortured Artist Is So Yesterday&quot;">The Tortured Artist Is So Yesterday</span></td><td>Collaborative creative risk-taking</td><td>Post-romantic creative practice</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span></td><td>Philosophy selection as identity-play</td><td>Matching framework to disruption level</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a></td><td>The &quot;hacky&quot; middle — lateral, fox-like, playful</td><td>Optimal life posture for navigating complexity</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity" title="Written [[Dwarf Fortress Emacs AI Generative Complexity]], resolved to dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress Emacs AI Generative Complexity</a></td><td>Emergent simulation play</td><td>Creative surprise, narrative generation</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/the-best-game-ever-made" title="Written [[The Best Game Ever Made]], resolved to the-best-game-ever-made">The Best Game Ever Made</a></td><td>20-year commitment to a single game</td><td>Audacity as sustained play</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops" title="Written [[Work or Play Ludic Feedback Loops]], resolved to work-or-play-ludic-feedback-loops">Work or Play Ludic Feedback Loops</a></td><td>Career as dopamine-calibrated play</td><td>Sustainable creative engagement</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics" title="Written [[On Protocols Wagons and Associated Acrobatics]], resolved to on-protocols-wagons-and-associated-acrobatics">On Protocols Wagons and Associated Acrobatics</a></td><td>Writing practice as protocol-play</td><td>Identity construction through continuous self-creation</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a></td><td>Curiosity-driven polymathism</td><td>Happiness, ego dissolution, genuine learning</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday" title="Written [[The Tortured Artist Is So Yesterday]], resolved to the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a></td><td>Collaborative creative risk-taking</td><td>Post-romantic creative practice</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a></td><td>Philosophy selection as identity-play</td><td>Matching framework to disruption level</td></tr>
 </tbody>
 </table></div>
 <h2 id="play-vs-seriousness-a-false-opposition">Play vs. Seriousness — A False Opposition</h2>
@@ -67,32 +76,45 @@
 <li>The infinite game is not casual but committed — play AND stakes</li>
 <li>Writing protocols are disciplined daily practices — play AND routine</li>
 </ul>
-<p>The actual opposition is not play vs. seriousness but <strong>play vs. status-seeking</strong>. The tortured artist, the status-driven polymath, the platform-captured creator — all fail not because they are too serious but because their engagement is instrumentalized (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Curiosity vs Status as Motivation&quot;">Curiosity vs Status as Motivation</span>).</p>
+<p>The actual opposition is not play vs. seriousness but <strong>play vs. status-seeking</strong>. The tortured artist, the status-driven polymath, the platform-captured creator — all fail not because they are too serious but because their engagement is instrumentalized (<a class="wikilink" href="/wiki/aneesh/synthesis/curiosity-vs-status-as-motivation" title="Written [[Curiosity vs Status as Motivation]], resolved to curiosity-vs-status-as-motivation">Curiosity vs Status as Motivation</a>).</p>
 <h2 id="the-biological-ground">The Biological Ground</h2>
-<p>The ludic feedback essay makes the strongest biological claim: play is not a cultural invention but a neurochemical reality. Dopamine cycles, information hunger, and orientation-seeking are biological facts that play engages directly (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Work or Play Ludic Feedback Loops&quot;">Work or Play Ludic Feedback Loops</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet Lost and Hungry&quot;">Social Internet Lost and Hungry</span>). This connects to the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Biology of Meaning-Making&quot;">Biology of Meaning-Making</span> synthesis — play may be continuous with chemotaxis, a form of exploratory engagement with the environment that evolution selected for.</p>
+<p>The ludic feedback essay makes the strongest biological claim: play is not a cultural invention but a neurochemical reality. Dopamine cycles, information hunger, and orientation-seeking are biological facts that play engages directly (<a class="wikilink" href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops" title="Written [[Work or Play Ludic Feedback Loops]], resolved to work-or-play-ludic-feedback-loops">Work or Play Ludic Feedback Loops</a>, <a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet Lost and Hungry</a>). This connects to the <a class="wikilink" href="/wiki/aneesh/synthesis/biology-of-meaning-making" title="Written [[Biology of Meaning-Making]], resolved to biology-of-meaning-making">Biology of Meaning-Making</a> synthesis — play may be continuous with chemotaxis, a form of exploratory engagement with the environment that evolution selected for.</p>
 <h2 id="limitations">Limitations</h2>
 <p>The play epistemology has blind spots:</p>
 <ul>
 <li><strong>Suffering and forced labor</strong>: not everyone has the freedom to play. The essays are written from a position of relative privilege.</li>
 <li><strong>Institutional knowledge</strong>: some knowledge requires non-playful systematization — taxonomies, regulations, standards.</li>
-<li><strong>The depth problem</strong>: play favors breadth and lateral moves, but some problems require sustained, grinding depth (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Breadth vs Depth Across Essays&quot;">Breadth vs Depth Across Essays</span>).</li>
+<li><strong>The depth problem</strong>: play favors breadth and lateral moves, but some problems require sustained, grinding depth (<a class="wikilink" href="/wiki/aneesh/synthesis/breadth-vs-depth-across-essays" title="Written [[Breadth vs Depth Across Essays]], resolved to breadth-vs-depth-across-essays">Breadth vs Depth Across Essays</a>).</li>
 </ul>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety Play and the Generative Life&quot;">Anxiety Play and the Generative Life</span> — the Kierkegaard-Stallman structural parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Play as Navigational Instrument&quot;">Play as Navigational Instrument</span> — play as navigation without maps</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Simulation and the Socratic Question&quot;">Simulation and the Socratic Question</span> — removing the win condition as design philosophy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Audacity and the Long Game&quot;">Audacity and the Long Game</span> — sustained commitment as a form of play</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Explorer and the Tourist&quot;">The Explorer and the Tourist</span> — the explorer&#x27;s method is play; the tourist&#x27;s method is consumption</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life" title="Written [[Anxiety Play and the Generative Life]], resolved to anxiety-play-and-the-generative-life">Anxiety Play and the Generative Life</a> — the Kierkegaard-Stallman structural parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/play-as-navigational-instrument" title="Written [[Play as Navigational Instrument]], resolved to play-as-navigational-instrument">Play as Navigational Instrument</a> — play as navigation without maps</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/simulation-and-the-socratic-question" title="Written [[Simulation and the Socratic Question]], resolved to simulation-and-the-socratic-question">Simulation and the Socratic Question</a> — removing the win condition as design philosophy</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/audacity-and-the-long-game" title="Written [[Audacity and the Long Game]], resolved to audacity-and-the-long-game">Audacity and the Long Game</a> — sustained commitment as a form of play</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist" title="Written [[The Explorer and the Tourist]], resolved to the-explorer-and-the-tourist">The Explorer and the Tourist</a> — the explorer&#x27;s method is play; the tourist&#x27;s method is consumption</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>17</b><span>links out</span></div>
+      <div class="bearing"><b>783</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/play">play</a><a class="tag" href="/wiki/topics/hacking">hacking</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/ludic">ludic</a><a class="tag" href="/wiki/topics/infinite-game">infinite-game</a><a class="tag" href="/wiki/topics/kierkegaard">kierkegaard</a><span class="tag tag-lone" title="Only this note uses it">stallman</span><a class="tag" href="/wiki/topics/dwarf-fortress">dwarf-fortress</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

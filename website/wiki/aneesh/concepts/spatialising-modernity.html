@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Spatialising Modernity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Spatialising Modernity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/spatialising-modernity.md">source on GitHub</a></div>
-  <div class="note-summary">Massey&#x27;s name (Ch. 6 of <em>For Space</em>) for the structural move at the heart of modernity: the conversion of coexisting spatial difference into a single temporal sequence, with the West as &#x27;ahead&#x27; and others as &#x27;behind.&#x27;</div>
-  <div class="tags"><span class="tag">massey</span><span class="tag">for-space</span><span class="tag">modernity</span><span class="tag">time</span><span class="tag">space</span><span class="tag">history</span><span class="tag">fabian</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/spatialising-modernity.md">source on GitHub</a></div>
+    <div class="note-summary">Massey&#x27;s name (Ch. 6 of <em>For Space</em>) for the structural move at the heart of modernity: the conversion of coexisting spatial difference into a single temporal sequence, with the West as &#x27;ahead&#x27; and others as &#x27;behind.&#x27;</div>
     <div class="prose">
 <p>The signature diagnostic move in Chapter 6 of <a class="wikilink" href="/wiki/aneesh/entities/doreen-massey">doreen-massey</a>&#x27;s <em>For Space</em> (2005). The thesis: modernity&#x27;s characteristic political-cosmological operation is the <strong>temporal convening of spatial difference</strong>. The geography of the world is rewritten as the <em>history</em> of the world.</p>
 <blockquote><p>&quot;Different &#x27;places&#x27; were interpreted as different stages in a single temporal development. All the stories of unilinear progress, modernisation, development, the sequence of modes of production . . . perform this operation. Western Europe is &#x27;advanced&#x27;, other parts of the world &#x27;some way behind&#x27;, yet others are &#x27;backward&#x27; . . . That turning of the world&#x27;s geography into the world&#x27;s (single) history is implicit in many versions of modernist politics, from liberal progressive to some Marxist.&quot; (Massey 2005: 68)</p></blockquote>
@@ -57,7 +66,7 @@
 <p>Chapter 8 of <em>For Space</em> extends the diagnosis: the dominant globalisation narrative repeats the modernity move. Africa is not different from the West, just &quot;developing.&quot; The neoliberal rhetoric of inevitability (&quot;globalisation is like gravity&quot;) is the temporal convening of space all over again. See <a class="wikilink" href="/wiki/aneesh/concepts/aspatial-globalisation">aspatial-globalisation</a>, <a class="wikilink" href="/wiki/aneesh/concepts/globalisation-as-inevitability-rhetoric">globalisation-as-inevitability-rhetoric</a>.</p>
 <h2 id="cognates-in-the-wiki">Cognates in the wiki</h2>
 <ul>
-<li>Venkatesh Rao&#x27;s &quot;History Machine&quot; — the cluster of practices and institutions by which modernity <em>produces</em> a single historical narrative from messy spatial coexistence. Same diagnosis from a different lineage. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;history-machines-in-the-margins&quot;">history-machines-in-the-margins</span> (if exists) and <a class="wikilink" href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">cosmopolitan-time-queue-and-world-machines</a>.</li>
+<li>Venkatesh Rao&#x27;s &quot;History Machine&quot; — the cluster of practices and institutions by which modernity <em>produces</em> a single historical narrative from messy spatial coexistence. Same diagnosis from a different lineage. See <a class="wikilink-wanted" href="/wiki/wanted/history-machines-in-the-margins" title="No note is called &quot;history-machines-in-the-margins&quot; yet — see who is asking for it">history-machines-in-the-margins</a> (if exists) and <a class="wikilink" href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">cosmopolitan-time-queue-and-world-machines</a>.</li>
 <li>Berlin&#x27;s polemic against monism (one truth, one direction) — see <a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin">isaiah-berlin</a>.</li>
 <li>Bryant&#x27;s &quot;pluralism of worlds&quot; — the ontological refusal of single-narrative cosmology.</li>
 </ul>
@@ -70,25 +79,56 @@
 <h2 id="source">Source</h2>
 <p>Massey, D. (2005). <em>For Space</em>. London: SAGE. Ch. 6, &quot;Spatialising the history of modernity,&quot; pp. 62–71.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">11</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/aspatial-globalisation">Aspatial Globalisation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/billiard-ball-geography">Billiard-Ball Geography</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/coevalness">Coevalness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/cosmopolitan-time-queue">Cosmopolitan Time Queue</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">Cosmopolitan Time Queue and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/globalisation-as-inevitability-rhetoric">Globalisation as Inevitability Rhetoric</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/johannes-fabian">Johannes Fabian (b. 1937)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-3-living-in-spatial-times">Massey, *For Space* (2005) — Part Three: Living in Spatial Times?</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>560</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">11</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmopolitan-time-queue">Cosmopolitan Time Queue</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/aspatial-globalisation">Aspatial Globalisation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/coevalness">Coevalness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/globalisation-as-inevitability-rhetoric">Globalisation as Inevitability Rhetoric</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johannes-fabian">Johannes Fabian (b. 1937)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/billiard-ball-geography">Billiard-Ball Geography</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-3-living-in-spatial-times">Massey, *For Space* (2005) — Part Three: Living in Spatial Times?</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">Cosmopolitan Time Queue and World Machines</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/aspatial-globalisation">Aspatial Globalisation</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/coevalness">Coevalness</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmopolitan-time-queue">Cosmopolitan Time Queue</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/johannes-fabian">Johannes Fabian (b. 1937)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/power-geometry">Power-Geometry</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/globalisation-as-inevitability-rhetoric">Globalisation as Inevitability Rhetoric</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/massey">massey</a><a class="tag" href="/wiki/topics/for-space">for-space</a><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/time">time</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/history">history</a><a class="tag" href="/wiki/topics/fabian">fabian</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

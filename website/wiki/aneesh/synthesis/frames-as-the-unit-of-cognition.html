@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Frames as the Unit of Cognition</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Frames as the Unit of Cognition</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/frames-as-the-unit-of-cognition.md">source on GitHub</a></div>
-  <div class="note-summary">Klein&#x27;s frames, Weick&#x27;s sensemaking, Goffman&#x27;s interaction frames, Minsky&#x27;s AI frames, and Kuhn&#x27;s paradigms all converge on a single claim: the unit of cognition is not the inference but the frame — the structure that makes data visible.</div>
-  <div class="tags"><span class="tag">frames</span><span class="tag">sensemaking</span><span class="tag">cognition</span><span class="tag">epistemology</span><span class="tag">synthesis</span><span class="tag">macrocognition</span><span class="tag">paradigm</span><span class="tag">naturalistic-decision-making</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/frames-as-the-unit-of-cognition.md">source on GitHub</a></div>
+    <div class="note-summary">Klein&#x27;s frames, Weick&#x27;s sensemaking, Goffman&#x27;s interaction frames, Minsky&#x27;s AI frames, and Kuhn&#x27;s paradigms all converge on a single claim: the unit of cognition is not the inference but the frame — the structure that makes data visible.</div>
     <div class="prose">
 <h2 id="the-convergence">The Convergence</h2>
 <p>From very different traditions, a cluster of 20th-century thinkers arrived at the same structural insight: <strong>the primary unit of cognition is not the inference, the belief, or the proposition — it is the frame.</strong></p>
@@ -75,7 +84,7 @@
 <ul>
 <li>&quot;The Frame All the Way Down&quot;: the recursive nature of frames (frames for thinking about frames)</li>
 <li>&quot;Paradigm Shift as Personal Event&quot;: what Kuhn&#x27;s insight looks like at the individual cognitive level</li>
-<li>Connects to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility vs. Complexity&quot;">Legibility vs. Complexity</span> — frames as legibility apparatus; complexity as the domain that defeats frames</li>
+<li>Connects to <a class="wikilink-wanted" href="/wiki/wanted/legibility-vs-complexity" title="No note is called &quot;Legibility vs. Complexity&quot; yet — see who is asking for it">Legibility vs. Complexity</a> — frames as legibility apparatus; complexity as the domain that defeats frames</li>
 <li>&quot;Against Raw Data&quot;: the constructivist tradition as refutation of naive empiricism across science, cognition, and AI</li>
 </ul>
 <h2 id="tensions-and-open-questions">Tensions and Open Questions</h2>
@@ -86,27 +95,54 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> (summary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames and Framing&quot;">Frames and Framing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking Forms&quot;">Sensemaking Forms</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Karl Weick&quot;">Karl Weick</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Macrocognition&quot;">Macrocognition</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Reframing&quot;">Reframing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fixation Error&quot;">Fixation Error</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cynefin Framework&quot;">Cynefin Framework</span> — another framework for the domain of sensemaking</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frames-and-framing" title="Written [[Frames and Framing]], resolved to frames-and-framing">Frames and Framing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sensemaking-forms" title="Written [[Sensemaking Forms]], resolved to sensemaking-forms">Sensemaking Forms</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/karl-weick" title="Written [[Karl Weick]], resolved to karl-weick">Karl Weick</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/macrocognition" title="Written [[Macrocognition]], resolved to macrocognition">Macrocognition</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/reframing" title="Written [[Reframing]], resolved to reframing">Reframing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fixation-error" title="Written [[Fixation Error]], resolved to fixation-error">Fixation Error</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cynefin-framework" title="Written [[Cynefin Framework]], resolved to cynefin-framework">Cynefin Framework</a> — another framework for the domain of sensemaking</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>935</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/karl-weick">Karl E. Weick</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/theorizing-as-sensemaking-weick-klein-convergence">Theorizing as Sensemaking — The Weick-Klein Convergence</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/karl-weick">Karl E. Weick</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/theory-as-process-vs-product">Theory as Process vs. Product</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/world-machines-as-interim-theory">World Machines as Interim Theory: A Weickian Defense</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/frames">frames</a><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/cognition">cognition</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/macrocognition">macrocognition</a><a class="tag" href="/wiki/topics/paradigm">paradigm</a><a class="tag" href="/wiki/topics/naturalistic-decision-making">naturalistic-decision-making</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

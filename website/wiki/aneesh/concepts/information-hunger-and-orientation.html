@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Information Hunger and Orientation</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Information Hunger and Orientation</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/information-hunger-and-orientation.md">source on GitHub</a></div>
-  <div class="note-summary">Hank Green&#x27;s thesis — that social media users aren&#x27;t addicted to content but are starving for information — reframed as a biological need for orientation (accurate mental maps) that platforms systematically fail to provide.</div>
-  <div class="tags"><span class="tag">social-media</span><span class="tag">information</span><span class="tag">orientation</span><span class="tag">biology</span><span class="tag">Hank-Green</span><span class="tag">navigation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/information-hunger-and-orientation.md">source on GitHub</a></div>
+    <div class="note-summary">Hank Green&#x27;s thesis — that social media users aren&#x27;t addicted to content but are starving for information — reframed as a biological need for orientation (accurate mental maps) that platforms systematically fail to provide.</div>
     <div class="prose">
 <h2 id="the-thesis">The Thesis</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hank Green&quot;">Hank Green</span>&#x27;s claim: &quot;We aren&#x27;t addicted to content, but are instead starving for information.&quot;</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/hank-green" title="Written [[Hank Green]], resolved to hank-green">Hank Green</a>&#x27;s claim: &quot;We aren&#x27;t addicted to content, but are instead starving for information.&quot;</p>
 <p>The reframe: information hunger is not a metaphor. It is a biological need for <em>orientation</em> — an accurate internal map of &quot;where I stand and what to do next.&quot; Organisms with accurate mental maps survive; disorientation is aversive.</p>
 <p>Social media companies provide just enough signal-hits to keep users scrolling but not enough genuine information to provide orientation. The result: users are lost and hungry, glassy-eyed.</p>
 <h2 id="the-signal-to-orientation-ladder">The Signal-to-Orientation Ladder</h2>
@@ -51,33 +60,76 @@
 </tbody>
 </table></div>
 <h2 id="historical-parallel-printing-press">Historical Parallel: Printing Press</h2>
-<p>The printing press also created information overload. Early modern Europe had too much data, no guides to quality. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span> is the cautionary example: mystical click-bait + Copernican theory + no data = infinite universe (no empirical basis). Culture eventually adapted through place-making and comparison — which triggered the scientific revolution.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span></p>
+<p>The printing press also created information overload. Early modern Europe had too much data, no guides to quality. <a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a> is the cautionary example: mystical click-bait + Copernican theory + no data = infinite universe (no empirical basis). Culture eventually adapted through place-making and comparison — which triggered the scientific revolution.</p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a></p>
 <h2 id="waldenponding-as-false-solution">Waldenponding as False Solution</h2>
 <p>&quot;Waldenponding&quot; (deliberate disconnection from the social internet) is the wrong response — analogous to giving up on books because there were too many. The internet does provide genuine orientation opportunities; the failure is in the <em>posture</em> of engagement.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Waldenponding&quot;">Waldenponding</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/waldenponding" title="Written [[Waldenponding]], resolved to waldenponding">Waldenponding</a></p>
 <h2 id="the-corrective-socratic-posture">The Corrective: Socratic Posture</h2>
 <p>Engaging with curiosity — an &quot;information-shaped content diet&quot; — satisfies the orientation need. Socratic inquiry transforms the dominant competitive emotion of online discourse into collaborative place-making. &quot;Each of us and our thoughts are a place in the world.&quot;</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a></p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hank Green&quot;">Hank Green</span> — source of the &quot;starving for information&quot; thesis</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Signal-to-Orientation Ladder&quot;">Signal-to-Orientation Ladder</span> — analytical framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — orientation is finding one&#x27;s place</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Navigation and Cognition&quot;">Navigation and Cognition</span> — evolutionary grounding</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span> — historical analogy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — corrective posture</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Waldenponding&quot;">Waldenponding</span> — rejected solution</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/hank-green" title="Written [[Hank Green]], resolved to hank-green">Hank Green</a> — source of the &quot;starving for information&quot; thesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/signal-to-orientation-ladder" title="Written [[Signal-to-Orientation Ladder]], resolved to signal-to-orientation-ladder">Signal-to-Orientation Ladder</a> — analytical framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — orientation is finding one&#x27;s place</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/navigation-and-cognition" title="Written [[Navigation and Cognition]], resolved to navigation-and-cognition">Navigation and Cognition</a> — evolutionary grounding</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a> — historical analogy</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — corrective posture</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/waldenponding" title="Written [[Waldenponding]], resolved to waldenponding">Waldenponding</a> — rejected solution</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>379</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">11</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/giordano-bruno">Giordano Bruno (1548-1600)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/navigation-and-cognition">Navigation and Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/printing-press-and-information-overload">Printing Press and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/thinking-with-places">Thinking with Places</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/signal-to-orientation-ladder">Signal-to-Orientation Ladder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/waldenponding">Waldenponding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/hank-green">Hank Green</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/tools-and-worldview-commitment">Tools and Worldview Commitment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/printing-press-and-information-overload">Printing Press and Information Overload</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/signal-to-orientation-ladder">Signal-to-Orientation Ladder</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/social-media">social-media</a><a class="tag" href="/wiki/topics/information">information</a><a class="tag" href="/wiki/topics/orientation">orientation</a><a class="tag" href="/wiki/topics/biology">biology</a><a class="tag" href="/wiki/topics/hank-green">Hank-Green</a><a class="tag" href="/wiki/topics/navigation">navigation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

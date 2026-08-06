@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Space and Place Philosophy</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Space and Place Philosophy</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/space-and-place-philosophy.md">source on GitHub</a></div>
-  <div class="note-summary">The philosophical distinction between space (unbounded potential, defined negatively by what surrounds it) and place (bounded, ordered, meaningful — a demarcated unit of experience).</div>
-  <div class="tags"><span class="tag">philosophy</span><span class="tag">phenomenology</span><span class="tag">geography</span><span class="tag">epistemology</span><span class="tag">space</span><span class="tag">place</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/space-and-place-philosophy.md">source on GitHub</a></div>
+    <div class="note-summary">The philosophical distinction between space (unbounded potential, defined negatively by what surrounds it) and place (bounded, ordered, meaningful — a demarcated unit of experience).</div>
     <div class="prose">
 <p>The distinction between <strong>space</strong> and <strong>place</strong> is a productive lens across phenomenological geography, cognitive science, and epistemology.</p>
 <h2 id="core-definitions">Core Definitions</h2>
@@ -55,7 +64,7 @@
 <p>You cannot understand a space directly. You understand it by establishing places within it. The places become the coordinates that give the space structure. To explore a space, you must first make stable places.</p>
 <h2 id="applications">Applications</h2>
 <h3 id="epistemology-sathe-callard">Epistemology (Sathe / Callard)</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs Questions&quot;">Problems vs Questions</span> maps onto S&amp;P:</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs Questions]], resolved to problems-vs-questions">Problems vs Questions</a> maps onto S&amp;P:</p>
 <ul>
 <li>Problems are places: bounded, solvable, done</li>
 <li>Socratic questions are spaces: explorable, additive, never fully closed</li>
@@ -69,12 +78,12 @@
 <p>Converting space to place prematurely forecloses exploration. Scientific paradigms that have calcified are spaces that have been over-placed — every region labeled before it has been properly explored.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs Questions&quot;">Problems vs Questions</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Method and Inquiry&quot;">Socratic Method and Inquiry</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Orientation&quot;">Epistemic Orientation</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Horizon as Metaphor&quot;">Horizon as Metaphor</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tractability&quot;">Tractability</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs Questions]], resolved to problems-vs-questions">Problems vs Questions</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/socratic-method-and-inquiry" title="No note is called &quot;Socratic Method and Inquiry&quot; yet — see who is asking for it">Socratic Method and Inquiry</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/epistemic-orientation" title="No note is called &quot;Epistemic Orientation&quot; yet — see who is asking for it">Epistemic Orientation</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/horizon-as-metaphor" title="No note is called &quot;Horizon as Metaphor&quot; yet — see who is asking for it">Horizon as Metaphor</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/tractability" title="No note is called &quot;Tractability&quot; yet — see who is asking for it">Tractability</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
@@ -83,29 +92,66 @@
 <li>Henri Lefebvre, <em>The Production of Space</em></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">15</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/experiential-perspective-tuan">Experiential Perspective (Tuan)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/global-sense-of-place">Global Sense of Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/gravitational-attractor">Gravitational Attractor</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/henri-lefebvre">Henri Lefebvre (1901–1991)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/lefebvre-spatial-triad">Lefebvre&#x27;s Spatial Triad</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-1-setting-the-scene">Massey, *For Space* — Part One: Setting the Scene</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/mythical-space">Mythical Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/narrative-descriptive-approach">Narrative-Descriptive Approach</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/sacred-and-profane-space-tuan">Sacred and Profane Space (Tuan)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/structural-coupling">Structural Coupling</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/territorialization">Territorialization</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-1991-language-and-the-making-of-place">Tuan (1991): Language and the Making of Place: A Narrative-Descriptive Approach</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch13-14">Tuan, *Space and Place* — Ch 13 (Time and Place) &amp; Ch 14 (Epilogue)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/worlding">Worlding (Bryant)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>21</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>348</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">21</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/experiential-perspective-tuan">Experiential Perspective (Tuan)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/structural-coupling">Structural Coupling</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-1991-language-and-the-making-of-place">Tuan (1991): Language and the Making of Place: A Narrative-Descriptive Approach</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/global-sense-of-place">Global Sense of Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gravitational-attractor">Gravitational Attractor</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>13 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/worlding">Worlding (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/mythical-space">Mythical Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/territorialization">Territorialization</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/problems-are-places-questions-are-spaces">Problems are Places, Questions are Spaces</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sacred-and-profane-space-tuan">Sacred and Profane Space (Tuan)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/narrative-descriptive-approach">Narrative-Descriptive Approach</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch13-14">Tuan, *Space and Place* — Ch 13 (Time and Place) &amp; Ch 14 (Epilogue)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-lefebvre">Henri Lefebvre (1901–1991)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/places-problems-and-the-act-of-bounding">Places, Problems, and the Act of Bounding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/lefebvre-spatial-triad">Lefebvre&#x27;s Spatial Triad</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-1-setting-the-scene">Massey, *For Space* — Part One: Setting the Scene</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/simulation-and-the-socratic-question">Simulation and the Socratic Question: Removing the Win Condition</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/place-as-pause">Place as Pause (Tuan)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/naming-as-place-making">Naming as Place-Making</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><a class="tag" href="/wiki/topics/geography">geography</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/place">place</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

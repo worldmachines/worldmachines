@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Small Web</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Small Web</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/small-web.md">source on GitHub</a></div>
-  <div class="note-summary">The longing for a pre-platform internet of personal sites, direct links, blogs, and comment threads — as opposed to attention mediated through social platforms.</div>
-  <div class="tags"><span class="tag">internet</span><span class="tag">small-web</span><span class="tag">blogging</span><span class="tag">platform-critique</span><span class="tag">personal-sites</span><span class="tag">decentralization</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/small-web.md">source on GitHub</a></div>
+    <div class="note-summary">The longing for a pre-platform internet of personal sites, direct links, blogs, and comment threads — as opposed to attention mediated through social platforms.</div>
     <div class="prose">
 <h2 id="the-idea">The Idea</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span>:</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a>:</p>
 <blockquote><p>&quot;I&#x27;d love to get back to a world where the internet was used in its raw form. If you are reading my posts, please do comment, share your site/blog and your posts.&quot;</p></blockquote>
 <p>The &quot;small web&quot; or &quot;indie web&quot; is the aesthetic and political stance that the original hyperlinked web — of personal sites, blogrolls, direct links between individuals, and comment threads — was superior to the platform-mediated attention economy that replaced it.</p>
 <h2 id="what-was-lost">What Was Lost</h2>
@@ -46,27 +55,59 @@
 <li>Comment sections as conversation (replaced by replies that exist only within platform graphs)</li>
 <li>Serendipitous discovery via browsing (replaced by algorithmic feeds)</li>
 </ul>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James Somers&quot;">James Somers</span>&#x27; essays are cited as examples of what the small web produces: careful, long-form pieces that surface underappreciated tools and ideas.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/james-somers" title="Written [[James Somers]], resolved to james-somers">James Somers</a>&#x27; essays are cited as examples of what the small web produces: careful, long-form pieces that surface underappreciated tools and ideas.</p>
 <h2 id="the-documentation-connection">The Documentation Connection</h2>
-<p>The small web longing connects to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Documentation as Empathy&quot;">Documentation as Empathy</span>: personal sites and blogs are a form of documentation of the self — a gift to future readers who might find the work. Platform content is ephemeral and platform-owned; personal sites persist and compound.</p>
+<p>The small web longing connects to <a class="wikilink" href="/wiki/aneesh/concepts/documentation-as-empathy" title="Written [[Documentation as Empathy]], resolved to documentation-as-empathy">Documentation as Empathy</a>: personal sites and blogs are a form of documentation of the self — a gift to future readers who might find the work. Platform content is ephemeral and platform-owned; personal sites persist and compound.</p>
 <h2 id="the-language-log-as-small-web">The Language Log as Small Web</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Language Log&quot;">Language Log</span> (mentioned in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span>) is presented as an example of the old web at its best: a site that goes extremely deep on niche topics (how much can you write about spinach?) because it exists for the topic&#x27;s own sake, not for engagement optimization.</p>
+<p><a class="wikilink-wanted" href="/wiki/wanted/language-log" title="No note is called &quot;Language Log&quot; yet — see who is asking for it">Language Log</a> (mentioned in <a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a>) is presented as an example of the old web at its best: a site that goes extremely deep on niche topics (how much can you write about spinach?) because it exists for the topic&#x27;s own sake, not for engagement optimization.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James Somers&quot;">James Somers</span> — entity page; exemplar of small web writing</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Language Log&quot;">Language Log</span> — example resource</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Documentation as Empathy&quot;">Documentation as Empathy</span> — structural parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;1913 Webster&#x27;s Dictionary&quot;">1913 Webster&#x27;s Dictionary</span> — another artifact of the &quot;old way is the proper way&quot; stance</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/james-somers" title="Written [[James Somers]], resolved to james-somers">James Somers</a> — entity page; exemplar of small web writing</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/language-log" title="No note is called &quot;Language Log&quot; yet — see who is asking for it">Language Log</a> — example resource</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/documentation-as-empathy" title="Written [[Documentation as Empathy]], resolved to documentation-as-empathy">Documentation as Empathy</a> — structural parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/1913-websters-dictionary" title="Written [[1913 Webster&#x27;s Dictionary]], resolved to 1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a> — another artifact of the &quot;old way is the proper way&quot; stance</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>297</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">5</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/a-good-dictionary">A Good Dictionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/lexicographic-richness">Lexicographic Richness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/james-somers">James Somers</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/documentation-as-gift-economy">Documentation as Gift Economy</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/john-mcphee">John McPhee</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/a-good-dictionary">A Good Dictionary</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/james-somers">James Somers</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/lexicographic-richness">Lexicographic Richness</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/documentation-as-empathy">Documentation as Empathy</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/internet">internet</a><a class="tag" href="/wiki/topics/small-web">small-web</a><a class="tag" href="/wiki/topics/blogging">blogging</a><span class="tag tag-lone" title="Only this note uses it">platform-critique</span><span class="tag tag-lone" title="Only this note uses it">personal-sites</span><a class="tag" href="/wiki/topics/decentralization">decentralization</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

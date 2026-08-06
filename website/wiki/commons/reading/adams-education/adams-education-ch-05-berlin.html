@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>The Berlin Failure: Civil Law, the Gymnasium, and an Accidental Beethoven (1858–1859)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Berlin Failure: Civil Law, the Gymnasium, and an Accidental Beethoven (1858–1859)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-05-berlin.md">source on GitHub</a></div>
-  <div class="note-summary">Henry Adams&#x27;s 1858–59 attempt at a Berlin education collapses through a worthless University Civil Law lecture and forces him into a Prussian Gymnasium classroom of twelve-year-olds, and its only real lesson—an unbidden feel for Beethoven—arrives by accident rather than instruction.</div>
-  <div class="tags"><span class="tag">henry-adams</span><span class="tag">the-education-of-henry-adams</span><span class="tag">prussian-education</span><span class="tag">state-education-as-machine</span><span class="tag">university-of-berlin</span><span class="tag">civil-law</span><span class="tag">accidental-education</span><span class="tag">beethoven</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-05-berlin.md">source on GitHub</a></div>
+    <div class="note-summary">Henry Adams&#x27;s 1858–59 attempt at a Berlin education collapses through a worthless University Civil Law lecture and forces him into a Prussian Gymnasium classroom of twelve-year-olds, and its only real lesson—an unbidden feel for Beethoven—arrives by accident rather than instruction.</div>
     <div class="prose">
 <p>Chapter V follows the young Henry Adams (writing of himself throughout in the third person) from his November 1858 departure from Quincy, through a gale-battered Atlantic crossing and a tour of England and Antwerp, to a year in Berlin meant to teach him the Civil Law at the university. The university lectures prove worthless within a single hour; Adams retreats first to Berlin&#x27;s beer-cellars and music-halls, then—at Robert Apthorp&#x27;s suggestion—into the Ober-tertia of the Friedrichs-Wilhelm-Werdersches Gymnasium, sitting with boys half his age to learn the language by rote alongside them. Formal study of the Civil Law, of German literature, and of German &quot;society&quot; all come to nothing; the chapter&#x27;s only conceded gain is an unsought, unexplained ability to follow a Beethoven symphony while sitting, bored, at a beer-table.</p>
 <h2 id="themes">Themes</h2>
@@ -45,15 +53,32 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The Atlantic gale that opens the Berlin ordeal is offered as a truer teacher than any classroom, setting up the chapter&#x27;s recurring inversion of &quot;education.&quot; The University of Berlin&#x27;s Civil Law lecture is dispatched in a single flat sentence before Adams catalogues exactly why the lecture system could not &quot;profit an American education.&quot; The &quot;dynamo machine&quot; passage is the chapter&#x27;s most explicit institutional diagnosis, paired with the description of the Gymnasium&#x27;s airless, ventilation-forbidden classrooms that turned Prussian discipline into physical torment for its &quot;Berliner-kinder.&quot; Finally, the unbidden Beethoven epiphany and the closing verdict that his only clear gain &quot;came from time wasted; studies neglected; vices indulged; education reversed&quot; together state the chapter&#x27;s thesis: intended instruction failed completely, and what little Adams carried away from Berlin arrived as pure accident.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>503</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><a class="tag" href="/wiki/topics/the-education-of-henry-adams">the-education-of-henry-adams</a><span class="tag tag-lone" title="Only this note uses it">prussian-education</span><span class="tag tag-lone" title="Only this note uses it">state-education-as-machine</span><span class="tag tag-lone" title="Only this note uses it">university-of-berlin</span><span class="tag tag-lone" title="Only this note uses it">civil-law</span><a class="tag" href="/wiki/topics/accidental-education">accidental-education</a><span class="tag tag-lone" title="Only this note uses it">beethoven</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,35 +26,44 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Universal Library in the River of Noise</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Universal Library in the River of Noise</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/universal-library-river-of-noise.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe&#x27;s essay tracing the myth of the universal library from Alexandria through LLMs, arguing that noise in information systems is generative rather than purely destructive.</div>
-  <div class="tags"><span class="tag">universal-library</span><span class="tag">knowledge-systems</span><span class="tag">LLMs</span><span class="tag">epistemology</span><span class="tag">information-theory</span><span class="tag">wikipedia</span><span class="tag">noise</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/universal-library-river-of-noise.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe&#x27;s essay tracing the myth of the universal library from Alexandria through LLMs, arguing that noise in information systems is generative rather than purely destructive.</div>
     <div class="prose">
 <p><strong>Source</strong>: Aneesh Sathe, <em>The Universal Library in the River of Noise</em> (2025-01-12)<br>
 <strong>URL</strong>: https://aneeshsathe.com/the-universal-library-in-the-river-of-noise/</p>
 <h2 id="central-argument">Central Argument</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library&quot;">Universal Library</span> is not a finished project but an ongoing myth — an ideal that each generation re-instantiates with its dominant technology. The essay traces this myth from Alexandria → Renaissance encyclopedias → Google → Wikipedia → LLMs, and argues that the ocean of noise accompanying each attempt is not purely a failure condition but can be generative. The key tension is between <strong>inclusivity</strong> (which produces &quot;oceans of meaninglessness&quot;) and <strong>quality</strong> (which produces exclusionary silos).</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/universal-library" title="Written [[Universal Library]], resolved to universal-library">Universal Library</a> is not a finished project but an ongoing myth — an ideal that each generation re-instantiates with its dominant technology. The essay traces this myth from Alexandria → Renaissance encyclopedias → Google → Wikipedia → LLMs, and argues that the ocean of noise accompanying each attempt is not purely a failure condition but can be generative. The key tension is between <strong>inclusivity</strong> (which produces &quot;oceans of meaninglessness&quot;) and <strong>quality</strong> (which produces exclusionary silos).</p>
 <h2 id="key-claims">Key Claims</h2>
 <ol>
 <li><strong>Libraries used to be zero-sum</strong>: a manuscript in one city meant its absence elsewhere. Digitization breaks this scarcity but creates new problems (licensing, infrastructure inequality).</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wikipedia&quot;">Wikipedia</span></strong> is the leading contemporary heir to the universal library ideal — open, collaborative, perpetually updating — but remains vulnerable to Kruk&#x27;s &quot;oceans of meaninglessness&quot; critique.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs&quot;">LLMs</span> as a stand-in for perfect language</strong>: Embeddings function as an approximation of the Leibnizian dream of a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span> where each concept has a unique, unambiguous token. Umberto Eco&#x27;s observation that AI may be a &quot;revival under a different name&quot; of this dream is cited approvingly.</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/wikipedia" title="No note is called &quot;Wikipedia&quot; yet — see who is asking for it">Wikipedia</a></strong> is the leading contemporary heir to the universal library ideal — open, collaborative, perpetually updating — but remains vulnerable to Kruk&#x27;s &quot;oceans of meaninglessness&quot; critique.</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/llms" title="No note is called &quot;LLMs&quot; yet — see who is asking for it">LLMs</a> as a stand-in for perfect language</strong>: Embeddings function as an approximation of the Leibnizian dream of a <a class="wikilink" href="/wiki/aneesh/concepts/perfect-language" title="Written [[Perfect Language]], resolved to perfect-language">Perfect Language</a> where each concept has a unique, unambiguous token. Umberto Eco&#x27;s observation that AI may be a &quot;revival under a different name&quot; of this dream is cited approvingly.</li>
 <li><strong>Noise is generative</strong>: misinformation and chaos spur debate and unexpected discovery; the metaphor of &quot;small islands of well-curated information in a sea of noise&quot; reframes the problem.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> as bridges</strong>: KGs are proposed as connective tissue between curated knowledge and generative text.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> as bridges</strong>: KGs are proposed as connective tissue between curated knowledge and generative text.</li>
 </ol>
 <h2 id="intellectual-lineage">Intellectual Lineage</h2>
 <ul>
 <li><strong>Miroslav Kruk</strong> (1999) — &quot;The Internet and the Revival of the Myth of the Universal Library&quot;: primary interlocutor. Warns against technological utopianism; coins the phrase &quot;oceans of meaninglessness.&quot;</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Library of Alexandria&quot;">Library of Alexandria</span></strong> — archetypal symbol</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Conrad Gessner&quot;">Conrad Gessner</span></strong> — <em>Bibliotheca Universalis</em> (Renaissance encyclopedia project)</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Francis Bacon&quot;">Francis Bacon</span></strong> — <em>Instauratio Magna</em>, aspiration to reorganize all knowledge</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Umberto Eco&quot;">Umberto Eco</span></strong> — on AI as revival of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span> dream</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gottfried Wilhelm Leibniz&quot;">Gottfried Wilhelm Leibniz</span></strong> — dream of a universal digital object identifier / characteristica universalis</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/library-of-alexandria" title="No note is called &quot;Library of Alexandria&quot; yet — see who is asking for it">Library of Alexandria</a></strong> — archetypal symbol</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/conrad-gessner" title="No note is called &quot;Conrad Gessner&quot; yet — see who is asking for it">Conrad Gessner</a></strong> — <em>Bibliotheca Universalis</em> (Renaissance encyclopedia project)</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/francis-bacon" title="Written [[Francis Bacon]], resolved to francis-bacon">Francis Bacon</a></strong> — <em>Instauratio Magna</em>, aspiration to reorganize all knowledge</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/umberto-eco" title="Written [[Umberto Eco]], resolved to umberto-eco">Umberto Eco</a></strong> — on AI as revival of the <a class="wikilink" href="/wiki/aneesh/concepts/perfect-language" title="Written [[Perfect Language]], resolved to perfect-language">Perfect Language</a> dream</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz" title="Written [[Gottfried Wilhelm Leibniz]], resolved to gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz</a></strong> — dream of a universal digital object identifier / characteristica universalis</li>
 </ul>
 <h2 id="key-quotations">Key Quotations</h2>
 <blockquote><p>&quot;Inclusivity can lead to oceans of meaninglessness.&quot; — Kruk, paraphrased</p></blockquote>
@@ -64,22 +73,35 @@
 <ul>
 <li>The political economy of who controls curation at scale (not just Wikipedia but Google&#x27;s PageRank as implicit editorial authority)</li>
 <li>Whether &quot;generative noise&quot; has asymmetric effects — noise may be productive for well-resourced searchers and harmful for others</li>
-<li>The role of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span> in reducing noise structurally (addressed in the follow-up essay)</li>
+<li>The role of <a class="wikilink" href="/wiki/aneesh/concepts/domain-ontologies" title="Written [[Domain Ontologies]], resolved to domain-ontologies">Domain Ontologies</a> in reducing noise structurally (addressed in the follow-up essay)</li>
 </ul>
 <h2 id="cross-source-resonances">Cross-Source Resonances</h2>
 <ul>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies — Indispensable for Knowledge Graph Construction&quot;">Domain Ontologies — Indispensable for Knowledge Graph Construction</span> for the structural complement: how ontologies scaffold the &quot;islands of meaning&quot;</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web — Reshaping the Political Maidan&quot;">Cloister Web — Reshaping the Political Maidan</span> for the political dimension: what happens when LLMs become the distribution medium for curated ideas</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity&quot;">Generative Complexity</span> for the epistemological parallel: noise and complexity as productive rather than merely obstructive</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/domain-ontologies-indispensable-for-knowledge-graph-construction" title="No note is called &quot;Domain Ontologies — Indispensable for Knowledge Graph Construction&quot; yet — see who is asking for it">Domain Ontologies — Indispensable for Knowledge Graph Construction</a> for the structural complement: how ontologies scaffold the &quot;islands of meaning&quot;</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan" title="No note is called &quot;Cloister Web — Reshaping the Political Maidan&quot; yet — see who is asking for it">Cloister Web — Reshaping the Political Maidan</a> for the political dimension: what happens when LLMs become the distribution medium for curated ideas</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/generative-complexity" title="Written [[Generative Complexity]], resolved to generative-complexity">Generative Complexity</a> for the epistemological parallel: noise and complexity as productive rather than merely obstructive</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>526</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">universal-library</span><a class="tag" href="/wiki/topics/knowledge-systems">knowledge-systems</a><a class="tag" href="/wiki/topics/llms">LLMs</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/information-theory">information-theory</a><span class="tag tag-lone" title="Only this note uses it">wikipedia</span><a class="tag" href="/wiki/topics/noise">noise</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Degradation of Search</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Degradation of Search</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/degradation-of-search.md">source on GitHub</a></div>
-  <div class="note-summary">The documented decline in Google search result quality — driven by advertising incentives and SEO gaming — that provided the epistemic vacuum into which LLMs expanded, worsening rather than solving the information reliability crisis.</div>
-  <div class="tags"><span class="tag">search</span><span class="tag">information-access</span><span class="tag">google</span><span class="tag">seo</span><span class="tag">advertising</span><span class="tag">technology-critique</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/degradation-of-search.md">source on GitHub</a></div>
+    <div class="note-summary">The documented decline in Google search result quality — driven by advertising incentives and SEO gaming — that provided the epistemic vacuum into which LLMs expanded, worsening rather than solving the information reliability crisis.</div>
     <div class="prose">
 <h2 id="the-phenomenon">The Phenomenon</h2>
 <p>Research has confirmed what many users had experienced anecdotally: Google search results have measurably worsened over time. The degradation is structural, not accidental:</p>
@@ -43,32 +52,63 @@
 <li><strong>Personalization and filter bubbles</strong>: results are tuned to engagement rather than accuracy</li>
 </ul>
 <h2 id="significance-for-ai-epistemics">Significance for AI Epistemics</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span>) treats search degradation as the necessary backdrop to the LLM adoption story. The sequence matters:</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a>) treats search degradation as the necessary backdrop to the LLM adoption story. The sequence matters:</p>
 <ol>
 <li>Google quality declines → users lose confidence in search</li>
 <li>ChatGPT and similar tools emerge as alternatives</li>
 <li>LLMs are more fluent and accessible than degraded search</li>
-<li>But LLMs <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">hallucinate</span> without any citation trail</li>
+<li>But LLMs <a class="wikilink" href="/wiki/aneesh/concepts/hallucination" title="Written [[Hallucination]], resolved to hallucination">hallucinate</a> without any citation trail</li>
 <li>Result: users adopted a less reliable tool because the reliable tool had already failed them</li>
 </ol>
 <p>This is not a technology failure story — it&#x27;s an incentives story. The degradation of search was commercially rational for Google (advertising revenue) even as it was harmful to users. LLMs arrived not as an improvement on good search but as a successor to already-bad search.</p>
 <h2 id="the-opportunity-cost">The Opportunity Cost</h2>
-<p>Had search quality remained high, the pressure to adopt generative AI as a primary information source would have been much lower. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lore vs. Search vs. LLM&quot;">Lore vs. Search vs. LLM</span> typology would show search holding its position. The civilizational regression risk (back to lore) is conditional on search having failed first.</p>
+<p>Had search quality remained high, the pressure to adopt generative AI as a primary information source would have been much lower. The <a class="wikilink" href="/wiki/aneesh/concepts/lore-vs-search-vs-llm" title="Written [[Lore vs. Search vs. LLM]], resolved to lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a> typology would show search holding its position. The civilizational regression risk (back to lore) is conditional on search having failed first.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lore vs. Search vs. LLM&quot;">Lore vs. Search vs. LLM</span> — search degradation as the middle-era failure</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Citation Problem in LLMs&quot;">Citation Problem in LLMs</span> — LLMs inherit and worsen the accountability gap</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perplexity AI&quot;">Perplexity AI</span> — attempting to recover search-style citation in an LLM interface</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the standard degraded search and LLMs both fail to meet</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/lore-vs-search-vs-llm" title="Written [[Lore vs. Search vs. LLM]], resolved to lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a> — search degradation as the middle-era failure</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/citation-problem-in-llms" title="Written [[Citation Problem in LLMs]], resolved to citation-problem-in-llms">Citation Problem in LLMs</a> — LLMs inherit and worsen the accountability gap</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/perplexity-ai" title="Written [[Perplexity AI]], resolved to perplexity-ai">Perplexity AI</a> — attempting to recover search-style citation in an LLM interface</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the standard degraded search and LLMs both fail to meet</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>316</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cyclical-information-epistemics">Cyclical Information Epistemics</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cyclical-information-epistemics">Cyclical Information Epistemics</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/search">search</a><a class="tag" href="/wiki/topics/information-access">information-access</a><span class="tag tag-lone" title="Only this note uses it">google</span><span class="tag tag-lone" title="Only this note uses it">seo</span><span class="tag tag-lone" title="Only this note uses it">advertising</span><span class="tag tag-lone" title="Only this note uses it">technology-critique</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

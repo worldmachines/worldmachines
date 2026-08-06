@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,19 +26,28 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Dwarf Fortress, Emacs, &amp; AI: The Allure of Generative Complexity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Dwarf Fortress, Emacs, &amp; AI: The Allure of Generative Complexity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe&#x27;s essay arguing that Dwarf Fortress, Emacs, and AI share a common soul as platforms for generative complexity — systems whose value lies not in their parts but in emergent creative possibility.</div>
-  <div class="tags"><span class="tag">complexity</span><span class="tag">emergence</span><span class="tag">Emacs</span><span class="tag">Dwarf-Fortress</span><span class="tag">AI</span><span class="tag">creativity</span><span class="tag">Cynefin</span><span class="tag">dev-environments</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe&#x27;s essay arguing that Dwarf Fortress, Emacs, and AI share a common soul as platforms for generative complexity — systems whose value lies not in their parts but in emergent creative possibility.</div>
     <div class="prose">
 <p><strong>Source</strong>: Aneesh Sathe, <em>Dwarf Fortress, Emacs, &amp; AI: The Allure of Generative Complexity</em> (2025-01-22)<br>
 <strong>URL</strong>: https://aneeshsathe.com/dwarf-fortress-emacs-ai-the-allure-of-generative-complexity/</p>
 <h2 id="central-argument">Central Argument</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress&quot;">Dwarf Fortress</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Emacs&quot;">Emacs</span>, and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Artificial Intelligence&quot;">Artificial Intelligence</span> are not merely complicated — they are complex in the technical sense: their value lies in emergent behavior that cannot be predicted from their parts. They function as <strong>platforms for creativity</strong> (what the author calls &quot;dev environments&quot; or &quot;altars for creation&quot;), and the allure they share is the allure of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity&quot;">Generative Complexity</span> — systems that reward exploration with unexpected possibility.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/dwarf-fortress" title="Written [[Dwarf Fortress]], resolved to dwarf-fortress">Dwarf Fortress</a>, <a class="wikilink-wanted" href="/wiki/wanted/emacs" title="No note is called &quot;Emacs&quot; yet — see who is asking for it">Emacs</a>, and <a class="wikilink-wanted" href="/wiki/wanted/artificial-intelligence" title="No note is called &quot;Artificial Intelligence&quot; yet — see who is asking for it">Artificial Intelligence</a> are not merely complicated — they are complex in the technical sense: their value lies in emergent behavior that cannot be predicted from their parts. They function as <strong>platforms for creativity</strong> (what the author calls &quot;dev environments&quot; or &quot;altars for creation&quot;), and the allure they share is the allure of <a class="wikilink" href="/wiki/aneesh/concepts/generative-complexity" title="Written [[Generative Complexity]], resolved to generative-complexity">Generative Complexity</a> — systems that reward exploration with unexpected possibility.</p>
 <h2 id="key-distinction-complicated-vs-complex">Key Distinction: Complicated vs. Complex</h2>
 <div class="table-wrap"><table>
 <thead><tr><th></th><th>Complicated</th><th>Complex</th></tr></thead>
@@ -49,7 +58,7 @@
 <tr><td>Value</td><td>Sum of parts</td><td>Possibilities unlocked</td></tr>
 </tbody>
 </table></div>
-<p>This maps onto the <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cynefin Framework&quot;">Cynefin Framework</span></strong>&#x27;s distinction between the &quot;complicated&quot; and &quot;complex&quot; domains.</p>
+<p>This maps onto the <strong><a class="wikilink" href="/wiki/aneesh/concepts/cynefin-framework" title="Written [[Cynefin Framework]], resolved to cynefin-framework">Cynefin Framework</a></strong>&#x27;s distinction between the &quot;complicated&quot; and &quot;complex&quot; domains.</p>
 <h2 id="key-claims">Key Claims</h2>
 <ol>
 <li><strong>None of these systems are ends in themselves</strong>: No high score in Dwarf Fortress; Emacs is not just a text editor; AI is not about arranging perceptrons. They are platforms.</li>
@@ -61,29 +70,63 @@
 <h2 id="metaphors-and-framings">Metaphors and Framings</h2>
 <ul>
 <li><strong>Spelunking</strong>: curiosity rewarded, patience required; depth concealed until explored</li>
-<li><strong>Alchemy → chemistry</strong>: from leaden chaos to productive insight (used in the noise-as-generative argument in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span>)</li>
+<li><strong>Alchemy → chemistry</strong>: from leaden chaos to productive insight (used in the noise-as-generative argument in <a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a>)</li>
 <li><strong>Dwarf Fortress as &quot;the Emacs of games&quot;</strong>: useful analogy but insufficient; the deeper connection is the shared mode of generativity</li>
 </ul>
 <h2 id="what-the-essay-doesnt-address">What the Essay Doesn&#x27;t Address</h2>
 <ul>
 <li>The social/community dimension of complexity: Emacs and DF both have rich user communities that scaffold mastery — is this part of the &quot;generative complexity&quot;?</li>
 <li>The failure mode: when does generative complexity become merely exhausting? When does the rabbit hole become a trap?</li>
-<li>Connection to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Flow State&quot;">Flow State</span> research (Csikszentmihalyi): the essay describes flow without naming it</li>
+<li>Connection to <a class="wikilink-wanted" href="/wiki/wanted/flow-state" title="No note is called &quot;Flow State&quot; yet — see who is asking for it">Flow State</a> research (Csikszentmihalyi): the essay describes flow without naming it</li>
 </ul>
 <h2 id="cross-source-resonances">Cross-Source Resonances</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span></strong>: &quot;noise is generative&quot; parallels the argument here that opacity and complexity are generative rather than purely obstructive</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span></strong>: LLMs as platforms for idea generation — another instance of generative complexity at scale</li>
-<li>See synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity as Epistemic Value&quot;">Generative Complexity as Epistemic Value</span></li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a></strong>: &quot;noise is generative&quot; parallels the argument here that opacity and complexity are generative rather than purely obstructive</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a></strong>: LLMs as platforms for idea generation — another instance of generative complexity at scale</li>
+<li>See synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/generative-complexity-as-epistemic-value" title="Written [[Generative Complexity as Epistemic Value]], resolved to generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>484</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/generative-complexity">Generative Complexity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cynefin-framework">Cynefin Framework</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/noise-as-generative-force">Noise as Generative Force</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-information-ecology">The Information Ecology — Noise, Lore, Libraries, and the Crisis of Navigation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-play-epistemology">The Play Epistemology — Hacking, Ludics, and the Infinite Game</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/breadth-vs-depth-across-essays">Breadth vs. Depth Across Essays</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/curiosity-vs-status-as-motivation">Curiosity vs. Status as Motivation for Learning</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/complexity">complexity</a><a class="tag" href="/wiki/topics/emergence">emergence</a><span class="tag tag-lone" title="Only this note uses it">Emacs</span><a class="tag" href="/wiki/topics/dwarf-fortress">Dwarf-Fortress</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/cynefin">Cynefin</a><span class="tag tag-lone" title="Only this note uses it">dev-environments</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

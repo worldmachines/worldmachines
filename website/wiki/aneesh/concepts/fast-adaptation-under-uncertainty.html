@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Fast Adaptation Under Uncertainty</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Fast Adaptation Under Uncertainty</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/fast-adaptation-under-uncertainty.md">source on GitHub</a></div>
-  <div class="note-summary">The competitive stance of executing well in dynamic environments by adapting faster than competitors rather than predicting the future more accurately — the superior strategy for business operators facing technological disruption.</div>
-  <div class="tags"><span class="tag">strategy</span><span class="tag">uncertainty</span><span class="tag">decision-making</span><span class="tag">adaptation</span><span class="tag">sensemaking</span><span class="tag">business</span><span class="tag">commoncog</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/fast-adaptation-under-uncertainty.md">source on GitHub</a></div>
+    <div class="note-summary">The competitive stance of executing well in dynamic environments by adapting faster than competitors rather than predicting the future more accurately — the superior strategy for business operators facing technological disruption.</div>
     <div class="prose">
 <h2 id="core-idea">Core Idea</h2>
 <p>Effective businesspeople do not outperform competitors by <em>predicting the future more accurately</em>. Forecasting is too expensive and too unreliable. Instead, the superior competitive strategy is <strong>faster adaptation</strong> — setting up structures and habits that allow faster response to new information and changing conditions.</p>
@@ -52,7 +61,7 @@
 <li><strong>Experimentation orientation</strong>: willingness to treat new capability claims as hypotheses to test, not conclusions to adopt or reject</li>
 </ol>
 <h2 id="the-superforecasting-comparison">The Superforecasting Comparison</h2>
-<p>Chin&#x27;s claim is implicitly in tension with Phil Tetlock&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Superforecasting&quot;">Superforecasting</span> work, which suggests that calibrated probabilistic forecasting can be meaningfully improved. Chin&#x27;s response: forecasting skill is irrelevant for operators whose competitive position depends on action, not accuracy of prior beliefs. The businessperson&#x27;s question is &quot;what should I do?&quot; not &quot;what will happen?&quot;</p>
+<p>Chin&#x27;s claim is implicitly in tension with Phil Tetlock&#x27;s <a class="wikilink-wanted" href="/wiki/wanted/superforecasting" title="No note is called &quot;Superforecasting&quot; yet — see who is asking for it">Superforecasting</a> work, which suggests that calibrated probabilistic forecasting can be meaningfully improved. Chin&#x27;s response: forecasting skill is irrelevant for operators whose competitive position depends on action, not accuracy of prior beliefs. The businessperson&#x27;s question is &quot;what should I do?&quot; not &quot;what will happen?&quot;</p>
 <h2 id="technological-disruption-context">Technological Disruption Context</h2>
 <p>During technological revolutions, fast adaptation is especially valuable:</p>
 <ul>
@@ -60,9 +69,9 @@
 <li>The technology develops faster than prediction cycles can track</li>
 <li>First-mover advantages tend to be transient; sustained advantage comes from organizational coupling (see: Walmart and PCs)</li>
 </ul>
-<p>The Walmart case (from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span>) illustrates: the winning move was not predicting that PCs would matter, but using the technology to construct a new organizational form (decentralized logistics, cross-docking) that competitors couldn&#x27;t easily copy.</p>
+<p>The Walmart case (from <a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a>) illustrates: the winning move was not predicting that PCs would matter, but using the technology to construct a new organizational form (decentralized logistics, cross-docking) that competitors couldn&#x27;t easily copy.</p>
 <h2 id="relationship-to-data-frame-theory">Relationship to Data-Frame Theory</h2>
-<p>Fast adaptation is the operational implication of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> at the competitive strategy level:</p>
+<p>Fast adaptation is the operational implication of the <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> at the competitive strategy level:</p>
 <ul>
 <li>Superior sensemaking = better frame construction = seeing more of the present moment</li>
 <li>Organizational agility = structural capacity to act on reframings</li>
@@ -70,21 +79,51 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — the cognitive foundation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Outcome Orientation&quot;">Outcome Orientation</span> — the individual-level analog</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Four Questions of Uncertainty&quot;">Four Questions of Uncertainty</span> — the operational protocol</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — the primary failure mode for incumbent operators</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How to Make Sense of AI&quot;">How to Make Sense of AI</span> — primary application context</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Only the Paranoid Survive&quot;">Only the Paranoid Survive</span> — Andy Grove&#x27;s formulation of the same stance</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — the cognitive foundation</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/outcome-orientation" title="No note is called &quot;Outcome Orientation&quot; yet — see who is asking for it">Outcome Orientation</a> — the individual-level analog</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/four-questions-of-uncertainty" title="Written [[Four Questions of Uncertainty]], resolved to four-questions-of-uncertainty">Four Questions of Uncertainty</a> — the operational protocol</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — the primary failure mode for incumbent operators</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-to-make-sense-of-ai" title="Written [[How to Make Sense of AI]], resolved to how-to-make-sense-of-ai">How to Make Sense of AI</a> — primary application context</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/only-the-paranoid-survive" title="No note is called &quot;Only the Paranoid Survive&quot; yet — see who is asking for it">Only the Paranoid Survive</a> — Andy Grove&#x27;s formulation of the same stance</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>446</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/how-to-make-sense-of-ai">How to Make Sense of AI (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-questions-of-uncertainty">Four Questions of Uncertainty</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/vaughn-tan">Vaughn Tan</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-questions-of-uncertainty">Four Questions of Uncertainty</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-to-make-sense-of-ai">How to Make Sense of AI (Chin, 2026)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/vaughn-tan">Vaughn Tan</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/strategy">strategy</a><a class="tag" href="/wiki/topics/uncertainty">uncertainty</a><a class="tag" href="/wiki/topics/decision-making">decision-making</a><span class="tag tag-lone" title="Only this note uses it">adaptation</span><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><span class="tag tag-lone" title="Only this note uses it">business</span><a class="tag" href="/wiki/topics/commoncog">commoncog</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

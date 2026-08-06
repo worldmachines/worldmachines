@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>The Eagle of Jupiter and the Ladder of Saturn: Justice, Pagan Salvation, and Institutional Decay</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Eagle of Jupiter and the Ladder of Saturn: Justice, Pagan Salvation, and Institutional Decay</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-19-22.md">source on GitHub</a></div>
-  <div class="note-summary">In the eagle of just rulers formed from the spirits of Jupiter and the golden ladder of contemplatives in Saturn, Dante confronts the limits of human justice, learns that a pagan Trojan (Ripheus) and a pagan Roman emperor (Trajan) sit among the saved, and hears Peter Damian and St. Benedict denounce the corruption of the Church&#x27;s prelates and monastic orders before he looks back down to see the whole earth reduced to a &quot;petty area.&quot;</div>
-  <div class="tags"><span class="tag">divine-justice</span><span class="tag">virtuous-pagans</span><span class="tag">predestination</span><span class="tag">ecclesiastical-corruption</span><span class="tag">religious-orders-decline</span><span class="tag">cosmic-vision</span><span class="tag">paradiso</span><span class="tag">dante</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/decay-sequence">decay-sequence</a>, <a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-19-22.md">source on GitHub</a></div>
+    <div class="note-summary">In the eagle of just rulers formed from the spirits of Jupiter and the golden ladder of contemplatives in Saturn, Dante confronts the limits of human justice, learns that a pagan Trojan (Ripheus) and a pagan Roman emperor (Trajan) sit among the saved, and hears Peter Damian and St. Benedict denounce the corruption of the Church&#x27;s prelates and monastic orders before he looks back down to see the whole earth reduced to a &quot;petty area.&quot;</div>
     <div class="prose">
 <p>This unit spans the close of Canto XIX and the whole of Cantos XX, XXI, and XXII of the <em>Paradiso</em>. In the heaven of Jupiter, the just and pious souls compose the shape of an eagle and speak as one voice, first refusing the pilgrim&#x27;s implicit demand that divine justice be legible to mortal reason, then revealing that the eagle&#x27;s very eye is formed by two pagans — Trajan and the Trojan Ripheus — miraculously saved. The pilgrim and Beatrice then ascend to Saturn, sphere of the contemplatives, where a golden ladder recalling Jacob&#x27;s vision descends with wheeling lights; Peter Damian speaks of predestination&#x27;s unfathomability and of his own austere hermitage before the assembled souls let out a shout of unintelligible vengeance against corrupt prelates. In Canto XXII, St. Benedict of Nursia identifies himself, laments the decay of his own order and of monasticism generally, and the pilgrim, ascending further, turns to look back down at the entire earth dwindled to a trifle beneath him.</p>
 <h2 id="themes">Themes</h2>
@@ -46,15 +54,32 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The eye-in-the-sea passage is the unit&#x27;s clearest statement of justice&#x27;s necessary opacity to finite minds — light exists only where it comes directly &quot;from the pure serene,&quot; and everything else is &quot;darkness... or shadow of the flesh.&quot; The Indus-born-man question that follows is Dante&#x27;s own formulation of the virtuous-pagan problem in its starkest form, immediately answered not with doctrine but with a rebuke of the very impulse to judge. The Ripheus revelation is the eagle&#x27;s most startling reversal, naming a pagan Trojan among the fifth-highest of the saintly splendors. Peter Damian&#x27;s attack on bloated modern prelates and Benedict&#x27;s lament over degraded monastic orders both render the decay of a founding institution in vivid physical terms — sacks of musty meal, mantles that cover two beasts as one. Finally, the pilgrim&#x27;s backward glance at the shrunken earth closes the unit on a note of cosmic perspective that undercuts the political and ecclesiastical invective preceding it.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>916</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/decay-sequence">decay-sequence</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/divine-justice">divine-justice</a><span class="tag tag-lone" title="Only this note uses it">virtuous-pagans</span><span class="tag tag-lone" title="Only this note uses it">predestination</span><a class="tag" href="/wiki/topics/ecclesiastical-corruption">ecclesiastical-corruption</a><a class="tag" href="/wiki/topics/religious-orders-decline">religious-orders-decline</a><span class="tag tag-lone" title="Only this note uses it">cosmic-vision</span><a class="tag" href="/wiki/topics/paradiso">paradiso</a><a class="tag" href="/wiki/topics/dante">dante</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

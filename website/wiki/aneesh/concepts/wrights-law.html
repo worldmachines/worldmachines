@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Wright&#x27;s Law</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Wright&#x27;s Law</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/wrights-law.md">source on GitHub</a></div>
-  <div class="note-summary">The empirical pattern that unit costs in some industries fall by a fixed percentage with every doubling of cumulative output — and the argument that healthcare stubbornly resists it due to knowledge diffusion failures.</div>
-  <div class="tags"><span class="tag">economics</span><span class="tag">learning-curves</span><span class="tag">healthcare</span><span class="tag">technology-adoption</span><span class="tag">knowledge-diffusion</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/wrights-law.md">source on GitHub</a></div>
+    <div class="note-summary">The empirical pattern that unit costs in some industries fall by a fixed percentage with every doubling of cumulative output — and the argument that healthcare stubbornly resists it due to knowledge diffusion failures.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>Wright&#x27;s Law (also known as the experience curve or learning curve) states: for every doubling of cumulative production output, unit costs fall by a fixed percentage. The law was first observed in aircraft manufacturing (1936) and has been confirmed in solar panels (20% cost reduction per doubling of installed capacity), semiconductors, gene sequencing, and other technology sectors.</p>
 <p>The efficiency gains come from multiple interlocking factors: labor efficiency, process improvement, better equipment utilization, and — critically — the diffusion of tacit knowledge among workers who share a common knowledge base.</p>
 <h2 id="why-healthcare-resists-wrights-law">Why Healthcare Resists Wright&#x27;s Law</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>) identifies healthcare as a persistent exception:</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>) identifies healthcare as a persistent exception:</p>
 <ul>
 <li><strong>Regulatory barriers</strong>: each new procedure, drug, or diagnostic requires independent clinical evidence cycles</li>
 <li><strong>High research costs</strong>: innovation is expensive to validate</li>
@@ -47,32 +56,73 @@
 <li><strong>No shared knowledge infrastructure</strong>: in the technology sectors that follow Wright&#x27;s Law, a shared culture across factory floors and corporate strategy enables learning to compound. Healthcare lacks this.</li>
 </ul>
 <h2 id="the-composite-ai-hypothesis">The Composite AI Hypothesis</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> is implicitly an argument about how to apply Wright&#x27;s Law dynamics to healthcare:</p>
+<p>The <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> is implicitly an argument about how to apply Wright&#x27;s Law dynamics to healthcare:</p>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> externalize expert knowledge so it doesn&#x27;t die with the expert or remain siloed in one institution</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> externalize expert knowledge so it doesn&#x27;t die with the expert or remain siloed in one institution</li>
 <li>LLMs make that knowledge traversable without requiring technical expertise</li>
 <li>The result: practitioners can access the accumulated learning of the field without waiting for it to percolate through a generation of education</li>
 </ul>
 <p>In other words, the composite architecture is an attempt to create a shared knowledge infrastructure for healthcare analogous to what factory floors have in manufacturing.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Expertise&quot;">Expertise</span> — what gets accumulated and diffused (or not)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Muddling Through&quot;">Muddling Through</span> — the mode of frontier problem-solving once you&#x27;re at the knowledge frontier</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Healthcare as Wright&#x27;s Law Exception&quot;">Healthcare as Wright&#x27;s Law Exception</span> — the synthesis page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — the proposed intervention</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/expertise" title="Written [[Expertise]], resolved to expertise">Expertise</a> — what gets accumulated and diffused (or not)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/muddling-through" title="Written [[Muddling Through]], resolved to muddling-through">Muddling Through</a> — the mode of frontier problem-solving once you&#x27;re at the knowledge frontier</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/healthcare-as-wrights-law-exception" title="Written [[Healthcare as Wright&#x27;s Law Exception]], resolved to healthcare-as-wrights-law-exception">Healthcare as Wright&#x27;s Law Exception</a> — the synthesis page</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> — the proposed intervention</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/solar-flows-and-the-energy-anomaly">Solar Flows and the Energy Anomaly</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/swansons-law">Swanson&#x27;s Law</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-23-the-quartz-revolution-i">RIT 23 — The Quartz Revolution, Part I (Ch. 21)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>13</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>344</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">13</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/muddling-through">Muddling Through</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-23-the-quartz-revolution-i">RIT 23 — The Quartz Revolution, Part I (Ch. 21)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/swansons-law">Swanson&#x27;s Law</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-agents-in-healthcare">AI Agents in Healthcare</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/solar-flows-and-the-energy-anomaly">Solar Flows and the Energy Anomaly</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>5 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/mayo-clinic">Mayo Clinic</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/primekg">PrimeKG</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/healthcare-as-wrights-law-exception">Healthcare as Wright&#x27;s Law Exception</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaac-newton">Isaac Newton (1643–1727)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/composite-ai-architecture">Composite AI Architecture (Experts + LLM + KG)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/fhir">FHIR (Fast Healthcare Interoperability Resources)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/fhir-knowledge-graphs-healthcare">Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/retrieval-augmented-generation">Retrieval-Augmented Generation (RAG)</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/economics">economics</a><a class="tag" href="/wiki/topics/learning-curves">learning-curves</a><a class="tag" href="/wiki/topics/healthcare">healthcare</a><span class="tag tag-lone" title="Only this note uses it">technology-adoption</span><a class="tag" href="/wiki/topics/knowledge-diffusion">knowledge-diffusion</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,36 +26,79 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Perplexity AI</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Perplexity AI</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/perplexity-ai.md">source on GitHub</a></div>
-  <div class="note-summary">An AI-powered search and answer engine that attempts to restore citations to LLM-generated responses — cited by Sathe as the most credible attempt to address the citation problem in LLMs, though with skepticism about whether it solves the underlying trust issue.</div>
-  <div class="tags"><span class="tag">search</span><span class="tag">llm</span><span class="tag">citations</span><span class="tag">ai-products</span><span class="tag">information-access</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/perplexity-ai.md">source on GitHub</a></div>
+    <div class="note-summary">An AI-powered search and answer engine that attempts to restore citations to LLM-generated responses — cited by Sathe as the most credible attempt to address the citation problem in LLMs, though with skepticism about whether it solves the underlying trust issue.</div>
     <div class="prose">
 <p>AI-powered search engine that combines large language model generation with real-time web retrieval, presenting cited sources alongside AI-generated answers. Founded 2022.</p>
 <h2 id="relevance-to-the-citation-problem">Relevance to the Citation Problem</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span>) names Perplexity as the most significant attempt to address the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Citation Problem in LLMs&quot;">Citation Problem in LLMs</span>: &quot;I understand that tools like Perplexity are trying to bring back the citation, and I hope they do a good job.&quot;</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a>) names Perplexity as the most significant attempt to address the <a class="wikilink" href="/wiki/aneesh/concepts/citation-problem-in-llms" title="Written [[Citation Problem in LLMs]], resolved to citation-problem-in-llms">Citation Problem in LLMs</a>: &quot;I understand that tools like Perplexity are trying to bring back the citation, and I hope they do a good job.&quot;</p>
 <p>The implicit acknowledgment is significant — an AI practitioner who is deeply skeptical of LLM reliability is tracking citation-backed generation as the most promising mitigation. The skepticism is also notable: &quot;as long as LLM and similar generative technologies are at the core, trust will remain an issue.&quot;</p>
 <h2 id="the-architectural-critique">The Architectural Critique</h2>
-<p>The concern is that Perplexity grafts citations onto LLM outputs post-hoc rather than deriving answers from structured, grounded retrieval. The citation shows <em>where</em> the model looked; it does not guarantee the answer accurately represents what it found. This is a softer version of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> argument: to get genuine epistemic grounding, you need structured data retrieval (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR&quot;">FHIR</span>), not just citation metadata.</p>
+<p>The concern is that Perplexity grafts citations onto LLM outputs post-hoc rather than deriving answers from structured, grounded retrieval. The citation shows <em>where</em> the model looked; it does not guarantee the answer accurately represents what it found. This is a softer version of the <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> argument: to get genuine epistemic grounding, you need structured data retrieval (<a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a>, <a class="wikilink" href="/wiki/aneesh/concepts/fhir" title="Written [[FHIR]], resolved to fhir">FHIR</a>), not just citation metadata.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Citation Problem in LLMs&quot;">Citation Problem in LLMs</span> — the specific problem Perplexity addresses</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Degradation of Search&quot;">Degradation of Search</span> — the market gap Perplexity occupies</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lore vs. Search vs. LLM&quot;">Lore vs. Search vs. LLM</span> — Perplexity as a hybrid attempting to recover search-era citation norms</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the normative standard Perplexity partially meets</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/citation-problem-in-llms" title="Written [[Citation Problem in LLMs]], resolved to citation-problem-in-llms">Citation Problem in LLMs</a> — the specific problem Perplexity addresses</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/degradation-of-search" title="Written [[Degradation of Search]], resolved to degradation-of-search">Degradation of Search</a> — the market gap Perplexity occupies</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/lore-vs-search-vs-llm" title="Written [[Lore vs. Search vs. LLM]], resolved to lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a> — Perplexity as a hybrid attempting to recover search-era citation norms</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the normative standard Perplexity partially meets</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>240</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cyclical-information-epistemics">Cyclical Information Epistemics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/degradation-of-search">Degradation of Search</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/degradation-of-search">Degradation of Search</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/search">search</a><a class="tag" href="/wiki/topics/llm">llm</a><span class="tag tag-lone" title="Only this note uses it">citations</span><span class="tag tag-lone" title="Only this note uses it">ai-products</span><a class="tag" href="/wiki/topics/information-access">information-access</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

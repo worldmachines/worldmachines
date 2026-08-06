@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>How Experts Sensemake (Chin, 2026)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>How Experts Sensemake (Chin, 2026)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/how-experts-sensemake.md">source on GitHub</a></div>
-  <div class="note-summary">Cedric Chin&#x27;s application of Klein et al&#x27;s Data-Frame Theory to expert sensemaking — argues that expert-novice differences lie not in reasoning strategy but in richer mental models, denser frame repertoires, and faster expectancy violation detection.</div>
-  <div class="tags"><span class="tag">sensemaking</span><span class="tag">expertise</span><span class="tag">data-frame-theory</span><span class="tag">decision-making</span><span class="tag">cognitive-science</span><span class="tag">AI</span><span class="tag">commoncog</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/how-experts-sensemake.md">source on GitHub</a></div>
+    <div class="note-summary">Cedric Chin&#x27;s application of Klein et al&#x27;s Data-Frame Theory to expert sensemaking — argues that expert-novice differences lie not in reasoning strategy but in richer mental models, denser frame repertoires, and faster expectancy violation detection.</div>
     <div class="prose">
-<p><strong>Source</strong>: commoncog.com, published April 2026. Part 2 of a sensemaking series; Part 1 is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How to Make Sense of AI&quot;">How to Make Sense of AI</span>.</p>
+<p><strong>Source</strong>: commoncog.com, published April 2026. Part 2 of a sensemaking series; Part 1 is <a class="wikilink" href="/wiki/aneesh/summaries/how-to-make-sense-of-ai" title="Written [[How to Make Sense of AI]], resolved to how-to-make-sense-of-ai">How to Make Sense of AI</a>.</p>
 <h2 id="central-argument">Central Argument</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> provides the best current account of how humans make sense of ambiguous situations. Critically: experts and novices use <em>identical</em> sensemaking strategies, but experts have (a) richer causal mental models, (b) more frame fragments, (c) better-developed expectancies, and (d) superior strategies for avoiding <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span>. This framework directly challenges <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confirmation Bias&quot;">Confirmation Bias</span> as a useful explanatory concept.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> provides the best current account of how humans make sense of ambiguous situations. Critically: experts and novices use <em>identical</em> sensemaking strategies, but experts have (a) richer causal mental models, (b) more frame fragments, (c) better-developed expectancies, and (d) superior strategies for avoiding <a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a>. This framework directly challenges <a class="wikilink-wanted" href="/wiki/wanted/confirmation-bias" title="No note is called &quot;Confirmation Bias&quot; yet — see who is asking for it">Confirmation Bias</a> as a useful explanatory concept.</p>
 <h2 id="the-four-cycles">The Four Cycles</h2>
 <ol>
 <li><strong>Basic Data-Frame Cycle</strong> — Frame and data are mutually constitutive: frames select what counts as data; data anchors and extends frames. Frames are constructed from ≤3–4 anchors.</li>
@@ -58,7 +67,7 @@
 </tbody>
 </table></div>
 <h2 id="the-confirmation-bias-challenge">The Confirmation Bias Challenge</h2>
-<p>The article argues that what looks like confirmation bias is actually rational frame-guided data seeking. Klein et al&#x27;s claim: <strong>in naturalistic settings, &quot;keep an open mind&quot; strategies consistently underperform frame-first strategies</strong>. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> (NDM) research program is positioned against the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heuristics and Biases&quot;">Heuristics and Biases</span> tradition (Kahneman/Tversky), which builds on lab studies with novices on toy problems.</p>
+<p>The article argues that what looks like confirmation bias is actually rational frame-guided data seeking. Klein et al&#x27;s claim: <strong>in naturalistic settings, &quot;keep an open mind&quot; strategies consistently underperform frame-first strategies</strong>. The <a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> (NDM) research program is positioned against the <a class="wikilink" href="/wiki/aneesh/concepts/heuristics-and-biases" title="Written [[Heuristics and Biases]], resolved to heuristics-and-biases">Heuristics and Biases</a> tradition (Kahneman/Tversky), which builds on lab studies with novices on toy problems.</p>
 <h2 id="expert-strategies-for-frame-fixation">Expert Strategies for Frame Fixation</h2>
 <ul>
 <li><strong>Medicine</strong>: &quot;logical competitor set&quot; — grouping diseases with identical symptom presentations to prevent anchor lock-in</li>
@@ -76,25 +85,66 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — primary theoretical framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — central failure mode</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — the research tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heuristics and Biases&quot;">Heuristics and Biases</span> — the opposing paradigm</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Abductive Reasoning&quot;">Abductive Reasoning</span> — dominant cognitive mode during frame construction</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Outcome Orientation&quot;">Outcome Orientation</span> — Commoncog&#x27;s operational concept linking to functional sensemaking</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — principal researcher</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How to Make Sense of AI&quot;">How to Make Sense of AI</span> — Part 1</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Expertise&quot;">Expertise</span> — existing wiki concept page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> — adjacent methodology</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — primary theoretical framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — central failure mode</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — the research tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/heuristics-and-biases" title="Written [[Heuristics and Biases]], resolved to heuristics-and-biases">Heuristics and Biases</a> — the opposing paradigm</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/abductive-reasoning" title="Written [[Abductive Reasoning]], resolved to abductive-reasoning">Abductive Reasoning</a> — dominant cognitive mode during frame construction</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/outcome-orientation" title="No note is called &quot;Outcome Orientation&quot; yet — see who is asking for it">Outcome Orientation</a> — Commoncog&#x27;s operational concept linking to functional sensemaking</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — principal researcher</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-to-make-sense-of-ai" title="Written [[How to Make Sense of AI]], resolved to how-to-make-sense-of-ai">How to Make Sense of AI</a> — Part 1</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/expertise" title="Written [[Expertise]], resolved to expertise">Expertise</a> — existing wiki concept page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> — adjacent methodology</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>612</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">9</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-to-make-sense-of-ai">How to Make Sense of AI (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/data-and-frames-in-analysis-and-art">Data is Always Constructed: From Sensemaking to Art</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-sensemaker-and-the-explorer">The Sensemaker and the Explorer</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/theorizing-as-sensemaking-weick-klein-convergence">Theorizing as Sensemaking — The Weick-Klein Convergence</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-questions-of-uncertainty">Four Questions of Uncertainty</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/abductive-reasoning">Abductive Reasoning</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/data-frame-theory">data-frame-theory</a><a class="tag" href="/wiki/topics/decision-making">decision-making</a><a class="tag" href="/wiki/topics/cognitive-science">cognitive-science</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/commoncog">commoncog</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

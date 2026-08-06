@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23.md">source on GitHub</a></div>
-  <div class="note-summary">Dante and Virgil cross the fraud-pits of Malebolge from the panderers and flatterers through the simoniac popes, the backward-twisted diviners, the pitch-boiled barrators harried by a slapstick company of devils, and into the leaden-gilded hypocrites, where Caiaphas lies crucified underfoot.</div>
-  <div class="tags"><span class="tag">dante</span><span class="tag">inferno</span><span class="tag">malebolge</span><span class="tag">simony</span><span class="tag">hypocrisy</span><span class="tag">contrapasso</span><span class="tag">ecclesiastical-corruption</span><span class="tag">demons</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23.md">source on GitHub</a></div>
+    <div class="note-summary">Dante and Virgil cross the fraud-pits of Malebolge from the panderers and flatterers through the simoniac popes, the backward-twisted diviners, the pitch-boiled barrators harried by a slapstick company of devils, and into the leaden-gilded hypocrites, where Caiaphas lies crucified underfoot.</div>
     <div class="prose">
 <p>This unit picks up mid-canto in the first two ditches of Malebolge — panderers and seducers scourged by horned demons (Venedico Caccianemico, Jason), and flatterers sunk in ordure (Alessio Interminei, Thais) — then moves through four more pouches: the simoniac popes planted head-down in fiery baptismal-font-like holes (Canto XIX, with Dante&#x27;s direct address to Pope Nicholas III and prophecy of Boniface VIII and Clement V); the diviners and soothsayers whose heads are twisted backward on their bodies (Canto XX, with the long digression on the founding of Mantua); the barrators boiled in pitch and guarded by the grotesque demon-militia of the Malebranche under Malacoda and Barbariccia (Cantos XXI–XXII, culminating in Ciampolo of Navarre&#x27;s escape and the demons&#x27; brawl); and finally the hypocrites trudging eternally in gilded lead copes, where the friars Catalano and Loderingo explain the fate of Caiaphas, crucified flat on the ground so that every hypocrite must first tread on him (Canto XXIII).</p>
 <h2 id="themes">Themes</h2>
@@ -45,15 +53,32 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The opening description of Malebolge as fortress-architecture establishes the pouches as a deliberately engineered, legible system of graduated punishment, not chaos. Venedico Caccianemico&#x27;s forced, resentful confession — cornered by Dante&#x27;s direct recognition and driven on by a demon&#x27;s lash — models the poem&#x27;s method of extracting testimony from the damned. The invective that opens Canto XIX, paired with the poet&#x27;s aside on &quot;Wisdom Supreme&quot; ordering reward and punishment &quot;in heaven, in earth, / And in the evil world,&quot; frames simony as a violation of cosmic as well as ecclesiastical order. Dante&#x27;s speech to Nicholas III turns personal encounter into full political indictment, tracing papal avarice back to Constantine&#x27;s endowment. The Venetian-arsenal simile that opens Canto XXI — pitch kept boiling by shipwrights the way the trench is kept boiling by torment — is a hallmark instance of Dante grounding infernal imagery in workaday craft. And the hypocrites&#x27; passage closes the unit on institutional hypocrisy made flesh: gilded lead capes worn by two former Bolognese friars turned civic arbiters, walking eternally past the crucified Caiaphas.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>806</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dante">dante</a><a class="tag" href="/wiki/topics/inferno">inferno</a><a class="tag" href="/wiki/topics/malebolge">malebolge</a><span class="tag tag-lone" title="Only this note uses it">simony</span><a class="tag" href="/wiki/topics/hypocrisy">hypocrisy</a><a class="tag" href="/wiki/topics/contrapasso">contrapasso</a><a class="tag" href="/wiki/topics/ecclesiastical-corruption">ecclesiastical-corruption</a><span class="tag tag-lone" title="Only this note uses it">demons</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

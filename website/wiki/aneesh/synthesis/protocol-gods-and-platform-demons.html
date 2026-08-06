@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Protocol Gods and Platform Demons</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Protocol Gods and Platform Demons</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/protocol-gods-and-platform-demons.md">source on GitHub</a></div>
-  <div class="note-summary">Open internet protocols (RSS, email, ActivityPub) are structurally &#x27;patient gods&#x27; — they encode values of user sovereignty, chronology, and silence — while platforms are &#x27;demons&#x27; that monetize attention by capturing and distorting the underlying flows.</div>
-  <div class="tags"><span class="tag">rss</span><span class="tag">open-web</span><span class="tag">protocols</span><span class="tag">platform-capitalism</span><span class="tag">attention</span><span class="tag">mythology</span><span class="tag">information-architecture</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/protocol-gods-and-platform-demons.md">source on GitHub</a></div>
+    <div class="note-summary">Open internet protocols (RSS, email, ActivityPub) are structurally &#x27;patient gods&#x27; — they encode values of user sovereignty, chronology, and silence — while platforms are &#x27;demons&#x27; that monetize attention by capturing and distorting the underlying flows.</div>
     <div class="prose">
 <h2 id="the-synthesis">The Synthesis</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Small God of the Internet&quot;">The Small God of the Internet</span> gives us a mythopoeic frame that generalizes beyond RSS: open protocols have theological virtues built into their architecture, while platforms are extractive demons that invert those virtues.</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/the-small-god-of-the-internet" title="Written [[The Small God of the Internet]], resolved to the-small-god-of-the-internet">The Small God of the Internet</a> gives us a mythopoeic frame that generalizes beyond RSS: open protocols have theological virtues built into their architecture, while platforms are extractive demons that invert those virtues.</p>
 <h3 id="the-protocol-virtues">The Protocol Virtues</h3>
 <div class="table-wrap"><table>
 <thead><tr><th>Virtue</th><th>RSS (ArrEsEs)</th><th>Principle</th></tr></thead>
@@ -49,7 +58,7 @@
 </tbody>
 </table></div>
 <h3 id="the-platform-inversions">The Platform Inversions</h3>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Gloomwheel&quot;">Gloomwheel</span> systematically inverts each virtue:</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/the-gloomwheel" title="Written [[The Gloomwheel]], resolved to the-gloomwheel">Gloomwheel</a> systematically inverts each virtue:</p>
 <ul>
 <li><strong>Patience → Urgency</strong>: platforms manufacture FOMO and &quot;trending&quot; to demand real-time attention</li>
 <li><strong>Order → Ranking</strong>: chronological order is replaced by engagement maximization</li>
@@ -76,28 +85,63 @@
 </ol>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;RSS as Protocol Theology&quot;">RSS as Protocol Theology</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Gloomwheel&quot;">The Gloomwheel</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Blogrolls and the Personal Web&quot;">Blogrolls and the Personal Web</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Platform Capitalism and Attention&quot;">Platform Capitalism and Attention</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Open Web&quot;">The Open Web</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Small God of the Internet&quot;">The Small God of the Internet</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/rss-as-protocol-theology" title="Written [[RSS as Protocol Theology]], resolved to rss-as-protocol-theology">RSS as Protocol Theology</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-gloomwheel" title="Written [[The Gloomwheel]], resolved to the-gloomwheel">The Gloomwheel</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/blogrolls-and-the-personal-web" title="Written [[Blogrolls and the Personal Web]], resolved to blogrolls-and-the-personal-web">Blogrolls and the Personal Web</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/platform-capitalism-and-attention" title="No note is called &quot;Platform Capitalism and Attention&quot; yet — see who is asking for it">Platform Capitalism and Attention</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/the-open-web" title="No note is called &quot;The Open Web&quot; yet — see who is asking for it">The Open Web</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-small-god-of-the-internet" title="Written [[The Small God of the Internet]], resolved to the-small-god-of-the-internet">The Small God of the Internet</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">6</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/discursive-materialism-critique">Discursive Materialism (Bryant&#x27;s Critique)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/gravitational-attractor">Gravitational Attractor</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/infrastructure-as-political">Infrastructure as Political</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>473</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">10</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/discursive-materialism-critique">Discursive Materialism (Bryant&#x27;s Critique)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/infrastructure-as-political">Infrastructure as Political</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rss-as-protocol-theology">RSS as Protocol Theology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gravitational-attractor">Gravitational Attractor</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-small-god-of-the-internet">The Small God of the Internet</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-information-ecology">The Information Ecology — Noise, Lore, Libraries, and the Crisis of Navigation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/blogrolls-and-the-personal-web">Blogrolls and the Personal Web</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-gravity-as-power">Bryant&#x27;s Gravity as Power</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/heavy-vs-light-machines">Heavy vs. Light Machines</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/material-power-vs-discursive-power">Material Power vs. Discursive Power</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/rss">rss</a><a class="tag" href="/wiki/topics/open-web">open-web</a><a class="tag" href="/wiki/topics/protocols">protocols</a><a class="tag" href="/wiki/topics/platform-capitalism">platform-capitalism</a><a class="tag" href="/wiki/topics/attention">attention</a><a class="tag" href="/wiki/topics/mythology">mythology</a><a class="tag" href="/wiki/topics/information-architecture">information-architecture</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Long-Form Creative Projects</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Long-Form Creative Projects</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/long-form-creative-projects.md">source on GitHub</a></div>
-  <div class="note-summary">Creative works built over years or decades by individuals or small teams without institutional mandate — characterized by compounding depth, organic community formation, and perpetual incompleteness.</div>
-  <div class="tags"><span class="tag">creativity</span><span class="tag">projects</span><span class="tag">culture</span><span class="tag">craft</span><span class="tag">perseverance</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/long-form-creative-projects.md">source on GitHub</a></div>
+    <div class="note-summary">Creative works built over years or decades by individuals or small teams without institutional mandate — characterized by compounding depth, organic community formation, and perpetual incompleteness.</div>
     <div class="prose">
 <p><strong>Long-form creative projects</strong> are works built over extended time horizons (years to decades) by individuals or small teams, often without institutional support, commercial mandate, or fixed completion criteria.</p>
 <h2 id="characteristics">Characteristics</h2>
@@ -44,7 +53,7 @@
 <li><strong>Sustained audacity</strong>: the commitment is not dramatic but sustained — ordinary human life happening in parallel with extraordinary creative work</li>
 </ul>
 <h2 id="case-study-dwarf-fortress">Case Study: Dwarf Fortress</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tarn Adams&quot;">Tarn Adams</span> began <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress&quot;">Dwarf Fortress</span> with his brother <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Zach Adams&quot;">Zach Adams</span> as childhood game experiments, without commercial aim. Over 20 years:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/tarn-adams" title="Written [[Tarn Adams]], resolved to tarn-adams">Tarn Adams</a> began <a class="wikilink" href="/wiki/aneesh/entities/dwarf-fortress" title="Written [[Dwarf Fortress]], resolved to dwarf-fortress">Dwarf Fortress</a> with his brother <a class="wikilink" href="/wiki/aneesh/entities/zach-adams" title="Written [[Zach Adams]], resolved to zach-adams">Zach Adams</a> as childhood game experiments, without commercial aim. Over 20 years:</p>
 <ul>
 <li>Finished a PhD while developing the game</li>
 <li>Sustained by donations; eventually full-time</li>
@@ -66,24 +75,65 @@
 <p>Studios, publishers, and corporate R&amp;D have completion criteria, budgets, and stakeholders. This produces more finished work but typically less depth and less willingness to iterate on fundamentals.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress&quot;">Dwarf Fortress</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tarn Adams&quot;">Tarn Adams</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Emergent Complexity&quot;">Emergent Complexity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Failure as Generativity&quot;">Failure as Generativity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Community-Built Creative Works&quot;">Community-Built Creative Works</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/dwarf-fortress" title="Written [[Dwarf Fortress]], resolved to dwarf-fortress">Dwarf Fortress</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/tarn-adams" title="Written [[Tarn Adams]], resolved to tarn-adams">Tarn Adams</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/emergent-complexity" title="Written [[Emergent Complexity]], resolved to emergent-complexity">Emergent Complexity</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/failure-as-generativity" title="Written [[Failure as Generativity]], resolved to failure-as-generativity">Failure as Generativity</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/community-built-creative-works" title="Written [[Community-Built Creative Works]], resolved to community-built-creative-works">Community-Built Creative Works</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/summaries/the-best-game-ever-made">The Best Game Ever Made</a> (Aneesh Sathe, 2025)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>363</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">9</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/dwarf-fortress">Dwarf Fortress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/emergent-complexity">Emergent Complexity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/failure-as-generativity">Failure as Generativity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-game-ever-made">The Best Game Ever Made</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tarn-adams">Tarn Adams</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/simulation-as-world-building">Simulation as World-Building</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/community-built-creative-works">Community-Built Creative Works</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/zach-adams">Zach Adams</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/audacity-and-the-long-game">Audacity and the Long Game</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/dwarf-fortress">Dwarf Fortress</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/tarn-adams">Tarn Adams</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-game-ever-made">The Best Game Ever Made</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/emergent-complexity">Emergent Complexity</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/failure-as-generativity">Failure as Generativity</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/simulation-as-world-building">Simulation as World-Building</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/community-built-creative-works">Community-Built Creative Works</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/creativity">creativity</a><span class="tag tag-lone" title="Only this note uses it">projects</span><a class="tag" href="/wiki/topics/culture">culture</a><a class="tag" href="/wiki/topics/craft">craft</a><span class="tag tag-lone" title="Only this note uses it">perseverance</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

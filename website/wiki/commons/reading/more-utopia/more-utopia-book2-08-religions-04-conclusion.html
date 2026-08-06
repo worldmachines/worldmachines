@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/more-utopia/">Utopia</a> <b>/</b> <span>Utopia&#x27;s Peroration: The Conspiracy of the Rich and the Case Against Private Property</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Utopia&#x27;s Peroration: The Conspiracy of the Rich and the Case Against Private Property</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book2-08-religions-04-conclusion.md">source on GitHub</a></div>
-  <div class="note-summary">Raphael Hythloday closes his defense of Utopia by declaring common ownership the only true foundation of a just commonwealth, indicts money-based governments as &quot;a conspiracy of the rich,&quot; and the narrator then withholds full assent even while wishing such laws could be followed at home.</div>
-  <div class="tags"><span class="tag">utopia</span><span class="tag">private-property</span><span class="tag">critique-of-money</span><span class="tag">elite-capture</span><span class="tag">political-economy</span><span class="tag">thomas-more</span><span class="tag">raphael-hythloday</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>, <a class="wikilink" href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">more-utopia-book1-08-common-ownership</a>, <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book2-08-religions-04-conclusion.md">source on GitHub</a></div>
+    <div class="note-summary">Raphael Hythloday closes his defense of Utopia by declaring common ownership the only true foundation of a just commonwealth, indicts money-based governments as &quot;a conspiracy of the rich,&quot; and the narrator then withholds full assent even while wishing such laws could be followed at home.</div>
     <div class="prose">
 <p>Raphael Hythloday closes his account of the Utopian commonwealth with its most polemical argument yet: Utopia is “the only commonwealth that truly deserves that name” because it has abolished private property, and every other nation&#x27;s government is, in his blunt formulation, “a conspiracy of the rich.” He illustrates the claim first with the inversion of who prospers under money-based economies — idle noblemen and bankers live in splendor while ploughmen and smiths, whose labor is indispensable, die in want — then with the parable of a famine year in which the granaries of hoarding rich men held enough surplus to have saved everyone who starved. He diagnoses pride, not scarcity, as the true obstacle to reform, since pride “does not measure happiness so much by its own conveniences, as by the miseries of others.” The unit ends with the dialogue&#x27;s frame reasserting itself: the narrator “More,” privately unpersuaded on several points (Utopian war-making, religion, and above all the abolition of money and the “nobility, magnificence, splendour, and majesty” it underwrites), declines to argue with a visibly weary Raphael and instead closes the book on a note of qualified admiration — wishing “rather... than hope” to see Utopian laws followed at home.</p>
 <h2 id="themes">Themes</h2>
@@ -53,19 +61,49 @@
 <li>The closing frame-break, where the narrator&#x27;s polite retreat from argument supplies the book&#x27;s most quoted ambivalence.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">5</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/thomas-more">Thomas More</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>806</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">5</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/thomas-more">Thomas More</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-02-serving-princes">Raphael’s Refusal: Counsel, Flattery, and the Uselessness of Wisdom at Court</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-03-cardinal-morton-theft">Sheep Devouring Men: Hythloday&#x27;s Case Against Hanging Thieves</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-05-jester-and-mock-counsel">The Cardinal&#x27;s Fool and the Achorians: Court Flattery and the Case Against Conquest</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts">The Play in Progress: Civil Philosophy versus Principled Withdrawal</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-introduction">Thomas More&#x27;s Life and the Making of *Utopia*</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></li><li><a class="wikilink" href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">more-utopia-book1-08-common-ownership</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/utopia">utopia</a><a class="tag" href="/wiki/topics/private-property">private-property</a><span class="tag tag-lone" title="Only this note uses it">critique-of-money</span><span class="tag tag-lone" title="Only this note uses it">elite-capture</span><a class="tag" href="/wiki/topics/political-economy">political-economy</a><a class="tag" href="/wiki/topics/thomas-more">thomas-more</a><a class="tag" href="/wiki/topics/raphael-hythloday">raphael-hythloday</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

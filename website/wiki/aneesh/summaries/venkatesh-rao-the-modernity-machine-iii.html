@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,21 +26,30 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii.md">source on GitHub</a></div>
-  <div class="note-summary">The concluding installment of Rao&#x27;s trilogy on the Modernity Machine, arguing it optimized for legibility rather than truth or freedom, and that its own success made internal repair impossible, necessitating the Divergence Machine.</div>
-  <div class="tags"><span class="tag">venkatesh-rao</span><span class="tag">modernity</span><span class="tag">divergence-machine</span><span class="tag">legibility</span><span class="tag">phase-transition</span><span class="tag">contraptions</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii.md">source on GitHub</a></div>
+    <div class="note-summary">The concluding installment of Rao&#x27;s trilogy on the Modernity Machine, arguing it optimized for legibility rather than truth or freedom, and that its own success made internal repair impossible, necessitating the Divergence Machine.</div>
     <div class="prose">
 <p><strong>Source</strong>: Contraptions newsletter, December 23, 2025<br>
 <strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a><br>
 <strong>Note</strong>: Part III was AI-assisted (ChatGPT wrote the section based on Rao&#x27;s outline and previous parts). This is a &quot;Sloptraptions&quot; piece — the AI-assisted section of Contraptions.</p>
 <h2 id="central-argument">Central Argument</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span> — assembled 1200-1600 and turned on ~1600 — did not optimize for truth, justice, progress, or freedom. Those were its <em>legitimating narratives</em>. What it actually optimized for was <strong><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a></strong>: rendering people, land, goods, time, belief, and violence enumerable, narratable, and interoperable at scale.</p>
-<p>By 1600, the machine had crossed a complexity threshold. Its own success began producing contradictions that could not be repaired from within. This is not moral failure — it is <em>structural</em>. The machine generates more differentiation than any universal framework can absorb. What follows is not the machine&#x27;s negation, but a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Phase Transition&quot;">Phase Transition</span> to the <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a>.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a> — assembled 1200-1600 and turned on ~1600 — did not optimize for truth, justice, progress, or freedom. Those were its <em>legitimating narratives</em>. What it actually optimized for was <strong><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a></strong>: rendering people, land, goods, time, belief, and violence enumerable, narratable, and interoperable at scale.</p>
+<p>By 1600, the machine had crossed a complexity threshold. Its own success began producing contradictions that could not be repaired from within. This is not moral failure — it is <em>structural</em>. The machine generates more differentiation than any universal framework can absorb. What follows is not the machine&#x27;s negation, but a <a class="wikilink-wanted" href="/wiki/wanted/phase-transition" title="No note is called &quot;Phase Transition&quot; yet — see who is asking for it">Phase Transition</a> to the <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a>.</p>
 <h2 id="what-the-machine-optimized">What the Machine Optimized</h2>
 <p>The book-club readings collectively confirm the legibility thesis:</p>
 <ul>
@@ -67,8 +76,8 @@
 <h2 id="the-last-gasp-of-the-medieval">The Last Gasp of the Medieval</h2>
 <p>Two figures reinterpreted as <em>terminal medievals</em> rather than early moderns:</p>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span></strong>: Not an early modern prophet but &quot;a crackpot magician and memory-maven operating within an anachronistic misunderstanding of Hermeticism as ancient Egyptian wisdom to hallucinate a worldview of bullshit.&quot; His cosmological conclusions resonated with Copernican implications &quot;for fundamentally wrong reasons.&quot; Bruno does not anticipate modernity; he misunderstands it. His fate marks the extinguishing of a freewheeling medieval mode incompatible with both ecclesiastical modernism and scientific empiricism.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ibn Khaldun&quot;">Ibn Khaldun</span></strong>: Should not be read as proto-sociologist ahead of his time. More plausibly &quot;a depressed Arab Petrarch: a brilliant chronicler of decline and defender of tradition, lamenting the absence of an Islamic renaissance rather than inaugurating one.&quot; His cyclical dynasty theory &quot;records the exhaustion of an old civilizational form.&quot; His importance is <em>diagnostic</em>, not genealogical — he documents a world <em>failing to enter the Modernity Machine</em>, despite possessing many necessary components.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a></strong>: Not an early modern prophet but &quot;a crackpot magician and memory-maven operating within an anachronistic misunderstanding of Hermeticism as ancient Egyptian wisdom to hallucinate a worldview of bullshit.&quot; His cosmological conclusions resonated with Copernican implications &quot;for fundamentally wrong reasons.&quot; Bruno does not anticipate modernity; he misunderstands it. His fate marks the extinguishing of a freewheeling medieval mode incompatible with both ecclesiastical modernism and scientific empiricism.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/ibn-khaldun" title="Written [[Ibn Khaldun]], resolved to ibn-khaldun">Ibn Khaldun</a></strong>: Should not be read as proto-sociologist ahead of his time. More plausibly &quot;a depressed Arab Petrarch: a brilliant chronicler of decline and defender of tradition, lamenting the absence of an Islamic renaissance rather than inaugurating one.&quot; His cyclical dynasty theory &quot;records the exhaustion of an old civilizational form.&quot; His importance is <em>diagnostic</em>, not genealogical — he documents a world <em>failing to enter the Modernity Machine</em>, despite possessing many necessary components.</li>
 </ul>
 <h2 id="narrative-exhaustion">Narrative Exhaustion</h2>
 <p>By the early modern period, narrative itself fails as a unifying technology:</p>
@@ -106,25 +115,38 @@
 <h2 id="key-cross-references">Key Cross-References</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility as Optimization Target&quot;">Legibility as Optimization Target</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Phase Transition (Civilizational)&quot;">Phase Transition (Civilizational)</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ibn Khaldun&quot;">Ibn Khaldun</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Narrative Exhaustion&quot;">Narrative Exhaustion</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Excess Agency, Information, Scale&quot;">Excess Agency, Information, Scale</span></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/legibility-as-optimization-target" title="No note is called &quot;Legibility as Optimization Target&quot; yet — see who is asking for it">Legibility as Optimization Target</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/phase-transition-civilizational" title="No note is called &quot;Phase Transition (Civilizational)&quot; yet — see who is asking for it">Phase Transition (Civilizational)</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/ibn-khaldun" title="Written [[Ibn Khaldun]], resolved to ibn-khaldun">Ibn Khaldun</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/narrative-exhaustion" title="No note is called &quot;Narrative Exhaustion&quot; yet — see who is asking for it">Narrative Exhaustion</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/excess-agency-information-scale" title="No note is called &quot;Excess Agency, Information, Scale&quot; yet — see who is asking for it">Excess Agency, Information, Scale</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>1061</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/phase-transition">phase-transition</a><a class="tag" href="/wiki/topics/contraptions">contraptions</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

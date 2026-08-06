@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Jakob von Uexküll</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Jakob von Uexküll</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/jakob-von-uexkull.md">source on GitHub</a></div>
-  <div class="note-summary">Estonian-German biologist (1864–1944) who developed the concept of the Umwelt — the subjective perceptual world of any organism — a key precursor to Bryant&#x27;s alien phenomenology.</div>
-  <div class="tags"><span class="tag">uexkull</span><span class="tag">biology</span><span class="tag">ethology</span><span class="tag">umwelt</span><span class="tag">phenomenology</span><span class="tag">non-human</span><span class="tag">animal-studies</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/jakob-von-uexkull.md">source on GitHub</a></div>
+    <div class="note-summary">Estonian-German biologist (1864–1944) who developed the concept of the Umwelt — the subjective perceptual world of any organism — a key precursor to Bryant&#x27;s alien phenomenology.</div>
     <div class="prose">
 <p>Estonian-German biologist (1864–1944). Founder of biosemiotics and a central figure in the philosophy of biology. Uexküll&#x27;s key contribution: each organism inhabits its own <em>Umwelt</em> (surrounding world) — a subjective universe defined by the organism&#x27;s perceptual apparatus and action possibilities. The tick, the sea urchin, and the human all inhabit the same physical world but entirely different phenomenal worlds.</p>
 <h2 id="the-umwelt-concept">The Umwelt Concept</h2>
@@ -53,15 +62,28 @@
 <li><a class="wikilink" href="/wiki/aneesh/entities/ian-bogost">ian-bogost</a> — Bogost&#x27;s alien phenomenology in dialogue with Uexküll&#x27;s tradition</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/alien-phenomenology">Alien Phenomenology</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>389</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/alien-phenomenology">Alien Phenomenology</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">uexkull</span><a class="tag" href="/wiki/topics/biology">biology</a><span class="tag tag-lone" title="Only this note uses it">ethology</span><span class="tag tag-lone" title="Only this note uses it">umwelt</span><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><a class="tag" href="/wiki/topics/non-human">non-human</a><span class="tag tag-lone" title="Only this note uses it">animal-studies</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

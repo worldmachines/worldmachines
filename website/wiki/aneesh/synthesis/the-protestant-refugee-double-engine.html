@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The Protestant / Refugee Double Engine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Protestant / Refugee Double Engine</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-protestant-refugee-double-engine.md">source on GitHub</a></div>
-  <div class="note-summary">A cross-chapter synthesis of Landes&#x27;s Revolution in Time: religion drove modernity on both sides of the ledger at once — Calvinist time-thrift manufacturing the demand for the disciplinary watch, and the persecution-driven Protestant diaspora supplying the skill that built the industry. No single chapter assembles it; the wiki had no canon on religion-as-engine-of-modernity, so this page builds it.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">landes</span><span class="tag">protestant-ethic</span><span class="tag">weber</span><span class="tag">modernity</span><span class="tag">time-discipline</span><span class="tag">refugee-diaspora</span><span class="tag">huguenot</span><span class="tag">religion</span><span class="tag">world-machines</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-protestant-refugee-double-engine.md">source on GitHub</a></div>
+    <div class="note-summary">A cross-chapter synthesis of Landes&#x27;s Revolution in Time: religion drove modernity on both sides of the ledger at once — Calvinist time-thrift manufacturing the demand for the disciplinary watch, and the persecution-driven Protestant diaspora supplying the skill that built the industry. No single chapter assembles it; the wiki had no canon on religion-as-engine-of-modernity, so this page builds it.</div>
     <div class="prose">
 <h2 id="the-connection-no-single-chapter-makes">The Connection No Single Chapter Makes</h2>
 <p>David Landes&#x27;s <em>Revolution in Time</em> (1983) returns, again and again, to religion as a cause of Western horology — but he never assembles the full mechanism in one place, and the essays wiki had no canon page on religion as an engine of modernity at all (the nearest, <a class="wikilink" href="/wiki/aneesh/concepts/psychological-modernity">psychological-modernity</a>, treats &quot;secular pluralism in the wake of religious encounter and reform&quot; as one cause among several, and <a class="wikilink" href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">dawn-day-dusk-machine-typology</a> tracks Hume and Smith taking religion <em>out</em> of their work). This page collects the scattered passages into a single claim: <strong>across Landes&#x27;s book, religion drives modernity on both sides of the economic ledger at once — manufacturing the <em>demand</em> for time discipline and supplying the <em>skill</em> that met it.</strong> The two engines run on the same fuel (Protestant conviction and the persecution it provoked) but push in opposite directions in the economy, and that is exactly why the connection is invisible chapter by chapter: the demand argument lives in the social-history chapters, the supply argument in the industrial ones.</p>
@@ -86,13 +95,26 @@
 <li><a class="wikilink" href="/wiki/commons/reading/landes-revolution-in-time/rit-20-ah-but-he-could">rit-20-ah-but-he-could</a> — Protestant literacy as Swiss infrastructure</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>16</b><span>links out</span></div>
+      <div class="bearing"><b>1378</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/landes">landes</a><a class="tag" href="/wiki/topics/protestant-ethic">protestant-ethic</a><span class="tag tag-lone" title="Only this note uses it">weber</span><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/time-discipline">time-discipline</a><span class="tag tag-lone" title="Only this note uses it">refugee-diaspora</span><span class="tag tag-lone" title="Only this note uses it">huguenot</span><a class="tag" href="/wiki/topics/religion">religion</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

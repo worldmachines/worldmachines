@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Wrath&#x27;s Smoke, Sloth&#x27;s Haste, and the Root of All Sin: Purgatorio XV–XIX</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Wrath&#x27;s Smoke, Sloth&#x27;s Haste, and the Root of All Sin: Purgatorio XV–XIX</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-15-19.md">source on GitHub</a></div>
-  <div class="note-summary">On the terrace of wrath Dante and Virgil hear Marco Lombardo&#x27;s discourse on free will and the corrupt fusion of Church and Empire, then pass through the terrace of sloth where Virgil expounds love as the root of every virtue and vice, before a dream-vision of a Siren gives way to the terrace of avarice and Pope Adrian V&#x27;s confession.</div>
-  <div class="tags"><span class="tag">purgatorio</span><span class="tag">free-will</span><span class="tag">love-as-root-of-virtue-and-vice</span><span class="tag">church-and-state</span><span class="tag">marco-lombardo</span><span class="tag">avarice</span><span class="tag">wrath</span><span class="tag">sloth</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-15-19.md">source on GitHub</a></div>
+    <div class="note-summary">On the terrace of wrath Dante and Virgil hear Marco Lombardo&#x27;s discourse on free will and the corrupt fusion of Church and Empire, then pass through the terrace of sloth where Virgil expounds love as the root of every virtue and vice, before a dream-vision of a Siren gives way to the terrace of avarice and Pope Adrian V&#x27;s confession.</div>
     <div class="prose">
 <p>This unit carries Dante and Virgil from the closing exempla of the wrath terrace, through the blinding smoke where Marco Lombardo delivers a set-piece on free will and corrupt governance, over the threshold into sloth (marked by Virgil&#x27;s discourse on love as the single motive-spring of all human acts), and finally down onto the terrace of avarice, where a dream of a Siren precedes the penitents&#x27; confession, culminating in the fallen pope Adrian V&#x27;s account of his own avarice. Across five cantos (the tail of XV through XIX, with XX just beginning), the poem builds a coherent moral architecture: every sin, high or low, is a malformation of love, and the poem&#x27;s political anger and psychological analysis are shown to be two expressions of the same diagnosis.</p>
 <h2 id="themes">Themes</h2>
@@ -46,15 +54,32 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The curated passages track this arc: Marco Lombardo&#x27;s free-will speech and his &quot;two suns&quot; indictment of merged spiritual and temporal power; Virgil&#x27;s foundational claim that love is the germ of every virtue and vice; the vision of the stoned youth forgiving his murderers; the Siren&#x27;s dream-transformation and exposure; and Adrian V&#x27;s avarice confession. Together they move from public/political diagnosis (Marco) to psychological/metaphysical theory (Virgil) to individual confession (Adrian V) — the same account of misdirected love examined at three different scales.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-01-05">Paradiso I–V: Invocation, the Sphere of the Moon, and the Ascent to Mercury</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>864</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-01-05">Paradiso I–V: Invocation, the Sphere of the Moon, and the Ascent to Mercury</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/purgatorio">purgatorio</a><a class="tag" href="/wiki/topics/free-will">free-will</a><span class="tag tag-lone" title="Only this note uses it">love-as-root-of-virtue-and-vice</span><span class="tag tag-lone" title="Only this note uses it">church-and-state</span><span class="tag tag-lone" title="Only this note uses it">marco-lombardo</span><a class="tag" href="/wiki/topics/avarice">avarice</a><span class="tag tag-lone" title="Only this note uses it">wrath</span><span class="tag tag-lone" title="Only this note uses it">sloth</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

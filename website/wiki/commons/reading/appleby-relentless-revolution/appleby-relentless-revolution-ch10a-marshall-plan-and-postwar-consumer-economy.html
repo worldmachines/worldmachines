@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> <b>/</b> <span>Postwar Capitalism Remade: The Marshall Plan, European Integration, and America&#x27;s Consumer Boom</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Postwar Capitalism Remade: The Marshall Plan, European Integration, and America&#x27;s Consumer Boom</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch10a-marshall-plan-and-postwar-consumer-economy.md">source on GitHub</a></div>
-  <div class="note-summary">Postwar governments rebuild shattered economies along three divergent paths—European state planning, Soviet command control, and American reliance on market signals—while the Marshall Plan, Bretton Woods, and a deliberately anti-nationalist European integration movement restore growth and contain Cold War rivalry, even as a credit-financed boom in cars, television, air travel, and plastics remakes the texture of American daily life.</div>
-  <div class="tags"><span class="tag">marshall-plan</span><span class="tag">postwar-reconstruction</span><span class="tag">european-integration</span><span class="tag">bretton-woods</span><span class="tag">cold-war</span><span class="tag">consumer-credit</span><span class="tag">corporatism</span><span class="tag">american-consumerism</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/nationalism">nationalism</a>, <a class="wikilink" href="/wiki/aneesh/concepts/imagined-communities">imagined-communities</a>, <a class="wikilink" href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch10b-cold-war-science-computers-and-labor">appleby-relentless-revolution-ch10b-cold-war-science-computers-and-labor</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch10a-marshall-plan-and-postwar-consumer-economy.md">source on GitHub</a></div>
+    <div class="note-summary">Postwar governments rebuild shattered economies along three divergent paths—European state planning, Soviet command control, and American reliance on market signals—while the Marshall Plan, Bretton Woods, and a deliberately anti-nationalist European integration movement restore growth and contain Cold War rivalry, even as a credit-financed boom in cars, television, air travel, and plastics remakes the texture of American daily life.</div>
     <div class="prose">
 <p>Covering the quarter-century after 1945, this section follows the belligerent economies of World War II as they choose among three postwar paths—European state-guided planning, Soviet command control, and American reliance on market price signals—then traces the Marshall Plan, the Bretton Woods institutions, and the Schuman-Monet project for European unity as they rebuild trade and industry, before turning to the parallel story of Cold War rivalry and the credit-driven American consumer boom in cars, television, air travel, and plastics that defines the era&#x27;s second half.</p>
 <h2 id="themes">Themes</h2>
@@ -51,17 +59,47 @@
 <p>The passage on department-store charge accounts becoming a coherent national credit system marks the institutional change that made postwar mass consumption on installment possible, not just rising wages alone.</p>
 <p>The closing note that television commercials showed &quot;commerce[&#x27;s] power to shape institutions in unexpected ways&quot; extends Appleby&#x27;s argument about capitalism&#x27;s unplanned social effects from the shop floor into the arena of American electoral politics.</p>
     </div>
+    <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch09-war-and-depression">Two World Wars and a Global Depression, 1914–1945</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>741</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch09-war-and-depression">Two World Wars and a Global Depression, 1914–1945</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/adam-smith">Adam Smith (1723-1790)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry">Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/nationalism">nationalism</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/imagined-communities">imagined-communities</a></li><li><a class="wikilink" href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch10b-cold-war-science-computers-and-labor">appleby-relentless-revolution-ch10b-cold-war-science-computers-and-labor</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">marshall-plan</span><span class="tag tag-lone" title="Only this note uses it">postwar-reconstruction</span><span class="tag tag-lone" title="Only this note uses it">european-integration</span><span class="tag tag-lone" title="Only this note uses it">bretton-woods</span><span class="tag tag-lone" title="Only this note uses it">cold-war</span><span class="tag tag-lone" title="Only this note uses it">consumer-credit</span><span class="tag tag-lone" title="Only this note uses it">corporatism</span><span class="tag tag-lone" title="Only this note uses it">american-consumerism</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

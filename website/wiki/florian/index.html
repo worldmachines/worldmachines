@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,44 +26,74 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
   <main class="wiki">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <span>Florian</span></nav>
+  <p class="eyebrow">Contributor</p>
   <h1>Florian</h1>
-  <p class="lede small">14 published notes from <code>raw-notes/florian/</code>.</p>
+  <div class="figure-band">
+      <div class="band-cell"><b>14</b><span>notes</span></div>
+      <div class="band-cell"><b>27</b><span>inbound links</span></div>
+      <div class="band-cell"><b>0</b><span>books</span></div>
+  </div>
+  <p class="lede small">Ranked by how much the rest of the corpus leans on each note. Source files live in <code>raw-notes/florian/</code>.</p>
   <section>
-    <h2>Loose notes <span class="count">14</span></h2>
-    <ul class="rows">
-      <li class="row"><a href="/wiki/florian/alive-models-are-built-downstream-of-observation-not-from-first-principles-alone">Alive Models Are Built Downstream of Observation, Not From First Principles Alone</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/canonic-infrastructure-decays-in-hilarious-drainage">Canonic infrastructure decays in hilarious drainage</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/divergence-age-oracle-v3">Design Questions for a Divergence-Age Oracle</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/divergence-grows-in-peripheral-fields-not-in-the-fortified-center">Divergence grows in peripheral fields, not in the fortified center</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/divergent-self-knowledge-requires-embedded-embodied-non-reproducible-inquiry">Divergent self knowledge requires embedded, embodied, non-reproducible inquiry</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/frameworks-can-turn-performative-as-they-become-more-sophisticated">Frameworks can turn performative as they become more sophisticated</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/it-takes-connoisseurship-for-ornamental-baggage-to-identify-dead-frameworks">It takes connoisseurship for ornamental baggage to identify dead frameworks</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/marking-the-gap-is-more-insightful-than-forcing-closure">Marking the gap is more insightful than forcing closure</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/prediction-the-frozen-companion">Prediction: “The Frozen Companion”</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/prime-radiant-design-spec">Prime Radiant as Design Spec for Knowledge Management</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/the-afterlife-of-canonical-structures-is-culturally-richer-than-their-main-act">The afterlife of canonical structures is culturally richer than their main act</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/the-lab-science-toolkit-of-self-knowledge-fails-once-its-preconditions-withdraw">The lab-science toolkit of self-knowledge fails once its preconditions withdraw</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/the-margin-provides-sharper-insight-on-historic-infrastructure-than-the-canonical-center">The margins provides sharper insight on historic infrastructure than the canonical center</a>
-        </li>
-      <li class="row"><a href="/wiki/florian/world-machines-become-more-visible-as-they-decay">World Machines become more visible as they decay</a>
-        </li>
+    <h2 class="register"><span>Loose notes</span><span class="section-aside">14</span></h2>
+    <ul class="plate">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/canonic-infrastructure-decays-in-hilarious-drainage">Canonic infrastructure decays in hilarious drainage</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">7</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/frameworks-can-turn-performative-as-they-become-more-sophisticated">Frameworks can turn performative as they become more sophisticated</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">7</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/divergence-grows-in-peripheral-fields-not-in-the-fortified-center">Divergence grows in peripheral fields, not in the fortified center</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/divergent-self-knowledge-requires-embedded-embodied-non-reproducible-inquiry">Divergent self knowledge requires embedded, embodied, non-reproducible inquiry</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/it-takes-connoisseurship-for-ornamental-baggage-to-identify-dead-frameworks">It takes connoisseurship for ornamental baggage to identify dead frameworks</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/the-afterlife-of-canonical-structures-is-culturally-richer-than-their-main-act">The afterlife of canonical structures is culturally richer than their main act</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/the-margin-provides-sharper-insight-on-historic-infrastructure-than-the-canonical-center">The margins provides sharper insight on historic infrastructure than the canonical center</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/world-machines-become-more-visible-as-they-decay">World Machines become more visible as they decay</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/the-lab-science-toolkit-of-self-knowledge-fails-once-its-preconditions-withdraw">The lab-science toolkit of self-knowledge fails once its preconditions withdraw</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/alive-models-are-built-downstream-of-observation-not-from-first-principles-alone">Alive Models Are Built Downstream of Observation, Not From First Principles Alone</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/divergence-age-oracle-v3">Design Questions for a Divergence-Age Oracle</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/marking-the-gap-is-more-insightful-than-forcing-closure">Marking the gap is more insightful than forcing closure</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/prediction-the-frozen-companion">Prediction: “The Frozen Companion”</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/prime-radiant-design-spec">Prime Radiant as Design Spec for Knowledge Management</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      </li>
     </ul>
   </section>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

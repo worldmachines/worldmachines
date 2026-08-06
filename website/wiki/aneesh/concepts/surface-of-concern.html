@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Surface of Concern</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Surface of Concern</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/surface-of-concern.md">source on GitHub</a></div>
-  <div class="note-summary">The set of causal channels through which a single person can act on the world — Marcus&#x27;s was the empire, the peasant&#x27;s was the parish, yours is the planet, the species, the substrate, the next century, the algorithm, and the war that is now in your feed. The surface has grown by roughly five orders of magnitude in twenty centuries; the cohort psychology has not kept pace.</div>
-  <div class="tags"><span class="tag">surface-of-concern</span><span class="tag">intent</span><span class="tag">lever-discipline</span><span class="tag">the-lightening-of-intent</span><span class="tag">dispersal</span><span class="tag">modernity</span><span class="tag">responsibility</span><span class="tag">scale</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/surface-of-concern.md">source on GitHub</a></div>
+    <div class="note-summary">The set of causal channels through which a single person can act on the world — Marcus&#x27;s was the empire, the peasant&#x27;s was the parish, yours is the planet, the species, the substrate, the next century, the algorithm, and the war that is now in your feed. The surface has grown by roughly five orders of magnitude in twenty centuries; the cohort psychology has not kept pace.</div>
     <div class="prose">
-<p><strong>Source</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> (Section III), 2026.</p>
+<p><strong>Source</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>, <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> (Section III), 2026.</p>
 <h2 id="definition">Definition</h2>
 <p>The <strong>surface of concern</strong> is the set of causal channels through which a single person can act on the world. It is not the set of things a person <em>cares</em> about emotionally; it is the set of things a person can plausibly <em>do something about</em> — the levers their substrate has actually wired up for them, plus everything that crosses their screen with enough fidelity to register as a claim on their action.</p>
 <p>The concept is structural, not motivational. A person&#x27;s surface of concern is set by their <em>position in the substrate</em> — their reach, their tools, their information access — not by their temperament. Two people in similar substrate positions have similar surfaces of concern whether they want to or not.</p>
@@ -77,7 +86,7 @@
 <p>The conjunction is what produces the modern psychological condition. A person with a Marcus-sized container and a parish-sized surface is in equilibrium. A person with a non-mandatory container and a planet-sized surface is in structural strain. The strain is not pathology — it is the load profile of the era.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> — source essay</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> — source essay</li>
 <li><a class="wikilink" href="/wiki/aneesh/summaries/the-lightening-of-intent">the-lightening-of-intent</a> — the five-orders-of-magnitude case</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/receding-containers">receding-containers</a> — the inversely-related thinning of metaphysical containers</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">not-my-lever</a> — the operational response (lever discipline)</li>
@@ -89,21 +98,47 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a> — the property the bounding move preserves</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">7</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/marcus-aurelius">Marcus Aurelius (121–180 CE)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>980</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/marcus-aurelius">Marcus Aurelius (121–180 CE)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">surface-of-concern</span><a class="tag" href="/wiki/topics/intent">intent</a><a class="tag" href="/wiki/topics/lever-discipline">lever-discipline</a><span class="tag tag-lone" title="Only this note uses it">the-lightening-of-intent</span><span class="tag tag-lone" title="Only this note uses it">dispersal</span><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/responsibility">responsibility</a><a class="tag" href="/wiki/topics/scale">scale</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

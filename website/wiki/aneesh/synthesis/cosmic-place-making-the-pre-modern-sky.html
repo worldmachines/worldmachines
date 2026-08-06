@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Cosmic Place-Making: The Pre-Modern Sky</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Cosmic Place-Making: The Pre-Modern Sky</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky.md">source on GitHub</a></div>
-  <div class="note-summary">Bruno&#x27;s Hermetic constellations, Indian nakshatras, Walbiri songlines, and Tuan&#x27;s mythical space all describe the same structural achievement — pre-modern cultures projected place-making outward to the sky and the continent, manufacturing prenotions at cosmic scale that modernity dissolved without replacing, leaving infinity un-interrupted in the very register where the older technologies had worked.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">sathe</span><span class="tag">tuan</span><span class="tag">bruno</span><span class="tag">nakshatras</span><span class="tag">songlines</span><span class="tag">mythical-space</span><span class="tag">place-making</span><span class="tag">cosmology</span><span class="tag">modernity</span><span class="tag">prenotions</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky.md">source on GitHub</a></div>
+    <div class="note-summary">Bruno&#x27;s Hermetic constellations, Indian nakshatras, Walbiri songlines, and Tuan&#x27;s mythical space all describe the same structural achievement — pre-modern cultures projected place-making outward to the sky and the continent, manufacturing prenotions at cosmic scale that modernity dissolved without replacing, leaving infinity un-interrupted in the very register where the older technologies had worked.</div>
     <div class="prose">
 <h2 id="the-structural-claim">The Structural Claim</h2>
 <p>Sathe&#x27;s <em>Delta Quadrant</em> §I deploys two examples in a single paragraph that the wiki has so far treated as decorative: Giordano Bruno&#x27;s reading of constellations as Hermetic talismans, and the Indian <em>nakshatras</em> — the twenty-seven (or twenty-eight) lunar mansions that anchored Vedic astronomy and ritual life. Sathe&#x27;s term for what these were doing is striking:</p>
@@ -88,13 +97,26 @@
 <p><strong>&quot;The Sky Was a Place&quot;</strong> A long essay tracing the cosmic place-making technologies of three traditions (Hermetic Europe, Vedic India, Walbiri Australia) and arguing that modernity&#x27;s astronomical revolution silently dismantled a place-making layer it never replaced. The piece would resist nostalgia: the trade was probably worth it for the descriptive power gained. But the cost should be named. The contemporary horoscope is not the survival of a place; it is the trace of one. What would it mean to deliberately rebuild cosmic-scale place-making technologies under modern conditions — perhaps at the planetary rather than cosmic scale, around climate, deep time, or the technosphere?</p>
 <p><strong>&quot;Three Talismans and a Lunar Mansion&quot;</strong> A short companion piece using Bruno&#x27;s Hermetic talismans, Walbiri songlines, <em>nakshatras</em>, and Tuan&#x27;s cardinal-direction homelands as four emblems of the cosmic-place tradition. Each is a different mechanism (image, narrative, calendrical assignment, axial orientation) for performing the same operation: making the largest scale inhabitable by depositing symbolic anchors no body could install through embodied movement.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>19</b><span>links out</span></div>
+      <div class="bearing"><b>1644</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/sathe">sathe</a><a class="tag" href="/wiki/topics/tuan">tuan</a><span class="tag tag-lone" title="Only this note uses it">bruno</span><span class="tag tag-lone" title="Only this note uses it">nakshatras</span><a class="tag" href="/wiki/topics/songlines">songlines</a><a class="tag" href="/wiki/topics/mythical-space">mythical-space</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/cosmology">cosmology</a><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/prenotions">prenotions</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

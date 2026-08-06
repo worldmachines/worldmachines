@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Cloister Web</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Cloister Web</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/cloister-web.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe&#x27;s coined term for the conceptual space where individuals use LLMs to cultivate ideas and commit them to persistent public memory — a new form of intellectual-political infrastructure.</div>
-  <div class="tags"><span class="tag">LLMs</span><span class="tag">political-discourse</span><span class="tag">intellectual-infrastructure</span><span class="tag">media-theory</span><span class="tag">public-sphere</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/cloister-web.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe&#x27;s coined term for the conceptual space where individuals use LLMs to cultivate ideas and commit them to persistent public memory — a new form of intellectual-political infrastructure.</div>
     <div class="prose">
 <p>The <strong>Cloister Web</strong> is a term coined by Aneesh Sathe (2025) for the emerging conceptual space where individuals leverage Large Language Models to cultivate novel ideas and commit them to persistent public memory.</p>
 <h2 id="etymology-and-structure">Etymology and Structure</h2>
@@ -45,15 +54,15 @@
 <p>The synthesis describes a new intellectual infrastructure that combines the monastery&#x27;s <em>depth of cultivation</em> with the web&#x27;s <em>breadth of distribution</em> — mediated by LLMs that personalize the transmission.</p>
 <h2 id="core-properties">Core Properties</h2>
 <ol>
-<li><strong>Persistent memory</strong>: Ideas committed to the Cloister Web are recorded in LLM-consumable formats (text, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span>, knowledge structures) that persist and can be retrieved and remixed</li>
+<li><strong>Persistent memory</strong>: Ideas committed to the Cloister Web are recorded in LLM-consumable formats (text, <a class="wikilink" href="/wiki/aneesh/concepts/idea-graphs" title="Written [[Idea-Graphs]], resolved to idea-graphs">Idea-Graphs</a>, knowledge structures) that persist and can be retrieved and remixed</li>
 <li><strong>Bespoke delivery</strong>: LLMs tailor messages to individual recipients based on their cognitive frameworks, preferences, and prior knowledge — not mass broadcast but personalized engagement</li>
 <li><strong>Latent space propagation</strong>: The LLM&#x27;s internal representations allow unexpected extrapolations and connections — the intellectual <em>plants</em> an idea, the LLM <em>propagates</em> it in unforeseeable directions</li>
 </ol>
 <h2 id="political-implications">Political Implications</h2>
-<p>The Cloister Web transforms the <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maidan&quot;">Maidan</span></strong> (public square) from a physical or broadcast space into a personalized LLM chat interface. This has profound consequences for:</p>
+<p>The Cloister Web transforms the <strong><a class="wikilink-wanted" href="/wiki/wanted/maidan" title="No note is called &quot;Maidan&quot; yet — see who is asking for it">Maidan</a></strong> (public square) from a physical or broadcast space into a personalized LLM chat interface. This has profound consequences for:</p>
 <ul>
 <li><strong>Political persuasion</strong>: Ideas can reach individuals in forms calibrated to their specific worldview</li>
-<li><strong>The intellectual/revolutionary dyad</strong>: Historically these were separate roles (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> typology); the Cloister Web may collapse them, enabling intellectuals to mobilize without intermediaries</li>
+<li><strong>The intellectual/revolutionary dyad</strong>: Historically these were separate roles (see <a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> typology); the Cloister Web may collapse them, enabling intellectuals to mobilize without intermediaries</li>
 <li><strong>Gatekeeping</strong>: Traditional gatekeepers (publishers, editors, party structures) are bypassed</li>
 </ul>
 <h2 id="historical-analog-the-printing-press">Historical Analog: The Printing Press</h2>
@@ -66,27 +75,75 @@
 <li><strong>Infrastructure control</strong>: The Cloister Web&#x27;s power depends entirely on who controls the LLM layer</li>
 </ul>
 <h2 id="two-senses-of-cloister-web">Two Senses of Cloister Web</h2>
-<p>Note: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Cloister Web&quot;">The Cloister Web</span> (pre-existing page) covers the <em>creative/authorship</em> dimension — the Cloister Web as semi-private drafting space where ideas are incubated before public commitment. This page covers the <em>political-discourse</em> dimension — the Cloister Web as infrastructure for personalized idea distribution via LLMs. Both derive from Sathe&#x27;s usage; the concept spans both.</p>
+<p>Note: <a class="wikilink" href="/wiki/aneesh/concepts/the-cloister-web" title="Written [[The Cloister Web]], resolved to the-cloister-web">The Cloister Web</a> (pre-existing page) covers the <em>creative/authorship</em> dimension — the Cloister Web as semi-private drafting space where ideas are incubated before public commitment. This page covers the <em>political-discourse</em> dimension — the Cloister Web as infrastructure for personalized idea distribution via LLMs. Both derive from Sathe&#x27;s usage; the concept spans both.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs&quot;">LLMs</span> — the enabling technology</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maidan&quot;">Maidan</span> — what the Cloister Web reshapes</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span> — the LLM-consumable format for political ideas</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> — the historical bifurcation the Cloister Web may dissolve</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity&quot;">Generative Complexity</span> — the LLM latent space as a generatively complex system</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/llms" title="No note is called &quot;LLMs&quot; yet — see who is asking for it">LLMs</a> — the enabling technology</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/maidan" title="No note is called &quot;Maidan&quot; yet — see who is asking for it">Maidan</a> — what the Cloister Web reshapes</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/idea-graphs" title="Written [[Idea-Graphs]], resolved to idea-graphs">Idea-Graphs</a> — the LLM-consumable format for political ideas</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> — the historical bifurcation the Cloister Web may dissolve</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/generative-complexity" title="Written [[Generative Complexity]], resolved to generative-complexity">Generative Complexity</a> — the LLM latent space as a generatively complex system</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web — Reshaping the Political Maidan&quot;">Cloister Web — Reshaping the Political Maidan</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan" title="No note is called &quot;Cloister Web — Reshaping the Political Maidan&quot; yet — see who is asking for it">Cloister Web — Reshaping the Political Maidan</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>16</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>509</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">16</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/books-are-dwellings">Books Are Dwellings</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/generative-complexity">Generative Complexity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress, Emacs, &amp; AI: The Allure of Generative Complexity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/idea-graphs">Idea-Graphs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/mahatma-gandhi">Mahatma Gandhi</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>8 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/domain-ontologies-knowledge-graph-construction">Domain Ontologies: Indispensable for Knowledge Graph Construction</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/rabindranath-tagore">Rabindranath Tagore</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-herzen">Alexander Herzen</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/liang-qichao">Liang Qichao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ontologies-vs-embeddings">Ontologies vs. Embeddings — Two Paths to Semantic Structure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-paine">Thomas Paine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/intellectual-vs-revolutionary-in-the-age-of-llms">Intellectual vs. Revolutionary in the Age of LLMs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/cloister-web-reshaping-political-maidan">The Cloister Web: Reshaping the Political Maidan</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/idea-graphs">Idea-Graphs</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/mahatma-gandhi">Mahatma Gandhi</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/cynefin-framework">Cynefin Framework</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/generative-complexity">Generative Complexity</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/llms">LLMs</a><a class="tag" href="/wiki/topics/political-discourse">political-discourse</a><span class="tag tag-lone" title="Only this note uses it">intellectual-infrastructure</span><a class="tag" href="/wiki/topics/media-theory">media-theory</a><a class="tag" href="/wiki/topics/public-sphere">public-sphere</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

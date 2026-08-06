@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,29 +26,38 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Nationalism</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Nationalism</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/nationalism.md">source on GitHub</a></div>
-  <div class="note-summary">Nationalism as a political doctrine emerged from the counter-Enlightenment&#x27;s insight that cultures are organic and incommensurable — but transformed that pluralist insight into an aggressive demand for cultural purity and political self-determination that Herder himself would have abhorred.</div>
-  <div class="tags"><span class="tag">nationalism</span><span class="tag">counter-enlightenment</span><span class="tag">herder</span><span class="tag">maistre</span><span class="tag">romanticism</span><span class="tag">political-philosophy</span><span class="tag">berlin</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/nationalism.md">source on GitHub</a></div>
+    <div class="note-summary">Nationalism as a political doctrine emerged from the counter-Enlightenment&#x27;s insight that cultures are organic and incommensurable — but transformed that pluralist insight into an aggressive demand for cultural purity and political self-determination that Herder himself would have abhorred.</div>
     <div class="prose">
 <h2 id="berlins-account-of-the-concepts-origins">Berlin&#x27;s Account of the Concept&#x27;s Origins</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> treats nationalism not as a primordial human drive but as a historically specific intellectual product — one that grew directly out of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> tradition. Understanding nationalism requires understanding the ideas it distorted.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> treats nationalism not as a primordial human drive but as a historically specific intellectual product — one that grew directly out of the <a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> tradition. Understanding nationalism requires understanding the ideas it distorted.</p>
 <h2 id="the-herderian-root">The Herderian Root</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> was, in Berlin&#x27;s phrase, &quot;the greatest inspirer of cultural nationalism among the nationalities oppressed by the Austro-Hungarian, Turkish and Russian empires.&quot; But Herder himself was not a nationalist in the political sense. He believed different cultures should flourish &quot;side by side like so many peaceful flowers in the great human garden.&quot; His attack was on imposed universalism — the Enlightenment&#x27;s assumption that French rational culture was the apex of civilization to which all others should aspire.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> was, in Berlin&#x27;s phrase, &quot;the greatest inspirer of cultural nationalism among the nationalities oppressed by the Austro-Hungarian, Turkish and Russian empires.&quot; But Herder himself was not a nationalist in the political sense. He believed different cultures should flourish &quot;side by side like so many peaceful flowers in the great human garden.&quot; His attack was on imposed universalism — the Enlightenment&#x27;s assumption that French rational culture was the apex of civilization to which all others should aspire.</p>
 <p>The Herderian insights that fed nationalism:</p>
 <ul>
-<li>Each culture (<em>Volk</em>) has its own irreducible centre of gravity (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Herder&#x27;s Schwerpunkt&quot;">Herder&#x27;s Schwerpunkt</span>)</li>
+<li>Each culture (<em>Volk</em>) has its own irreducible centre of gravity (<a class="wikilink" href="/wiki/aneesh/concepts/herders-schwerpunkt" title="Written [[Herder&#x27;s Schwerpunkt]], resolved to herders-schwerpunkt">Herder&#x27;s Schwerpunkt</a>)</li>
 <li>&quot;To belong to a given community... is a basic human need no less natural than that for food or drink&quot;</li>
 <li>Cosmopolitanism is &quot;the shedding of all that makes one most human, most oneself&quot;</li>
 <li>Cultural contamination and imitation produce &quot;artificiality, feeble imitativeness, degraded art and life&quot;</li>
 </ul>
 <p>From these insights it is a short step — though a logically invalid one — to: each Volk should have its own state, and that state should protect the culture&#x27;s purity from contamination.</p>
 <h2 id="the-maistrian-root">The Maistrian Root</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Joseph de Maistre&quot;">Joseph de Maistre</span> contributed a darker strand: nations as organic wholes with &quot;common souls,&quot; born and dying like individuals; racial purity as a social good; history and natural growth as the only legitimate sources of political authority. Maistre&#x27;s ally Bonald explicitly lamented French racial mixing.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/joseph-de-maistre" title="Written [[Joseph de Maistre]], resolved to joseph-de-maistre">Joseph de Maistre</a> contributed a darker strand: nations as organic wholes with &quot;common souls,&quot; born and dying like individuals; racial purity as a social good; history and natural growth as the only legitimate sources of political authority. Maistre&#x27;s ally Bonald explicitly lamented French racial mixing.</p>
 <p>Where Herder&#x27;s cultural pluralism was tolerant and anti-imperialist, Maistre&#x27;s organic nationalism was aggressive and exclusionary from the start.</p>
 <h2 id="the-political-logic-of-the-slide">The Political Logic of the Slide</h2>
 <p>The key move Berlin identifies: the &quot;creative self&quot; of Romantic individualism is collectivized. The individual artist who creates his own values becomes the nation/race as creative subject. Actions that would be abhorred as individual selfishness become heroic acts of national self-realization. The logic of Romantic self-assertion, applied to collective entities, licenses everything.</p>
@@ -68,32 +77,70 @@
 <p>Berlin&#x27;s liberalism tries to honor the Herderian insight while blocking the Maistrian political conclusion. Whether this is coherent — whether pluralism can be both culturally sensitive and universally rights-respecting — is the permanent tension in his thought.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> — the benign root</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Joseph de Maistre&quot;">Joseph de Maistre</span> — the authoritarian root</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Herder&#x27;s Schwerpunkt&quot;">Herder&#x27;s Schwerpunkt</span> — the key concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Romanticism and Political Danger&quot;">Romanticism and Political Danger</span> — the political trajectory</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the broader intellectual tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — Berlin&#x27;s own position</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> — the benign root</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/joseph-de-maistre" title="Written [[Joseph de Maistre]], resolved to joseph-de-maistre">Joseph de Maistre</a> — the authoritarian root</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/herders-schwerpunkt" title="Written [[Herder&#x27;s Schwerpunkt]], resolved to herders-schwerpunkt">Herder&#x27;s Schwerpunkt</a> — the key concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/romanticism-and-political-danger" title="Written [[Romanticism and Political Danger]], resolved to romanticism-and-political-danger">Romanticism and Political Danger</a> — the political trajectory</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the broader intellectual tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — Berlin&#x27;s own position</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">9</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/benedict-anderson">Benedict Anderson (1936–2015)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/homeland-attachment">Homeland Attachment</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/imagined-communities">Imagined Communities (Anderson)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/symbolization-and-place">Symbolization and Place (Tuan)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch10a-marshall-plan-and-postwar-consumer-economy">Postwar Capitalism Remade: The Marshall Plan, European Integration, and America&#x27;s Consumer Boom</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>16</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>683</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">16</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/symbolization-and-place">Symbolization and Place (Tuan)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeland-attachment">Homeland Attachment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/romanticism-and-political-danger">Romanticism and Political Danger</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/joseph-de-maistre">Joseph de Maistre (1753–1821)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/herders-schwerpunkt">Herder&#x27;s Schwerpunkt</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>8 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/imagined-communities">Imagined Communities (Anderson)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/herderian-ai">Herderian AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch10a-marshall-plan-and-postwar-consumer-economy">Postwar Capitalism Remade: The Marshall Plan, European Integration, and America&#x27;s Consumer Boom</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/benedict-anderson">Benedict Anderson (1936–2015)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/counter-enlightenment-and-nationalism">Counter-Enlightenment and Nationalism — The Dangerous Slide</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/homeland-attachment">Homeland Attachment</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/nationalism">nationalism</a><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><a class="tag" href="/wiki/topics/herder">herder</a><a class="tag" href="/wiki/topics/maistre">maistre</a><a class="tag" href="/wiki/topics/romanticism">romanticism</a><a class="tag" href="/wiki/topics/political-philosophy">political-philosophy</a><a class="tag" href="/wiki/topics/berlin">berlin</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

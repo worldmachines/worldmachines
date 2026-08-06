@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Chaucer&#x27;s Legibility Machines</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Chaucer&#x27;s Legibility Machines</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Synthesis · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/synthesis/chaucer-legibility-machines.md">source on GitHub</a></div>
-  <div class="note-summary">Across the Canterbury Tales Chaucer repeatedly builds an intact apparatus of measurement, record, and proof — a counting-house, a single-key garden, seals and relics, a donor-ledger, astronomical instruments, a confessor&#x27;s audit of the soul — and then dramatizes it certifying a fabrication, so that legibility&#x27;s promise of trustworthy verification is inverted from the inside.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">legibility</span><span class="tag">fraud</span><span class="tag">verification</span><span class="tag">decay-sequence</span><span class="tag">world-machines</span><span class="tag">canterbury-tales</span><span class="tag">cross-cutting</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Synthesis · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/synthesis/chaucer-legibility-machines.md">source on GitHub</a></div>
+    <div class="note-summary">Across the Canterbury Tales Chaucer repeatedly builds an intact apparatus of measurement, record, and proof — a counting-house, a single-key garden, seals and relics, a donor-ledger, astronomical instruments, a confessor&#x27;s audit of the soul — and then dramatizes it certifying a fabrication, so that legibility&#x27;s promise of trustworthy verification is inverted from the inside.</div>
     <div class="prose">
 <p>A cross-cutting reading of the <em>Canterbury Tales</em>. No single tale states it, but taken together the fabliaux and satires stage one recurring move: Chaucer erects the apparatus of a <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a> — instruments and records built to make something readable, checkable, and certifiable — and then shows that apparatus working perfectly while what it certifies is false. The apparatus of proof is real and intact; only its object is fabricated. Written across the Dawn window (1200–1600) of the <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a>, the tales are an early, comic anatomy of the failure mode that formalized bookkeeping, seals, and standardized measurement would later make infrastructural.</p>
 <h2 id="the-counterfeited-proof">The counterfeited proof</h2>
@@ -51,17 +60,43 @@
 <h2 id="the-connection">The connection</h2>
 <p>Read together these units make a claim none makes alone: for Chaucer the danger of a legibility apparatus is not that it can be evaded but that it can be <em>satisfied</em> by a fabrication. The goldsmith&#x27;s assay, the balanced ledger, the tested key, the sealed bull, the donor-record, the astrolabe — each does exactly what it was built to do and thereby certifies a lie. This is the sharp inversion of legibility&#x27;s promise of trustworthy verification, and it recurs often enough across independent tales to read as one of Chaucer&#x27;s structural preoccupations rather than a local joke. Where <a class="wikilink" href="/wiki/commons/summaries/dante-divine-comedy">dante-divine-comedy</a> built a cosmos in which position perfectly encodes desert, Chaucer keeps showing the readout forged.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/legibility">Legibility</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>14</b><span>links out</span></div>
+      <div class="bearing"><b>821</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/glossary/legibility">Legibility</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-editors-preface">Purves&#x27;s Preface: Popularizing Chaucer and Spenser for the General Reader</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/fraud">fraud</a><span class="tag tag-lone" title="Only this note uses it">verification</span><a class="tag" href="/wiki/topics/decay-sequence">decay-sequence</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><a class="tag" href="/wiki/topics/cross-cutting">cross-cutting</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

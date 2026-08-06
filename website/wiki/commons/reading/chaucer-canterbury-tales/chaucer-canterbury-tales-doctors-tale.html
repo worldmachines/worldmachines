@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Doctor&#x27;s Tale: Virginia and the Corrupt Judge</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Doctor&#x27;s Tale: Virginia and the Corrupt Judge</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-doctors-tale.md">source on GitHub</a></div>
-  <div class="note-summary">A judge&#x27;s lust for a beautiful, virtuous girl corrupts the machinery of law itself, and her father kills her with her own consent rather than surrender her to a false judgment.</div>
-  <div class="tags"><span class="tag">canterbury-tales</span><span class="tag">physicians-tale</span><span class="tag">virginia</span><span class="tag">corrupt-justice</span><span class="tag">chastity</span><span class="tag">tyranny</span><span class="tag">exemplum</span><span class="tag">mob-justice</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/necropolitics">necropolitics</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-doctors-tale.md">source on GitHub</a></div>
+    <div class="note-summary">A judge&#x27;s lust for a beautiful, virtuous girl corrupts the machinery of law itself, and her father kills her with her own consent rather than surrender her to a false judgment.</div>
     <div class="prose">
 <p>The Physician tells the story of Virginius, a knight of great honor and wealth whose only daughter, Virginia, is Nature&#x27;s masterwork of beauty and virtue — chaste, discreet, and so wary of temptation that she feigns sickness to avoid feasts and dances where &#x27;folly&#x27; might be entertained. A local judge, Appius, is inflamed by the sight of her and, knowing he cannot win her by force or bribe, conspires with a clerk (or &#x27;churl&#x27;), Claudius, to fabricate a legal claim: that Virginia is really a stolen slave belonging to Claudius. Appius rushes the case to judgment without hearing Virginius&#x27;s defense and awards the girl to the clerk. Rather than let his daughter be handed over to live in the judge&#x27;s &#x27;lechery,&#x27; Virginius goes home, explains the sentence to her, and — with her explicit consent and even her plea to be struck &#x27;soft&#x27; — beheads her, then carries her head to the court. The people, sensing the judge&#x27;s guilt, riot; Appius is imprisoned and kills himself, Claudius is exiled at Virginius&#x27;s own plea for mercy, and the other conspirators are hanged. The tale closes with a blunt moral tag on the wages of sin.</p>
 <h2 id="themes">Themes</h2>
@@ -45,13 +53,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>Nature&#x27;s proud self-description of crafting Virginia beyond any artist&#x27;s power establishes the maiden as an almost sacral object before the plot turns predatory. Appius&#x27;s private conspiracy with Claudius shows corruption assembling itself in secret, gift by gift, well before it reaches the public court. The rigged hearing itself — the judge&#x27;s promise that Virginius &#x27;shalt have alle right, and no wrong here&#x27; immediately followed by a judgment rendered without evidence — is the tale&#x27;s clearest picture of legal form used against its own substance. Virginius&#x27;s speech to his daughter turns the death sentence into an act of love rather than violence, a father&#x27;s grief bent into an instrument of protection. Virginia&#x27;s own request — to bewail her death briefly, then her declaration &#x27;Blessed be God, that I shall die a maid&#x27; — makes her death a chosen consummation of virtue rather than a mere sentence carried out upon her. The closing scene of popular uprising and the flat moral (&#x27;Forsake sin, ere sinne you forsake&#x27;) completes the exemplum&#x27;s arc from private appetite to public reckoning.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>701</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/necropolitics">necropolitics</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><span class="tag tag-lone" title="Only this note uses it">physicians-tale</span><span class="tag tag-lone" title="Only this note uses it">virginia</span><span class="tag tag-lone" title="Only this note uses it">corrupt-justice</span><a class="tag" href="/wiki/topics/chastity">chastity</a><span class="tag tag-lone" title="Only this note uses it">tyranny</span><a class="tag" href="/wiki/topics/exemplum">exemplum</a><span class="tag tag-lone" title="Only this note uses it">mob-justice</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

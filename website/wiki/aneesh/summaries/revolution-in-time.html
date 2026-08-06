@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Revolution in Time — David S. Landes (1983; 1999)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Revolution in Time — David S. Landes (1983; 1999)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/revolution-in-time.md">source on GitHub</a></div>
-  <div class="note-summary">Landes argues that demand for precise time — rooted in Western monasticism — pulled the mechanical clock into existence, and that the clock then shaped modernity; the second half traces seven centuries of industry in which simple, reproducible designs repeatedly beat virtuoso masterpieces, while incumbents, from Geneva to Waltham, failed not by bad luck but by failure of imagination.</div>
-  <div class="tags"><span class="tag">landes</span><span class="tag">horology</span><span class="tag">time-discipline</span><span class="tag">economic-history</span><span class="tag">industrial-history</span><span class="tag">monasticism</span><span class="tag">china</span><span class="tag">longitude</span><span class="tag">swiss-watchmaking</span><span class="tag">american-system</span><span class="tag">quartz</span><span class="tag">incumbency-failure</span><span class="tag">protestant-ethic</span><span class="tag">putting-out-system</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/revolution-in-time.md">source on GitHub</a></div>
+    <div class="note-summary">Landes argues that demand for precise time — rooted in Western monasticism — pulled the mechanical clock into existence, and that the clock then shaped modernity; the second half traces seven centuries of industry in which simple, reproducible designs repeatedly beat virtuoso masterpieces, while incumbents, from Geneva to Waltham, failed not by bad luck but by failure of imagination.</div>
     <div class="prose">
 <p><em>Revolution in Time: Clocks and the Making of the Modern World</em> (Harvard University Press, 1983; second edition with new preface, 1999) is David Landes&#x27;s account of the mechanical clock from its medieval European origins to the quartz revolution. It is simultaneously a cultural history (why did Europe, not China, produce the mechanical clock?), a history of science and technology (how did turret clocks become marine chronometers?), and an economic history (who made clocks and watches, how, and why did industrial leadership rotate so violently?). As Landes frames it, the book is &quot;only prologue&quot; — a triptych whose thesis is as much about what made Europe capable of modernity as about horology itself.</p>
 <p>The book&#x27;s central causality is demand-pull, twice over. &quot;The clock did not create an interest in time measurement; the interest in time measurement led to the invention of the clock&quot; (<a class="wikilink" href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">rit-05-are-you-sleeping-brother-john</a>). This is the thesis of Part I, and the industrial half of the book re-runs it at market scale: &quot;It takes more than a great name to make an industry. It takes efficient techniques, low costs, and access to large markets&quot; (<a class="wikilink" href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">rit-16-ups-and-downs-of-international-competition</a>). Talent is available everywhere in the narrative — China had brilliant hydraulic engineers, France had Le Roy and Breguet, Britain had Tompion and Graham, Switzerland had its precision craftsmen. What varies is socially organized demand and market structure. Any reading of the book as &quot;the clock made the West&quot; has the causality backwards: the West&#x27;s wanting made the clock, and then the clock compounded the wanting.</p>
@@ -72,15 +81,28 @@
 <li><a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">david-s-landes</a> — Author entity; <em>Revolution in Time</em> is Landes&#x27;s horological companion to <em>The Wealth and Poverty of Nations</em>; both frame civilizational divergence as a story of differential demand and institutional capacity, not of race or resources.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06b-banks-incorporation-and-the-1873-depression">Overtaking Britain: Technology, Finance, and the Long Depression of 1873 in Germany and the United States</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>33</b><span>links out</span></div>
+      <div class="bearing"><b>2190</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06b-banks-incorporation-and-the-1873-depression">Overtaking Britain: Technology, Finance, and the Long Depression of 1873 in Germany and the United States</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/landes">landes</a><a class="tag" href="/wiki/topics/horology">horology</a><a class="tag" href="/wiki/topics/time-discipline">time-discipline</a><a class="tag" href="/wiki/topics/economic-history">economic-history</a><a class="tag" href="/wiki/topics/industrial-history">industrial-history</a><a class="tag" href="/wiki/topics/monasticism">monasticism</a><a class="tag" href="/wiki/topics/china">china</a><a class="tag" href="/wiki/topics/longitude">longitude</a><a class="tag" href="/wiki/topics/swiss-watchmaking">swiss-watchmaking</a><a class="tag" href="/wiki/topics/american-system">american-system</a><a class="tag" href="/wiki/topics/quartz">quartz</a><span class="tag tag-lone" title="Only this note uses it">incumbency-failure</span><a class="tag" href="/wiki/topics/protestant-ethic">protestant-ethic</a><a class="tag" href="/wiki/topics/putting-out-system">putting-out-system</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

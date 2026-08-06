@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Merchant&#x27;s Tale: The Walled Garden and the Counterfeited Key</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Merchant&#x27;s Tale: The Walled Garden and the Counterfeited Key</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-merchants-tale.md">source on GitHub</a></div>
-  <div class="note-summary">In this fabliau, a cynical Merchant tells of old January, who marries young May, imprisons her behind a walled garden he alone can unlock, goes blind from jealousy&#x27;s own working, and is out-argued by his wife (with Proserpina&#x27;s coaching) when a counterfeited key lets Damian cuckold him in a pear tree in plain sight.</div>
-  <div class="tags"><span class="tag">merchants-tale</span><span class="tag">chaucer</span><span class="tag">marriage-satire</span><span class="tag">fabliau</span><span class="tag">antifeminist-tradition</span><span class="tag">legibility</span><span class="tag">capture-resistance</span><span class="tag">gender-and-power</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a>, <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>, <a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-wife-of-baths-tale">chaucer-canterbury-tales-wife-of-baths-tale</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-merchants-tale.md">source on GitHub</a></div>
+    <div class="note-summary">In this fabliau, a cynical Merchant tells of old January, who marries young May, imprisons her behind a walled garden he alone can unlock, goes blind from jealousy&#x27;s own working, and is out-argued by his wife (with Proserpina&#x27;s coaching) when a counterfeited key lets Damian cuckold him in a pear tree in plain sight.</div>
     <div class="prose">
 <p>The Merchant, introduced by a bitter prologue about his own two-month-old marriage to &quot;the worste that may be,&quot; tells of January, a sixty-year-old Lombard knight who resolves to marry a girl barely a third his age. What follows is an elaborate, deliberately overblown encomium to wedlock — equal parts Genesis, Solomon, Seneca, and secular exempla (Rebecca, Judith, Esther) — undercut at every turn by January&#x27;s actual motives, which are appetite and property. His friends Placebo (a flatterer who agrees with everything) and Justinus (a married skeptic who has &quot;wept many a tear&quot; over his own wife) stage a mock counsel-scene that decides nothing, since January has already chosen. He marries May, a squire named Damian falls sick with love for her, and January — now literally as well as figuratively unable to see clearly — builds a walled garden to which he alone keeps the silver key, so he can &quot;pay his wife&#x27;s debt&quot; in seclusion. He then goes blind, becomes pathologically jealous, and keeps a hand on May at all times. May makes a wax impression of the key, has Damian counterfeit it, and arranges an assignation in a pear tree — witnessed and adjudicated by the King and Queen of Faerie, Pluto and Proserpina, who are having their own marital argument about women&#x27;s truthfulness. Pluto restores January&#x27;s sight at the exact moment of the affair; Proserpina, on cue, supplies May with an answer that reframes what he saw as a misperception of newly restored sight. January believes her.</p>
 <h2 id="themes">Themes</h2>
@@ -45,16 +53,33 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The Merchant&#x27;s prologue frames the whole tale as one aggrieved man&#x27;s testimony, not neutral narration — his wife is worse than a fiend, and marriage is a &quot;snare.&quot; The mock-panegyric to wives that follows must be read through that frame: praise weaponized as satire. Justinus&#x27;s counsel scene punctures Placebo&#x27;s sycophancy with genuinely practical (if self-pitying) advice about the unknowability of a prospective spouse. The garden-and-key passage is the tale&#x27;s mechanical heart — control made concrete as architecture and a single physical key — and its undoing (the counterfeited key, the blindness, the pear tree) plays out precisely at that mechanism&#x27;s weakest point. The Pluto–Proserpina scene, structurally a fairy-court echo of the human marriage below it, supplies the meta-commentary: the gods argue about whether women lie, and then rig the outcome so that the argument is settled experimentally, in May&#x27;s favor, before January even opens his eyes. The closing exchange about newly-restored sight is the tale&#x27;s cleverest sleight, converting the strongest possible evidence (eyewitness testimony) into the weakest (an untrained faculty), and leaving January — and the reader — with no stable ground from which to adjudicate what happened.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>920</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></li><li><a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-wife-of-baths-tale">chaucer-canterbury-tales-wife-of-baths-tale</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">merchants-tale</span><a class="tag" href="/wiki/topics/chaucer">chaucer</a><span class="tag tag-lone" title="Only this note uses it">marriage-satire</span><a class="tag" href="/wiki/topics/fabliau">fabliau</a><a class="tag" href="/wiki/topics/antifeminist-tradition">antifeminist-tradition</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/capture-resistance">capture-resistance</a><a class="tag" href="/wiki/topics/gender-and-power">gender-and-power</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

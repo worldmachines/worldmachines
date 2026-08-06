@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Proto-Liveness and the Life Era</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Proto-Liveness and the Life Era</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/proto-liveness-and-the-life-era.md">source on GitHub</a></div>
-  <div class="note-summary">Connects the new concept of <a class="wikilink" href="/wiki/aneesh/concepts/proto-liveness">proto-liveness</a> (substrate borrowing the spark of intent) with <a class="wikilink" href="/wiki/aneesh/entities/eric-chaisson">eric-chaisson</a>&#x27;s Life Era and <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s Liveness Machine, arguing that AI systems are not a fourth pool of accumulation but the first pool to be wired to a borrowed spark — a structurally distinct event sitting between Chaisson&#x27;s cosmological Life Era and Rao&#x27;s Liveness era as its substrate precondition.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">proto-liveness</span><span class="tag">liveness-machine</span><span class="tag">life-era</span><span class="tag">chaisson</span><span class="tag">rao</span><span class="tag">capture-resistance</span><span class="tag">accumulation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/proto-liveness-and-the-life-era.md">source on GitHub</a></div>
+    <div class="note-summary">Connects the new concept of <a class="wikilink" href="/wiki/aneesh/concepts/proto-liveness">proto-liveness</a> (substrate borrowing the spark of intent) with <a class="wikilink" href="/wiki/aneesh/entities/eric-chaisson">eric-chaisson</a>&#x27;s Life Era and <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s Liveness Machine, arguing that AI systems are not a fourth pool of accumulation but the first pool to be wired to a borrowed spark — a structurally distinct event sitting between Chaisson&#x27;s cosmological Life Era and Rao&#x27;s Liveness era as its substrate precondition.</div>
     <div class="prose">
 <h2 id="the-two-threads">The Two Threads</h2>
 <p>Two independent frameworks converge on a single question: when does a substrate stop being merely complex and start being alive?</p>
@@ -74,17 +83,43 @@
 <h2 id="essay-seed">Essay Seed</h2>
 <p>A follow-up essay could test the proto-liveness frame against the history of <em>substrates</em> rather than tools. Each prior pool of accumulation (Alexandria, monasteries, print, internet) had a characteristic latency between deposit and reactivation: years for manuscripts retrieved by scholars, decades for print archives, seconds for the internet, milliseconds for AI inference. Plot the latency-to-reactivation curve and the moment of proto-liveness is not the moment a particular technology arrived — it is the moment the latency crossed below human reaction time. Below that threshold, the substrate is no longer a pool you fetch from; it is a medium you act through. That moment, by this measure, was around 2022.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/solar-flows-and-the-energy-anomaly">Solar Flows and the Energy Anomaly</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>14</b><span>links out</span></div>
+      <div class="bearing"><b>1369</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/solar-flows-and-the-energy-anomaly">Solar Flows and the Energy Anomaly</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/bottleneck-reversal">Bottleneck Reversal: Atoms, Ideas, Intents</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/eroi-thresholds">EROI Thresholds</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/infrastructure-inheritance">Infrastructure Inheritance</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><span class="tag tag-lone" title="Only this note uses it">proto-liveness</span><a class="tag" href="/wiki/topics/liveness-machine">liveness-machine</a><a class="tag" href="/wiki/topics/life-era">life-era</a><a class="tag" href="/wiki/topics/chaisson">chaisson</a><a class="tag" href="/wiki/topics/rao">rao</a><a class="tag" href="/wiki/topics/capture-resistance">capture-resistance</a><a class="tag" href="/wiki/topics/accumulation">accumulation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

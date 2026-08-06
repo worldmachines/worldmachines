@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/landes-revolution-in-time/">Revolution in Time</a> <b>/</b> <span>RIT 02 — Introduction — why the clock matters</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>RIT 02 — Introduction — why the clock matters</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/landes-revolution-in-time/">Revolution in Time</a> · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/landes-revolution-in-time/rit-02-introduction.md">source on GitHub</a></div>
-  <div class="note-summary">Landes frames the medieval European mechanical clock (c. 1300) as a movable-type-class invention whose oscillating-digital principle underlies all subsequent timekeeping and whose portability converted external time obedience into internalized time discipline.</div>
-  <div class="tags"><span class="tag">landes</span><span class="tag">horology</span><span class="tag">time-discipline</span><span class="tag">precision-measurement</span><span class="tag">mechanical-clock</span><span class="tag">modernity</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a>, <a class="wikilink" href="/wiki/aneesh/concepts/untimely">untimely</a>, <a class="wikilink" href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers">unwarranted-faith-in-numbers</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/landes-revolution-in-time/">Revolution in Time</a> · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/landes-revolution-in-time/rit-02-introduction.md">source on GitHub</a></div>
+    <div class="note-summary">Landes frames the medieval European mechanical clock (c. 1300) as a movable-type-class invention whose oscillating-digital principle underlies all subsequent timekeeping and whose portability converted external time obedience into internalized time discipline.</div>
     <div class="prose">
 <p>Landes&#x27;s Introduction stakes the book&#x27;s central claim: the mechanical clock, invented in medieval Europe around 1300, is one of the great inventions of human history — &quot;not in the same class as fire and the wheel, but comparable to movable type&quot; in its consequences for values, technology, social organization, and personality. The argument runs in two registers. Sociologically, modern civilization rests not merely on knowing the time but on obeying it: time indications are commands, punctuality is a virtue imprinted from infancy, and &quot;what one member of the family does with time affects the others.&quot; Technically, the clock&#x27;s importance lay not in its initial accuracy — early mechanical clocks were no better than good water clocks — but in its technological potential: self-contained, weight- (later spring-) driven, miniaturizable, and therefore privatizable. The chapter closes with the book&#x27;s three-part plan: cultural history (why Europe, and why a 500-year monopoly), history of technique (turret clock to marine chronometer), and economic history (clockmaking as the &quot;nursery of the mechanical arts,&quot; now dying into quartz).</p>
 <h2 id="key-arguments">Key arguments</h2>
@@ -76,17 +84,55 @@
 <li><a class="wikilink" href="/wiki/commons/reading/landes-revolution-in-time/rit-03-a-magnificent-dead-end">rit-03-a-magnificent-dead-end</a> — the China comparison the Introduction sets up.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>1078</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/untimely">Untimely</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">Clock as Incomplete Discipline</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">RIT 16 — The Ups and Downs of International Competition (Ch. 14)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Supports</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Contradicts</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/clock-as-incomplete-discipline">clock-as-incomplete-discipline</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/untimely">untimely</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers">unwarranted-faith-in-numbers</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/landes">landes</a><a class="tag" href="/wiki/topics/horology">horology</a><a class="tag" href="/wiki/topics/time-discipline">time-discipline</a><span class="tag tag-lone" title="Only this note uses it">precision-measurement</span><span class="tag tag-lone" title="Only this note uses it">mechanical-clock</span><a class="tag" href="/wiki/topics/modernity">modernity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

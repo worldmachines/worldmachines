@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> <b>/</b> <span>The Internet, the Four Little Tigers, and Walmart&#x27;s Information Machine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Internet, the Four Little Tigers, and Walmart&#x27;s Information Machine</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11b-internet-asian-tigers-and-walmart.md">source on GitHub</a></div>
-  <div class="note-summary">The Internet, the Asian Four Little Tigers, and Walmart&#x27;s information-driven retailing together close out Appleby&#x27;s account of late-twentieth-century capitalism, with a coda on birth control, genomics, and capitalism&#x27;s ambiguous ties to democracy and inequality.</div>
-  <div class="tags"><span class="tag">internet-history</span><span class="tag">asian-tigers</span><span class="tag">dependency-theory</span><span class="tag">walmart</span><span class="tag">globalization</span><span class="tag">labor-decline</span><span class="tag">capitalism-and-democracy</span><span class="tag">information-technology</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do">what-do-platforms-really-do</a>, <a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-management">algorithmic-management</a>, <a class="wikilink" href="/wiki/aneesh/concepts/history-machine">history-machine</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11b-internet-asian-tigers-and-walmart.md">source on GitHub</a></div>
+    <div class="note-summary">The Internet, the Asian Four Little Tigers, and Walmart&#x27;s information-driven retailing together close out Appleby&#x27;s account of late-twentieth-century capitalism, with a coda on birth control, genomics, and capitalism&#x27;s ambiguous ties to democracy and inequality.</div>
     <div class="prose">
 <p>This unit closes a chapter of <em>The Relentless Revolution</em> by tracing three late-twentieth-century engines of capitalism — the commercialization of the Internet, the export-led takeoff of Hong Kong, Singapore, Taiwan, and South Korea, and Walmart&#x27;s logistics-driven retail empire — before a short coda on birth control, the Human Genome Project, and capitalism&#x27;s fraught relationship with democracy and inequality.</p>
 <h2 id="themes">Themes</h2>
@@ -45,17 +53,47 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The ARPANET-to-commerce passage frames the Internet&#x27;s origin as a military-legibility project that outgrew its sponsor. The Four Tigers passage stages dependency theory&#x27;s refutation as an empirical, not just rhetorical, event — &quot;doing in thirty years what it had taken Japan a hundred to do.&quot; The Walmart passage renders Sam Walton&#x27;s genius as an information architecture, not a merchandising one. The Asian-crisis passage supplies the chapter&#x27;s most quotable line on the necessity of failure within capitalism. The labor passage sharpens the contrast between Walmart&#x27;s non-union model and the mid-century auto industry it implicitly displaced. The closing Russian-woman anecdote crystallizes the unit&#x27;s ambivalence about what &quot;democracy&quot; actually promises under capitalism.</p>
     </div>
+    <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11a-japan-and-the-rise-of-personal-computing">Friedman, Deregulation, and the Rise of Japan and the Personal Computer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>628</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11a-japan-and-the-rise-of-personal-computing">Friedman, Deregulation, and the Rise of Japan and the Personal Computer</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry">Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12a-wto-and-chinas-economic-transformation">China&#x27;s Market Transformation and the WTO&#x27;s Fraying Consensus</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12b-eastern-europe-and-indias-transformation">Eastern Europe&#x27;s Shock Therapy and India&#x27;s Long Road from Empire to Boom</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do">what-do-platforms-really-do</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-management">algorithmic-management</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/history-machine">history-machine</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">internet-history</span><span class="tag tag-lone" title="Only this note uses it">asian-tigers</span><span class="tag tag-lone" title="Only this note uses it">dependency-theory</span><span class="tag tag-lone" title="Only this note uses it">walmart</span><a class="tag" href="/wiki/topics/globalization">globalization</a><span class="tag tag-lone" title="Only this note uses it">labor-decline</span><span class="tag tag-lone" title="Only this note uses it">capitalism-and-democracy</span><a class="tag" href="/wiki/topics/information-technology">information-technology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>On Not Knowing and Paying Attention</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>On Not Knowing and Paying Attention</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/on-not-knowing-and-paying-attention.md">source on GitHub</a></div>
-  <div class="note-summary">Tim Ingold&#x27;s 2023 essay argues that wisdom (turning toward an uncertain world and paying attention) is opposed to knowledge (turning away to secure prediction), that uncertainty is the excess that makes possibility real, and that not-knowing is a form of wisdom rather than ignorance.</div>
-  <div class="tags"><span class="tag">tim-ingold</span><span class="tag">attention</span><span class="tag">knowledge-and-wisdom</span><span class="tag">not-knowing</span><span class="tag">uncertainty</span><span class="tag">possibility</span><span class="tag">correspondence</span><span class="tag">walking</span><span class="tag">anthropology-of-perception</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/on-not-knowing-and-paying-attention.md">source on GitHub</a></div>
+    <div class="note-summary">Tim Ingold&#x27;s 2023 essay argues that wisdom (turning toward an uncertain world and paying attention) is opposed to knowledge (turning away to secure prediction), that uncertainty is the excess that makes possibility real, and that not-knowing is a form of wisdom rather than ignorance.</div>
     <div class="prose">
 <p><strong>Tim Ingold</strong>, &quot;On not knowing and paying attention: How to walk in a possible world,&quot; <em>Irish Journal of Sociology</em> 31(1): 20-36 (2023). Written for the volume <em>Walking Methodologies: Sociological Research on the Move</em>; it began as a March 2020 keynote to the &quot;Walking Conversations: The Art of Paying Attention&quot; workshop at University College Cork, and is assembled as a collage from three of Ingold&#x27;s own books -- <em>The Life of Lines</em> (2015), <em>Anthropology and/as Education</em> (2018), and <em>Imagining for Real</em> (2022) (<a class="wikilink" href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">ingold-2023-possible-world-back-matter-references</a>).</p>
 <h2 id="the-argument-in-one-line">The argument in one line</h2>
@@ -64,16 +73,38 @@
 <h2 id="relation-to-the-world-machines-frame">Relation to the World Machines frame</h2>
 <p>Two connections run deep enough to warrant their own pages. Ingold&#x27;s institutional critique -- knowledge as a &quot;citadel,&quot; science&#x27;s &quot;immunising&quot; methodology, and education/science/state as machines that manufacture ignorance -- is the phenomenological interior of the WMP <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a> machine, and his &quot;not-knowing&quot; functions as a form of <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a> (see <a class="wikilink" href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">not-knowing-as-capture-resistance</a>). His opposition between longitudinal becoming and stratigraphic time runs one figure at the scale of a single life and of the passage of generations (see <a class="wikilink" href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">longitudinal-becoming-versus-stratigraphic-time</a>). See also the author page, <a class="wikilink" href="/wiki/aneesh/entities/tim-ingold">tim-ingold</a>.</p>
     </div>
+    <p class="note-history">Last changed 7 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/a3929b42bfa85a7fcb06eae4396c079ac5798b83">[trivial] ingest: Ingold 2023 &quot;possible world&quot; — 9 reading notes + 4 canon pages (#18)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 7 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/a3929b42bfa85a7fcb06eae4396c079ac5798b83">[trivial] ingest: Ingold 2023 &quot;possible world&quot; — 9 reading notes + 4 canon pages (#18)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>18</b><span>links out</span></div>
+      <div class="bearing"><b>1047</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom">The Man in the Moon: Knowledge, Wisdom, Self and Soul</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/tim-ingold">tim-ingold</a><a class="tag" href="/wiki/topics/attention">attention</a><a class="tag" href="/wiki/topics/knowledge-and-wisdom">knowledge-and-wisdom</a><a class="tag" href="/wiki/topics/not-knowing">not-knowing</a><a class="tag" href="/wiki/topics/uncertainty">uncertainty</a><a class="tag" href="/wiki/topics/possibility">possibility</a><a class="tag" href="/wiki/topics/correspondence">correspondence</a><span class="tag tag-lone" title="Only this note uses it">walking</span><span class="tag tag-lone" title="Only this note uses it">anthropology-of-perception</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

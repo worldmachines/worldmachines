@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Parson&#x27;s Tale: Penitence Replaces the &quot;Tale,&quot; and Chaucer Retracts</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Parson&#x27;s Tale: Penitence Replaces the &quot;Tale,&quot; and Chaucer Retracts</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-parsons-tale.md">source on GitHub</a></div>
-  <div class="note-summary">The Parson refuses to tell a &quot;fable&quot; and instead delivers (in this Purves edition, heavily abridged) a prose penitential treatise on Contrition, Confession, and Satisfaction — complete with a vision of hell&#x27;s torments, a survey of the Seven Deadly Sins anchored by a furious attack on fashionable dress as the outward sign of Pride — after which Chaucer appends his own closing prayer retracting his secular works and ending the whole Canterbury Tales.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">canterbury-tales</span><span class="tag">penitence</span><span class="tag">seven-deadly-sins</span><span class="tag">medieval-confession</span><span class="tag">sermon</span><span class="tag">pride-and-dress</span><span class="tag">retraction</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-parsons-tale.md">source on GitHub</a></div>
+    <div class="note-summary">The Parson refuses to tell a &quot;fable&quot; and instead delivers (in this Purves edition, heavily abridged) a prose penitential treatise on Contrition, Confession, and Satisfaction — complete with a vision of hell&#x27;s torments, a survey of the Seven Deadly Sins anchored by a furious attack on fashionable dress as the outward sign of Pride — after which Chaucer appends his own closing prayer retracting his secular works and ending the whole Canterbury Tales.</div>
     <div class="prose">
 <p>At the close of the pilgrimage, the Host turns to the Parson for the last tale and gets a refusal of tale-telling itself: no fable, no rhyme, only &quot;moralitee and vertuous mattere&quot; delivered as a &quot;litel tale in prose.&quot; What follows (compressed drastically by this edition&#x27;s editor, who states in the notes that the full sermon would run some thirty pages) is a prose treatise on Penitence in three parts — Contrition, Confession, and Satisfaction — threaded through with a lurid depiction of hell&#x27;s torments and a catalogue of the Seven Deadly Sins, most fully elaborated in Pride&#x27;s excursus on fashionable clothing and Gluttony&#x27;s compact five-species anatomy. The unit ends with the &quot;Prayer of Chaucer&quot; (the so-called Retraction), in which the poet-narrator lists his own works, revokes the &quot;worldly vanities&quot; among them — explicitly including &quot;the Tales of Canterbury, all those that sounen unto sin&quot; — and gives thanks only for his devotional translations, closing the entire <em>Canterbury Tales</em> on an act of authorial penitence that mirrors the Parson&#x27;s subject.</p>
 <h2 id="themes">Themes</h2>
@@ -45,17 +54,43 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The six curated passages track the treatise&#x27;s arc: the Parson&#x27;s prologue refusal of &quot;fable&quot; for prose moralitee; the hell-passage on honour&#x27;s collapse into universal indignity; the sumptuary attack on scant and disguising hosen as pride&#x27;s visible &quot;twig&quot;; the procedural rule against dividing confession &quot;to one man… and a parcel to another&quot;; the Gluttony chapter, given complete because the editor judged it short enough to reproduce in full and it neatly demonstrates the abridgement method (compressed enumeration ending in the memorable &quot;five fingers of the devil&#x27;s hand&quot;); and Chaucer&#x27;s Retraction naming and renouncing his secular works, the passage that closes not just this unit but the <em>Canterbury Tales</em> as a whole.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>822</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-man-of-laws-tale">The Man of Law&#x27;s Prologue and Tale: Constance Adrift</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><span class="tag tag-lone" title="Only this note uses it">penitence</span><span class="tag tag-lone" title="Only this note uses it">seven-deadly-sins</span><span class="tag tag-lone" title="Only this note uses it">medieval-confession</span><span class="tag tag-lone" title="Only this note uses it">sermon</span><span class="tag tag-lone" title="Only this note uses it">pride-and-dress</span><span class="tag tag-lone" title="Only this note uses it">retraction</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

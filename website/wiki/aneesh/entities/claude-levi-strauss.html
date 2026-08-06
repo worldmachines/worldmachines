@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Claude Lévi-Strauss (1908–2009)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Claude Lévi-Strauss (1908–2009)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/claude-levi-strauss.md">source on GitHub</a></div>
-  <div class="note-summary">French anthropologist (1908–2009), founding figure of structural anthropology. For Massey, the original source of the structuralist move that translated &#x27;synchrony&#x27; into &#x27;space&#x27; and so left space as a-temporal closure.</div>
-  <div class="tags"><span class="tag">levi-strauss</span><span class="tag">structuralism</span><span class="tag">anthropology</span><span class="tag">synchrony</span><span class="tag">space</span><span class="tag">massey</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/claude-levi-strauss.md">source on GitHub</a></div>
+    <div class="note-summary">French anthropologist (1908–2009), founding figure of structural anthropology. For Massey, the original source of the structuralist move that translated &#x27;synchrony&#x27; into &#x27;space&#x27; and so left space as a-temporal closure.</div>
     <div class="prose">
 <p>French anthropologist, founder of structural anthropology. His major works — <em>Tristes Tropiques</em> (1955), <em>Structural Anthropology</em> (1958), <em>The Savage Mind</em> (1962), and the four volumes of <em>Mythologiques</em> (1964–71) — established the project of reading myths, kinship systems, and cultural practices as systems of binary oppositions with their own structural logic.</p>
 <h2 id="why-he-matters-for-the-wiki">Why He Matters for the Wiki</h2>
@@ -57,17 +66,43 @@
 <h2 id="source">Source</h2>
 <p>Massey, D. (2005). <em>For Space</em>. London: SAGE. Ch. 3, &quot;The prison-house of synchrony,&quot; pp. 36–42.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/louis-althusser">Louis Althusser (1918–1990)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>394</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/louis-althusser">Louis Althusser (1918–1990)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/ernesto-laclau">Ernesto Laclau (1935–2014)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/coupure-and-causal-closure">Coupure and Causal Closure</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/louis-althusser">Louis Althusser (1918–1990)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-certeau">Michel de Certeau (1925–1986)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/levi-strauss">levi-strauss</a><a class="tag" href="/wiki/topics/structuralism">structuralism</a><a class="tag" href="/wiki/topics/anthropology">anthropology</a><a class="tag" href="/wiki/topics/synchrony">synchrony</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/massey">massey</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

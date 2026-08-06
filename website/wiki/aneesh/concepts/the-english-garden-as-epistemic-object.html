@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>The English Garden as Epistemic Object</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The English Garden as Epistemic Object</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/the-english-garden-as-epistemic-object.md">source on GitHub</a></div>
-  <div class="note-summary">The English garden is not just an aesthetic preference but an epistemic object — a horticultural manifestation of Kulturkritik&#x27;s paradox, claiming to reconcile nature and culture while actually creating only an illusion of naturalness through elaborate artifice.</div>
-  <div class="tags"><span class="tag">english-garden</span><span class="tag">french-garden</span><span class="tag">kulturkritik</span><span class="tag">nature-culture</span><span class="tag">artifice</span><span class="tag">horticulture</span><span class="tag">enlightenment</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/the-english-garden-as-epistemic-object.md">source on GitHub</a></div>
+    <div class="note-summary">The English garden is not just an aesthetic preference but an epistemic object — a horticultural manifestation of Kulturkritik&#x27;s paradox, claiming to reconcile nature and culture while actually creating only an illusion of naturalness through elaborate artifice.</div>
     <div class="prose">
 <h2 id="the-standard-account-and-its-problems">The Standard Account (and Its Problems)</h2>
 <p>Conventional wisdom maps the 18th-century shift from French to English garden design onto a political shift from despotism to democracy: the <em>jardin français</em> celebrates the omnipotence of reason; the English garden celebrates the freedom of nature. For Shaftesbury, the <em>jardin français</em> was &quot;the invention of a princely caprice, while a princely slavery and dependence keep it alive.&quot;</p>
@@ -46,7 +55,7 @@
 </ul>
 <p>Herder&#x27;s dictum: &quot;in the English garden, nature and culture act as if each were the other&quot; — pointing to the <em>paradox</em> that lies at the heart of Kulturkritik.</p>
 <h2 id="the-illusion-admitted">The Illusion Admitted</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span>&#x27;s <em>Julie</em>, the Elysium garden (Clarens) appears to St. Preux as &quot;verdant, fresh, vigorous&quot; with &quot;nowhere the slightest trace of cultivation.&quot; In fact it is &quot;an abandoned orchard turned wilderness, a French garden metamorphosed into an English garden.&quot; Julie admits: &quot;Nature did it all, but under my direction, and there is nothing here that I have not designed&quot; (<em>CW6</em>, p. 388). She confesses she has done &quot;violence&quot; to nature, &quot;forcing her in a way to come and live with&quot; her. &quot;All this cannot be done without a modicum of illusion&quot; (<em>CW6</em>, p. 394).</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a>&#x27;s <em>Julie</em>, the Elysium garden (Clarens) appears to St. Preux as &quot;verdant, fresh, vigorous&quot; with &quot;nowhere the slightest trace of cultivation.&quot; In fact it is &quot;an abandoned orchard turned wilderness, a French garden metamorphosed into an English garden.&quot; Julie admits: &quot;Nature did it all, but under my direction, and there is nothing here that I have not designed&quot; (<em>CW6</em>, p. 388). She confesses she has done &quot;violence&quot; to nature, &quot;forcing her in a way to come and live with&quot; her. &quot;All this cannot be done without a modicum of illusion&quot; (<em>CW6</em>, p. 394).</p>
 <p>If Julie can create only the illusion of natural wilderness, then Rousseau&#x27;s &quot;solutions&quot; can create only the illusion of human wholeness — &quot;and thus only the illusion of human freedom&quot; (David Gauthier).</p>
 <h2 id="the-experiences-compared">The Experiences Compared</h2>
 <div class="table-wrap"><table>
@@ -61,7 +70,7 @@
 </tbody>
 </table></div>
 <h2 id="goethes-rejection">Goethe&#x27;s Rejection</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> makes the sharpest critique. The English garden:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> makes the sharpest critique. The English garden:</p>
 <ol>
 <li>Destroys both art and nature — &quot;makes do with semblance because it turns reality into fantasia&quot;</li>
 <li>&quot;Diminishes the sublime of nature and nullifies it by simulating it&quot;</li>
@@ -69,36 +78,77 @@
 <li>Its &quot;beautiful semblance is a shiny surface, a <em>laterna magica</em>-type illusion, a delusion without essence&quot;</li>
 </ol>
 <p>In <em>Elective Affinities</em>, Goethe tests the English garden ideal to destruction: the novel&#x27;s main English garden project coincides with the deaths of all major characters.</p>
-<h2 id="friedrich-schillers-intermediate-position"><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Friedrich Schiller&quot;">Friedrich Schiller</span>&#x27;s Intermediate Position</h2>
+<h2 id="friedrich-schillers-intermediate-position"><a class="wikilink" href="/wiki/aneesh/entities/friedrich-schiller" title="Written [[Friedrich Schiller]], resolved to friedrich-schiller">Friedrich Schiller</a>&#x27;s Intermediate Position</h2>
 <p>Schiller endorses a &quot;middle way between the rigidity of the French style and the anarchy of the so-called English garden&quot; — specifically the Hohenheim Park near Stuttgart. But he is &quot;disregarding actuality for the sake of appearance and effect&quot; — his horticultural ideal is also a postulate, not a description.</p>
 <h2 id="the-meta-point">The Meta-Point</h2>
 <p>As Kempf concludes: &quot;In the sublative English garden, with its inherent, mutually enriching <em>and</em> beautiful reciprocity of &#x27;nature&#x27; and &#x27;culture,&#x27; &#x27;nature&#x27; is, in the last analysis, violated, while &#x27;culture&#x27; reigns supreme.&quot; Both gardens &quot;use artifice, and both are united in the creation of an illusion, a beautiful semblance that masks the instrumentalization of nature <em>and</em> culture for the sake of the beautiful effect.&quot; We seem to have come full circle — back to the French garden.</p>
 <h2 id="extended-resonances">Extended Resonances</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> (as the <em>opposite</em> of the English garden): the thicket is not a garden at all — it&#x27;s explicitly illegible, unkempt, not designed to please or to simulate naturalness. Where the English garden produces the illusion of wilderness, the thicket <em>is</em> a wilderness that refuses to be aestheticized</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> (as the <em>opposite</em> of the English garden): the thicket is not a garden at all — it&#x27;s explicitly illegible, unkempt, not designed to please or to simulate naturalness. Where the English garden produces the illusion of wilderness, the thicket <em>is</em> a wilderness that refuses to be aestheticized</li>
 <li>The English garden as a precursor to theme parks and &quot;hyper-real&quot; theme parks (Kempf suggests Frank Lloyd Wright&#x27;s Fallingwater or the hyper-real theme park as the English garden&#x27;s post-horticultural successors)</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> — the paradox the English garden manifests</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savage&quot;">Noble Savage</span> — parallel figure (anthropological vs. horticultural)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Friedrich Schiller&quot;">Friedrich Schiller</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nature-Culture Dialectic&quot;">Nature-Culture Dialectic</span> — the tension the garden embodies</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> — the paradox the English garden manifests</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/noble-savage" title="Written [[Noble Savage]], resolved to noble-savage">Noble Savage</a> — parallel figure (anthropological vs. horticultural)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/friedrich-schiller" title="Written [[Friedrich Schiller]], resolved to friedrich-schiller">Friedrich Schiller</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/nature-culture-dialectic" title="Written [[Nature-Culture Dialectic]], resolved to nature-culture-dialectic">Nature-Culture Dialectic</a> — the tension the garden embodies</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a> — summary</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/chinese-garden-and-the-literary-completion-of-landscape">Chinese Garden and the Literary Completion of Landscape</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/j-b-jackson">J. B. Jackson (1909–1996)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>809</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">12</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schiller">Friedrich Schiller (1759–1805)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nature-culture-dialectic">Nature-Culture Dialectic</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/noble-savage">Noble Savage</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/chinese-garden-and-the-literary-completion-of-landscape">Chinese Garden and the Literary Completion of Landscape</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/panglossian-optimism">Panglossian Optimism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/j-b-jackson">J. B. Jackson (1909–1996)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schiller">Friedrich Schiller (1759–1805)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeopathic-critique">Homeopathic Critique</a><span class="rail-where">6</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/english-garden">english-garden</a><span class="tag tag-lone" title="Only this note uses it">french-garden</span><a class="tag" href="/wiki/topics/kulturkritik">kulturkritik</a><a class="tag" href="/wiki/topics/nature-culture">nature-culture</a><span class="tag tag-lone" title="Only this note uses it">artifice</span><span class="tag tag-lone" title="Only this note uses it">horticulture</span><a class="tag" href="/wiki/topics/enlightenment">enlightenment</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

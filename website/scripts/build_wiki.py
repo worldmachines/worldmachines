@@ -18,8 +18,20 @@ produce different output.
 
 What it produces
 ----------------
-    website/wiki/index.html                     wiki home (contributors, books, recent changes)
-    website/wiki/all.html                       every note, filterable
+    website/wiki/index.html                     the front door — ideas first
+    website/wiki/all.html                       A–Z index of every note
+    website/wiki/hubs.html                      most-linked notes, ranked
+    website/wiki/wanted/index.html              pages the corpus asks for but does not have
+    website/wiki/wanted/<slug>.html             one page per wanted title
+    website/wiki/topics/index.html              every shared tag
+    website/wiki/topics/<slug>.html             one page per shared tag
+    website/wiki/special.html                   maintenance desk (orphans, loose links, stats)
+    website/wiki/orphans.html                   notes nothing links to
+    website/wiki/loose-links.html               links resolved by normalisation — fix at source
+    website/wiki/changes.html                   full recent-changes list from git
+    website/wiki/search.html                    search results page (reads ?q=)
+    website/wiki/search-index.json              prebuilt search index
+    website/wiki/wiki.js                        search + filter behaviour (vanilla, no deps)
     website/wiki/wiki.css                       wiki-only styles (site style.css is loaded first)
     website/wiki/wiki-manifest.json             link graph + note index (input to --changed)
     website/wiki/<member>/index.html            per-contributor index
@@ -30,12 +42,18 @@ What it produces
 
 Conventions it follows
 ----------------------
-* A note's wiki-link id is its filename stem, and link resolution is
-  **case-sensitive exact match** — the same rule the knowledge lake uses
-  (`tools/notes-pipeline/notes_to_parquet.py`). Links that do not resolve are
-  rendered as muted, non-clickable text rather than dead hrefs.
-* Glossary entries may declare `aliases:`; an alias resolves like a note id,
-  but never shadows a real note with that exact stem.
+* A note's wiki-link id is its filename stem. Resolution runs in tiers:
+  **exact, case-sensitive match** first — the rule the knowledge lake uses
+  (`tools/notes-pipeline/notes_to_parquet.py`), so the canonical graph is
+  unchanged — then glossary `aliases:`, then a **normalised match** on the
+  slug, which is how `[[Modernity Machine]]` reaches `modernity-machine.md`.
+  Normalised hits are only taken when exactly one note claims the slug, and
+  every one of them is listed on `/wiki/loose-links` so the club can tighten
+  the link at source. A target no tier resolves becomes a **wanted link** —
+  red, clickable, and pointing at a page that says who is asking for it.
+* `connects:`, `supports:` and `contradicts:` frontmatter are rendered as
+  links, so they count as edges in the graph too — otherwise a target's
+  backlink list would disagree with what a reader can see pointing at it.
 * The top-level `wiki/` directory of this repo is the club's INTERNAL wiki and
   is deliberately NOT published. Only `raw-notes/` is.
 
@@ -68,10 +86,21 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 NOTES_ROOT = REPO_ROOT / "raw-notes"
 OUT_ROOT = REPO_ROOT / "website" / "wiki"
 MANIFEST_PATH = OUT_ROOT / "wiki-manifest.json"
-MANIFEST_VERSION = 1
+MANIFEST_VERSION = 2
 
-GITHUB_BLOB = "https://github.com/worldmachines/worldmachines/blob/main/"
-GITHUB_COMMIT = "https://github.com/worldmachines/worldmachines/commit/"
+GITHUB_REPO = "https://github.com/worldmachines/worldmachines"
+GITHUB_BLOB = GITHUB_REPO + "/blob/main/"
+GITHUB_COMMIT = GITHUB_REPO + "/commit/"
+GITHUB_NEW = GITHUB_REPO + "/new/main/raw-notes/commons/concepts"
+
+# A tag becomes a topic page once at least this many notes share it. Below the
+# threshold a tag is one note's own keyword, not a topic anyone can browse.
+TOPIC_MIN_NOTES = 2
+
+# How many entries the front page shows before handing off to the full listing.
+HOME_HUBS = 22
+HOME_WANTED = 8
+HOME_CHANGES = 8
 
 # ─── Site chrome (kept in step with website/scripts/build.py NAV) ────────────
 
@@ -551,7 +580,8 @@ class Note:
 
     __slots__ = ("rel", "member", "folder", "book", "note_id", "title", "url", "kind",
                  "term", "aliases", "status", "contributors", "summary", "outlinks",
-                 "digest", "front", "body", "git")
+                 "digest", "front", "body", "git",
+                 "tags", "supports", "contradicts", "connects", "words")
 
     def __init__(self, **kw):
         for key in self.__slots__:
@@ -579,6 +609,8 @@ class Note:
             "kind": self.kind, "term": self.term, "aliases": self.aliases,
             "status": self.status, "contributors": self.contributors,
             "summary": self.summary, "outlinks": self.outlinks, "digest": self.digest,
+            "tags": self.tags, "supports": self.supports, "contradicts": self.contradicts,
+            "connects": self.connects, "words": self.words,
         }
 
     @classmethod
@@ -632,14 +664,22 @@ def parse_note(path: Path) -> Note:
                             and rel.parts[1] == "reading") else None
     summary = front.get("summary")
 
-    # `connects:` entries are rendered as links on the page, so they belong in
-    # the graph too — otherwise the target's backlink list would disagree with
-    # what a reader can see pointing at it.
+    # `connects:`, `supports:` and `contradicts:` are rendered as links on the
+    # page, so they belong in the graph too — otherwise the target's backlink
+    # list would disagree with what a reader can see pointing at it.
+    connects = as_list(front.get("connects"))
+    supports = as_list(front.get("supports"))
+    contradicts = as_list(front.get("contradicts"))
     outlinks = extract_wiki_links(body)
-    for target in as_list(front.get("connects")):
+    for target in connects + supports + contradicts:
         outlinks[target] = outlinks.get(target, 0) + 1
 
     return Note(
+        tags=as_list(front.get("tags")),
+        supports=supports,
+        contradicts=contradicts,
+        connects=connects,
+        words=len(body.split()),
         rel=str(rel),
         member=rel.parts[0],
         folder="glossary" if is_glossary else (rel.parts[1] if len(rel.parts) > 2 else "_root"),
@@ -663,7 +703,10 @@ def parse_note(path: Path) -> Note:
 
 def reserved_urls() -> set[str]:
     """URLs the generator owns, so a note can never shadow an index page."""
-    urls = {"/wiki/index", "/wiki/all", "/wiki/glossary/index"}
+    urls = {"/wiki/index", "/wiki/all", "/wiki/glossary/index",
+            "/wiki/hubs", "/wiki/orphans", "/wiki/loose-links", "/wiki/changes",
+            "/wiki/special", "/wiki/search", "/wiki/wanted/index",
+            "/wiki/topics/index"}
     if NOTES_ROOT.is_dir():
         for p in sorted(NOTES_ROOT.iterdir()):
             if p.is_dir() and not p.name.startswith("."):
@@ -739,9 +782,16 @@ def git_history() -> tuple[dict[str, dict], list[dict]]:
 
 
 class LinkIndex:
-    """Resolution and backlinks for the whole corpus, built from the manifest's
-    outlink table — never from the rendering pass, so a partial rebuild sees the
-    same graph a full one does."""
+    """Resolution, backlinks and the wanted list for the whole corpus, built from
+    the manifest's outlink table — never from the rendering pass, so a partial
+    rebuild sees exactly the graph a full one does.
+
+    Resolution runs in tiers so that the canonical, case-sensitive graph the
+    knowledge lake uses stays the primary reading, and normalisation only ever
+    rescues links that would otherwise be dead:
+
+        exact note id  →  glossary alias  →  normalised slug  →  wanted
+    """
 
     def __init__(self, notes: list[Note]):
         self.by_id: dict[str, list[Note]] = defaultdict(list)
@@ -758,54 +808,230 @@ class LinkIndex:
                 elif alias not in self.aliases:
                     self.aliases[alias] = note
 
+        # Normalised index. A slug claimed by more than one distinct note id is
+        # not safe to guess at, so it resolves to nothing and stays wanted.
+        claims: dict[str, set[str]] = defaultdict(set)
+        owners: dict[str, Note] = {}
+        for note in sorted(notes, key=lambda n: n.rel):
+            key = slugify(note.note_id)
+            claims[key].add(note.note_id)
+            owners.setdefault(key, note)
+        for alias, note in sorted(self.aliases.items()):
+            key = slugify(alias)
+            if key not in claims:
+                claims[key].add(alias)
+                owners.setdefault(key, note)
+        self.by_slug = {k: owners[k] for k, ids in claims.items() if len(ids) == 1}
+        self.slug_conflicts = {k: sorted(ids) for k, ids in claims.items() if len(ids) > 1}
+
+        # Every way a note can be named, normalised — its filename stem and its
+        # displayed title both count, because contributors use either.
+        self.by_name: dict[str, list[Note]] = defaultdict(list)
+        for note in sorted(notes, key=lambda n: n.rel):
+            for key in dict.fromkeys([slugify(note.note_id), slugify(note.title)]):
+                if key:
+                    self.by_name[key].append(note)
+
+        # A glossary term and the concept note of the same name are the same
+        # idea at two stages of settling, so each page has to be able to find
+        # the other. Match on the normalised name, never on identity.
+        self.defined: dict[str, Note] = {}
+        for note in sorted((n for n in notes if n.kind == "glossary"), key=lambda n: n.rel):
+            for name in [note.term, note.note_id, *note.aliases]:
+                self.defined.setdefault(slugify(name), note)
+
+        # Tags become topic pages once shared. Everything downstream of this —
+        # the topic pages, the topic index, the rail — reads this one table.
+        buckets: dict[str, list[Note]] = defaultdict(list)
+        labels: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+        for note in sorted(notes, key=lambda n: n.rel):
+            for tag in dict.fromkeys(note.tags):
+                key = slugify(tag)
+                if not key:
+                    continue
+                buckets[key].append(note)
+                labels[key][tag] += 1
+        self.topics = {k: v for k, v in buckets.items() if len(v) >= TOPIC_MIN_NOTES}
+        self.topic_labels = {
+            k: max(sorted(labels[k]), key=lambda t: labels[k][t]) for k in self.topics
+        }
+
+        # One pass over every edge in the corpus, in a fixed order.
         self.backlinks: dict[str, list[Note]] = defaultdict(list)
-        self.dangling: dict[str, int] = defaultdict(int)
+        self.targets: dict[str, list[Note]] = defaultdict(list)
+        self.wanted: dict[str, int] = defaultdict(int)
+        self.wanted_sources: dict[str, list[Note]] = defaultdict(list)
+        self.loose: dict[str, Note] = {}
+        self.loose_sources: dict[str, list[Note]] = defaultdict(list)
         self.resolved_hits = 0
+        self.loose_hits = 0
         for note in sorted(notes, key=lambda n: n.rel):
             for target, count in sorted(note.outlinks.items()):
-                dest = self.lookup(target)
+                dest, tier = self.resolve(target)
                 if dest is None:
-                    self.dangling[target] += count
+                    self.wanted[target] += count
+                    self.wanted_sources[target].append(note)
                     continue
                 self.resolved_hits += count
-                if dest is not note and note not in self.backlinks[dest.url]:
-                    self.backlinks[dest.url].append(note)
+                if tier == "slug":
+                    self.loose_hits += count
+                    self.loose[target] = dest
+                    self.loose_sources[target].append(note)
+                if dest is not note:
+                    if note not in self.backlinks[dest.url]:
+                        self.backlinks[dest.url].append(note)
+                    if dest not in self.targets[note.rel]:
+                        self.targets[note.rel].append(dest)
 
-    def lookup(self, target: str) -> Note | None:
-        """Case-sensitive exact match on note id, then on glossary aliases."""
+    def resolve(self, target: str) -> tuple[Note | None, str]:
+        """(destination, tier). Tier is exact | alias | slug | ''."""
         hit = self.by_id.get(target)
         if hit:
-            return sorted(hit, key=lambda n: n.rel)[0]
-        return self.aliases.get(target)
+            return sorted(hit, key=lambda n: n.rel)[0], "exact"
+        alias = self.aliases.get(target)
+        if alias is not None:
+            return alias, "alias"
+        near = self.by_slug.get(slugify(target))
+        if near is not None:
+            return near, "slug"
+        return None, ""
+
+    def lookup(self, target: str) -> Note | None:
+        return self.resolve(target)[0]
+
+    def glossary_for(self, note: Note) -> Note | None:
+        """The glossary entry that defines this note's subject, if there is one."""
+        if note.kind == "glossary":
+            return None
+        for name in (note.note_id, note.title):
+            hit = self.defined.get(slugify(name))
+            if hit is not None:
+                return hit
+        return None
+
+    def notes_for_term(self, term: Note) -> list[Note]:
+        """Notes whose own name is this glossary term — the working pages behind
+        the definition, as opposed to everything that merely mentions it."""
+        keys = sorted({slugify(n) for n in [term.term, term.note_id, *term.aliases] if slugify(n)})
+        seen: list[Note] = []
+        for key in keys:
+            for note in self.by_name.get(key) or []:
+                if note.kind != "glossary" and note not in seen:
+                    seen.append(note)
+        return sorted(seen, key=lambda n: (-self.inbound(n), n.title.lower(), n.rel))
+
+    def inbound(self, note: Note) -> int:
+        return len(self.backlinks.get(note.url) or [])
+
+    def outbound(self, note: Note) -> int:
+        return len(self.targets.get(note.rel) or [])
+
+    def alongside(self, note: Note, limit: int = 7) -> list[tuple[Note, int]]:
+        """Notes that get cited in the same breath as this one.
+
+        For every note S that links here, count what else S links to. A note
+        that keeps turning up next to this one in other people's arguments is a
+        lateral move worth offering — and unlike a folder, nobody had to file it.
+
+        Invalidation note: this reading depends only on `sources(note)` and what
+        those sources link to, so it can only change when a note that links here
+        changes. `invalidated()` already re-renders every target of a changed
+        note, which is exactly that set.
+        """
+        scores: dict[str, int] = defaultdict(int)
+        seen: dict[str, Note] = {}
+        for source in self.backlinks.get(note.url) or []:
+            for peer in self.targets.get(source.rel) or []:
+                if peer is note:
+                    continue
+                scores[peer.rel] += 1
+                seen[peer.rel] = peer
+        ranked = sorted(scores.items(), key=lambda kv: (-kv[1], seen[kv[0]].title.lower(), kv[0]))
+        return [(seen[rel], hits) for rel, hits in ranked[:limit] if hits > 1]
+
+    def wanted_groups(self) -> list[dict]:
+        """Wanted targets folded by slug, newest spelling wins the display name.
+
+        `[[Data Generation Process]]` and `[[data-generation-process]]` are one
+        missing page, not two, so they share one wanted page and pool the notes
+        asking for them.
+        """
+        groups: dict[str, dict] = {}
+        for target in sorted(self.wanted):
+            key = slugify(target)
+            group = groups.setdefault(key, {"slug": key, "names": [], "hits": 0, "sources": []})
+            group["names"].append(target)
+            group["hits"] += self.wanted[target]
+            for source in self.wanted_sources[target]:
+                if source not in group["sources"]:
+                    group["sources"].append(source)
+        for group in groups.values():
+            # The most-linked spelling is the one the club actually writes.
+            group["name"] = max(group["names"], key=lambda t: (self.wanted[t], t))
+            group["sources"].sort(key=lambda n: (n.member, n.title.lower(), n.rel))
+        return sorted(groups.values(), key=lambda g: (-len(g["sources"]), -g["hits"], g["slug"]))
+
+
+def wanted_url(slug: str) -> str:
+    return f"/wiki/wanted/{slug}"
+
+
+def topic_url(slug: str) -> str:
+    return f"/wiki/topics/{slug}"
 
 
 def make_resolver(index: LinkIndex):
     def resolve(target: str, anchor: str, label: str) -> str:
-        dest = index.lookup(target)
+        dest, tier = index.resolve(target)
         if dest is None:
-            return (f'<span class="wikilink-missing" '
-                    f'title="No note in raw-notes/ is named &quot;{esc(target)}&quot;">'
-                    f"{esc(label)}</span>")
+            # Classic red link: the page does not exist, and saying so out loud
+            # is an invitation, not an error. It goes somewhere useful.
+            return (f'<a class="wikilink-wanted" href="{esc(wanted_url(slugify(target)))}" '
+                    f'title="No note is called &quot;{esc(target)}&quot; yet — see who is asking for it">'
+                    f"{esc(label)}</a>")
         frag = f"#{esc(slugify(anchor))}" if anchor else ""
         cls = "wikilink wikilink-glossary" if dest.kind == "glossary" else "wikilink"
-        return f'<a class="{cls}" href="{esc(dest.url)}{frag}">{esc(label)}</a>'
+        # A normalised hit reads as an ordinary link; the mismatch is a job for
+        # an editor, listed on /wiki/loose-links, not a wart for every reader.
+        hint = (f' title="Written [[{esc(target)}]], resolved to {esc(dest.note_id)}"'
+                if tier == "slug" else "")
+        return f'<a class="{cls}" href="{esc(dest.url)}{frag}"{hint}>{esc(label)}</a>'
     return resolve
 
 
 # ─── Page shell ──────────────────────────────────────────────────────────────
 
 
+WIKINAV_ITEMS = [
+    ("/wiki/", "Index"),
+    ("/wiki/all", "A–Z"),
+    ("/wiki/glossary/", "Glossary"),
+    ("/wiki/topics/", "Topics"),
+    ("/wiki/hubs", "Most linked"),
+    ("/wiki/wanted/", "Wanted"),
+    ("/wiki/special", "Special"),
+]
+
+
 def wikinav(active: str = "") -> str:
-    items = [("/wiki/", "Wiki home"), ("/wiki/all", "All notes"), ("/wiki/glossary/", "Glossary")]
     links = "".join(
-        f'<a href="{href}"{" aria-current=\"page\"" if href == active else ""}>{label}</a>'
-        for href, label in items
+        f'<a href="{href}"{" aria-current=\"page\"" if href == active else ""}>{esc(label)}</a>'
+        for href, label in WIKINAV_ITEMS
     )
-    return f'  <nav class="wikinav" aria-label="Wiki">{links}</nav>'
+    return f'''  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links">{links}</div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>'''
 
 
 def shell(title: str, body: str, active: str = "", description: str = "",
-          script: str = "", stamp: str = "") -> str:
+          script: str = "", stamp: str = "", wide: bool = False) -> str:
     """No wall-clock timestamp anywhere: identical input must give identical
     bytes, or every deploy re-uploads all ~1000 pages."""
     desc = f'\n  <meta name="description" content="{esc(description)}">' if description else ""
@@ -819,19 +1045,80 @@ def shell(title: str, body: str, active: str = "", description: str = "",
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
   </header>
 {SITENAV}
 {wikinav(active)}
-  <main class="wiki">
+  <main class="wiki{' wiki-wide' if wide else ''}">
 {body}
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 {tail}</body>
 </html>
 '''
+
+
+# ─── The index plate ─────────────────────────────────────────────────────────
+#
+# One typographic primitive, used on the front page, the most-linked page, the
+# topic pages, the wanted list and the orphan list. A row is always the same
+# claim: a name, what it is, and the number of notes leaning on it — set with
+# the figure in the margin like the page reference in a back-of-book index.
+# Type size steps with that figure, so a column of rows reads as a skyline
+# before you read a single word.
+
+PLATE_STEPS = ((60, "mag-4"), (25, "mag-3"), (8, "mag-2"), (0, "mag-1"))
+
+
+def magnitude(count: int) -> str:
+    for floor, cls in PLATE_STEPS:
+        if count >= floor:
+            return cls
+    return "mag-1"
+
+
+def plate_row(href: str, name: str, figure: int, gloss: str = "", meta: str = "",
+              scaled: bool = True, unit: str = "", wanted: bool = False) -> str:
+    """One line of the index plate."""
+    cls = "plate-row " + (magnitude(figure) if scaled else "mag-1")
+    if wanted:
+        cls += " plate-wanted"
+    gloss_html = f'\n      <p class="plate-gloss">{gloss}</p>' if gloss else ""
+    meta_html = f'<span class="plate-meta">{meta}</span>' if meta else ""
+    unit_html = f'<span class="plate-unit">{esc(unit)}</span>' if unit else ""
+    return (f'      <li class="{cls}">\n'
+            f'        <span class="plate-line">'
+            f'<a class="plate-name" href="{esc(href)}">{esc(name)}</a>'
+            f'<span class="plate-leader" aria-hidden="true"></span>'
+            f'<span class="plate-figure">{figure}{unit_html}</span></span>'
+            f"{meta_html}{gloss_html}\n      </li>")
+
+
+def plate(rows: list[str], extra: str = "") -> str:
+    if not rows:
+        return '    <p class="empty-state">Nothing here yet.</p>'
+    cls = f"plate {extra}".strip()
+    return f'    <ul class="{cls}">\n' + "\n".join(rows) + "\n    </ul>"
+
+
+def section(label: str, inner: str, aside: str = "", note: str = "", ident: str = "") -> str:
+    """A labelled register: eyebrow on the left, a link or count on the right."""
+    right = f'<span class="section-aside">{aside}</span>' if aside else ""
+    note_html = f'\n    <p class="section-note">{note}</p>' if note else ""
+    attr = f' id="{esc(ident)}"' if ident else ""
+    return (f'  <section{attr}>\n    <h2 class="register">'
+            f'<span>{esc(label)}</span>{right}</h2>{note_html}\n{inner}\n  </section>')
+
+
+def figure_band(pairs: list[tuple[str, str]]) -> str:
+    cells = "".join(
+        f'      <div class="band-cell"><b>{value}</b><span>{esc(label)}</span></div>\n'
+        for value, label in pairs
+    )
+    return f'  <div class="figure-band">\n{cells}  </div>'
 
 
 def write(path: Path, content: str) -> bool:
@@ -894,28 +1181,101 @@ def note_meta_line(note: Note) -> str:
                     f"{esc(book_title(note.book)[0])}</a>")
     elif note.folder and note.folder != "_root":
         bits.append(esc(folder_label(note.folder)))
-    updated = note.front.get("last_updated") or (note.git or {}).get("date")
+    updated = (note.front or {}).get("last_updated") or (note.git or {}).get("date")
     if updated:
         bits.append(f"updated {esc(fmt_date(updated))}")
     github = GITHUB_BLOB + quote(f"raw-notes/{note.rel}", safe="/")
     bits.append(f'<a href="{esc(github)}">source on GitHub</a>')
-    return '  <div class="note-byline">' + " · ".join(bits) + "</div>"
+    return '    <div class="note-byline">' + " · ".join(bits) + "</div>"
 
 
-def backlinks_section(index: LinkIndex, note: Note) -> str:
-    refs = index.backlinks.get(note.url) or []
-    if not refs:
-        return ('  <section class="backlinks">\n'
-                '    <h2>Linked from</h2>\n'
-                '    <p class="empty-state">No other note links here yet.</p>\n'
-                "  </section>")
-    rows = "\n".join(
-        f'      <li><a href="{esc(src.url)}">{esc(src.title)}</a>'
-        f' <span class="muted">{esc(member_label(src.member))}</span></li>'
-        for src in sorted(refs, key=lambda n: (n.member, n.title.lower(), n.rel))
+def rail_block(label: str, inner: str, count: str = "") -> str:
+    figure = f'<span class="rail-count">{esc(count)}</span>' if count else ""
+    return (f'    <div class="rail-block">\n      <h2 class="rail-label">'
+            f"<span>{esc(label)}</span>{figure}</h2>\n{inner}\n    </div>")
+
+
+def rail_note_list(notes: list[Note], index: LinkIndex, show: int = 8,
+                   more_label: str = "more") -> str:
+    """A list of notes, first `show` open, the rest behind a native disclosure."""
+    def row(note: Note) -> str:
+        return (f'        <li><a href="{esc(note.url)}">{esc(note.title)}</a>'
+                f'<span class="rail-where">{esc(member_label(note.member))}</span></li>')
+
+    head, tail = notes[:show], notes[show:]
+    out = '      <ul class="rail-list">\n' + "\n".join(row(n) for n in head) + "\n      </ul>"
+    if tail:
+        out += (f'\n      <details class="rail-more">\n'
+                f'        <summary>{len(tail)} {esc(more_label)}</summary>\n'
+                f'        <ul class="rail-list">\n' + "\n".join(row(n) for n in tail)
+                + "\n        </ul>\n      </details>")
+    return out
+
+
+def note_rail(note: Note, index: LinkIndex) -> str:
+    blocks: list[str] = []
+
+    # Bearings: where this note sits in the graph, in figures.
+    inbound, outbound = index.inbound(note), index.outbound(note)
+    blocks.append(
+        '    <div class="rail-block rail-bearings">\n'
+        f'      <div class="bearing"><b>{inbound}</b><span>linked from</span></div>\n'
+        f'      <div class="bearing"><b>{outbound}</b><span>links out</span></div>\n'
+        f'      <div class="bearing"><b>{note.words or 0}</b><span>words</span></div>\n'
+        "    </div>"
     )
-    return (f'  <section class="backlinks">\n    <h2>Linked from <span class="count">{len(refs)}</span></h2>\n'
-            f"    <ul>\n{rows}\n    </ul>\n  </section>")
+
+    # The settled definition, when the club has one for this note's subject.
+    term = index.glossary_for(note)
+    if term is not None:
+        gloss = re.sub(r"\s+", " ", term.summary or "").strip()
+        gloss = gloss[:180] + ("…" if len(gloss) > 180 else "")
+        blocks.append(rail_block("Defined as", (
+            f'      <a class="rail-term" href="{esc(term.url)}">{esc(term.term)}</a>\n'
+            f"      {status_badge(term.status)}\n"
+            f'      <p class="rail-gloss">{esc(gloss)}</p>'
+        )))
+
+    refs = sorted(index.backlinks.get(note.url) or [],
+                  key=lambda n: (-index.inbound(n), n.title.lower(), n.rel))
+    blocks.append(rail_block(
+        "What links here",
+        rail_note_list(refs, index) if refs
+        else '      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>',
+        count=str(len(refs)),
+    ))
+
+    peers = index.alongside(note)
+    if peers:
+        rows = "\n".join(
+            f'        <li><a href="{esc(peer.url)}">{esc(peer.title)}</a>'
+            f'<span class="rail-where">{hits}</span></li>'
+            for peer, hits in peers
+        )
+        blocks.append(rail_block("Mentioned alongside", (
+            f'      <ul class="rail-list rail-scored">\n{rows}\n      </ul>\n'
+            '      <p class="rail-hint">Notes the same pages link to.</p>'
+        )))
+
+    # Typed edges the contributor declared by hand.
+    resolver = make_resolver(index)
+    for label, targets in (("Supports", note.supports), ("Contradicts", note.contradicts),
+                           ("Connects", note.connects)):
+        if targets:
+            links = "".join(f'<li>{resolver(t, "", t)}</li>' for t in targets)
+            blocks.append(rail_block(label, f'      <ul class="rail-edges">{links}</ul>'))
+
+    if note.tags:
+        chips = []
+        for tag in dict.fromkeys(note.tags):
+            key = slugify(tag)
+            if key in index.topics:
+                chips.append(f'<a class="tag" href="{esc(topic_url(key))}">{esc(tag)}</a>')
+            else:
+                chips.append(f'<span class="tag tag-lone" title="Only this note uses it">{esc(tag)}</span>')
+        blocks.append(rail_block("Topics", '      <div class="tags">' + "".join(chips) + "</div>"))
+
+    return '  <aside class="rail" aria-label="Connections">\n' + "\n".join(blocks) + "\n  </aside>"
 
 
 def render_note_page(note: Note, index: LinkIndex) -> str:
@@ -932,45 +1292,35 @@ def render_note_page(note: Note, index: LinkIndex) -> str:
 
     summary_html = ""
     if note.summary:
-        summary_html = ('  <div class="note-summary">' + renderer.inline(note.summary.strip())
+        summary_html = ('    <div class="note-summary">' + renderer.inline(note.summary.strip())
                         + "</div>")
-
-    tags = as_list(note.front.get("tags"))
-    tags_html = ('  <div class="tags">' + "".join(f'<span class="tag">{esc(t)}</span>' for t in tags)
-                 + "</div>") if tags else ""
-
-    connects = as_list(note.front.get("connects"))
-    connects_html = ""
-    if connects:
-        resolver = make_resolver(index)
-        connects_html = ('  <p class="note-connects"><b>Connects:</b> '
-                         + ", ".join(resolver(t, "", t) for t in connects) + "</p>")
 
     git = note.git or {}
     history = ""
     if git:
-        history = (f'  <p class="note-history">Last changed {esc(fmt_date(git["date"]))} by '
+        history = (f'    <p class="note-history">Last changed {esc(fmt_date(git["date"]))} by '
                    f'{esc(git["author"])} — <a href="{GITHUB_COMMIT}{esc(git["sha"])}">'
                    f'{esc(git["subject"])}</a></p>')
 
     body = "\n".join(filter(None, [
         breadcrumb(crumbs),
+        '  <div class="spread">',
         '  <article class="note">',
         f"    <h1>{esc(note.title)}</h1>",
         note_meta_line(note),
         summary_html,
-        tags_html,
-        connects_html,
         '    <div class="prose">',
         body_html,
         "    </div>",
-        "  </article>",
-        backlinks_section(index, note),
         history,
-        '  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, '
+        '    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, '
         "not a settled club position.</p>",
+        "  </article>",
+        note_rail(note, index),
+        "  </div>",
     ]))
-    return shell(note.title, body, description=note.summary[:200] if note.summary else "")
+    return shell(note.title, body, wide=True,
+                 description=note.summary[:200] if note.summary else "")
 
 
 # ─── Glossary pages ──────────────────────────────────────────────────────────
@@ -992,67 +1342,129 @@ def render_glossary_term(note: Note, index: LinkIndex) -> str:
         meta.append("also called " + ", ".join(f"<em>{esc(a)}</em>" for a in extra))
     if note.contributors:
         meta.append("developed by " + ", ".join(esc(member_label(c)) for c in note.contributors))
-    updated = note.front.get("last_updated") or (note.git or {}).get("date")
+    updated = (note.front or {}).get("last_updated") or (note.git or {}).get("date")
     if updated:
         meta.append("updated " + esc(fmt_date(updated)))
     github = GITHUB_BLOB + quote(f"raw-notes/{note.rel}", safe="/")
     meta.append(f'<a href="{esc(github)}">source on GitHub</a>')
 
+    blocks: list[str] = []
+    inbound = index.inbound(note)
+    blocks.append(
+        '    <div class="rail-block rail-bearings">\n'
+        f'      <div class="bearing"><b>{inbound}</b><span>notes use it</span></div>\n'
+        f'      <div class="bearing"><b>{note.words or 0}</b><span>words</span></div>\n'
+        "    </div>"
+    )
+
+    # The working pages that carry this term. A definition and the notes that
+    # bear its name are one idea at two stages, so the entry says which is which.
+    working = index.notes_for_term(note)
+    if working:
+        rows = "\n".join(
+            f'        <li><a href="{esc(n.url)}">{esc(n.title)}</a>'
+            f'<span class="rail-where">{index.inbound(n)}</span></li>' for n in working)
+        blocks.append(rail_block("The notes behind it", (
+            f'      <ul class="rail-list rail-scored">\n{rows}\n      </ul>\n'
+            '      <p class="rail-hint">Notes named for this term. The definition is '
+            "the summary; these are the argument.</p>"
+        )))
+
+    refs = sorted(index.backlinks.get(note.url) or [],
+                  key=lambda n: (-index.inbound(n), n.title.lower(), n.rel))
+    named = {n.rel for n in working}
+    using = [n for n in refs if n.rel not in named]
+    blocks.append(rail_block(
+        "Used in",
+        rail_note_list(using, index) if using
+        else '      <p class="rail-empty">No note has used this term yet.</p>',
+        count=str(len(using)),
+    ))
+    rail = '  <aside class="rail" aria-label="Connections">\n' + "\n".join(blocks) + "\n  </aside>"
+
     body = "\n".join(filter(None, [
         breadcrumb([("/wiki/", "Wiki"), ("/wiki/glossary/", "Glossary"), ("", note.term)]),
+        '  <div class="spread">',
         '  <article class="note glossary-entry">',
+        '    <p class="eyebrow">Glossary term</p>',
         f"    <h1>{esc(note.term)}</h1>",
         '    <div class="note-byline">' + " · ".join(meta) + "</div>",
         '    <div class="prose">',
         body_html,
         "    </div>",
-        "  </article>",
-        backlinks_section(index, note),
-        '  <p class="note-foot">A glossary entry is a definition under construction. '
+        '    <p class="note-foot">A glossary entry is a definition under construction. '
         "To sharpen it, edit <code>raw-notes/commons/glossary/</code> and open a PR — "
-        'see the <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/glossary/README.md">'
+        f'see the <a href="{GITHUB_BLOB}raw-notes/commons/glossary/README.md">'
         "glossary README</a>.</p>",
+        "  </article>",
+        rail,
+        "  </div>",
     ]))
-    return shell(f"{note.term} — Glossary", body, active="/wiki/glossary/",
+    return shell(f"{note.term} — Glossary", body, active="/wiki/glossary/", wide=True,
                  description=note.summary[:200] if note.summary else "")
 
 
-def render_glossary_index(terms: list[Note], index: LinkIndex) -> str:
+def glossary_card(note: Note, index: LinkIndex) -> str:
+    summary = note.summary
+    if not summary:
+        note.hydrate()
+        first = next((b for b in note.body.split("\n\n") if b.strip() and not b.startswith("#")), "")
+        summary = re.sub(r"\s+", " ", re.sub(r"[*_`>]", "", first)).strip()[:220]
+    extra = [a for a in note.aliases if a != note.term]
+    aliases = f'<span class="muted">also called {esc(", ".join(extra))}</span>' if extra else ""
+    backs = index.inbound(note)
+    return (
+        f'      <li class="term-card">\n'
+        f'        <div class="term-head"><a href="{esc(note.url)}">{esc(note.term)}</a>'
+        f" {status_badge(note.status)} {aliases}</div>\n"
+        f'        <p class="term-gloss">{MarkdownRenderer().inline(summary)}</p>\n'
+        f'        <div class="term-meta">{backs} note{" links" if backs == 1 else "s link"} here</div>\n'
+        f"      </li>"
+    )
+
+
+def undefined_candidates(index: LinkIndex, notes: list[Note], limit: int = 10) -> list[Note]:
+    """Load-bearing concepts with no agreed definition — the glossary's worklist."""
+    out = []
+    for note in sorted(notes, key=lambda n: (-index.inbound(n), n.title.lower(), n.rel)):
+        if note.kind == "glossary" or note.folder not in ("concepts", "synthesis"):
+            continue
+        if index.glossary_for(note) is not None:
+            continue
+        out.append(note)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def render_glossary_index(terms: list[Note], index: LinkIndex, notes: list[Note]) -> str:
     if terms:
-        rows = []
-        for note in sorted(terms, key=lambda n: (n.term.lower(), n.rel)):
-            summary = note.summary
-            if not summary:
-                note.hydrate()
-                first = next((b for b in note.body.split("\n\n") if b.strip() and not b.startswith("#")), "")
-                summary = re.sub(r"\s+", " ", re.sub(r"[*_`>]", "", first)).strip()[:220]
-            extra = [a for a in note.aliases if a != note.term]
-            aliases = f'<span class="muted">aka {esc(", ".join(extra))}</span>' if extra else ""
-            backs = len(index.backlinks.get(note.url) or [])
-            rows.append(
-                f'    <li class="glossary-row">\n'
-                f'      <div class="glossary-head"><a href="{esc(note.url)}">{esc(note.term)}</a>'
-                f" {status_badge(note.status)} {aliases}</div>\n"
-                f'      <p class="glossary-gloss">{MarkdownRenderer().inline(summary)}</p>\n'
-                f'      <div class="glossary-meta">{backs} note{" links" if backs == 1 else "s link"} here</div>\n'
-                f"    </li>"
-            )
-        listing = '  <ul class="glossary-list">\n' + "\n".join(rows) + "\n  </ul>"
+        cards = "\n".join(glossary_card(n, index)
+                          for n in sorted(terms, key=lambda n: (n.term.lower(), n.rel)))
+        listing = f'    <ul class="term-list">\n{cards}\n    </ul>'
     else:
-        listing = '  <p class="empty-state">No glossary entries yet.</p>'
+        listing = '    <p class="empty-state">No glossary entries yet.</p>'
+
+    waiting = undefined_candidates(index, notes)
+    rows = [plate_row(n.url, n.title, index.inbound(n), meta=esc(member_label(n.member)))
+            for n in waiting]
 
     body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "Glossary")])}
+  <p class="eyebrow">The vocabulary the club has agreed on</p>
   <h1>Glossary</h1>
-  <p class="lede">Terms the club is actively defining. A glossary entry is not a
-  dictionary definition copied in from outside — it is <em>our</em> working
-  definition, sharpened as the theory develops, with the notes that use the term
-  linked underneath it.</p>
-  <p class="lede small">Each entry carries a status: {status_badge("seed")} first draft,
-  worth arguing with · {status_badge("developing")} in active use, still moving ·
-  {status_badge("settled")} the club has converged.
-  Add or evolve a term by editing <code>raw-notes/commons/glossary/</code> —
-  <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/glossary/README.md">how to contribute</a>.</p>
-{listing}
+  <p class="lede">A glossary entry is not a dictionary definition copied in from
+  outside. It is <em>our</em> working definition, sharpened as the theory
+  develops, with every note that uses the term gathered underneath it.</p>
+  <p class="lede small">Status says how settled a term is: {status_badge("seed")} first
+  draft, worth arguing with · {status_badge("developing")} in active use, still
+  moving · {status_badge("settled")} the club has converged. Add or evolve a term
+  by editing <code>raw-notes/commons/glossary/</code> —
+  <a href="{GITHUB_BLOB}raw-notes/commons/glossary/README.md">how to contribute</a>.</p>
+{section("Defined", listing, aside=f"{len(terms)} terms")}
+{section("Waiting for a definition", plate(rows),
+         aside='<a href="/wiki/hubs">all →</a>',
+         note="The concepts the corpus leans on hardest that no entry defines yet. "
+              "The figure is how many notes link to them.")}
 '''
     return shell("Glossary", body, active="/wiki/glossary/",
                  description="Working definitions the World Machines book club is developing.")
@@ -1061,17 +1473,20 @@ def render_glossary_index(terms: list[Note], index: LinkIndex) -> str:
 # ─── Index pages ─────────────────────────────────────────────────────────────
 
 
-def note_row(note: Note, show_member: bool = False) -> str:
-    gloss = ""
-    if note.summary:
-        text = re.sub(r"\s+", " ", note.summary.strip())
-        gloss = f'<p class="row-gloss">{esc(text[:240] + ("…" if len(text) > 240 else ""))}</p>'
-    who = f' <span class="muted">{esc(member_label(note.member))}</span>' if show_member else ""
-    return (f'      <li class="row"><a href="{esc(note.url)}">{esc(note.title)}</a>{who}\n'
-            f"        {gloss}</li>")
+def clip(text: str, limit: int) -> str:
+    text = re.sub(r"\s+", " ", (text or "").strip())
+    return text[:limit] + ("…" if len(text) > limit else "")
 
 
-def render_member_index(member: str, notes: list[Note]) -> str:
+def note_plate_row(note: Note, index: LinkIndex, scaled: bool = True,
+                   gloss_len: int = 0, show_member: bool = False) -> str:
+    meta = esc(member_label(note.member)) if show_member else ""
+    return plate_row(note.url, note.title, index.inbound(note),
+                     gloss=esc(clip(note.summary, gloss_len)) if gloss_len else "",
+                     meta=meta, scaled=scaled)
+
+
+def render_member_index(member: str, notes: list[Note], index: LinkIndex) -> str:
     groups: dict[str, list[Note]] = defaultdict(list)
     books: dict[str, list[Note]] = defaultdict(list)
     for note in notes:
@@ -1079,134 +1494,431 @@ def render_member_index(member: str, notes: list[Note]) -> str:
 
     sections = []
     if books:
-        cards = []
+        rows = []
         for book_id in sorted(books, key=lambda b: (book_title(b)[0].lower(), b)):
             title, author, year = book_title(book_id)
-            meta = " · ".join(filter(None, [author, year, f"{len(books[book_id])} notes"]))
-            cards.append(
-                f'      <li class="book-card"><a href="/wiki/commons/reading/{slugify(book_id)}/">'
-                f'{esc(title)}</a><span class="muted">{esc(meta)}</span></li>'
-            )
-        sections.append('  <section>\n    <h2>Books</h2>\n    <ul class="book-list">\n'
-                        + "\n".join(cards) + "\n    </ul>\n  </section>")
+            rows.append(plate_row(f"/wiki/commons/reading/{slugify(book_id)}/", title,
+                                  len(books[book_id]), unit=" notes", scaled=False,
+                                  meta=esc(" · ".join(filter(None, [author, year])))))
+        sections.append(section("Books read", plate(rows)))
 
-    ordered = [f for f in FOLDER_ORDER if f in groups] + sorted(f for f in groups if f not in FOLDER_ORDER)
+    ordered = ([f for f in FOLDER_ORDER if f in groups]
+               + sorted(f for f in groups if f not in FOLDER_ORDER))
     for folder in ordered:
-        items = sorted(groups[folder], key=lambda n: (n.title.lower(), n.rel))
-        rows = "\n".join(note_row(n) for n in items)
-        sections.append(f'  <section>\n    <h2>{esc(folder_label(folder))} '
-                        f'<span class="count">{len(items)}</span></h2>\n'
-                        f'    <ul class="rows">\n{rows}\n    </ul>\n  </section>')
+        items = sorted(groups[folder], key=lambda n: (-index.inbound(n), n.title.lower(), n.rel))
+        rows = "\n".join(note_plate_row(n, index, gloss_len=180) for n in items)
+        sections.append(section(folder_label(folder), plate([rows]),
+                                aside=f"{len(items)}"))
 
     blurb = MEMBER_BLURBS.get(member, "")
+    total_in = sum(index.inbound(n) for n in notes)
     body = "\n".join(filter(None, [
         breadcrumb([("/wiki/", "Wiki"), ("", member_label(member))]),
+        '  <p class="eyebrow">Contributor</p>',
         f"  <h1>{esc(member_label(member))}</h1>",
-        f'  <p class="lede small">{len(notes)} published note{"" if len(notes) == 1 else "s"} from '
-        f'<code>raw-notes/{esc(member)}/</code>.</p>',
         f'  <p class="lede">{blurb}</p>' if blurb else "",
+        figure_band([(str(len(notes)), "notes"), (str(total_in), "inbound links"),
+                     (str(len(books)), "books")]),
+        '  <p class="lede small">Ranked by how much the rest of the corpus leans on each note. '
+        f'Source files live in <code>raw-notes/{esc(member)}/</code>.</p>',
         *sections,
     ]))
     return shell(member_label(member), body,
                  description=f"Working notes by {member_label(member)} in the World Machines wiki.")
 
 
-def render_book_index(book_id: str, notes: list[Note]) -> str:
+def render_book_index(book_id: str, notes: list[Note], index: LinkIndex) -> str:
     title, author, year = book_title(book_id)
-    rows = "\n".join(note_row(n) for n in sorted(notes, key=lambda n: n.rel))
+    # Reading order carries the meaning here, so the figures do not scale the
+    # type — the sequence is the structure, not the ranking.
+    rows = [note_plate_row(n, index, scaled=False, gloss_len=190)
+            for n in sorted(notes, key=lambda n: n.rel)]
     meta = " · ".join(filter(None, [author, year]))
     body = "\n".join(filter(None, [
         breadcrumb([("/wiki/", "Wiki"), ("/wiki/commons/", "Commons"), ("", title)]),
+        '  <p class="eyebrow">Book</p>',
         f"  <h1>{esc(title)}</h1>",
         f'  <p class="lede small">{esc(meta)}{" · " if meta else ""}'
-        f'{len(notes)} reading notes · source id <code>{esc(book_id)}</code></p>',
+        f'source id <code>{esc(book_id)}</code></p>',
         "  <p class=\"lede\">Section-by-section reading notes produced by the club's ingestion "
         "pipeline and reviewed by a curator. The book's own text is never stored in the repo — "
-        "these are notes <em>about</em> it, in reading order.</p>",
-        f'  <ul class="rows">\n{rows}\n  </ul>',
+        "these are notes <em>about</em> it, in reading order. The figure on each row is how "
+        "many other notes link to it.</p>",
+        section("In reading order", plate(rows), aside=f"{len(notes)} notes"),
     ]))
     return shell(title, body, description=f"Club reading notes on {title}.")
 
 
-ALL_NOTES_SCRIPT = '''  <script>
-    (function () {
-      var box = document.getElementById('note-filter');
-      var count = document.getElementById('note-count');
-      if (!box) return;
-      var rows = Array.prototype.slice.call(document.querySelectorAll('#all-notes .row'))
-        .map(function (row) { return [row, row.textContent.toLowerCase()]; });
-      box.addEventListener('input', function () {
-        var q = box.value.trim().toLowerCase();
-        var shown = 0;
-        rows.forEach(function (pair) {
-          var hit = !q || pair[1].indexOf(q) !== -1;
-          pair[0].hidden = !hit;
-          if (hit) shown++;
-        });
-        count.textContent = shown;
-      });
-    })();
-  </script>
-'''
+ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
-def render_all_notes(notes: list[Note]) -> str:
-    rows = []
-    for note in sorted(notes, key=lambda n: (n.title.lower(), n.rel)):
-        where = member_label(note.member)
-        if note.book:
-            where += " · " + book_title(note.book)[0]
-        elif note.folder != "_root":
-            where += " · " + folder_label(note.folder)
-        rows.append(
-            f'      <li class="row"><a href="{esc(note.url)}">{esc(note.title)}</a> '
-            f'<span class="muted">{esc(where)}</span></li>'
+def letter_of(title: str) -> str:
+    for ch in slugify(title):
+        if ch.isalpha():
+            return ch.upper()
+        if ch.isdigit():
+            return "#"
+    return "#"
+
+
+def render_all_notes(notes: list[Note], index: LinkIndex) -> str:
+    groups: dict[str, list[Note]] = defaultdict(list)
+    for note in notes:
+        groups[letter_of(note.title)].append(note)
+
+    jump = "".join(
+        f'<a href="#letter-{ch}">{ch}</a>' if ch in groups
+        else f'<span class="jump-off">{ch}</span>'
+        for ch in ["#"] + list(ALPHABET)
+    )
+
+    blocks = []
+    for letter in ["#"] + list(ALPHABET):
+        items = groups.get(letter)
+        if not items:
+            continue
+        rows = "\n".join(
+            f'      <li class="az-row" data-search="{esc((n.title + " " + member_label(n.member)).lower())}">'
+            f'<a href="{esc(n.url)}">{esc(n.title)}</a>'
+            f'<span class="az-where">{esc(member_label(n.member))}</span>'
+            f'<span class="az-figure">{index.inbound(n)}</span></li>'
+            for n in sorted(items, key=lambda n: (n.title.lower(), n.rel))
         )
-    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "All notes")])}
-  <h1>All notes</h1>
-  <p class="lede small"><span id="note-count">{len(notes)}</span> of {len(notes)} notes</p>
-  <input id="note-filter" type="text" placeholder="Filter by title or contributor…" autocomplete="off">
-  <ul class="rows" id="all-notes">
-{chr(10).join(rows)}
-  </ul>
+        anchor = f"letter-{letter}" if letter != "#" else "letter-#"
+        blocks.append(
+            f'  <section class="az-block" id="{esc(anchor)}">\n'
+            f'    <h2 class="az-letter">{esc(letter)}</h2>\n'
+            f'    <ul class="az-list">\n{rows}\n    </ul>\n  </section>'
+        )
+
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "A–Z")])}
+  <p class="eyebrow">Every note, by title</p>
+  <h1>A–Z</h1>
+  <p class="lede small">The flat index. <span id="az-count">{len(notes)}</span> of {len(notes)} notes
+  shown — the figure on the right is how many notes link to each one.</p>
+  <input id="az-filter" type="search" placeholder="Filter by title or contributor" autocomplete="off" spellcheck="false">
+  <nav class="az-jump" aria-label="Jump to letter">{jump}</nav>
+{chr(10).join(blocks)}
 '''
-    return shell("All notes", body, active="/wiki/all", script=ALL_NOTES_SCRIPT,
-                 description="Every published note in the World Machines wiki.")
+    return shell("A–Z", body, active="/wiki/all",
+                 description="Every published note in the World Machines wiki, A to Z.")
+
+
+# ─── Special pages ───────────────────────────────────────────────────────────
+
+
+def render_hubs(notes: list[Note], index: LinkIndex) -> str:
+    ranked = sorted(notes, key=lambda n: (-index.inbound(n), n.title.lower(), n.rel))
+    ranked = [n for n in ranked if index.inbound(n) > 0]
+    rows = [note_plate_row(n, index, gloss_len=200, show_member=True) for n in ranked[:150]]
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "Most linked")])}
+  <p class="eyebrow">What the corpus leans on</p>
+  <h1>Most linked</h1>
+  <p class="lede">Nobody decided these were the important notes. They are the notes
+  the rest of the writing keeps reaching for, ranked by how many other notes link
+  to them. The type grows with the count, so the club's centre of gravity is
+  visible before you read a word.</p>
+{section("Ranked by inbound links", plate(rows), aside=f"top {len(rows)} of {len(ranked)}")}
+'''
+    return shell("Most linked", body, active="/wiki/hubs",
+                 description="The World Machines notes the rest of the corpus links to most.")
+
+
+def render_orphans(notes: list[Note], index: LinkIndex) -> str:
+    orphans = sorted((n for n in notes if index.inbound(n) == 0),
+                     key=lambda n: (n.member, n.title.lower(), n.rel))
+    by_member: dict[str, list[Note]] = defaultdict(list)
+    for note in orphans:
+        by_member[note.member].append(note)
+    blocks = []
+    for member in sorted(by_member):
+        rows = [plate_row(n.url, n.title, index.outbound(n), unit=" out",
+                          gloss=esc(clip(n.summary, 170)), scaled=False)
+                for n in by_member[member]]
+        blocks.append(section(member_label(member), plate(rows),
+                              aside=f"{len(by_member[member])}"))
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("/wiki/special", "Special"), ("", "Orphans")])}
+  <p class="eyebrow">Written, but never linked to</p>
+  <h1>Orphans</h1>
+  <p class="lede">{len(orphans)} notes that nothing else points at. An orphan is not
+  a bad note — it is usually a good one nobody has connected yet. Linking to it
+  from a note that belongs near it is the cheapest useful edit in the wiki. The
+  figure is how many links each one makes outward.</p>
+{chr(10).join(blocks) if blocks else '  <p class="empty-state">No orphans. Every note is linked from somewhere.</p>'}
+'''
+    return shell("Orphans", body, active="/wiki/special",
+                 description="World Machines notes that no other note links to.")
+
+
+def render_loose_links(index: LinkIndex) -> str:
+    rows = []
+    for target in sorted(index.loose, key=lambda t: (-len(index.loose_sources[t]), t)):
+        dest = index.loose[target]
+        sources = index.loose_sources[target]
+        rows.append(
+            f'      <li class="loose-row">\n'
+            f'        <code class="loose-written">[[{esc(target)}]]</code>\n'
+            f'        <span class="loose-arrow" aria-hidden="true">→</span>\n'
+            f'        <a class="loose-dest" href="{esc(dest.url)}">{esc(dest.note_id)}</a>\n'
+            f'        <span class="loose-count">{len(sources)} note{"" if len(sources) == 1 else "s"}</span>\n'
+            f"      </li>"
+        )
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("/wiki/special", "Special"), ("", "Loose links")])}
+  <p class="eyebrow">Links the wiki repaired on the way through</p>
+  <h1>Loose links</h1>
+  <p class="lede">Wiki-links resolve on the exact, case-sensitive filename stem —
+  the same rule the knowledge lake uses. These {len(index.loose)} were written a
+  different way and would have been dead ends, so the wiki matched them on the
+  normalised name and sent the reader to the right page anyway.</p>
+  <p class="lede small">They still read as ordinary links, because a reader should
+  not have to care. An editor should: rewriting each one at source in
+  <code>raw-notes/</code> makes the published graph and the lake's graph agree.</p>
+{section("Written one way, resolved another",
+         f'    <ul class="loose-list">\n{chr(10).join(rows)}\n    </ul>' if rows
+         else '    <p class="empty-state">Every link matches a filename exactly.</p>',
+         aside=f"{index.loose_hits} occurrences")}
+'''
+    return shell("Loose links", body, active="/wiki/special",
+                 description="Wiki-links that only resolve after name normalisation.")
+
+
+def render_changes(notes: list[Note], commits: list[dict], limit: int = 80) -> str:
+    by_path = {f"raw-notes/{n.rel}": n for n in notes}
+    rows = []
+    for commit in commits:
+        touched = [by_path[f] for f in commit["files"] if f in by_path]
+        if not touched:
+            continue
+        shown = touched[:8]
+        links = ", ".join(f'<a href="{esc(n.url)}">{esc(n.title)}</a>' for n in shown)
+        if len(touched) > len(shown):
+            links += f' <span class="muted">+{len(touched) - len(shown)} more</span>'
+        rows.append(
+            f'      <li class="change">\n'
+            f'        <div class="change-meta">{esc(fmt_date(commit["date"]))} · {esc(commit["author"])} · '
+            f'<a href="{GITHUB_COMMIT}{esc(commit["sha"])}">{esc(commit["sha"][:7])}</a> · '
+            f'{len(touched)} note{"" if len(touched) == 1 else "s"}</div>\n'
+            f'        <div class="change-subject">{esc(commit["subject"])}</div>\n'
+            f'        <div class="change-notes">{links}</div>\n'
+            f"      </li>"
+        )
+        if len(rows) >= limit:
+            break
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("/wiki/special", "Special"), ("", "Recent changes")])}
+  <p class="eyebrow">What the club has been writing</p>
+  <h1>Recent changes</h1>
+  <p class="lede">Every commit that touched a published note, newest first, straight
+  from the repository history.</p>
+{section("Commits", f'    <ul class="changes">\n{chr(10).join(rows)}\n    </ul>' if rows
+         else '    <p class="empty-state">No git history available.</p>',
+         aside=f"latest {len(rows)}")}
+'''
+    return shell("Recent changes", body, active="/wiki/special",
+                 description="Recent changes to the World Machines wiki.")
+
+
+def render_special(notes: list[Note], glossary: list[Note], index: LinkIndex,
+                   books: dict, commits: list[dict]) -> str:
+    orphans = sum(1 for n in notes if index.inbound(n) == 0)
+    wanted = index.wanted_groups()
+    entries = [
+        ("/wiki/hubs", "Most linked",
+         "Notes ranked by how many others point at them.",
+         f"{sum(1 for n in notes if index.inbound(n) > 0)} linked"),
+        ("/wiki/wanted/", "Wanted pages",
+         "Titles the writing keeps naming that no note answers to yet.",
+         f"{len(wanted)} wanted"),
+        ("/wiki/orphans", "Orphans",
+         "Notes nothing links to — good writing waiting to be connected.",
+         f"{orphans} orphans"),
+        ("/wiki/loose-links", "Loose links",
+         "Links that only resolve after normalising the name. Fixable at source.",
+         f"{len(index.loose)} links"),
+        ("/wiki/changes", "Recent changes",
+         "Every commit that touched a published note.",
+         f"{len(commits)} commits"),
+        ("/wiki/topics/", "Topics",
+         "Tags shared by two or more notes, each with its own page.",
+         f"{len(index.topics)} topics"),
+        ("/wiki/all", "A–Z",
+         "The flat index of every note by title.",
+         f"{len(notes)} notes"),
+    ]
+    rows = "\n".join(
+        f'      <li class="special-row">\n'
+        f'        <a href="{esc(href)}">{esc(label)}</a>\n'
+        f'        <span class="special-figure">{esc(figure)}</span>\n'
+        f'        <p class="special-gloss">{esc(gloss)}</p>\n      </li>'
+        for href, label, gloss, figure in entries
+    )
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "Special")])}
+  <p class="eyebrow">Maintenance desk</p>
+  <h1>Special pages</h1>
+  <p class="lede">Views of the wiki as a structure rather than as a text. Most of
+  them double as a to-do list: an orphan wants linking, a wanted page wants
+  writing, a loose link wants tightening.</p>
+{figure_band([(str(len(notes)), "notes"), (str(len(glossary)), "defined"),
+              (str(index.resolved_hits), "links resolved"), (str(len(wanted)), "pages wanted"),
+              (str(orphans), "orphans"), (str(len(books)), "books")])}
+{section("Views", f'    <ul class="special-list">\n{rows}\n    </ul>')}
+'''
+    return shell("Special pages", body, active="/wiki/special",
+                 description="Structural views of the World Machines wiki.")
+
+
+# ─── Wanted pages ────────────────────────────────────────────────────────────
+
+
+def wanted_template(name: str) -> str:
+    return (f"---\nsummary: \"One sentence a newcomer could read and not be lost.\"\n"
+            f"tags: []\nlast_updated: \n---\n\n# {name}\n\n"
+            "Why this note exists: several notes already link to this title.\n")
+
+
+def render_wanted_page(group: dict, index: LinkIndex) -> str:
+    name = group["name"]
+    sources = group["sources"]
+    spellings = [n for n in group["names"] if n != name]
+    rows = [plate_row(n.url, n.title, index.inbound(n), gloss=esc(clip(n.summary, 190)),
+                      meta=esc(member_label(n.member)), scaled=False) for n in sources]
+    new_url = (f"{GITHUB_NEW}?filename={quote(group['slug'] + '.md')}"
+               f"&value={quote(wanted_template(name))}")
+    aka = ""
+    if spellings:
+        aka = ('  <p class="lede small">Also written ' +
+               ", ".join(f"<code>[[{esc(s)}]]</code>" for s in spellings) + ".</p>")
+    body = "\n".join(filter(None, [
+        breadcrumb([("/wiki/", "Wiki"), ("/wiki/wanted/", "Wanted"), ("", name)]),
+        '  <p class="eyebrow wanted-eyebrow">This page does not exist yet</p>',
+        f"  <h1>{esc(name)}</h1>",
+        f'  <p class="lede">{len(sources)} note{"" if len(sources) == 1 else "s"} '
+        f'link{"s" if len(sources) == 1 else ""} to <code>[[{esc(name)}]]</code>, and nothing in '
+        "<code>raw-notes/</code> answers to that name. Whoever writes it gets "
+        f"{len(sources)} inbound link{'' if len(sources) == 1 else 's'} the moment they commit.</p>",
+        aka,
+        f'  <p class="write-cta"><a class="write-button" href="{esc(new_url)}">'
+        f"Start this note on GitHub</a><span>Creates "
+        f"<code>raw-notes/commons/concepts/{esc(group['slug'])}.md</code> — move it "
+        "into your own folder if it is yours.</span></p>",
+        section("Notes asking for it", plate(rows), aside=f"{group['hits']} links"),
+    ]))
+    return shell(f"{name} — wanted", body, active="/wiki/wanted/",
+                 description=f"{len(sources)} World Machines notes link to “{name}”, "
+                             "which has not been written yet.")
+
+
+def render_wanted_index(groups: list[dict], index: LinkIndex) -> str:
+    rows = [plate_row(wanted_url(g["slug"]), g["name"], len(g["sources"]),
+                      unit=" notes", wanted=True,
+                      meta=esc(", ".join(member_label(m) for m in
+                                         sorted({s.member for s in g["sources"]}))))
+            for g in groups]
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "Wanted")])}
+  <p class="eyebrow wanted-eyebrow">Named, not written</p>
+  <h1>Wanted pages</h1>
+  <p class="lede">Every title the club has put in double brackets that no note
+  answers to. This is the most honest to-do list the project has: each one is a
+  page somebody already assumed existed, ranked by how many notes are waiting for
+  it. Writing one is the highest-leverage note you can add, because its inbound
+  links are there before you start.</p>
+{section("Ranked by how many notes want them", plate(rows, extra="plate-wanted-list"),
+         aside=f"{len(groups)} wanted")}
+'''
+    return shell("Wanted pages", body, active="/wiki/wanted/",
+                 description="Titles the World Machines corpus links to but has not written.")
+
+
+# ─── Topic pages ─────────────────────────────────────────────────────────────
+
+
+def render_topic_page(slug: str, label: str, notes: list[Note], index: LinkIndex) -> str:
+    ranked = sorted(notes, key=lambda n: (-index.inbound(n), n.title.lower(), n.rel))
+    rows = [note_plate_row(n, index, gloss_len=190, show_member=True) for n in ranked]
+    members = sorted({n.member for n in notes})
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("/wiki/topics/", "Topics"), ("", label)])}
+  <p class="eyebrow">Topic</p>
+  <h1>{esc(label)}</h1>
+  <p class="lede small">{len(notes)} notes tagged <code>{esc(label)}</code> ·
+  {esc(", ".join(member_label(m) for m in members))}</p>
+{section("Tagged notes", plate(rows), aside=f"{len(notes)}")}
+'''
+    return shell(f"{label} — topic", body, active="/wiki/topics/",
+                 description=f"World Machines notes tagged {label}.")
+
+
+def render_topics_index(index: LinkIndex) -> str:
+    ranked = sorted(index.topics.items(),
+                    key=lambda kv: (-len(kv[1]), index.topic_labels[kv[0]]))
+    rows = [plate_row(topic_url(slug), index.topic_labels[slug], len(notes),
+                      unit=" notes", scaled=False)
+            for slug, notes in ranked]
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "Topics")])}
+  <p class="eyebrow">The keywords the notes carry</p>
+  <h1>Topics</h1>
+  <p class="lede">Tags out of the notes' own frontmatter. A tag becomes a topic
+  page once at least {TOPIC_MIN_NOTES} notes share it — below that it is one
+  note's keyword, not a place to browse. Topics cut across contributors and
+  books, which is what makes them worth following.</p>
+{section("Every shared tag", plate(rows, extra="plate-dense"), aside=f"{len(ranked)} topics")}
+'''
+    return shell("Topics", body, active="/wiki/topics/",
+                 description="Topics shared across the World Machines notes.")
+
+
+# ─── Search ──────────────────────────────────────────────────────────────────
+
+
+def render_search() -> str:
+    body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "Search")])}
+  <p class="eyebrow">Titles, summaries and topics</p>
+  <h1>Search</h1>
+  <form class="search-page-form" action="/wiki/search" method="get" role="search">
+    <label class="visually-hidden" for="search-q">Search the wiki</label>
+    <input id="search-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+           spellcheck="false" autofocus>
+    <button type="submit">Search</button>
+  </form>
+  <p class="lede small" id="search-status">Type to search every note, definition and topic.</p>
+  <div id="search-results"></div>
+  <noscript><p class="lede">Search needs JavaScript. The
+  <a href="/wiki/all">A–Z index</a> lists every note without it.</p></noscript>
+'''
+    return shell("Search", body, description="Search the World Machines wiki.")
 
 
 def render_home(notes: list[Note], glossary: list[Note], index: LinkIndex,
                 commits: list[dict]) -> str:
+    """The front door.
+
+    A wiki's home page is not a table of contents for a filesystem. This one is
+    organised around a claim the corpus actually makes about itself: there are
+    three vocabularies here — the terms the club has agreed to define, the
+    concepts it leans on whether or not anyone defined them, and the titles it
+    keeps naming but has never written. The gap between the three is the honest
+    state of the project, so it is the first thing on the page.
+    """
     by_member: dict[str, list[Note]] = defaultdict(list)
-    for note in notes:
-        by_member[note.member].append(note)
-
-    member_cards = []
-    for member in sorted(by_member, key=lambda m: (m == "commons", member_label(m).lower())):
-        items = by_member[member]
-        folders = sorted({"Reading notes" if n.book else folder_label(n.folder) for n in items})
-        member_cards.append(
-            f'      <li class="member-card">\n'
-            f'        <a href="/wiki/{slugify(member)}/">{esc(member_label(member))}</a>\n'
-            f'        <span class="count">{len(items)}</span>\n'
-            f'        <span class="muted">{esc(" · ".join(folders))}</span>\n'
-            f"      </li>"
-        )
-
     books: dict[str, list[Note]] = defaultdict(list)
     for note in notes:
+        by_member[note.member].append(note)
         if note.book:
             books[note.book].append(note)
-    book_cards = []
-    for book_id in sorted(books, key=lambda b: (book_title(b)[0].lower(), b)):
-        title, author, year = book_title(book_id)
-        meta = " · ".join(filter(None, [author, year]))
-        book_cards.append(
-            f'      <li class="book-card">\n'
-            f'        <a href="/wiki/commons/reading/{slugify(book_id)}/">{esc(title)}</a>\n'
-            f'        <span class="count">{len(books[book_id])}</span>\n'
-            f'        <span class="muted">{esc(meta)}</span>\n'
-            f"      </li>"
-        )
+
+    # 1. Defined — the deliberate vocabulary.
+    terms = sorted(glossary, key=lambda n: (n.term.lower(), n.rel))
+    defined = (f'    <ul class="term-list">\n'
+               + "\n".join(glossary_card(n, index) for n in terms) + "\n    </ul>"
+               ) if terms else '    <p class="empty-state">No terms defined yet.</p>'
+
+    # 2. Load-bearing — the emergent vocabulary, measured not asserted.
+    ranked = sorted((n for n in notes if index.inbound(n) > 0),
+                    key=lambda n: (-index.inbound(n), n.title.lower(), n.rel))
+    hub_rows = [note_plate_row(n, index, show_member=True) for n in ranked[:HOME_HUBS]]
+
+    # 3. Wanted — the vocabulary with nothing behind it.
+    wanted = index.wanted_groups()
+    wanted_rows = [plate_row(wanted_url(g["slug"]), g["name"], len(g["sources"]),
+                             unit=" notes", wanted=True) for g in wanted[:HOME_WANTED]]
 
     by_path = {f"raw-notes/{n.rel}": n for n in notes}
     recent = []
@@ -1214,7 +1926,7 @@ def render_home(notes: list[Note], glossary: list[Note], index: LinkIndex,
         touched = [by_path[f] for f in commit["files"] if f in by_path]
         if not touched:
             continue
-        shown = touched[:5]
+        shown = touched[:4]
         links = ", ".join(f'<a href="{esc(n.url)}">{esc(n.title)}</a>' for n in shown)
         if len(touched) > len(shown):
             links += f' <span class="muted">+{len(touched) - len(shown)} more</span>'
@@ -1226,61 +1938,63 @@ def render_home(notes: list[Note], glossary: list[Note], index: LinkIndex,
             f'        <div class="change-notes">{links}</div>\n'
             f"      </li>"
         )
-        if len(recent) >= 12:
+        if len(recent) >= HOME_CHANGES:
             break
 
-    glossary_line = ""
-    if glossary:
-        links = ", ".join(f'<a href="{esc(g.url)}">{esc(g.term)}</a>'
-                          for g in sorted(glossary, key=lambda n: (n.term.lower(), n.rel)))
-        glossary_line = (f'  <p class="lede">Currently defining: {links}. '
-                         f'<a href="/wiki/glossary/">Open the glossary →</a></p>')
+    book_rows = []
+    for book_id in sorted(books, key=lambda b: (-len(books[b]), book_title(b)[0].lower(), b)):
+        title, author, year = book_title(book_id)
+        book_rows.append(plate_row(f"/wiki/commons/reading/{slugify(book_id)}/", title,
+                                   len(books[book_id]), unit=" notes", scaled=False,
+                                   meta=esc(" · ".join(filter(None, [author, year])))))
 
-    dangling_total = sum(index.dangling.values())
+    member_rows = []
+    for member in sorted(by_member, key=lambda m: (m == "commons", member_label(m).lower())):
+        items = by_member[member]
+        folders = sorted({"Reading notes" if n.book else folder_label(n.folder) for n in items})
+        member_rows.append(plate_row(f"/wiki/{slugify(member)}/", member_label(member),
+                                     len(items), unit=" notes", scaled=False,
+                                     meta=esc(" · ".join(folders))))
+
     stamp = (f"generated from raw-notes at {commits[0]['sha'][:12]} ({commits[0]['date']})"
              if commits else "generated from raw-notes")
-    body = f'''  <h1>Wiki</h1>
-  <p class="lede">Everything the club has written in <code>raw-notes/</code>, published as it
-  stands: reading notes on the books we work through, concept and entity pages, essays,
-  and the loose fragments in between. Notes are rough by design — this is the working
-  layer, not a finished encyclopedia. The <a href="/oracle">Oracle</a> searches the same
-  corpus; this is the version you can read and link.</p>
-{glossary_line}
-  <ul class="stat-row">
-    <li><b>{len(notes)}</b> notes</li>
-    <li><b>{len(by_member)}</b> contributors</li>
-    <li><b>{len(books)}</b> books</li>
-    <li><b>{len(glossary)}</b> glossary terms</li>
-    <li><b>{index.resolved_hits}</b> resolved links</li>
-  </ul>
-
-  <section>
-    <h2>By contributor</h2>
-    <ul class="member-list">
-{chr(10).join(member_cards)}
-    </ul>
-  </section>
-
-  <section>
-    <h2>By book</h2>
-    <p class="section-note">Communal reading notes in <code>raw-notes/commons/reading/</code>,
-    one page per section of each source.</p>
-    <ul class="book-list">
-{chr(10).join(book_cards)}
-    </ul>
-  </section>
-
-  <section>
-    <h2>Recent changes</h2>
-    <ul class="changes">
-{chr(10).join(recent) if recent else '      <li class="change"><div class="change-subject">No git history available.</div></li>'}
-    </ul>
-  </section>
-
-  <p class="note-foot">Links written <code>[[like this]]</code> resolve by exact,
-  case-sensitive note id; {dangling_total} link{"" if dangling_total == 1 else "s"} point at
-  notes that do not exist in this repo and are shown as <span class="wikilink-missing">plain
-  grey text</span>. Browse <a href="/wiki/all">all notes</a>.</p>
+    body = f'''  <p class="eyebrow">A book club writing its own theory, in the open</p>
+  <h1 class="home-title">The wiki</h1>
+  <p class="lede home-lede">{len(notes)} working notes held together by
+  {index.resolved_hits} links. Nothing here is finished — this is the layer where
+  the thinking happens, and the fastest way through it is to follow a concept
+  sideways rather than read a folder top to bottom.</p>
+{figure_band([(str(len(glossary)), "terms defined"),
+              (str(len(ranked)), "notes linked to"),
+              (str(len(wanted)), "pages wanted"),
+              (str(len(index.topics)), "shared topics"),
+              (str(len(books)), "books read")])}
+{section("Defined", defined,
+         aside='<a href="/wiki/glossary/">the glossary →</a>',
+         note="Terms the club has argued about on purpose. Each carries a status and "
+              "gathers every note that uses it.")}
+{section("Load-bearing", plate(hub_rows),
+         aside='<a href="/wiki/hubs">all →</a>',
+         note="Nobody nominated these. They are the notes the rest of the writing keeps "
+              "reaching for, ranked by inbound links — the club's centre of gravity, measured.")}
+{section("Wanted", plate(wanted_rows, extra="plate-wanted-list"),
+         aside='<a href="/wiki/wanted/">all →</a>',
+         note="Titles the notes keep linking to that nobody has written. Whoever writes one "
+              "inherits its inbound links on the first commit.")}
+{section("Open threads", f'    <ul class="changes">\n{chr(10).join(recent)}\n    </ul>' if recent
+         else '    <p class="empty-state">No git history available.</p>',
+         aside='<a href="/wiki/changes">all changes →</a>')}
+{section("On the table", plate(book_rows),
+         aside='<a href="/wiki/topics/">browse topics →</a>',
+         note="Books the club reads together. Notes are written about them section by "
+              "section; the source text never enters the repository.")}
+{section("Who wrote it", plate(member_rows, extra="plate-dense"),
+         aside='<a href="/wiki/all">A–Z →</a>',
+         note="The folder view. Useful when you know whose note you are after, less useful "
+              "than following a link when you do not.")}
+  <p class="note-foot">The <a href="/oracle">Oracle</a> answers questions against
+  this same corpus; the wiki is the version you can read, link and edit. Source
+  notes live in <code>raw-notes/</code> — every page links to its own file on GitHub.</p>
 '''
     return shell("Wiki", body, active="/wiki/", stamp=stamp,
                  description="The World Machines book club's working notes, published as a wiki.")
@@ -1288,307 +2002,1013 @@ def render_home(notes: list[Note], glossary: list[Note], index: LinkIndex,
 
 # ─── Stylesheet ──────────────────────────────────────────────────────────────
 
-WIKI_CSS = """/* Wiki section styles. Loaded after /style.css, which supplies the design
-   tokens (--bg, --text, --muted, --border, --link) and the site chrome. */
+WIKI_CSS = """/* Wiki styles. Loaded after /style.css, which supplies the site tokens
+   (--bg, --text, --muted, --border, --link) and the header/nav chrome.
+
+   The wiki is a different room in the same building. It keeps the site's paper,
+   ink and navy, and adds three things of its own: a wider measure with a rail
+   for lateral movement, a display face the rest of the site never uses, and one
+   red reserved exclusively for pages that do not exist yet. */
+
+:root {
+  --wiki-width: 1060px;
+  --wiki-measure: 660px;
+  --wiki-rail: 268px;
+
+  /* Ink and paper, one step off the site's own */
+  --wiki-rule:    #d8d3ca;   /* hairlines, leader dots */
+  --wiki-plate:   #f2efe9;   /* the index-plate ground */
+  --wiki-figure:  #6f695e;   /* warm grey for numbers, so they sit behind names */
+  --wiki-prose:   #26251f;
+
+  /* The only red in the wiki. It means: this page has not been written. */
+  --wiki-wanted:      #8f2c22;
+  --wiki-wanted-tint: #f6ece9;
+
+  /* Display: a Venetian old-style with a wider aperture than the body Georgia.
+     Every fallback in the stack is a real old-style, so the pairing survives. */
+  --wiki-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua',
+                  'URW Palladio L', Georgia, serif;
+  /* Figures are data, so they are set in a fixed pitch and aligned in a column. */
+  --wiki-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas,
+               'Liberation Mono', monospace;
+  --wiki-ui: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+/* The wiki widens the whole chrome, not just the content, so the room changes
+   at the door rather than halfway down the page. */
+body.wiki-page header,
+body.wiki-page .sitenav { max-width: var(--wiki-width); }
+
+main.wiki { max-width: var(--wiki-width); margin: 2.2rem auto 6rem; }
+main.wiki > h1,
+main.wiki > .eyebrow,
+main.wiki > .lede,
+main.wiki > .note-foot,
+main.wiki > .breadcrumb,
+main.wiki > form { max-width: 46rem; }
+
+:where(main.wiki) :focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+
+/* ─── Wiki toolbar ─────────────────────────────────────────── */
 
 .wikinav {
-  max-width: var(--max-width);
+  max-width: var(--wiki-width);
   margin: 0 auto;
-  padding: 0.45rem 0 0.5rem;
+  padding: 0.5rem 0 0.55rem;
   border-bottom: 1px solid var(--border);
   display: flex;
-  gap: 1.2rem;
-  font-family: system-ui, sans-serif;
+  align-items: center;
+  gap: 0.6rem 1.15rem;
+  flex-wrap: wrap;
+  font-family: var(--wiki-ui);
   font-size: 0.75rem;
 }
+.wikinav-links { display: flex; gap: 1.15rem; flex-wrap: wrap; }
 .wikinav a { color: var(--muted); }
 .wikinav a:hover { color: var(--text); text-decoration: none; }
-.wikinav a[aria-current="page"] { color: var(--text); }
+.wikinav a[aria-current="page"] { color: var(--text); font-weight: 600; }
 
-main.wiki { max-width: var(--max-width); margin: 2rem auto 5rem; }
-
-.breadcrumb {
-  font-family: system-ui, sans-serif;
+.wikisearch { position: relative; margin-left: auto; flex: 0 1 15rem; min-width: 11rem; }
+.wikisearch input {
+  width: 100%;
+  font-family: var(--wiki-ui);
+  font-size: 0.75rem;
+  color: var(--text);
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--wiki-rule);
+  border-radius: 2px;
+  background: #fff;
+}
+.wikisearch input::placeholder { color: #9a948a; }
+.wikisearch-results {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  right: 0;
+  width: min(30rem, 84vw);
+  max-height: 26rem;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--wiki-rule);
+  border-radius: 2px;
+  box-shadow: 0 6px 22px rgba(28, 28, 28, 0.09);
+}
+.wikisearch-results a {
+  display: block;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid #efece6;
+  color: var(--text);
+}
+.wikisearch-results a:last-child { border-bottom: none; }
+.wikisearch-results a:hover,
+.wikisearch-results a.is-active { background: var(--wiki-plate); text-decoration: none; }
+.wikisearch-results .r-title { font-family: var(--wiki-display); font-size: 0.92rem; }
+.wikisearch-results .r-where {
+  font-family: var(--wiki-mono);
+  font-size: 0.62rem;
+  color: var(--wiki-figure);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-left: 0.4rem;
+}
+.wikisearch-results .r-gloss {
+  font-family: var(--wiki-ui);
   font-size: 0.72rem;
   color: var(--muted);
-  margin-bottom: 1.1rem;
+  line-height: 1.45;
+  margin-top: 0.1rem;
+}
+.wikisearch-results .r-empty {
+  padding: 0.6rem;
+  font-family: var(--wiki-ui);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ─── Headings and orientation ─────────────────────────────── */
+
+.breadcrumb {
+  font-family: var(--wiki-ui);
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
 }
 .breadcrumb a { color: var(--muted); }
 .breadcrumb a:hover { color: var(--text); }
-.breadcrumb b { color: var(--border); font-weight: normal; margin: 0 0.15rem; }
+.breadcrumb b { color: var(--wiki-rule); font-weight: normal; margin: 0 0.2rem; }
+
+.eyebrow {
+  font-family: var(--wiki-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--wiki-figure);
+  margin-bottom: 0.5rem;
+}
+.wanted-eyebrow { color: var(--wiki-wanted); }
 
 main.wiki h1 {
-  font-size: 1.5rem;
+  font-family: var(--wiki-display);
+  font-size: 2rem;
   font-weight: normal;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.6rem;
+  line-height: 1.16;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.7rem;
 }
+main.wiki .home-title { font-size: 2.9rem; letter-spacing: -0.025em; }
 
 main.wiki .lede {
-  font-size: 0.93rem;
-  line-height: 1.75;
-  color: #2a2a2a;
+  font-size: 0.95rem;
+  line-height: 1.72;
+  color: var(--wiki-prose);
   margin-bottom: 1rem;
 }
-main.wiki .lede.small { font-family: system-ui, sans-serif; font-size: 0.78rem; color: var(--muted); }
-.muted { color: var(--muted); }
-
-.count {
-  font-family: system-ui, sans-serif;
-  font-size: 0.7rem;
+main.wiki .home-lede { font-size: 1.06rem; line-height: 1.65; }
+main.wiki .lede.small {
+  font-family: var(--wiki-ui);
+  font-size: 0.78rem;
+  line-height: 1.6;
   color: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 0.05rem 0.3rem;
-  vertical-align: middle;
 }
+.muted { color: var(--muted); }
+.empty-state { font-family: var(--wiki-ui); font-size: 0.82rem; color: var(--muted); }
 
-.stat-row {
-  list-style: none;
+/* ─── Figure band ──────────────────────────────────────────── */
+
+.figure-band {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 1.4rem;
-  font-family: system-ui, sans-serif;
-  font-size: 0.76rem;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 0.6rem 0;
-  margin: 1.5rem 0 2rem;
+  gap: 0 2.6rem;
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--wiki-rule);
+  padding: 0.75rem 0 0.7rem;
+  margin: 1.6rem 0 2.6rem;
 }
-.stat-row b { color: var(--text); font-weight: 600; }
-
-main.wiki section { margin-bottom: 2.5rem; }
-main.wiki section > h2 {
-  font-family: system-ui, sans-serif;
-  font-size: 0.78rem;
+.band-cell { display: flex; align-items: baseline; gap: 0.4rem; }
+.band-cell b {
+  font-family: var(--wiki-mono);
+  font-size: 1.05rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--muted);
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
 }
-.section-note {
-  font-family: system-ui, sans-serif;
-  font-size: 0.76rem;
+.band-cell span {
+  font-family: var(--wiki-ui);
+  font-size: 0.72rem;
   color: var(--muted);
-  margin-bottom: 0.8rem;
 }
 
-/* ─── Listings ─────────────────────────────────────────────── */
+/* ─── Registers (section headings) ─────────────────────────── */
 
-.member-list, .book-list, .rows, .changes, .glossary-list, .backlinks ul { list-style: none; }
+main.wiki section { margin-bottom: 3rem; }
+main.wiki section:last-of-type { margin-bottom: 1.5rem; }
 
-.member-card, .book-card {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--border);
+.register {
   display: flex;
   align-items: baseline;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--wiki-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--text);
+  margin-bottom: 0.9rem;
 }
-.member-card:last-child, .book-card:last-child { border-bottom: none; }
-.member-card a, .book-card a { font-size: 1rem; color: var(--text); }
-.member-card a:hover, .book-card a:hover { color: var(--link); text-decoration: none; }
-.member-card .muted, .book-card .muted {
-  font-family: system-ui, sans-serif;
-  font-size: 0.73rem;
-  margin-left: auto;
-  text-align: right;
-}
-
-.rows .row {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.95rem;
-}
-.rows .row:last-child { border-bottom: none; }
-.rows .row a { color: var(--text); }
-.rows .row a:hover { color: var(--link); text-decoration: none; }
-.rows .row .muted { font-family: system-ui, sans-serif; font-size: 0.72rem; }
-.row-gloss {
-  font-family: system-ui, sans-serif;
-  font-size: 0.78rem;
+.section-aside {
+  font-family: var(--wiki-ui);
+  font-size: 0.7rem;
+  font-weight: normal;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--muted);
-  line-height: 1.5;
-  margin-top: 0.15rem;
+  white-space: nowrap;
+}
+.section-aside a { color: var(--link); }
+.section-note {
+  font-family: var(--wiki-ui);
+  font-size: 0.77rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 42rem;
+  margin: -0.3rem 0 1rem;
 }
 
-#note-filter {
-  width: 100%;
-  margin: 0.4rem 0 1.2rem;
-  font-family: system-ui, sans-serif;
-  font-size: 0.85rem;
-  padding: 0.45rem 0.6rem;
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  background: #fff;
+/* ─── The index plate ──────────────────────────────────────────
+   name ······················ figure
+   One row is one claim: what it is called, and how much of the corpus
+   leans on it. Type size steps with the figure, so a column of rows
+   reads as a skyline before you read a word. */
+
+.plate { list-style: none; }
+.plate-row {
+  padding: 0.42rem 0;
+  border-bottom: 1px solid #ebe8e2;
+}
+.plate-row:last-child { border-bottom: none; }
+
+.plate-line { display: flex; align-items: baseline; gap: 0.5rem; }
+.plate-name {
+  font-family: var(--wiki-display);
+  color: var(--text);
+  line-height: 1.25;
+  flex: 0 1 auto;
+}
+.plate-name:hover { color: var(--link); text-decoration: none; }
+.plate-leader {
+  flex: 1 1 auto;
+  min-width: 1.25rem;
+  align-self: center;
+  border-bottom: 1px dotted var(--wiki-rule);
+  transform: translateY(0.12em);
+}
+.plate-figure {
+  flex: 0 0 auto;
+  font-family: var(--wiki-mono);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--wiki-figure);
+}
+.plate-unit { font-size: 0.85em; color: var(--muted); }
+.plate-meta {
+  display: block;
+  font-family: var(--wiki-ui);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.06rem;
+}
+.plate-gloss {
+  font-family: var(--wiki-ui);
+  font-size: 0.775rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 44rem;
+  margin-top: 0.18rem;
 }
 
-.changes .change { padding: 0.7rem 0; border-bottom: 1px solid var(--border); }
-.changes .change:last-child { border-bottom: none; }
-.change-meta { font-family: system-ui, sans-serif; font-size: 0.71rem; color: var(--muted); }
-.change-subject { font-size: 0.95rem; margin: 0.1rem 0 0.15rem; }
-.change-notes { font-family: system-ui, sans-serif; font-size: 0.76rem; line-height: 1.6; }
+/* Magnitude classes: the one place in the wiki where size means something. */
+.mag-1 .plate-name { font-size: 1rem; }
+.mag-2 .plate-name { font-size: 1.14rem; }
+.mag-3 .plate-name { font-size: 1.34rem; }
+.mag-4 .plate-name { font-size: 1.62rem; letter-spacing: -0.012em; }
+.mag-3, .mag-4 { padding: 0.52rem 0; }
 
-/* ─── Note page ────────────────────────────────────────────── */
+.plate-dense .plate-row { padding: 0.3rem 0; }
+.plate-dense .plate-name { font-size: 0.95rem; }
+
+/* Wanted rows: the red is functional, never decorative. */
+.plate-wanted .plate-name { color: var(--wiki-wanted); }
+.plate-wanted .plate-name:hover { color: var(--wiki-wanted); text-decoration: underline; }
+.plate-wanted .plate-figure { color: var(--wiki-wanted); }
+.plate-wanted-list .plate-leader { border-bottom-color: #e3cec9; }
+
+/* ─── Note page: prose plus a rail ─────────────────────────── */
+
+.spread {
+  display: grid;
+  grid-template-columns: minmax(0, var(--wiki-measure)) var(--wiki-rail);
+  gap: 3.2rem;
+  align-items: start;
+}
+@media (max-width: 960px) {
+  .spread { grid-template-columns: minmax(0, 1fr); gap: 2.4rem; }
+}
+
+.note { min-width: 0; }
+.note h1 { margin-bottom: 0.55rem; }
+
+.eyebrow + h1 { margin-top: 0; }
 
 .note-byline {
-  font-family: system-ui, sans-serif;
+  font-family: var(--wiki-ui);
   font-size: 0.73rem;
   color: var(--muted);
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--wiki-rule);
+  margin-bottom: 1.3rem;
 }
-.note-byline a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--border); }
+.note-byline a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--wiki-rule); }
 .note-byline a:hover { color: var(--text); }
 
 .note-summary {
-  font-size: 0.93rem;
-  line-height: 1.7;
-  color: #2a2a2a;
-  border-left: 2px solid var(--border);
-  padding: 0.1rem 0 0.1rem 0.9rem;
-  margin-bottom: 1.1rem;
+  font-family: var(--wiki-display);
+  font-size: 1.06rem;
+  line-height: 1.62;
+  color: var(--wiki-prose);
+  border-left: 2px solid var(--text);
+  padding: 0.05rem 0 0.05rem 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 1.4rem; }
-.tag {
-  font-family: system-ui, sans-serif;
-  font-size: 0.66rem;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 0.08rem 0.35rem;
+/* ─── The rail ─────────────────────────────────────────────── */
+
+.rail {
+  font-family: var(--wiki-ui);
+  min-width: 0;
+  position: sticky;
+  top: 1.2rem;
+  max-height: calc(100vh - 2.4rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
-.note-connects { font-family: system-ui, sans-serif; font-size: 0.78rem; color: var(--muted); margin-bottom: 1.2rem; }
+@media (max-width: 960px) {
+  .rail {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    border-top: 1px solid var(--text);
+    padding-top: 1.4rem;
+  }
+}
+
+.rail-block { margin-bottom: 1.7rem; }
+.rail-block:last-child { margin-bottom: 0; }
+
+.rail-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: var(--wiki-mono);
+  font-size: 0.63rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  padding-bottom: 0.32rem;
+  border-bottom: 1px solid var(--wiki-rule);
+  margin-bottom: 0.55rem;
+}
+.rail-count { font-variant-numeric: tabular-nums; color: var(--wiki-figure); font-weight: normal; }
+
+.rail-bearings {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  background: var(--wiki-plate);
+  border: 1px solid var(--wiki-rule);
+  padding: 0.6rem 0.75rem;
+}
+.bearing { display: flex; flex-direction: column; line-height: 1.2; }
+.bearing b {
+  font-family: var(--wiki-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.bearing span { font-size: 0.66rem; color: var(--muted); }
+
+.rail-list { list-style: none; }
+.rail-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.24rem 0;
+  font-size: 0.815rem;
+  line-height: 1.4;
+}
+.rail-list a { color: var(--text); }
+.rail-list a:hover { color: var(--link); text-decoration: none; }
+.rail-where {
+  flex: 0 0 auto;
+  font-family: var(--wiki-mono);
+  font-size: 0.63rem;
+  color: var(--wiki-figure);
+  font-variant-numeric: tabular-nums;
+}
+.rail-more { margin-top: 0.3rem; }
+.rail-more summary {
+  font-family: var(--wiki-mono);
+  font-size: 0.66rem;
+  color: var(--link);
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+.rail-more summary:hover { color: var(--link-hover); }
+.rail-more[open] summary { margin-bottom: 0.25rem; }
+
+.rail-term {
+  font-family: var(--wiki-display);
+  font-size: 1.08rem;
+  color: var(--text);
+  margin-right: 0.35rem;
+}
+.rail-term:hover { color: var(--link); text-decoration: none; }
+.rail-gloss { font-size: 0.755rem; line-height: 1.5; color: var(--muted); margin-top: 0.35rem; }
+.rail-hint { font-size: 0.68rem; line-height: 1.45; color: var(--muted); margin-top: 0.35rem; }
+.rail-empty { font-size: 0.76rem; color: var(--muted); line-height: 1.5; }
+
+.rail-edges { list-style: none; }
+.rail-edges li { padding: 0.2rem 0; font-size: 0.8rem; line-height: 1.4; }
 
 /* ─── Prose ────────────────────────────────────────────────── */
 
-.prose { font-size: 0.97rem; line-height: 1.8; color: #2a2a2a; }
+.prose { font-size: 1rem; line-height: 1.78; color: var(--wiki-prose); }
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: var(--wiki-display);
   font-weight: normal;
-  line-height: 1.35;
+  line-height: 1.3;
   color: var(--text);
-  margin: 2rem 0 0.6rem;
+  margin: 2.1rem 0 0.6rem;
 }
-.prose h1 { font-size: 1.3rem; }
-.prose h2 { font-size: 1.12rem; padding-top: 1.2rem; border-top: 1px solid var(--border); }
-.prose h3 { font-size: 1rem; font-weight: 600; }
-.prose h4, .prose h5, .prose h6 { font-size: 0.93rem; font-weight: 600; }
-.prose p { margin-bottom: 0.9rem; }
-.prose ul, .prose ol { margin: 0 0 1rem 1.3rem; }
-.prose li { margin-bottom: 0.35rem; }
-.prose li > ul, .prose li > ol { margin-top: 0.35rem; margin-bottom: 0.35rem; }
+.prose h1 { font-size: 1.4rem; }
+.prose h2 { font-size: 1.22rem; padding-top: 1.1rem; border-top: 1px solid var(--wiki-rule); }
+.prose h3 { font-size: 1.08rem; }
+.prose h4, .prose h5, .prose h6 { font-size: 0.96rem; font-weight: 600; font-family: inherit; }
+.prose p { margin-bottom: 0.95rem; }
+.prose ul, .prose ol { margin: 0 0 1rem 1.35rem; }
+.prose li { margin-bottom: 0.38rem; }
+.prose li > ul, .prose li > ol { margin-top: 0.38rem; margin-bottom: 0.38rem; }
 .prose blockquote {
-  border-left: 2px solid var(--border);
+  border-left: 2px solid var(--wiki-rule);
   padding-left: 1rem;
   margin: 0 0 1rem;
-  color: #444;
+  color: #43413a;
   font-style: italic;
 }
 .prose blockquote p:last-child { margin-bottom: 0; }
-.prose hr { border: none; border-top: 1px solid var(--border); margin: 1.8rem 0; }
+.prose hr { border: none; border-top: 1px solid var(--wiki-rule); margin: 1.9rem 0; }
 .prose code {
-  font-family: 'Courier New', monospace;
-  font-size: 0.85em;
-  background: #f0ede8;
+  font-family: var(--wiki-mono);
+  font-size: 0.83em;
+  background: var(--wiki-plate);
   padding: 0.1em 0.3em;
   border-radius: 2px;
 }
 .prose pre {
-  background: #f0ede8;
-  border: 1px solid var(--border);
-  border-radius: 3px;
+  background: var(--wiki-plate);
+  border: 1px solid var(--wiki-rule);
+  border-radius: 2px;
   padding: 0.8rem 0.9rem;
   overflow-x: auto;
   margin-bottom: 1rem;
 }
-.prose pre code { background: none; padding: 0; font-size: 0.8rem; line-height: 1.55; }
+.prose pre code { background: none; padding: 0; font-size: 0.78rem; line-height: 1.55; }
 .prose img { max-width: 100%; height: auto; }
 
 .table-wrap { overflow-x: auto; margin-bottom: 1.2rem; }
 .prose table { border-collapse: collapse; font-size: 0.85rem; min-width: 100%; }
 .prose th, .prose td {
-  border: 1px solid var(--border);
+  border: 1px solid var(--wiki-rule);
   padding: 0.4rem 0.6rem;
   text-align: left;
   vertical-align: top;
 }
-.prose th { background: #f3f1ec; font-weight: 600; }
+.prose th { background: var(--wiki-plate); font-weight: 600; }
 
 /* ─── Wiki links ───────────────────────────────────────────── */
 
-.wikilink { border-bottom: 1px solid rgba(26, 76, 138, 0.25); }
+.wikilink { border-bottom: 1px solid rgba(26, 76, 138, 0.28); }
 .wikilink:hover { text-decoration: none; border-bottom-color: var(--link-hover); }
 .wikilink-glossary { border-bottom-style: dotted; }
-.wikilink-missing {
-  color: #9a9a9a;
-  border-bottom: 1px dotted #cfcbc4;
-  cursor: help;
-}
 
-/* ─── Backlinks ────────────────────────────────────────────── */
-
-.backlinks { margin-top: 3rem; }
-.backlinks h2 {
-  font-family: system-ui, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--muted);
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 0.7rem;
+/* A red link is an invitation, not an error: it goes to a page that says who
+   is asking for it and offers to start the note. */
+.wikilink-wanted {
+  color: var(--wiki-wanted);
+  border-bottom: 1px dotted rgba(143, 44, 34, 0.5);
 }
-.backlinks li { padding: 0.3rem 0; font-size: 0.92rem; }
-.backlinks li .muted { font-family: system-ui, sans-serif; font-size: 0.71rem; margin-left: 0.35rem; }
-.backlinks .empty-state { padding: 0.5rem 0; font-size: 0.85rem; }
+.wikilink-wanted:hover {
+  color: #6f201a;
+  background: var(--wiki-wanted-tint);
+  text-decoration: none;
+}
 
 .note-history, .note-foot {
-  font-family: system-ui, sans-serif;
+  font-family: var(--wiki-ui);
   font-size: 0.73rem;
+  line-height: 1.6;
   color: var(--muted);
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
   padding-top: 0.9rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--wiki-rule);
 }
 .note-foot code { font-size: 0.95em; }
 
-/* ─── Glossary ─────────────────────────────────────────────── */
+/* ─── Glossary cards ───────────────────────────────────────── */
 
-.glossary-row { padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
-.glossary-row:last-child { border-bottom: none; }
-.glossary-head { display: flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap; }
-.glossary-head a { font-size: 1.05rem; color: var(--text); }
-.glossary-head a:hover { color: var(--link); text-decoration: none; }
-.glossary-head .muted { font-family: system-ui, sans-serif; font-size: 0.72rem; }
-.glossary-gloss {
-  font-family: system-ui, sans-serif;
-  font-size: 0.82rem;
-  color: #444;
-  line-height: 1.6;
-  margin-top: 0.25rem;
+.term-list { list-style: none; }
+.term-card {
+  padding: 0.95rem 0;
+  border-bottom: 1px solid #ebe8e2;
 }
-.glossary-meta { font-family: system-ui, sans-serif; font-size: 0.7rem; color: var(--muted); margin-top: 0.25rem; }
+.term-card:last-child { border-bottom: none; }
+.term-head { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.term-head a { font-family: var(--wiki-display); font-size: 1.4rem; color: var(--text); }
+.term-head a:hover { color: var(--link); text-decoration: none; }
+.term-head .muted { font-family: var(--wiki-ui); font-size: 0.72rem; }
+.term-gloss {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--wiki-prose);
+  max-width: 44rem;
+  margin-top: 0.3rem;
+}
+.term-meta {
+  font-family: var(--wiki-mono);
+  font-size: 0.66rem;
+  color: var(--wiki-figure);
+  margin-top: 0.35rem;
+}
 
 .status {
-  font-family: system-ui, sans-serif;
+  font-family: var(--wiki-ui);
   font-size: 0.62rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 0.1rem 0.38rem;
   border-radius: 2px;
+  white-space: nowrap;
 }
 .status-seed       { background: #fff3cd; color: #7a5200; }
 .status-developing { background: #dbeafe; color: #1e3a8a; }
 .status-settled    { background: #d1fae5; color: #065f46; }
+
+/* ─── A–Z ──────────────────────────────────────────────────── */
+
+#az-filter, .search-page-form input {
+  width: 100%;
+  max-width: 30rem;
+  font-family: var(--wiki-ui);
+  font-size: 0.85rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--wiki-rule);
+  border-radius: 2px;
+  background: #fff;
+  margin: 0.5rem 0 1rem;
+}
+.search-page-form { display: flex; gap: 0.5rem; align-items: flex-start; max-width: 36rem; }
+.search-page-form button {
+  font-family: var(--wiki-ui);
+  font-size: 0.8rem;
+  margin: 0.5rem 0 1rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--text);
+  border-radius: 2px;
+  background: var(--text);
+  color: var(--bg);
+  cursor: pointer;
+}
+.search-page-form button:hover { background: #333; }
+
+.az-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.42rem;
+  font-family: var(--wiki-mono);
+  font-size: 0.75rem;
+  border-top: 1px solid var(--wiki-rule);
+  border-bottom: 1px solid var(--wiki-rule);
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 5;
+}
+.az-jump a { color: var(--link); }
+.jump-off { color: #c9c4ba; }
+
+.az-block { margin-bottom: 2rem; }
+.az-letter {
+  font-family: var(--wiki-display);
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--wiki-figure);
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.az-list { list-style: none; columns: 2; column-gap: 2.6rem; }
+@media (max-width: 720px) { .az-list { columns: 1; } }
+.az-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.22rem 0;
+  break-inside: avoid;
+  font-size: 0.9rem;
+}
+.az-row a { color: var(--text); flex: 1 1 auto; }
+.az-row a:hover { color: var(--link); text-decoration: none; }
+.az-where { font-family: var(--wiki-ui); font-size: 0.68rem; color: var(--muted); }
+.az-figure {
+  font-family: var(--wiki-mono);
+  font-size: 0.68rem;
+  color: var(--wiki-figure);
+  font-variant-numeric: tabular-nums;
+  min-width: 1.6rem;
+  text-align: right;
+}
+
+/* ─── Changes ──────────────────────────────────────────────── */
+
+.changes { list-style: none; }
+.changes .change { padding: 0.7rem 0; border-bottom: 1px solid #ebe8e2; }
+.changes .change:last-child { border-bottom: none; }
+.change-meta { font-family: var(--wiki-mono); font-size: 0.67rem; color: var(--wiki-figure); }
+.change-subject { font-family: var(--wiki-display); font-size: 1.02rem; margin: 0.15rem 0 0.2rem; }
+.change-notes { font-family: var(--wiki-ui); font-size: 0.765rem; line-height: 1.65; }
+
+/* ─── Wanted page ──────────────────────────────────────────── */
+
+.write-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  background: var(--wiki-wanted-tint);
+  border: 1px solid #e3cec9;
+  padding: 0.85rem 1rem;
+  margin: 1.4rem 0 2.4rem;
+  max-width: 46rem;
+}
+.write-button {
+  font-family: var(--wiki-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--wiki-wanted);
+  color: #fff;
+  padding: 0.42rem 0.85rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.write-button:hover { background: #6f201a; color: #fff; text-decoration: none; }
+.write-cta span {
+  font-family: var(--wiki-ui);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #6d5551;
+  flex: 1 1 14rem;
+}
+
+/* ─── Special pages ────────────────────────────────────────── */
+
+.special-list { list-style: none; }
+.special-row { padding: 0.7rem 0; border-bottom: 1px solid #ebe8e2; }
+.special-row:last-child { border-bottom: none; }
+.special-row > a { font-family: var(--wiki-display); font-size: 1.2rem; color: var(--text); }
+.special-row > a:hover { color: var(--link); text-decoration: none; }
+.special-figure {
+  font-family: var(--wiki-mono);
+  font-size: 0.68rem;
+  color: var(--wiki-figure);
+  margin-left: 0.5rem;
+}
+.special-gloss {
+  font-family: var(--wiki-ui);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-top: 0.15rem;
+  max-width: 42rem;
+}
+
+.loose-list { list-style: none; }
+.loose-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  padding: 0.36rem 0;
+  border-bottom: 1px solid #ebe8e2;
+}
+.loose-row:last-child { border-bottom: none; }
+.loose-written {
+  font-family: var(--wiki-mono);
+  font-size: 0.76rem;
+  background: var(--wiki-plate);
+  padding: 0.08em 0.32em;
+  border-radius: 2px;
+  color: var(--wiki-figure);
+}
+.loose-arrow { color: var(--wiki-rule); }
+.loose-dest { font-family: var(--wiki-mono); font-size: 0.76rem; }
+.loose-count {
+  margin-left: auto;
+  font-family: var(--wiki-mono);
+  font-size: 0.66rem;
+  color: var(--wiki-figure);
+}
+
+/* ─── Tags ─────────────────────────────────────────────────── */
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.tag {
+  font-family: var(--wiki-ui);
+  font-size: 0.66rem;
+  color: var(--link);
+  border: 1px solid var(--wiki-rule);
+  border-radius: 2px;
+  padding: 0.08rem 0.35rem;
+  background: #fff;
+}
+a.tag:hover { border-color: var(--link); text-decoration: none; }
+.tag-lone { color: var(--muted); background: none; border-style: dashed; }
+
+/* ─── Search results page ──────────────────────────────────── */
+
+#search-results { list-style: none; max-width: 46rem; }
+.sr-item { padding: 0.7rem 0; border-bottom: 1px solid #ebe8e2; }
+.sr-item:last-child { border-bottom: none; }
+.sr-item a { font-family: var(--wiki-display); font-size: 1.15rem; color: var(--text); }
+.sr-item a:hover { color: var(--link); text-decoration: none; }
+.sr-where {
+  font-family: var(--wiki-mono);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--wiki-figure);
+  margin-left: 0.45rem;
+}
+.sr-gloss {
+  font-family: var(--wiki-ui);
+  font-size: 0.79rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto !important; }
+}
+
+@media (max-width: 600px) {
+  main.wiki .home-title { font-size: 2.1rem; }
+  main.wiki h1 { font-size: 1.6rem; }
+  .mag-4 .plate-name { font-size: 1.3rem; }
+  .mag-3 .plate-name { font-size: 1.15rem; }
+  .figure-band { gap: 0 1.4rem; }
+  .wikisearch { margin-left: 0; flex: 1 1 100%; }
+}
+"""
+
+
+WIKI_JS = r"""/* Wiki behaviour: search, and the A-Z filter. No dependencies, no network
+   beyond one fetch of the prebuilt index, and every page works without it —
+   search degrades to the A-Z list, which is plain HTML.
+
+   The index is [title, url-after-/wiki/, gloss, where, kind]. */
+(function () {
+  'use strict';
+
+  var KINDS = { definition: 0, note: 1, topic: 2, contributor: 3, book: 3, wanted: 4 };
+  var index = null;
+  var pending = null;
+
+  function load() {
+    if (index) return Promise.resolve(index);
+    if (!pending) {
+      pending = fetch('/wiki/search-index.json')
+        .then(function (r) { return r.ok ? r.json() : { n: [] }; })
+        .then(function (data) { index = data.n || []; return index; })
+        .catch(function () { index = []; return index; });
+    }
+    return pending;
+  }
+
+  function score(row, q, terms) {
+    var title = row[0].toLowerCase();
+    var hay = title + ' ' + row[2].toLowerCase() + ' ' + row[3].toLowerCase();
+    var s = 0;
+    if (title === q) s = 1000;
+    else if (title.indexOf(q) === 0) s = 600;
+    else if (title.indexOf(q) !== -1) s = 320;
+    else if (row[2].toLowerCase().indexOf(q) !== -1) s = 120;
+    if (!s) {
+      // Every word has to appear somewhere, so "massey place" still finds things.
+      for (var i = 0; i < terms.length; i++) {
+        if (hay.indexOf(terms[i]) === -1) return 0;
+      }
+      s = 60;
+    }
+    return s - (KINDS[row[4]] === undefined ? 2 : KINDS[row[4]]) * 4;
+  }
+
+  function search(rows, query, limit) {
+    var q = query.trim().toLowerCase();
+    if (q.length < 2) return [];
+    var terms = q.split(/\s+/);
+    var hits = [];
+    for (var i = 0; i < rows.length; i++) {
+      var s = score(rows[i], q, terms);
+      if (s > 0) hits.push([s, rows[i]]);
+    }
+    hits.sort(function (a, b) {
+      if (b[0] !== a[0]) return b[0] - a[0];
+      return a[1][0].toLowerCase() < b[1][0].toLowerCase() ? -1 : 1;
+    });
+    return hits.slice(0, limit).map(function (h) { return h[1]; });
+  }
+
+  function el(tag, cls, text) {
+    var node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text) node.textContent = text;
+    return node;
+  }
+
+  function href(row) { return '/wiki/' + row[1]; }
+
+  /* ---- toolbar search: instant dropdown ---- */
+
+  var box = document.getElementById('wiki-q');
+  var panel = document.getElementById('wiki-q-results');
+
+  if (box && panel) {
+    var active = -1;
+
+    function close() { panel.hidden = true; panel.textContent = ''; active = -1; }
+
+    function draw(rows) {
+      panel.textContent = '';
+      if (!rows.length) {
+        panel.appendChild(el('div', 'r-empty', 'No match. Try a different word.'));
+        panel.hidden = false;
+        return;
+      }
+      rows.forEach(function (row) {
+        var a = el('a', null);
+        a.href = href(row);
+        var line = el('div', null);
+        line.appendChild(el('span', 'r-title', row[0]));
+        line.appendChild(el('span', 'r-where', row[3]));
+        a.appendChild(line);
+        if (row[2]) a.appendChild(el('div', 'r-gloss', row[2]));
+        panel.appendChild(a);
+      });
+      panel.hidden = false;
+      active = -1;
+    }
+
+    function run() {
+      var q = box.value;
+      if (q.trim().length < 2) { close(); return; }
+      load().then(function (rows) {
+        if (box.value !== q) return;   // a later keystroke already won
+        draw(search(rows, q, 10));
+      });
+    }
+
+    box.addEventListener('input', run);
+    box.addEventListener('focus', function () { if (box.value.trim().length >= 2) run(); });
+
+    box.addEventListener('keydown', function (e) {
+      var items = panel.querySelectorAll('a');
+      if (e.key === 'Escape') { close(); box.blur(); return; }
+      if (!items.length) return;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        active += (e.key === 'ArrowDown' ? 1 : -1);
+        if (active < 0) active = items.length - 1;
+        if (active >= items.length) active = 0;
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.toggle('is-active', i === active);
+        }
+        items[active].scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'Enter' && active >= 0) {
+        e.preventDefault();
+        window.location.href = items[active].href;
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!panel.hidden && !panel.contains(e.target) && e.target !== box) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      var tag = (e.target.tagName || '').toLowerCase();
+      if (e.key === '/' && tag !== 'input' && tag !== 'textarea' && !e.metaKey && !e.ctrlKey) {
+        e.preventDefault();
+        box.focus();
+        box.select();
+      }
+    });
+  }
+
+  /* ---- /wiki/search: the full results page ---- */
+
+  var results = document.getElementById('search-results');
+  var status = document.getElementById('search-status');
+
+  if (results) {
+    var field = document.getElementById('search-q');
+
+    function show(query) {
+      if (!query || query.trim().length < 2) {
+        results.textContent = '';
+        if (status) status.textContent = 'Type at least two letters to search.';
+        return;
+      }
+      load().then(function (rows) {
+        var hits = search(rows, query, 80);
+        results.textContent = '';
+        if (status) {
+          status.textContent = hits.length
+            ? hits.length + (hits.length === 80 ? '+ matches for ' : ' matches for ') + '“' + query + '”'
+            : 'Nothing matches “' + query + '”. The A–Z index lists every note.';
+        }
+        var list = el('ul', null);
+        hits.forEach(function (row) {
+          var li = el('li', 'sr-item');
+          var a = el('a', null, row[0]);
+          a.href = href(row);
+          li.appendChild(a);
+          li.appendChild(el('span', 'sr-where', row[3]));
+          if (row[2]) li.appendChild(el('div', 'sr-gloss', row[2]));
+          list.appendChild(li);
+        });
+        results.appendChild(list);
+      });
+    }
+
+    var q0 = new URLSearchParams(window.location.search).get('q') || '';
+    if (field) {
+      field.value = q0;
+      field.addEventListener('input', function () { show(field.value); });
+    }
+    if (box) box.value = q0;
+    if (q0) show(q0);
+  }
+
+  /* ---- A-Z filter ---- */
+
+  var azFilter = document.getElementById('az-filter');
+  if (azFilter) {
+    var azCount = document.getElementById('az-count');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('.az-row'));
+    var blocks = Array.prototype.slice.call(document.querySelectorAll('.az-block'));
+    azFilter.addEventListener('input', function () {
+      var q = azFilter.value.trim().toLowerCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var hit = !q || row.getAttribute('data-search').indexOf(q) !== -1;
+        row.hidden = !hit;
+        if (hit) shown++;
+      });
+      blocks.forEach(function (block) {
+        block.hidden = !block.querySelector('.az-row:not([hidden])');
+      });
+      if (azCount) azCount.textContent = shown;
+    });
+  }
+})();
 """
 
 
@@ -1605,6 +3025,62 @@ def load_manifest() -> dict[str, dict] | None:
     if data.get("version") != MANIFEST_VERSION:
         return None
     return data.get("notes") or {}
+
+
+def build_search_index(notes: list[Note], glossary: list[Note], index: LinkIndex,
+                       books: dict[str, list[Note]]) -> str:
+    """One prebuilt array the client filters in memory: no service, no network
+    beyond this file. Rows are [title, url after /wiki/, gloss, where, kind]."""
+    rows: list[list[str]] = []
+
+    def add(title: str, url: str, gloss: str, where: str, kind: str) -> None:
+        rows.append([title, url[len("/wiki/"):], clip(gloss, 150), where, kind])
+
+    for note in sorted(glossary, key=lambda n: (n.term.lower(), n.rel)):
+        add(note.term, note.url, note.summary, "definition", "definition")
+    for note in sorted(notes, key=lambda n: (n.title.lower(), n.rel)):
+        where = member_label(note.member)
+        if note.book:
+            where += " · " + book_title(note.book)[0]
+        elif note.folder != "_root":
+            where += " · " + folder_label(note.folder)
+        add(note.title, note.url, note.summary, where, "note")
+    for slug in sorted(index.topics, key=lambda s: index.topic_labels[s]):
+        count = len(index.topics[slug])
+        add(index.topic_labels[slug], topic_url(slug), f"{count} notes tagged this way",
+            "topic", "topic")
+    for group in index.wanted_groups():
+        add(group["name"], wanted_url(group["slug"]),
+            f"{len(group['sources'])} notes link to this title; nobody has written it yet",
+            "wanted", "wanted")
+    for member in sorted({n.member for n in notes}):
+        add(member_label(member), f"/wiki/{slugify(member)}/",
+            "Contributor index", "contributor", "contributor")
+    for book_id in sorted(books):
+        title, author, year = book_title(book_id)
+        add(title, f"/wiki/commons/reading/{slugify(book_id)}/",
+            " · ".join(filter(None, [author, year, f"{len(books[book_id])} reading notes"])),
+            "book", "book")
+
+    return json.dumps({"n": rows}, ensure_ascii=False, separators=(",", ":")) + "\n"
+
+
+def prune(directory: Path, keep: set[str]) -> int:
+    """Delete generated pages whose subject no longer exists.
+
+    Wanted pages and topic pages are derived wholesale from the link graph, so
+    the generator owns every file in these directories — an entry that drops out
+    of the graph has to take its page with it, or a full and an incremental
+    build would disagree about what is on disk.
+    """
+    if not directory.is_dir():
+        return 0
+    removed = 0
+    for path in sorted(directory.glob("*.html")):
+        if path.name != "index.html" and path.stem not in keep:
+            path.unlink()
+            removed += 1
+    return removed
 
 
 def save_manifest(notes: list[Note]) -> bool:
@@ -1671,23 +3147,51 @@ def invalidated(notes: list[Note], old: dict[str, Note], touched: set[str],
                 index: LinkIndex) -> set[str]:
     """Which note pages have to be re-rendered because `touched` changed.
 
-    Three ways a page goes stale: it is the changed note; it is a note the
-    changed note links to (its backlink list moved); or it links to an id whose
-    existence flipped (a dangling link became live, or the reverse).
+    The incremental build must be byte-identical to a full one, so this has to
+    over-approximate rather than guess. A page goes stale when:
+
+    1. it *is* a changed note;
+    2. a changed note links to it — its "What links here" and its "Mentioned
+       alongside" both read off the set of notes linking here, and both can only
+       move when one of those linkers moves;
+    3. it links to a name whose resolution flipped — a wanted link became live,
+       or a live one became wanted. Resolution is by exact id, by glossary
+       alias, *and* by normalised slug, so all three name spaces are tracked;
+    4. it displays a changed note's title. Backlink lists and alongside lists
+       print titles, so renaming a note dirties everything that lists it: its
+       linkers' targets (the co-citation neighbourhood) as well as its targets;
+    5. it is defined by a changed glossary entry, or was.
     """
     current = {n.rel: n for n in notes}
     flipped_ids: set[str] = set()
+    flipped_slugs: set[str] = set()
+    renamed: list[Note] = []
+    glossary_keys: set[str] = set()
+
+    def names_of(note: Note) -> set[str]:
+        return {note.note_id, *note.aliases}
+
     for rel in touched:
         before, after = old.get(rel), current.get(rel)
         if before is None or after is None:
-            flipped_ids.add((after or before).note_id)
-            flipped_ids.update((after or before).aliases)
-            continue
-        if before.note_id != after.note_id:
-            flipped_ids.update({before.note_id, after.note_id})
-        flipped_ids.update(set(before.aliases) ^ set(after.aliases))
+            only = after or before
+            flipped_ids |= names_of(only)
+            renamed.append(only)
+            if only.kind == "glossary":
+                glossary_keys |= {slugify(n) for n in [only.term, only.note_id, *only.aliases]}
+        else:
+            flipped_ids |= names_of(before) ^ names_of(after)
+            if before.title != after.title or before.url != after.url:
+                renamed.append(after)
+            if "glossary" in (before.kind, after.kind):
+                glossary_keys |= {slugify(n) for n in
+                                  [before.term, before.note_id, after.term, after.note_id,
+                                   *before.aliases, *after.aliases]}
+    flipped_slugs = {slugify(n) for n in flipped_ids if slugify(n)}
 
     stale = {rel for rel in touched if rel in current}
+
+    # (2) and part of (4): everything a changed note points at.
     for rel in touched:
         for source in (old.get(rel), current.get(rel)):
             if source is None:
@@ -1696,10 +3200,28 @@ def invalidated(notes: list[Note], old: dict[str, Note], touched: set[str],
                 dest = index.lookup(target)
                 if dest is not None:
                     stale.add(dest.rel)
-    if flipped_ids:
+
+    # (4): the co-citation neighbourhood of a renamed note — every note that
+    # shares a linker with it lists its title in "Mentioned alongside".
+    for note in renamed:
+        for source in index.backlinks.get(note.url) or []:
+            for peer in index.targets.get(source.rel) or []:
+                stale.add(peer.rel)
+
+    # (3): links whose resolution flipped, in either name space.
+    if flipped_ids or flipped_slugs:
         for note in notes:
-            if flipped_ids & set(note.outlinks):
+            targets = set(note.outlinks)
+            if flipped_ids & targets:
                 stale.add(note.rel)
+            elif flipped_slugs & {slugify(t) for t in targets}:
+                stale.add(note.rel)
+
+    # (5): notes a changed glossary entry does or did define.
+    for key in glossary_keys:
+        for note in index.by_name.get(key) or []:
+            stale.add(note.rel)
+
     return stale
 
 
@@ -1752,7 +3274,7 @@ def build(changed: list[Path] | None, quiet: bool = False) -> int:
         by_member[note.member].append(note)
     for member, items in sorted(by_member.items()):
         written += write(OUT_ROOT / slugify(member) / "index.html",
-                         render_member_index(member, items))
+                         render_member_index(member, items, index))
 
     books: dict[str, list[Note]] = defaultdict(list)
     for note in plain:
@@ -1760,34 +3282,70 @@ def build(changed: list[Path] | None, quiet: bool = False) -> int:
             books[note.book].append(note)
     for book_id, items in sorted(books.items()):
         written += write(OUT_ROOT / "commons" / "reading" / slugify(book_id) / "index.html",
-                         render_book_index(book_id, items))
+                         render_book_index(book_id, items, index))
 
-    written += write(OUT_ROOT / "glossary" / "index.html", render_glossary_index(glossary, index))
-    written += write(OUT_ROOT / "all.html", render_all_notes(plain))
+    # Derived surfaces. Every one of them reads the whole link graph, which the
+    # manifest reconstructs exactly in both modes, so they are rebuilt on every
+    # run — `write()` is a no-op when the bytes match, and rebuilding is what
+    # keeps `--changed` byte-identical to `--full`.
+    wanted = index.wanted_groups()
+    for group in wanted:
+        written += write(OUT_ROOT / "wanted" / f"{group['slug']}.html",
+                         render_wanted_page(group, index))
+    removed += prune(OUT_ROOT / "wanted", {g["slug"] for g in wanted})
+
+    for slug in sorted(index.topics):
+        written += write(OUT_ROOT / "topics" / f"{slug}.html",
+                         render_topic_page(slug, index.topic_labels[slug],
+                                           index.topics[slug], index))
+    removed += prune(OUT_ROOT / "topics", set(index.topics))
+
+    written += write(OUT_ROOT / "wanted" / "index.html", render_wanted_index(wanted, index))
+    written += write(OUT_ROOT / "topics" / "index.html", render_topics_index(index))
+    written += write(OUT_ROOT / "glossary" / "index.html",
+                     render_glossary_index(glossary, index, plain))
+    written += write(OUT_ROOT / "hubs.html", render_hubs(plain, index))
+    written += write(OUT_ROOT / "orphans.html", render_orphans(plain, index))
+    written += write(OUT_ROOT / "loose-links.html", render_loose_links(index))
+    written += write(OUT_ROOT / "changes.html", render_changes(plain, commits))
+    written += write(OUT_ROOT / "special.html",
+                     render_special(plain, glossary, index, books, commits))
+    written += write(OUT_ROOT / "search.html", render_search())
+    written += write(OUT_ROOT / "all.html", render_all_notes(plain, index))
     written += write(OUT_ROOT / "index.html", render_home(plain, glossary, index, commits))
+    written += write(OUT_ROOT / "search-index.json",
+                     build_search_index(plain, glossary, index, books))
     written += write(OUT_ROOT / "wiki.css", WIKI_CSS)
+    written += write(OUT_ROOT / "wiki.js", WIKI_JS)
     written += save_manifest(notes)
 
     elapsed = time.perf_counter() - started
     mode = "full" if changed is None else f"incremental ({len(touched)} source change(s))"
     print(f"wiki [{mode}]: {len(plain)} notes, {len(glossary)} glossary terms, "
-          f"{len(by_member)} contributors, {len(books)} books — "
-          f"{len(stale)} page(s) rendered, {written} file(s) written"
+          f"{len(by_member)} contributors, {len(books)} books, "
+          f"{len(index.topics)} topics, {len(wanted)} wanted — "
+          f"{len(stale)} note page(s) rendered, {written} file(s) written"
           f"{f', {removed} removed' if removed else ''} in {elapsed:.2f}s")
     if quiet:
         return 0
-    print(f"  links: {index.resolved_hits} resolved, "
-          f"{sum(index.dangling.values())} dangling across {len(index.dangling)} targets")
+    orphans = sum(1 for n in plain if index.inbound(n) == 0)
+    print(f"  links: {index.resolved_hits} resolved "
+          f"({index.loose_hits} of them by normalisation, across {len(index.loose)} names), "
+          f"{sum(index.wanted.values())} wanted across {len(index.wanted)} targets")
+    print(f"  graph: {orphans} orphan note(s)")
     for note_id, hits in sorted(index.ambiguous.items()):
         print(f"  ambiguous id '{note_id}' ({len(hits)} notes) -> "
               f"{sorted(hits, key=lambda n: n.rel)[0].rel}")
     for alias, owner in index.alias_conflicts:
         print(f"  alias '{alias}' (glossary '{owner}') shadowed by a real note of that name")
+    for slug, ids in sorted(index.slug_conflicts.items()):
+        print(f"  slug '{slug}' claimed by {len(ids)} names {ids} — left unresolved")
     if skipped:
         print("  skipped: " + ", ".join(f"{k}={v}" for k, v in sorted(skipped.items())))
-    top = sorted(index.dangling.items(), key=lambda kv: (-kv[1], kv[0]))[:8]
+    top = sorted(wanted, key=lambda g: (-len(g["sources"]), g["slug"]))[:6]
     if top:
-        print("  most-linked missing notes: " + ", ".join(f"{t} ({c})" for t, c in top))
+        print("  most-wanted pages: "
+              + ", ".join(f"{g['name']} ({len(g['sources'])})" for g in top))
     return 0
 
 

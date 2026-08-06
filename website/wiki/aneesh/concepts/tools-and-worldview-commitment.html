@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Tools and Worldview Commitment</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Tools and Worldview Commitment</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/tools-and-worldview-commitment.md">source on GitHub</a></div>
-  <div class="note-summary">The claim that every tool is a micro-place that frames what can be thought and forecloses alternatives — choosing a tool constitutes a commitment to a worldview.</div>
-  <div class="tags"><span class="tag">tools</span><span class="tag">technology</span><span class="tag">worldview</span><span class="tag">place-making</span><span class="tag">epistemology</span><span class="tag">media-theory</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/tools-and-worldview-commitment.md">source on GitHub</a></div>
+    <div class="note-summary">The claim that every tool is a micro-place that frames what can be thought and forecloses alternatives — choosing a tool constitutes a commitment to a worldview.</div>
     <div class="prose">
 <h2 id="the-claim">The Claim</h2>
 <blockquote><p>&quot;Picking a tool commits us to a world view.&quot;</p></blockquote>
@@ -43,18 +52,18 @@
 <li>Foreclose moves that the tool does not support.</li>
 <li>Adopt an implicit ontology about the problem-space.</li>
 </ul>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a></p>
 <h2 id="illustrative-examples">Illustrative Examples</h2>
 <p><strong>Netflix</strong>: The search bar is open space (pure possibility). Netflix&#x27;s suggestion algorithm creates a <em>place</em> shaped by watch history — it narrows possibility while appearing to offer choice. The suggested space is not the full space; it is one curated path through it.</p>
 <p><strong>Language</strong>: Natural language itself is a tool that commits users to particular categories, distinctions, and affordances. Choosing English vs. German vs. a formalism (mathematics, code) is a worldview commitment.</p>
 <p><strong>Scientific method</strong>: Choosing the experimental method as a tool commits you to a universe that is lawful, observable, and repeatable. Other stances (mystical, interpretive) are foreclosed.</p>
 <h2 id="relation-to-the-printing-press">Relation to the Printing Press</h2>
-<p>When the printing press created information overload, the tool of <em>organized knowledge comparison</em> (bibliography, citations, criticism) emerged as a corrective micro-place. Choosing that tool over mystical synthesis (cf. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span>) was a worldview commitment that enabled the scientific revolution.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span></p>
+<p>When the printing press created information overload, the tool of <em>organized knowledge comparison</em> (bibliography, citations, criticism) emerged as a corrective micro-place. Choosing that tool over mystical synthesis (cf. <a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a>) was a worldview commitment that enabled the scientific revolution.</p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a></p>
 <h2 id="relation-to-ai">Relation to AI</h2>
 <p>LLMs as a tool commit users to a particular mode of knowledge-engagement: conversational, probabilistic, associative. The tool forecloses certain forms of rigor (precise citation, formal proof) while opening others (exploratory dialogue, analogical reasoning).</p>
 <p>The Socratic use of LLMs — treating the session as inquiry rather than answer-extraction — is itself a choice of how to wield the tool, and thus a worldview commitment.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs as Epistemic Tools&quot;">LLMs as Epistemic Tools</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/llms-as-epistemic-tools" title="Written [[LLMs as Epistemic Tools]], resolved to llms-as-epistemic-tools">LLMs as Epistemic Tools</a></p>
 <h2 id="broader-resonances">Broader Resonances</h2>
 <p>This claim resonates with:</p>
 <ul>
@@ -64,24 +73,55 @@
 </ul>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — tools as micro-places</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Curation as Place-Making&quot;">Algorithmic Curation as Place-Making</span> — algorithmic tools</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs as Epistemic Tools&quot;">LLMs as Epistemic Tools</span> — LLMs as tools with particular affordances</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span> — historical tool-transition</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thinking with Places&quot;">Thinking with Places</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — tools as micro-places</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making" title="Written [[Algorithmic Curation as Place-Making]], resolved to algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a> — algorithmic tools</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/llms-as-epistemic-tools" title="Written [[LLMs as Epistemic Tools]], resolved to llms-as-epistemic-tools">LLMs as Epistemic Tools</a> — LLMs as tools with particular affordances</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a> — historical tool-transition</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/thinking-with-places" title="Written [[Thinking with Places]], resolved to thinking-with-places">Thinking with Places</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/pluripotency-and-exaptation">Pluripotency and Exaptation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-07-my-time-is-my-time">RIT 07 — My Time Is My Time (Ch. 5)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>388</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">8</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/printing-press-and-information-overload">Printing Press and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/thinking-with-places">Thinking with Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/pluripotency-and-exaptation">Pluripotency and Exaptation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-07-my-time-is-my-time">RIT 07 — My Time Is My Time (Ch. 5)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/tools">tools</a><a class="tag" href="/wiki/topics/technology">technology</a><span class="tag tag-lone" title="Only this note uses it">worldview</span><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/media-theory">media-theory</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/sean/">Sean</a> <b>/</b> <span>Babel Was a Clue</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Babel Was a Clue</h1>
-  <div class="note-byline"><a href="/wiki/sean/">Sean</a> · updated 27 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/sean/babel-was-a-clue%20%281%29.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/sean/">Sean</a> · updated 27 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/sean/babel-was-a-clue%20%281%29.md">source on GitHub</a></div>
     <div class="prose">
 <p><em>Reading an AI encyclical for the small signal of a large, slow change</em></p>
 <p><a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html"><em>Magnifica Humanitas</em></a> presents itself plainly enough. Leo XIV, May 2026: a long encyclical &quot;on safeguarding the human person in the time of artificial intelligence,&quot; threaded through 135 years of Catholic social teaching from <a href="https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html"><em>Rerum Novarum</em></a> forward. Dignity, the common good, subsidiarity, solidarity, social justice. And a clue.</p>
@@ -62,13 +72,22 @@
 <p>[^5]: Pius XI, <em>Quadragesimo Anno</em> (1931), is where subsidiarity receives its canonical formulation; the deeper root is Leo XIII&#x27;s <em>Rerum Novarum</em> (1891), the document this encyclical is consciously written in the lineage of. The dating carries weight in the argument: a roughly hundred-year-old principle surfacing now is a far more legible clue than some timeless Catholic preference for the local, which is what a looser telling would imply.</p>
 <p>[^6]: The encyclical shows you the tempo itself. Its section on slavery calls the Church&#x27;s long complicity &quot;a wound in Christian memory&quot; and, &quot;in the name of the Church,&quot; asks pardon (§176), noting that slavery&#x27;s &quot;full incompatibility&quot; with the faith took eighteen centuries &quot;to be explicitly recognized.&quot; Same slow-motion pattern: not new doctrine replacing old, but a truth formally held becoming a social reality the institution could finally see. If it can take eighteen centuries to fully see one of its own commitments, a hundred-year-old instinct surfacing in a metaphor is exactly the size and speed of clue to expect.</p>
     </div>
+    <p class="note-history">Last changed 27 May 2026 by smsteven8 — <a href="https://github.com/worldmachines/worldmachines/commit/8d06caba8c224a610528f0cefcbd2728381877b1">Add files via upload</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 27 May 2026 by smsteven8 — <a href="https://github.com/worldmachines/worldmachines/commit/8d06caba8c224a610528f0cefcbd2728381877b1">Add files via upload</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>2427</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

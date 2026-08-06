@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,23 +26,32 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Western Canon</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Western Canon</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/western-canon.md">source on GitHub</a></div>
-  <div class="note-summary">Harold Bloom&#x27;s defense of aesthetic selectivity in the literary tradition — the argument that certain works must be preserved and taught because artists themselves (through continuing influence) elect them, and that forgetting them is a civilizational loss.</div>
-  <div class="tags"><span class="tag">harold-bloom</span><span class="tag">literary-canon</span><span class="tag">western-tradition</span><span class="tag">aesthetic-value</span><span class="tag">memory</span><span class="tag">cultural-politics</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/western-canon.md">source on GitHub</a></div>
+    <div class="note-summary">Harold Bloom&#x27;s defense of aesthetic selectivity in the literary tradition — the argument that certain works must be preserved and taught because artists themselves (through continuing influence) elect them, and that forgetting them is a civilizational loss.</div>
     <div class="prose">
 <h2 id="blooms-argument">Bloom&#x27;s Argument</h2>
 <p>In <em>The Western Canon</em> (1994), Harold Bloom mounts a defense of canonical literary selection against what he calls the &quot;School of Resentment&quot; — deconstruction, New Historicism, feminist theory, postcolonial criticism, and multiculturalism as practiced in academic literary study.</p>
 <p>The argument is not primarily political, though it has been received as such. It is fundamentally about <strong>memory</strong> and <strong>aesthetic selection</strong>:</p>
 <blockquote><p>&quot;Nothing is so essential to the Western Canon as its principles of selectivity, which are elitist only to the extent that they are founded upon severely artistic criteria.&quot;</p></blockquote>
-<p>The criterion for inclusion is not demographic representation, cultural significance, or historical importance. The criterion is: <strong>does the work continue to influence writers?</strong> Are living writers still returning to this text as a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Precursor and Ephebe&quot;">precursor</span>, still being made anxious by it, still producing misreadings that generate new work?</p>
-<p>This criterion makes the canon self-enforcing: if artists stop reading Shakespeare, Shakespeare exits the canon. The canon is not a fixed administrative list but a living system of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">influences</span>.</p>
+<p>The criterion for inclusion is not demographic representation, cultural significance, or historical importance. The criterion is: <strong>does the work continue to influence writers?</strong> Are living writers still returning to this text as a <a class="wikilink-wanted" href="/wiki/wanted/precursor-and-ephebe" title="No note is called &quot;Precursor and Ephebe&quot; yet — see who is asking for it">precursor</a>, still being made anxious by it, still producing misreadings that generate new work?</p>
+<p>This criterion makes the canon self-enforcing: if artists stop reading Shakespeare, Shakespeare exits the canon. The canon is not a fixed administrative list but a living system of <a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">influences</a>.</p>
 <h2 id="vicos-historical-structure">Vico&#x27;s Historical Structure</h2>
-<p>Bloom organizes the canon according to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span>&#x27;s historical cycles:</p>
+<p>Bloom organizes the canon according to <a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a>&#x27;s historical cycles:</p>
 <ul>
 <li><strong>Aristocratic Age</strong>: Dante, Chaucer, Shakespeare, Cervantes, Montaigne, Molière, Goethe, Dr. Johnson</li>
 <li><strong>Democratic Age</strong>: Wordsworth, Austen, Dickens, Whitman, Dickinson, George Eliot, Ibsen, Tolstoy</li>
@@ -69,23 +78,56 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Harold Bloom&quot;">Harold Bloom</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> — the mechanism that operates within the canon</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span> — the condition of writing within a rich canonical tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> — the historical philosopher structuring the canon</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Literary Memory as Spiritual Vocation&quot;">Literary Memory as Spiritual Vocation</span> — Bloom&#x27;s deepest claim</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Influence of Anxiety&quot;">The Influence of Anxiety</span> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/harold-bloom" title="Written [[Harold Bloom]], resolved to harold-bloom">Harold Bloom</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> — the mechanism that operates within the canon</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a> — the condition of writing within a rich canonical tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> — the historical philosopher structuring the canon</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/literary-memory-as-spiritual-vocation" title="No note is called &quot;Literary Memory as Spiritual Vocation&quot; yet — see who is asking for it">Literary Memory as Spiritual Vocation</a> — Bloom&#x27;s deepest claim</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-influence-of-anxiety" title="Written [[The Influence of Anxiety]], resolved to the-influence-of-anxiety">The Influence of Anxiety</a> — source essay</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-cuckoo-and-nightingale">The Cuckoo and the Nightingale</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>569</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">8</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-influence-of-anxiety">The Influence of Anxiety (The Point, ~2022–2024)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-cuckoo-and-nightingale">The Cuckoo and the Nightingale</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/data-and-frames-in-analysis-and-art">Data is Always Constructed: From Sensemaking to Art</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-influence-of-anxiety">The Influence of Anxiety (The Point, ~2022–2024)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/harold-bloom">harold-bloom</a><span class="tag tag-lone" title="Only this note uses it">literary-canon</span><span class="tag tag-lone" title="Only this note uses it">western-tradition</span><span class="tag tag-lone" title="Only this note uses it">aesthetic-value</span><a class="tag" href="/wiki/topics/memory">memory</a><span class="tag tag-lone" title="Only this note uses it">cultural-politics</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

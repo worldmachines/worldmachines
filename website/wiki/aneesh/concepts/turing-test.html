@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,19 +26,28 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Turing Test</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Turing Test</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/turing-test.md">source on GitHub</a></div>
-  <div class="note-summary">Alan Turing&#x27;s operationalization of &#x27;What is thinking?&#x27; into a behavioral detection problem — used by Sathe as an example of converting a genuine question into a problem, with the consequence that passing the test does not resolve the original question.</div>
-  <div class="tags"><span class="tag">Turing</span><span class="tag">AI</span><span class="tag">epistemology</span><span class="tag">problems-vs-questions</span><span class="tag">thinking</span><span class="tag">computation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/turing-test.md">source on GitHub</a></div>
+    <div class="note-summary">Alan Turing&#x27;s operationalization of &#x27;What is thinking?&#x27; into a behavioral detection problem — used by Sathe as an example of converting a genuine question into a problem, with the consequence that passing the test does not resolve the original question.</div>
     <div class="prose">
 <h2 id="original-purpose">Original Purpose</h2>
-<p>Proposed by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alan Turing&quot;">Alan Turing</span> in &quot;Computing Machinery and Intelligence&quot; (1950). Turing reframed the philosophically intractable question &quot;Can machines think?&quot; into a behavioral test: can a machine produce responses indistinguishable from a human in text-based conversation?</p>
+<p>Proposed by <a class="wikilink" href="/wiki/aneesh/entities/alan-turing" title="Written [[Alan Turing]], resolved to alan-turing">Alan Turing</a> in &quot;Computing Machinery and Intelligence&quot; (1950). Turing reframed the philosophically intractable question &quot;Can machines think?&quot; into a behavioral test: can a machine produce responses indistinguishable from a human in text-based conversation?</p>
 <h2 id="sathes-reframing">Sathe&#x27;s Reframing</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chatbots, Bats &amp; Broken Oracles&quot;">Chatbots, Bats &amp; Broken Oracles</span>, Sathe uses the Turing Test as an illustration of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs. Questions&quot;">problem vs. question reduction</span>:</p>
+<p>In <a class="wikilink-wanted" href="/wiki/wanted/chatbots-bats-and-broken-oracles" title="No note is called &quot;Chatbots, Bats &amp; Broken Oracles&quot; yet — see who is asking for it">Chatbots, Bats &amp; Broken Oracles</a>, Sathe uses the Turing Test as an illustration of <a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs. Questions]], resolved to problems-vs-questions">problem vs. question reduction</a>:</p>
 <ul>
 <li><strong>Original question</strong>: &quot;What is it to think?&quot;</li>
 <li><strong>Turing&#x27;s conversion</strong>: &quot;How do you detect thought?&quot; (a problem)</li>
@@ -58,23 +67,55 @@
 <li>Passing the problem does not answer the original question.</li>
 <li>We sense that the operationalization missed something — phenomenal consciousness? First-person experience? Genuine intentionality?</li>
 </ul>
-<p>This gap is precisely what <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Nagel&quot;">Thomas Nagel</span>&#x27;s bat argument explores: the subjective, first-person character of experience that behavioral tests cannot capture.</p>
+<p>This gap is precisely what <a class="wikilink" href="/wiki/aneesh/entities/thomas-nagel" title="Written [[Thomas Nagel]], resolved to thomas-nagel">Thomas Nagel</a>&#x27;s bat argument explores: the subjective, first-person character of experience that behavioral tests cannot capture.</p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alan Turing&quot;">Alan Turing</span> — author</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs. Questions&quot;">Problems vs. Questions</span> — the Turing Test as a canonical problem-conversion</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs as Epistemic Tools&quot;">LLMs as Epistemic Tools</span> — LLMs pass the test; what does that mean?</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Nagel&quot;">Thomas Nagel</span> — the complementary phenomenal argument</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chatbots, Bats &amp; Broken Oracles&quot;">Chatbots, Bats &amp; Broken Oracles</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/alan-turing" title="Written [[Alan Turing]], resolved to alan-turing">Alan Turing</a> — author</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs. Questions]], resolved to problems-vs-questions">Problems vs. Questions</a> — the Turing Test as a canonical problem-conversion</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/llms-as-epistemic-tools" title="Written [[LLMs as Epistemic Tools]], resolved to llms-as-epistemic-tools">LLMs as Epistemic Tools</a> — LLMs pass the test; what does that mean?</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/thomas-nagel" title="Written [[Thomas Nagel]], resolved to thomas-nagel">Thomas Nagel</a> — the complementary phenomenal argument</li>
+<li>Source: <a class="wikilink-wanted" href="/wiki/wanted/chatbots-bats-and-broken-oracles" title="No note is called &quot;Chatbots, Bats &amp; Broken Oracles&quot; yet — see who is asking for it">Chatbots, Bats &amp; Broken Oracles</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>293</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">5</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/llms-as-epistemic-tools">LLMs as Epistemic Tools</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-nagel">Thomas Nagel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alan-turing">Alan Turing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/chatbots-bats-broken-oracles">Chatbots, Bats &amp; Broken Oracles</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/llms-as-epistemic-tools">LLMs as Epistemic Tools</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-nagel">Thomas Nagel</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/alan-turing">Alan Turing</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">Turing</span><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><span class="tag tag-lone" title="Only this note uses it">problems-vs-questions</span><span class="tag tag-lone" title="Only this note uses it">thinking</span><a class="tag" href="/wiki/topics/computation">computation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

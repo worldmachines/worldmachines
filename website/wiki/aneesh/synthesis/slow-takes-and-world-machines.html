@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Slow Takes and World Machines</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Slow Takes and World Machines</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/slow-takes-and-world-machines.md">source on GitHub</a></div>
-  <div class="note-summary">Synthesis: Paul Salopek&#x27;s Out of Eden Walk and the cyberpaleo perspective as methodological complements to the World Machines framework — slow, grounded, worm&#x27;s-eye takes that reveal what civilizational-scale analysis misses.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">slow-journalism</span><span class="tag">cyberpaleo</span><span class="tag">liveness-machine</span><span class="tag">paul-salopek</span><span class="tag">world-machines</span><span class="tag">methodology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/slow-takes-and-world-machines.md">source on GitHub</a></div>
+    <div class="note-summary">Synthesis: Paul Salopek&#x27;s Out of Eden Walk and the cyberpaleo perspective as methodological complements to the World Machines framework — slow, grounded, worm&#x27;s-eye takes that reveal what civilizational-scale analysis misses.</div>
     <div class="prose">
 <h2 id="the-problem-with-civilizational-scale">The Problem with Civilizational Scale</h2>
 <p>The <a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework">world-machines-framework</a> operates at civilizational scale — 400-year arcs, class relations, machine typologies. This scale is powerful for identifying large patterns but systematically misses what Weick calls the &quot;grounding conditions&quot; — the local, embodied, particular texture of life that the patterns are made of.</p>
-<p>Patrick Atwater&#x27;s &quot;Walking the World Machines&quot; essay proposes a pairing: the WM framework as map, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Paul Salopek — Out of Eden Walk&quot;">Paul Salopek — Out of Eden Walk</span> as territory.</p>
+<p>Patrick Atwater&#x27;s &quot;Walking the World Machines&quot; essay proposes a pairing: the WM framework as map, <a class="wikilink-wanted" href="/wiki/wanted/paul-salopek-out-of-eden-walk" title="No note is called &quot;Paul Salopek — Out of Eden Walk&quot; yet — see who is asking for it">Paul Salopek — Out of Eden Walk</a> as territory.</p>
 <h2 id="paul-salopeks-method">Paul Salopek&#x27;s Method</h2>
 <p>Salopek has been walking the migration routes of <em>Homo sapiens</em> out of Africa for 12+ years. His field notes are:</p>
 <ul>
@@ -45,16 +54,16 @@
 <li><strong>Temporally extended</strong>: the pace of a walk renders visible what satellite view and journalism compress away</li>
 <li><strong>Generative of surprise</strong>: a post about container ships &quot;rewilds&quot; something mundane — the abundance of stuff we take for granted suddenly appears strange and contingent</li>
 </ul>
-<p>This is precisely the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cyberpaleo Perspective&quot;">Cyberpaleo Perspective</span> as a methodological stance: making the familiar strange by changing the viewing scale.</p>
+<p>This is precisely the <a class="wikilink" href="/wiki/aneesh/concepts/cyberpaleo-perspective" title="Written [[Cyberpaleo Perspective]], resolved to cyberpaleo-perspective">Cyberpaleo Perspective</a> as a methodological stance: making the familiar strange by changing the viewing scale.</p>
 <h2 id="what-slow-takes-reveal-that-wm-analysis-doesnt">What Slow Takes Reveal That WM Analysis Doesn&#x27;t</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness Machine&quot;">Liveness Machine</span> is the hardest to characterize from within the WM framework because its characteristic optimization target (&quot;liveness&quot;) is not yet legible at civilizational scale. Atwater&#x27;s intuition: slow takes like Salopek&#x27;s may reveal liveness <em>in the particular</em> before it is articulable in the general.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine" title="Written [[Liveness Machine]], resolved to liveness-machine">Liveness Machine</a> is the hardest to characterize from within the WM framework because its characteristic optimization target (&quot;liveness&quot;) is not yet legible at civilizational scale. Atwater&#x27;s intuition: slow takes like Salopek&#x27;s may reveal liveness <em>in the particular</em> before it is articulable in the general.</p>
 <p>The nomadic lifeways vs. sedentary cities tension (agriculture as self-domestication, humans creating captivity for themselves) is directly visible to someone walking at human speed across the terrain where these transitions happened. It is nearly invisible to someone reading the scholarly literature.</p>
 <h2 id="the-pre-axial-material">The Pre-Axial Material</h2>
 <p>Atwater&#x27;s speculative extensions (numbers before words, vigesimal vs. decimal counting, Paleolithic consciousness) are not developed WM arguments — but they gesture at something important: the WM framework needs a pre-Axial foundation.</p>
 <p>The key insight from numeracy: <strong>legibility is older than the Modernity Machine</strong>. The earliest number systems were already &quot;competing solutions to making quantities legible across populations and time, each rooted in the somatic fact of counting appendages.&quot; The MM did not invent legibility; it industrialized and centralized it. What came before?</p>
 <p>If the Axial Age was ~1600 years (800 BCE–800 CE), and the WM cycle time has been accelerating, then earlier machines ran slower. The substrate of legibility (numeracy, writing, domestication) may represent a still-earlier machine whose rhythm is measured in millennia.</p>
 <h2 id="bicameral-mind-as-liveness-precursor">Bicameral Mind as Liveness Precursor</h2>
-<p>Julian Jaynes&#x27; <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bicameral Mind&quot;">Bicameral Mind</span> thesis — that pre-modern consciousness was not experienced as a unified monologue but as external voices (the &quot;voices of the gods&quot;) — connects to the LM. If the Modernity Machine constructed the unified modern subject (self-transparent, self-governing, rational), then the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness Machine&quot;">Liveness Machine</span>&#x27;s challenge to the MM subject might be a return to polyphony — multiple &quot;voices&quot; or processes that are not unified under a single self.</p>
+<p>Julian Jaynes&#x27; <a class="wikilink-wanted" href="/wiki/wanted/bicameral-mind" title="No note is called &quot;Bicameral Mind&quot; yet — see who is asking for it">Bicameral Mind</a> thesis — that pre-modern consciousness was not experienced as a unified monologue but as external voices (the &quot;voices of the gods&quot;) — connects to the LM. If the Modernity Machine constructed the unified modern subject (self-transparent, self-governing, rational), then the <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine" title="Written [[Liveness Machine]], resolved to liveness-machine">Liveness Machine</a>&#x27;s challenge to the MM subject might be a return to polyphony — multiple &quot;voices&quot; or processes that are not unified under a single self.</p>
 <p>The &quot;revenge of the bicameral mind&quot; framing: AI assistants as external voices that we&#x27;re learning to integrate (or not), potentially fragmenting the unified MM-era subject that was such a hard-won achievement.</p>
 <h2 id="essay-seeds">Essay Seeds</h2>
 <ol>
@@ -64,27 +73,54 @@
 </ol>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness Machine&quot;">Liveness Machine</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine" title="Written [[Liveness Machine]], resolved to liveness-machine">Liveness Machine</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework">world-machines-framework</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cyberpaleo Perspective&quot;">Cyberpaleo Perspective</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Paul Salopek — Out of Eden Walk&quot;">Paul Salopek — Out of Eden Walk</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Numeracy as Legibility Substrate&quot;">Numeracy as Legibility Substrate</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domestication and Self-Domestication&quot;">Domestication and Self-Domestication</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bicameral Mind — Julian Jaynes&quot;">Bicameral Mind — Julian Jaynes</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility as Machine Core&quot;">Legibility as Machine Core</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cyberpaleo-perspective" title="Written [[Cyberpaleo Perspective]], resolved to cyberpaleo-perspective">Cyberpaleo Perspective</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/paul-salopek-out-of-eden-walk" title="No note is called &quot;Paul Salopek — Out of Eden Walk&quot; yet — see who is asking for it">Paul Salopek — Out of Eden Walk</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/numeracy-as-legibility-substrate" title="No note is called &quot;Numeracy as Legibility Substrate&quot; yet — see who is asking for it">Numeracy as Legibility Substrate</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/domestication-and-self-domestication" title="No note is called &quot;Domestication and Self-Domestication&quot; yet — see who is asking for it">Domestication and Self-Domestication</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/bicameral-mind-julian-jaynes" title="No note is called &quot;Bicameral Mind — Julian Jaynes&quot; yet — see who is asking for it">Bicameral Mind — Julian Jaynes</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core" title="Written [[Legibility as Machine Core]], resolved to legibility-as-machine-core">Legibility as Machine Core</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>607</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-world-machines-canon">The World Machines Canon — A Unified Map</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/blogrolls-and-the-personal-web">Blogrolls and the Personal Web</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/live-zones">Live Zones</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/slow-journalism">slow-journalism</a><a class="tag" href="/wiki/topics/cyberpaleo">cyberpaleo</a><a class="tag" href="/wiki/topics/liveness-machine">liveness-machine</a><span class="tag tag-lone" title="Only this note uses it">paul-salopek</span><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/methodology">methodology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

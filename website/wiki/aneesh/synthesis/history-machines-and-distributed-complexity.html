@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>History Machines and Distributed Complexity — A Synthesis</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>History Machines and Distributed Complexity — A Synthesis</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/history-machines-and-distributed-complexity.md">source on GitHub</a></div>
-  <div class="note-summary">Lohse&#x27;s history machines, Rao&#x27;s New Nature, and Chaisson&#x27;s cosmic evolution all describe the same underlying phenomenon — complexity assembles through distributed, non-teleological processes until threshold conditions trigger paradigm-level emergence — but at different scales and with different normative framings.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">history-machine</span><span class="tag">complexity</span><span class="tag">emergence</span><span class="tag">distributed</span><span class="tag">rao</span><span class="tag">lohse</span><span class="tag">chaisson</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/history-machines-and-distributed-complexity.md">source on GitHub</a></div>
+    <div class="note-summary">Lohse&#x27;s history machines, Rao&#x27;s New Nature, and Chaisson&#x27;s cosmic evolution all describe the same underlying phenomenon — complexity assembles through distributed, non-teleological processes until threshold conditions trigger paradigm-level emergence — but at different scales and with different normative framings.</div>
     <div class="prose">
 <h2 id="the-common-structure">The Common Structure</h2>
 <p>Three sources describe the same structural phenomenon at different scales:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Scale</th><th>Framework</th><th>Author</th></tr></thead>
 <tbody>
-<tr><td>Cosmic (~14 billion years)</td><td>Cosmic evolution, seven phases</td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Eric Chaisson&quot;">Eric Chaisson</span></td></tr>
-<tr><td>Civilizational (~centuries)</td><td>History machines, modernity assembly</td><td><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> / <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span></td></tr>
+<tr><td>Cosmic (~14 billion years)</td><td>Cosmic evolution, seven phases</td><td><a class="wikilink" href="/wiki/aneesh/entities/eric-chaisson" title="Written [[Eric Chaisson]], resolved to eric-chaisson">Eric Chaisson</a></td></tr>
+<tr><td>Civilizational (~centuries)</td><td>History machines, modernity assembly</td><td><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> / <a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a></td></tr>
 <tr><td>Technological (decades)</td><td>New Nature, protocol tangled banks</td><td><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></td></tr>
 </tbody>
 </table></div>
@@ -71,7 +80,7 @@
 </ul>
 <p>The key difference from Chaisson: at civilizational scale, deliberate destruction (the Portuguese burning the charts) plays a role that has no analogue in cosmic evolution. Human history machines can be deliberately sabotaged.</p>
 <h2 id="new-nature-as-ongoing-history-machine">New Nature as Ongoing History Machine</h2>
-<p>Rao&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span> is a history machine in permanent operation:</p>
+<p>Rao&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a> is a history machine in permanent operation:</p>
 <ul>
 <li>Old railroads, buried fiber, regulatory regimes, new protocols — all components developing on their own timescales</li>
 <li>The &quot;protocol tangled bank&quot; is the latent state of a history machine before it activates</li>
@@ -93,31 +102,53 @@
 <li><strong>Lohse</strong>: human actors, deliberate sabotage, provincial outsider perspectives — agency present but marginal</li>
 <li><strong>Rao</strong>: vicious competition, capture resistance, Dark Forest dynamics — history machines are <em>ecological battlegrounds</em>, not self-organizing harmony</li>
 </ul>
-<p>Rao&#x27;s intervention: Chaisson&#x27;s account is too clean. The assembly of a history machine is not just physics — it involves entities fighting for <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span>, exercising <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Capture Resistance&quot;">Capture Resistance</span>, and murdering competitors.</p>
+<p>Rao&#x27;s intervention: Chaisson&#x27;s account is too clean. The assembly of a history machine is not just physics — it involves entities fighting for <a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a>, exercising <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance" title="Written [[Capture Resistance]], resolved to capture-resistance">Capture Resistance</a>, and murdering competitors.</p>
 <h2 id="essay-seed">Essay Seed</h2>
 <p><strong>&quot;On the Grammar of Emergence&quot;</strong>: All three accounts of distributed complexity face the same question — what determines <em>which</em> configuration of components crosses the threshold? Thermodynamic threshold (Chaisson), cartographic erasure (Majapahit), Dark Forest competition (Rao). The essay would argue that emergence is never purely self-organizing: there are always both thermodynamic and strategic forces in play, and the dominant historiographical tradition underweights the strategic (who destroyed what, who colonized whom) in favor of the thermodynamic.</p>
 <h2 id="related-synthesis-pages">Related Synthesis Pages</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness and Energy Rate Density&quot;">Liveness and Energy Rate Density</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature as Life Era&quot;">New Nature as Life Era</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density" title="Written [[Liveness and Energy Rate Density]], resolved to liveness-and-energy-rate-density">Liveness and Energy Rate Density</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/new-nature-as-life-era" title="Written [[New Nature as Life Era]], resolved to new-nature-as-life-era">New Nature as Life Era</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cosmic Evolution - Chaisson&quot;">Cosmic Evolution - Chaisson</span></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/cosmic-evolution-chaisson" title="Written [[Cosmic Evolution - Chaisson]], resolved to cosmic-evolution-chaisson">Cosmic Evolution - Chaisson</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/df-history-generation-and-prime-radiant-seeding">DF History Generation and Prime Radiant Seeding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>687</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/df-history-generation-and-prime-radiant-seeding">DF History Generation and Prime Radiant Seeding</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/the-world-machines-canon">The World Machines Canon — A Unified Map</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/history-machine">history-machine</a><a class="tag" href="/wiki/topics/complexity">complexity</a><a class="tag" href="/wiki/topics/emergence">emergence</a><span class="tag tag-lone" title="Only this note uses it">distributed</span><a class="tag" href="/wiki/topics/rao">rao</a><a class="tag" href="/wiki/topics/lohse">lohse</a><a class="tag" href="/wiki/topics/chaisson">chaisson</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

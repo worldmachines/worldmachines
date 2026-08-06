@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <span>Entities</span> <b>/</b> <span>The Agricultural Revolution (Appleby&#x27;s account)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Agricultural Revolution (Appleby&#x27;s account)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Entities · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/entities/agricultural-revolution.md">source on GitHub</a></div>
-  <div class="note-summary">The seventeenth-century shift from fallow-field farming to Dutch four-part crop rotation, adopted and extended by English freeholders and improving landlords, which Appleby treats as capitalism&#x27;s causal keystone — breaking the Malthusian food ceiling, cutting England&#x27;s farm workforce from 80 to 40 percent, and freeing the labour and capital that industry later used.</div>
-  <div class="tags"><span class="tag">agricultural-revolution</span><span class="tag">crop-rotation</span><span class="tag">enclosure</span><span class="tag">malthusian-population</span><span class="tag">capitalism-preconditions</span><span class="tag">dutch-farming</span><span class="tag">english-farming</span><span class="tag">food-scarcity</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Entities · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/entities/agricultural-revolution.md">source on GitHub</a></div>
+    <div class="note-summary">The seventeenth-century shift from fallow-field farming to Dutch four-part crop rotation, adopted and extended by English freeholders and improving landlords, which Appleby treats as capitalism&#x27;s causal keystone — breaking the Malthusian food ceiling, cutting England&#x27;s farm workforce from 80 to 40 percent, and freeing the labour and capital that industry later used.</div>
     <div class="prose">
 <p>In <em>The Relentless Revolution</em> the switch from fallow-field farming to continuous crop rotation is the causal keystone of capitalism&#x27;s emergence — the change Appleby argues &quot;did more to make capitalism possible than trade in spices or the parade of industrial machines that gets the credit&quot; (<a class="wikilink" href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements">appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements</a>). This page collects that account across the notes that develop it.</p>
 <h2 id="the-trap-it-broke">The trap it broke</h2>
@@ -60,16 +69,42 @@
 <li><a class="wikilink" href="/wiki/commons/summaries/more-utopia">more-utopia</a> — the earlier English enclosure polemic</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b95d92ede04e20242d0c2bcbe26e96cd824e9eda">[trivial] Add L2 canon pages from Appleby, The Relentless Revolution (#36)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b95d92ede04e20242d0c2bcbe26e96cd824e9eda">[trivial] Add L2 canon pages from Appleby, The Relentless Revolution (#36)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>13</b><span>links out</span></div>
+      <div class="bearing"><b>936</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/adam-smith">Adam Smith (1723-1790)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry">Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/agricultural-revolution">agricultural-revolution</a><span class="tag tag-lone" title="Only this note uses it">crop-rotation</span><a class="tag" href="/wiki/topics/enclosure">enclosure</a><a class="tag" href="/wiki/topics/malthusian-population">malthusian-population</a><a class="tag" href="/wiki/topics/capitalism-preconditions">capitalism-preconditions</a><a class="tag" href="/wiki/topics/dutch-farming">dutch-farming</a><a class="tag" href="/wiki/topics/english-farming">english-farming</a><a class="tag" href="/wiki/topics/food-scarcity">food-scarcity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,28 +26,37 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Cloister Web: Reshaping the Political Maidan</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Cloister Web: Reshaping the Political Maidan</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/cloister-web-reshaping-political-maidan.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe&#x27;s essay arguing that LLMs create a &#x27;Cloister Web&#x27; — a new kind of intellectual-political space that enables bespoke, personalized distribution of ideas, potentially collapsing the historical distinction between intellectual and revolutionary.</div>
-  <div class="tags"><span class="tag">LLMs</span><span class="tag">political-discourse</span><span class="tag">intellectual-history</span><span class="tag">media-theory</span><span class="tag">cloister-web</span><span class="tag">maidan</span><span class="tag">printing-press</span><span class="tag">public-sphere</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/cloister-web-reshaping-political-maidan.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe&#x27;s essay arguing that LLMs create a &#x27;Cloister Web&#x27; — a new kind of intellectual-political space that enables bespoke, personalized distribution of ideas, potentially collapsing the historical distinction between intellectual and revolutionary.</div>
     <div class="prose">
 <p><strong>Source</strong>: Aneesh Sathe, <em>The Cloister Web: Reshaping the Political Maidan</em> (2025-05-18)<br>
 <strong>URL</strong>: https://aneeshsathe.com/the-cloister-web-reshaping-the-political-maidan/</p>
 <h2 id="central-argument">Central Argument</h2>
-<p>The <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span></strong> — a conceptual space where individuals use LLMs to cultivate and commit ideas to persistent public memory — marks a paradigm shift in political communication. LLMs are not just tools for thought but engines for <em>bespoke delivery</em>: tailoring messages to individual recipients based on their preferences, priors, and cognitive frameworks. This may collapse the historical bifurcation between the <strong>intellectual</strong> (who conceptualizes) and the <strong>revolutionary leader</strong> (who mobilizes), enabling a new kind of direct-engagement politics.</p>
+<p>The <strong><a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a></strong> — a conceptual space where individuals use LLMs to cultivate and commit ideas to persistent public memory — marks a paradigm shift in political communication. LLMs are not just tools for thought but engines for <em>bespoke delivery</em>: tailoring messages to individual recipients based on their preferences, priors, and cognitive frameworks. This may collapse the historical bifurcation between the <strong>intellectual</strong> (who conceptualizes) and the <strong>revolutionary leader</strong> (who mobilizes), enabling a new kind of direct-engagement politics.</p>
 <h2 id="historical-typology-intellectual-vs-revolutionary">Historical Typology: Intellectual vs. Revolutionary</h2>
 <p>The essay surveys a comparative history of intellectual-revolutionary dyads across four contexts:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Intellectual</th><th>Revolutionary</th><th>Context</th></tr></thead>
 <tbody>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rabindranath Tagore&quot;">Rabindranath Tagore</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sri Aurobindo&quot;">Sri Aurobindo</span></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mahatma Gandhi&quot;">Mahatma Gandhi</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Subhas Chandra Bose&quot;">Subhas Chandra Bose</span></td><td>Indian independence</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alexander Herzen&quot;">Alexander Herzen</span></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Vladimir Lenin&quot;">Vladimir Lenin</span></td><td>Russian revolution</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liang Qichao&quot;">Liang Qichao</span></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sun Yat-sen&quot;">Sun Yat-sen</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mao Zedong&quot;">Mao Zedong</span></td><td>Chinese modernization</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Paine&quot;">Thomas Paine</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Jefferson&quot;">Thomas Jefferson</span></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Samuel Adams&quot;">Samuel Adams</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Patrick Henry&quot;">Patrick Henry</span></td><td>American revolution</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/rabindranath-tagore" title="Written [[Rabindranath Tagore]], resolved to rabindranath-tagore">Rabindranath Tagore</a>, <a class="wikilink-wanted" href="/wiki/wanted/sri-aurobindo" title="No note is called &quot;Sri Aurobindo&quot; yet — see who is asking for it">Sri Aurobindo</a></td><td><a class="wikilink" href="/wiki/aneesh/entities/mahatma-gandhi" title="Written [[Mahatma Gandhi]], resolved to mahatma-gandhi">Mahatma Gandhi</a>, <a class="wikilink-wanted" href="/wiki/wanted/subhas-chandra-bose" title="No note is called &quot;Subhas Chandra Bose&quot; yet — see who is asking for it">Subhas Chandra Bose</a></td><td>Indian independence</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/alexander-herzen" title="Written [[Alexander Herzen]], resolved to alexander-herzen">Alexander Herzen</a></td><td><a class="wikilink-wanted" href="/wiki/wanted/vladimir-lenin" title="No note is called &quot;Vladimir Lenin&quot; yet — see who is asking for it">Vladimir Lenin</a></td><td>Russian revolution</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/liang-qichao" title="Written [[Liang Qichao]], resolved to liang-qichao">Liang Qichao</a></td><td><a class="wikilink-wanted" href="/wiki/wanted/sun-yat-sen" title="No note is called &quot;Sun Yat-sen&quot; yet — see who is asking for it">Sun Yat-sen</a>, <a class="wikilink-wanted" href="/wiki/wanted/mao-zedong" title="No note is called &quot;Mao Zedong&quot; yet — see who is asking for it">Mao Zedong</a></td><td>Chinese modernization</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/thomas-paine" title="Written [[Thomas Paine]], resolved to thomas-paine">Thomas Paine</a>, <a class="wikilink-wanted" href="/wiki/wanted/thomas-jefferson" title="No note is called &quot;Thomas Jefferson&quot; yet — see who is asking for it">Thomas Jefferson</a></td><td><a class="wikilink-wanted" href="/wiki/wanted/samuel-adams" title="No note is called &quot;Samuel Adams&quot; yet — see who is asking for it">Samuel Adams</a>, <a class="wikilink-wanted" href="/wiki/wanted/patrick-henry" title="No note is called &quot;Patrick Henry&quot; yet — see who is asking for it">Patrick Henry</a></td><td>American revolution</td></tr>
 </tbody>
 </table></div>
 <p>Gandhi is singled out as uniquely embodying both roles. The essay&#x27;s claim: LLMs may allow future intellectuals to bypass the need for a separate mobilizing figure.</p>
@@ -55,8 +64,8 @@
 <ol>
 <li><strong>Communication technologies reshape discourse</strong>: The printing press democratized information but also amplified ideological fragmentation (the Indian independence example: press enabled nuanced positions but also deepened divisions that impeded unity).</li>
 <li><strong>LLMs enable bespoke intellectual distribution</strong>: Not mass broadcast but personalized message-crafting attuned to each recipient&#x27;s knowledge framework.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLM Latent Space&quot;">LLM Latent Space</span> as fertile soil</strong>: The LLM&#x27;s high-dimensional internal representations allow unexpected connections and extrapolations of seeded ideas — the intellectual plants, the LLM propagates in ways unforeseeable.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span> and knowledge structures</strong> as LLM-consumable artifacts: the essay anticipates that future intellectual work will be formatted explicitly for LLM processing — a new genre of political writing.</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/llm-latent-space" title="No note is called &quot;LLM Latent Space&quot; yet — see who is asking for it">LLM Latent Space</a> as fertile soil</strong>: The LLM&#x27;s high-dimensional internal representations allow unexpected connections and extrapolations of seeded ideas — the intellectual plants, the LLM propagates in ways unforeseeable.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/idea-graphs" title="Written [[Idea-Graphs]], resolved to idea-graphs">Idea-Graphs</a> and knowledge structures</strong> as LLM-consumable artifacts: the essay anticipates that future intellectual work will be formatted explicitly for LLM processing — a new genre of political writing.</li>
 <li><strong>The chat interface as new maidan</strong>: The LLM chat interface replaces the public square (maidan) as the site of political persuasion.</li>
 </ol>
 <h2 id="key-concept-the-cloister-web">Key Concept: The Cloister Web</h2>
@@ -71,24 +80,37 @@
 <li>Who controls the LLM infrastructure — the shift from gatekeeper to infrastructure owner</li>
 <li>Whether bespoke persuasion enables genuine intellectual engagement or more sophisticated manipulation</li>
 <li>The counter-movement: how do political communities resist LLM-mediated persuasion?</li>
-<li>Connection to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Filter Bubble&quot;">Filter Bubble</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Echo Chamber&quot;">Echo Chamber</span> literature</li>
+<li>Connection to <a class="wikilink-wanted" href="/wiki/wanted/filter-bubble" title="No note is called &quot;Filter Bubble&quot; yet — see who is asking for it">Filter Bubble</a> and <a class="wikilink-wanted" href="/wiki/wanted/echo-chamber" title="No note is called &quot;Echo Chamber&quot; yet — see who is asking for it">Echo Chamber</a> literature</li>
 </ul>
 <h2 id="cross-source-resonances">Cross-Source Resonances</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span></strong>: LLMs as the latest heir to the universal library; here examined for their political rather than epistemological implications</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span></strong>: &quot;idea-graphs and knowledge structures&quot; anticipated here map directly to the knowledge graph/ontology framework</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity&quot;">Generative Complexity</span></strong>: LLM latent space as a site of emergent ideation — connects to the Emacs/DF essay&#x27;s argument</li>
-<li>See synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary in the Age of LLMs&quot;">Intellectual vs. Revolutionary in the Age of LLMs</span></li>
-<li>See synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bespoke Distribution — The New Political Medium&quot;">Bespoke Distribution — The New Political Medium</span></li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a></strong>: LLMs as the latest heir to the universal library; here examined for their political rather than epistemological implications</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/domain-ontologies" title="Written [[Domain Ontologies]], resolved to domain-ontologies">Domain Ontologies</a></strong>: &quot;idea-graphs and knowledge structures&quot; anticipated here map directly to the knowledge graph/ontology framework</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/generative-complexity" title="Written [[Generative Complexity]], resolved to generative-complexity">Generative Complexity</a></strong>: LLM latent space as a site of emergent ideation — connects to the Emacs/DF essay&#x27;s argument</li>
+<li>See synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/intellectual-vs-revolutionary-in-the-age-of-llms" title="Written [[Intellectual vs. Revolutionary in the Age of LLMs]], resolved to intellectual-vs-revolutionary-in-the-age-of-llms">Intellectual vs. Revolutionary in the Age of LLMs</a></li>
+<li>See synthesis: <a class="wikilink-wanted" href="/wiki/wanted/bespoke-distribution-the-new-political-medium" title="No note is called &quot;Bespoke Distribution — The New Political Medium&quot; yet — see who is asking for it">Bespoke Distribution — The New Political Medium</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>502</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/llms">LLMs</a><a class="tag" href="/wiki/topics/political-discourse">political-discourse</a><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a><a class="tag" href="/wiki/topics/media-theory">media-theory</a><a class="tag" href="/wiki/topics/cloister-web">cloister-web</a><span class="tag tag-lone" title="Only this note uses it">maidan</span><a class="tag" href="/wiki/topics/printing-press">printing-press</a><a class="tag" href="/wiki/topics/public-sphere">public-sphere</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

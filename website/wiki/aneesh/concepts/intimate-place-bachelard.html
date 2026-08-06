@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Intimate Place (Bachelard)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Intimate Place (Bachelard)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/intimate-place-bachelard.md">source on GitHub</a></div>
-  <div class="note-summary">Bachelard&#x27;s account in The Poetics of Space: the staircase as memory channel, the drawer as metaphor for secrecy — intimate domestic corners acquire symbolic depth through use and emotional investment, becoming &#x27;vast interior landscapes.&#x27;</div>
-  <div class="tags"><span class="tag">bachelard</span><span class="tag">intimate-place</span><span class="tag">phenomenology</span><span class="tag">domestic-space</span><span class="tag">symbolism</span><span class="tag">imagination</span><span class="tag">memory</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/intimate-place-bachelard.md">source on GitHub</a></div>
+    <div class="note-summary">Bachelard&#x27;s account in The Poetics of Space: the staircase as memory channel, the drawer as metaphor for secrecy — intimate domestic corners acquire symbolic depth through use and emotional investment, becoming &#x27;vast interior landscapes.&#x27;</div>
     <div class="prose">
 <p><strong>Source</strong>: Gaston Bachelard, <em>The Poetics of Space</em> (1958/1964); deployed in <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe">aneesh-sathe</a>, <em>We Need Homes in the Delta Quadrant</em> (2025), §IV</p>
 <h2 id="the-concept">The Concept</h2>
@@ -69,18 +78,44 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/architecture-as-crystallized-awareness">architecture-as-crystallized-awareness</a> — the architectural form of crystallized symbolic investment</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/gaston-bachelard">Gaston Bachelard (1884–1962)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/homes-as-launchpads">Homes as Launchpads</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/massey-tuan-place-as-event-vs-pause">Massey and Tuan: Place as Event vs. Place as Pause</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>640</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/homes-as-launchpads">Homes as Launchpads</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gaston-bachelard">Gaston Bachelard (1884–1962)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/massey-tuan-place-as-event-vs-pause">Massey and Tuan: Place as Event vs. Place as Pause</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/place-as-pause">Place as Pause (Tuan)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/custodianship-as-design-ethos">Custodianship as Design Ethos</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/prenotions">Prenotions</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/bachelard">bachelard</a><a class="tag" href="/wiki/topics/intimate-place">intimate-place</a><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><span class="tag tag-lone" title="Only this note uses it">domestic-space</span><a class="tag" href="/wiki/topics/symbolism">symbolism</a><a class="tag" href="/wiki/topics/imagination">imagination</a><a class="tag" href="/wiki/topics/memory">memory</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

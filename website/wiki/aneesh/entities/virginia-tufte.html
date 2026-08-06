@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,40 +26,77 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Virginia Tufte</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Virginia Tufte</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/virginia-tufte.md">source on GitHub</a></div>
-  <div class="note-summary">Virginia Tufte (1922–2020), linguist and professor, author of Artful Sentences — a 270-page analysis of sentence mechanics placed in the anti-library, awaiting the right reader.</div>
-  <div class="tags"><span class="tag">writing</span><span class="tag">linguistics</span><span class="tag">sentences</span><span class="tag">craft</span><span class="tag">pedagogy</span><span class="tag">anti-library</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/virginia-tufte.md">source on GitHub</a></div>
+    <div class="note-summary">Virginia Tufte (1922–2020), linguist and professor, author of Artful Sentences — a 270-page analysis of sentence mechanics placed in the anti-library, awaiting the right reader.</div>
     <div class="prose">
 <p><strong>Virginia Frances Tufte</strong> (1922–2020) was an American linguist and professor at the University of Southern California. She is the author of <em>Artful Sentences: Syntax as Style</em> (2006) and the mother of data visualization theorist Edward Tufte.</p>
-<p>The footnote in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> notes: &quot;Those dastardly Tuftes are always making me learn some kind of grammar&quot; — a reference to both Virginia (sentence syntax) and Edward (visual syntax of data).</p>
+<p>The footnote in <a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> notes: &quot;Those dastardly Tuftes are always making me learn some kind of grammar&quot; — a reference to both Virginia (sentence syntax) and Edward (visual syntax of data).</p>
 <h2 id="key-work-as-referenced">Key Work (as referenced)</h2>
 <h3 id="artful-sentences-syntax-as-style-2006">Artful Sentences: Syntax as Style (2006)</h3>
 <p>A 270-page analysis of individual sentences dissected to reveal their mechanical and stylistic operations. It is a reference grammar for writers — highly sophisticated, assuming fluency with basic composition.</p>
-<p>Referenced in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> as immediately too advanced: &quot;I was lost by page 5. The book is, temporarily, in my anti-library.&quot;</p>
-<h2 id="significance-for-staged-learning">Significance for <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Staged Learning&quot;">Staged Learning</span></h2>
-<p>Virginia Tufte&#x27;s book is the terminal node in the reading sequence — the book you arrive at after <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;William Zinsser&quot;">William Zinsser</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Strunk and White&quot;">Strunk and White</span>. Its placement in the anti-library is not a dismissal but a deferral: the reader must first build the prerequisite foundation.</p>
-<p>This is the clearest illustration in these essays of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anti-Library&quot;">Anti-Library</span> concept: a book that marks the boundary of current capability rather than current interest.</p>
+<p>Referenced in <a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> as immediately too advanced: &quot;I was lost by page 5. The book is, temporarily, in my anti-library.&quot;</p>
+<h2 id="significance-for-staged-learning">Significance for <a class="wikilink" href="/wiki/aneesh/concepts/staged-learning" title="Written [[Staged Learning]], resolved to staged-learning">Staged Learning</a></h2>
+<p>Virginia Tufte&#x27;s book is the terminal node in the reading sequence — the book you arrive at after <a class="wikilink" href="/wiki/aneesh/entities/william-zinsser" title="Written [[William Zinsser]], resolved to william-zinsser">William Zinsser</a> and <a class="wikilink-wanted" href="/wiki/wanted/strunk-and-white" title="No note is called &quot;Strunk and White&quot; yet — see who is asking for it">Strunk and White</a>. Its placement in the anti-library is not a dismissal but a deferral: the reader must first build the prerequisite foundation.</p>
+<p>This is the clearest illustration in these essays of the <a class="wikilink" href="/wiki/aneesh/concepts/anti-library" title="Written [[Anti-Library]], resolved to anti-library">Anti-Library</a> concept: a book that marks the boundary of current capability rather than current interest.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Staged Learning&quot;">Staged Learning</span> — Tufte&#x27;s book as the deferred stage</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anti-Library&quot;">Anti-Library</span> — where the book lives until the reader is ready</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;William Zinsser&quot;">William Zinsser</span> — prerequisite author</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Strunk and White&quot;">Strunk and White</span> — prerequisite text</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/staged-learning" title="Written [[Staged Learning]], resolved to staged-learning">Staged Learning</a> — Tufte&#x27;s book as the deferred stage</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anti-library" title="Written [[Anti-Library]], resolved to anti-library">Anti-Library</a> — where the book lives until the reader is ready</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/william-zinsser" title="Written [[William Zinsser]], resolved to william-zinsser">William Zinsser</a> — prerequisite author</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/strunk-and-white" title="No note is called &quot;Strunk and White&quot; yet — see who is asking for it">Strunk and White</a> — prerequisite text</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>247</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/staged-learning">Staged Learning</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/anti-library">Anti-Library</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/anti-library">Anti-Library</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/documentation-as-empathy">Documentation as Empathy</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/staged-learning">Staged Learning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/william-zinsser">William Zinsser</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/writing">writing</a><span class="tag tag-lone" title="Only this note uses it">linguistics</span><span class="tag tag-lone" title="Only this note uses it">sentences</span><a class="tag" href="/wiki/topics/craft">craft</a><a class="tag" href="/wiki/topics/pedagogy">pedagogy</a><a class="tag" href="/wiki/topics/anti-library">anti-library</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

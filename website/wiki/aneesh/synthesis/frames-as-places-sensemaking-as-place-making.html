@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Frames as Places, Sensemaking as Place-Making</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Frames as Places, Sensemaking as Place-Making</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/frames-as-places-sensemaking-as-place-making.md">source on GitHub</a></div>
-  <div class="note-summary">Klein&#x27;s sensemaking frames map precisely onto the wiki&#x27;s spatial epistemology: frames are places (bounded, inhabitable, orienting), unframed situations are spaces (disorienting, formless), and reframing is place-making — the constitutive act that converts epistemic wilderness into navigable territory.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">sensemaking</span><span class="tag">spatial-epistemology</span><span class="tag">frames</span><span class="tag">place-making</span><span class="tag">reframing</span><span class="tag">data-frame-theory</span><span class="tag">space-place</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/frames-as-places-sensemaking-as-place-making.md">source on GitHub</a></div>
+    <div class="note-summary">Klein&#x27;s sensemaking frames map precisely onto the wiki&#x27;s spatial epistemology: frames are places (bounded, inhabitable, orienting), unframed situations are spaces (disorienting, formless), and reframing is place-making — the constitutive act that converts epistemic wilderness into navigable territory.</div>
     <div class="prose">
 <h2 id="the-structural-mapping">The Structural Mapping</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> and the wiki&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Spatial Epistemology — The Master Thread&quot;">Spatial Epistemology — The Master Thread</span> describe the same cognitive act from different disciplinary traditions. The mapping is not metaphorical — it is structural:</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> and the wiki&#x27;s <a class="wikilink" href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread" title="Written [[Spatial Epistemology — The Master Thread]], resolved to spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> describe the same cognitive act from different disciplinary traditions. The mapping is not metaphorical — it is structural:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Spatial Epistemology</th><th>Data-Frame Theory</th></tr></thead>
 <tbody>
@@ -50,56 +59,83 @@
 </table></div>
 <p>Klein&#x27;s description of what happens without a frame — &quot;you cannot gather relevant data without a frame; an analyst without a committed frame doesn&#x27;t see more — they see nothing coherently&quot; — is identical to the spatial claim that space without places is disorienting. Data without frames is noise; terrain without landmarks is wilderness.</p>
 <h2 id="anchors-as-landmarks">Anchors as Landmarks</h2>
-<p>Klein et al. find that people use at most 3–4 anchors to build a frame. These anchors function exactly as landmarks in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place Philosophy&quot;">Space and Place Philosophy</span>: they are the stable points from which the rest of the territory derives its meaning. An inaccurate anchor early in a sensemaking sequence corrupts all subsequent interpretation — just as a misplaced landmark corrupts navigation.</p>
+<p>Klein et al. find that people use at most 3–4 anchors to build a frame. These anchors function exactly as landmarks in <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-philosophy" title="Written [[Space and Place Philosophy]], resolved to space-and-place-philosophy">Space and Place Philosophy</a>: they are the stable points from which the rest of the territory derives its meaning. An inaccurate anchor early in a sensemaking sequence corrupts all subsequent interpretation — just as a misplaced landmark corrupts navigation.</p>
 <p>The weather forecasters in Klein&#x27;s study used only 2–3 anchors. The fireground commanders oriented entire tactical responses around a single dominant anchor (the laundry chute, the Ohio River). This is not cognitive poverty — it is the necessary economy of place-making. You cannot orient by attending to everything. You orient by selecting, bounding, and committing.</p>
-<p>This connects directly to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Places, Problems, and the Act of Bounding&quot;">Places, Problems, and the Act of Bounding</span>: the act of selecting anchors is the act of drawing a boundary. It is constitutive (without it, nothing is tractable) and foreclosing (it makes other framings harder to reach).</p>
+<p>This connects directly to <a class="wikilink" href="/wiki/aneesh/synthesis/places-problems-and-the-act-of-bounding" title="Written [[Places, Problems, and the Act of Bounding]], resolved to places-problems-and-the-act-of-bounding">Places, Problems, and the Act of Bounding</a>: the act of selecting anchors is the act of drawing a boundary. It is constitutive (without it, nothing is tractable) and foreclosing (it makes other framings harder to reach).</p>
 <h2 id="reframing-as-re-place-making">Reframing as Re-Place-Making</h2>
 <p>Klein&#x27;s &quot;reframing&quot; — abandoning the current frame and constructing a new one — is the cognitive equivalent of what the spatial epistemology calls place-making in the strongest sense: not decorating an existing place, but carving a <em>new</em> inhabitable region from undifferentiated space.</p>
 <p>The difficulty of reframing maps onto the difficulty of genuine place-making. It is easier to elaborate an existing frame (extend a place you already inhabit) than to construct a new one (build a new shelter in unfamiliar territory). Klein&#x27;s &quot;preservation cycle&quot; — explaining away anomalies to protect the current frame — is the cognitive version of clinging to a familiar place when the territory has changed around it.</p>
-<p>The explorer in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Explorer and the Tourist&quot;">The Explorer and the Tourist</span> is the figure who reframes — who builds new places in unfamiliar space. The tourist is the figure who elaborates — who fills in the details of a frame provided by someone else (the guidebook, the algorithm, the pre-made legibility).</p>
+<p>The explorer in <a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist" title="Written [[The Explorer and the Tourist]], resolved to the-explorer-and-the-tourist">The Explorer and the Tourist</a> is the figure who reframes — who builds new places in unfamiliar space. The tourist is the figure who elaborates — who fills in the details of a frame provided by someone else (the guidebook, the algorithm, the pre-made legibility).</p>
 <h2 id="the-seeking-a-frame-form-as-wilderness-navigation">The &quot;Seeking a Frame&quot; Form as Wilderness Navigation</h2>
 <p>Klein&#x27;s seventh sensemaking form — &quot;seeking a frame&quot; when none is available — is the purest spatial situation: you are in undifferentiated space with no landmarks. The sensemaker searches for anchors from fragmentary data, trying to find enough stable points to construct an initial frame.</p>
-<p>This is what <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span> describes as the primary function of shelter: not protection from weather, but the creation of a stable point from which space becomes navigable. The first frame, like the first shelter, converts overwhelming space into oriented territory.</p>
+<p>This is what <a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> describes as the primary function of shelter: not protection from weather, but the creation of a stable point from which space becomes navigable. The first frame, like the first shelter, converts overwhelming space into oriented territory.</p>
 <h2 id="what-this-mapping-illuminates">What This Mapping Illuminates</h2>
 <h3 id="for-the-spatial-epistemology">For the Spatial Epistemology</h3>
 <p>Klein&#x27;s empirical work gives the spatial epistemology a <em>mechanism</em>. The essays describe knowing as spatial in evocative, phenomenological terms. Klein provides the cognitive machinery: frames with slots, anchors that constitute frames, elaboration cycles that extend frames, preservation cycles that protect them. The spatial epistemology gains precision without losing its phenomenological force.</p>
 <h3 id="for-sensemaking-theory">For Sensemaking Theory</h3>
 <p>The spatial mapping gives Klein&#x27;s somewhat technical theory an existential dimension. Sensemaking is not just information processing — it is <em>dwelling</em>. To commit to a frame is to inhabit a place. To reframe is to uproot yourself. Frame fixation is not just a cognitive error — it is the deeply human reluctance to leave home.</p>
 <h3 id="for-the-legibility-tension">For the Legibility Tension</h3>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility vs. Complexity — The Master Tension&quot;">Legibility vs. Complexity — The Master Tension</span> gains a new instantiation: frames are legibility apparatus — they make the world readable. But the world&#x27;s complexity exceeds any frame, just as the territory exceeds any map. The sensemaker who over-commits to legibility (frame preservation) misses the anomalies; the sensemaker who refuses legibility (diagnostic vagabonding) sees nothing. The productive tension is Klein&#x27;s prescription: commit to a frame, elaborate it, but maintain specific enough expectations that violations are detectable.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension" title="Written [[Legibility vs. Complexity — The Master Tension]], resolved to legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a> gains a new instantiation: frames are legibility apparatus — they make the world readable. But the world&#x27;s complexity exceeds any frame, just as the territory exceeds any map. The sensemaker who over-commits to legibility (frame preservation) misses the anomalies; the sensemaker who refuses legibility (diagnostic vagabonding) sees nothing. The productive tension is Klein&#x27;s prescription: commit to a frame, elaborate it, but maintain specific enough expectations that violations are detectable.</p>
 <h2 id="essay-seed">Essay Seed</h2>
 <p><strong>&quot;The Cartography of Understanding: Sensemaking as Spatial Practice&quot;</strong></p>
 <p>Thesis: cognitive science and phenomenological geography converge on the same insight — understanding is not accumulation of facts but construction of inhabitable places in epistemic space. Klein&#x27;s data-frame theory provides the mechanism; Tuan and Heidegger provide the existential weight. The essay explores what it means to take &quot;frames are places&quot; literally: that expertise is a form of dwelling, that reframing is a form of displacement, and that the modern information environment is a crisis of place-making.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Spatial Epistemology — The Master Thread&quot;">Spatial Epistemology — The Master Thread</span> — the master thread this extends</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — Klein et al.&#x27;s framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place Philosophy&quot;">Space and Place Philosophy</span> — the phenomenological tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Places, Problems, and the Act of Bounding&quot;">Places, Problems, and the Act of Bounding</span> — bounding as constitutive act</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Explorer and the Tourist&quot;">The Explorer and the Tourist</span> — explorer as reframer, tourist as frame-consumer</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span> — shelter as first frame</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility vs. Complexity — The Master Tension&quot;">Legibility vs. Complexity — The Master Tension</span> — frames as legibility apparatus</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames as the Unit of Cognition&quot;">Frames as the Unit of Cognition</span> — the convergence of frame theories</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Reframing&quot;">Reframing</span> — Klein&#x27;s replacement process</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anchoring in Sensemaking&quot;">Anchoring in Sensemaking</span> — anchors as landmarks</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — principal theorist</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Karl Weick&quot;">Karl Weick</span> — related sensemaking theorist</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread" title="Written [[Spatial Epistemology — The Master Thread]], resolved to spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> — the master thread this extends</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — Klein et al.&#x27;s framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-philosophy" title="Written [[Space and Place Philosophy]], resolved to space-and-place-philosophy">Space and Place Philosophy</a> — the phenomenological tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/places-problems-and-the-act-of-bounding" title="Written [[Places, Problems, and the Act of Bounding]], resolved to places-problems-and-the-act-of-bounding">Places, Problems, and the Act of Bounding</a> — bounding as constitutive act</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist" title="Written [[The Explorer and the Tourist]], resolved to the-explorer-and-the-tourist">The Explorer and the Tourist</a> — explorer as reframer, tourist as frame-consumer</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> — shelter as first frame</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension" title="Written [[Legibility vs. Complexity — The Master Tension]], resolved to legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a> — frames as legibility apparatus</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/frames-as-the-unit-of-cognition" title="Written [[Frames as the Unit of Cognition]], resolved to frames-as-the-unit-of-cognition">Frames as the Unit of Cognition</a> — the convergence of frame theories</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/reframing" title="Written [[Reframing]], resolved to reframing">Reframing</a> — Klein&#x27;s replacement process</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anchoring-in-sensemaking" title="Written [[Anchoring in Sensemaking]], resolved to anchoring-in-sensemaking">Anchoring in Sensemaking</a> — anchors as landmarks</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — principal theorist</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/karl-weick" title="Written [[Karl Weick]], resolved to karl-weick">Karl Weick</a> — related sensemaking theorist</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">6</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-1-setting-the-scene">Massey, *For Space* — Part One: Setting the Scene</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/simultaneity-of-stories-so-far">Simultaneity of Stories-So-Far</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>1027</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/simultaneity-of-stories-so-far">Simultaneity of Stories-So-Far</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-1-setting-the-scene">Massey, *For Space* — Part One: Setting the Scene</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-sensemaker-and-the-explorer">The Sensemaker and the Explorer</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/books-are-dwellings">Books Are Dwellings</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/spatial-epistemology">spatial-epistemology</a><a class="tag" href="/wiki/topics/frames">frames</a><a class="tag" href="/wiki/topics/place-making">place-making</a><span class="tag tag-lone" title="Only this note uses it">reframing</span><a class="tag" href="/wiki/topics/data-frame-theory">data-frame-theory</a><a class="tag" href="/wiki/topics/space-place">space-place</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

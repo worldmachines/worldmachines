@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Open Data Formats</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Open Data Formats</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/open-data-formats.md">source on GitHub</a></div>
-  <div class="note-summary">The principle that scientific and research data should be stored in open, portable formats to avoid vendor lock-in and ensure long-term reproducibility.</div>
-  <div class="tags"><span class="tag">data</span><span class="tag">open-source</span><span class="tag">reproducibility</span><span class="tag">vendor-lock-in</span><span class="tag">parquet</span><span class="tag">biotech</span><span class="tag">science</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/open-data-formats.md">source on GitHub</a></div>
+    <div class="note-summary">The principle that scientific and research data should be stored in open, portable formats to avoid vendor lock-in and ensure long-term reproducibility.</div>
     <div class="prose">
 <p>The principle: scientific data should be stored in formats that are readable by any tool, not just the proprietary system used to create it.</p>
 <h2 id="why-it-matters-in-research">Why It Matters in Research</h2>
@@ -55,26 +64,55 @@
 </tbody>
 </table></div>
 <h2 id="the-lakehouse-context">The Lakehouse Context</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span> architectures built on open table formats (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Apache Iceberg&quot;">Apache Iceberg</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Delta Lake&quot;">Delta Lake</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span>) keep the underlying Parquet files portable. Even if you stop using the lakehouse layer, your data is still readable.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/data-lakehouse" title="Written [[Data Lakehouse]], resolved to data-lakehouse">Data Lakehouse</a> architectures built on open table formats (<a class="wikilink-wanted" href="/wiki/wanted/apache-iceberg" title="No note is called &quot;Apache Iceberg&quot; yet — see who is asking for it">Apache Iceberg</a>, <a class="wikilink-wanted" href="/wiki/wanted/delta-lake" title="No note is called &quot;Delta Lake&quot; yet — see who is asking for it">Delta Lake</a>, <a class="wikilink" href="/wiki/aneesh/concepts/ducklake" title="Written [[DuckLake]], resolved to ducklake">DuckLake</a>) keep the underlying Parquet files portable. Even if you stop using the lakehouse layer, your data is still readable.</p>
 <p>This is contrasted with proprietary formats used by Databricks, Snowflake, or other vendors where data is stored in formats that tie you to their platform.</p>
 <h2 id="epistemic-connection">Epistemic Connection</h2>
-<p>Open data formats connect to a broader <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scientific Reproducibility&quot;">Scientific Reproducibility</span> ethic: science depends on the ability of others to verify and extend your work. If your data is locked in a proprietary format, the foundational act of sharing is compromised.</p>
+<p>Open data formats connect to a broader <a class="wikilink" href="/wiki/aneesh/concepts/scientific-reproducibility" title="Written [[Scientific Reproducibility]], resolved to scientific-reproducibility">Scientific Reproducibility</a> ethic: science depends on the ability of others to verify and extend your work. If your data is locked in a proprietary format, the foundational act of sharing is compromised.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scientific Reproducibility&quot;">Scientific Reproducibility</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Biotech Data Management&quot;">Biotech Data Management</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Why Every Biotech Research Group Needs a Data Lakehouse&quot;">Why Every Biotech Research Group Needs a Data Lakehouse</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-lakehouse" title="Written [[Data Lakehouse]], resolved to data-lakehouse">Data Lakehouse</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ducklake" title="Written [[DuckLake]], resolved to ducklake">DuckLake</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/scientific-reproducibility" title="Written [[Scientific Reproducibility]], resolved to scientific-reproducibility">Scientific Reproducibility</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/biotech-data-management" title="No note is called &quot;Biotech Data Management&quot; yet — see who is asking for it">Biotech Data Management</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse" title="Written [[Why Every Biotech Research Group Needs a Data Lakehouse]], resolved to why-every-biotech-research-group-needs-a-data-lakehouse">Why Every Biotech Research Group Needs a Data Lakehouse</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>271</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">5</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/scientific-reproducibility">Scientific Reproducibility</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse">Why Every Biotech Research Group Needs a Data Lakehouse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-lakehouse">Data Lakehouse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ducklake">DuckLake</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/infrastructure-and-epistemics">Infrastructure and Epistemics</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-lakehouse">Data Lakehouse</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/ducklake">DuckLake</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/scientific-reproducibility">Scientific Reproducibility</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse">Why Every Biotech Research Group Needs a Data Lakehouse</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/data">data</a><a class="tag" href="/wiki/topics/open-source">open-source</a><a class="tag" href="/wiki/topics/reproducibility">reproducibility</a><span class="tag tag-lone" title="Only this note uses it">vendor-lock-in</span><a class="tag" href="/wiki/topics/parquet">parquet</a><a class="tag" href="/wiki/topics/biotech">biotech</a><a class="tag" href="/wiki/topics/science">science</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

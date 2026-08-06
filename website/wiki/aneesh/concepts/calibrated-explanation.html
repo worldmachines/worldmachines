@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Calibrated Explanation</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Calibrated Explanation</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/calibrated-explanation.md">source on GitHub</a></div>
-  <div class="note-summary">The design principle that AI explanations should be pitched at the lowest level of detail a domain expert actually cares about — neither architecture-level nor verdict-only — producing an AI-human causal prediction machine.</div>
-  <div class="tags"><span class="tag">explainable-ai</span><span class="tag">UX</span><span class="tag">product-design</span><span class="tag">human-computer-interaction</span><span class="tag">AI-design</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/calibrated-explanation.md">source on GitHub</a></div>
+    <div class="note-summary">The design principle that AI explanations should be pitched at the lowest level of detail a domain expert actually cares about — neither architecture-level nor verdict-only — producing an AI-human causal prediction machine.</div>
     <div class="prose">
-<p>The design principle articulated by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span>: AI explanations should be calibrated to the <em>domain expert&#x27;s vocabulary and cognitive level</em> — specifically, the lowest level of detail they actually care about.</p>
+<p>The design principle articulated by <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> in <a class="wikilink" href="/wiki/aneesh/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a>: AI explanations should be calibrated to the <em>domain expert&#x27;s vocabulary and cognitive level</em> — specifically, the lowest level of detail they actually care about.</p>
 <h2 id="the-three-level-problem">The Three-Level Problem</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>Level</th><th>Example</th><th>Problem</th></tr></thead>
@@ -63,21 +72,56 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the broader domain</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI-Human Causal Prediction Machine&quot;">AI-Human Causal Prediction Machine</span> — the target system this creates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Expert User&quot;">Domain Expert User</span> — the calibration audience</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — adjacent design philosophy (strategic information disclosure)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unwarranted Faith in Numbers&quot;">Unwarranted Faith in Numbers</span> — the failure mode to avoid</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the broader domain</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-human-causal-prediction-machine" title="Written [[AI-Human Causal Prediction Machine]], resolved to ai-human-causal-prediction-machine">AI-Human Causal Prediction Machine</a> — the target system this creates</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/domain-expert-user" title="No note is called &quot;Domain Expert User&quot; yet — see who is asking for it">Domain Expert User</a> — the calibration audience</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/seamful-design" title="Written [[Seamful Design]], resolved to seamful-design">Seamful Design</a> — adjacent design philosophy (strategic information disclosure)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers" title="Written [[Unwarranted Faith in Numbers]], resolved to unwarranted-faith-in-numbers">Unwarranted Faith in Numbers</a> — the failure mode to avoid</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>342</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">8</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers">Unwarranted Faith in Numbers</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-human-causal-prediction-machine">AI-Human Causal Prediction Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/seamful-design">Seamful Design</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/explainability-across-domains">Explainability Across Domains</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/responsible-ai">Responsible AI (RAI)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/seamful-design">Seamful Design</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers">Unwarranted Faith in Numbers</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-human-causal-prediction-machine">AI-Human Causal Prediction Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/explainable-ai">explainable-ai</a><a class="tag" href="/wiki/topics/ux">UX</a><a class="tag" href="/wiki/topics/product-design">product-design</a><a class="tag" href="/wiki/topics/human-computer-interaction">human-computer-interaction</a><a class="tag" href="/wiki/topics/ai-design">AI-design</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

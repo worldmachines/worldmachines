@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>The Dynamo and the Virgin (1900)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Dynamo and the Virgin (1900)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin.md">source on GitHub</a></div>
-  <div class="note-summary">At the 1900 Paris Exposition, Henry Adams reads the dynamo as the new age&#x27;s occult, unmeasurable god of force and sets it against the Virgin and Venus as history&#x27;s greatest attractive force, arguing that American culture, unlike French or medieval culture, never learned to feel sex or the sacred as force at all.</div>
-  <div class="tags"><span class="tag">dynamo</span><span class="tag">the-virgin</span><span class="tag">force</span><span class="tag">henry-adams</span><span class="tag">1900-paris-exposition</span><span class="tag">gender-and-power</span><span class="tag">occult-science</span><span class="tag">historiography-of-force</span><span class="tag">radium-and-x-rays</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/gravitational-attractor">gravitational-attractor</a>, <a class="wikilink" href="/wiki/aneesh/concepts/bryant-gravity-as-power">bryant-gravity-as-power</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin.md">source on GitHub</a></div>
+    <div class="note-summary">At the 1900 Paris Exposition, Henry Adams reads the dynamo as the new age&#x27;s occult, unmeasurable god of force and sets it against the Virgin and Venus as history&#x27;s greatest attractive force, arguing that American culture, unlike French or medieval culture, never learned to feel sex or the sacred as force at all.</div>
     <div class="prose">
 <p>At the Great Exposition of 1900 in Paris, Henry Adams, guided by the physicist Samuel Langley through the Gallery of Machines, comes to feel the forty-foot dynamos as a new object of religious awe, &quot;a moral force, much as the early Christians felt the Cross&quot;; unable to fit radium, X-rays, and the new anarchical forces into any historical sequence of cause and effect, he abandons the search for a rational chain of events and instead proposes to measure all historical force — dynamo, Cross, Venus, Virgin — by its felt attraction on the human mind, then applies that method to ask why the generative force once incarnated in the Virgin at Chartres and Amiens, still &quot;potent&quot; in France, had gone missing from American life and art.</p>
 <h2 id="themes">Themes</h2>
@@ -46,17 +54,47 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The chapter&#x27;s six curated passages carry its arc: the dynamo&#x27;s transformation into an object of prayer; Langley&#x27;s fear of the &quot;anarchical&quot; new rays and radium&#x27;s denial of his God; Adams&#x27;s decision to measure history by felt attraction rather than causation; the account of the Virgin/Venus as fecund goddess-force stripped from American culture by Puritan shame; the Amiens scene where St. Gaudens and Adams stand before the same cathedral and feel two different things; and the closing claim that &quot;the Virgin had acted as the greatest force the Western world ever felt,&quot; with the historian&#x27;s task redefined as tracing that force&#x27;s &quot;complex source and shifting channels.&quot;</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>784</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-04-harvard-college">Harvard College (1854-1858)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/gravitational-attractor">gravitational-attractor</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/bryant-gravity-as-power">bryant-gravity-as-power</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dynamo">dynamo</a><a class="tag" href="/wiki/topics/the-virgin">the-virgin</a><a class="tag" href="/wiki/topics/force">force</a><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><a class="tag" href="/wiki/topics/1900-paris-exposition">1900-paris-exposition</a><a class="tag" href="/wiki/topics/gender-and-power">gender-and-power</a><span class="tag tag-lone" title="Only this note uses it">occult-science</span><a class="tag" href="/wiki/topics/historiography-of-force">historiography-of-force</a><a class="tag" href="/wiki/topics/radium-and-x-rays">radium-and-x-rays</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

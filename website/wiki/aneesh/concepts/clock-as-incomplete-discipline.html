@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Clock as Incomplete Discipline</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Clock as Incomplete Discipline</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/clock-as-incomplete-discipline.md">source on GitHub</a></div>
-  <div class="note-summary">Akomolafe&#x27;s claim that the clock disciplines bodies but also produces gaps, upbeats, and fugitive intervals that exceed its count — set against Landes&#x27;s canonical claim that clock discipline became complete, internalized &#x27;from within.&#x27;</div>
-  <div class="tags"><span class="tag">concept</span><span class="tag">time</span><span class="tag">discipline</span><span class="tag">black-studies</span><span class="tag">fugitivity</span><span class="tag">akomolafe</span><span class="tag">landes</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/clock-as-incomplete-discipline.md">source on GitHub</a></div>
+    <div class="note-summary">Akomolafe&#x27;s claim that the clock disciplines bodies but also produces gaps, upbeats, and fugitive intervals that exceed its count — set against Landes&#x27;s canonical claim that clock discipline became complete, internalized &#x27;from within.&#x27;</div>
     <div class="prose">
 <p>In <a class="wikilink" href="/wiki/aneesh/summaries/bayo-akomolafe-the-untimely">bayo-akomolafe-the-untimely</a>, the clock is not merely an instrument of timekeeping. It is a disciplinary machine: plantation bells, shipboard rhythms, punctuality demands, time management, and progress narratives coordinate bodies into legible productivity. But Akomolafe&#x27;s crucial claim is that this discipline is <strong>incomplete</strong>. Every downbeat creates an upbeat; every mark creates a not-mark; every tick-tock contains an interval.</p>
 <h2 id="mechanism">Mechanism</h2>
@@ -65,40 +74,71 @@
 <li><a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">david-s-landes</a> — author of the strongest counter-position; see <a class="wikilink" href="/wiki/commons/reading/landes-revolution-in-time/rit-02-introduction">rit-02-introduction</a>.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">26</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/bayo-akomolafe">Bayo Akomolafe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/bayo-akomolafe-the-untimely">Bayo Akomolafe — The Untimely</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/parapolitics-of-the-untimely">Parapolitics of the Untimely</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/untimely">Untimely</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/untimely-time-and-spatial-multiplicity">Untimely Time and Spatial Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-02-introduction">RIT 02 — Introduction — why the clock matters</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-03-a-magnificent-dead-end">RIT 03 — A Magnificent Dead End (Ch. 1)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-04-why-are-the-memorials-late">RIT 04 — Why Are the Memorials Late? (Ch. 2) — China&#x27;s second chance refused</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-06-the-greatest-necessity">RIT 06 — &quot;The Greatest Necessity for Every Rank of Men&quot; (Ch. 4)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-07-my-time-is-my-time">RIT 07 — My Time Is My Time (Ch. 5)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-08-of-toys-and-ornaments">RIT 08 — Of Toys and Ornaments and Serious Things (ch. 6)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-09-my-time-is-your-time">RIT 09 — My Time Is Your Time (ch. 7)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-10-approaching-the-asymptote">RIT 10 — Approaching the Asymptote (ch. 8)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-13-fame-is-the-spur">RIT 13 — Fame Is the Spur (ch. 11)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-14-clocks-in-the-belfry">RIT 14 — Clocks in the Belfry (Ch. 12)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">RIT 16 — The Ups and Downs of International Competition (Ch. 14)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-19-nor-could-he-compete-with-us">RIT 19 — &quot;Nor Could He Compete with Us&quot; (ch. 17, pp. 293–309)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-21-not-one-in-fifty-thousand">RIT 21 — Not One in Fifty Thousand (Ch. 19)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-22-who-killed-cock-robin">RIT 22 — &quot;Who Killed Cock Robin?&quot; (ch. 20, pp. 347–364)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-24-the-quartz-revolution-ii">RIT 24 — The Quartz Revolution, II (ch. 21, second half + conclusion)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>26</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>748</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">26</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/untimely">Untimely</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/bayo-akomolafe-the-untimely">Bayo Akomolafe — The Untimely</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">RIT 16 — The Ups and Downs of International Competition (Ch. 14)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/bayo-akomolafe">Bayo Akomolafe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-03-a-magnificent-dead-end">RIT 03 — A Magnificent Dead End (Ch. 1)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>18 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-06-the-greatest-necessity">RIT 06 — &quot;The Greatest Necessity for Every Rank of Men&quot; (Ch. 4)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/parapolitics-of-the-untimely">Parapolitics of the Untimely</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-04-why-are-the-memorials-late">RIT 04 — Why Are the Memorials Late? (Ch. 2) — China&#x27;s second chance refused</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-07-my-time-is-my-time">RIT 07 — My Time Is My Time (Ch. 5)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-22-who-killed-cock-robin">RIT 22 — &quot;Who Killed Cock Robin?&quot; (ch. 20, pp. 347–364)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-13-fame-is-the-spur">RIT 13 — Fame Is the Spur (ch. 11)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-19-nor-could-he-compete-with-us">RIT 19 — &quot;Nor Could He Compete with Us&quot; (ch. 17, pp. 293–309)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-21-not-one-in-fifty-thousand">RIT 21 — Not One in Fifty Thousand (Ch. 19)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-24-the-quartz-revolution-ii">RIT 24 — The Quartz Revolution, II (ch. 21, second half + conclusion)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-02-introduction">RIT 02 — Introduction — why the clock matters</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-08-of-toys-and-ornaments">RIT 08 — Of Toys and Ornaments and Serious Things (ch. 6)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-10-approaching-the-asymptote">RIT 10 — Approaching the Asymptote (ch. 8)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-09-my-time-is-your-time">RIT 09 — My Time Is Your Time (ch. 7)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-14-clocks-in-the-belfry">RIT 14 — Clocks in the Belfry (Ch. 12)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/untimely-time-and-spatial-multiplicity">Untimely Time and Spatial Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">20</span></li>
+        <li><a href="/wiki/aneesh/concepts/untimely">Untimely</a><span class="rail-where">18</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/pull-vs-push-machines">Pull vs. Push Machines</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">RIT 16 — The Ups and Downs of International Competition (Ch. 14)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmopolitan-time-queue">Cosmopolitan Time Queue</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/concept">concept</a><a class="tag" href="/wiki/topics/time">time</a><a class="tag" href="/wiki/topics/discipline">discipline</a><a class="tag" href="/wiki/topics/black-studies">black-studies</a><a class="tag" href="/wiki/topics/fugitivity">fugitivity</a><a class="tag" href="/wiki/topics/akomolafe">akomolafe</a><a class="tag" href="/wiki/topics/landes">landes</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

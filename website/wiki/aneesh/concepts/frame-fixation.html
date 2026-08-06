@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Frame Fixation</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Frame Fixation</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/frame-fixation.md">source on GitHub</a></div>
-  <div class="note-summary">The cognitive failure mode in which a practitioner remains committed to an inadequate frame when evidence demands reframing — the central hazard of expert sensemaking in dynamic environments.</div>
-  <div class="tags"><span class="tag">sensemaking</span><span class="tag">cognitive-science</span><span class="tag">decision-making</span><span class="tag">expertise</span><span class="tag">frames</span><span class="tag">failure-mode</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/frame-fixation.md">source on GitHub</a></div>
+    <div class="note-summary">The cognitive failure mode in which a practitioner remains committed to an inadequate frame when evidence demands reframing — the central hazard of expert sensemaking in dynamic environments.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>Frame fixation is the pathological form of the <strong>preservation cycle</strong> in the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span>: the practitioner encounters disconfirming data but refuses to abandon their current explanatory frame, even when that frame is demonstrably inadequate. The result is systematic blindness to alternative interpretations of events.</p>
+<p>Frame fixation is the pathological form of the <strong>preservation cycle</strong> in the <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a>: the practitioner encounters disconfirming data but refuses to abandon their current explanatory frame, even when that frame is demonstrably inadequate. The result is systematic blindness to alternative interpretations of events.</p>
 <h2 id="why-it-happens">Why It Happens</h2>
 <p>The structural cause: <strong>anchor lock-in</strong>. Data points used to anchor the current frame become cognitively difficult to redeploy in constructing an alternative frame. Early anchors are especially sticky — the earlier a flawed anchor is introduced, the harder it is to escape.</p>
 <p>Contributing factors:</p>
@@ -70,24 +79,66 @@
 <p>Chin&#x27;s practical implication: actively elaborate alternative frames in parallel with your current operating frame, even before you&#x27;ve committed to them.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — the parent framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — the research tradition that identified this pattern</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Abductive Reasoning&quot;">Abductive Reasoning</span> — the constructive mode that enables escape from fixation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confirmation Bias&quot;">Confirmation Bias</span> — the lab-study version of this phenomenon; less useful concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — primary researcher</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span> — applied treatment</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — the parent framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — the research tradition that identified this pattern</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/abductive-reasoning" title="Written [[Abductive Reasoning]], resolved to abductive-reasoning">Abductive Reasoning</a> — the constructive mode that enables escape from fixation</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/confirmation-bias" title="No note is called &quot;Confirmation Bias&quot; yet — see who is asking for it">Confirmation Bias</a> — the lab-study version of this phenomenon; less useful concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — primary researcher</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a> — applied treatment</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/limits-of-mapping-bryant">Limits of Mapping (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-03-cardinal-morton-theft">Sheep Devouring Men: Hythloday&#x27;s Case Against Hanging Thieves</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>13</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>558</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">13</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/heuristics-and-biases">Heuristics and Biases</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-to-make-sense-of-ai">How to Make Sense of AI (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/limits-of-mapping-bryant">Limits of Mapping (Bryant)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>5 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-03-cardinal-morton-theft">Sheep Devouring Men: Hythloday&#x27;s Case Against Hanging Thieves</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/data-and-frames-in-analysis-and-art">Data is Always Constructed: From Sensemaking to Art</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein">The Literary and Cognitive Faces of Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/abductive-reasoning">Abductive Reasoning</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/cognitive-science">cognitive-science</a><a class="tag" href="/wiki/topics/decision-making">decision-making</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/frames">frames</a><span class="tag tag-lone" title="Only this note uses it">failure-mode</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

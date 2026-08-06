@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Infinite Game</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Infinite Game</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/infinite-game.md">source on GitHub</a></div>
-  <div class="note-summary">The distinction between finite games (played to win) and infinite games (played to keep playing), and its application to creative and intellectual life.</div>
-  <div class="tags"><span class="tag">game-theory</span><span class="tag">creativity</span><span class="tag">writing</span><span class="tag">philosophy</span><span class="tag">simon-sinek</span><span class="tag">james-carse</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/infinite-game.md">source on GitHub</a></div>
+    <div class="note-summary">The distinction between finite games (played to win) and infinite games (played to keep playing), and its application to creative and intellectual life.</div>
     <div class="prose">
-<p>The infinite game, as developed by philosopher <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James Carse&quot;">James Carse</span> and popularized by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Simon Sinek&quot;">Simon Sinek</span>, distinguishes between:</p>
+<p>The infinite game, as developed by philosopher <a class="wikilink-wanted" href="/wiki/wanted/james-carse" title="No note is called &quot;James Carse&quot; yet — see who is asking for it">James Carse</a> and popularized by <a class="wikilink-wanted" href="/wiki/wanted/simon-sinek" title="No note is called &quot;Simon Sinek&quot; yet — see who is asking for it">Simon Sinek</a>, distinguishes between:</p>
 <ul>
 <li><strong>Finite games</strong>: fixed rules, fixed players, clear winners and losers. You play to end the game.</li>
 <li><strong>Infinite games</strong>: evolving rules, open player pool, no final winner. You play to keep playing.</li>
 </ul>
 <h2 id="application-to-creative-practice">Application to Creative Practice</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Robert Peake&quot;">Robert Peake</span>, in his Summer of Protocols talk &quot;The Infinite Game of Poetry,&quot; applies this to writing and creative life. The poet does not write to <em>finish</em> writing or to <em>win</em> at poetry. The point is to remain a player — to keep noticing, synthesizing, and writing. Falling off the wagon is not losing; it&#x27;s a temporary exit from the game. Getting back on is re-entering.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/robert-peake" title="Written [[Robert Peake]], resolved to robert-peake">Robert Peake</a>, in his Summer of Protocols talk &quot;The Infinite Game of Poetry,&quot; applies this to writing and creative life. The poet does not write to <em>finish</em> writing or to <em>win</em> at poetry. The point is to remain a player — to keep noticing, synthesizing, and writing. Falling off the wagon is not losing; it&#x27;s a temporary exit from the game. Getting back on is re-entering.</p>
 <p>This reframes &quot;consistency&quot; from a moral obligation to a strategic necessity: you can&#x27;t play if you&#x27;re not playing.</p>
 <h2 id="protocol-implications">Protocol Implications</h2>
 <p>Peake derives a protocol from this:</p>
@@ -51,10 +60,10 @@
 <li>Writing changes the self, which changes future observation.</li>
 <li>The sum of all iterations is the life&#x27;s work.</li>
 </ol>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Construction Through Writing&quot;">Self-Construction Through Writing</span></p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/self-construction-through-writing" title="Written [[Self-Construction Through Writing]], resolved to self-construction-through-writing">Self-Construction Through Writing</a></p>
 <h2 id="relation-to-habit-and-identity">Relation to Habit and Identity</h2>
 <p>The infinite game framing is gentler on the self than the &quot;streak&quot; or &quot;habit&quot; framing. A broken streak ends a finite game; in the infinite game, you simply re-enter. This has practical implications for creative productivity — it reduces the all-or-nothing dynamics that make people quit permanently after a single miss.</p>
-<p>See also: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Habit and Identity&quot;">Habit and Identity</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Protocols, Wagons, and Associated Acrobatics&quot;">On Protocols, Wagons, and Associated Acrobatics</span></p>
+<p>See also: <a class="wikilink" href="/wiki/aneesh/concepts/habit-and-identity" title="Written [[Habit and Identity]], resolved to habit-and-identity">Habit and Identity</a>, <a class="wikilink" href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics" title="Written [[On Protocols, Wagons, and Associated Acrobatics]], resolved to on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a></p>
 <h2 id="contradictions-open-questions">Contradictions / Open Questions</h2>
 <ul>
 <li>Does the infinite game framing risk becoming an excuse for inconsistency? The finite game&#x27;s pressure is partly what produces results.</li>
@@ -62,25 +71,68 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Robert Peake&quot;">Robert Peake</span> — applied the concept to poetry/writing</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James Carse&quot;">James Carse</span> — original philosopher of finite/infinite games</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Simon Sinek&quot;">Simon Sinek</span> — popularized via business context</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Construction Through Writing&quot;">Self-Construction Through Writing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Habit and Identity&quot;">Habit and Identity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ludic Feedback Loops&quot;">Ludic Feedback Loops</span> — a related but distinct framing of play in work</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/robert-peake" title="Written [[Robert Peake]], resolved to robert-peake">Robert Peake</a> — applied the concept to poetry/writing</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/james-carse" title="No note is called &quot;James Carse&quot; yet — see who is asking for it">James Carse</a> — original philosopher of finite/infinite games</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/simon-sinek" title="No note is called &quot;Simon Sinek&quot; yet — see who is asking for it">Simon Sinek</a> — popularized via business context</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/self-construction-through-writing" title="Written [[Self-Construction Through Writing]], resolved to self-construction-through-writing">Self-Construction Through Writing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/habit-and-identity" title="Written [[Habit and Identity]], resolved to habit-and-identity">Habit and Identity</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ludic-feedback-loops" title="Written [[Ludic Feedback Loops]], resolved to ludic-feedback-loops">Ludic Feedback Loops</a> — a related but distinct framing of play in work</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/marcus-aurelius">Marcus Aurelius (121–180 CE)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>15</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>354</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">15</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/self-construction-through-writing">Self-Construction Through Writing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ludic-feedback-loops">Ludic Feedback Loops</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ontological-dread">Ontological Dread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-essay-as-form">Personal Essay as Form</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/robert-peake">Robert Peake</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>7 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops">Work or Play? Ludic Feedback Loops</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/habit-and-identity">Habit and Identity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/marcus-aurelius">Marcus Aurelius (121–180 CE)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/play-as-navigational-instrument">Play as Navigational Instrument</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/useless-machine">Useless Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/ludic-feedback-loops">Ludic Feedback Loops</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/self-construction-through-writing">Self-Construction Through Writing</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/robert-peake">Robert Peake</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">game-theory</span><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/writing">writing</a><a class="tag" href="/wiki/topics/philosophy">philosophy</a><span class="tag tag-lone" title="Only this note uses it">simon-sinek</span><span class="tag tag-lone" title="Only this note uses it">james-carse</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Gaston Bachelard (1884–1962)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Gaston Bachelard (1884–1962)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/gaston-bachelard.md">source on GitHub</a></div>
-  <div class="note-summary">French philosopher of science and poetic imagination (1884–1962), best known for The Poetics of Space — a phenomenological account of intimate domestic space that runs parallel to Tuan&#x27;s humanistic geography.</div>
-  <div class="tags"><span class="tag">bachelard</span><span class="tag">phenomenology</span><span class="tag">intimate-space</span><span class="tag">imagination</span><span class="tag">poetics</span><span class="tag">philosophy</span><span class="tag">french-philosophy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/gaston-bachelard.md">source on GitHub</a></div>
+    <div class="note-summary">French philosopher of science and poetic imagination (1884–1962), best known for The Poetics of Space — a phenomenological account of intimate domestic space that runs parallel to Tuan&#x27;s humanistic geography.</div>
     <div class="prose">
 <h2 id="overview">Overview</h2>
 <p>Gaston Bachelard was a French philosopher who worked in two distinct and seemingly opposed registers: philosophy of science (epistemological rupture, the construction of scientific concepts) and poetic phenomenology (the imagination of matter, the intimate experience of domestic space). He is the author of <em>La Poétique de l&#x27;espace</em> (1958; trans. <em>The Poetics of Space</em>, 1964), which is the closest parallel in the French philosophical tradition to Yi-Fu Tuan&#x27;s humanistic geography.</p>
@@ -77,17 +86,40 @@
 <p>In §IV, Sathe invokes Bachelard&#x27;s <em>Poetics of Space</em> to introduce the <strong>symbolic dimension</strong> of intimate places — the claim that corners, staircases, and drawers are not merely functional but densely metaphorical. Sathe uses this to make a design argument: tools and environments that lack symbolic texture become &quot;frictionless but placeless&quot; — efficient but unenduring, unable to accumulate the kind of investment that gives a place its lasting character. Bachelard thus provides Sathe&#x27;s criterion for evaluating technology design: does a tool enable the user to invest it with meaning, to accumulate symbolic and emotional sediment, to make it genuinely their own? If not, it is a space rather than a place.</p>
 <p>→ See <a class="wikilink" href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">we-need-homes-in-the-delta-quadrant</a>, §IV → See <a class="wikilink" href="/wiki/aneesh/concepts/intimate-place-bachelard">intimate-place-bachelard</a> — the concept page</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/intimate-place-bachelard">Intimate Place (Bachelard)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>687</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/intimate-place-bachelard">Intimate Place (Bachelard)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/fractal-place-making">Fractal Place-Making</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/homes-as-launchpads">Homes as Launchpads</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfconscious-design">Unselfconscious Design</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/bachelard">bachelard</a><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><span class="tag tag-lone" title="Only this note uses it">intimate-space</span><a class="tag" href="/wiki/topics/imagination">imagination</a><span class="tag tag-lone" title="Only this note uses it">poetics</span><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/french-philosophy">french-philosophy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

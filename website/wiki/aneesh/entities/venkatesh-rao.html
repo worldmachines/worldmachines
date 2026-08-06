@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Venkatesh Rao</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Venkatesh Rao</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/venkatesh-rao.md">source on GitHub</a></div>
-  <div class="note-summary">Venkatesh Rao is the author of the Ribbonfarm and Contraptions newsletters, known for machinic, systems-oriented frameworks applied to history, technology, and culture; key concepts in this wiki include the Divergence Machine, Configurancy, and Liveness.</div>
-  <div class="tags"><span class="tag">thinker</span><span class="tag">blogger</span><span class="tag">systems-thinking</span><span class="tag">contraptions</span><span class="tag">world-machines</span><span class="tag">ribbonfarm</span><span class="tag">divergence-machine</span><span class="tag">configurancy</span><span class="tag">process-philosophy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/venkatesh-rao.md">source on GitHub</a></div>
+    <div class="note-summary">Venkatesh Rao is the author of the Ribbonfarm and Contraptions newsletters, known for machinic, systems-oriented frameworks applied to history, technology, and culture; key concepts in this wiki include the Divergence Machine, Configurancy, and Liveness.</div>
     <div class="prose">
 <h2 id="identity">Identity</h2>
 <p>Author of the Contraptions newsletter (formerly Ribbonfarm). Self-described as a &quot;lapsed and fallen technocrat&quot; of Indian origin, technologically modern in a recognizably South Asian (specifically Madhva Brahmin) way. His writing applies engineering and mechanistic frameworks to historical, cultural, and philosophical questions.</p>
@@ -135,87 +144,118 @@
 <li>No engagement with postmodernism as a prior tradition (Lyotard, Habermas) despite covering ostensibly the same terrain</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">73</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/argument-of-progress">Argument of Progress</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/authorship-as-courage">Authorship as Courage</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/configurancy">Configurancy</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">Cosmopolitan Time Queue and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/eric-chaisson">Eric Chaisson</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/four-class-relations-of-modernity">Four Class Relations of Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse">History Machines in the Margins — Florian Lohse (2025)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/horizontal-history">Horizontal History</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/ivo-velitchkov">Ivo Velitchkov</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/legibility-vs-divergence-the-civilizational-tradeoff">Legibility vs. Divergence: The Civilizational Tradeoff</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/life-era">Life Era</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/ludic-feedback-loops">Ludic Feedback Loops</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/majapahit-empire">Majapahit Empire</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/new-nature-as-life-era">New Nature as Life Era — A Synthesis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/ontological-dread">Ontological Dread</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/personal-essay-as-form">Personal Essay as Form</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/play-as-navigational-instrument">Play as Navigational Instrument</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/progress-as-non-stationary-argument">Progress as a Non-Stationary Argument</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/psychological-modernity">Psychological Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/pull-vs-push-machines">Pull vs. Push Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/shitty-castle-pattern">Shitty Castle Pattern</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/shitty-castles">Shitty Castles: On the Art of Digging Fake Moats</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/six-relationships-of-modernity">Six Relationships of Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/stripping-the-layers-from-spinoza-to-ai">Stripping the Layers: From Spinoza to AI</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/terminal-medievals-vs-early-moderns">Terminal Medievals vs. Early Moderns: The Retrofitting Problem</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds">The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii">The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine">The Modernity Machine (Rao, Jan 2025)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-ii">The Modernity Machine II (Rao, Jun 2025)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii">The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-world-machines-project-rao">The World Machines Project</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/three-engineers-of-modernity-velitchkov">Three Engineers of Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/useless-machine">Useless Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/werner-herzog">Werner Herzog</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops">Work or Play? Ludic Feedback Loops</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/world-machines-as-interim-theory">World Machines as Interim Theory: A Weickian Defense</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/zombie-ideas">Zombie Ideas</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/glossary/world-machine">World Machine</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>73</b><span>linked from</span></div>
+      <div class="bearing"><b>30</b><span>links out</span></div>
+      <div class="bearing"><b>1155</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">73</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>65 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/argument-of-progress">Argument of Progress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/configurancy">Configurancy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/shitty-castles">Shitty Castles: On the Art of Digging Fake Moats</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/pull-vs-push-machines">Pull vs. Push Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-class-relations-of-modernity">Four Class Relations of Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/world-machines-as-interim-theory">World Machines as Interim Theory: A Weickian Defense</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds">The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/authorship-as-courage">Authorship as Courage</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/eric-chaisson">Eric Chaisson</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse">History Machines in the Margins — Florian Lohse (2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/horizontal-history">Horizontal History</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ivo-velitchkov">Ivo Velitchkov</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ludic-feedback-loops">Ludic Feedback Loops</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ontological-dread">Ontological Dread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-essay-as-form">Personal Essay as Form</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/shitty-castle-pattern">Shitty Castle Pattern</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/zombie-ideas">Zombie Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/life-era">Life Era</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/psychological-modernity">Psychological Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii">The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/werner-herzog">Werner Herzog</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops">Work or Play? Ludic Feedback Loops</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-divergence-the-civilizational-tradeoff">Legibility vs. Divergence: The Civilizational Tradeoff</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/six-relationships-of-modernity">Six Relationships of Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">Cosmopolitan Time Queue and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/new-nature-as-life-era">New Nature as Life Era — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/play-as-navigational-instrument">Play as Navigational Instrument</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/terminal-medievals-vs-early-moderns">Terminal Medievals vs. Early Moderns: The Retrofitting Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/majapahit-empire">Majapahit Empire</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-world-machines-project-rao">The World Machines Project</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/useless-machine">Useless Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine">The Modernity Machine (Rao, Jan 2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-ii">The Modernity Machine II (Rao, Jun 2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii">The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/glossary/world-machine">World Machine</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/progress-as-non-stationary-argument">Progress as a Non-Stationary Argument</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/stripping-the-layers-from-spinoza-to-ai">Stripping the Layers: From Spinoza to AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/three-engineers-of-modernity-velitchkov">Three Engineers of Modernity</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">38</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">26</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">9</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/thinker">thinker</a><a class="tag" href="/wiki/topics/blogger">blogger</a><a class="tag" href="/wiki/topics/systems-thinking">systems-thinking</a><a class="tag" href="/wiki/topics/contraptions">contraptions</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/ribbonfarm">ribbonfarm</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/configurancy">configurancy</a><a class="tag" href="/wiki/topics/process-philosophy">process-philosophy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> <b>/</b> <span>Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry.md">source on GitHub</a></div>
-  <div class="note-summary">Between the 1880s and 1920s, capitalist competition pushed American, German, and British firms toward three different organizational solutions—bureaucratic mergers and trusts in the United States, state-tolerated cartels in Germany, family-firm continuity in Britain—while electricity and Henry Ford&#x27;s automobile assembly line remade production, consumption, and daily life atop new global chains in oil and rubber, a transformation Appleby argues was politically contingent rather than an inevitable unfolding of capitalist logic.</div>
-  <div class="tags"><span class="tag">managerial-capitalism</span><span class="tag">corporate-mergers</span><span class="tag">cartels</span><span class="tag">second-industrial-revolution</span><span class="tag">automobile-industry</span><span class="tag">henry-ford</span><span class="tag">standard-oil</span><span class="tag">antitrust-regulation</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/history-machine">history-machine</a>, <a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do">what-do-platforms-really-do</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry.md">source on GitHub</a></div>
+    <div class="note-summary">Between the 1880s and 1920s, capitalist competition pushed American, German, and British firms toward three different organizational solutions—bureaucratic mergers and trusts in the United States, state-tolerated cartels in Germany, family-firm continuity in Britain—while electricity and Henry Ford&#x27;s automobile assembly line remade production, consumption, and daily life atop new global chains in oil and rubber, a transformation Appleby argues was politically contingent rather than an inevitable unfolding of capitalist logic.</div>
     <div class="prose">
 <p>At the turn of the twentieth century, capitalism&#x27;s &quot;chameleon&quot; quality shows in a new register: firms that had grown huge through railroads and telegraphy now had to be organized rather than merely built. The unit traces how the United States, Germany, and Britain each solved the problem of ruinous competition differently—through merger and bureaucracy, through cartels, and through family-firm conservatism, respectively—before turning to how electricity and the automobile, especially Henry Ford&#x27;s assembly line and Alfred Sloan&#x27;s General Motors, became the era&#x27;s defining technologies, dragging global commodity chains in rubber and oil in their wake and reshaping everyday mobility, work, and even courtship. It closes by arguing that America&#x27;s industrial dominance was a product of political circumstance, not an inexorable logic internal to capitalism itself.</p>
 <h2 id="themes">Themes</h2>
@@ -47,18 +55,52 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The bureaucracy passage (c1) makes the chapter&#x27;s structural thesis explicit: what made the modern firm modern was managerial bureaucracy, not sheer size. The cartel-versus-common-law passage (c2) is the clearest statement of the US/Germany institutional divergence, and explains why FDR&#x27;s National Recovery Act—an American attempt at cartel-style coordination—was struck down as unconstitutional while German cartels operated freely. The &quot;secret marriage&quot; passage (c3) captures Germany&#x27;s science-industry fusion in one memorable phrase. The Ford passage (c4) isolates the moment Appleby credits as the invention of mass production itself. The automobile-and-mores passage (c5) is the unit&#x27;s most vivid illustration of technology reshaping social norms beneath the economic history. The closing anti-determinism passage (c6) is the unit&#x27;s thesis statement and the one most directly worth citing if the note is used for argument, not just narrative.</p>
     </div>
+    <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08a-european-imperialism-in-africa-and-asia">Capitalism&#x27;s Imperial Turn: The Scramble for Africa and Japan&#x27;s Meiji Counter-Model</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>833</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08a-european-imperialism-in-africa-and-asia">Capitalism&#x27;s Imperial Turn: The Scramble for Africa and Japan&#x27;s Meiji Counter-Model</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04b-currency-crisis-and-new-economic-thinking">The Recoinage Crisis and the Making of Economic Thought in England and France</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06a-german-and-american-industrialization">Two Roads to Industrial Ascent: Germany and the United States Overtake Britain</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/adam-smith">Adam Smith (1723-1790)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Supports</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">david-s-landes</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/history-machine">history-machine</a></li><li><a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do">what-do-platforms-really-do</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">managerial-capitalism</span><span class="tag tag-lone" title="Only this note uses it">corporate-mergers</span><span class="tag tag-lone" title="Only this note uses it">cartels</span><span class="tag tag-lone" title="Only this note uses it">second-industrial-revolution</span><span class="tag tag-lone" title="Only this note uses it">automobile-industry</span><span class="tag tag-lone" title="Only this note uses it">henry-ford</span><span class="tag tag-lone" title="Only this note uses it">standard-oil</span><span class="tag tag-lone" title="Only this note uses it">antitrust-regulation</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

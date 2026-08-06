@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Modernity Machine (Rao, Jan 2025)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Modernity Machine (Rao, Jan 2025)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/venkatesh-rao-the-modernity-machine.md">source on GitHub</a></div>
-  <div class="note-summary">Rao argues that modernity began not in the 16th century but in the 13th, framing it as a global civilizational machine assembled across six shifting class relationships between 1200 and 1600.</div>
-  <div class="tags"><span class="tag">venkatesh-rao</span><span class="tag">modernity</span><span class="tag">historical-periodization</span><span class="tag">world-machines</span><span class="tag">contraptions</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/venkatesh-rao-the-modernity-machine.md">source on GitHub</a></div>
+    <div class="note-summary">Rao argues that modernity began not in the 16th century but in the 13th, framing it as a global civilizational machine assembled across six shifting class relationships between 1200 and 1600.</div>
     <div class="prose">
 <p><strong>Source</strong>: Contraptions newsletter, January 26, 2025<br>
 <strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></p>
@@ -44,7 +53,7 @@
 <p>Non-Western populations became technologically modern through science and technology acting on a landscape of <em>regional early modernities</em> that had already taken shape 1200-1600. Westernization (philosophical, cultural, aesthetic) has been largely cosmetic — restricted to &quot;suits and ties.&quot; Science and technology have achieved near-100% penetration. The religious map of the Old World has been largely unchanged since 1200.</p>
 <blockquote><p>&quot;People I consider as authentic representatives of cultures worldwide are <em>culturally distinguishable modernists</em> rather than traditionalists.&quot;</p></blockquote>
 <h2 id="the-modernity-machine-as-societal-apparatus">The Modernity Machine as Societal Apparatus</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span> is a civilization-scale contraption assembled from six evolving relationships among four social classes: <strong>monarch, oligarchy, technocracy, workers</strong>. Each relationship underwent a pivotal secular shift 1200-1600.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a> is a civilization-scale contraption assembled from six evolving relationships among four social classes: <strong>monarch, oligarchy, technocracy, workers</strong>. Each relationship underwent a pivotal secular shift 1200-1600.</p>
 <h3 id="the-six-relationships-of-modernity">The Six Relationships of Modernity</h3>
 <ol>
 <li><strong>Monarch-Oligarchy</strong>: Magna Carta (1215) as archetype; reining in divine-right monarchy. Venice&#x27;s hereditary Doge system as parallel early instance.</li>
@@ -76,23 +85,36 @@
 <h2 id="key-cross-references">Key Cross-References</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> — author entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span> — the central concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Horizontal History&quot;">Horizontal History</span> — the methodology</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;World as Machine&quot;">World as Machine</span> — the meta-framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Six Relationships of Modernity&quot;">Six Relationships of Modernity</span> — the analytic apparatus</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Psychological Modernity&quot;">Psychological Modernity</span> — the core historiographic claim</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Westernization vs Modernization&quot;">Westernization vs Modernization</span> — the key distinction</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a> — the central concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/horizontal-history" title="Written [[Horizontal History]], resolved to horizontal-history">Horizontal History</a> — the methodology</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/world-as-machine" title="No note is called &quot;World as Machine&quot; yet — see who is asking for it">World as Machine</a> — the meta-framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/six-relationships-of-modernity" title="Written [[Six Relationships of Modernity]], resolved to six-relationships-of-modernity">Six Relationships of Modernity</a> — the analytic apparatus</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/psychological-modernity" title="Written [[Psychological Modernity]], resolved to psychological-modernity">Psychological Modernity</a> — the core historiographic claim</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/westernization-vs-modernization" title="No note is called &quot;Westernization vs Modernization&quot; yet — see who is asking for it">Westernization vs Modernization</a> — the key distinction</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>702</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/modernity">modernity</a><span class="tag tag-lone" title="Only this note uses it">historical-periodization</span><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/contraptions">contraptions</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

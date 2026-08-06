@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>Troilus and Criseyde, Book Five: The Exchange, the Betrayal, and the Death of Troilus</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Troilus and Criseyde, Book Five: The Exchange, the Betrayal, and the Death of Troilus</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-5.md">source on GitHub</a></div>
-  <div class="note-summary">In the final book of Chaucer&#x27;s Troilus and Criseyde, Criseyde is exchanged to the Greek camp and gradually succumbs to Diomede&#x27;s courtship, abandoning Troilus, who—devastated by proof of her infidelity—dies in battle and ascends to the eighth sphere to look down in contempt on the vanity of earthly love, as the poet closes by renouncing pagan love for Christian devotion.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">troilus-and-criseyde</span><span class="tag">courtly-love</span><span class="tag">betrayal</span><span class="tag">fortune-and-fate</span><span class="tag">free-will-and-predestination</span><span class="tag">medieval-tragedy</span><span class="tag">boethian-consolation</span><span class="tag">trojan-war</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-5.md">source on GitHub</a></div>
+    <div class="note-summary">In the final book of Chaucer&#x27;s Troilus and Criseyde, Criseyde is exchanged to the Greek camp and gradually succumbs to Diomede&#x27;s courtship, abandoning Troilus, who—devastated by proof of her infidelity—dies in battle and ascends to the eighth sphere to look down in contempt on the vanity of earthly love, as the poet closes by renouncing pagan love for Christian devotion.</div>
     <div class="prose">
 <p>This unit is the fifth and final book of Chaucer&#x27;s <em>Troilus and Criseyde</em>: Criseyde is escorted from Troy to her father Calchas among the Greeks under a ten-day truce; Troilus, desolate, wanders the emptied city reliving their courtship; Diomede methodically courts Criseyde and within weeks wins her — first her company, then her horse, brooch, and sleeve-pendant, finally (the narrator concedes with visible reluctance) her heart; Troilus, having found his own brooch on Diomede&#x27;s captured coat-armour, learns the truth beyond doubt; he dies at Achilles&#x27; hand, and his spirit ascends through the spheres to look down on &quot;this wretched world&quot; with the serene contempt of the dead, before the poet&#x27;s envoi turns from pagan tragedy to Christian devotion.</p>
 <h2 id="themes">Themes</h2>
@@ -45,15 +54,28 @@
 <p>The book opens by handing the ending to the Fates before the action starts, collapsing suspense into inevitability from the first stanza (&quot;Approache gan the fatal destiny... Till Lachesis his thread no longer twine&quot;). Troilus&#x27;s apostrophe to Criseyde&#x27;s shuttered house — &quot;O palace desolate! / O house of houses, whilom beste hight!&quot; — turns architecture into elegy, the empty windows standing in for the absent woman before any betrayal has occurred. Diomede&#x27;s wooing speech is a small case study in seduction-as-argument: he minimizes the Trojans&#x27; prospects, flatters her face, and closes with calculated modesty (&quot;Yea, lever than be a lord of Greekes twelve!&quot;). Criseyde&#x27;s answer to him is the poem&#x27;s most exact rendering of a mind refusing to decide (&quot;I say not therefore that I will you love; / Nor say not nay&quot;), immediately undercut by her private prayer to see Troy again. The inventory of gifts to Diomede — horse, brooch, sleeve — culminating in the narrator&#x27;s own reluctance to state plainly that she gave him her heart (&quot;Men say, I n&#x27;ot, that she gave him her heart&quot;), stages betrayal as something the poem itself resists narrating cleanly. And the death sequence, in which Troilus&#x27;s soul rises to the eighth sphere and looks back down in amused contempt at earthly mourning, is the hinge on which the entire romance&#x27;s value system flips into its Christian coda.</p>
 <p>The unit&#x27;s fatalism — an outcome fixed before the individuals inside it can act — and Troilus&#x27;s doomed insistence on persisting in hope against mounting evidence resonate loosely with <a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a>: the striving to endure that the poem&#x27;s own cosmology (Fate, then the Boethian turn) is built to override.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>788</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/troilus-and-criseyde">troilus-and-criseyde</a><a class="tag" href="/wiki/topics/courtly-love">courtly-love</a><span class="tag tag-lone" title="Only this note uses it">betrayal</span><a class="tag" href="/wiki/topics/fortune-and-fate">fortune-and-fate</a><a class="tag" href="/wiki/topics/free-will-and-predestination">free-will-and-predestination</a><span class="tag tag-lone" title="Only this note uses it">medieval-tragedy</span><span class="tag tag-lone" title="Only this note uses it">boethian-consolation</span><a class="tag" href="/wiki/topics/trojan-war">trojan-war</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

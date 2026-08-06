@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28.md">source on GitHub</a></div>
-  <div class="note-summary">Dante is examined in turn by Saints Peter, James, and John on the theological virtues of Faith, Hope, and Charity in the Heaven of the Fixed Stars, meets Adam who corrects the legend of the Fall and describes humanity&#x27;s first vanished language, hears Peter turn red with fury and denounce the corrupted papacy before the pilgrim ascends into the Primum Mobile, and there sees, reflected in Beatrice&#x27;s eyes, the Point of divine light encircled by nine concentric rings of angels whose order inverts the physical cosmos.</div>
-  <div class="tags"><span class="tag">paradiso</span><span class="tag">theological-virtues</span><span class="tag">ecclesiastical-corruption</span><span class="tag">angelic-hierarchy</span><span class="tag">primum-mobile</span><span class="tag">adam-and-eden</span><span class="tag">poetic-ineffability</span><span class="tag">dante</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28.md">source on GitHub</a></div>
+    <div class="note-summary">Dante is examined in turn by Saints Peter, James, and John on the theological virtues of Faith, Hope, and Charity in the Heaven of the Fixed Stars, meets Adam who corrects the legend of the Fall and describes humanity&#x27;s first vanished language, hears Peter turn red with fury and denounce the corrupted papacy before the pilgrim ascends into the Primum Mobile, and there sees, reflected in Beatrice&#x27;s eyes, the Point of divine light encircled by nine concentric rings of angels whose order inverts the physical cosmos.</div>
     <div class="prose">
 <p>This unit runs from the close of Canto XXIII through the end of Canto XXVIII (with only the bare heading of Canto XXIX trailing off at the very end). In the Heaven of the Fixed Stars, Dante witnesses the triumph of Christ and the coronation of Mary, is then formally examined like a doctoral candidate by Saints Peter, James, and John on Faith, Hope, and Charity, meets the newly-introduced figure of Adam, hears Peter&#x27;s furious denunciation of the corrupt papacy, and ascends with Beatrice into the Primum Mobile, where the poem culminates in the vision of a blinding Point encircled by nine wheeling rings of angelic intelligences.</p>
 <h2 id="themes">Themes</h2>
@@ -46,13 +54,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The unit&#x27;s load-bearing moments are: the ineffability topos closing Canto XXIII; Peter&#x27;s catechism on the definition of faith in Canto XXIV; Dante&#x27;s hope, voiced at the opening of Canto XXV, to return from exile and be crowned poet at his own baptismal font in Florence; Adam&#x27;s account in Canto XXVI of the true cause of the Fall and the vanished first language; Peter&#x27;s denunciation of papal corruption in Canto XXVII; and the vision of the Point and its nine rings, with Beatrice&#x27;s resolution of the size/virtue paradox, in Canto XXVIII.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>998</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/paradiso">paradiso</a><span class="tag tag-lone" title="Only this note uses it">theological-virtues</span><a class="tag" href="/wiki/topics/ecclesiastical-corruption">ecclesiastical-corruption</a><span class="tag tag-lone" title="Only this note uses it">angelic-hierarchy</span><span class="tag tag-lone" title="Only this note uses it">primum-mobile</span><span class="tag tag-lone" title="Only this note uses it">adam-and-eden</span><span class="tag tag-lone" title="Only this note uses it">poetic-ineffability</span><a class="tag" href="/wiki/topics/dante">dante</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

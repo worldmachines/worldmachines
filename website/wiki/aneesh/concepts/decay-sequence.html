@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Decay Sequence</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Decay Sequence</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/decay-sequence.md">source on GitHub</a></div>
-  <div class="note-summary">Florian Lohse&#x27;s model of how canonical infrastructure dies — not by revolution or paradigm shift but by a long draining through six stages (Functional → Performative → Explicitly Allegorical → Ornamental → Invisible → Absent) that he claims runs identically across domains; the mechanism of Dusk-phase machine conversion, and a working diagnostic for telling dead frameworks from live ones.</div>
-  <div class="tags"><span class="tag">decay-sequence</span><span class="tag">world-machines</span><span class="tag">dusk</span><span class="tag">canonical-infrastructure</span><span class="tag">shitty-castles</span><span class="tag">historiography</span><span class="tag">diagnostics</span><span class="tag">ornament</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/decay-sequence.md">source on GitHub</a></div>
+    <div class="note-summary">Florian Lohse&#x27;s model of how canonical infrastructure dies — not by revolution or paradigm shift but by a long draining through six stages (Functional → Performative → Explicitly Allegorical → Ornamental → Invisible → Absent) that he claims runs identically across domains; the mechanism of Dusk-phase machine conversion, and a working diagnostic for telling dead frameworks from live ones.</div>
     <div class="prose">
 <p>Florian Lohse&#x27;s model of how canonical infrastructure dies. The claim, from <a class="wikilink" href="/wiki/florian/canonic-infrastructure-decays-in-hilarious-drainage">Canonic infrastructure decays in hilarious drainage</a>:</p>
 <blockquote><p>Convergent canonicity does not collapse through revolution or paradigm shift; it dissolves through a long draining — a decay sequence (Functional → Performative → Explicitly Allegorical → Ornamental → Invisible → Absent) that runs identically across domains.</p></blockquote>
@@ -96,44 +105,75 @@
 <li>Whether the sequence&#x27;s stages are discrete at all, or a continuum the six names merely sample. The moat ladder reads cleanly because each stage was assigned its own building; the monad and AI-moat cases each collapse to three.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">30</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-14-dilettantism">Dilettantism: The Failure of Art and Antiquarianism as Careers (1865-1866)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-18-free-fight">Free Fight (1869-70)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-04-harvard-college">Harvard College (1854-1858)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17">Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23">Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-11-14">Paradise, Cantos XI–XIV: Francis, Dominic, and the Ascent to Mars</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-10-14">Purgatorio X–XIV: The Terraces of Pride and Envy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale">The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33">The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-doctors-tale">The Doctor&#x27;s Tale: Virginia and the Corrupt Judge</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin">The Dynamo and the Virgin (1900)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-19-22">The Eagle of Jupiter and the Ladder of Saturn: Justice, Pagan Salvation, and Institutional Decay</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-06-10">The Eagle, the Cross, and the Sun: Paradiso VI (cont.)–X</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33">The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-general-prologue">The General Prologue to The Canterbury Tales</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-house-of-fame">The House of Fame</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-2">The Knight&#x27;s Tale, Part 2: The Lists, the Tournament, and the First Mover</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-pardoners-tale">The Pardoner&#x27;s Prologue and Tale</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-prioresss-tale">The Prioress&#x27;s Tale: The Boy-Martyr of the Jewery</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sir-thopas">The Prologue and Tale of Sir Thopas (First and Second Fits)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sompnours-tale">The Sompnour&#x27;s Tale: A Friar&#x27;s Comeuppance</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-21-twenty-years-after">Twenty Years After (1892): An Education Declared Finished</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>30</b><span>linked from</span></div>
+      <div class="bearing"><b>14</b><span>links out</span></div>
+      <div class="bearing"><b>1169</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">30</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-21-twenty-years-after">Twenty Years After (1892): An Education Declared Finished</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin">The Dynamo and the Virgin (1900)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-04-harvard-college">Harvard College (1854-1858)</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>22 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-general-prologue">The General Prologue to The Canterbury Tales</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-14-dilettantism">Dilettantism: The Failure of Art and Antiquarianism as Careers (1865-1866)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-18-free-fight">Free Fight (1869-70)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23">Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale">The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33">The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-19-22">The Eagle of Jupiter and the Ladder of Saturn: Justice, Pagan Salvation, and Institutional Decay</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-house-of-fame">The House of Fame</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-2">The Knight&#x27;s Tale, Part 2: The Lists, the Tournament, and the First Mover</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-pardoners-tale">The Pardoner&#x27;s Prologue and Tale</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sir-thopas">The Prologue and Tale of Sir Thopas (First and Second Fits)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sompnours-tale">The Sompnour&#x27;s Tale: A Friar&#x27;s Comeuppance</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17">Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-11-14">Paradise, Cantos XI–XIV: Francis, Dominic, and the Ascent to Mars</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-10-14">Purgatorio X–XIV: The Terraces of Pride and Envy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-doctors-tale">The Doctor&#x27;s Tale: Virginia and the Corrupt Judge</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-06-10">The Eagle, the Cross, and the Sun: Paradiso VI (cont.)–X</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33">The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-prioresss-tale">The Prioress&#x27;s Tale: The Boy-Martyr of the Jewery</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/papal-revolution">Papal Revolution</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/decay-sequence">decay-sequence</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a><span class="tag tag-lone" title="Only this note uses it">dusk</span><span class="tag tag-lone" title="Only this note uses it">canonical-infrastructure</span><span class="tag tag-lone" title="Only this note uses it">shitty-castles</span><a class="tag" href="/wiki/topics/historiography">historiography</a><span class="tag tag-lone" title="Only this note uses it">diagnostics</span><span class="tag tag-lone" title="Only this note uses it">ornament</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Homeland Attachment</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Homeland Attachment</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/homeland-attachment.md">source on GitHub</a></div>
-  <div class="note-summary">Tuan&#x27;s account of the medium-scale affective bond to ancestral land — the emotional substrate of nationalism and of human rootedness across cultures and economies.</div>
-  <div class="tags"><span class="tag">yi-fu-tuan</span><span class="tag">humanistic-geography</span><span class="tag">homeland</span><span class="tag">topophilia</span><span class="tag">nationalism</span><span class="tag">ancestor-worship</span><span class="tag">rootedness</span><span class="tag">place-attachment</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/homeland-attachment.md">source on GitHub</a></div>
+    <div class="note-summary">Tuan&#x27;s account of the medium-scale affective bond to ancestral land — the emotional substrate of nationalism and of human rootedness across cultures and economies.</div>
     <div class="prose">
 <h2 id="core-claim">Core Claim</h2>
 <p><strong>Homeland attachment</strong> is Yi-Fu Tuan&#x27;s term for the affective bond between people and a region — city or countryside — large enough to support a people&#x27;s livelihood. It is <a class="wikilink" href="/wiki/aneesh/concepts/topophilia">topophilia</a> at the medium scale: more than the intimate attachment to a chair or a corner, less abstract than love of a nation-state. Its character is shaped by ancestral memory, religious sanction, and communal identity; its intensity varies across cultures and historical periods but its presence is nearly universal.</p>
@@ -73,26 +82,57 @@
 <li><strong>The Ilbalintja case</strong>: the Aranda people of Australia were taught to love their own country and &quot;not to lust after the lands belonging to other men.&quot; The specificity of homeland attachment — its embeddedness in mythic history rather than abstract ownership — suggests a very different ontology of land from that of modern property law.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">12</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/achille-mbembe">Achille Mbembe (b. 1957)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/anne-buttimer">Anne Buttimer (1938–2017)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/benedict-anderson">Benedict Anderson (1936–2015)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/imagined-communities">Imagined Communities (Anderson)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/necropolitics">Necropolitics (Mbembe)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>1064</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">12</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/necropolitics">Necropolitics (Mbembe)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/imagined-communities">Imagined Communities (Anderson)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/achille-mbembe">Achille Mbembe (b. 1957)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/benedict-anderson">Benedict Anderson (1936–2015)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/anne-buttimer">Anne Buttimer (1938–2017)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/nationalism">Nationalism</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">Visibility and the Creation of Place</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/naming-as-place-making">Naming as Place-Making</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/yi-fu-tuan">yi-fu-tuan</a><a class="tag" href="/wiki/topics/humanistic-geography">humanistic-geography</a><a class="tag" href="/wiki/topics/homeland">homeland</a><a class="tag" href="/wiki/topics/topophilia">topophilia</a><a class="tag" href="/wiki/topics/nationalism">nationalism</a><span class="tag tag-lone" title="Only this note uses it">ancestor-worship</span><span class="tag tag-lone" title="Only this note uses it">rootedness</span><a class="tag" href="/wiki/topics/place-attachment">place-attachment</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

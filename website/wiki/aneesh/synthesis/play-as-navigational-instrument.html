@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,29 +26,38 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Play as Navigational Instrument</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Play as Navigational Instrument</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/play-as-navigational-instrument.md">source on GitHub</a></div>
-  <div class="note-summary">A synthesis connecting ludic feedback loops, the infinite game, and maximal interestingness as three complementary navigation instruments for creative and intellectual life.</div>
-  <div class="tags"><span class="tag">play</span><span class="tag">navigation</span><span class="tag">creative-practice</span><span class="tag">infinite-game</span><span class="tag">ludic</span><span class="tag">synthesis</span><span class="tag">career</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/play-as-navigational-instrument.md">source on GitHub</a></div>
+    <div class="note-summary">A synthesis connecting ludic feedback loops, the infinite game, and maximal interestingness as three complementary navigation instruments for creative and intellectual life.</div>
     <div class="prose">
 <h2 id="the-problem-of-direction">The Problem of Direction</h2>
 <p>In creative and intellectual life, there is rarely a clear destination. External goals (&quot;become a published novelist,&quot; &quot;get tenure&quot;) are often arbitrary or misaligned with what actually motivates you. The question is: how do you navigate without a fixed destination?</p>
 <p>Three concepts from this corpus offer complementary answers:</p>
 <h2 id="three-instruments">Three Instruments</h2>
 <h3 id="1-ludic-feedback-loops-cadence">1. Ludic Feedback Loops (Cadence)</h3>
-<p><strong>From</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Work or Play? Ludic Feedback Loops&quot;">Work or Play? Ludic Feedback Loops</span>, <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></p>
+<p><strong>From</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops" title="Written [[Work or Play? Ludic Feedback Loops]], resolved to work-or-play-ludic-feedback-loops">Work or Play? Ludic Feedback Loops</a>, <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></p>
 <p>The question: <em>at what rate does this work reward me?</em></p>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ludic Feedback Loops&quot;">Ludic frequency</span> gives you information about whether the <em>cadence</em> of a domain is right for you. Fast feedback on meaningful problems = sustainable engagement. This instrument tells you when to stay and when to leave a domain.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/ludic-feedback-loops" title="Written [[Ludic Feedback Loops]], resolved to ludic-feedback-loops">Ludic frequency</a> gives you information about whether the <em>cadence</em> of a domain is right for you. Fast feedback on meaningful problems = sustainable engagement. This instrument tells you when to stay and when to leave a domain.</p>
 <h3 id="2-infinite-game-continuity">2. Infinite Game (Continuity)</h3>
-<p><strong>From</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Infinite Game&quot;">Infinite Game</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Robert Peake&quot;">Robert Peake</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James Carse&quot;">James Carse</span></p>
+<p><strong>From</strong>: <a class="wikilink" href="/wiki/aneesh/concepts/infinite-game" title="Written [[Infinite Game]], resolved to infinite-game">Infinite Game</a>, <a class="wikilink" href="/wiki/aneesh/entities/robert-peake" title="Written [[Robert Peake]], resolved to robert-peake">Robert Peake</a>, <a class="wikilink-wanted" href="/wiki/wanted/james-carse" title="No note is called &quot;James Carse&quot; yet — see who is asking for it">James Carse</a></p>
 <p>The question: <em>am I still playing?</em></p>
 <p>The infinite game framework reframes success: you are not trying to win, you are trying to keep playing. Falling off is not failure; re-entering is the move. This instrument gives you permission to persist imperfectly and prevents catastrophic quitting after a single miss.</p>
 <h3 id="3-maximal-interestingness-direction">3. Maximal Interestingness (Direction)</h3>
-<p><strong>From</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maximal Interestingness&quot;">Maximal Interestingness</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Protocols, Wagons, and Associated Acrobatics&quot;">On Protocols, Wagons, and Associated Acrobatics</span></p>
+<p><strong>From</strong>: <a class="wikilink" href="/wiki/aneesh/concepts/maximal-interestingness" title="Written [[Maximal Interestingness]], resolved to maximal-interestingness">Maximal Interestingness</a>, <a class="wikilink" href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics" title="Written [[On Protocols, Wagons, and Associated Acrobatics]], resolved to on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a></p>
 <p>The question: <em>which way is most interesting from here?</em></p>
 <p>When cadence is right and you&#x27;re staying in the game, you still need to pick a next move. Interest is the most reliable signal when destinations are unknown. This instrument gives you direction at each decision point.</p>
 <h2 id="how-they-work-together">How They Work Together</h2>
@@ -67,27 +76,57 @@
 <li>Pick next steps by pointing toward maximal interestingness (curiosity as compass)</li>
 </ul>
 <h2 id="the-montaigne-connection">The Montaigne Connection</h2>
-<p>Montaigne, in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Looking Forward to Montaigne&quot;">Looking Forward to Montaigne</span>, operated by something like this framework: he wrote when interested, on whatever interested him (maximal interestingness), continued for decades (infinite game), in a form that rewarded his curiosity with immediate satisfaction (adequate ludic frequency).</p>
+<p>Montaigne, in <a class="wikilink" href="/wiki/aneesh/summaries/looking-forward-to-montaigne" title="Written [[Looking Forward to Montaigne]], resolved to looking-forward-to-montaigne">Looking Forward to Montaigne</a>, operated by something like this framework: he wrote when interested, on whatever interested him (maximal interestingness), continued for decades (infinite game), in a form that rewarded his curiosity with immediate satisfaction (adequate ludic frequency).</p>
 <p>His essays are the output of someone well-calibrated on all three instruments.</p>
 <h2 id="thesis-candidate">Thesis Candidate</h2>
 <p><strong>Play is not the opposite of work — it is the navigational system for work without a predetermined destination. Ludic frequency, infinite game thinking, and maximal interestingness are three instruments that together constitute a complete navigation system for creative and intellectual life.</strong></p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ludic Feedback Loops&quot;">Ludic Feedback Loops</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Infinite Game&quot;">Infinite Game</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maximal Interestingness&quot;">Maximal Interestingness</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Construction Through Writing&quot;">Self-Construction Through Writing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> — exemplar</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Personal Essay as Form&quot;">Personal Essay as Form</span> — output of good navigation</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ludic-feedback-loops" title="Written [[Ludic Feedback Loops]], resolved to ludic-feedback-loops">Ludic Feedback Loops</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/infinite-game" title="Written [[Infinite Game]], resolved to infinite-game">Infinite Game</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/maximal-interestingness" title="Written [[Maximal Interestingness]], resolved to maximal-interestingness">Maximal Interestingness</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/self-construction-through-writing" title="Written [[Self-Construction Through Writing]], resolved to self-construction-through-writing">Self-Construction Through Writing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> — exemplar</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/personal-essay-as-form" title="Written [[Personal Essay as Form]], resolved to personal-essay-as-form">Personal Essay as Form</a> — output of good navigation</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>485</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-play-epistemology">The Play Epistemology — Hacking, Ludics, and the Infinite Game</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-sensemaker-and-the-explorer">The Sensemaker and the Explorer</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/breadth-vs-depth-across-essays">Breadth vs. Depth Across Essays</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/curiosity-vs-status-as-motivation">Curiosity vs. Status as Motivation for Learning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress, Emacs, &amp; AI: The Allure of Generative Complexity</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/play">play</a><a class="tag" href="/wiki/topics/navigation">navigation</a><a class="tag" href="/wiki/topics/creative-practice">creative-practice</a><a class="tag" href="/wiki/topics/infinite-game">infinite-game</a><a class="tag" href="/wiki/topics/ludic">ludic</a><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/career">career</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

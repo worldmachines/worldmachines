@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>The Height of Knowledge (1902)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Height of Knowledge (1902)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-28-the-height-of-knowledge.md">source on GitHub</a></div>
-  <div class="note-summary">Reeling from the deaths of Del Hay, McKinley, and Clarence King and displaced from intimacy with power by Theodore Roosevelt&#x27;s sudden ascension, Adams treats 1901-02 as the peak of his and John Hay&#x27;s political education, watching Hay triangulate a global balance between Anglo-French &quot;Coal-power&quot; and German-Russian &quot;Gun-power&quot; combinations while concluding that reaching the height of available knowledge only reveals the full scale of his own ignorance.</div>
-  <div class="tags"><span class="tag">henry-adams</span><span class="tag">john-hay</span><span class="tag">theodore-roosevelt</span><span class="tag">clarence-king</span><span class="tag">power-and-corruption</span><span class="tag">dynamic-theory-of-history</span><span class="tag">anglo-german-rivalry</span><span class="tag">boston-politics</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/iemp-model">iemp-model</a>, <a class="wikilink" href="/wiki/aneesh/entities/agnes-callard">agnes-callard</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-28-the-height-of-knowledge.md">source on GitHub</a></div>
+    <div class="note-summary">Reeling from the deaths of Del Hay, McKinley, and Clarence King and displaced from intimacy with power by Theodore Roosevelt&#x27;s sudden ascension, Adams treats 1901-02 as the peak of his and John Hay&#x27;s political education, watching Hay triangulate a global balance between Anglo-French &quot;Coal-power&quot; and German-Russian &quot;Gun-power&quot; combinations while concluding that reaching the height of available knowledge only reveals the full scale of his own ignorance.</div>
     <div class="prose">
 <p>Opening from the year of tragedy 1901 -- the accidental death of Hay&#x27;s son Del, the assassination of McKinley, and the lonely death of Clarence King in a California tavern -- the chapter follows Adams back to a Washington upended by Theodore Roosevelt&#x27;s succession. With his old teacher-pupil intimacy with power broken, Adams turns instead to John Hay, whose command of foreign affairs at its zenith becomes, in Adams&#x27;s telling, &quot;the moment of highest knowledge that a scholar could ever reach&quot; -- and, in the same breath, the moment Adams discovers the true extent of what he does not know.</p>
 <h2 id="themes">Themes</h2>
@@ -50,18 +58,48 @@
 <p>The Massachusetts &quot;machine&quot; passage and the &quot;struggle not of men but of forces&quot; passage are the chapter&#x27;s structural core, both reaching for a vocabulary of impersonal, mechanical infrastructure to explain what holds a society or a government together once personal loyalty and shared standards have failed.</p>
 <p>The closing ignorance passage supplies the chapter&#x27;s title irony: the height of knowledge turns out to be the clearest possible view of how little is known, by anyone.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>754</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-34-a-law-of-acceleration">A Law of Acceleration</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-editors-preface">Editor&#x27;s Preface: The Making and Withholding of The Education of Henry Adams</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/iemp-model">iemp-model</a></li><li><a class="wikilink" href="/wiki/aneesh/entities/agnes-callard">agnes-callard</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><a class="tag" href="/wiki/topics/john-hay">john-hay</a><a class="tag" href="/wiki/topics/theodore-roosevelt">theodore-roosevelt</a><a class="tag" href="/wiki/topics/clarence-king">clarence-king</a><span class="tag tag-lone" title="Only this note uses it">power-and-corruption</span><a class="tag" href="/wiki/topics/dynamic-theory-of-history">dynamic-theory-of-history</a><span class="tag tag-lone" title="Only this note uses it">anglo-german-rivalry</span><span class="tag tag-lone" title="Only this note uses it">boston-politics</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

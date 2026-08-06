@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Plato Plateau</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Plato Plateau</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-plato-plateau.md">source on GitHub</a></div>
-  <div class="note-summary">Argues that people select philosophical frameworks matching their current degree of identity disruption, using Kierkegaard&#x27;s anxiety as the generative motor.</div>
-  <div class="tags"><span class="tag">philosophy</span><span class="tag">identity</span><span class="tag">anxiety</span><span class="tag">kierkegaard</span><span class="tag">GTD</span><span class="tag">productivity</span><span class="tag">epistemology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-plato-plateau.md">source on GitHub</a></div>
+    <div class="note-summary">Argues that people select philosophical frameworks matching their current degree of identity disruption, using Kierkegaard&#x27;s anxiety as the generative motor.</div>
     <div class="prose">
 <p><strong>Source:</strong> https://aneeshsathe.com/the-plato-plateau/<br>
 <strong>Author:</strong> Aneesh Sathe<br>
 <strong>Date:</strong> 2025-07-15</p>
 <h2 id="central-argument">Central Argument</h2>
-<p>The &quot;Plato Plateau&quot; is a snow-clone of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Peter Principle&quot;">Peter Principle</span>: <em>people philosophize to the level of their anxiety.</em> The choice of philosophical framework is not an index of intellectual sophistication but a functional response to the current state of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Identity&quot;">Identity</span> stability. Philosophy serves as periodic maintenance on identity, not a civilizational high score.</p>
+<p>The &quot;Plato Plateau&quot; is a snow-clone of the <a class="wikilink-wanted" href="/wiki/wanted/peter-principle" title="No note is called &quot;Peter Principle&quot; yet — see who is asking for it">Peter Principle</a>: <em>people philosophize to the level of their anxiety.</em> The choice of philosophical framework is not an index of intellectual sophistication but a functional response to the current state of <a class="wikilink-wanted" href="/wiki/wanted/identity" title="No note is called &quot;Identity&quot; yet — see who is asking for it">Identity</a> stability. Philosophy serves as periodic maintenance on identity, not a civilizational high score.</p>
 <h2 id="framework-anxiety-as-generative-motor">Framework: Anxiety as Generative Motor</h2>
-<p>Drawing on <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kierkegaard&quot;">Kierkegaard</span>&#x27;s concept of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety&quot;">Anxiety</span>, the essay argues that anxiety is the realization of radical freedom — not nervousness, but the productive recognition that you must choose. The motor runs:</p>
+<p>Drawing on <a class="wikilink" href="/wiki/aneesh/entities/kierkegaard" title="Written [[Kierkegaard]], resolved to kierkegaard">Kierkegaard</a>&#x27;s concept of <a class="wikilink-wanted" href="/wiki/wanted/anxiety" title="No note is called &quot;Anxiety&quot; yet — see who is asking for it">Anxiety</a>, the essay argues that anxiety is the realization of radical freedom — not nervousness, but the productive recognition that you must choose. The motor runs:</p>
 <blockquote><p>Anxiety → Exploration → Action → Refreshed Identity</p></blockquote>
 <ul>
 <li><strong>Anxiety is generative</strong>: it creates identity by locating stable launching points for exploration.</li>
@@ -49,9 +58,9 @@
 <li><strong>Anxiety overload</strong>: when radical freedom produces too many perceived signals, the system becomes noise-dominated.</li>
 </ul>
 <h2 id="gtd-as-anxiety-regulator">GTD as Anxiety Regulator</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Getting Things Done (GTD)&quot;">Getting Things Done (GTD)</span> is positioned as an anxiety-crash tool. It is most useful when overwhelmed, because it integrates short- and long-horizon views to reintroduce <em>future</em> anxiety in a structured way. GTD is not a path to nirvana — its purpose is to modulate the anxiety motor, not extinguish it.</p>
+<p><a class="wikilink-wanted" href="/wiki/wanted/getting-things-done-gtd" title="No note is called &quot;Getting Things Done (GTD)&quot; yet — see who is asking for it">Getting Things Done (GTD)</a> is positioned as an anxiety-crash tool. It is most useful when overwhelmed, because it integrates short- and long-horizon views to reintroduce <em>future</em> anxiety in a structured way. GTD is not a path to nirvana — its purpose is to modulate the anxiety motor, not extinguish it.</p>
 <h2 id="identity-bankruptcy">Identity Bankruptcy</h2>
-<p>When identity is spread across too many competing anxieties, a crash occurs — journals, sabbaticals, quitting. Like the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rock Soup Parable&quot;">Rock Soup Parable</span>, vaporized identity needs a condensation point: something disposable but sufficient to let the self reconstruct an &quot;ordered world of meaning.&quot;</p>
+<p>When identity is spread across too many competing anxieties, a crash occurs — journals, sabbaticals, quitting. Like the <a class="wikilink-wanted" href="/wiki/wanted/rock-soup-parable" title="No note is called &quot;Rock Soup Parable&quot; yet — see who is asking for it">Rock Soup Parable</a>, vaporized identity needs a condensation point: something disposable but sufficient to let the self reconstruct an &quot;ordered world of meaning.&quot;</p>
 <h2 id="taxonomy-of-philosophy-by-function">Taxonomy of Philosophy by Function</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>Level</th><th>Type</th><th>Orientation</th></tr></thead>
@@ -72,22 +81,66 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kierkegaard&quot;">Kierkegaard</span> — foundational source for radical freedom and anxiety</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> — core concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Identity Crash&quot;">Identity Crash</span> — when overload triggers a reset</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;GTD and Anxiety Regulation&quot;">GTD and Anxiety Regulation</span> — practical application</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Philosophy as Maintenance&quot;">Philosophy as Maintenance</span> — the essay&#x27;s central metaphor</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Levels of Philosophical Engagement&quot;">Levels of Philosophical Engagement</span> — the five-tier taxonomy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Peter Principle&quot;">Peter Principle</span> — the snow-clone origin</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/kierkegaard" title="Written [[Kierkegaard]], resolved to kierkegaard">Kierkegaard</a> — foundational source for radical freedom and anxiety</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> — core concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/identity-crash" title="Written [[Identity Crash]], resolved to identity-crash">Identity Crash</a> — when overload triggers a reset</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/gtd-and-anxiety-regulation" title="Written [[GTD and Anxiety Regulation]], resolved to gtd-and-anxiety-regulation">GTD and Anxiety Regulation</a> — practical application</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/philosophy-as-maintenance" title="Written [[Philosophy as Maintenance]], resolved to philosophy-as-maintenance">Philosophy as Maintenance</a> — the essay&#x27;s central metaphor</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/levels-of-philosophical-engagement" title="Written [[Levels of Philosophical Engagement]], resolved to levels-of-philosophical-engagement">Levels of Philosophical Engagement</a> — the five-tier taxonomy</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/peter-principle" title="No note is called &quot;Peter Principle&quot; yet — see who is asking for it">Peter Principle</a> — the snow-clone origin</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>455</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">12</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fox-hedgehog-distinction">Fox-Hedgehog Distinction</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-crash">Identity Crash</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/levels-of-philosophical-engagement">Levels of Philosophical Engagement</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/philosophy-as-maintenance">Philosophy as Maintenance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/play-as-problem-solving">Play as Problem-Solving</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/kierkegaard">Kierkegaard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life">Anxiety, Play, and the Generative Life</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/gtd-and-anxiety-regulation">GTD and Anxiety Regulation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/breadth-vs-depth-across-essays">Breadth vs. Depth Across Essays</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-play-epistemology">The Play Epistemology — Hacking, Ludics, and the Infinite Game</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/tools-that-shape-thought">Tools That Shape Thought</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-crash">Identity Crash</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/levels-of-philosophical-engagement">Levels of Philosophical Engagement</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/philosophy-as-maintenance">Philosophy as Maintenance</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/hacky-mindset">Hacky Mindset</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/identity">identity</a><a class="tag" href="/wiki/topics/anxiety">anxiety</a><a class="tag" href="/wiki/topics/kierkegaard">kierkegaard</a><a class="tag" href="/wiki/topics/gtd">GTD</a><a class="tag" href="/wiki/topics/productivity">productivity</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

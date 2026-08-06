@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Legibility</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Legibility</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Legibility.md">source on GitHub</a></div>
-  <div class="note-summary">The condition of being readable, mappable, and predictable by a dominant system — whether state, algorithm, or social order. Legibility is the precondition for control; resistance requires strategic illegibility.</div>
-  <div class="tags"><span class="tag">legibility</span><span class="tag">power</span><span class="tag">control</span><span class="tag">james-scott</span><span class="tag">spinoza</span><span class="tag">adonis</span><span class="tag">ai</span><span class="tag">cartography</span><span class="tag">resistance</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Legibility.md">source on GitHub</a></div>
+    <div class="note-summary">The condition of being readable, mappable, and predictable by a dominant system — whether state, algorithm, or social order. Legibility is the precondition for control; resistance requires strategic illegibility.</div>
     <div class="prose">
-<p><strong>Theoretical background</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James C. Scott&quot;">James C. Scott</span>, <em>Seeing Like a State</em> (1998) — though not cited directly<br>
-<strong>Primary sources here</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span> (Sathe, 2025-12-23); <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The End of Identity&quot;">The End of Identity</span> (Sathe, 2026-03-08)</p>
+<p><strong>Theoretical background</strong>: <a class="wikilink-wanted" href="/wiki/wanted/james-c-scott" title="No note is called &quot;James C. Scott&quot; yet — see who is asking for it">James C. Scott</a>, <em>Seeing Like a State</em> (1998) — though not cited directly<br>
+<strong>Primary sources here</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a> (Sathe, 2025-12-23); <a class="wikilink-wanted" href="/wiki/wanted/the-end-of-identity" title="No note is called &quot;The End of Identity&quot; yet — see who is asking for it">The End of Identity</a> (Sathe, 2026-03-08)</p>
 <h2 id="definition">Definition</h2>
 <p>Legibility is the condition of being readable by a system that has the power to act on what it reads. A person, place, or idea is legible when it can be:</p>
 <ul>
@@ -70,8 +79,8 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span> — primary source</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The End of Identity&quot;">The End of Identity</span> — legibility of the knowledge worker</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a> — primary source</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/the-end-of-identity" title="No note is called &quot;The End of Identity&quot; yet — see who is asking for it">The End of Identity</a> — legibility of the knowledge worker</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — the illegibility-producing habitat</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a> — what legibility suppresses</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a> — the 2025 mechanism of legibility</li>
@@ -81,42 +90,79 @@
 <li><a class="wikilink" href="/wiki/aneesh/entities/adonis">Adonis</a> — entity; poet of deliberate illegibility</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">28</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/adonis">Adonis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/eyal-weizman">Eyal Weizman</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/jean-baudrillard">Jean Baudrillard</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/kevin-lynch">Kevin Lynch (1918–1984)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/bldgblog-nakatomi-space">Nakatomi Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii">The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-opacity-turn-thicket-nakatomi-iltifat">The Opacity Turn: Thicket, Nakatomi, Iltifat</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-08-diplomacy">Diplomacy (1861): The Cabin-Boy&#x27;s Education</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/legibility">Legibility</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-editors-preface">Purves&#x27;s Preface: Popularizing Chaucer and Spenser for the General Reader</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-general-prologue">The General Prologue to The Canterbury Tales</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-1">The Knight&#x27;s Tale (Part One): Theseus, Fortune, and the Rivalry of Palamon and Arcite</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-merchants-tale">The Merchant&#x27;s Tale: The Walled Garden and the Counterfeited Key</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-13-the-perfection-of-human-society">The Perfection of Human Society</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-shipmans-tale">The Shipman&#x27;s Prologue and Tale</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-squires-tale">The Squire&#x27;s Tale: Marvels of Sarra and the Falcon&#x27;s Lament</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>28</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>481</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Defined as</span></h2>
+      <a class="rail-term" href="/wiki/glossary/legibility">Legibility</a>
+      <span class="status status-developing">developing</span>
+      <p class="rail-gloss">The condition of being readable by a system that has the power to act on what it reads — mapped, predicted, categorized, managed. In this project legibility is treated as the core …</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">28</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>20 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/bldgblog-nakatomi-space">Nakatomi Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/adonis">Adonis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-baudrillard">Jean Baudrillard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/eyal-weizman">Eyal Weizman</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-editors-preface">Purves&#x27;s Preface: Popularizing Chaucer and Spenser for the General Reader</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-general-prologue">The General Prologue to The Canterbury Tales</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-merchants-tale">The Merchant&#x27;s Tale: The Walled Garden and the Counterfeited Key</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-opacity-turn-thicket-nakatomi-iltifat">The Opacity Turn: Thicket, Nakatomi, Iltifat</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-08-diplomacy">Diplomacy (1861): The Cabin-Boy&#x27;s Education</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii">The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-13-the-perfection-of-human-society">The Perfection of Human Society</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-shipmans-tale">The Shipman&#x27;s Prologue and Tale</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-squires-tale">The Squire&#x27;s Tale: Marvels of Sarra and the Falcon&#x27;s Lament</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/kevin-lynch">Kevin Lynch (1918–1984)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/glossary/legibility">Legibility</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-1">The Knight&#x27;s Tale (Part One): Theseus, Fortune, and the Rivalry of Palamon and Arcite</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">13</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/power">power</a><a class="tag" href="/wiki/topics/control">control</a><a class="tag" href="/wiki/topics/james-scott">james-scott</a><a class="tag" href="/wiki/topics/spinoza">spinoza</a><a class="tag" href="/wiki/topics/adonis">adonis</a><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/cartography">cartography</a><a class="tag" href="/wiki/topics/resistance">resistance</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

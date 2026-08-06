@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,19 +26,28 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Spinoza, Leibniz, and the Paradigm Transition Problem</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Spinoza, Leibniz, and the Paradigm Transition Problem</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem.md">source on GitHub</a></div>
-  <div class="note-summary">Synthesis connecting Rao&#x27;s macro-historical account of Spinoza vs. Leibniz as divergentist vs. modernist error with Lohse&#x27;s charitable reading of Leibniz&#x27;s Monad theory as a pragmatic shitty castle — opening the question of what intellectual honesty requires during paradigm transitions.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">spinoza</span><span class="tag">leibniz</span><span class="tag">paradigm-transition</span><span class="tag">shitty-castle</span><span class="tag">divergence-machine</span><span class="tag">intellectual-honesty</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem.md">source on GitHub</a></div>
+    <div class="note-summary">Synthesis connecting Rao&#x27;s macro-historical account of Spinoza vs. Leibniz as divergentist vs. modernist error with Lohse&#x27;s charitable reading of Leibniz&#x27;s Monad theory as a pragmatic shitty castle — opening the question of what intellectual honesty requires during paradigm transitions.</div>
     <div class="prose">
 <h2 id="the-two-readings-of-leibniz">The Two Readings of Leibniz</h2>
-<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> both use the Leibniz-Spinoza encounter (1676) as a paradigmatic case — but reach different conclusions.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> and <a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> both use the Leibniz-Spinoza encounter (1676) as a paradigmatic case — but reach different conclusions.</p>
 <p><strong>Rao&#x27;s reading</strong> (from <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> and related essays): Leibniz is &quot;the first person to be not-even-wrong in the particular sense of reducing the Argument of History from a sense-making process to a contest between optimism and pessimism.&quot; He was a tragic genius who, confronted with the expanding scope of reality that Spinoza&#x27;s work implied, tried to fit it into an existing ontological framework. His error was committing prematurely to optimism as a way of avoiding ontological dread. Voltaire correctly parodies him as Pangloss.</p>
-<p><strong>Lohse&#x27;s reading</strong> (from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span>): Leibniz was probably aware his Monad theory wouldn&#x27;t hold — &quot;Lessing suspected that Leibniz actually was a Spinozist by heart.&quot; But he was a career-dependent courtier, reliant on religious patrons in a climate of rising secularism. The Monads were a pragmatic <strong>shitty castle</strong>: an elaborate structure he knew to be flawed, built to maintain economic security during a period he couldn&#x27;t navigate openly as a Spinozist. This is not hypocrisy but <em>temporal rationality</em>.</p>
+<p><strong>Lohse&#x27;s reading</strong> (from <a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a>): Leibniz was probably aware his Monad theory wouldn&#x27;t hold — &quot;Lessing suspected that Leibniz actually was a Spinozist by heart.&quot; But he was a career-dependent courtier, reliant on religious patrons in a climate of rising secularism. The Monads were a pragmatic <strong>shitty castle</strong>: an elaborate structure he knew to be flawed, built to maintain economic security during a period he couldn&#x27;t navigate openly as a Spinozist. This is not hypocrisy but <em>temporal rationality</em>.</p>
 <h2 id="what-spinozas-path-required">What Spinoza&#x27;s Path Required</h2>
 <p><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a> accepted the ontological dread. He was expelled from his community with &quot;colourful words,&quot; worked as a lens grinder, lived in the intellectual underground. His ideas were so dangerous that Leibniz visited him <em>secretly</em>.</p>
 <p>Spinoza&#x27;s path was existentially costly. Rao frames this as the divergentist move — accepting ontological doubt as a state of being rather than resolving it prematurely. But Spinoza could do this partly because of Amsterdam&#x27;s unusual tolerant environment; he would have been killed most other places.</p>
@@ -59,7 +68,7 @@
 <p>Lohse&#x27;s most interesting move: turning this on himself. &quot;I think with some of my past writing I have been digging fake moats for myself.&quot; He endorses the Spinozist alternative (staying with discomfort) while acknowledging it is &quot;hard to pull off.&quot;</p>
 <p>This is more honest than either pure Rao (implying the divergentist move is straightforwardly better) or pure Leibniz (pretending the shitty castle is the real fortress).</p>
 <h2 id="connection-to-kulturkritik">Connection to Kulturkritik</h2>
-<p>There&#x27;s a structural parallel with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> here:</p>
+<p>There&#x27;s a structural parallel with <a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> here:</p>
 <ul>
 <li>Rousseau&#x27;s rhetorical strategy (standing between two mirrors) is itself a kind of shitty castle — he builds a binary that he knows is artificial, in order to generate the contrast needed for critique</li>
 <li>Schiller&#x27;s aesthetic education is a shitty castle — he admits his ideal is &quot;aesthetic semblance,&quot; a beauty that exists only as illusion</li>
@@ -73,23 +82,38 @@
 <li><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a> — entity</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a> — entity</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castle Pattern&quot;">Shitty Castle Pattern</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Zombie Ideas&quot;">Zombie Ideas</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> — concept (structural parallel)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Homeopathic Critique&quot;">Homeopathic Critique</span> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/shitty-castle-pattern" title="Written [[Shitty Castle Pattern]], resolved to shitty-castle-pattern">Shitty Castle Pattern</a> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/zombie-ideas" title="Written [[Zombie Ideas]], resolved to zombie-ideas">Zombie Ideas</a> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> — concept (structural parallel)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/homeopathic-critique" title="Written [[Homeopathic Critique]], resolved to homeopathic-critique">Homeopathic Critique</a> — concept</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span> — summary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a> — summary</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>709</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-world-machines-canon">The World Machines Canon — A Unified Map</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/spinoza">spinoza</a><a class="tag" href="/wiki/topics/leibniz">leibniz</a><a class="tag" href="/wiki/topics/paradigm-transition">paradigm-transition</a><a class="tag" href="/wiki/topics/shitty-castle">shitty-castle</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/intellectual-honesty">intellectual-honesty</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

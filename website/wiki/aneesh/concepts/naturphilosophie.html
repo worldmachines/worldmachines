@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Naturphilosophie</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Naturphilosophie</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Naturphilosophie.md">source on GitHub</a></div>
-  <div class="note-summary">German Romantic-idealist approach to natural science, primarily associated with Schelling, arguing that nature is a self-organizing living process rather than dead matter governed by mechanical laws — rejected by positivists but anticipating complexity theory and systems biology.</div>
-  <div class="tags"><span class="tag">romanticism</span><span class="tag">science</span><span class="tag">holism</span><span class="tag">emergence</span><span class="tag">schelling</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Naturphilosophie.md">source on GitHub</a></div>
+    <div class="note-summary">German Romantic-idealist approach to natural science, primarily associated with Schelling, arguing that nature is a self-organizing living process rather than dead matter governed by mechanical laws — rejected by positivists but anticipating complexity theory and systems biology.</div>
     <div class="prose">
 <p>Naturphilosophie (philosophy of nature) was the German Romantic-idealist approach to natural science, primarily associated with Friedrich Schelling and developed within <a class="wikilink" href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a> milieu.</p>
 <h2 id="core-claims">Core Claims</h2>
@@ -60,8 +69,8 @@
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a> — institutional context</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a> — selective inheritor</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — part of the broader challenge to Enlightenment mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> — parallel development in morphology</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — part of the broader challenge to Enlightenment mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> — parallel development in morphology</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
@@ -69,17 +78,43 @@
 <li>Stanford Encyclopedia of Philosophy: Alexander von Humboldt</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>318</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schlegel">Friedrich Schlegel</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/novalis">Novalis</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/romanticism-and-political-danger">Romanticism and Political Danger</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/romanticism">romanticism</a><a class="tag" href="/wiki/topics/science">science</a><a class="tag" href="/wiki/topics/holism">holism</a><a class="tag" href="/wiki/topics/emergence">emergence</a><span class="tag tag-lone" title="Only this note uses it">schelling</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

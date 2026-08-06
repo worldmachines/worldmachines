@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Kulturkritik</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Kulturkritik</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/kulturkritik.md">source on GitHub</a></div>
-  <div class="note-summary">Kulturkritik is not simply &#x27;critique of culture&#x27; but a self-reflexive rhetorical and philosophical mode that uses antithetical scenarios (nature vs. culture) to diagnose and propose remedies for modern self-alienation — while inevitably reproducing the cultural logic it critiques.</div>
-  <div class="tags"><span class="tag">kulturkritik</span><span class="tag">enlightenment</span><span class="tag">self-alienation</span><span class="tag">nature-culture</span><span class="tag">dialectic</span><span class="tag">rousseau</span><span class="tag">schiller</span><span class="tag">goethe</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/kulturkritik.md">source on GitHub</a></div>
+    <div class="note-summary">Kulturkritik is not simply &#x27;critique of culture&#x27; but a self-reflexive rhetorical and philosophical mode that uses antithetical scenarios (nature vs. culture) to diagnose and propose remedies for modern self-alienation — while inevitably reproducing the cultural logic it critiques.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>Roughly &quot;critique of culture&quot; or &quot;cultural critique&quot; — the Enlightenment&#x27;s central discursive and self-reflective mode of cognition. More precisely (per <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Franz R. Kempf&quot;">Franz R. Kempf</span>): a <strong>regulative mode of experimental thinking</strong> that self-critically acts out antithetical scenarios for the sake of finding ways to heal from culture through culture.</p>
+<p>Roughly &quot;critique of culture&quot; or &quot;cultural critique&quot; — the Enlightenment&#x27;s central discursive and self-reflective mode of cognition. More precisely (per <a class="wikilink" href="/wiki/aneesh/entities/franz-r-kempf" title="Written [[Franz R. Kempf]], resolved to franz-r-kempf">Franz R. Kempf</a>): a <strong>regulative mode of experimental thinking</strong> that self-critically acts out antithetical scenarios for the sake of finding ways to heal from culture through culture.</p>
 <p>Kulturkritik participates in the Enlightenment project of producing the secularized, autonomous European subject — but it cannot do so without the subject mirroring itself in the &quot;other&quot; (unspoiled nature, the noble savage). This mirroring involves the conundrum of instrumentalization and emancipation, and resorts to the oxymoron to encapsulate the paradox of its resolutions.</p>
 <h2 id="the-core-paradox">The Core Paradox</h2>
 <p>Kulturkritik wants to heal the wound of self-alienation inflicted by excessive rationalism — using the tools of reason. It seeks a &quot;nontheological redemption&quot; that:</p>
@@ -44,7 +53,7 @@
 <li>Disavows the Fall (culture as wound)</li>
 <li>Does not renounce the fruit of the tree of knowledge (culture as tool)</li>
 </ul>
-<p>&quot;Its ideals are only postulates; each synthesis is but a homeopathic way out.&quot; Every proposed cure is homeopathic — healing from culture through culture, using the disease as the medicine. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Homeopathic Critique&quot;">Homeopathic Critique</span>.</p>
+<p>&quot;Its ideals are only postulates; each synthesis is but a homeopathic way out.&quot; Every proposed cure is homeopathic — healing from culture through culture, using the disease as the medicine. See <a class="wikilink" href="/wiki/aneesh/concepts/homeopathic-critique" title="Written [[Homeopathic Critique]], resolved to homeopathic-critique">Homeopathic Critique</a>.</p>
 <h2 id="the-rhetorical-strategy">The Rhetorical Strategy</h2>
 <p>Kulturkritik&#x27;s critical work depends on a <strong>rhetoric of polarization</strong> — a binary of &quot;nature&quot; versus &quot;culture&quot; that is not a description of reality but a rhetorical-argumentative device. Key features:</p>
 <ol>
@@ -57,9 +66,9 @@
 <div class="table-wrap"><table>
 <thead><tr><th>Thinker</th><th>Key Move</th><th>Garden Form</th><th>Problem</th></tr></thead>
 <tbody>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span></td><td>Nature = norm against which culture is measured; <em>bête</em> as rhetorical extreme; cure = return to nascent society</td><td>Elysium (Julie&#x27;s garden) = artificial wilderness</td><td>The illusion is admitted: &quot;all this cannot be done without a modicum of illusion&quot;</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Friedrich Schiller&quot;">Friedrich Schiller</span></td><td>Enlightenment = both cause and cure; cure = aesthetic education; art heals by producing &quot;living form&quot;</td><td>Hohenheim Park = middle way between French rigidity and English anarchy</td><td>His ideal is &quot;aesthetic semblance&quot; — beauty that exists only as illusion, freedom only in fiction</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span></td><td>Nature and culture are irreducible polar opposites in dynamic <em>Steigerung</em> (heightening); the English garden is dystopian, not utopian</td><td>Rejects the English garden entirely; endorses <em>Kunstwahrheit</em> (artistic truth) over simulated naturalness</td><td>Still can&#x27;t escape the paradox: even his model (Claude Lorrain) produces &quot;the highest truth, but no trace of actuality&quot;</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a></td><td>Nature = norm against which culture is measured; <em>bête</em> as rhetorical extreme; cure = return to nascent society</td><td>Elysium (Julie&#x27;s garden) = artificial wilderness</td><td>The illusion is admitted: &quot;all this cannot be done without a modicum of illusion&quot;</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/friedrich-schiller" title="Written [[Friedrich Schiller]], resolved to friedrich-schiller">Friedrich Schiller</a></td><td>Enlightenment = both cause and cure; cure = aesthetic education; art heals by producing &quot;living form&quot;</td><td>Hohenheim Park = middle way between French rigidity and English anarchy</td><td>His ideal is &quot;aesthetic semblance&quot; — beauty that exists only as illusion, freedom only in fiction</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a></td><td>Nature and culture are irreducible polar opposites in dynamic <em>Steigerung</em> (heightening); the English garden is dystopian, not utopian</td><td>Rejects the English garden entirely; endorses <em>Kunstwahrheit</em> (artistic truth) over simulated naturalness</td><td>Still can&#x27;t escape the paradox: even his model (Claude Lorrain) produces &quot;the highest truth, but no trace of actuality&quot;</td></tr>
 </tbody>
 </table></div>
 <h2 id="the-garden-as-horticultural-manifestation">The Garden as Horticultural Manifestation</h2>
@@ -68,32 +77,80 @@
 <li><strong>French garden</strong>: omnipotence of reason; culture dominant over nature; praised for <em>eurhythmy</em> (graceful proportion); criticized for despotism</li>
 <li><strong>English garden</strong>: purported naturalness; freedom of nature; praised for meandering variety; criticized for creating only &quot;the illusion of inner wholeness&quot; (Herder, Goethe, Hegel)</li>
 </ul>
-<p>Both use artifice. Both are united in the creation of a &quot;beautiful semblance that masks the instrumentalization of nature and culture.&quot; In the end, &quot;culture reigns supreme&quot; in both. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The English Garden as Epistemic Object&quot;">The English Garden as Epistemic Object</span>.</p>
+<p>Both use artifice. Both are united in the creation of a &quot;beautiful semblance that masks the instrumentalization of nature and culture.&quot; In the end, &quot;culture reigns supreme&quot; in both. See <a class="wikilink" href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object" title="Written [[The English Garden as Epistemic Object]], resolved to the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a>.</p>
 <h2 id="broader-resonances">Broader Resonances</h2>
 <ul>
-<li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s concept of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Zombie Ideas&quot;">Zombie Ideas</span> could be read as a secular Kulturkritik: ideas from the past haunting the present, consuming energy without evolutionary intelligence</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span>&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span> applies Kulturkritik logic to intellectual and material construction: building what you know won&#x27;t hold, because it&#x27;s the best available use of current resources</li>
-<li>The Panglossian optimism in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span> is a kind of anti-Kulturkritik: it refuses the polarizing &quot;wound&quot; framing entirely, insisting every harm is a stepping stone</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s concept of <a class="wikilink" href="/wiki/aneesh/concepts/zombie-ideas" title="Written [[Zombie Ideas]], resolved to zombie-ideas">Zombie Ideas</a> could be read as a secular Kulturkritik: ideas from the past haunting the present, consuming energy without evolutionary intelligence</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a> applies Kulturkritik logic to intellectual and material construction: building what you know won&#x27;t hold, because it&#x27;s the best available use of current resources</li>
+<li>The Panglossian optimism in <a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a> is a kind of anti-Kulturkritik: it refuses the polarizing &quot;wound&quot; framing entirely, insisting every harm is a stepping stone</li>
 </ul>
 <h2 id="what-kulturkritik-cannot-do">What Kulturkritik Cannot Do</h2>
 <p>Per Kempf&#x27;s analysis: Kulturkritik cannot provide an actual synthesis of nature and culture. Every proposed reconciliation (noble savage, English garden, aesthetic education, Elysium) is revealed on close inspection to be an illusion produced by artifice. The English garden doesn&#x27;t naturalize culture; it culturalizes nature with extra steps. &quot;Have we ever really left the French garden?&quot;</p>
 <h2 id="see-also">See Also</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savage&quot;">Noble Savage</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Alienation and Modernity&quot;">Self-Alienation and Modernity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nature-Culture Dialectic&quot;">Nature-Culture Dialectic</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Homeopathic Critique&quot;">Homeopathic Critique</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The English Garden as Epistemic Object&quot;">The English Garden as Epistemic Object</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/noble-savage" title="Written [[Noble Savage]], resolved to noble-savage">Noble Savage</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/self-alienation-and-modernity" title="No note is called &quot;Self-Alienation and Modernity&quot; yet — see who is asking for it">Self-Alienation and Modernity</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/nature-culture-dialectic" title="Written [[Nature-Culture Dialectic]], resolved to nature-culture-dialectic">Nature-Culture Dialectic</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/homeopathic-critique" title="Written [[Homeopathic Critique]], resolved to homeopathic-critique">Homeopathic Critique</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object" title="Written [[The English Garden as Epistemic Object]], resolved to the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>16</b><span>linked from</span></div>
+      <div class="bearing"><b>14</b><span>links out</span></div>
+      <div class="bearing"><b>767</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">16</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schiller">Friedrich Schiller (1759–1805)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeopathic-critique">Homeopathic Critique</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>8 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/nature-culture-dialectic">Nature-Culture Dialectic</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/shitty-castle-pattern">Shitty Castle Pattern</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/noble-savage">Noble Savage</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/justus-moser">Justus Möser (1720–1794)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/panglossian-optimism">Panglossian Optimism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schiller">Friedrich Schiller (1759–1805)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeopathic-critique">Homeopathic Critique</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/kulturkritik">kulturkritik</a><a class="tag" href="/wiki/topics/enlightenment">enlightenment</a><a class="tag" href="/wiki/topics/self-alienation">self-alienation</a><a class="tag" href="/wiki/topics/nature-culture">nature-culture</a><a class="tag" href="/wiki/topics/dialectic">dialectic</a><a class="tag" href="/wiki/topics/rousseau">rousseau</a><a class="tag" href="/wiki/topics/schiller">schiller</a><a class="tag" href="/wiki/topics/goethe">goethe</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

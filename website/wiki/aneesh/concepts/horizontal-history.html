@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Horizontal History</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Horizontal History</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/horizontal-history.md">source on GitHub</a></div>
-  <div class="note-summary">Horizontal history is Venkatesh Rao&#x27;s reading methodology that cuts across human identity streams to compare synchronic phenomena globally within a time-boxed period, revealing structural parallels invisible in vertical (narrative) history.</div>
-  <div class="tags"><span class="tag">methodology</span><span class="tag">historiography</span><span class="tag">horizontal-history</span><span class="tag">venkatesh-rao</span><span class="tag">world-machines</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/horizontal-history.md">source on GitHub</a></div>
+    <div class="note-summary">Horizontal history is Venkatesh Rao&#x27;s reading methodology that cuts across human identity streams to compare synchronic phenomena globally within a time-boxed period, revealing structural parallels invisible in vertical (narrative) history.</div>
     <div class="prose">
 <p><strong>Originator</strong>: <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> (Contraptions, 2025)</p>
 <h2 id="definition">Definition</h2>
@@ -44,11 +53,11 @@
 <ul>
 <li>Rhyming structural patterns in different civilizations</li>
 <li>Non-human actors that created global synchronic effects (horses, printing presses, gunpowder, disease)</li>
-<li>The simultaneous global installation of a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;World Machines Framework&quot;">world machine</span></li>
+<li>The simultaneous global installation of a <a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework" title="Written [[World Machines Framework]], resolved to world-machines-framework">world machine</a></li>
 <li>Cosmopolitan connections between elites that conventional national history obscures</li>
 </ul>
 <h2 id="the-battle-of-talikota-as-showcase-example">The Battle of Talikota as Showcase Example</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Battle of Talikota&quot;">Battle of Talikota</span> (India, 1565) demonstrates horizontal history in action:</p>
+<p>The <a class="wikilink-wanted" href="/wiki/wanted/battle-of-talikota" title="No note is called &quot;Battle of Talikota&quot; yet — see who is asking for it">Battle of Talikota</a> (India, 1565) demonstrates horizontal history in action:</p>
 <ul>
 <li>Often told as a Hindu-Muslim religious war</li>
 <li>In horizontal reading: shows artillery tactics on <em>both</em> sides, cosmopolitan mercenary politics beneath the religious overstory, rhyming dynamics with the European Thirty Years War</li>
@@ -71,27 +80,64 @@
 </tbody>
 </table></div>
 <h2 id="the-everything-everywhere-all-at-once-insight">The &quot;Everything Everywhere, All at Once&quot; Insight</h2>
-<p>Horizontal history reveals a systematically underestimated phenomenon: the global simultaneous arrival of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span>. The essential 20% of the modernity machine — delivering 80% of the disruption — was installed relatively quickly across the globe, not diffused outward from Europe over centuries. Europe&#x27;s post-1600 divergence is a separate story about the <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a>.</p>
+<p>Horizontal history reveals a systematically underestimated phenomenon: the global simultaneous arrival of the <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a>. The essential 20% of the modernity machine — delivering 80% of the disruption — was installed relatively quickly across the globe, not diffused outward from Europe over centuries. Europe&#x27;s post-1600 divergence is a separate story about the <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a>.</p>
 <h2 id="connections">Connections</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;World as Machine&quot;">World as Machine</span> — the complementary reading lens</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Battle of Talikota&quot;">Battle of Talikota</span> — showcase example</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Print Revolution and Modernity&quot;">Print Revolution and Modernity</span> — a key horizontal phenomenon</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/world-as-machine" title="No note is called &quot;World as Machine&quot; yet — see who is asking for it">World as Machine</a> — the complementary reading lens</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/battle-of-talikota" title="No note is called &quot;Battle of Talikota&quot; yet — see who is asking for it">Battle of Talikota</a> — showcase example</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/print-revolution-and-modernity" title="No note is called &quot;Print Revolution and Modernity&quot; yet — see who is asking for it">Print Revolution and Modernity</a> — a key horizontal phenomenon</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>516</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">9</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ibn-khaldun">Ibn Khaldun (1332-1406)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/psychological-modernity">Psychological Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/six-relationships-of-modernity">Six Relationships of Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine">The Modernity Machine (Rao, Jan 2025)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-ii">The Modernity Machine II (Rao, Jun 2025)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/six-relationships-of-modernity">Six Relationships of Modernity</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/psychological-modernity">Psychological Modernity</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/engineering-liveness-venkatesh-rao">Engineering Liveness — Venkatesh Rao (2026)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-class-relations-of-modernity">Four Class Relations of Modernity</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/methodology">methodology</a><a class="tag" href="/wiki/topics/historiography">historiography</a><a class="tag" href="/wiki/topics/horizontal-history">horizontal-history</a><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

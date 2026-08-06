@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Legibility and Divergence: The MM&#x27;s Self-Undermining Logic</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Legibility and Divergence: The MM&#x27;s Self-Undermining Logic</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/legibility-and-divergence.md">source on GitHub</a></div>
-  <div class="note-summary">Synthesis: the Modernity Machine&#x27;s drive toward legibility created the conditions for its own supersession by the Divergence Machine — legibility at scale generates excess complexity that illegibility (divergence) is better adapted to handle.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">legibility</span><span class="tag">divergence-machine</span><span class="tag">modernity-machine</span><span class="tag">james-scott</span><span class="tag">complexity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/legibility-and-divergence.md">source on GitHub</a></div>
+    <div class="note-summary">Synthesis: the Modernity Machine&#x27;s drive toward legibility created the conditions for its own supersession by the Divergence Machine — legibility at scale generates excess complexity that illegibility (divergence) is better adapted to handle.</div>
     <div class="prose">
 <h2 id="the-core-tension">The Core Tension</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span> optimized for legibility — making the world readable from a central vantage point. But legibility drives scale, and scale generates complexity that eventually exceeds any central reading capacity. This is the MM&#x27;s structural self-undermining logic.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a> optimized for legibility — making the world readable from a central vantage point. But legibility drives scale, and scale generates complexity that eventually exceeds any central reading capacity. This is the MM&#x27;s structural self-undermining logic.</p>
 <p>The <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> does not arrive as an external force that defeats the MM. It emerges from the MM&#x27;s excess — the stuff that couldn&#x27;t be made legible, the actors who couldn&#x27;t be integrated, the information that couldn&#x27;t be interpreted.</p>
 <h2 id="from-raos-three-hidden-byproducts-modernity-machine-md">From Rao&#x27;s Three Hidden Byproducts (modernity-machine.md)</h2>
 <p>The MM necessarily produces three structural contradictions:</p>
@@ -50,7 +59,7 @@
 <p>Voltaire&#x27;s role in making the <em>state</em> legible to <em>citizens</em> (not just subjects legible to the state) is a tell. This inversion — using the MM&#x27;s own tools of publicity, rationalization, and print culture against the MM&#x27;s center — is exactly the DM logic: &quot;brackets centralised control by creating civilizational space beyond its reach.&quot;</p>
 <p>The Calas affair campaign is a micro-version of this: Voltaire used public opinion (an MM-era invention) to expose the illegibility of the state&#x27;s secret legal proceedings. He was running the MM&#x27;s tools against its authority.</p>
 <h2 id="james-c-scotts-hidden-presence">James C. Scott&#x27;s Hidden Presence</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility as Machine Core&quot;">Legibility as Machine Core</span> notes that Velitchkov&#x27;s framework closely parallels Scott&#x27;s <em>Seeing Like a State</em> (not explicitly cited). Scott&#x27;s argument: high-modernist legibility projects (scientific forestry, collective farms, modernist city planning) repeatedly destroy the local, tacit, adaptive complexity that makes systems actually work.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core" title="Written [[Legibility as Machine Core]], resolved to legibility-as-machine-core">Legibility as Machine Core</a> notes that Velitchkov&#x27;s framework closely parallels Scott&#x27;s <em>Seeing Like a State</em> (not explicitly cited). Scott&#x27;s argument: high-modernist legibility projects (scientific forestry, collective farms, modernist city planning) repeatedly destroy the local, tacit, adaptive complexity that makes systems actually work.</p>
 <p>Scott&#x27;s prescription: <strong>metis</strong> (practical, local, embodied knowledge) over <strong>techne</strong> (universal, legible, codified knowledge). This is structurally equivalent to the DM&#x27;s logic: divergence, plurality, and treating bugs as features.</p>
 <h2 id="weicks-theorizing-legibility-parallel">Weick&#x27;s Theorizing-Legibility Parallel</h2>
 <p>There&#x27;s a structural isomorphism between Weick&#x27;s argument about theory and the MM/DM dynamic:</p>
@@ -77,24 +86,39 @@
 <p>This supplements the structural byproducts argument: not just excess agency/info/scale, but the <em>specific</em> failure of narrative as a coordinating technology. Narrative is a legibility technology for experience — when it fails, we are in full DM territory.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility as Machine Core&quot;">Legibility as Machine Core</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core" title="Written [[Legibility as Machine Core]], resolved to legibility-as-machine-core">Legibility as Machine Core</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Four Class Relations of Modernity&quot;">Four Class Relations of Modernity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Voltaire&quot;">Voltaire</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Theory as Process vs Product&quot;">Theory as Process vs Product</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James C. Scott — Seeing Like a State&quot;">James C. Scott — Seeing Like a State</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Numeracy as Legibility Substrate&quot;">Numeracy as Legibility Substrate</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility vs Divergence — The Civilizational Tradeoff&quot;">Legibility vs Divergence — The Civilizational Tradeoff</span> — see also: richer treatment of the byproducts argument grounded in Modernity Machine III</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/four-class-relations-of-modernity" title="Written [[Four Class Relations of Modernity]], resolved to four-class-relations-of-modernity">Four Class Relations of Modernity</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/voltaire" title="Written [[Voltaire]], resolved to voltaire">Voltaire</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/theory-as-process-vs-product" title="Written [[Theory as Process vs Product]], resolved to theory-as-process-vs-product">Theory as Process vs Product</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/james-c-scott-seeing-like-a-state" title="No note is called &quot;James C. Scott — Seeing Like a State&quot; yet — see who is asking for it">James C. Scott — Seeing Like a State</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/numeracy-as-legibility-substrate" title="No note is called &quot;Numeracy as Legibility Substrate&quot; yet — see who is asking for it">Numeracy as Legibility Substrate</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-divergence-the-civilizational-tradeoff" title="Written [[Legibility vs Divergence — The Civilizational Tradeoff]], resolved to legibility-vs-divergence-the-civilizational-tradeoff">Legibility vs Divergence — The Civilizational Tradeoff</a> — see also: richer treatment of the byproducts argument grounded in Modernity Machine III</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>763</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/modernity-machine">modernity-machine</a><a class="tag" href="/wiki/topics/james-scott">james-scott</a><a class="tag" href="/wiki/topics/complexity">complexity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

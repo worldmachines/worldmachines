@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>Chaucer&#x27;s Shorter Poems: A.B.C., Ballades, Envoys, and the Complaint to His Purse</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Chaucer&#x27;s Shorter Poems: A.B.C., Ballades, Envoys, and the Complaint to His Purse</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-miscellaneous-poems.md">source on GitHub</a></div>
-  <div class="note-summary">This closing unit of the volume gathers Chaucer&#x27;s short, miscellaneous poems—the Marian acrostic prayer known as the A.B.C., courtly ballades to an unnamed lady, the moral complaint &#x27;Lak of Stedfastnesse&#x27; addressed to Richard II, comic verse-letters to Bukton and to his own empty purse, the philosophical retreat-poem &#x27;Truth,&#x27; and a scatter of proverbs, envoys, and an apocalyptic prophecy—several of which the edition&#x27;s own notes flag as probably not Chaucer&#x27;s at all.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">middle-english-poetry</span><span class="tag">marian-devotion</span><span class="tag">courtly-ballade</span><span class="tag">envoy-form</span><span class="tag">patronage-poetry</span><span class="tag">moral-complaint</span><span class="tag">canterbury-tales</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-cuckoo-and-nightingale">chaucer-canterbury-tales-cuckoo-and-nightingale</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-miscellaneous-poems.md">source on GitHub</a></div>
+    <div class="note-summary">This closing unit of the volume gathers Chaucer&#x27;s short, miscellaneous poems—the Marian acrostic prayer known as the A.B.C., courtly ballades to an unnamed lady, the moral complaint &#x27;Lak of Stedfastnesse&#x27; addressed to Richard II, comic verse-letters to Bukton and to his own empty purse, the philosophical retreat-poem &#x27;Truth,&#x27; and a scatter of proverbs, envoys, and an apocalyptic prophecy—several of which the edition&#x27;s own notes flag as probably not Chaucer&#x27;s at all.</div>
     <div class="prose">
 <p>This unit is not a single poem but the miscellany that closes the Purves edition of Chaucer: the <em>A.B.C.</em> (an alphabetical acrostic prayer to the Virgin), <em>A Goodly Ballad of Chaucer</em> (a daisy-conceit courtly love poem), <em>A Ballad Sent to King Richard</em> (the political complaint &#x27;Lak of Stedfastnesse&#x27;), <em>L&#x27;Envoy of Chaucer to Bukton</em> (mock-misogynist marriage advice), <em>A Ballad of Gentleness</em>, <em>The Complaint of Chaucer to His Purse</em> (with its envoy to the new king), <em>Good Counsel of Chaucer</em> (the poem usually called &#x27;Truth&#x27;), <em>Proverbs of Chaucer</em>, a <em>Virelay</em>, the lyric &#x27;<em>Since I from Love</em>,&#x27; <em>Chaucer&#x27;s Words to His Scrivener</em>, and <em>Chaucer&#x27;s Prophecy</em>. The transcriber&#x27;s notes repeatedly flag that modern scholarship doubts Chaucer&#x27;s authorship of several of these (the Virelay, &#x27;Since I from Love,&#x27; the second and third stanzas of the Proverbs, the Prophecy), so the unit functions partly as an anthology of the Chaucer apocrypha alongside securely attributed late work.</p>
 <h2 id="themes">Themes</h2>
@@ -48,15 +56,32 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The <em>A.B.C.</em>&#x27;s opening stanza establishes the acrostic prayer&#x27;s register — abject, image-dense, structurally bound to the alphabet. <em>A Goodly Ballad</em>&#x27;s first stanza shows the courtly-submission refrain in its native form before the daisy conceit takes over. &#x27;Lak of Stedfastnesse&#x27; is quoted whole (through its envoy to the Prince) because the poem&#x27;s argument only lands cumulatively — each stanza&#x27;s refrain restates the diagnosis before the envoy demands a remedy. The Bukton envoy&#x27;s closing stanza is curated for its self-referential gesture toward the Wife of Bath. The <em>Complaint to His Purse</em> is given entire, refrain and royal envoy together, since the poem&#x27;s comedy depends on the switch from mock-erotic complaint to blunt petition. &#x27;Truth&#x27;s opening stanza is curated for its most quoted line and the philosophical stance it sets up for the rest of the poem.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>936</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-cuckoo-and-nightingale">chaucer-canterbury-tales-cuckoo-and-nightingale</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/middle-english-poetry">middle-english-poetry</a><a class="tag" href="/wiki/topics/marian-devotion">marian-devotion</a><span class="tag tag-lone" title="Only this note uses it">courtly-ballade</span><span class="tag tag-lone" title="Only this note uses it">envoy-form</span><span class="tag tag-lone" title="Only this note uses it">patronage-poetry</span><span class="tag tag-lone" title="Only this note uses it">moral-complaint</span><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Leo Breiman</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Leo Breiman</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/leo-breiman.md">source on GitHub</a></div>
-  <div class="note-summary">Statistician and machine learning researcher (1928–2005), creator of the random forest algorithm and author of the influential &#x27;Two Cultures&#x27; paper diagnosing a split in statistical practice.</div>
-  <div class="tags"><span class="tag">statistician</span><span class="tag">machine-learning</span><span class="tag">data-science</span><span class="tag">statistics</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/leo-breiman.md">source on GitHub</a></div>
+    <div class="note-summary">Statistician and machine learning researcher (1928–2005), creator of the random forest algorithm and author of the influential &#x27;Two Cultures&#x27; paper diagnosing a split in statistical practice.</div>
     <div class="prose">
 <p><strong>Leo Breiman</strong> (1928–2005) was an American statistician and professor at UC Berkeley, known for foundational contributions to statistical machine learning and for a prescient diagnosis of problems in statistical culture.</p>
 <h2 id="key-contributions">Key Contributions</h2>
@@ -45,29 +54,61 @@
 <h2 id="statistical-modeling-the-two-cultures-2001">&quot;Statistical Modeling: The Two Cultures&quot; (2001)</h2>
 <p>Breiman&#x27;s most influential conceptual contribution: a paper in <em>Statistical Science</em> diagnosing a fundamental split between the <strong>data modeling culture</strong> (which fits interpretable models and cares about mechanisms) and the <strong>algorithmic modeling culture</strong> (which optimizes predictive accuracy without mechanistic assumptions).</p>
 <p>His warning: analysts chasing algorithmic accuracy were skipping the question of how data were generated — a shortcut that compromised the integrity of their conclusions regardless of model performance metrics.</p>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Breiman&#x27;s Two Cultures&quot;">Breiman&#x27;s Two Cultures</span>.</p>
+<p>See <a class="wikilink-wanted" href="/wiki/wanted/breimans-two-cultures" title="No note is called &quot;Breiman&#x27;s Two Cultures&quot; yet — see who is asking for it">Breiman&#x27;s Two Cultures</a>.</p>
 <h2 id="relevance-to-trustworthy-data-science">Relevance to Trustworthy Data Science</h2>
-<p>Aneesh Sathe cites Breiman&#x27;s Two Cultures as the diagnostic framing for why the pillars of trustworthy data science (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span>) get skipped in practice. The tooling has gotten worse (more one-click automation) while Breiman&#x27;s underlying critique has gotten more urgent.</p>
+<p>Aneesh Sathe cites Breiman&#x27;s Two Cultures as the diagnostic framing for why the pillars of trustworthy data science (<a class="wikilink-wanted" href="/wiki/wanted/data-generation-process" title="No note is called &quot;Data Generation Process&quot; yet — see who is asking for it">Data Generation Process</a>) get skipped in practice. The tooling has gotten worse (more one-click automation) while Breiman&#x27;s underlying critique has gotten more urgent.</p>
 <p>See <a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a>.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Breiman&#x27;s Two Cultures&quot;">Breiman&#x27;s Two Cultures</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Centric AI&quot;">Data-Centric AI</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Andrew Ng&quot;">Andrew Ng</span></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/breimans-two-cultures" title="No note is called &quot;Breiman&#x27;s Two Cultures&quot; yet — see who is asking for it">Breiman&#x27;s Two Cultures</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/data-generation-process" title="No note is called &quot;Data Generation Process&quot; yet — see who is asking for it">Data Generation Process</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-centric-ai" title="Written [[Data-Centric AI]], resolved to data-centric-ai">Data-Centric AI</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/andrew-ng" title="Written [[Andrew Ng]], resolved to andrew-ng">Andrew Ng</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a> (Aneesh Sathe, 2025)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>230</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">7</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/causal-inference">Causal Inference</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-generating-process">Data Generating Process (DGP)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/andrew-ng">Andrew Ng</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/invisible-power-and-untrustworthy-data">Invisible Infrastructure: Antimemetics and the Data Generation Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/audacity-and-the-long-game">Audacity and the Long Game</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/breimanss-two-cultures">Breiman&#x27;s Two Cultures</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-centric-ai">Data-Centric AI</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/causal-inference">Causal Inference</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/confounding-variables">Confounding Variables</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/andrew-ng">Andrew Ng</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/statistician">statistician</a><a class="tag" href="/wiki/topics/machine-learning">machine-learning</a><a class="tag" href="/wiki/topics/data-science">data-science</a><a class="tag" href="/wiki/topics/statistics">statistics</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

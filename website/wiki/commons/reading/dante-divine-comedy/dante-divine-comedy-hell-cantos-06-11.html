@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Through Gluttony, Avarice, and Wrath to the Gates of Dis</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Through Gluttony, Avarice, and Wrath to the Gates of Dis</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11.md">source on GitHub</a></div>
-  <div class="note-summary">Dante and Virgil pass through the circles of gluttony, avarice-and-prodigality, and wrath, are refused entry at the walled city of Dis until a heavenly messenger forces the gate, meet the arch-heretics Farinata degli Uberti and Cavalcante de&#x27; Cavalcanti among the burning tombs, and finally receive Virgil&#x27;s systematic taxonomy of all the sins punished in the circles still to come.</div>
-  <div class="tags"><span class="tag">inferno</span><span class="tag">florentine-politics</span><span class="tag">fortune-and-fate</span><span class="tag">allegory</span><span class="tag">heresy</span><span class="tag">hell-topography</span><span class="tag">exile</span><span class="tag">civic-strife</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap">gramsci-gap</a>, <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11.md">source on GitHub</a></div>
+    <div class="note-summary">Dante and Virgil pass through the circles of gluttony, avarice-and-prodigality, and wrath, are refused entry at the walled city of Dis until a heavenly messenger forces the gate, meet the arch-heretics Farinata degli Uberti and Cavalcante de&#x27; Cavalcanti among the burning tombs, and finally receive Virgil&#x27;s systematic taxonomy of all the sins punished in the circles still to come.</div>
     <div class="prose">
 <p>This unit carries Dante and Virgil from the rain-lashed circle of the gluttonous, past Plutus and the wheeling weight-rollers of avarice and prodigality, into the marsh of the wrathful and sullen, and then to a hard narrative hinge: the demons of the city of Dis slam its gates on Virgil and only a heaven-sent messenger can force them open. Once inside, the pilgrims walk among flaming sepulchres of arch-heretics, hold two charged conversations with the dead Florentine nobleman Farinata degli Uberti and the grieving Cavalcante de&#x27; Cavalcanti, and close with Virgil&#x27;s extended lecture mapping the entire remaining architecture of Hell — violence, fraud, and their subdivisions — before the canto breaks off at the threshold of Canto XII.</p>
 <h2 id="themes">Themes</h2>
@@ -47,13 +55,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>Ciacco&#x27;s prophecy (Canto VI) compresses Florentine faction violence into a diagnosis of avarice, envy, and pride as the city&#x27;s animating &quot;three fatal sparks.&quot; Virgil&#x27;s speech on Fortune (Canto VII) is the unit&#x27;s most abstract and machine-like passage, casting historical rise and fall as the operation of a minister acting by rules opaque to human wisdom. The Filippo Argenti scene (Canto VIII), where Dante turns on the drowning, raging spirit with open contempt — &quot;In mourning and in woe, / Curs&#x27;d spirit! tarry thou. I know thee well&quot; — marks a hardening of the pilgrim&#x27;s moral affect compared to his earlier pity for the gluttons. The Medusa episode (Canto IX) is the unit&#x27;s most self-conscious moment, an explicit instruction to read allegorically. Farinata&#x27;s exchange with Dante (Canto X) fuses personal history, civic memory, and an epistemology of exile into the pilgrim&#x27;s most substantial political dialogue in this unit. And Virgil&#x27;s taxonomy (Canto XI) is the unit&#x27;s structural payoff: a complete, legible map of the sins the poem has not yet shown, organized by force versus fraud and ranked by their offense against love and trust.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>923</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap">gramsci-gap</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/inferno">inferno</a><a class="tag" href="/wiki/topics/florentine-politics">florentine-politics</a><a class="tag" href="/wiki/topics/fortune-and-fate">fortune-and-fate</a><a class="tag" href="/wiki/topics/allegory">allegory</a><span class="tag tag-lone" title="Only this note uses it">heresy</span><span class="tag tag-lone" title="Only this note uses it">hell-topography</span><a class="tag" href="/wiki/topics/exile">exile</a><span class="tag tag-lone" title="Only this note uses it">civic-strife</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

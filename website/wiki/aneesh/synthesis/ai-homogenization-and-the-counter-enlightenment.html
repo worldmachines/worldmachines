@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>AI Homogenization and the Counter-Enlightenment</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>AI Homogenization and the Counter-Enlightenment</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment.md">source on GitHub</a></div>
-  <div class="note-summary">The USC research on AI homogenizing cognition is the empirical instantiation of exactly what the counter-Enlightenment thinkers feared: the imposition of a single rational-universalist standard that erases the irreducible particularity of different cultures and minds.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">ai</span><span class="tag">counter-enlightenment</span><span class="tag">cognitive-diversity</span><span class="tag">berlin</span><span class="tag">herder</span><span class="tag">value-pluralism</span><span class="tag">homogenization</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment.md">source on GitHub</a></div>
+    <div class="note-summary">The USC research on AI homogenizing cognition is the empirical instantiation of exactly what the counter-Enlightenment thinkers feared: the imposition of a single rational-universalist standard that erases the irreducible particularity of different cultures and minds.</div>
     <div class="prose">
 <h2 id="the-connection">The Connection</h2>
-<p>Two sources in this wiki — <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;USC AI Homogenization Research&quot;">USC AI Homogenization Research</span> — are separated by two and a half centuries but are working on the same problem from opposite ends.</p>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> spent his career excavating the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> thinkers who challenged the Enlightenment&#x27;s monist, universalist assumption that there is one correct way to reason, one correct set of values, one universal human nature that all peoples share (or should share). <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> argued that each culture embodies its own incommensurable form of excellence. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> argued that each historical civilization can only be understood from within. Their collective warning: impose universal reason, and you destroy irreplaceable human particularity.</p>
+<p>Two sources in this wiki — <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a> and <a class="wikilink-wanted" href="/wiki/wanted/usc-ai-homogenization-research" title="No note is called &quot;USC AI Homogenization Research&quot; yet — see who is asking for it">USC AI Homogenization Research</a> — are separated by two and a half centuries but are working on the same problem from opposite ends.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> spent his career excavating the <a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> thinkers who challenged the Enlightenment&#x27;s monist, universalist assumption that there is one correct way to reason, one correct set of values, one universal human nature that all peoples share (or should share). <a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> argued that each culture embodies its own incommensurable form of excellence. <a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> argued that each historical civilization can only be understood from within. Their collective warning: impose universal reason, and you destroy irreplaceable human particularity.</p>
 <p>The USC researchers argue that LLMs are accomplishing exactly this — but technologically rather than philosophically. By training on data that overrepresents WEIRD societies and dominant languages, and by optimizing for chain-of-thought linear reasoning, LLMs quietly redefine what counts as &quot;credible speech, correct perspective, or even good reasoning.&quot; The result is a technological enactment of Enlightenment universalism: one way of thinking, scaled to billions.</p>
 <h2 id="the-structural-parallel">The Structural Parallel</h2>
 <div class="table-wrap"><table>
@@ -52,9 +61,9 @@
 <h2 id="what-the-counter-enlightenment-would-say">What the Counter-Enlightenment Would Say</h2>
 <p>Herder&#x27;s objection to LLMs would be: you are training a machine on the output of one civilization&#x27;s dominant voices and then deploying it globally as if it represents universal human cognition. You are not building a tool; you are building an instrument of cultural hegemony that cannot be recognized as such because it operates through the apparently neutral mechanism of statistical inference.</p>
 <p>Vico&#x27;s objection would be epistemological: the imaginative capacity (<em>fantasia</em>) through which humans understand each other across cultures cannot be captured in training data. The most culturally diverse LLM imaginable still approximates understanding from the outside; it cannot achieve the inside view.</p>
-<p>Berlin&#x27;s objection would be political: if <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> is correct, then the attempt to reduce all human reasoning to a single statistical model is not just intellectually impoverished but politically dangerous. It creates the conditions for a soft epistemic authoritarianism — not the brutal kind Maistre&#x27;s followers enacted, but the well-intentioned kind: everyone reasons better once they reason like us.</p>
+<p>Berlin&#x27;s objection would be political: if <a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> is correct, then the attempt to reduce all human reasoning to a single statistical model is not just intellectually impoverished but politically dangerous. It creates the conditions for a soft epistemic authoritarianism — not the brutal kind Maistre&#x27;s followers enacted, but the well-intentioned kind: everyone reasons better once they reason like us.</p>
 <h2 id="the-individual-group-paradox-as-counter-enlightenment-data">The Individual-Group Paradox as Counter-Enlightenment Data</h2>
-<p>The USC finding that individuals reason better with LLMs but groups reason worse is itself a counter-Enlightenment result. It shows that <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Diversity&quot;">Cognitive Diversity</span> — the diversity of reasoning styles across individuals — is a <em>group resource</em> that the Enlightenment tradition (with its focus on individual rational capacity) misses. Herder made exactly this point about cultures: their value is not reducible to the individuals within them.</p>
+<p>The USC finding that individuals reason better with LLMs but groups reason worse is itself a counter-Enlightenment result. It shows that <a class="wikilink" href="/wiki/aneesh/concepts/cognitive-diversity" title="Written [[Cognitive Diversity]], resolved to cognitive-diversity">Cognitive Diversity</a> — the diversity of reasoning styles across individuals — is a <em>group resource</em> that the Enlightenment tradition (with its focus on individual rational capacity) misses. Herder made exactly this point about cultures: their value is not reducible to the individuals within them.</p>
 <h2 id="the-constructive-implication">The Constructive Implication</h2>
 <p>The USC researchers&#x27; proposed remedy — deliberate diversification of LLM training data to reflect actual human cognitive diversity — is in effect asking for a Herderian AI. Not a universal rational agent, but a tool that can participate in many different cognitive traditions without reducing them to one.</p>
 <p>Whether this is achievable is an open question. But framing it this way makes clear what is at stake: not just better AI performance metrics, but the preservation of the cognitive diversity that makes collective human intelligence adaptive.</p>
@@ -63,39 +72,85 @@
 <p><strong>This essay seed was developed into a published essay</strong>: <a class="wikilink" href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">the-cosmos-and-the-model</a> — <a href="https://aneeshsathe.com/the-cosmos-and-the-model/">&quot;The Cosmos and the Model&quot;</a>. The essay extends the argument through the <a class="wikilink" href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a>, <a class="wikilink" href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/synthesis-by-composition">Synthesis by Composition</a>, and the distinction between <a class="wikilink" href="/wiki/aneesh/concepts/herderian-ai">Herderian AI</a> and <a class="wikilink" href="/wiki/aneesh/concepts/humboldtian-ai">Humboldtian AI</a>.</p>
 <h2 id="source-links">Source Links</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span> (summary, updated with full text)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;USC AI Homogenization Research&quot;">USC AI Homogenization Research</span> (summary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cultural Incommensurability&quot;">Cultural Incommensurability</span> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a> (summary, updated with full text)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/usc-ai-homogenization-research" title="No note is called &quot;USC AI Homogenization Research&quot; yet — see who is asking for it">USC AI Homogenization Research</a> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cultural-incommensurability" title="Written [[Cultural Incommensurability]], resolved to cultural-incommensurability">Cultural Incommensurability</a> (concept)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Enlightenment Monism&quot;">Enlightenment Monism</span> (concept — the doctrine being replicated)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Diversity&quot;">Cognitive Diversity</span> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;WEIRD Bias&quot;">WEIRD Bias</span> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> (entity)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> (entity)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Georg Hamann&quot;">Johann Georg Hamann</span> (entity)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> (entity)</li>
-<li>Related synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Vico Fantasia and the Limits of AI Understanding&quot;">Vico Fantasia and the Limits of AI Understanding</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/enlightenment-monism" title="Written [[Enlightenment Monism]], resolved to enlightenment-monism">Enlightenment Monism</a> (concept — the doctrine being replicated)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-diversity" title="Written [[Cognitive Diversity]], resolved to cognitive-diversity">Cognitive Diversity</a> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/weird-bias" title="Written [[WEIRD Bias]], resolved to weird-bias">WEIRD Bias</a> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> (entity)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> (entity)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-georg-hamann" title="Written [[Johann Georg Hamann]], resolved to johann-georg-hamann">Johann Georg Hamann</a> (entity)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> (entity)</li>
+<li>Related synthesis: <a class="wikilink-wanted" href="/wiki/wanted/vico-fantasia-and-the-limits-of-ai-understanding" title="No note is called &quot;Vico Fantasia and the Limits of AI Understanding&quot; yet — see who is asking for it">Vico Fantasia and the Limits of AI Understanding</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">9</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/assumption-ground">Assumption-Ground</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/friedrich-schlegel">Friedrich Schlegel</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/novalis">Novalis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>24</b><span>linked from</span></div>
+      <div class="bearing"><b>18</b><span>links out</span></div>
+      <div class="bearing"><b>744</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">24</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-diversity">Cognitive Diversity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>16 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/epistemic-monoculture">Epistemic Monoculture</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-georg-hamann">Johann Georg Hamann (1730–1788)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/assumption-ground">Assumption-Ground</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schlegel">Friedrich Schlegel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/novalis">Novalis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/verum-ipsum-factum">Verum Ipsum Factum</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/usc-ai-homogenization-cognitive-diversity">AI May Be Making Us Think and Write More Alike</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/vico-fantasia-and-ai-limits">Vico&#x27;s Fantasia and the Limits of AI Understanding</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">13</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">12</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-diversity">Cognitive Diversity</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><a class="tag" href="/wiki/topics/cognitive-diversity">cognitive-diversity</a><a class="tag" href="/wiki/topics/berlin">berlin</a><a class="tag" href="/wiki/topics/herder">herder</a><a class="tag" href="/wiki/topics/value-pluralism">value-pluralism</a><a class="tag" href="/wiki/topics/homogenization">homogenization</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

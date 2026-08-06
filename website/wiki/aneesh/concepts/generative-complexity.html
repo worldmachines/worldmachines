@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Generative Complexity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Generative Complexity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/generative-complexity.md">source on GitHub</a></div>
-  <div class="note-summary">The property of systems whose value lies not in their parts but in emergent creative possibility — distinguishing complex systems from merely complicated ones.</div>
-  <div class="tags"><span class="tag">complexity</span><span class="tag">emergence</span><span class="tag">creativity</span><span class="tag">systems-thinking</span><span class="tag">Cynefin</span><span class="tag">design</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/generative-complexity.md">source on GitHub</a></div>
+    <div class="note-summary">The property of systems whose value lies not in their parts but in emergent creative possibility — distinguishing complex systems from merely complicated ones.</div>
     <div class="prose">
 <p><strong>Generative complexity</strong> names the quality of systems that reward exploration with unexpected possibility — systems whose value is not the sum of their parts but the space of things they make possible.</p>
 <h2 id="complicated-vs-complex">Complicated vs. Complex</h2>
-<p>The distinction is central to the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cynefin Framework&quot;">Cynefin Framework</span>:</p>
+<p>The distinction is central to the <a class="wikilink" href="/wiki/aneesh/concepts/cynefin-framework" title="Written [[Cynefin Framework]], resolved to cynefin-framework">Cynefin Framework</a>:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Dimension</th><th>Complicated</th><th>Complex</th></tr></thead>
 <tbody>
@@ -47,12 +56,12 @@
 <tr><td>Affect</td><td>Mastered → bored</td><td>Mastered → more curious</td></tr>
 </tbody>
 </table></div>
-<p>A <strong>complicated</strong> system (spinning-disk microscope) can be fully understood by analyzing its components. A <strong>complex</strong> system (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress&quot;">Dwarf Fortress</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Emacs&quot;">Emacs</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Artificial Intelligence&quot;">Artificial Intelligence</span>) exhibits emergent behavior that surprises even its designers.</p>
+<p>A <strong>complicated</strong> system (spinning-disk microscope) can be fully understood by analyzing its components. A <strong>complex</strong> system (<a class="wikilink" href="/wiki/aneesh/entities/dwarf-fortress" title="Written [[Dwarf Fortress]], resolved to dwarf-fortress">Dwarf Fortress</a>, <a class="wikilink-wanted" href="/wiki/wanted/emacs" title="No note is called &quot;Emacs&quot; yet — see who is asking for it">Emacs</a>, <a class="wikilink-wanted" href="/wiki/wanted/artificial-intelligence" title="No note is called &quot;Artificial Intelligence&quot; yet — see who is asking for it">Artificial Intelligence</a>) exhibits emergent behavior that surprises even its designers.</p>
 <h2 id="exemplary-systems">Exemplary Systems</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress&quot;">Dwarf Fortress</span></strong>: No high score; you eventually lose. The game is a generator of stories, not a test of skill.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Emacs&quot;">Emacs</span></strong>: Not a text editor but a programmable environment. Users build custom workflows that did not exist when they started.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Artificial Intelligence&quot;">Artificial Intelligence</span> / neural networks</strong>: Complicated to train (data, optimization); complex in capability — the emergent behaviors of large models routinely surprise their creators.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/dwarf-fortress" title="Written [[Dwarf Fortress]], resolved to dwarf-fortress">Dwarf Fortress</a></strong>: No high score; you eventually lose. The game is a generator of stories, not a test of skill.</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/emacs" title="No note is called &quot;Emacs&quot; yet — see who is asking for it">Emacs</a></strong>: Not a text editor but a programmable environment. Users build custom workflows that did not exist when they started.</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/artificial-intelligence" title="No note is called &quot;Artificial Intelligence&quot; yet — see who is asking for it">Artificial Intelligence</a> / neural networks</strong>: Complicated to train (data, optimization); complex in capability — the emergent behaviors of large models routinely surprise their creators.</li>
 </ul>
 <h2 id="the-user-as-locus-of-emergence">The User as Locus of Emergence</h2>
 <p>Emergence manifests in the <em>person</em> engaging with the system, not just in the system itself. The signature experience: &quot;I didn&#x27;t expect I could do that.&quot; This is the moment generative complexity reveals itself.</p>
@@ -64,31 +73,70 @@
 <li>Mastery deepens engagement rather than terminating it</li>
 </ol>
 <h2 id="generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</h2>
-<p>The argument generalizes: systems that generate noise or apparent chaos (the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span>&#x27;s &quot;ocean of noise&quot;) may be generatively complex rather than merely dysfunctional. The noise is the substrate for unexpected discovery.</p>
+<p>The argument generalizes: systems that generate noise or apparent chaos (the <a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a>&#x27;s &quot;ocean of noise&quot;) may be generatively complex rather than merely dysfunctional. The noise is the substrate for unexpected discovery.</p>
 <p>The alchemy → chemistry metaphor: &quot;gold of chemistry from leaden alchemy&quot; — chaos as precondition for insight.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cynefin Framework&quot;">Cynefin Framework</span> — formal taxonomy that gives this distinction theoretical backing</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Emergence&quot;">Emergence</span> — the phenomenon generative complexity depends on</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noise as Generative Force&quot;">Noise as Generative Force</span> — parallel argument in information systems</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Flow State&quot;">Flow State</span> — phenomenological description of the mastery experience in complex systems</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> — LLM latent space as generatively complex: seeds ideas in ways unforeseeable to the planter</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cynefin-framework" title="Written [[Cynefin Framework]], resolved to cynefin-framework">Cynefin Framework</a> — formal taxonomy that gives this distinction theoretical backing</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/emergence" title="No note is called &quot;Emergence&quot; yet — see who is asking for it">Emergence</a> — the phenomenon generative complexity depends on</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/noise-as-generative-force" title="Written [[Noise as Generative Force]], resolved to noise-as-generative-force">Noise as Generative Force</a> — parallel argument in information systems</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/flow-state" title="No note is called &quot;Flow State&quot; yet — see who is asking for it">Flow State</a> — phenomenological description of the mastery experience in complex systems</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> — LLM latent space as generatively complex: seeds ideas in ways unforeseeable to the planter</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress, Emacs, AI — Generative Complexity&quot;">Dwarf Fortress, Emacs, AI — Generative Complexity</span> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity" title="Written [[Dwarf Fortress, Emacs, AI — Generative Complexity]], resolved to dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress, Emacs, AI — Generative Complexity</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/ephemeralization">Ephemeralization</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/extended-mind">The Extended Mind</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>412</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">10</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress, Emacs, &amp; AI: The Allure of Generative Complexity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ephemeralization">Ephemeralization</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cynefin-framework">Cynefin Framework</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/extended-mind">The Extended Mind</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/noise-as-generative-force">Noise as Generative Force</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/cloister-web-reshaping-political-maidan">The Cloister Web: Reshaping the Political Maidan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/universal-library-river-of-noise">The Universal Library in the River of Noise</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/universal-library">Universal Library</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/cynefin-framework">Cynefin Framework</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/dwarf-fortress">Dwarf Fortress</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress, Emacs, &amp; AI: The Allure of Generative Complexity</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/complexity">complexity</a><a class="tag" href="/wiki/topics/emergence">emergence</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/systems-thinking">systems-thinking</a><a class="tag" href="/wiki/topics/cynefin">Cynefin</a><a class="tag" href="/wiki/topics/design">design</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

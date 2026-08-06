@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/venkat/">Venkat</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Prime Radiant</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Prime Radiant</h1>
-  <div class="note-byline"><a href="/wiki/venkat/">Venkat</a> · Concepts · updated 14 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/venkat/concepts/Prime%20Radiant.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/venkat/">Venkat</a> · Concepts · updated 14 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/venkat/concepts/Prime%20Radiant.md">source on GitHub</a></div>
     <div class="prose">
 <p>In Asimov&#x27;s <em>Foundation</em> series, the Prime Radiant is the instrument through which psychohistory becomes visible. It projects the equations of the Seldon Plan as luminous symbols floating in space — not a display but an environment, something you inhabit rather than read. Hari Seldon uses it to encode the full mathematical structure of his civilizational forecast: the branching probability trees, the crisis points, the intervention windows.</p>
 <p>The device is not a computer in the modern sense. It is closer to a navigational chart for time — one that shows not where you are but where history is going if nothing acts on it, and what the phase space of possible interventions looks like. Only the psychohistorian can read it, because the symbols are the mathematics itself, not a translation of it.</p>
@@ -39,16 +49,25 @@
 <p><strong>It is revisable.</strong> The Second Foundation&#x27;s central work is updating the Prime Radiant as reality diverges from the original Plan. The equations are not scripture; they are a living document whose revision is itself a kind of civilizational intervention.</p>
 <p>The World Machines project inherits both features: we are building a model (not a prophecy), and the model is meant to be iteratively corrected as history does or does not conform to it. The Oracle is our read-only interface to the current state of that model. The Prime Radiant is what it would become if the model were ever fully formalized — equations you could walk around inside.</p>
     </div>
+    <p class="note-history">Last changed 14 May 2026 by Venkatesh Rao — <a href="https://github.com/worldmachines/worldmachines/commit/4a0940e0564702542424d6e764c264bd120cccb7">[trivial] Add raw note: Prime Radiant</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/psychohistory">Psychohistory</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 14 May 2026 by Venkatesh Rao — <a href="https://github.com/worldmachines/worldmachines/commit/4a0940e0564702542424d6e764c264bd120cccb7">[trivial] Add raw note: Prime Radiant</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>290</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/glossary/psychohistory">Psychohistory</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

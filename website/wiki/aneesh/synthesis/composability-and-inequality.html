@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Composability and Inequality</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Composability and Inequality</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/composability-and-inequality.md">source on GitHub</a></div>
-  <div class="note-summary">A cross-source synthesis: the history of composable knowledge assumes democratization, but empirical evidence (AI summaries, jargon barriers) suggests composability is a multiplier of existing advantage rather than a leveler — raising a structural question about who the next composability upgrade serves.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">composability</span><span class="tag">inequality</span><span class="tag">AI</span><span class="tag">knowledge</span><span class="tag">epistemology</span><span class="tag">democratization</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/composability-and-inequality.md">source on GitHub</a></div>
+    <div class="note-summary">A cross-source synthesis: the history of composable knowledge assumes democratization, but empirical evidence (AI summaries, jargon barriers) suggests composability is a multiplier of existing advantage rather than a leveler — raising a structural question about who the next composability upgrade serves.</div>
     <div class="prose">
 <h2 id="the-tension">The Tension</h2>
 <p>Two sources in this wiki make incompatible-looking claims:</p>
 <ol>
-<li><p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Arrival of Composable Knowledge&quot;">The Arrival of Composable Knowledge</span>: composability has steadily democratized knowledge — each technological leap (writing, printing, internet) made knowledge more accessible to more people.</p></li>
-<li><p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 3, 2025&quot;">Jan. 3, 2025</span> (via Eric So et al.): <em>&quot;AI widens the knowledge-driven disparities between sophisticated and unsophisticated participants.&quot;</em></p></li>
+<li><p><a class="wikilink" href="/wiki/aneesh/summaries/the-arrival-of-composable-knowledge" title="Written [[The Arrival of Composable Knowledge]], resolved to the-arrival-of-composable-knowledge">The Arrival of Composable Knowledge</a>: composability has steadily democratized knowledge — each technological leap (writing, printing, internet) made knowledge more accessible to more people.</p></li>
+<li><p><a class="wikilink" href="/wiki/aneesh/summaries/jan-3-2025" title="Written [[Jan. 3, 2025]], resolved to jan-3-2025">Jan. 3, 2025</a> (via Eric So et al.): <em>&quot;AI widens the knowledge-driven disparities between sophisticated and unsophisticated participants.&quot;</em></p></li>
 </ol>
 <p>The first claim is historical. The second is empirical and current. Are they contradictory?</p>
 <h2 id="resolution-multiplier-vs-leveler">Resolution: Multiplier vs. Leveler</h2>
@@ -48,7 +57,7 @@
 <p><strong>Multiplying</strong>: A tool that scales with existing capability — it helps sophisticated users proportionally more. AI summaries appear to be multiplicative: the more you know, the more precise query you can write, the more precise output you get.</p>
 <p>These are not mutually exclusive. A tool can raise the floor AND widen the gap — it can help everyone while helping the skilled more. Whether <em>net</em> inequality increases or decreases depends on which effect dominates.</p>
 <h2 id="the-jargon-mechanism">The Jargon Mechanism</h2>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jargon as Compression&quot;">Jargon as Compression</span>. The AI democratization gap operates primarily through query quality:</p>
+<p>See <a class="wikilink" href="/wiki/aneesh/concepts/jargon-as-compression" title="Written [[Jargon as Compression]], resolved to jargon-as-compression">Jargon as Compression</a>. The AI democratization gap operates primarily through query quality:</p>
 <ul>
 <li>Access to AI is (increasingly) near-universal</li>
 <li>The bottleneck is knowing what to ask and how to ask it</li>
@@ -65,29 +74,54 @@
 </ul>
 <p>Each technology has its jargon equivalent — a set of skills that determines how much of the tool&#x27;s capability one can actually access. Composability may always have been multiplicative; we retrospectively read it as leveling because the long-run effect is broadly positive.</p>
 <h2 id="what-would-genuine-leveling-look-like">What Would Genuine Leveling Look Like?</h2>
-<p>The Shah &amp; White <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sims (AI User Simulation)&quot;">Sims (AI User Simulation)</span> proposal is relevant here: a Sim that holds intimate knowledge of a user and can formulate precise queries <em>on their behalf</em> could, in principle, close the query-quality gap. Whether it would actually do so depends entirely on who trains the Sim and whose interests it represents (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Principal-Agent Problem in AI&quot;">Principal-Agent Problem in AI</span>).</p>
-<p>Similarly, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sparing and Freeing&quot;">Sparing and Freeing</span> in interface design: if good interfaces can reduce the burden of query precision — helping users ask better questions without requiring full domain fluency — this could partially rebalance the multiplicative effect.</p>
+<p>The Shah &amp; White <a class="wikilink-wanted" href="/wiki/wanted/sims-ai-user-simulation" title="No note is called &quot;Sims (AI User Simulation)&quot; yet — see who is asking for it">Sims (AI User Simulation)</a> proposal is relevant here: a Sim that holds intimate knowledge of a user and can formulate precise queries <em>on their behalf</em> could, in principle, close the query-quality gap. Whether it would actually do so depends entirely on who trains the Sim and whose interests it represents (see <a class="wikilink" href="/wiki/aneesh/concepts/principal-agent-problem-in-ai" title="Written [[Principal-Agent Problem in AI]], resolved to principal-agent-problem-in-ai">Principal-Agent Problem in AI</a>).</p>
+<p>Similarly, <a class="wikilink" href="/wiki/aneesh/concepts/sparing-and-freeing" title="Written [[Sparing and Freeing]], resolved to sparing-and-freeing">Sparing and Freeing</a> in interface design: if good interfaces can reduce the burden of query precision — helping users ask better questions without requiring full domain fluency — this could partially rebalance the multiplicative effect.</p>
 <h2 id="essay-seed">Essay Seed</h2>
 <p><strong>Thesis candidate</strong>: The history of composable knowledge is not a history of democratization but of multiplication. Each composability upgrade — writing, print, internet, LLMs — has been most valuable to those who were already most knowledgeable. The gains are real and broadly positive, but the inequality signature is consistent across centuries. This doesn&#x27;t mean the upgrades are bad; it means &quot;democratization&quot; is systematically the wrong frame.</p>
 <p><strong>Complication</strong>: This thesis could be wrong. It&#x27;s possible that some composability leaps <em>have</em> been genuinely leveling (universal literacy, for example), and that what we observe with LLMs is a temporary phase before the leveling effects kick in.</p>
 <h2 id="related-pages">Related Pages</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span> — the historical claim</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span> — the empirical challenge</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jargon as Compression&quot;">Jargon as Compression</span> — the mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Principal-Agent Problem in AI&quot;">Principal-Agent Problem in AI</span> — who agents serve</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sims (AI User Simulation)&quot;">Sims (AI User Simulation)</span> — potential leveling mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sparing and Freeing&quot;">Sparing and Freeing</span> — interface design as partial solution</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Worker&quot;">Knowledge Worker</span> — the primary beneficiary of multiplicative composability</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a> — the historical claim</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a> — the empirical challenge</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/jargon-as-compression" title="Written [[Jargon as Compression]], resolved to jargon-as-compression">Jargon as Compression</a> — the mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/principal-agent-problem-in-ai" title="Written [[Principal-Agent Problem in AI]], resolved to principal-agent-problem-in-ai">Principal-Agent Problem in AI</a> — who agents serve</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/sims-ai-user-simulation" title="No note is called &quot;Sims (AI User Simulation)&quot; yet — see who is asking for it">Sims (AI User Simulation)</a> — potential leveling mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sparing-and-freeing" title="Written [[Sparing and Freeing]], resolved to sparing-and-freeing">Sparing and Freeing</a> — interface design as partial solution</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-worker" title="Written [[Knowledge Worker]], resolved to knowledge-worker">Knowledge Worker</a> — the primary beneficiary of multiplicative composability</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>652</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-arrival-of-composable-knowledge">The Arrival of Composable Knowledge</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-digital-studiolo">The Digital Studiolo</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-information-ecology">The Information Ecology — Noise, Lore, Libraries, and the Crisis of Navigation</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-3-2025">Jan. 3, 2025</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/composability">composability</a><a class="tag" href="/wiki/topics/inequality">inequality</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/knowledge">knowledge</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/democratization">democratization</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

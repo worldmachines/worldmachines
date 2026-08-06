@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Divergence Machine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Divergence Machine</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/divergence-machine.md">source on GitHub</a></div>
-  <div class="note-summary">The Divergence Machine is the world machine constructed 1600–2000, now operating as the Day Machine (2000–present): it optimizes for variety, proliferation, and ontological doubt rather than legibility, running as a push machine that brackets rather than subverts the Modernity Machine.</div>
-  <div class="tags"><span class="tag">world-machines</span><span class="tag">divergence</span><span class="tag">pluralism</span><span class="tag">push-machine</span><span class="tag">venkatesh-rao</span><span class="tag">velitchkov</span><span class="tag">modernity</span><span class="tag">history</span><span class="tag">world-systems</span><span class="tag">identity</span><span class="tag">plasticity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/divergence-machine.md">source on GitHub</a></div>
+    <div class="note-summary">The Divergence Machine is the world machine constructed 1600–2000, now operating as the Day Machine (2000–present): it optimizes for variety, proliferation, and ontological doubt rather than legibility, running as a push machine that brackets rather than subverts the Modernity Machine.</div>
     <div class="prose">
 <p><strong>Coined by</strong>: <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><br>
 <strong>Primary sources</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine</a> (Rao, Jan 2026); <a class="wikilink" href="/wiki/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii">Divergence Machine II</a> (Rao, Feb 2026); <a class="wikilink" href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a> (Sathe, 2026-03-08)</p>
@@ -149,133 +158,164 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/configurancy">Configurancy</a> — Rao&#x27;s other major ontological concept</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">119</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/adam-smith">Adam Smith (1723-1790)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/argument-of-progress">Argument of Progress</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/auteuring">Auteuring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/auteuring-and-taste">Auteuring and Taste</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bottleneck-reversal">Bottleneck Reversal: Atoms, Ideas, Intents</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bryant-machine-concept">Bryant&#x27;s Machine Concept</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/catherine-malabou">Catherine Malabou</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/configurancy">Configurancy</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/convivial-tools">Convivial Tools</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">Cosmopolitan Time Queue and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/edward-purcell">Edward Mills Purcell (1912–1997)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/ephemeralization">Ephemeralization</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/four-class-relations-of-modernity">Four Class Relations of Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/horizontal-history">Horizontal History</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/iemp-model">IEMP Model</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/infrastructure-inheritance">Infrastructure Inheritance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/intent-collisions">Intent Collisions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/ivo-velitchkov">Ivo Velitchkov</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/jean-baudrillard">Jean Baudrillard</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/josiah-wedgwood">Josiah Wedgwood</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/legibility-and-divergence">Legibility and Divergence: The MM&#x27;s Self-Undermining Logic</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/legibility-vs-divergence-the-civilizational-tradeoff">Legibility vs. Divergence: The Civilizational Tradeoff</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/low-reynolds-culture">Low-Reynolds Culture</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/lunar-society">Lunar Society of Birmingham</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/ontological-dread">Ontological Dread</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-making-and-resistance-the-constructive-side">Place-Making and Resistance: The Constructive Side</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/plasticity-vs-flexibility">Plasticity vs. Flexibility</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/progress-as-non-stationary-argument">Progress as a Non-Stationary Argument</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/pull-vs-push-machines">Pull vs. Push Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/solar-flows-and-the-energy-anomaly">Solar Flows and the Energy Anomaly</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/stripping-the-layers-from-spinoza-to-ai">Stripping the Layers: From Spinoza to AI</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/surface-of-concern">Surface of Concern</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii">The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/entrepreneur-as-machine-engineer">The Entrepreneur as Machine Engineer</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-ii">The Modernity Machine II (Rao, Jun 2025)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii">The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/viscous-frontier-and-cost-of-intent">The Viscous Frontier and the Cost of Intent</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-viscous-frontier">The Viscous Frontier — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-world-machines-project-rao">The World Machines Project</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/three-engineers-of-modernity-velitchkov">Three Engineers of Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/voltaire">Voltaire</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/zombie-ideas">Zombie Ideas</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12a-wto-and-chinas-economic-transformation">China&#x27;s Market Transformation and the WTO&#x27;s Fraying Consensus</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11a-japan-and-the-rise-of-personal-computing">Friedman, Deregulation, and the Rise of Japan and the Personal Computer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/legibility">Legibility</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/psychohistory">Psychohistory</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-01-quincy">Quincy: The Ancestral Chapter (1838-1848)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-08-of-toys-and-ornaments">RIT 08 — Of Toys and Ornaments and Serious Things (ch. 6)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-09-my-time-is-your-time">RIT 09 — My Time Is Your Time (ch. 7)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-11-the-man-who-stayed-to-dinner">RIT 11 — The Man Who Stayed to Dinner (ch. 9)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-12-the-french-connection">RIT 12 — The French Connection (Ch. 10)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">RIT 16 — The Ups and Downs of International Competition (Ch. 14)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-19-nor-could-he-compete-with-us">RIT 19 — &quot;Nor Could He Compete with Us&quot; (ch. 17, pp. 293–309)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-20-ah-but-he-could">RIT 20 — &quot;Ah, But He Could!&quot; (ch. 18)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-22-who-killed-cock-robin">RIT 22 — &quot;Who Killed Cock Robin?&quot; (ch. 20, pp. 347–364)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-23-the-quartz-revolution-i">RIT 23 — The Quartz Revolution, Part I (Ch. 21)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-24-the-quartz-revolution-ii">RIT 24 — The Quartz Revolution, II (ch. 21, second half + conclusion)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13a-the-2008-financial-crisis">The 2008 Financial Crisis: Deregulation, Leverage, and the House of Cards</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance">The Abyss of Ignorance</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11b-internet-asian-tigers-and-walmart">The Internet, the Four Little Tigers, and Walmart&#x27;s Information Machine</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch07-industrial-leviathans-and-their-opponents">The Leviathans of Industry, Their Workers, and the Rise of the Consumer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-13-the-perfection-of-human-society">The Perfection of Human Society</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04b-currency-crisis-and-new-economic-thinking">The Recoinage Crisis and the Making of Economic Thought in England and France</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-01-toleration">The Religions of Utopia: Natural Theology, Christian Reception, and the Law of Toleration</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-wife-of-baths-tale">The Wife of Bath&#x27;s Prologue and Tale</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-26-twilight">Twilight (1901)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/utopus">Utopus</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/world-machine">World Machine</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>119</b><span>linked from</span></div>
+      <div class="bearing"><b>28</b><span>links out</span></div>
+      <div class="bearing"><b>1347</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">119</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>111 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-machine-concept">Bryant&#x27;s Machine Concept</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/argument-of-progress">Argument of Progress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/configurancy">Configurancy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/voltaire">Voltaire</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/adam-smith">Adam Smith (1723-1790)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-hume">David Hume (1711–1776)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/josiah-wedgwood">Josiah Wedgwood</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/plasticity-vs-flexibility">Plasticity vs. Flexibility</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/pull-vs-push-machines">Pull vs. Push Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/auteuring">Auteuring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fiat-progress">Fiat Progress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-class-relations-of-modernity">Four Class Relations of Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/infrastructure-inheritance">Infrastructure Inheritance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/viscous-frontier-and-cost-of-intent">The Viscous Frontier and the Cost of Intent</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-viscous-frontier">The Viscous Frontier — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bottleneck-reversal">Bottleneck Reversal: Atoms, Ideas, Intents</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/horizontal-history">Horizontal History</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ivo-velitchkov">Ivo Velitchkov</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/low-reynolds-culture">Low-Reynolds Culture</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ontological-dread">Ontological Dread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-20-ah-but-he-could">RIT 20 — &quot;Ah, But He Could!&quot; (ch. 18)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/ephemeralization">Ephemeralization</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">RIT 16 — The Ups and Downs of International Competition (Ch. 14)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/surface-of-concern">Surface of Concern</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-end-of-identity-ai-plasticity-divergence-machine">The End of Identity: AI, Plasticity, and the Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/zombie-ideas">Zombie Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-23-the-quartz-revolution-i">RIT 23 — The Quartz Revolution, Part I (Ch. 21)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/catherine-malabou">Catherine Malabou</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/intent-collisions">Intent Collisions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-baudrillard">Jean Baudrillard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-22-who-killed-cock-robin">RIT 22 — &quot;Who Killed Cock Robin?&quot; (ch. 20, pp. 347–364)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii">The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/convivial-tools">Convivial Tools</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/internet-of-beefs">Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-divergence-the-civilizational-tradeoff">Legibility vs. Divergence: The Civilizational Tradeoff</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/lunar-society">Lunar Society of Birmingham</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-01-preface">RIT 01 — Prefaces &amp; front matter</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-11-the-man-who-stayed-to-dinner">RIT 11 — The Man Who Stayed to Dinner (ch. 9)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-12-the-french-connection">RIT 12 — The French Connection (Ch. 10)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-19-nor-could-he-compete-with-us">RIT 19 — &quot;Nor Could He Compete with Us&quot; (ch. 17, pp. 293–309)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-24-the-quartz-revolution-ii">RIT 24 — The Quartz Revolution, II (ch. 21, second half + conclusion)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/solar-flows-and-the-energy-anomaly">Solar Flows and the Energy Anomaly</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance">The Abyss of Ignorance</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04b-currency-crisis-and-new-economic-thinking">The Recoinage Crisis and the Making of Economic Thought in England and France</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-wife-of-baths-tale">The Wife of Bath&#x27;s Prologue and Tale</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/auteuring-and-taste">Auteuring and Taste</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">Cosmopolitan Time Queue and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-08-of-toys-and-ornaments">RIT 08 — Of Toys and Ornaments and Serious Things (ch. 6)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11b-internet-asian-tigers-and-walmart">The Internet, the Four Little Tigers, and Walmart&#x27;s Information Machine</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-26-twilight">Twilight (1901)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12a-wto-and-chinas-economic-transformation">China&#x27;s Market Transformation and the WTO&#x27;s Fraying Consensus</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/edward-purcell">Edward Mills Purcell (1912–1997)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/iemp-model">IEMP Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-making-and-resistance-the-constructive-side">Place-Making and Resistance: The Constructive Side</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-09-my-time-is-your-time">RIT 09 — My Time Is Your Time (ch. 7)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13a-the-2008-financial-crisis">The 2008 Financial Crisis: Deregulation, Leverage, and the House of Cards</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-01-toleration">The Religions of Utopia: Natural Theology, Christian Reception, and the Law of Toleration</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-world-machines-project-rao">The World Machines Project</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11a-japan-and-the-rise-of-personal-computing">Friedman, Deregulation, and the Rise of Japan and the Personal Computer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-and-divergence">Legibility and Divergence: The MM&#x27;s Self-Undermining Logic</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-01-quincy">Quincy: The Ancestral Chapter (1838-1848)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/entrepreneur-as-machine-engineer">The Entrepreneur as Machine Engineer</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch07-industrial-leviathans-and-their-opponents">The Leviathans of Industry, Their Workers, and the Rise of the Consumer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-ii">The Modernity Machine II (Rao, Jun 2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-modernity-machine-iii">The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-13-the-perfection-of-human-society">The Perfection of Human Society</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/utopus">Utopus</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/glossary/world-machine">World Machine</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/glossary/legibility">Legibility</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/progress-as-non-stationary-argument">Progress as a Non-Stationary Argument</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/glossary/psychohistory">Psychohistory</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/stripping-the-layers-from-spinoza-to-ai">Stripping the Layers: From Spinoza to AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/three-engineers-of-modernity-velitchkov">Three Engineers of Modernity</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">54</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">38</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">38</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">20</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">17</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">16</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/divergence">divergence</a><a class="tag" href="/wiki/topics/pluralism">pluralism</a><span class="tag tag-lone" title="Only this note uses it">push-machine</span><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/velitchkov">velitchkov</a><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/history">history</a><span class="tag tag-lone" title="Only this note uses it">world-systems</span><a class="tag" href="/wiki/topics/identity">identity</a><a class="tag" href="/wiki/topics/plasticity">plasticity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

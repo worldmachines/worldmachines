@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Eyal Weizman</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Eyal Weizman</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/Eyal%20Weizman.md">source on GitHub</a></div>
-  <div class="note-summary">Israeli architect and critic of Israeli territorial policy; his essay &#x27;Lethal Theory&#x27; documenting the IDF&#x27;s &#x27;walking through walls&#x27; tactic in Nablus (2002) is the primary military-theoretical source for Nakatomi space.</div>
-  <div class="tags"><span class="tag">eyal-weizman</span><span class="tag">architecture</span><span class="tag">military-urbanism</span><span class="tag">nablus</span><span class="tag">israel-palestine</span><span class="tag">walking-through-walls</span><span class="tag">spatial-theory</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/Eyal%20Weizman.md">source on GitHub</a></div>
+    <div class="note-summary">Israeli architect and critic of Israeli territorial policy; his essay &#x27;Lethal Theory&#x27; documenting the IDF&#x27;s &#x27;walking through walls&#x27; tactic in Nablus (2002) is the primary military-theoretical source for Nakatomi space.</div>
     <div class="prose">
 <p><strong>Born</strong>: 1970, Israel<br>
 <strong>Field</strong>: Architecture; spatial politics; human rights<br>
@@ -53,26 +62,52 @@
 <p>He also notes the IDF&#x27;s explicit borrowing from critical theory and poststructuralist philosophy — soldiers reading Deleuze and Guattari on smooth vs. striated space.</p>
 <h2 id="manaughs-use">Manaugh&#x27;s Use</h2>
 <p><a class="wikilink" href="/wiki/aneesh/entities/geoff-manaugh">Geoff Manaugh</a> takes Weizman&#x27;s military documentation and connects it to <em>Die Hard</em> to coin <a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> — a conceptual bridge between cinematic architecture and military spatial practice.</p>
-<p>→ See <a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> → See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bldgblog Nakatomi Space&quot;">Bldgblog Nakatomi Space</span></p>
+<p>→ See <a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> → See <a class="wikilink" href="/wiki/aneesh/summaries/bldgblog-nakatomi-space" title="Written [[Bldgblog Nakatomi Space]], resolved to bldgblog-nakatomi-space">Bldgblog Nakatomi Space</a></p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> — the concept his work grounds</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/geoff-manaugh">Geoff Manaugh</a> — the interlocutor who coins Nakatomi space</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Walking Through Walls&quot;">Walking Through Walls</span> — the specific tactic</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/walking-through-walls" title="No note is called &quot;Walking Through Walls&quot; yet — see who is asking for it">Walking Through Walls</a> — the specific tactic</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a> — Nakatomi space defeats architectural legibility; Weizman&#x27;s work is about defeating territorial legibility</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/geoff-manaugh">Geoff Manaugh</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/bldgblog-nakatomi-space">Nakatomi Space</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>286</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">3</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/bldgblog-nakatomi-space">Nakatomi Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/geoff-manaugh">Geoff Manaugh</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/geoff-manaugh">Geoff Manaugh</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility">Legibility</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/bldgblog-nakatomi-space">Nakatomi Space</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/eyal-weizman">eyal-weizman</a><a class="tag" href="/wiki/topics/architecture">architecture</a><a class="tag" href="/wiki/topics/military-urbanism">military-urbanism</a><span class="tag tag-lone" title="Only this note uses it">nablus</span><span class="tag tag-lone" title="Only this note uses it">israel-palestine</span><span class="tag tag-lone" title="Only this note uses it">walking-through-walls</span><a class="tag" href="/wiki/topics/spatial-theory">spatial-theory</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

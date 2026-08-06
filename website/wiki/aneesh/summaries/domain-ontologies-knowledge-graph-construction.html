@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,23 +26,32 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Domain Ontologies: Indispensable for Knowledge Graph Construction</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Domain Ontologies: Indispensable for Knowledge Graph Construction</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/domain-ontologies-knowledge-graph-construction.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe&#x27;s argument that domain ontologies are not merely useful but essential scaffolding for knowledge graph construction, with applications across biomedical, cultural, and AI domains.</div>
-  <div class="tags"><span class="tag">ontologies</span><span class="tag">knowledge-graphs</span><span class="tag">AI</span><span class="tag">FAIR-data</span><span class="tag">biomedical-informatics</span><span class="tag">semantic-web</span><span class="tag">interoperability</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/domain-ontologies-knowledge-graph-construction.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe&#x27;s argument that domain ontologies are not merely useful but essential scaffolding for knowledge graph construction, with applications across biomedical, cultural, and AI domains.</div>
     <div class="prose">
 <p><strong>Source</strong>: Aneesh Sathe, <em>Domain Ontologies: Indispensable for Knowledge Graph Construction</em> (2025-01-15)<br>
 <strong>URL</strong>: https://aneeshsathe.com/domain-ontologies-indispensable-for-knowledge-graph-construction/</p>
 <h2 id="central-argument">Central Argument</h2>
-<p>In an era of data abundance and increasing <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Slop&quot;">AI Slop</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> (KGs) are a powerful tool for deriving structured insights — but their value is entirely dependent on underlying <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span>. Ontologies are not optional refinements; they are the blueprint that makes a KG semantically coherent and interoperable rather than a collection of isolated data points.</p>
+<p>In an era of data abundance and increasing <a class="wikilink" href="/wiki/aneesh/concepts/ai-slop" title="Written [[AI Slop]], resolved to ai-slop">AI Slop</a>, <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> (KGs) are a powerful tool for deriving structured insights — but their value is entirely dependent on underlying <a class="wikilink" href="/wiki/aneesh/concepts/domain-ontologies" title="Written [[Domain Ontologies]], resolved to domain-ontologies">Domain Ontologies</a>. Ontologies are not optional refinements; they are the blueprint that makes a KG semantically coherent and interoperable rather than a collection of isolated data points.</p>
 <h2 id="key-claims">Key Claims</h2>
 <ol>
 <li><strong>Ontologies as blueprints</strong>: They define the types of nodes (entities) and edges (relationships) in a KG. Without them, a KG cannot be semantically interoperable across sources.</li>
-<li><strong>Data consistency and interoperability</strong>: Across clinical trials, patient records, and publications, terms like &quot;cancer&quot; or &quot;hypertension&quot; mean different things without shared ontological grounding. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FAIR Principles&quot;">FAIR Principles</span> (Findable, Accessible, Interoperable, Reusable) require ontological anchoring.</li>
+<li><strong>Data consistency and interoperability</strong>: Across clinical trials, patient records, and publications, terms like &quot;cancer&quot; or &quot;hypertension&quot; mean different things without shared ontological grounding. <a class="wikilink" href="/wiki/aneesh/concepts/fair-principles" title="Written [[FAIR Principles]], resolved to fair-principles">FAIR Principles</a> (Findable, Accessible, Interoperable, Reusable) require ontological anchoring.</li>
 <li><strong>AI reasoning support</strong>: Ontologies enable both deductive inference (deriving new knowledge) and structured background knowledge for machine learning — critical for explainable AI in high-stakes domains like medicine.</li>
 <li><strong>Drug discovery example</strong>: A biomedical KG grounded in ontology can identify drug targets by connecting genes, proteins, and diseases through clearly defined relationships.</li>
 <li><p><strong>Challenges</strong>:</p>
@@ -54,9 +63,9 @@
 </ol>
 <h2 id="exemplary-ontologies-kgs-cited">Exemplary Ontologies/KGs Cited</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;ChEBI&quot;">ChEBI</span></strong> (Chemical Entities of Biological Interest) — biomedical domain standard</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;PrimeKG&quot;">PrimeKG</span></strong> — multimodal precision medicine KG</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;NP-KG&quot;">NP-KG</span></strong> — pharmacokinetic natural product-drug interaction KG</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/chebi" title="No note is called &quot;ChEBI&quot; yet — see who is asking for it">ChEBI</a></strong> (Chemical Entities of Biological Interest) — biomedical domain standard</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/primekg" title="Written [[PrimeKG]], resolved to primekg">PrimeKG</a></strong> — multimodal precision medicine KG</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/np-kg" title="No note is called &quot;NP-KG&quot; yet — see who is asking for it">NP-KG</a></strong> — pharmacokinetic natural product-drug interaction KG</li>
 </ul>
 <h2 id="intellectual-lineage">Intellectual Lineage</h2>
 <ul>
@@ -68,23 +77,52 @@
 <h2 id="what-the-essay-doesnt-address">What the Essay Doesn&#x27;t Address</h2>
 <ul>
 <li>The political/institutional labor required to maintain ontologies over time (who funds and governs them?)</li>
-<li>The tension between domain-specific ontologies and the dream of a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Ontology&quot;">Universal Ontology</span></li>
+<li>The tension between domain-specific ontologies and the dream of a <a class="wikilink-wanted" href="/wiki/wanted/universal-ontology" title="No note is called &quot;Universal Ontology&quot; yet — see who is asking for it">Universal Ontology</a></li>
 <li>How ontologies interact with the noisier, less structured web-scale data that LLMs are trained on</li>
 </ul>
 <h2 id="cross-source-resonances">Cross-Source Resonances</h2>
 <ul>
-<li>Directly follows <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span>: KGs are proposed there as &quot;bridges between curated knowledge and generated text&quot; — this essay argues that bridge requires an ontological foundation</li>
-<li>Connects to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> on LLM latent space: if LLM embeddings approximate a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span>, ontologies are the explicit, legible version of the same aspiration</li>
-<li>See synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ontologies vs. Embeddings — Two Paths to Semantic Structure&quot;">Ontologies vs. Embeddings — Two Paths to Semantic Structure</span></li>
+<li>Directly follows <a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a>: KGs are proposed there as &quot;bridges between curated knowledge and generated text&quot; — this essay argues that bridge requires an ontological foundation</li>
+<li>Connects to <a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> on LLM latent space: if LLM embeddings approximate a <a class="wikilink" href="/wiki/aneesh/concepts/perfect-language" title="Written [[Perfect Language]], resolved to perfect-language">Perfect Language</a>, ontologies are the explicit, legible version of the same aspiration</li>
+<li>See synthesis: <a class="wikilink-wanted" href="/wiki/wanted/ontologies-vs-embeddings-two-paths-to-semantic-structure" title="No note is called &quot;Ontologies vs. Embeddings — Two Paths to Semantic Structure&quot; yet — see who is asking for it">Ontologies vs. Embeddings — Two Paths to Semantic Structure</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>435</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">4</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-slop">AI Slop</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fair-principles">FAIR Principles</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/universal-library">Universal Library</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-slop">AI Slop</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/fair-principles">FAIR Principles</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ontologies">ontologies</a><a class="tag" href="/wiki/topics/knowledge-graphs">knowledge-graphs</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/fair-data">FAIR-data</a><span class="tag tag-lone" title="Only this note uses it">biomedical-informatics</span><a class="tag" href="/wiki/topics/semantic-web">semantic-web</a><a class="tag" href="/wiki/topics/interoperability">interoperability</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

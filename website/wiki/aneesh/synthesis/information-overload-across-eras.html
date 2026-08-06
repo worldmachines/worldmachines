@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Information Overload Across Eras</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Information Overload Across Eras</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/information-overload-across-eras.md">source on GitHub</a></div>
-  <div class="note-summary">A recurring historical pattern: major information technologies (printing press, social internet) initially overwhelm existing place-making tools, producing disorientation and bad actors (Bruno, conspiracy theorists), until culture develops new orientation practices.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">history</span><span class="tag">information-overload</span><span class="tag">printing-press</span><span class="tag">social-media</span><span class="tag">pattern</span><span class="tag">technology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/information-overload-across-eras.md">source on GitHub</a></div>
+    <div class="note-summary">A recurring historical pattern: major information technologies (printing press, social internet) initially overwhelm existing place-making tools, producing disorientation and bad actors (Bruno, conspiracy theorists), until culture develops new orientation practices.</div>
     <div class="prose">
 <h2 id="the-pattern">The Pattern</h2>
 <p>Sathe&#x27;s social internet essay invokes a recurring historical structure that deserves its own synthesis page:</p>
@@ -54,10 +63,10 @@
 </ol>
 <p>The correctives are always <em>more sophisticated place-making</em>, not less information.</p>
 <h2 id="the-bruno-case">The Bruno Case</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span> is the archetype of printing-press disorientation: brilliant, synthetic, but operating without the quality-filtering tools that would emerge later. He represents what happens when signal volume exceeds existing orientation capacity.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a> is the archetype of printing-press disorientation: brilliant, synthetic, but operating without the quality-filtering tools that would emerge later. He represents what happens when signal volume exceeds existing orientation capacity.</p>
 <p>The scientific revolution&#x27;s tools (empiricism, peer comparison, reproducibility) are the correctives — new place-making practices adequate to the new signal volume.</p>
 <h2 id="what-the-corrective-looks-like">What the Corrective Looks Like</h2>
-<p>Sathe proposes <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> as the corrective for the social internet era. The structural parallel:</p>
+<p>Sathe proposes <a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> as the corrective for the social internet era. The structural parallel:</p>
 <ul>
 <li><strong>Printing era corrective</strong>: Empirical standards + peer comparison → scientific method.</li>
 <li><strong>Social internet corrective</strong>: Inquiry posture + collaborative knowledge-building → Socratic norms.</li>
@@ -78,21 +87,37 @@
 </ol>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span> — primary source for the analogy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span> — the historical case</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span> — the cautionary example</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Curation as Place-Making&quot;">Algorithmic Curation as Place-Making</span> — the contemporary bad place-maker</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Waldenponding&quot;">Waldenponding</span> — the rejected false exit</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — the proposed corrective</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a> — primary source for the analogy</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a> — the historical case</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a> — the cautionary example</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making" title="Written [[Algorithmic Curation as Place-Making]], resolved to algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a> — the contemporary bad place-maker</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/waldenponding" title="Written [[Waldenponding]], resolved to waldenponding">Waldenponding</a> — the rejected false exit</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — the proposed corrective</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>453</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">2</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-information-overload">Sensemaking and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-information-ecology">The Information Ecology — Noise, Lore, Libraries, and the Crisis of Navigation</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/history">history</a><a class="tag" href="/wiki/topics/information-overload">information-overload</a><a class="tag" href="/wiki/topics/printing-press">printing-press</a><a class="tag" href="/wiki/topics/social-media">social-media</a><span class="tag tag-lone" title="Only this note uses it">pattern</span><a class="tag" href="/wiki/topics/technology">technology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

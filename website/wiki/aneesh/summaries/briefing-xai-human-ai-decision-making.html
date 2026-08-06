@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/briefing-xai-human-ai-decision-making.md">source on GitHub</a></div>
-  <div class="note-summary">A research briefing on the state of Explainable AI (XAI), identifying a credibility gap between technical faithfulness and human usefulness, the disagreement problem between XAI methods, and the framing of XAI within Responsible AI.</div>
-  <div class="tags"><span class="tag">explainable-ai</span><span class="tag">responsible-ai</span><span class="tag">human-factors</span><span class="tag">decision-making</span><span class="tag">SHAP</span><span class="tag">LIME</span><span class="tag">CIU</span><span class="tag">XAI</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/briefing-xai-human-ai-decision-making.md">source on GitHub</a></div>
+    <div class="note-summary">A research briefing on the state of Explainable AI (XAI), identifying a credibility gap between technical faithfulness and human usefulness, the disagreement problem between XAI methods, and the framing of XAI within Responsible AI.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a href="https://aneeshsathe.com/briefing-the-state-of-explainable-ai-xai-and-its-impact-on-human-ai-decision-making/">aneeshsathe.com, 2025-07-24</a><br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span></p>
+<strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a></p>
 <h2 id="central-argument">Central Argument</h2>
 <p>The XAI field has a structural credibility gap: it optimizes for technical faithfulness to model internals rather than measurable usefulness to human decision-makers. Despite roots in the 1970s (MYCIN), XAI largely ignores decades of philosophy, psychology, and cognitive science. The field also has an underacknowledged <strong>disagreement problem</strong> — different XAI methods produce conflicting feature attributions for the same model, which practitioners identify as the most trust-eroding failure mode even though it&#x27;s statistically rare. The solution space is more organizational and methodological than technical.</p>
 <h2 id="key-sections">Key Sections</h2>
@@ -55,7 +64,7 @@
 <li>Potential gain: information the human doesn&#x27;t already have</li>
 <li>Actual behavioral improvement: observed in controlled experiments</li>
 </ol></li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Contextual Importance and Utility (CIU)&quot;">Contextual Importance and Utility (CIU)</span></strong>: a framework that quantifies how feature importance <em>and</em> favorability of its value shift with context — addresses a core weakness of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;SHAP&quot;">SHAP</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LIME&quot;">LIME</span>, which lack a &quot;utility&quot; concept and produce misleading scores in non-linear models</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/contextual-importance-and-utility-ciu" title="No note is called &quot;Contextual Importance and Utility (CIU)&quot; yet — see who is asking for it">Contextual Importance and Utility (CIU)</a></strong>: a framework that quantifies how feature importance <em>and</em> favorability of its value shift with context — addresses a core weakness of <a class="wikilink-wanted" href="/wiki/wanted/shap" title="No note is called &quot;SHAP&quot; yet — see who is asking for it">SHAP</a> and <a class="wikilink-wanted" href="/wiki/wanted/lime" title="No note is called &quot;LIME&quot; yet — see who is asking for it">LIME</a>, which lack a &quot;utility&quot; concept and produce misleading scores in non-linear models</li>
 </ul>
 <h3 id="the-disagreement-problem">The Disagreement Problem</h3>
 <ul>
@@ -68,9 +77,9 @@
 </ul>
 <h3 id="human-factors-and-unintentional-harm">Human Factors and Unintentional Harm</h3>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Human Factors Engineering (HFE)&quot;">Human Factors Engineering (HFE)</span></strong> as a framework for &quot;explainability pitfalls&quot; (EPs): unintended negative consequences of adding explanations</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/human-factors-engineering-hfe" title="No note is called &quot;Human Factors Engineering (HFE)&quot; yet — see who is asking for it">Human Factors Engineering (HFE)</a></strong> as a framework for &quot;explainability pitfalls&quot; (EPs): unintended negative consequences of adding explanations</li>
 <li>Study finding: both AI experts and non-experts displayed <strong>&quot;unwarranted faith in numbers&quot;</strong> — Q-values for robot actions perceived as intelligence signals even when opaque</li>
-<li>Remedy: <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span></strong> — strategically revealing information that aids and concealing information that distracts</li>
+<li>Remedy: <strong><a class="wikilink" href="/wiki/aneesh/concepts/seamful-design" title="Written [[Seamful Design]], resolved to seamful-design">Seamful Design</a></strong> — strategically revealing information that aids and concealing information that distracts</li>
 <li><strong>Counterfactual (&quot;what-if&quot;) explanations</strong> as tools for introducing productive cognitive friction and deliberate rather than automatic thinking</li>
 <li>Shift: from acceptance-driven AI adoption toward critical reflection</li>
 </ul>
@@ -84,7 +93,7 @@
 </ul>
 <h3 id="responsible-ai-as-the-frame">Responsible AI as the Frame</h3>
 <ul>
-<li><p>XAI inside a <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Responsible AI (RAI)&quot;">Responsible AI (RAI)</span></strong> framework with four pillars:</p>
+<li><p>XAI inside a <strong><a class="wikilink-wanted" href="/wiki/wanted/responsible-ai-rai" title="No note is called &quot;Responsible AI (RAI)&quot; yet — see who is asking for it">Responsible AI (RAI)</a></strong> framework with four pillars:</p>
 <ol>
 <li>Ethics (fairness, accountability, compliance)</li>
 <li>Explainability</li>
@@ -102,28 +111,41 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — central domain</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;SHAP&quot;">SHAP</span> — widely used attribution method, critiqued here</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LIME&quot;">LIME</span> — widely used attribution method, critiqued here</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Contextual Importance and Utility (CIU)&quot;">Contextual Importance and Utility (CIU)</span> — proposed alternative</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — design philosophy from HFE</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Responsible AI (RAI)&quot;">Responsible AI (RAI)</span> — broader framing</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Human Factors Engineering (HFE)&quot;">Human Factors Engineering (HFE)</span> — analytical framework for explainability pitfalls</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;MYCIN&quot;">MYCIN</span> — historical precedent (1970s medical AI)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counterfactual Explanations&quot;">Counterfactual Explanations</span> — practical tool for productive friction</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unwarranted Faith in Numbers&quot;">Unwarranted Faith in Numbers</span> — empirical finding on over-trust</li>
-<li>Related summary: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span> — Sathe&#x27;s product-practice companion piece</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainability Across Domains&quot;">Explainability Across Domains</span> — the shared design challenge</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency as Epistemic Virtue&quot;">Transparency as Epistemic Virtue</span> — the normative throughline</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — central domain</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/shap" title="No note is called &quot;SHAP&quot; yet — see who is asking for it">SHAP</a> — widely used attribution method, critiqued here</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/lime" title="No note is called &quot;LIME&quot; yet — see who is asking for it">LIME</a> — widely used attribution method, critiqued here</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/contextual-importance-and-utility-ciu" title="No note is called &quot;Contextual Importance and Utility (CIU)&quot; yet — see who is asking for it">Contextual Importance and Utility (CIU)</a> — proposed alternative</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/seamful-design" title="Written [[Seamful Design]], resolved to seamful-design">Seamful Design</a> — design philosophy from HFE</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/responsible-ai-rai" title="No note is called &quot;Responsible AI (RAI)&quot; yet — see who is asking for it">Responsible AI (RAI)</a> — broader framing</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/human-factors-engineering-hfe" title="No note is called &quot;Human Factors Engineering (HFE)&quot; yet — see who is asking for it">Human Factors Engineering (HFE)</a> — analytical framework for explainability pitfalls</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/mycin" title="No note is called &quot;MYCIN&quot; yet — see who is asking for it">MYCIN</a> — historical precedent (1970s medical AI)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/counterfactual-explanations" title="No note is called &quot;Counterfactual Explanations&quot; yet — see who is asking for it">Counterfactual Explanations</a> — practical tool for productive friction</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers" title="Written [[Unwarranted Faith in Numbers]], resolved to unwarranted-faith-in-numbers">Unwarranted Faith in Numbers</a> — empirical finding on over-trust</li>
+<li>Related summary: <a class="wikilink" href="/wiki/aneesh/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a> — Sathe&#x27;s product-practice companion piece</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/explainability-across-domains" title="Written [[Explainability Across Domains]], resolved to explainability-across-domains">Explainability Across Domains</a> — the shared design challenge</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue" title="Written [[Transparency as Epistemic Virtue]], resolved to transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a> — the normative throughline</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>695</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">0</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/explainable-ai">explainable-ai</a><a class="tag" href="/wiki/topics/responsible-ai">responsible-ai</a><a class="tag" href="/wiki/topics/human-factors">human-factors</a><a class="tag" href="/wiki/topics/decision-making">decision-making</a><span class="tag tag-lone" title="Only this note uses it">SHAP</span><span class="tag tag-lone" title="Only this note uses it">LIME</span><span class="tag tag-lone" title="Only this note uses it">CIU</span><a class="tag" href="/wiki/topics/xai">XAI</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

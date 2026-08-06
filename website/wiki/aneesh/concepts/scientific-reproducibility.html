@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Scientific Reproducibility</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Scientific Reproducibility</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/scientific-reproducibility.md">source on GitHub</a></div>
-  <div class="note-summary">The principle that scientific analyses must be re-runnable to produce the same results, and the data infrastructure requirements this imposes.</div>
-  <div class="tags"><span class="tag">science</span><span class="tag">reproducibility</span><span class="tag">data</span><span class="tag">compliance</span><span class="tag">biotech</span><span class="tag">open-formats</span><span class="tag">audit</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/scientific-reproducibility.md">source on GitHub</a></div>
+    <div class="note-summary">The principle that scientific analyses must be re-runnable to produce the same results, and the data infrastructure requirements this imposes.</div>
     <div class="prose">
 <p>Scientific reproducibility — the ability to re-run an analysis and get the same result — is a foundational epistemic norm of science. In practice, it is often violated, especially in computational biology and data-intensive research.</p>
 <h2 id="the-infrastructure-problem">The Infrastructure Problem</h2>
@@ -46,7 +55,7 @@
 </ol>
 <p>Most research labs handle 1 and 4 poorly. Data ends up on laptops, modified in-place, lost when people leave. A single plot on a poster may be the only evidence an experiment happened.</p>
 <h2 id="the-lakehouse-solution">The Lakehouse Solution</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span> architectures with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span> address data provenance and immutability directly:</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/data-lakehouse" title="Written [[Data Lakehouse]], resolved to data-lakehouse">Data Lakehouse</a> architectures with <a class="wikilink" href="/wiki/aneesh/concepts/ducklake" title="Written [[DuckLake]], resolved to ducklake">DuckLake</a> address data provenance and immutability directly:</p>
 <ul>
 <li><strong>Time-travel queries</strong>: &quot;reproduce this analysis as of 2025-07-14&quot; — exact state of all tables at that timestamp is accessible.</li>
 <li><strong>Column-level lineage</strong>: trace any value back to the instrument file that generated it.</li>
@@ -57,20 +66,50 @@
 <p>The &quot;reproducibility crisis&quot; in science (especially psychology, biomedical research) is partly an infrastructure problem but also an incentive problem: journals reward novelty, not replication. Data infrastructure can solve the former; it cannot solve the latter.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Open Data Formats&quot;">Open Data Formats</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Biotech Data Management&quot;">Biotech Data Management</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Why Every Biotech Research Group Needs a Data Lakehouse&quot;">Why Every Biotech Research Group Needs a Data Lakehouse</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-lakehouse" title="Written [[Data Lakehouse]], resolved to data-lakehouse">Data Lakehouse</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ducklake" title="Written [[DuckLake]], resolved to ducklake">DuckLake</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/open-data-formats" title="Written [[Open Data Formats]], resolved to open-data-formats">Open Data Formats</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/biotech-data-management" title="No note is called &quot;Biotech Data Management&quot; yet — see who is asking for it">Biotech Data Management</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse" title="Written [[Why Every Biotech Research Group Needs a Data Lakehouse]], resolved to why-every-biotech-research-group-needs-a-data-lakehouse">Why Every Biotech Research Group Needs a Data Lakehouse</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>262</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">6</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/transparency-in-scientific-method">Transparency in Scientific Method</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse">Why Every Biotech Research Group Needs a Data Lakehouse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-lakehouse">Data Lakehouse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ducklake">DuckLake</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/open-data-formats">Open Data Formats</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/infrastructure-and-epistemics">Infrastructure and Epistemics</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-lakehouse">Data Lakehouse</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/ducklake">DuckLake</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/open-data-formats">Open Data Formats</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse">Why Every Biotech Research Group Needs a Data Lakehouse</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/science">science</a><a class="tag" href="/wiki/topics/reproducibility">reproducibility</a><a class="tag" href="/wiki/topics/data">data</a><a class="tag" href="/wiki/topics/compliance">compliance</a><a class="tag" href="/wiki/topics/biotech">biotech</a><a class="tag" href="/wiki/topics/open-formats">open-formats</a><span class="tag tag-lone" title="Only this note uses it">audit</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

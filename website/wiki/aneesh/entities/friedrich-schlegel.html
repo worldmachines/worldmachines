@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Friedrich Schlegel</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Friedrich Schlegel</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/Friedrich%20Schlegel.md">source on GitHub</a></div>
-  <div class="note-summary">German philosopher and critic (1772-1829) who co-founded German Romanticism, invented romantic irony and the fragment form, and rejected Enlightenment foundationalism in favor of systematically unsystematic philosophizing.</div>
-  <div class="tags"><span class="tag">romanticism</span><span class="tag">jena-circle</span><span class="tag">counter-enlightenment</span><span class="tag">fragment</span><span class="tag">irony</span><span class="tag">anti-systematization</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/Friedrich%20Schlegel.md">source on GitHub</a></div>
+    <div class="note-summary">German philosopher and critic (1772-1829) who co-founded German Romanticism, invented romantic irony and the fragment form, and rejected Enlightenment foundationalism in favor of systematically unsystematic philosophizing.</div>
     <div class="prose">
 <p>Friedrich Schlegel (1772-1829) was a German philosopher, literary critic, and central figure of the <a class="wikilink" href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a>. With his brother August Wilhelm, he co-founded the <em>Athenaeum</em> journal (1798-1800), the organ of early German Romanticism.</p>
 <h2 id="core-contributions">Core Contributions</h2>
@@ -50,9 +59,9 @@
 <h2 id="systematically-unsystematic">Systematically Unsystematic</h2>
 <p>Schlegel was &quot;systematically unsystematic&quot; — per Athenaeum Fragment 53, his writing was to be simultaneously system and non-system, instantiating mutually exclusive binaries. He mocked Fichte as &quot;a drunk who clambers up one side of a horse only to fall off the other.&quot;</p>
 <h2 id="intellectual-lineage">Intellectual Lineage</h2>
-<p>Schlegel was directly influenced by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span>&#x27;s historicism, which enabled him to recognize modern poetry as a valuable new type rather than a violation of classical rules. Herder&#x27;s aesthetic historicism &quot;enabled the Schlegel brothers to achieve a much deeper understanding of ancient tragedy.&quot;</p>
+<p>Schlegel was directly influenced by <a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a>&#x27;s historicism, which enabled him to recognize modern poetry as a valuable new type rather than a violation of classical rules. Herder&#x27;s aesthetic historicism &quot;enabled the Schlegel brothers to achieve a much deeper understanding of ancient tragedy.&quot;</p>
 <h2 id="the-conversion">The Conversion</h2>
-<p>Schlegel&#x27;s later conversion to Catholicism and conservatism is itself significant — the ironic anti-systematizer became a dogmatist, illustrating the instability of the Romantic position. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Romanticism and Political Danger&quot;">Romanticism and Political Danger</span>, <a class="wikilink" href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a>.</p>
+<p>Schlegel&#x27;s later conversion to Catholicism and conservatism is itself significant — the ironic anti-systematizer became a dogmatist, illustrating the instability of the Romantic position. See <a class="wikilink" href="/wiki/aneesh/concepts/romanticism-and-political-danger" title="Written [[Romanticism and Political Danger]], resolved to romanticism-and-political-danger">Romanticism and Political Danger</a>, <a class="wikilink" href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a>.</p>
 <h2 id="relevance-to-ai-homogenization">Relevance to AI Homogenization</h2>
 <p>The fragment is structurally a form that resists compression. It insists that each unit of thought be &quot;complete in itself like a hedgehog&quot; while remaining irreducible to any larger system. This is analogous to arguments against LLM-mediated knowledge, where everything passes through a single statistical model that compresses variation toward the mean. See <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">ai-homogenization-and-the-counter-enlightenment</a>.</p>
 <h2 id="sources">Sources</h2>
@@ -62,19 +71,45 @@
 <li><a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">isaiah-berlin-against-the-current</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">5</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/novalis">Novalis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>529</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">5</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/novalis">Novalis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-diversity">Cognitive Diversity</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturphilosophie">Naturphilosophie</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/novalis">Novalis</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/romanticism">romanticism</a><a class="tag" href="/wiki/topics/jena-circle">jena-circle</a><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><span class="tag tag-lone" title="Only this note uses it">fragment</span><span class="tag tag-lone" title="Only this note uses it">irony</span><span class="tag tag-lone" title="Only this note uses it">anti-systematization</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

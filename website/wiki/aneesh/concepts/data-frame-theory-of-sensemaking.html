@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Data-Frame Theory of Sensemaking</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Data-Frame Theory of Sensemaking</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/data-frame-theory-of-sensemaking.md">source on GitHub</a></div>
-  <div class="note-summary">Gary Klein et al&#x27;s theory that sensemaking is a recursive, mutually constitutive relationship between data and frames — the most empirically grounded current account of how humans make sense of ambiguous situations.</div>
-  <div class="tags"><span class="tag">sensemaking</span><span class="tag">cognitive-science</span><span class="tag">decision-making</span><span class="tag">frames</span><span class="tag">naturalistic-decision-making</span><span class="tag">gary-klein</span><span class="tag">expertise</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/data-frame-theory-of-sensemaking.md">source on GitHub</a></div>
+    <div class="note-summary">Gary Klein et al&#x27;s theory that sensemaking is a recursive, mutually constitutive relationship between data and frames — the most empirically grounded current account of how humans make sense of ambiguous situations.</div>
     <div class="prose">
 <h2 id="core-definition">Core Definition</h2>
 <blockquote><p>&quot;Sensemaking is the process of fitting data into a frame and fitting a frame around the data.&quot; — Klein et al, 2007</p></blockquote>
@@ -64,7 +73,7 @@ Anomalous data appears → Preservation OR Reframing</code></pre>
 <li>Anomalous data encountered</li>
 <li>Practitioner dismisses it or reintegrates it as a gap rather than a threat</li>
 <li>Reinforces current frame</li>
-<li>Can be rational (anomaly is genuinely low-quality data) or pathological (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span>)</li>
+<li>Can be rational (anomaly is genuinely low-quality data) or pathological (see <a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a>)</li>
 </ul>
 <h3 id="4-reframing-cycle">4. Reframing Cycle</h3>
 <ul>
@@ -79,65 +88,124 @@ Anomalous data appears → Preservation OR Reframing</code></pre>
 <tr><td>Anchors per frame</td><td>≤3–4</td></tr>
 <tr><td>Parallel frames (expert max)</td><td>2–3</td></tr>
 <tr><td>Expert-novice difference</td><td>Not process, but mental model richness and frame repertoire</td></tr>
-<tr><td>Dominant reasoning mode</td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Abductive Reasoning&quot;">Abductive Reasoning</span> — inference to best explanation</td></tr>
+<tr><td>Dominant reasoning mode</td><td><a class="wikilink" href="/wiki/aneesh/concepts/abductive-reasoning" title="Written [[Abductive Reasoning]], resolved to abductive-reasoning">Abductive Reasoning</a> — inference to best explanation</td></tr>
 <tr><td>Trigger for sensemaking</td><td>Surprise / violated expectancy</td></tr>
 </tbody>
 </table></div>
 <h2 id="what-the-theory-challenges">What the Theory Challenges</h2>
 <ul>
-<li><strong>Confirmation bias as a &quot;bias&quot;</strong>: In naturalistic settings, what looks like confirmation bias is rational frame-guided information seeking. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heuristics and Biases vs. Naturalistic Decision Making&quot;">Heuristics and Biases vs. Naturalistic Decision Making</span></li>
+<li><strong>Confirmation bias as a &quot;bias&quot;</strong>: In naturalistic settings, what looks like confirmation bias is rational frame-guided information seeking. See <a class="wikilink-wanted" href="/wiki/wanted/heuristics-and-biases-vs-naturalistic-decision-making" title="No note is called &quot;Heuristics and Biases vs. Naturalistic Decision Making&quot; yet — see who is asking for it">Heuristics and Biases vs. Naturalistic Decision Making</a></li>
 <li><strong>The data→insight pipeline</strong>: Frame construction, not data volume, is the high-order bit for analysis quality</li>
 <li><strong>&quot;Keep an open mind&quot; advice</strong>: Practitioners who use this strategy consistently underperform those who commit early to frames and monitor vigilantly for anomalies</li>
 </ul>
 <h2 id="anchor-lock-in-problem">Anchor Lock-In Problem</h2>
-<p>A data point used as an anchor for one frame is cognitively difficult to redeploy as an anchor for a different frame. This is a structural source of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span>. Strategies to counter it:</p>
+<p>A data point used as an anchor for one frame is cognitively difficult to redeploy as an anchor for a different frame. This is a structural source of <a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a>. Strategies to counter it:</p>
 <ul>
 <li>Medicine: &quot;logical competitor set&quot; — organizing competing diagnoses by shared symptom presentation</li>
 <li>Dynamic domains: build large fragment libraries so alternative frame construction is cheap</li>
 </ul>
 <h2 id="origins-and-validation">Origins and Validation</h2>
-<p>Developed at the Klein Associates research group, funded initially by US Army Research Institute. Draws on naturalistic fieldwork across: military intelligence, NICU nurses, fireground commanders, weather forecasters. Positioned within the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> tradition.</p>
+<p>Developed at the Klein Associates research group, funded initially by US Army Research Institute. Draws on naturalistic fieldwork across: military intelligence, NICU nurses, fireground commanders, weather forecasters. Positioned within the <a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> tradition.</p>
 <h2 id="related-frameworks">Related Frameworks</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Karl Weick&quot;">Karl Weick</span>&#x27;s sensemaking — similar bidirectional process, but emphasizes retrospective sense-making, organizational context, and narrative identity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cynefin Framework&quot;">Cynefin Framework</span> — maps different decision contexts; the Data-Frame theory describes the cognitive process within complex/chaotic domains</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> — extracts the tacit frames and mental models that expert performance depends on</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/karl-weick" title="Written [[Karl Weick]], resolved to karl-weick">Karl Weick</a>&#x27;s sensemaking — similar bidirectional process, but emphasizes retrospective sense-making, organizational context, and narrative identity</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cynefin-framework" title="Written [[Cynefin Framework]], resolved to cynefin-framework">Cynefin Framework</a> — maps different decision contexts; the Data-Frame theory describes the cognitive process within complex/chaotic domains</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> — extracts the tacit frames and mental models that expert performance depends on</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — the main failure mode</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Abductive Reasoning&quot;">Abductive Reasoning</span> — the cognitive mode of frame construction</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — parent research tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heuristics and Biases&quot;">Heuristics and Biases</span> — opposing paradigm</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — principal researcher</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Karl Weick&quot;">Karl Weick</span> — related sensemaking theorist</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span> — Chin&#x27;s applied treatment</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Klein, Data-Frame Theory (2007)&quot;">Klein, Data-Frame Theory (2007)</span> — source paper</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — the main failure mode</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/abductive-reasoning" title="Written [[Abductive Reasoning]], resolved to abductive-reasoning">Abductive Reasoning</a> — the cognitive mode of frame construction</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — parent research tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/heuristics-and-biases" title="Written [[Heuristics and Biases]], resolved to heuristics-and-biases">Heuristics and Biases</a> — opposing paradigm</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — principal researcher</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/karl-weick" title="Written [[Karl Weick]], resolved to karl-weick">Karl Weick</a> — related sensemaking theorist</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a> — Chin&#x27;s applied treatment</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/klein-data-frame-theory-2007" title="No note is called &quot;Klein, Data-Frame Theory (2007)&quot; yet — see who is asking for it">Klein, Data-Frame Theory (2007)</a> — source paper</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">15</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/summaries/klein-data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/assumption-ground">Assumption-Ground</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/cognitive-map-tuan">Cognitive Map (Tuan)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/egocentric-allocentric-spatial-development">Egocentric to Allocentric Spatial Development</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/geophilosophy-three-dimensions">Geophilosophy: Three Dimensions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/index-of-the-interesting">Index of the Interesting</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/onto-cartography-as-practice">Onto-Cartography as Practice</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch8-earth-maps-practices">Onto-Cartography Ch 8: Earth, Maps, and Practices — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/prenotions">Prenotions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/route-vs-survey-knowledge">Route vs. Survey Knowledge</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/strategic-cartography">Strategic Cartography</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>43</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>628</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">43</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/frames-and-framing">Frames and Framing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/karl-weick">Karl E. Weick</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sensemaking-forms">Forms of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/anchoring-in-sensemaking">Anchoring in Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>35 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/macrocognition">Macrocognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fixation-error">Fixation Error</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/egocentric-allocentric-spatial-development">Egocentric to Allocentric Spatial Development</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/reframing">Reframing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/abductive-reasoning">Abductive Reasoning</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/recognition-primed-decision-model">Recognition-Primed Decision Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/just-in-time-mental-models">Just-in-Time Mental Models</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/heuristics-and-biases">Heuristics and Biases</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/onto-cartography-as-practice">Onto-Cartography as Practice</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/assumption-ground">Assumption-Ground</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-to-make-sense-of-ai">How to Make Sense of AI (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/index-of-the-interesting">Index of the Interesting</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/prenotions">Prenotions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-questions-of-uncertainty">Four Questions of Uncertainty</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/strategic-cartography">Strategic Cartography</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-the-unit-of-cognition">Frames as the Unit of Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/route-vs-survey-knowledge">Route vs. Survey Knowledge</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-map-tuan">Cognitive Map (Tuan)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/geophilosophy-three-dimensions">Geophilosophy: Three Dimensions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch8-earth-maps-practices">Onto-Cartography Ch 8: Earth, Maps, and Practices — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/klein-data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/data-and-frames-in-analysis-and-art">Data is Always Constructed: From Sensemaking to Art</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-information-overload">Sensemaking and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein">The Literary and Cognitive Faces of Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-sensemaker-and-the-explorer">The Sensemaker and the Explorer</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/theorizing-as-sensemaking-weick-klein-convergence">Theorizing as Sensemaking — The Weick-Klein Convergence</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/frames-and-framing">Frames and Framing</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/sensemaking-forms">Forms of Sensemaking</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/concepts/anchoring-in-sensemaking">Anchoring in Sensemaking</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/macrocognition">Macrocognition</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/fixation-error">Fixation Error</a><span class="rail-where">10</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/cognitive-science">cognitive-science</a><a class="tag" href="/wiki/topics/decision-making">decision-making</a><a class="tag" href="/wiki/topics/frames">frames</a><a class="tag" href="/wiki/topics/naturalistic-decision-making">naturalistic-decision-making</a><a class="tag" href="/wiki/topics/gary-klein">gary-klein</a><a class="tag" href="/wiki/topics/expertise">expertise</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

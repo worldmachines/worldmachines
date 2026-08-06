@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale.md">source on GitHub</a></div>
-  <div class="note-summary">A Canon and his soot-stained Yeoman gallop up to overtake Chaucer&#x27;s pilgrims, and once the ashamed Canon flees mid-conversation, the Yeoman confesses seven ruinous years of practicing alchemy before narrating how a fraudulent canon fleeces a credulous London priest with rigged demonstrations of transmuting quicksilver into silver, closing with a moral verdict that the philosopher&#x27;s stone is unattainable because God has reserved its secret to himself.</div>
-  <div class="tags"><span class="tag">alchemy</span><span class="tag">fraud</span><span class="tag">confession</span><span class="tag">medieval-satire</span><span class="tag">canterbury-tales</span><span class="tag">avarice</span><span class="tag">secrecy</span><span class="tag">capture</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/dark-forestry">dark-forestry</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale.md">source on GitHub</a></div>
+    <div class="note-summary">A Canon and his soot-stained Yeoman gallop up to overtake Chaucer&#x27;s pilgrims, and once the ashamed Canon flees mid-conversation, the Yeoman confesses seven ruinous years of practicing alchemy before narrating how a fraudulent canon fleeces a credulous London priest with rigged demonstrations of transmuting quicksilver into silver, closing with a moral verdict that the philosopher&#x27;s stone is unattainable because God has reserved its secret to himself.</div>
     <div class="prose">
 <p>A Canon and his Yeoman, riding hard and sweating visibly, overtake the pilgrim company at Boughton-under-Blee. The Host, sensing a good story in the Canon&#x27;s boast that he could pave the road to Canterbury with silver and gold, presses the Yeoman for details; the Yeoman&#x27;s answers grow steadily more damning until the Canon, overhearing himself accused of fraud, flees in shame. Freed of his master&#x27;s presence, the Yeoman delivers a two-part confession: first his own seven wasted years and ruined body from alchemical &quot;multiplying,&quot; studded with dense, deliberately unintelligible technical vocabulary, and then a cautionary exemplum about a different, more cunning canon who cons a gullible London priest out of forty pounds through a staged trick of transmuting base metal into silver. The piece closes with a moralizing coda citing Arnold of Villanova and a pseudo-Platonic dialogue on the secrecy of the philosopher&#x27;s stone, concluding that pursuing it is to make God one&#x27;s adversary.</p>
 <h2 id="themes">Themes</h2>
@@ -51,15 +59,32 @@
 <p>The mechanics of the fraud itself — the beechen coal packed with silver filings, timed to release its hidden metal into the crucible exactly when the priest isn&#x27;t looking — is the tale&#x27;s technical and thematic center, showing precisely how counterfeit proof is manufactured and passed off as verified fact.</p>
 <p>The closing theological turn, refusing to let alchemy be pursued further because &quot;God of heaven / Will not that these philosophers neven&quot; how the stone is made, reframes the entire preceding fraud as a lesson in the folly of contesting a will one cannot see or check.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>924</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">1</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/dark-forestry">dark-forestry</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">alchemy</span><a class="tag" href="/wiki/topics/fraud">fraud</a><a class="tag" href="/wiki/topics/confession">confession</a><a class="tag" href="/wiki/topics/medieval-satire">medieval-satire</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><a class="tag" href="/wiki/topics/avarice">avarice</a><span class="tag tag-lone" title="Only this note uses it">secrecy</span><a class="tag" href="/wiki/topics/capture">capture</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

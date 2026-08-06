@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Simultaneity of Multiple Trajectories</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Simultaneity of Multiple Trajectories</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/simultaneity-of-multiple-trajectories.md">source on GitHub</a></div>
-  <div class="note-summary">Massey&#x27;s compressed name for her positive thesis about space: space is what holds the coexistence of many ongoing &#x27;stories-so-far&#x27; open against the temptation to flatten them into a single line.</div>
-  <div class="tags"><span class="tag">massey</span><span class="tag">for-space</span><span class="tag">trajectories</span><span class="tag">stories-so-far</span><span class="tag">multiplicity</span><span class="tag">space</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/simultaneity-of-multiple-trajectories.md">source on GitHub</a></div>
+    <div class="note-summary">Massey&#x27;s compressed name for her positive thesis about space: space is what holds the coexistence of many ongoing &#x27;stories-so-far&#x27; open against the temptation to flatten them into a single line.</div>
     <div class="prose">
 <p>A signature Massey phrase used throughout <em>For Space</em> (2005) but consolidated in Chapter 5. Where <a class="wikilink" href="/wiki/aneesh/concepts/dynamic-simultaneity">dynamic-simultaneity</a> names the <strong>slice</strong> (the spatial &quot;now&quot;), this concept names the <strong>elements</strong> of that slice: trajectories, each carrying its own temporality, each a &quot;story so far.&quot;</p>
 <blockquote><p>&quot;[Space is] the sphere of coexisting multiplicity . . . space as a simultaneity of stories-so-far.&quot; (Massey 2005: 54; cf. <em>For Space</em> preface, p. 9: &quot;the sphere of the possibility of the existence of multiplicity in the sense of contemporaneous plurality&quot;)</p></blockquote>
@@ -59,24 +68,55 @@
 <h2 id="source">Source</h2>
 <p>Massey, D. (2005). <em>For Space</em>. London: SAGE. Chapter 5 and <em>passim</em>; preface formulation p. 9.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">10</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/positive-versus-negative-multiplicity">Positive versus Negative Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/simultaneity-of-stories-so-far">Simultaneity of Stories-So-Far</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-event">Space as Event</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/stories-so-far">Stories-So-Far</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-co-implication-of-space-and-time">The Co-Implication of Space and Time</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/horizontalities-of-deconstruction">The Horizontalities of Deconstruction</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>336</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">10</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/positive-versus-negative-multiplicity">Positive versus Negative Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/horizontalities-of-deconstruction">The Horizontalities of Deconstruction</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-event">Space as Event</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-co-implication-of-space-and-time">The Co-Implication of Space and Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/simultaneity-of-stories-so-far">Simultaneity of Stories-So-Far</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/stories-so-far">Stories-So-Far</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-always-under-construction">Space as Always Under Construction</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/ernesto-laclau">Ernesto Laclau (1935–2014)</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/massey">massey</a><a class="tag" href="/wiki/topics/for-space">for-space</a><a class="tag" href="/wiki/topics/trajectories">trajectories</a><span class="tag tag-lone" title="Only this note uses it">stories-so-far</span><a class="tag" href="/wiki/topics/multiplicity">multiplicity</a><a class="tag" href="/wiki/topics/space">space</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

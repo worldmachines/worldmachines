@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Reframing</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Reframing</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/reframing.md">source on GitHub</a></div>
-  <div class="note-summary">Reframing is the replacement of one explanatory frame with another — requiring simultaneous substitution of anchors and data reinterpretation, and distinguishable from both fixation (failure to reframe) and diagnostic vagabonding (reframing without commitment).</div>
-  <div class="tags"><span class="tag">sensemaking</span><span class="tag">cognition</span><span class="tag">frames</span><span class="tag">naturalistic-decision-making</span><span class="tag">problem-solving</span><span class="tag">macrocognition</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/reframing.md">source on GitHub</a></div>
+    <div class="note-summary">Reframing is the replacement of one explanatory frame with another — requiring simultaneous substitution of anchors and data reinterpretation, and distinguishable from both fixation (failure to reframe) and diagnostic vagabonding (reframing without commitment).</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p><strong>Reframing</strong> is the process of replacing the current explanatory frame with a new one. It is one of the seven forms of sensemaking identified by Klein et al. (2007) and represents the most significant cognitive transition in the data-frame model: a change not in data or details but in the fundamental structure through which the situation is understood.</p>
@@ -42,7 +51,7 @@
 <p>Weick (1995): &quot;During reframing people consider data elements that had previously been discarded, so that formerly discrepant cues now fit.&quot;</p>
 <p>This is the signature of genuine reframing: data that were previously explained away, discarded as noise, or categorized as irrelevant become central to the new understanding. The NICU nurse example (Example 5) illustrates this: the nurse maintained two frames simultaneously — &quot;making a good recovery&quot; and &quot;developing sepsis&quot; — and eventually the accumulating anomalies (limpness, skin color, bradys, residual) made the sepsis frame dominant, reinterpreting all the previous normal readings.</p>
 <h2 id="the-anchor-replacement-problem">The Anchor Replacement Problem</h2>
-<p>Reframing is difficult because anchors that have been used to build one frame are difficult to use in a competing frame. This &quot;rival use&quot; of anchors creates conceptual strain. Experts develop &quot;logical competitor sets&quot; (LCS) — memory structures that activate competing diagnoses simultaneously — specifically to manage this problem. LCS lets an expert decouple anchors from their initial frame, allowing them to serve double duty. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anchoring in Sensemaking&quot;">Anchoring in Sensemaking</span>.</p>
+<p>Reframing is difficult because anchors that have been used to build one frame are difficult to use in a competing frame. This &quot;rival use&quot; of anchors creates conceptual strain. Experts develop &quot;logical competitor sets&quot; (LCS) — memory structures that activate competing diagnoses simultaneously — specifically to manage this problem. LCS lets an expert decouple anchors from their initial frame, allowing them to serve double duty. See <a class="wikilink" href="/wiki/aneesh/concepts/anchoring-in-sensemaking" title="Written [[Anchoring in Sensemaking]], resolved to anchoring-in-sensemaking">Anchoring in Sensemaking</a>.</p>
 <h2 id="reframing-vs-elaboration">Reframing vs. Elaboration</h2>
 <p>Elaborating a frame adds detail without changing its structure. Reframing changes the structure — the causal story, the script, the map — that organizes all the data. A partial indicator: after elaboration, the previously perceived data remain in place; after reframing, they may be reinterpreted entirely.</p>
 <p>The shading between elaboration and reframing is continuous. The helicopter accident (Example 3) shows sequential reframing through anchor replacement — each new anchor suggesting a better frame, with the previous frame fading away. Whether each step was &quot;elaboration&quot; or &quot;reframing&quot; is partly a matter of degree.</p>
@@ -50,7 +59,7 @@
 <p>Duncker (1945) introduced the concept of insight as requiring reframing. His &quot;radiation problem&quot; — how to use radiation to destroy a tumor without damaging surrounding tissue — was unsolvable as long as subjects held the initial frame (&quot;use radiation to treat a tumor without destroying healthy tissue&quot;). Subjects who could reframe it (&quot;how to minimize radiation intensity except at the site of the tumor&quot;) discovered the solution of converging weak beams. The solution was not obscure; it was invisible within the original frame.</p>
 <p>This connects reframing to the broader literature on creative problem-solving and insight: the Aha moment is often a frame replacement, not a new piece of information.</p>
 <h2 id="reframing-vs-diagnostic-vagabonding">Reframing vs. Diagnostic Vagabonding</h2>
-<p>The pathological excess of reframing is <strong>diagnostic vagabonding</strong> (Dörner, 1996; Rudolph, 2003): continual reframing without sufficient commitment to any frame to test it properly. Rudolph found vagabonding to be nearly as dysfunctional as <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fixation Error&quot;">Fixation Error</span>. The optimal is:</p>
+<p>The pathological excess of reframing is <strong>diagnostic vagabonding</strong> (Dörner, 1996; Rudolph, 2003): continual reframing without sufficient commitment to any frame to test it properly. Rudolph found vagabonding to be nearly as dysfunctional as <a class="wikilink" href="/wiki/aneesh/concepts/fixation-error" title="Written [[Fixation Error]], resolved to fixation-error">Fixation Error</a>. The optimal is:</p>
 <ul>
 <li>Sufficient commitment to generate specific expectancies (which anomalies become detectable against)</li>
 <li>Sufficient openness to recognize when expectancies are systematically violated</li>
@@ -62,25 +71,64 @@
 <p>Klein et al. emphasize that reframing is not just an epistemic achievement — it changes what a practitioner does. Functional sensemaking means knowing what to do in a situation. Reframing changes the action repertoire: Captain L. in the laundry chute fire reframes from &quot;basement fire&quot; to &quot;heavily involved building&quot; and immediately shifts strategy from attack to search-and-rescue, radios for a &quot;triple two&quot; alarm, and dispatches his truck crew to the fourth floor. The reframing was not abstract; it was action-generating.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames and Framing&quot;">Frames and Framing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking Forms&quot;">Sensemaking Forms</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fixation Error&quot;">Fixation Error</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anchoring in Sensemaking&quot;">Anchoring in Sensemaking</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Just-in-Time Mental Models&quot;">Just-in-Time Mental Models</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> (summary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Macrocognition&quot;">Macrocognition</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frames-and-framing" title="Written [[Frames and Framing]], resolved to frames-and-framing">Frames and Framing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sensemaking-forms" title="Written [[Sensemaking Forms]], resolved to sensemaking-forms">Sensemaking Forms</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fixation-error" title="Written [[Fixation Error]], resolved to fixation-error">Fixation Error</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anchoring-in-sensemaking" title="Written [[Anchoring in Sensemaking]], resolved to anchoring-in-sensemaking">Anchoring in Sensemaking</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/just-in-time-mental-models" title="Written [[Just-in-Time Mental Models]], resolved to just-in-time-mental-models">Just-in-Time Mental Models</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/macrocognition" title="Written [[Macrocognition]], resolved to macrocognition">Macrocognition</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/geophilosophy-three-dimensions">Geophilosophy: Three Dimensions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/strategic-cartography">Strategic Cartography</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>699</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span><span class="rail-count">10</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/frames-and-framing">Frames and Framing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sensemaking-forms">Forms of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fixation-error">Fixation Error</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/strategic-cartography">Strategic Cartography</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-the-unit-of-cognition">Frames as the Unit of Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/geophilosophy-three-dimensions">Geophilosophy: Three Dimensions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/klein-data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking — Klein, Phillips, Rall &amp; Peluso (2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/frames-and-framing">Frames and Framing</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/macrocognition">Macrocognition</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/anchoring-in-sensemaking">Anchoring in Sensemaking</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/fixation-error">Fixation Error</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/karl-weick">Karl E. Weick</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/cognition">cognition</a><a class="tag" href="/wiki/topics/frames">frames</a><a class="tag" href="/wiki/topics/naturalistic-decision-making">naturalistic-decision-making</a><a class="tag" href="/wiki/topics/problem-solving">problem-solving</a><a class="tag" href="/wiki/topics/macrocognition">macrocognition</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>
