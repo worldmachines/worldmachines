@@ -14,6 +14,7 @@ Live site: **[worldmachines.org](https://worldmachines.org)**
 | `wiki/` | AI-organized shared knowledge base, generated from raw notes and reviewed by humans |
 | `website/` | The public site: article aggregator, contributor profiles, Oracle (RAG over notes corpus) |
 | `tools/` | Offline tooling, including the notes-to-Parquet pipeline for the Oracle |
+| `apps/scribe/` | [Scribe](apps/scribe/README.md) — installable PWA + Worker for capturing notes into `raw-notes/` from a phone |
 
 ---
 

@@ -1,0 +1,16 @@
+{
+  "name": "wm-scribe",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Scribe — mobile-first note capture for the World Machines book club (Cloudflare Worker + PWA).",
+  "scripts": {
+    "dev": "wrangler dev",
+    "index": "node scripts/build-index.mjs",
+    "test": "node test/notes.test.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.90.1"
+  }
+}

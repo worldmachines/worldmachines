@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+
+  // Scribe — note capture for the World Machines book club.
+  //   local:  npx wrangler dev          (identity faked from .dev.vars; every save is a dry-run)
+  //   deploy: see README.md "Shipping it" — the orchestrator's job, not the app's.
+  "name": "wm-scribe",
+  "main": "src/index.js",
+  "compatibility_date": "2026-05-12",
+
+  // SECURITY, not tidiness. In the deployed configuration the Worker trusts the
+  // `Cf-Access-Authenticated-User-Email` header (or, better, verifies the Access
+  // JWT — see ACCESS_* below). A *.workers.dev hostname is NOT behind Access, so
+  // leaving it enabled would expose an ungated origin where anyone could set that
+  // header themselves. Off means the ONLY way in is the Access-gated route below.
+  "workers_dev": false,
+
+  // The Access-gated custom domain. Left commented because creating it is a deploy
+  // decision (it provisions DNS on the zone) — uncomment once the Access application
+  // exists, then `npx wrangler deploy`. With no route and workers_dev:false the
+  // Worker deploys but is deliberately unreachable, which is the safe default.
+  //
+  // "routes": [
+  //   { "pattern": "scribe.worldmachines.org", "custom_domain": true }
+  // ],
+
+  // Contributor registry: email → {handle, name, url, bio}. The SAME namespace the
+  // website uses (website/wrangler.jsonc) — one registry, so a member who can submit
+  // writing on worldmachines.org can capture notes here with no second onboarding.
+  "kv_namespaces": [
+    {
+      "binding": "HANDLES",
+      "id": "fc2ed69d95644b8298777e3318240e1c"
+    }
+  ],
+
+  // Non-secret configuration. GITHUB_TOKEN is a SECRET and is deliberately absent:
+  //   npx wrangler secret put GITHUB_TOKEN     # fine-grained PAT, Contents: R/W
+  // Until it is set, every write route returns a dry-run plan and makes no network
+  // call. That is the intended shipping state for the first round of use.
+  //
+  // ACCESS_TEAM_DOMAIN + ACCESS_AUD switch identity from "trust the header Access
+  // injects" to "verify the Access JWT signature and claims in the Worker". Set BOTH
+  // (they are identifiers, not secrets) as soon as the Access application exists —
+  // they are kept here rather than passed with `--var` so a later deploy cannot
+  // silently drop them and fall back to the weaker mode. Their presence also disables
+  // DEV_USER_EMAIL outright, so a stray dev var cannot open a bypass on a deploy.
+  //
+  //   "ACCESS_TEAM_DOMAIN": "<team>.cloudflareaccess.com",   // host only, no scheme
+  //   "ACCESS_AUD": "<the Access application's Audience tag>",
+  "vars": {
+    "GITHUB_REPO": "worldmachines/worldmachines",
+    "GITHUB_BRANCH": "main"
+  },
+
+  // The PWA. run_worker_first means the Worker sees every request and hands
+  // everything that isn't /api/* back to this binding (env.ASSETS.fetch), which is
+  // also how src/lib/corpus.js reads the baked note index.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+
+  "observability": { "enabled": true }
+}

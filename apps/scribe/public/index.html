@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a4c8a" />
+  <title>Scribe — World Machines</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icons/icon.svg" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- No in-app login. The host sits behind Cloudflare Access, so identity arrives
+       with the request; the Worker resolves it to a handle and the app just asks
+       /api/me who it is. If that fails, this gate explains why. -->
+  <div id="gate" class="gate" hidden>
+    <div class="gate-card">
+      <div class="gate-mark" aria-hidden="true">✒</div>
+      <h1>Scribe</h1>
+      <p id="gate-msg" class="gate-msg">Checking who you are…</p>
+      <p class="gate-hint">Scribe writes into your own <code>raw-notes/</code> directory,
+        so it has to know which member you are.</p>
+    </div>
+  </div>
+
+  <div id="app" hidden>
+    <header class="topbar">
+      <div class="topbar-title">Scribe</div>
+      <div class="topbar-actions">
+        <span id="who" class="who"></span>
+        <span id="mode-badge" class="badge badge-warn">dry-run</span>
+      </div>
+    </header>
+    <div id="notice" class="notice" hidden></div>
+    <div id="offline" class="offline-bar" hidden>Offline — your draft is kept on this device.</div>
+
+    <main class="views">
+      <!-- =========================== CAPTURE =========================== -->
+      <section id="view-capture" class="view" data-view="capture">
+        <div class="segmented" role="tablist" aria-label="Note type">
+          <button class="seg is-active" data-type="observation" type="button">Thought</button>
+          <button class="seg" data-type="book" type="button">Book</button>
+          <button class="seg" data-type="glossary" type="button">Glossary</button>
+          <button class="seg" data-type="link" type="button">Link</button>
+        </div>
+        <p id="type-hint" class="hint"></p>
+
+        <form id="capture-form" class="card" autocomplete="off">
+          <!-- BOOK: which shared reading this note is about. The source-id is what the
+               note's `source:` frontmatter must match. -->
+          <label class="field" id="f-source" hidden>
+            <span>Book <em class="muted">(shared reading under <code>commons/reading/</code>)</em></span>
+            <select id="c-source">
+              <option value="">Pick a book…</option>
+            </select>
+          </label>
+
+          <!-- BOOK: the section(s) of that book this note answers. -->
+          <div class="field" id="f-reading" hidden>
+            <span>Reading notes to link <em class="muted">(optional)</em></span>
+            <div class="picker">
+              <input id="c-reading-q" type="search" placeholder="Search this book's notes…"
+                     role="combobox" aria-expanded="false" aria-controls="c-reading-list" />
+              <ul class="suggest" id="c-reading-list" role="listbox" hidden></ul>
+            </div>
+            <ul class="chips" id="c-reading-chips"></ul>
+          </div>
+
+          <label class="field" id="f-term" hidden>
+            <span>Term</span>
+            <input id="c-term" type="text" placeholder="Legibility Machine" />
+          </label>
+          <label class="field" id="f-aliases" hidden>
+            <span>Aliases <em class="muted">(comma-separated, optional)</em></span>
+            <input id="c-aliases" type="text" placeholder="legibility machines" />
+          </label>
+          <label class="field" id="f-status" hidden>
+            <span>Status</span>
+            <select id="c-status">
+              <option value="seed">seed — first sketch</option>
+              <option value="developing">developing — being worked out</option>
+              <option value="settled">settled — the group agrees</option>
+            </select>
+          </label>
+
+          <label class="field" id="f-title">
+            <span id="l-title">Title</span>
+            <input id="c-title" type="text" placeholder="What is this note called?" />
+          </label>
+          <p id="slug-preview" class="slug-preview" hidden></p>
+
+          <!-- LINK: the notes this one ties together. -->
+          <div class="field" id="f-connects" hidden>
+            <span>Notes to connect</span>
+            <div class="picker">
+              <input id="c-connect-q" type="search" placeholder="Search all notes…"
+                     role="combobox" aria-expanded="false" aria-controls="c-connect-list" />
+              <ul class="suggest" id="c-connect-list" role="listbox" hidden></ul>
+            </div>
+            <ul class="chips" id="c-connect-chips"></ul>
+          </div>
+
+          <label class="field">
+            <span id="l-body">Note <em class="muted">(Markdown)</em></span>
+            <textarea id="c-body" rows="8" placeholder="Write freely — nothing here needs to be polished."></textarea>
+          </label>
+          <div class="body-tools">
+            <button id="c-insert-link" type="button" class="btn btn-ghost btn-mini"
+              title="Search existing notes and insert a [[wiki-link]] at the cursor">⧉ Insert [[link]]</button>
+            <span id="link-status" class="small muted"></span>
+          </div>
+          <div class="picker" id="f-inline-link" hidden>
+            <input id="c-inline-q" type="search" placeholder="Search notes to link…"
+                   role="combobox" aria-expanded="false" aria-controls="c-inline-list" />
+            <ul class="suggest" id="c-inline-list" role="listbox" hidden></ul>
+          </div>
+
+          <label class="field">
+            <span>Summary <em class="muted">(one line — this is what the Oracle shows)</em></span>
+            <input id="c-summary" type="text" placeholder="One sentence on what this note says" />
+          </label>
+
+          <label class="field" for="c-tags">
+            <span>Tags <em class="muted">(comma-separated)</em></span>
+          </label>
+          <div class="picker">
+            <input id="c-tags" type="text" placeholder="world-machines, legibility"
+                   role="combobox" aria-expanded="false" aria-controls="c-tag-list" />
+            <ul class="suggest" id="c-tag-list" role="listbox" hidden></ul>
+          </div>
+
+          <div class="row actions">
+            <button id="c-preview" type="submit" class="btn btn-primary">Preview</button>
+            <button id="c-save" type="button" class="btn btn-ghost" disabled>Save to repo 🔒</button>
+            <button id="c-clear" type="button" class="btn btn-ghost btn-mini">Clear</button>
+          </div>
+          <p id="capture-status" class="status" role="status" aria-live="polite" hidden></p>
+        </form>
+
+        <div id="capture-out" class="out" hidden>
+          <div class="out-head">
+            <span id="out-badge" class="badge badge-ok">would write</span>
+            <code id="out-path"></code>
+          </div>
+          <pre id="out-md" class="code"></pre>
+          <div class="out-commit">
+            <div class="kv"><span>commit</span><code id="out-msg"></code></div>
+            <div class="kv"><span>plan</span><code id="out-plan"></code></div>
+          </div>
+          <div id="out-dangling" class="warn" hidden></div>
+        </div>
+      </section>
+
+      <!-- ============================ NOTES ============================ -->
+      <section id="view-notes" class="view" data-view="notes" hidden>
+        <div class="segmented" role="tablist" aria-label="Which notes">
+          <button class="nseg is-active" data-scope="mine" type="button">Mine</button>
+          <button class="nseg" data-scope="commons" type="button">Commons</button>
+          <button class="nseg" data-scope="all" type="button">All</button>
+        </div>
+        <input id="n-search" class="search" type="search" placeholder="Search notes…" />
+        <p id="notes-status" class="status small muted" hidden></p>
+        <ol id="notes-list" class="notes-list"></ol>
+      </section>
+
+      <!-- ============================ EDITOR =========================== -->
+      <section id="view-editor" class="view" data-view="editor" hidden>
+        <button id="e-back" type="button" class="btn btn-ghost btn-mini back">← Notes</button>
+        <div class="card">
+          <div class="kv"><span>editing</span><code id="e-path"></code></div>
+          <p id="e-readonly" class="warn" hidden></p>
+          <label class="field">
+            <span>Summary</span>
+            <input id="e-summary" type="text" />
+          </label>
+          <label class="field">
+            <span>Tags <em class="muted">(comma-separated)</em></span>
+            <input id="e-tags" type="text" />
+          </label>
+          <label class="field">
+            <span>Body <em class="muted">(Markdown — the frontmatter is preserved for you)</em></span>
+            <textarea id="e-body" rows="16"></textarea>
+          </label>
+          <div class="row actions">
+            <button id="e-preview" type="button" class="btn btn-primary">Preview</button>
+            <button id="e-save" type="button" class="btn btn-ghost" disabled>Save to repo 🔒</button>
+          </div>
+          <p id="editor-status" class="status" role="status" aria-live="polite" hidden></p>
+        </div>
+        <div id="editor-out" class="out" hidden>
+          <div class="out-head">
+            <span id="eout-badge" class="badge badge-ok">would write</span>
+            <code id="eout-path"></code>
+          </div>
+          <pre id="eout-md" class="code"></pre>
+          <div class="out-commit">
+            <div class="kv"><span>commit</span><code id="eout-msg"></code></div>
+          </div>
+          <div id="eout-dangling" class="warn" hidden></div>
+        </div>
+      </section>
+
+      <!-- ============================== ME ============================= -->
+      <section id="view-me" class="view" data-view="me" hidden>
+        <div class="card" id="me-card"></div>
+        <div class="card" id="config-card"></div>
+        <p class="hint">Scribe never writes outside <code>raw-notes/</code>, and every commit it
+          makes starts with <code>[trivial]</code> — the prefix that lets a notes-only change land
+          on <code>main</code> without a devlog entry.</p>
+      </section>
+    </main>
+
+    <nav class="tabbar">
+      <button class="tab is-active" data-go="capture"><span class="ti">✎</span>Capture</button>
+      <button class="tab" data-go="notes"><span class="ti">☰</span>Notes</button>
+      <button class="tab" data-go="me"><span class="ti">◔</span>Me</button>
+    </nav>
+  </div>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
