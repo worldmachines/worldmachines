@@ -29,6 +29,10 @@
   <div class="devlog">
   <article class="devlog-entry">
     <div class="devlog-meta">6 August 2026 · aneesh</div>
+    <p>Rebuilt <code>/wiki</code> from a rendered folder tree into a concept-first knowledge space. The decisive find: 394 of its 713 "dangling" link targets — 3,734 occurrences, two-thirds of the corpus's connective tissue — were mere case/punctuation variants of notes that exist, so link resolution now runs in tiers (exact → glossary alias → unambiguous normalised slug → red link), with every normalised match listed on <code>/wiki/loose-links</code> for tightening at source. New surfaces: hub concepts ranked by inbound links, tag-derived topic pages, a wanted-pages worklist (the 313 titles the club keeps naming but never wrote, each with a start-this-note link), orphans, recent changes, and client-side search — resolved links 6,409 → 10,199, orphans 281 → 87, note URLs unchanged, and the incremental rebuild proven byte-equivalent to a full one by a committed verifier.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">6 August 2026 · aneesh</div>
     <p>Scribe went live: **scribe.worldmachines.org**, an installable phone-first PWA (behind its own Access application, JWT-verified) through which members capture thoughts, book notes, glossary entries and link-notes straight into their <code>raw-notes/</code> directory as <code>[trivial]</code> commits — no git required. Access provisioning learned to split applications under Cloudflare's 5-destination-per-app cap, MCP joined the site navigation on every page (it was unreachable except by URL), Kyle's contribution-workflow docs merged (#37), and the July DNS-incident handoff PRs (#29, #31) closed as completed history.</p>
   </article>
   <article class="devlog-entry">
@@ -121,6 +125,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-08-06T07:31:02Z -->
+  <!-- built: 2026-08-06T07:48:26Z -->
 </body>
 </html>

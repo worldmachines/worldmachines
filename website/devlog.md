@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-08-06 · aneesh (2)
+Rebuilt `/wiki` from a rendered folder tree into a concept-first knowledge space. The decisive find: 394 of its 713 "dangling" link targets — 3,734 occurrences, two-thirds of the corpus's connective tissue — were mere case/punctuation variants of notes that exist, so link resolution now runs in tiers (exact → glossary alias → unambiguous normalised slug → red link), with every normalised match listed on `/wiki/loose-links` for tightening at source. New surfaces: hub concepts ranked by inbound links, tag-derived topic pages, a wanted-pages worklist (the 313 titles the club keeps naming but never wrote, each with a start-this-note link), orphans, recent changes, and client-side search — resolved links 6,409 → 10,199, orphans 281 → 87, note URLs unchanged, and the incremental rebuild proven byte-equivalent to a full one by a committed verifier.
+
 ## 2026-08-06 · aneesh
 Scribe went live: **scribe.worldmachines.org**, an installable phone-first PWA (behind its own Access application, JWT-verified) through which members capture thoughts, book notes, glossary entries and link-notes straight into their `raw-notes/` directory as `[trivial]` commits — no git required. Access provisioning learned to split applications under Cloudflare's 5-destination-per-app cap, MCP joined the site navigation on every page (it was unreachable except by URL), Kyle's contribution-workflow docs merged (#37), and the July DNS-incident handoff PRs (#29, #31) closed as completed history.
 
