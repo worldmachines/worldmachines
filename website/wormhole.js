@@ -5,8 +5,10 @@
  * and "Rewrite the rendering however you like — as long as you publish a
  * network.json, you are in the network." No formal license header is
  * present upstream; this comment records provenance per that invitation.
- * Unmodified below except for this notice. World Machines mounts it at
- * /wormhole.js against our own /network.json.
+ * Local changes beyond this notice: URL-scheme hardening only — absolutize()
+ * rejects non-http(s) schemes and safeUrl() gates every manifest-derived URL
+ * before it reaches an href or window.open (manifests are third-party data).
+ * World Machines mounts it at /wormhole.js against our own /network.json.
  * --------------------------------------------------------------------- */
 /*!
  * wormhole.js — a portable webring component
@@ -44,8 +46,14 @@
 
   function absolutize(url) {
     if (!url) return null;
-    try { return new URL(url).href; } catch (e) {}
+    try { var u = new URL(url); if (u.protocol === 'http:' || u.protocol === 'https:') return u.href; } catch (e) {}
     try { return new URL('https://' + url).href; } catch (e) {}
+    return null;
+  }
+
+  // Manifests are third-party data; only http(s) may reach an href or window.open.
+  function safeUrl(url) {
+    try { var u = new URL(url); if (u.protocol === 'http:' || u.protocol === 'https:') return u.href; } catch (e) {}
     return null;
   }
 
@@ -447,7 +455,8 @@
 
       function travel(key) {
         var n = graph.nodes[key];
-        if (n) window.open(n.url, '_blank', 'noopener');
+        var dest = n && safeUrl(n.url);
+        if (dest) window.open(dest, '_blank', 'noopener');
       }
 
       // Before any crawl this is your own list; afterwards it spans whatever the
@@ -757,8 +766,8 @@
               '<span class="u">' + esc(n.url) + '</span>' +
               (n.blurb ? '<span>' + esc(n.blurb) + '</span>' : '') +
               (n.quote ? '<span class="quote">“' + esc(n.quote) + '”</span>' : '') +
-              (n.source ? '<span class="src">— ' + (n.sourceUrl
-                  ? '<a href="' + esc(n.sourceUrl) + '" target="_blank" rel="noopener">' + esc(n.source) + '</a>'
+              (n.source ? '<span class="src">— ' + (safeUrl(n.sourceUrl)
+                  ? '<a href="' + esc(safeUrl(n.sourceUrl)) + '" target="_blank" rel="noopener">' + esc(n.source) + '</a>'
                   : esc(n.source)) + '</span>' : '') +
               (n.note ? '<div class="note">' + esc(n.note) + '</div>' : '') +
               (via.length ? '<span class="via">vouched for by ' + esc(via.join(', ')) + '</span>' : '') +
