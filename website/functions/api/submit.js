@@ -1,35 +1,14 @@
-function emailFromRequest(request) {
-  // Access injects this header when the path is policy-protected
-  const header = request.headers.get('Cf-Access-Authenticated-User-Email');
-  if (header) return header;
+import { requireMember, blockCrossOrigin } from '../_lib/access.js';
 
-  // Fallback: decode email from the CF_Authorization JWT in the session cookie
-  const cookie = request.headers.get('cookie') || '';
-  const match = cookie.match(/CF_Authorization=([^;]+)/);
-  if (!match) return null;
-  try {
-    const payload = JSON.parse(atob(match[1].split('.')[1]));
-    return payload.email || null;
-  } catch {
-    return null;
-  }
-}
+export async function onRequestPost(ctx) {
+  const { request, env } = ctx;
 
-export async function onRequestPost({ request, env }) {
-  const submitterEmail = emailFromRequest(request);
-  if (!submitterEmail) {
-    return Response.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  const crossOrigin = blockCrossOrigin(request);
+  if (crossOrigin) return crossOrigin;
 
-  const raw = await env.HANDLES.get(submitterEmail);
-  if (!raw) {
-    return Response.json({ error: 'Your account is not registered. Contact the site admin.' }, { status: 403 });
-  }
-  let handle;
-  try { handle = JSON.parse(raw).handle; } catch { handle = raw; }
-  if (!handle) {
-    return Response.json({ error: 'Handle not configured for this account.' }, { status: 403 });
-  }
+  const member = await requireMember(ctx);
+  if (member.denied) return member.denied;
+  const handle = member.handle;
 
   let formData;
   try {

@@ -10,14 +10,7 @@
 // button was clicked (?return=/mcp), so the member lands where they started,
 // already signed in.
 
-function safeReturnPath(raw) {
-  // Same-origin absolute paths only. Reject protocol-relative ("//host"),
-  // backslash tricks ("/\\host"), and anything not starting with a single "/".
-  if (typeof raw !== 'string' || raw[0] !== '/' || raw[1] === '/' || raw[1] === '\\') {
-    return '/';
-  }
-  return raw;
-}
+import { safeReturnPath } from './_lib/access.js';
 
 export function onRequestGet({ request }) {
   const url = new URL(request.url);

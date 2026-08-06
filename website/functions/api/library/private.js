@@ -1,31 +1,14 @@
-function emailFromRequest(request) {
-  const header = request.headers.get('Cf-Access-Authenticated-User-Email');
-  if (header) return header;
-  const cookie = request.headers.get('cookie') || '';
-  const match = cookie.match(/CF_Authorization=([^;]+)/);
-  if (!match) return null;
-  try {
-    const payload = JSON.parse(atob(match[1].split('.')[1]));
-    return payload.email || null;
-  } catch {
-    return null;
-  }
-}
+import { requireMember } from '../../_lib/access.js';
 
 // Private articles manifest is stored in LIBRARY R2 at _manifests/private-articles.json.
 // Upload or update it with:
 //   wrangler r2 object put worldmachines-library/_manifests/private-articles.json \
 //     --file private-articles.json --content-type application/json --remote
-export async function onRequestGet({ request, env }) {
-  const email = emailFromRequest(request);
-  if (!email) {
-    return Response.json({ error: 'Authentication required' }, { status: 401 });
-  }
+export async function onRequestGet(ctx) {
+  const { env } = ctx;
 
-  const registered = await env.HANDLES.get(email);
-  if (!registered) {
-    return Response.json({ error: 'not_registered', email }, { status: 403 });
-  }
+  const member = await requireMember(ctx);
+  if (member.denied) return member.denied;
 
   const manifest = await env.LIBRARY.get('_manifests/private-articles.json');
   if (!manifest) {
