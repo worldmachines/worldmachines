@@ -131,6 +131,35 @@
       white-space: pre;
     }
 
+    /* Existing tokens list */
+    .token-list { margin-top: 1.5rem; }
+    .token-list h4 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .token-list table { width: 100%; border-collapse: collapse; font-family: system-ui, sans-serif; font-size: 0.8rem; }
+    .token-list th { text-align: left; font-weight: 600; color: var(--muted); padding: 0.3rem 0.5rem 0.3rem 0; border-bottom: 1px solid var(--border); }
+    .token-list td { padding: 0.4rem 0.5rem 0.4rem 0; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .token-list td.mono { font-family: 'Courier New', monospace; }
+    .token-list tr:last-child td { border-bottom: none; }
+    .revoke-btn {
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .revoke-btn:hover { border-color: #991b1b; color: #991b1b; }
+    .revoke-btn:disabled { opacity: 0.5; cursor: default; }
+
     .explainer {
       font-family: system-ui, sans-serif;
       font-size: 0.83rem;
@@ -208,6 +237,7 @@
       <!-- unauthenticated (also the dormant-until-Access state) -->
       <div id="witness-signin" class="not-registered-panel" style="display:none">
         <p>Sign in with an approved World Machines email to generate your Witness token. Members only.</p>
+        <a href="/login?return=/mcp" class="btn-join">Sign in →</a>
       </div>
 
       <!-- authenticated but not a registered contributor -->
@@ -221,6 +251,7 @@
         <p class="welcome-greeting">
           Signed in as <strong id="welcome-name"></strong>.
           <a href="/profile" class="profile-link">Edit profile</a>
+          <a href="/logout" class="profile-link">Sign out</a>
         </p>
 
         <button id="gen-btn" class="gen-btn">Generate my Witness token</button>
@@ -230,10 +261,18 @@
             <span id="token-value" class="token-value"></span>
             <button class="copy-btn" data-copy="token-value">Copy</button>
           </div>
-          <div id="token-exp" class="token-exp"></div>
+          <div id="token-exp" class="token-exp">Copy it now — for security it is only ever shown once.</div>
         </div>
 
         <div id="gen-message" class="form-message"></div>
+
+        <div id="token-list" class="token-list" style="display:none">
+          <h4>Your tokens</h4>
+          <table>
+            <thead><tr><th>Token</th><th>Created</th><th>Expires</th><th></th></tr></thead>
+            <tbody id="token-list-body"></tbody>
+          </table>
+        </div>
 
         <div class="platform-head">Claude Code (CLI) — add the Witness</div>
         <div class="snippet">
@@ -330,7 +369,7 @@
 
     // ── Witness gate: toggle only the members section on auth state ──
     function show(id) { document.getElementById(id).style.display = ''; }
-    fetch('/api/me')
+    fetch('/api/me', { headers: { Accept: 'application/json' } })
       .then(r => r.json())
       .then(data => {
         if (data.error === 'not_registered') {
@@ -342,12 +381,73 @@
         if (data.handle) {
           document.getElementById('welcome-name').textContent = data.name || data.handle;
           show('witness-main');
+          loadTokens();
           return;
         }
         // unauthorized or any other shape → members sign-in prompt
         show('witness-signin');
       })
+      // A non-JSON answer means no session at all (an un-authenticated fetch
+      // that Access bounced to its login screen) → same sign-in prompt.
       .catch(() => show('witness-signin'));
+
+    // ── Existing tokens: list + revoke ───────────────────────────
+    const listWrap = document.getElementById('token-list');
+    const listBody = document.getElementById('token-list-body');
+    const fmtDate = (s) => s
+      ? new Date(s * 1000).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
+      : '—';
+
+    async function loadTokens() {
+      try {
+        const res = await fetch('/api/mcp-token', { headers: { Accept: 'application/json' } });
+        if (!res.ok) return;
+        const { tokens } = await res.json();
+        listBody.innerHTML = '';
+        if (!tokens || !tokens.length) { listWrap.style.display = 'none'; return; }
+        for (const t of tokens) {
+          const tr = document.createElement('tr');
+          const td = (text, cls) => {
+            const cell = document.createElement('td');
+            cell.textContent = text;
+            if (cls) cell.className = cls;
+            return cell;
+          };
+          tr.appendChild(td(t.masked, 'mono'));
+          tr.appendChild(td(fmtDate(t.created)));
+          tr.appendChild(td(fmtDate(t.exp)));
+          const actions = document.createElement('td');
+          const btn = document.createElement('button');
+          btn.className = 'revoke-btn';
+          btn.textContent = 'Revoke';
+          btn.addEventListener('click', () => revoke(t, btn));
+          actions.appendChild(btn);
+          tr.appendChild(actions);
+          listBody.appendChild(tr);
+        }
+        listWrap.style.display = '';
+      } catch { /* listing is best-effort; minting still works */ }
+    }
+
+    async function revoke(t, btn) {
+      if (!confirm('Revoke ' + t.masked + '? Any MCP client using it stops working immediately.')) return;
+      btn.disabled = true;
+      btn.textContent = 'Revoking…';
+      try {
+        const res = await fetch('/api/mcp-token', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: t.id }),
+        });
+        if (!res.ok) throw new Error('revoke failed');
+        await loadTokens();
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Revoke';
+        genMsg.className = 'form-message error';
+        genMsg.textContent = 'Could not revoke that token.';
+      }
+    }
 
     // ── Generate Witness token ───────────────────────────────────
     const genBtn = document.getElementById('gen-btn');
@@ -360,20 +460,23 @@
       genBtn.textContent = 'Generating…';
 
       try {
-        const res = await fetch('/api/mcp-token', { method: 'POST' });
+        const res = await fetch('/api/mcp-token', {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+        });
         const data = await res.json();
         if (!res.ok) {
           if (data.error === 'unauthorized') throw new Error('You must sign in with an approved email.');
           if (data.error === 'not_registered') throw new Error('This account is not a registered contributor yet.');
-          throw new Error(data.error || 'Could not generate a token.');
+          throw new Error(data.message || data.error || 'Could not generate a token.');
         }
         document.getElementById('token-value').textContent = data.token;
-        const when = new Date(data.exp * 1000).toLocaleDateString(undefined,
-          { year: 'numeric', month: 'short', day: 'numeric' });
-        document.getElementById('token-exp').textContent = 'Expires ' + when + ' (valid 90 days).';
+        document.getElementById('token-exp').textContent =
+          'Expires ' + fmtDate(data.exp) + ' (valid 90 days). Copy it now — it is only shown once.';
         document.getElementById('token-panel').style.display = 'block';
         renderWitness(data.token);
         genBtn.textContent = 'Generate a new token';
+        loadTokens();
       } catch (err) {
         genMsg.className = 'form-message error';
         genMsg.textContent = err.message;

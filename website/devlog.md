@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-08-05 · aneesh
+Shipped member login and closed two auth holes. `/api/admin/handles` (the contributor registry, emails included) was reachable unauthenticated because the old Access policy covered `/admin/*` but not `/api/admin/*`; it now enforces an admin allowlist in-function, fail-closed. Worse, every member endpoint would also accept an email read from the *unverified* `CF_Authorization` cookie payload — a client-forgeable identity — so identity now flows through one shared library (`functions/_lib/access.js`) that cryptographically verifies the Access JWT when `ACCESS_TEAM_DOMAIN` is configured. The Witness/MCP panel gains a real "Sign in" button, sign-out, and self-service token list/revoke; a new `scripts/provision-access.mjs` creates the members + admin Access applications idempotently from the command line.
+
 ## 2026-07-27 · aneesh (2)
 Expanded the Evolution guide with a substantial Biology toolkit that teaches DNA, genes, traits, inheritance, populations, variation, selection, drift, and ancestry before the advanced material. Added `/evolution/dennett`, a wide-ranging 2026 companion to *Darwin’s Dangerous Idea* that connects contemporary evolutionary science with consciousness, agency, culture, AI, meaning, ethics, and a carefully sourced constellation of successors and critics—including explicit World Machines guardrails against historical fatalism and simplistic memetics.
 

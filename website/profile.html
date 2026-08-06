@@ -24,6 +24,13 @@
 
   <div class="form-wrap">
 
+    <!-- Signed-out state -->
+    <div id="signed-out" class="not-registered-panel" style="display:none">
+      <h2>Sign in to edit your profile</h2>
+      <p>Your World Machines profile is tied to your member email. Sign in with a one-time code to edit it.</p>
+      <a href="/login?return=/profile" class="btn-join">Sign in →</a>
+    </div>
+
     <!-- Not-registered state -->
     <div id="not-registered" class="not-registered-panel" style="display:none">
       <h2>You're not registered yet</h2>
@@ -32,8 +39,12 @@
       <a id="nr-join-link" href="/join" class="btn-join">Request access →</a>
     </div>
 
+    <div id="profile-main" style="display:none">
     <h2>Your profile</h2>
-    <p class="form-intro">Update your display name, site URL, and bio. Handle and email are set by the admin.</p>
+    <p class="form-intro">
+      Update your display name, site URL, and bio. Handle and email are set by the admin.
+      <a href="/logout" class="profile-link">Sign out</a>
+    </p>
 
     <form id="profile-form" novalidate>
       <div class="field">
@@ -60,36 +71,39 @@
       <button type="submit" id="save-btn">Save</button>
       <div class="form-message" id="form-message"></div>
     </form>
+    </div>
   </div>
 
   <script>
     const msg = document.getElementById('form-message');
 
-    fetch('/api/me')
+    const show = (id) => { document.getElementById(id).style.display = ''; };
+
+    fetch('/api/me', { headers: { Accept: 'application/json' } })
       .then(r => r.json())
       .then(data => {
         if (data.error === 'not_registered') {
-          document.getElementById('profile-form').style.display = 'none';
           document.getElementById('nr-email').textContent = data.email;
           document.getElementById('nr-join-link').href = '/join?email=' + encodeURIComponent(data.email);
-          document.getElementById('not-registered').style.display = '';
+          show('not-registered');
           return;
         }
-        if (data.error) {
-          msg.className = 'form-message error';
-          msg.textContent = data.error;
+        if (data.error || !data.handle) {
+          // unauthorized / anything unexpected → offer the sign-in path rather
+          // than an empty form the save button could never write.
+          show('signed-out');
           return;
         }
+        show('profile-main');
         document.getElementById('p-email').value  = data.email  || '';
         document.getElementById('p-handle').value = data.handle || '';
         document.getElementById('p-name').value   = data.name   || '';
         document.getElementById('p-url').value    = data.url    || '';
         document.getElementById('p-bio').value    = data.bio    || '';
       })
-      .catch(() => {
-        msg.className = 'form-message error';
-        msg.textContent = 'Could not load profile.';
-      });
+      // A non-JSON answer means there is no session at all (Access bounced the
+      // fetch to its login screen) → show the sign-in panel, not an error.
+      .catch(() => show('signed-out'));
 
     document.getElementById('profile-form').addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -112,7 +126,7 @@
           msg.textContent = 'Profile saved.';
         } else {
           msg.className = 'form-message error';
-          msg.textContent = data.error || 'Save failed.';
+          msg.textContent = data.message || data.error || 'Save failed.';
         }
       } catch {
         msg.className = 'form-message error';

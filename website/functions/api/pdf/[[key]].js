@@ -1,18 +1,12 @@
-function emailFromRequest(request) {
-  const header = request.headers.get('Cf-Access-Authenticated-User-Email');
-  if (header) return header;
-  const cookie = request.headers.get('cookie') || '';
-  const match = cookie.match(/CF_Authorization=([^;]+)/);
-  if (!match) return null;
-  try {
-    const payload = JSON.parse(atob(match[1].split('.')[1]));
-    return payload.email || null;
-  } catch {
-    return null;
-  }
-}
+// public/  → anyone.
+// private/ → registered members only. Before, this only required *an* Access
+// identity; it never checked HANDLES, so any address Access happened to admit
+// could pull in-copyright PDFs. Now it is the same gate as the rest of the
+// members area.
+import { requireMember } from '../../_lib/access.js';
 
-export async function onRequestGet({ request, env, params }) {
+export async function onRequestGet(ctx) {
+  const { env, params } = ctx;
   const key = params.key ? params.key.join('/') : null;
   if (!key) return new Response('Not found', { status: 404 });
 
@@ -21,10 +15,8 @@ export async function onRequestGet({ request, env, params }) {
   if (!isPublic && !isPrivate) return new Response('Not found', { status: 404 });
 
   if (isPrivate) {
-    const email = emailFromRequest(request);
-    if (!email) {
-      return Response.json({ error: 'Authentication required' }, { status: 401 });
-    }
+    const member = await requireMember(ctx);
+    if (member.denied) return member.denied;
   }
 
   const object = await env.LIBRARY.get(key);

@@ -1,57 +1,51 @@
-// GET  — returns current contributor's profile (from KV, keyed by Access email)
-// POST — updates name, url, bio (handle and email are immutable)
+// GET  /api/profile — the caller's own profile (from HANDLES, keyed by Access email)
+// POST /api/profile — updates name, url, bio. handle, email and github are admin-owned.
 
-function emailFromRequest(request) {
-  const header = request.headers.get('Cf-Access-Authenticated-User-Email');
-  if (header) return header;
-  const cookie = request.headers.get('cookie') || '';
-  const match = cookie.match(/CF_Authorization=([^;]+)/);
-  if (!match) return null;
-  try {
-    const payload = JSON.parse(atob(match[1].split('.')[1]));
-    return payload.email || null;
-  } catch { return null; }
+import { requireMember, blockCrossOrigin, NO_STORE } from '../_lib/access.js';
+
+export async function onRequestGet(ctx) {
+  const member = await requireMember(ctx);
+  if (member.denied) return member.denied;
+
+  const { handle, name, url, bio, github } = member.profile;
+  return Response.json(
+    {
+      email: member.email,
+      handle,
+      name: name || '',
+      url: url || '',
+      bio: bio || '',
+      github: github || '',
+    },
+    { headers: NO_STORE }
+  );
 }
 
-function parseValue(raw) {
-  try { return JSON.parse(raw); } catch { return { handle: raw }; }
-}
+export async function onRequestPost(ctx) {
+  const crossOrigin = blockCrossOrigin(ctx.request);
+  if (crossOrigin) return crossOrigin;
 
-export async function onRequestGet({ request, env }) {
-  const email = emailFromRequest(request);
-  if (!email) return Response.json({ error: 'Unauthorized' }, { status: 401 });
-
-  const raw = await env.HANDLES.get(email);
-  if (!raw) return Response.json({ error: 'Not registered' }, { status: 403 });
-
-  const { handle, name, url, bio } = parseValue(raw);
-  return Response.json({ email, handle, name: name || '', url: url || '', bio: bio || '' });
-}
-
-export async function onRequestPost({ request, env }) {
-  const email = emailFromRequest(request);
-  if (!email) return Response.json({ error: 'Unauthorized' }, { status: 401 });
-
-  const raw = await env.HANDLES.get(email);
-  if (!raw) return Response.json({ error: 'Not registered' }, { status: 403 });
-
-  const current = parseValue(raw);
+  const member = await requireMember(ctx);
+  if (member.denied) return member.denied;
 
   let body;
-  try { body = await request.json(); } catch {
-    return Response.json({ error: 'Invalid JSON' }, { status: 400 });
+  try {
+    body = await ctx.request.json();
+  } catch {
+    return Response.json({ error: 'invalid_json', message: 'Invalid JSON' }, { status: 400 });
   }
 
   const name = (body.name ?? '').trim();
-  const url  = (body.url  ?? '').trim() || null;
-  const bio  = (body.bio  ?? '').trim() || null;
+  const url = (body.url ?? '').trim() || null;
+  const bio = (body.bio ?? '').trim() || null;
 
-  await env.HANDLES.put(email, JSON.stringify({
-    handle: current.handle,   // immutable
-    name,
-    url,
-    bio,
-  }));
+  // Spread the existing record first so admin-owned fields (handle, github, and
+  // anything added later) survive a member's profile save instead of being
+  // silently dropped by this write.
+  await ctx.env.HANDLES.put(
+    member.key,
+    JSON.stringify({ ...member.profile, handle: member.handle, name, url, bio })
+  );
 
-  return Response.json({ ok: true });
+  return Response.json({ ok: true }, { headers: NO_STORE });
 }
