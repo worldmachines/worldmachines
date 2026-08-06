@@ -39,8 +39,8 @@
     <p class="form-intro">Maps emails to contributor handles and profile info. Add entries here <em>and</em> add the email to the Cloudflare Access policy for <code>/submit</code>.</p>
 
     <table id="handles-table">
-      <thead><tr><th>Email</th><th>Handle</th><th>Name</th><th>URL</th><th>Bio</th><th></th></tr></thead>
-      <tbody id="handles-body"><tr><td colspan="6" style="color:var(--muted);font-style:italic">Loading…</td></tr></tbody>
+      <thead><tr><th>Email</th><th>Handle</th><th>Name</th><th>GitHub</th><th>URL</th><th>Bio</th><th></th></tr></thead>
+      <tbody id="handles-body"><tr><td colspan="7" style="color:var(--muted);font-style:italic">Loading…</td></tr></tbody>
     </table>
 
     <h3 style="font-size:1rem;font-weight:normal;margin-bottom:1rem">Add / update entry</h3>
@@ -62,6 +62,10 @@
           <label for="new-url">Site URL</label>
           <input type="url" id="new-url" name="url" placeholder="https://their.site">
         </div>
+        <div class="field">
+          <label for="new-github">GitHub <span class="optional">(username, optional)</span></label>
+          <input type="text" id="new-github" name="github" placeholder="octocat">
+        </div>
         <div class="field" style="grid-column: span 2">
           <label for="new-bio">Bio <span class="optional">(short — shown on contributors page)</span></label>
           <input type="text" id="new-bio" name="bio" placeholder="their.site or a brief description">
@@ -75,6 +79,7 @@
   <script>
     const tbody = document.getElementById('handles-body');
     const status = document.getElementById('status');
+    let rows = [];
 
     function setStatus(msg, ok) {
       status.textContent = msg;
@@ -92,26 +97,50 @@
       if (error) { setStatus(error, false); return; }
 
       tbody.innerHTML = '';
+      rows = handles;
       if (!handles.length) {
-        tbody.innerHTML = '<tr><td colspan="6" style="color:var(--muted);font-style:italic">No entries yet.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" style="color:var(--muted);font-style:italic">No entries yet.</td></tr>';
         return;
       }
       for (const h of handles) {
         const tr = document.createElement('tr');
         const urlCell = h.url ? `<a href="${esc(h.url)}" target="_blank">${esc(h.url)}</a>` : '<span class="muted">—</span>';
+        const ghCell = h.github
+          ? `<a href="https://github.com/${esc(h.github)}" target="_blank">@${esc(h.github)}</a>`
+          : '<span class="muted">—</span>';
         tr.innerHTML = `
           <td>${esc(h.email)}</td>
           <td><strong>${esc(h.handle)}</strong></td>
           <td>${esc(h.name) || '<span class="muted">—</span>'}</td>
+          <td style="font-size:0.8rem">${ghCell}</td>
           <td style="font-size:0.8rem">${urlCell}</td>
           <td>${esc(h.bio) || '<span class="muted">—</span>'}</td>
-          <td><button class="del-btn" data-email="${esc(h.email)}">Remove</button></td>`;
+          <td style="white-space:nowrap">
+            <button class="del-btn edit" data-edit="${esc(h.email)}">Edit</button>
+            <button class="del-btn" data-email="${esc(h.email)}">Remove</button></td>`;
         tbody.appendChild(tr);
       }
     }
 
+    // Saving is a whole-record upsert, so edit through this prefill rather than
+    // retyping — a blank field in the form clears that field in KV.
+    tbody.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-edit]');
+      if (!btn) return;
+      const h = rows.find((r) => r.email === btn.dataset.edit);
+      if (!h) return;
+      document.getElementById('new-email').value  = h.email  || '';
+      document.getElementById('new-handle').value = h.handle || '';
+      document.getElementById('new-name').value   = h.name   || '';
+      document.getElementById('new-github').value = h.github || '';
+      document.getElementById('new-url').value    = h.url    || '';
+      document.getElementById('new-bio').value    = h.bio    || '';
+      document.getElementById('new-email').scrollIntoView({ block: 'center' });
+      setStatus(`Editing ${h.email} — Save overwrites the whole record.`, true);
+    });
+
     tbody.addEventListener('click', async (e) => {
-      const btn = e.target.closest('.del-btn');
+      const btn = e.target.closest('.del-btn:not(.edit)');
       if (!btn) return;
       const email = btn.dataset.email;
       if (!confirm(`Remove ${email}?`)) return;
@@ -131,13 +160,14 @@
       const email  = document.getElementById('new-email').value.trim();
       const handle = document.getElementById('new-handle').value.trim();
       const name   = document.getElementById('new-name').value.trim();
+      const github = document.getElementById('new-github').value.trim();
       const url    = document.getElementById('new-url').value.trim();
       const bio    = document.getElementById('new-bio').value.trim();
       if (!email || !handle) { setStatus('Email and handle are required', false); return; }
       const res = await fetch('/api/admin/handles', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, handle, name, url, bio }),
+        body: JSON.stringify({ email, handle, name, github, url, bio }),
       });
       const data = await res.json();
       if (res.ok) { setStatus(`Saved ${handle} (${email})`, true); e.target.reset(); load(); }

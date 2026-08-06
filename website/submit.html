@@ -82,7 +82,7 @@
 
   <script>
     // ── Auth check ───────────────────────────────────────────
-    fetch('/api/me')
+    fetch('/api/me', { headers: { Accept: 'application/json' } })
       .then(r => r.json())
       .then(data => {
         if (data.error === 'not_registered') {
@@ -136,7 +136,7 @@
           msg.textContent = 'Submitted — it will appear on the site within a few minutes.';
           form.reset();
         } else {
-          throw new Error(data.error || 'Submission failed.');
+          throw new Error(data.message || data.error || 'Submission failed.');
         }
       } catch (err) {
         msg.className = 'form-message error';
