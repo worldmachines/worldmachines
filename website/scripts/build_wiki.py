@@ -909,6 +909,27 @@ class LinkIndex:
                 return hit
         return None
 
+    def term_users(self, term: Note) -> tuple[list[Note], list[Note]]:
+        """(notes named for this term, notes that use it).
+
+        A glossary entry usually has no direct backlinks at all: `[[Legibility]]`
+        resolves to the concept note of that name, not to the definition. Counting
+        only direct links would report the club's most-used vocabulary as unused,
+        which is how a glossary ends up feeling like a parallel silo. So the entry
+        inherits the audience of the notes named for it — the definition and the
+        working notes are one idea, and the term page says who reads it.
+        """
+        named = self.notes_for_term(term)
+        seen = {term.rel} | {n.rel for n in named}
+        users: list[Note] = []
+        for holder in [term, *named]:
+            for source in self.backlinks.get(holder.url) or []:
+                if source.rel not in seen:
+                    users.append(source)
+                    seen.add(source.rel)
+        users.sort(key=lambda n: (-self.inbound(n), n.title.lower(), n.rel))
+        return named, users
+
     def notes_for_term(self, term: Note) -> list[Note]:
         """Notes whose own name is this glossary term — the working pages behind
         the definition, as opposed to everything that merely mentions it."""
@@ -1070,7 +1091,7 @@ def shell(title: str, body: str, active: str = "", description: str = "",
 # Type size steps with that figure, so a column of rows reads as a skyline
 # before you read a single word.
 
-PLATE_STEPS = ((60, "mag-4"), (25, "mag-3"), (8, "mag-2"), (0, "mag-1"))
+PLATE_STEPS = ((85, "mag-4"), (45, "mag-3"), (18, "mag-2"), (0, "mag-1"))
 
 
 def magnitude(count: int) -> str:
@@ -1242,7 +1263,6 @@ def note_rail(note: Note, index: LinkIndex) -> str:
         "What links here",
         rail_note_list(refs, index) if refs
         else '      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>',
-        count=str(len(refs)),
     ))
 
     peers = index.alongside(note)
@@ -1349,17 +1369,18 @@ def render_glossary_term(note: Note, index: LinkIndex) -> str:
     meta.append(f'<a href="{esc(github)}">source on GitHub</a>')
 
     blocks: list[str] = []
-    inbound = index.inbound(note)
+    working, users = index.term_users(note)
+    topic_slug = slugify(note.term)
+    tagged = index.topics.get(topic_slug) or []
     blocks.append(
         '    <div class="rail-block rail-bearings">\n'
-        f'      <div class="bearing"><b>{inbound}</b><span>notes use it</span></div>\n'
+        f'      <div class="bearing"><b>{len(users)}</b><span>notes use it</span></div>\n'
         f'      <div class="bearing"><b>{note.words or 0}</b><span>words</span></div>\n'
         "    </div>"
     )
 
     # The working pages that carry this term. A definition and the notes that
     # bear its name are one idea at two stages, so the entry says which is which.
-    working = index.notes_for_term(note)
     if working:
         rows = "\n".join(
             f'        <li><a href="{esc(n.url)}">{esc(n.title)}</a>'
@@ -1370,16 +1391,22 @@ def render_glossary_term(note: Note, index: LinkIndex) -> str:
             "the summary; these are the argument.</p>"
         )))
 
-    refs = sorted(index.backlinks.get(note.url) or [],
-                  key=lambda n: (-index.inbound(n), n.title.lower(), n.rel))
-    named = {n.rel for n in working}
-    using = [n for n in refs if n.rel not in named]
     blocks.append(rail_block(
         "Used in",
-        rail_note_list(using, index) if using
-        else '      <p class="rail-empty">No note has used this term yet.</p>',
-        count=str(len(using)),
+        (rail_note_list(users, index)
+         + ('\n      <p class="rail-hint">Notes linking to this entry or to the notes '
+            "named for it.</p>" if working else ""))
+        if users else '      <p class="rail-empty">No note has used this term yet.</p>',
     ))
+
+    if tagged:
+        blocks.append(rail_block("Also a topic", (
+            f'      <a class="rail-term" href="{esc(topic_url(topic_slug))}">'
+            f"{esc(index.topic_labels[topic_slug])}</a>\n"
+            f'      <p class="rail-gloss">{len(tagged)} notes carry this tag, '
+            "whether or not they link the term.</p>"
+        )))
+
     rail = '  <aside class="rail" aria-label="Connections">\n' + "\n".join(blocks) + "\n  </aside>"
 
     body = "\n".join(filter(None, [
@@ -1412,13 +1439,17 @@ def glossary_card(note: Note, index: LinkIndex) -> str:
         summary = re.sub(r"\s+", " ", re.sub(r"[*_`>]", "", first)).strip()[:220]
     extra = [a for a in note.aliases if a != note.term]
     aliases = f'<span class="muted">also called {esc(", ".join(extra))}</span>' if extra else ""
-    backs = index.inbound(note)
+    _, users = index.term_users(note)
+    tagged = index.topics.get(slugify(note.term)) or []
+    reach = f'{len(users)} note{"" if len(users) == 1 else "s"} use it'
+    if tagged:
+        reach += f" · {len(tagged)} tagged"
     return (
         f'      <li class="term-card">\n'
         f'        <div class="term-head"><a href="{esc(note.url)}">{esc(note.term)}</a>'
         f" {status_badge(note.status)} {aliases}</div>\n"
         f'        <p class="term-gloss">{MarkdownRenderer().inline(summary)}</p>\n'
-        f'        <div class="term-meta">{backs} note{" links" if backs == 1 else "s link"} here</div>\n'
+        f'        <div class="term-meta">{esc(reach)}</div>\n'
         f"      </li>"
     )
 
@@ -1478,9 +1509,21 @@ def clip(text: str, limit: int) -> str:
     return text[:limit] + ("…" if len(text) > limit else "")
 
 
+def where_label(note: Note) -> str:
+    """Member · book, or member · folder. The same string everywhere a note is
+    listed, so a reader learns it once. Author alone is nearly constant in this
+    corpus; the folder is what varies and what says what you are about to open."""
+    where = member_label(note.member)
+    if note.book:
+        return where + " · " + book_title(note.book)[0]
+    if note.folder and note.folder != "_root":
+        return where + " · " + folder_label(note.folder)
+    return where
+
+
 def note_plate_row(note: Note, index: LinkIndex, scaled: bool = True,
                    gloss_len: int = 0, show_member: bool = False) -> str:
-    meta = esc(member_label(note.member)) if show_member else ""
+    meta = esc(where_label(note)) if show_member else ""
     return plate_row(note.url, note.title, index.inbound(note),
                      gloss=esc(clip(note.summary, gloss_len)) if gloss_len else "",
                      meta=meta, scaled=scaled)
@@ -1578,9 +1621,9 @@ def render_all_notes(notes: list[Note], index: LinkIndex) -> str:
         if not items:
             continue
         rows = "\n".join(
-            f'      <li class="az-row" data-search="{esc((n.title + " " + member_label(n.member)).lower())}">'
+            f'      <li class="az-row" data-search="{esc((n.title + " " + where_label(n)).lower())}">'
             f'<a href="{esc(n.url)}">{esc(n.title)}</a>'
-            f'<span class="az-where">{esc(member_label(n.member))}</span>'
+            f'<span class="az-where">{esc(where_label(n))}</span>'
             f'<span class="az-figure">{index.inbound(n)}</span></li>'
             for n in sorted(items, key=lambda n: (n.title.lower(), n.rel))
         )
@@ -1809,10 +1852,7 @@ def render_wanted_page(group: dict, index: LinkIndex) -> str:
 
 def render_wanted_index(groups: list[dict], index: LinkIndex) -> str:
     rows = [plate_row(wanted_url(g["slug"]), g["name"], len(g["sources"]),
-                      unit=" notes", wanted=True,
-                      meta=esc(", ".join(member_label(m) for m in
-                                         sorted({s.member for s in g["sources"]}))))
-            for g in groups]
+                      unit=" notes", wanted=True) for g in groups]
     body = f'''{breadcrumb([("/wiki/", "Wiki"), ("", "Wanted")])}
   <p class="eyebrow wanted-eyebrow">Named, not written</p>
   <h1>Wanted pages</h1>
@@ -1964,8 +2004,8 @@ def render_home(notes: list[Note], glossary: list[Note], index: LinkIndex,
   {index.resolved_hits} links. Nothing here is finished — this is the layer where
   the thinking happens, and the fastest way through it is to follow a concept
   sideways rather than read a folder top to bottom.</p>
-{figure_band([(str(len(glossary)), "terms defined"),
-              (str(len(ranked)), "notes linked to"),
+{figure_band([(str(len(notes)), "notes"),
+              (str(len(glossary)), "terms defined"),
               (str(len(wanted)), "pages wanted"),
               (str(len(index.topics)), "shared topics"),
               (str(len(books)), "books read")])}
@@ -3039,19 +3079,15 @@ def build_search_index(notes: list[Note], glossary: list[Note], index: LinkIndex
     for note in sorted(glossary, key=lambda n: (n.term.lower(), n.rel)):
         add(note.term, note.url, note.summary, "definition", "definition")
     for note in sorted(notes, key=lambda n: (n.title.lower(), n.rel)):
-        where = member_label(note.member)
-        if note.book:
-            where += " · " + book_title(note.book)[0]
-        elif note.folder != "_root":
-            where += " · " + folder_label(note.folder)
-        add(note.title, note.url, note.summary, where, "note")
+        add(note.title, note.url, note.summary, where_label(note), "note")
     for slug in sorted(index.topics, key=lambda s: index.topic_labels[s]):
         count = len(index.topics[slug])
         add(index.topic_labels[slug], topic_url(slug), f"{count} notes tagged this way",
             "topic", "topic")
     for group in index.wanted_groups():
         add(group["name"], wanted_url(group["slug"]),
-            f"{len(group['sources'])} notes link to this title; nobody has written it yet",
+            f"{len(group['sources'])} note{'' if len(group['sources']) == 1 else 's'} "
+            "link to this title; nobody has written it yet",
             "wanted", "wanted")
     for member in sorted({n.member for n in notes}):
         add(member_label(member), f"/wiki/{slugify(member)}/",
@@ -3208,19 +3244,52 @@ def invalidated(notes: list[Note], old: dict[str, Note], touched: set[str],
             for peer in index.targets.get(source.rel) or []:
                 stale.add(peer.rel)
 
-    # (3): links whose resolution flipped, in either name space.
+    # (3): links whose resolution flipped, in either name space. Such a note's
+    # own resolved target set just gained or lost a member, which moves the
+    # "Mentioned alongside" list of everything else it links to — so its whole
+    # co-citation neighbourhood goes with it. Deleting a note is the case that
+    # needs this: its former linkers are caught by the name check, but their
+    # other targets would otherwise keep listing a note that no longer exists.
     if flipped_ids or flipped_slugs:
         for note in notes:
             targets = set(note.outlinks)
-            if flipped_ids & targets:
-                stale.add(note.rel)
-            elif flipped_slugs & {slugify(t) for t in targets}:
-                stale.add(note.rel)
+            if not (flipped_ids & targets
+                    or flipped_slugs & {slugify(t) for t in targets}):
+                continue
+            stale.add(note.rel)
+            for peer in index.targets.get(note.rel) or []:
+                stale.add(peer.rel)
 
     # (5): notes a changed glossary entry does or did define.
     for key in glossary_keys:
         for note in index.by_name.get(key) or []:
             stale.add(note.rel)
+
+    # (6): the reverse direction. A glossary entry inherits the audience of the
+    # notes named for it, so it goes stale whenever one of those notes does —
+    # even though the entry links to none of them. Without this the term page
+    # would keep reporting yesterday's "Used in" list.
+    for rel in stale | touched:
+        for state in (old.get(rel), current.get(rel)):
+            if state is None:
+                continue
+            for key in {slugify(state.note_id), slugify(state.title)}:
+                term = index.defined.get(key)
+                if term is not None:
+                    stale.add(term.rel)
+
+    # (7): a term page also counts the notes carrying its term as a tag, so a
+    # tag edit anywhere moves that figure.
+    tag_flips: set[str] = set()
+    for rel in touched:
+        before, after = old.get(rel), current.get(rel)
+        b, a = (before.tags or []) if before else [], (after.tags or []) if after else []
+        if b != a:
+            tag_flips |= {slugify(t) for t in [*b, *a] if slugify(t)}
+    for key in tag_flips:
+        term = index.defined.get(key)
+        if term is not None:
+            stale.add(term.rel)
 
     return stale
 
