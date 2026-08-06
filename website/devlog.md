@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-08-06 · aneesh (3)
+Consolidated the crowded 11-link nav into five places — Theory, Library, Wiki, Ask, Club — each opening a second row on hover (desktop) or a chevron tap (touch), with zero JavaScript: pure CSS `:hover`/`:focus-within`/`:target`, keyboard- and 320px-safe. On wiki pages the wiki toolbar simply *is* the Wiki group standing open, so there's one bar and one row everywhere. `build.py` now owns the hand-written nav copies (`sync_static_navs()`) — they had quietly drifted into four different versions. Also gated `/wiki*` behind member login for now.
+
 ## 2026-08-06 · aneesh (2)
 Rebuilt `/wiki` from a rendered folder tree into a concept-first knowledge space. The decisive find: 394 of its 713 "dangling" link targets — 3,734 occurrences, two-thirds of the corpus's connective tissue — were mere case/punctuation variants of notes that exist, so link resolution now runs in tiers (exact → glossary alias → unambiguous normalised slug → red link), with every normalised match listed on `/wiki/loose-links` for tightening at source. New surfaces: hub concepts ranked by inbound links, tag-derived topic pages, a wanted-pages worklist (the 313 titles the club keeps naming but never wrote, each with a start-this-note link), orphans, recent changes, and client-side search — resolved links 6,409 → 10,199, orphans 281 → 87, note URLs unchanged, and the incremental rebuild proven byte-equivalent to a full one by a committed verifier.
 
