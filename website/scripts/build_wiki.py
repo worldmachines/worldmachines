@@ -86,6 +86,7 @@ SITENAV = '''\
     <a href="/contributors">Contributors</a>
     <a href="/devlog">Devlog</a>
     <a href="/oracle">Oracle</a>
+    <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>'''
 
