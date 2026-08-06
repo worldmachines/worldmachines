@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Data Formats — World Machines</title>
+  <meta name="description" content="The principle that scientific and research data should be stored in open, portable formats to avoid vendor lock-in and ensure long-term reproducibility.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Open Data Formats</span></nav>
+  <article class="note">
+    <h1>Open Data Formats</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/open-data-formats.md">source on GitHub</a></div>
+  <div class="note-summary">The principle that scientific and research data should be stored in open, portable formats to avoid vendor lock-in and ensure long-term reproducibility.</div>
+  <div class="tags"><span class="tag">data</span><span class="tag">open-source</span><span class="tag">reproducibility</span><span class="tag">vendor-lock-in</span><span class="tag">parquet</span><span class="tag">biotech</span><span class="tag">science</span></div>
+    <div class="prose">
+<p>The principle: scientific data should be stored in formats that are readable by any tool, not just the proprietary system used to create it.</p>
+<h2 id="why-it-matters-in-research">Why It Matters in Research</h2>
+<ul>
+<li><strong>Longevity</strong>: commercial software may be discontinued, change pricing, or be acquired. Data in proprietary formats becomes inaccessible.</li>
+<li><strong>Reproducibility</strong>: any researcher should be able to reproduce an analysis without a specific vendor&#x27;s license.</li>
+<li><strong>Collaboration</strong>: open formats reduce friction when working across institutions or tools.</li>
+<li><strong>Exit costs</strong>: proprietary formats create switching costs that give vendors leverage over customers.</li>
+</ul>
+<h2 id="key-open-formats">Key Open Formats</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Format</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><strong>Parquet</strong></td><td>Columnar analytics data; used by Iceberg, Delta, DuckLake</td></tr>
+<tr><td><strong>FASTQ</strong></td><td>Raw DNA/RNA sequencing reads</td></tr>
+<tr><td><strong>TIFF</strong></td><td>Microscopy images</td></tr>
+<tr><td><strong>CSV</strong></td><td>Simple tabular data</td></tr>
+<tr><td><strong>HDF5</strong></td><td>Large numerical arrays (common in single-cell)</td></tr>
+</tbody>
+</table></div>
+<h2 id="the-lakehouse-context">The Lakehouse Context</h2>
+<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span> architectures built on open table formats (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Apache Iceberg&quot;">Apache Iceberg</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Delta Lake&quot;">Delta Lake</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span>) keep the underlying Parquet files portable. Even if you stop using the lakehouse layer, your data is still readable.</p>
+<p>This is contrasted with proprietary formats used by Databricks, Snowflake, or other vendors where data is stored in formats that tie you to their platform.</p>
+<h2 id="epistemic-connection">Epistemic Connection</h2>
+<p>Open data formats connect to a broader <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scientific Reproducibility&quot;">Scientific Reproducibility</span> ethic: science depends on the ability of others to verify and extend your work. If your data is locked in a proprietary format, the foundational act of sharing is compromised.</p>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scientific Reproducibility&quot;">Scientific Reproducibility</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Biotech Data Management&quot;">Biotech Data Management</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Why Every Biotech Research Group Needs a Data Lakehouse&quot;">Why Every Biotech Research Group Needs a Data Lakehouse</span></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

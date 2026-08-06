@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hallucination — World Machines</title>
+  <meta name="description" content="The structural tendency of large language models to generate confident, fluent, but factually false content — argued to be an inherent consequence of how generative models are built, not a correctable">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Hallucination</span></nav>
+  <article class="note">
+    <h1>Hallucination</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/hallucination.md">source on GitHub</a></div>
+  <div class="note-summary">The structural tendency of large language models to generate confident, fluent, but factually false content — argued to be an inherent consequence of how generative models are built, not a correctable bug.</div>
+  <div class="tags"><span class="tag">llm</span><span class="tag">ai-failure</span><span class="tag">epistemics</span><span class="tag">trust</span><span class="tag">generative-ai</span></div>
+    <div class="prose">
+<h2 id="definition">Definition</h2>
+<p>Hallucination refers to the phenomenon where language models produce plausible-sounding text that is factually incorrect, fabricated, or misleading — without signaling uncertainty to the user. The term is borrowed from psychology (perception without external stimulus) and applied to AI&#x27;s perception-without-grounding.</p>
+<h2 id="why-its-structural">Why It&#x27;s Structural</h2>
+<p>Sathe argues in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span> that hallucination is not a bug to be patched but a consequence of how LLMs are built: by predicting the next token based on statistical patterns in training data, the model optimizes for fluency and coherence, not truth. There is no architectural step where factual accuracy is verified before output. This is distinct from earlier retrieval-based search, which at minimum pointed to primary sources even when ranking was poor.</p>
+<p>The observation is extended in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>: &quot;throwing mountains of data into hot cauldrons of compute&quot; cannot produce grounded, auditable knowledge. The solution is not better training but architectural change — coupling LLMs with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> that supply verified relational facts.</p>
+<h2 id="consequences">Consequences</h2>
+<ul>
+<li>Users have no reliable signal to distinguish true from false outputs</li>
+<li>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mission-Critical AI&quot;">Mission-Critical AI</span> contexts, confident hallucinations can cause direct harm</li>
+<li>Undermines the case for AI as advisor (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span>) — advisors must be trustworthy</li>
+<li>Drives the civilizational regression argument in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lore vs. Search vs. LLM&quot;">Lore vs. Search vs. LLM</span></li>
+</ul>
+<h2 id="partial-mitigations">Partial Mitigations</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span> — ground generation in retrieved passages; reduces but does not eliminate hallucination</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — replace generation with structured retrieval for factual queries; cited as 50x cheaper and substantially more reliable</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perplexity AI&quot;">Perplexity AI</span> — citation-backed generation as a UX intervention</li>
+<li>RLHF / Constitutional AI — value-alignment training; Sathe does not address these directly</li>
+</ul>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the normative standard hallucination violates</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Citation Problem in LLMs&quot;">Citation Problem in LLMs</span> — the missing accountability mechanism</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — the architectural response</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

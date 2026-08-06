@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DuckLake — World Machines</title>
+  <meta name="description" content="An open lakehouse format from the DuckDB team that stores metadata in a SQL database and data in Parquet, designed to be simpler and more portable than Iceberg or Delta Lake.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>DuckLake</span></nav>
+  <article class="note">
+    <h1>DuckLake</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/ducklake.md">source on GitHub</a></div>
+  <div class="note-summary">An open lakehouse format from the DuckDB team that stores metadata in a SQL database and data in Parquet, designed to be simpler and more portable than Iceberg or Delta Lake.</div>
+  <div class="tags"><span class="tag">data-engineering</span><span class="tag">duckdb</span><span class="tag">open-source</span><span class="tag">parquet</span><span class="tag">lakehouse</span><span class="tag">biotech</span><span class="tag">open-formats</span></div>
+    <div class="prose">
+<p>DuckLake is an open lakehouse format developed by the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckDB&quot;">DuckDB</span> team (as of 2025, still approaching production readiness). It is a design inversion relative to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Apache Iceberg&quot;">Apache Iceberg</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Delta Lake&quot;">Delta Lake</span>.</p>
+<h2 id="design-inversion">Design Inversion</h2>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>Iceberg / Delta</th><th>DuckLake</th></tr></thead>
+<tbody>
+<tr><td><strong>Metadata location</strong></td><td>Scattered JSON/Avro manifests in object storage</td><td>Single SQL database</td></tr>
+<tr><td><strong>Data location</strong></td><td>Parquet on blob storage</td><td>Parquet on blob storage (same)</td></tr>
+<tr><td><strong>Catalog dependency</strong></td><td>Separate catalog service required</td><td>SQL DB serves as catalog</td></tr>
+<tr><td><strong>Cross-table transactions</strong></td><td>Advanced/complex feature</td><td>Native, simple</td></tr>
+</tbody>
+</table></div>
+<p>The key insight: metadata is small and benefits from relational structure; data is large and benefits from cheap object storage. DuckLake separates these concerns cleanly.</p>
+<h2 id="catalog-backends">Catalog Backends</h2>
+<p>The SQL metadata catalog can be backed by:</p>
+<ul>
+<li><strong>Postgres</strong> — for production, multi-user environments</li>
+<li><strong>MySQL</strong> — similar</li>
+<li><strong>MotherDuck</strong> — for cloud-managed DuckDB</li>
+<li><strong>DuckDB itself</strong> — for single-user/local development</li>
+</ul>
+<h2 id="progressive-scaling">Progressive Scaling</h2>
+<p>DuckDB + DuckLake runs on a laptop. The same codebase, pointed at MinIO-on-prem or S3, scales to petabytes. This &quot;start tiny, scale fast&quot; property is unusually important in research settings where data volumes are unknown at project start.</p>
+<h2 id="no-vendor-lock-in">No Vendor Lock-In</h2>
+<p>Operations are defined as plain SQL. Any SQL-compatible engine can read or write a DuckLake. This contrasts with Databricks&#x27; Delta Lake, which has commercial extensions that create switching costs.</p>
+<h2 id="status-as-of-2025">Status (as of 2025)</h2>
+<p>Not yet production-ready, but the team has a strong track record (DuckDB itself is well-regarded for reliability). Recommended for new biotech projects that can afford to be early adopters.</p>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span> — the broader architectural concept</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckDB&quot;">DuckDB</span> — the engine and team behind DuckLake</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Open Data Formats&quot;">Open Data Formats</span> — the vendor lock-in argument</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scientific Reproducibility&quot;">Scientific Reproducibility</span> — time-travel and ACID guarantees</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Why Every Biotech Research Group Needs a Data Lakehouse&quot;">Why Every Biotech Research Group Needs a Data Lakehouse</span> — source essay</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

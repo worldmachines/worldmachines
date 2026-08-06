@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Citation Problem in LLMs — World Machines</title>
+  <meta name="description" content="The absence of verifiable source attribution in LLM outputs — a structural accountability gap that makes it impossible for users to audit, verify, or calibrate trust in AI-generated information.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Citation Problem in LLMs</span></nav>
+  <article class="note">
+    <h1>Citation Problem in LLMs</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/citation-problem-in-llms.md">source on GitHub</a></div>
+  <div class="note-summary">The absence of verifiable source attribution in LLM outputs — a structural accountability gap that makes it impossible for users to audit, verify, or calibrate trust in AI-generated information.</div>
+  <div class="tags"><span class="tag">llm</span><span class="tag">epistemics</span><span class="tag">accountability</span><span class="tag">transparency</span><span class="tag">citation</span></div>
+    <div class="prose">
+<h2 id="the-problem">The Problem</h2>
+<p>When a language model answers a question, it draws on patterns from training data — but the specific sources that informed any particular output are not accessible. The xkcd &quot;citation needed&quot; joke, originally aimed at Wikipedia editors and politicians, has become a serious epistemic concern: unlike Wikipedia (which demands citations) or search engines (which link to sources), LLMs provide no trail.</p>
+<p>The specific failure modes:</p>
+<ol>
+<li><strong>No provenance</strong> — users cannot identify what source an answer derived from</li>
+<li><strong>No confidence signal</strong> — LLMs state hallucinations with the same fluency as facts</li>
+<li><strong>No auditability</strong> — there is no mechanism to check whether a cited relationship is accurately reproduced</li>
+</ol>
+<h2 id="why-it-matters">Why It Matters</h2>
+<p>Sathe frames this as the difference between the xkcd joke being funny and being dangerous (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span>). In low-stakes contexts, a confident wrong answer is annoying. In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mission-Critical AI&quot;">Mission-Critical AI</span> domains — healthcare, legal, defense — a confident wrong answer with no traceable source is a liability.</p>
+<p>The citation problem also undermines the case for AI as an advisor (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span>): advisors are expected to ground their recommendations in evidence, and to be accountable when recommendations fail.</p>
+<h2 id="attempts-at-resolution">Attempts at Resolution</h2>
+<ul>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perplexity AI&quot;">Perplexity AI</span></strong>: Grafts citations onto LLM outputs. Sathe acknowledges the effort but doubts it solves the underlying trust problem — the citation is post-hoc, not part of the generation mechanism.</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span></strong>: Inserts retrieved passages into the generation context. Reduces hallucination, makes sources more visible, but still allows the model to misrepresent what it retrieved.</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span></strong>: Bypass generation entirely for factual queries — the answer comes from structured data with a clear provenance path.</li>
+</ul>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span> — the content failure that citations would mitigate</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the broader principle</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lore vs. Search vs. LLM&quot;">Lore vs. Search vs. LLM</span> — historical context for why this is a regression</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

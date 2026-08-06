@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retrieval-Augmented Generation (RAG) — World Machines</title>
+  <meta name="description" content="A technique for grounding language model outputs in retrieved external documents, improving factuality while preserving natural language generation — and its limitations in complex, relational domains">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Retrieval-Augmented Generation (RAG)</span></nav>
+  <article class="note">
+    <h1>Retrieval-Augmented Generation (RAG)</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/retrieval-augmented-generation.md">source on GitHub</a></div>
+  <div class="note-summary">A technique for grounding language model outputs in retrieved external documents, improving factuality while preserving natural language generation — and its limitations in complex, relational domains like healthcare.</div>
+  <div class="tags"><span class="tag">ai-architecture</span><span class="tag">llm</span><span class="tag">information-retrieval</span><span class="tag">healthcare-ai</span><span class="tag">rag</span></div>
+    <div class="prose">
+<h2 id="definition">Definition</h2>
+<p>RAG is an architecture where, before generating a response, a language model retrieves relevant passages from an external corpus and conditions its generation on them. This grounds the output in actual documents, improving factuality over pure generation from latent weights.</p>
+<h2 id="variants">Variants</h2>
+<ul>
+<li><strong>Basic RAG</strong>: Retrieve top-k documents by keyword or embedding similarity; insert into the LLM&#x27;s context window; generate.</li>
+<li><strong>Advanced RAG</strong>: Use structured retrieval over <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> rather than flat document stores; retrieve typed relationships rather than passages; enables multi-hop reasoning across linked entities.</li>
+</ul>
+<h2 id="limitations-in-healthcare-basic-rag">Limitations in Healthcare (Basic RAG)</h2>
+<p>Sathe identifies a fundamental mismatch between basic RAG and healthcare requirements (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR Knowledge Graphs Healthcare&quot;">FHIR Knowledge Graphs Healthcare</span>):</p>
+<ul>
+<li>Healthcare knowledge is <strong>relational</strong>, not textual — the meaningful unit is a relationship between disease, treatment, contraindication, and patient history, not a paragraph about any of them in isolation.</li>
+<li>Basic RAG retrieves passages that <em>mention</em> relevant entities but cannot traverse the <em>relationships</em> between them.</li>
+<li>Result: retrieval is relevant but shallow; the model can say &quot;metformin is used for diabetes&quot; but cannot reason about the specific patient&#x27;s comorbidities and what that implies for dosing.</li>
+</ul>
+<h2 id="the-advanced-rag-solution">The Advanced RAG Solution</h2>
+<p>Advanced RAG operating over FHIR-structured <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> addresses these limitations:</p>
+<ul>
+<li>Retrieval traverses typed relationships (not keyword co-occurrence)</li>
+<li>Responses are grounded in verified, structured medical knowledge</li>
+<li>Patient-specific information integrates with population-level evidence</li>
+<li>The result is &quot;enriched AI responses with verified medical knowledge and patient-specific information&quot;</li>
+</ul>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — the structured substrate that advanced RAG operates over</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR&quot;">FHIR</span> — the interoperability standard enabling healthcare KG construction</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span> — the failure mode RAG partially mitigates</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — advanced RAG improves explainability but doesn&#x27;t fully achieve it</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — RAG as one component</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

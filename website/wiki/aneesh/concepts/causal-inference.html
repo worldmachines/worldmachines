@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Causal Inference — World Machines</title>
+  <meta name="description" content="The formal and informal methods for moving from correlation to causation — requiring understanding of experimental design, confounders, and the data generation process before statistical analysis begi">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Causal Inference</span></nav>
+  <article class="note">
+    <h1>Causal Inference</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/causal-inference.md">source on GitHub</a></div>
+  <div class="note-summary">The formal and informal methods for moving from correlation to causation — requiring understanding of experimental design, confounders, and the data generation process before statistical analysis begins.</div>
+  <div class="tags"><span class="tag">statistics</span><span class="tag">data-science</span><span class="tag">causality</span><span class="tag">methodology</span><span class="tag">epistemology</span></div>
+    <div class="prose">
+<p><strong>Causal inference</strong> is the discipline of drawing valid causal conclusions from data — moving from &quot;X and Y are correlated&quot; to &quot;X causes Y.&quot; It requires understanding the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span> before statistical analysis, not as a post-hoc correction.</p>
+<h2 id="the-core-problem">The Core Problem</h2>
+<p>Correlation does not imply causation. The gap between the two is filled by:</p>
+<ol>
+<li><strong>Experimental design</strong>: randomization that breaks the correlation between treatment and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confounding Variables&quot;">confounders</span></li>
+<li><strong>Causal modeling</strong>: explicit representation of the causal structure (via DAGs or structural equations)</li>
+<li><strong>Domain knowledge</strong>: knowing which variables precede others, which are plausible causes</li>
+</ol>
+<p>This information is not in the data. It must come from understanding the science of the experiment.</p>
+<h2 id="key-methods">Key Methods</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Method</th><th>When to Use</th><th>Key Assumption</th></tr></thead>
+<tbody>
+<tr><td><strong>RCT</strong></td><td>Can randomize treatment</td><td>Randomization breaks all confounding</td></tr>
+<tr><td><strong>Instrumental Variables</strong></td><td>Have an instrument (affects treatment, not outcome)</td><td>Instrument is valid</td></tr>
+<tr><td><strong>Difference-in-Differences</strong></td><td>Have pre/post data for treated and control</td><td>Parallel trends</td></tr>
+<tr><td><strong>Regression Discontinuity</strong></td><td>Treatment assignment has a cutoff</td><td>Continuity near cutoff</td></tr>
+<tr><td><strong>DAG-based adjustment</strong></td><td>Know the causal structure</td><td>DAG is correctly specified</td></tr>
+</tbody>
+</table></div>
+<h2 id="sathes-fertilizer-example">Sathe&#x27;s Fertilizer Example</h2>
+<p>Testing a fertilizer only on sunny plots is a causal inference failure: the experimental design does not control for sunlight, so the estimate of fertilizer effectiveness is confounded. This failure cannot be corrected statistically — it is baked into the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span>.</p>
+<h2 id="covid-19-case">COVID-19 Case</h2>
+<p>Early regional death-rate comparisons were causal inference failures: policies were correlated with outcomes, but age distribution, testing access, and hospital load were confounders. Later studies that controlled for these confounders found the apparent policy miracles vanished. See <a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a>.</p>
+<h2 id="relationship-to-breiman">Relationship to Breiman</h2>
+<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Leo Breiman&quot;">Leo Breiman</span>&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Breiman&#x27;s Two Cultures&quot;">Two Cultures</span> critique is partly a causal inference critique: the algorithmic modeling culture optimizes predictive accuracy on data without asking whether the causal structure is identified. A predictive model can be accurate for the wrong reasons.</p>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confounding Variables&quot;">Confounding Variables</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Breiman&#x27;s Two Cultures&quot;">Breiman&#x27;s Two Cultures</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Centric AI&quot;">Data-Centric AI</span></li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a> (Aneesh Sathe, 2025)</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from <span class="count">2</span></h2>
+    <ul>
+      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-10-political-morality">Political Morality (1862)</a> <span class="muted">Commons</span></li>
+      <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a> <span class="muted">Commons</span></li>
+    </ul>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

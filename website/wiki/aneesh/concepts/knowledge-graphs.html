@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge Graphs — World Machines</title>
+  <meta name="description" content="Data structures representing entities and their relationships as interconnected nodes and edges — powerful tools for managing complex information, but critically dependent on ontological scaffolding.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Knowledge Graphs</span></nav>
+  <article class="note">
+    <h1>Knowledge Graphs</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/knowledge-graphs.md">source on GitHub</a></div>
+  <div class="note-summary">Data structures representing entities and their relationships as interconnected nodes and edges — powerful tools for managing complex information, but critically dependent on ontological scaffolding.</div>
+  <div class="tags"><span class="tag">knowledge-graphs</span><span class="tag">ontologies</span><span class="tag">AI</span><span class="tag">semantic-web</span><span class="tag">data-infrastructure</span><span class="tag">knowledge-management</span></div>
+    <div class="prose">
+<p>A <strong>knowledge graph</strong> (KG) is a data structure that represents entities (nodes) and the relationships between them (edges), enabling machines to reason over complex, interconnected information. KGs have emerged as a primary tool for managing the structured knowledge that raw data and language models alone cannot provide.</p>
+<h2 id="why-kgs-matter">Why KGs Matter</h2>
+<p>In an era of data abundance and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Slop&quot;">AI Slop</span>, the bottleneck is not data but <em>structured meaning</em>. KGs bridge the gap between raw information and actionable insight by making relationships explicit.</p>
+<p>Key capabilities:</p>
+<ul>
+<li><strong>Semantic interoperability</strong>: data from disparate sources can be integrated when grounded in shared vocabulary</li>
+<li><strong>Deductive reasoning</strong>: inferring new knowledge from existing relationships</li>
+<li><strong>Machine learning support</strong>: structured background knowledge for ML models, including explainable AI</li>
+<li><strong>Hypothesis generation</strong>: in drug discovery, connecting genes, proteins, and diseases to identify targets</li>
+</ul>
+<h2 id="the-ontology-dependency">The Ontology Dependency</h2>
+<p>A KG without a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontology&quot;">Domain Ontology</span> is a collection of isolated data points. The ontology defines:</p>
+<ul>
+<li>What types of entities can exist (node types)</li>
+<li>What types of relationships can hold (edge types)</li>
+<li>Semantic constraints and definitions</li>
+</ul>
+<p>This is the central argument of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies — Indispensable for Knowledge Graph Construction&quot;">Domain Ontologies — Indispensable for Knowledge Graph Construction</span>.</p>
+<h2 id="example-kgs">Example KGs</h2>
+<ul>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;PrimeKG&quot;">PrimeKG</span></strong> — multimodal precision medicine KG</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;NP-KG&quot;">NP-KG</span></strong> — pharmacokinetic natural product-drug interaction KG</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;ChEBI&quot;">ChEBI</span></strong> — Chemical Entities of Biological Interest (foundational biomedical ontology/KG)</li>
+</ul>
+<h2 id="challenges">Challenges</h2>
+<ol>
+<li><strong>Integration gap</strong>: Most ontologies are abstract models not designed to hold data — requires (semi-)automated integration pipelines</li>
+<li><strong>Semantic inconsistency</strong>: Multiple competing ontologies in a domain create irreconcilable representations</li>
+<li><strong>Maintenance</strong>: KGs require ongoing labor to remain accurate and current</li>
+<li><strong>Scale vs. depth</strong>: Larger KGs capture more entities but may sacrifice semantic precision</li>
+</ol>
+<h2 id="kgs-as-bridges-in-the-knowledge-stack">KGs as Bridges in the Knowledge Stack</h2>
+<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span> proposes KGs as &quot;bridges between curated knowledge and generated text.&quot; In this framing:</p>
+<pre><code>Raw data → Ontology → Knowledge Graph → LLM grounding → Natural language</code></pre>
+<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span> provide the left side of this bridge; <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs&quot;">LLMs</span> provide the right. KGs are the connective tissue.</p>
+<h2 id="connection-to-idea-graphs">Connection to Idea-Graphs</h2>
+<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> essay anticipates &quot;<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span> and knowledge structures&quot; as LLM-consumable political artifacts — a non-technical instantiation of the KG concept applied to intellectual and political discourse.</p>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span> — the prerequisite scaffolding</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FAIR Principles&quot;">FAIR Principles</span> — the data standards KGs should satisfy</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library&quot;">Universal Library</span> — KGs as the latest technological attempt to realize the universal library ideal</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span> — the political/intellectual application of KG thinking</li>
+</ul>
+<h2 id="kgs-vs-basic-rag-in-healthcare">KGs vs. Basic RAG in Healthcare</h2>
+<p>Sathe argues (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR Knowledge Graphs Healthcare&quot;">FHIR Knowledge Graphs Healthcare</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>) that standard <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span> fails healthcare because medical knowledge is inherently relational — diseases link to treatments link to contraindications link to patient-specific histories. Basic RAG retrieves passages that <em>mention</em> relevant entities but cannot traverse the <em>relationships</em> between them. KG-grounded retrieval fixes this by operating over typed relational structure.</p>
+<p>The cost argument: retrieving an answer from a KG is cited as <strong>50x cheaper</strong> than generating it with an LLM. KGs also eliminate <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span> for factual queries — the answer is looked up, not generated.</p>
+<p>The interactivity problem: KGs are hard to query without technical expertise. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> resolves this: LLM handles natural language interface, KG supplies grounded facts.</p>
+<p><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR&quot;">FHIR</span></strong> provides the EHR interoperability standard that feeds healthcare KGs. <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;PrimeKG&quot;">PrimeKG</span></strong> combines multiple KGs for multimodal clinical knowledge integration.</p>
+<h2 id="relationship-to-expertise-structure">Relationship to Expertise Structure</h2>
+<p>&quot;Dancing on the Shoulders of Giants&quot; draws an analogy between expert cognition and KG structure: experts store knowledge relationally, with context attached to both entities and relationships — exactly how KGs work. Externalizing expertise into a KG means the knowledge doesn&#x27;t die with the expert or remain siloed in one institution, enabling <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wright&#x27;s Law&quot;">Wright&#x27;s Law</span>-style compounding in fields that have historically resisted it.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies — Knowledge Graph Construction&quot;">Domain Ontologies — Knowledge Graph Construction</span> (summary)</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span> (summary)</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR Knowledge Graphs Healthcare&quot;">FHIR Knowledge Graphs Healthcare</span> (summary) — healthcare RAG + KG architecture</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span> (summary) — KGs as crystallized expertise, 50x cost claim</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from <span class="count">1</span></h2>
+    <ul>
+      <li><a href="/wiki/aneesh/concepts/cognitive-map-tuan">Cognitive Map (Tuan)</a> <span class="muted">Aneesh</span></li>
+    </ul>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

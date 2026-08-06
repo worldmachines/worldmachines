@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ontologies vs. Embeddings — Two Paths to Semantic Structure — World Machines</title>
+  <meta name="description" content="Two approaches to the same aspiration — semantic structure without ambiguity — that are complementary rather than competing: explicit ontological declaration vs. statistical vector representation.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Ontologies vs. Embeddings — Two Paths to Semantic Structure</span></nav>
+  <article class="note">
+    <h1>Ontologies vs. Embeddings — Two Paths to Semantic Structure</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/ontologies-vs-embeddings.md">source on GitHub</a></div>
+  <div class="note-summary">Two approaches to the same aspiration — semantic structure without ambiguity — that are complementary rather than competing: explicit ontological declaration vs. statistical vector representation.</div>
+  <div class="tags"><span class="tag">ontologies</span><span class="tag">LLMs</span><span class="tag">embeddings</span><span class="tag">semantic-web</span><span class="tag">knowledge-representation</span><span class="tag">synthesis</span></div>
+    <div class="prose">
+<p>Both <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span> and LLM embeddings represent attempts to solve the same problem: how do you give a machine a meaningful representation of concepts such that it can reason over them reliably?</p>
+<p>They take structurally opposite approaches.</p>
+<h2 id="the-shared-aspiration">The Shared Aspiration</h2>
+<p>Both are heirs to the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span> dream — the Leibnizian ideal of a representational system where:</p>
+<ul>
+<li>Each concept has a unique, unambiguous location</li>
+<li>Relationships between concepts are explicit and computable</li>
+<li>Reasoning over the representation is reliable</li>
+</ul>
+<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Umberto Eco&quot;">Umberto Eco</span> identified AI as a &quot;revival under a different name&quot; of this dream. He was gesturing at embeddings. But ontologies are the <em>other</em> revival — older, more conservative, more deliberate.</p>
+<h2 id="the-approaches-contrasted">The Approaches Contrasted</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Dimension</th><th>Domain Ontologies</th><th>LLM Embeddings</th></tr></thead>
+<tbody>
+<tr><td>Nature</td><td>Explicit, declared</td><td>Implicit, statistical</td></tr>
+<tr><td>Construction</td><td>Expert-built, labor-intensive</td><td>Learned from data</td></tr>
+<tr><td>Coverage</td><td>Domain-scoped</td><td>Web-scale</td></tr>
+<tr><td>Reliability</td><td>High within domain, brittle outside</td><td>Probabilistic, confident errors</td></tr>
+<tr><td>Reasoning</td><td>Deductive (guaranteed valid)</td><td>Pattern-matching (plausible)</td></tr>
+<tr><td>Ambiguity handling</td><td>Eliminated by design</td><td>Approximated by proximity</td></tr>
+<tr><td>Interpretability</td><td>Fully legible</td><td>Opaque (black box)</td></tr>
+<tr><td>Update cost</td><td>High (expert revision)</td><td>Low (retraining)</td></tr>
+</tbody>
+</table></div>
+<h2 id="the-synthesis-needed">The Synthesis Needed</h2>
+<p>Neither is sufficient alone:</p>
+<ul>
+<li>Ontologies cannot scale to web-level data without enormous labor</li>
+<li>Embeddings hallucinate and cannot guarantee logical consistency</li>
+</ul>
+<p>The literature cited in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies — Indispensable for Knowledge Graph Construction&quot;">Domain Ontologies — Indispensable for Knowledge Graph Construction</span> points toward a synthesis: <strong>ontology-grounded KGs + LLM interfaces</strong>. The ontology provides the logical backbone; the LLM provides the natural language interface and fills in the spaces between explicit nodes.</p>
+<p>Gilbert et al. (2024) — &quot;Augmented non-hallucinating large language models using ontologies and knowledge graphs in biomedicine&quot; — is the direct technical instantiation of this synthesis.</p>
+<h2 id="the-political-dimension">The Political Dimension</h2>
+<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> essay introduces a third path: <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span></strong> — explicit relational structures built for LLM consumption but designed for political-intellectual rather than scientific domains. Idea-graphs occupy the middle ground: more structured than plain text (like ontologies), more flexible than formal ontologies (because political concepts resist strict formalization).</p>
+<h2 id="essay-seed">Essay Seed</h2>
+<p>This tension is potentially the core of a substantial essay: <strong>the two revivals of the Perfect Language dream</strong> — one explicit (ontological engineering), one statistical (deep learning) — are converging on a synthesis that neither camp fully anticipated. The future of knowledge infrastructure may be hybrid: ontologically structured cores with LLM-mediated peripheries.</p>
+<h2 id="related-pages">Related Pages</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span> — the explicit approach</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span> — the shared ancestor</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — the synthesis infrastructure</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> — political application</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span> — the political middle ground</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library&quot;">Universal Library</span> — the macro-scale aspiration both serve</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

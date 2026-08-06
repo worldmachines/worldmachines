@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calibrated Explanation — World Machines</title>
+  <meta name="description" content="The design principle that AI explanations should be pitched at the lowest level of detail a domain expert actually cares about — neither architecture-level nor verdict-only — producing an AI-human cau">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Calibrated Explanation</span></nav>
+  <article class="note">
+    <h1>Calibrated Explanation</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/calibrated-explanation.md">source on GitHub</a></div>
+  <div class="note-summary">The design principle that AI explanations should be pitched at the lowest level of detail a domain expert actually cares about — neither architecture-level nor verdict-only — producing an AI-human causal prediction machine.</div>
+  <div class="tags"><span class="tag">explainable-ai</span><span class="tag">UX</span><span class="tag">product-design</span><span class="tag">human-computer-interaction</span><span class="tag">AI-design</span></div>
+    <div class="prose">
+<p>The design principle articulated by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span>: AI explanations should be calibrated to the <em>domain expert&#x27;s vocabulary and cognitive level</em> — specifically, the lowest level of detail they actually care about.</p>
+<h2 id="the-three-level-problem">The Three-Level Problem</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Level</th><th>Example</th><th>Problem</th></tr></thead>
+<tbody>
+<tr><td>Too deep</td><td>&quot;IoU score: 0.82, detected by YOLOv7 at confidence 0.91&quot;</td><td>Expert&#x27;s eyes glaze; meaningless to a biologist or clinician</td></tr>
+<tr><td>Just right</td><td>&quot;Features A, B, C detected → likely disease X&quot;</td><td>Expert can verify, override, build confidence</td></tr>
+<tr><td>Too shallow</td><td>&quot;Diagnosis: malignant&quot;</td><td>Expert excluded from causal chain; regulatory risk; no learning</td></tr>
+</tbody>
+</table></div>
+<p>The &quot;just right&quot; level is what Sathe calls the <strong>intermediate feature level</strong> — the causes that lead to the conclusion, expressed in the expert&#x27;s own vocabulary.</p>
+<h2 id="the-betty-crocker-principle">The Betty Crocker Principle</h2>
+<p>Like the cake mix that requires the customer to add one egg (participation that builds ownership and catches errors), AI should leave a meaningful cognitive action for the user. Full automation — like a cake mix that requires no input — produces passive acceptance rather than expert judgment.</p>
+<h2 id="why-this-is-hard-to-build">Why This Is Hard to Build</h2>
+<p>Generating ground-truth labels at the intermediate feature level is expensive and domain-specific. It requires:</p>
+<ul>
+<li>Domain experts to annotate not just outcomes but intermediate features</li>
+<li>Human-in-the-loop labeling at the right level of abstraction</li>
+<li>Resisting the easier paths: predicting the whole image (cheaper) or outputting raw model internals (default)</li>
+</ul>
+<h2 id="design-implications">Design Implications</h2>
+<ul>
+<li>The intermediate feature level is discovered through customer research, not assumed</li>
+<li>Different user populations have different calibration points (clinician vs. patient vs. regulator)</li>
+<li>As AI performance improves and users become more sophisticated, the calibration point may shift</li>
+</ul>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the broader domain</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI-Human Causal Prediction Machine&quot;">AI-Human Causal Prediction Machine</span> — the target system this creates</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Expert User&quot;">Domain Expert User</span> — the calibration audience</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — adjacent design philosophy (strategic information disclosure)</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unwarranted Faith in Numbers&quot;">Unwarranted Faith in Numbers</span> — the failure mode to avoid</li>
+<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

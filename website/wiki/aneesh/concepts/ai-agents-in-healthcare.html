@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Agents in Healthcare — World Machines</title>
+  <meta name="description" content="AI agent systems deployed in clinical settings, combining retrieval-augmented generation over FHIR-structured knowledge graphs to provide diagnosis support, outcome prediction, and treatment optimizat">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>AI Agents in Healthcare</span></nav>
+  <article class="note">
+    <h1>AI Agents in Healthcare</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/ai-agents-in-healthcare.md">source on GitHub</a></div>
+  <div class="note-summary">AI agent systems deployed in clinical settings, combining retrieval-augmented generation over FHIR-structured knowledge graphs to provide diagnosis support, outcome prediction, and treatment optimization.</div>
+  <div class="tags"><span class="tag">ai-agents</span><span class="tag">healthcare-ai</span><span class="tag">clinical-ai</span><span class="tag">diagnosis</span><span class="tag">personalized-medicine</span></div>
+    <div class="prose">
+<h2 id="definition">Definition</h2>
+<p>AI agents in healthcare are autonomous or semi-autonomous systems that receive clinical queries, retrieve relevant information from structured knowledge bases, and generate actionable recommendations or analyses. In Sathe&#x27;s architecture (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR Knowledge Graphs Healthcare&quot;">FHIR Knowledge Graphs Healthcare</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>), these agents are distinguished from basic LLM chatbots by their integration with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR&quot;">FHIR</span>-structured <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span>.</p>
+<h2 id="capabilities">Capabilities</h2>
+<p>When enhanced with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span> over KG-structured data, healthcare agents can:</p>
+<ul>
+<li>Improve diagnosis accuracy by reasoning over patient history, clinical evidence, and drug/disease relationship networks</li>
+<li>Predict patient outcomes by integrating individualized data with population-level knowledge</li>
+<li>Optimize treatment plans through comprehensive understanding of comorbidities, contraindications, and efficacy evidence</li>
+<li>Surface drug discovery connections across molecular, genomic, and clinical domains</li>
+</ul>
+<h2 id="the-multi-domain-problem">The Multi-Domain Problem</h2>
+<p>&quot;Agents and KGs can help manage the multi-domain complexity of disease that no single human mind can hold.&quot; This is the core claim: human expert cognition is bounded; disease causality crosses genomic, molecular, cellular, tissue, organ, system, and population levels simultaneously. No individual clinician can be expert at all relevant levels for a given patient. A well-structured KG + LLM agent can traverse these levels, surfacing connections that would otherwise require a multidisciplinary team.</p>
+<h2 id="the-human-in-the-loop-requirement">The Human-in-the-Loop Requirement</h2>
+<p>Sathe&#x27;s vision is not autonomous clinical AI but augmented clinical expertise: &quot;doctors who integrate AI into their workflows with enthusiasm yet maintain high standards.&quot; The agent is a powerful tool operated by a practitioner with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> — the judgment to recognize when the agent&#x27;s output conflicts with clinical reality. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span>.</p>
+<h2 id="challenges">Challenges</h2>
+<ul>
+<li><strong>Data privacy</strong>: patient data in KGs raises HIPAA and GDPR compliance requirements</li>
+<li><strong>Computational demands</strong>: graph traversal at clinical scale requires significant infrastructure</li>
+<li><strong>KG maintenance</strong>: who updates the graph as medical guidelines evolve?</li>
+<li><strong>Trust and adoption</strong>: clinicians must have sufficient AI literacy to use agents appropriately without over-relying on them</li>
+</ul>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — the structured substrate</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR&quot;">FHIR</span> — the EHR interoperability layer</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span> — the query mechanism</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — the full system</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the accountability standard agents must meet</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mission-Critical AI&quot;">Mission-Critical AI</span> — the deployment context</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wright&#x27;s Law&quot;">Wright&#x27;s Law</span> — the efficiency goal healthcare agents serve</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Active Inference — World Machines</title>
+  <meta name="description" content="Karl Friston&#x27;s framework in which organisms minimize variational free energy by updating internal models (perception) and acting on the world to make it conform to predictions (active inference).">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Active Inference</span></nav>
+  <article class="note">
+    <h1>Active Inference</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/active-inference.md">source on GitHub</a></div>
+  <div class="note-summary">Karl Friston&#x27;s framework in which organisms minimize variational free energy by updating internal models (perception) and acting on the world to make it conform to predictions (active inference).</div>
+  <div class="tags"><span class="tag">neuroscience</span><span class="tag">friston</span><span class="tag">free-energy</span><span class="tag">cognition</span><span class="tag">niche-construction</span></div>
+    <div class="prose">
+<p><strong>Active inference</strong> is Karl Friston&#x27;s extension of the free energy principle to action. Organisms minimize variational free energy — a bound on surprise or prediction error — through two complementary channels: <strong>updating internal models</strong> to better predict sensory input (perception), and <strong>acting on the world</strong> to make it conform to existing predictions (active inference proper). The framework unifies perception, action, learning, and attention under a single variational objective.</p>
+<h2 id="the-formal-version-of-ideas-upstream-of-atoms">The Formal Version of &quot;Ideas Upstream of Atoms&quot;</h2>
+<p>Active inference provides the formal apparatus for a claim that recurs across this wiki: that internal models are causally upstream of material rearrangement. An organism does not merely passively model the world and then act on separate motivational grounds. Instead, the generative model <em>is</em> the source of action — the organism acts to minimize the divergence between predicted and observed states. Ideas (encoded as prior beliefs in the generative model) literally cause the physical world to be rearranged.</p>
+<p>This is not metaphor. In the free energy formalism, action and perception are mathematically symmetric operations on the same objective function. The asymmetry is only in direction: perception adjusts the model to match the world; action adjusts the world to match the model.</p>
+<h2 id="niche-construction">Niche Construction</h2>
+<p>Active inference extends naturally to <strong>niche construction</strong>: organisms do not merely adapt to environments but reshape environments to mirror their internal causal models. A beaver builds a dam not because it has a &quot;dam-building module&quot; but because its generative model predicts a world with a dam, and the discrepancy between prediction and reality drives dam-building behavior. The environment becomes an extension of the organism&#x27;s model — a physical instantiation of its expectations.</p>
+<p>This dissolves the organism-environment boundary in a way that parallels <a class="wikilink" href="/wiki/aneesh/concepts/extended-mind">extended-mind</a> from the philosophical side: if the organism&#x27;s model extends into the environment through niche construction, then the environment is part of the cognitive system.</p>
+<h2 id="key-technical-details">Key Technical Details</h2>
+<ul>
+<li><strong>Variational free energy</strong> is an upper bound on surprisal (negative log evidence). Minimizing it amounts to maximizing model evidence — making the organism&#x27;s model an increasingly accurate account of its sensory world.</li>
+<li><strong>Expected free energy</strong> extends this to the future: organisms select actions that minimize <em>expected</em> surprise, which decomposes into an epistemic (information-seeking) and pragmatic (goal-seeking) component.</li>
+<li>The framework subsumes reinforcement learning, optimal control, and Bayesian inference as special cases.</li>
+</ul>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/extended-mind">extended-mind</a>: Clark and Chalmers dissolve the skull boundary philosophically; active inference dissolves it formally — the generative model recruits environmental states as part of its inference.</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>: If organisms act to maintain their generative models, then capture resistance is the refusal to let external agents overwrite the organism&#x27;s priors — the formal version of liveness.</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/energy-rate-density">energy-rate-density</a>: More complex generative models require more energy throughput to maintain, linking active inference to Chaisson&#x27;s thermodynamic complexity metric.</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from <span class="count">2</span></h2>
+    <ul>
+      <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/extended-mind">The Extended Mind</a> <span class="muted">Aneesh</span></li>
+    </ul>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explainability Across Domains — World Machines</title>
+  <meta name="description" content="The same design problem — how much to explain, to whom, and at what level of abstraction — appears in statistical modeling, AI product design, and scientific communication; the shared solution is cali">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Explainability Across Domains</span></nav>
+  <article class="note">
+    <h1>Explainability Across Domains</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/explainability-across-domains.md">source on GitHub</a></div>
+  <div class="note-summary">The same design problem — how much to explain, to whom, and at what level of abstraction — appears in statistical modeling, AI product design, and scientific communication; the shared solution is calibration to the audience&#x27;s interpretive level, not maximum or minimum transparency.</div>
+  <div class="tags"><span class="tag">explainable-ai</span><span class="tag">bayesian-statistics</span><span class="tag">scientific-method</span><span class="tag">design</span><span class="tag">synthesis</span><span class="tag">calibration</span></div>
+    <div class="prose">
+<h2 id="the-parallel-problems">The Parallel Problems</h2>
+<p>The same structural problem appears independently across three domains in Sathe&#x27;s essays:</p>
+<h3 id="1-statistical-analysis">1. Statistical Analysis</h3>
+<p>A biologist running a t-test gets &quot;***&quot; with no visibility into assumptions about normality, sample size adequacy, or the shape of the underlying distribution. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bayesian Statistics&quot;">Bayesian Statistics</span> forces explicit statement of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generating Process&quot;">Data Generating Process</span> — but at the cost of more modeling work and a more complex output (a posterior distribution rather than a p-value).</p>
+<h3 id="2-ai-product-design">2. AI Product Design</h3>
+<p>A deep learning model classifies a pathological image as &quot;malignant.&quot; The biologist or clinician gets a verdict with no intermediate features. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Calibrated Explanation&quot;">Calibrated Explanation</span> requires pitching the output at the expert&#x27;s vocabulary level — &quot;features A, B, C are present&quot; — not the model&#x27;s vocabulary (confidence scores, IoU).</p>
+<h3 id="3-xai-research">3. XAI Research</h3>
+<p>The field optimizes for <em>technical faithfulness</em> (does the explanation match model internals?) rather than <em>human usefulness</em> (does it improve decision quality?). Conflicting SHAP and LIME attributions for the same model erode trust after adoption.</p>
+<h2 id="the-shared-structure">The Shared Structure</h2>
+<p>In each case:</p>
+<ul>
+<li><strong>The black box failure</strong>: output without reasoning chain → user cannot catch errors</li>
+<li><strong>The over-explanation failure</strong>: maximum transparency → user overwhelmed, or <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unwarranted Faith in Numbers&quot;">Unwarranted Faith in Numbers</span> triggered</li>
+<li><strong>The calibration solution</strong>: explanation pitched at the audience&#x27;s interpretive level and decision need</li>
+</ul>
+<h2 id="the-audience-determines-the-level">The Audience Determines the Level</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Domain</th><th>Audience</th><th>Right Level</th></tr></thead>
+<tbody>
+<tr><td>Bayesian stats</td><td>Domain scientist</td><td>DAG and key assumptions — not full posterior math</td></tr>
+<tr><td>Medical AI</td><td>Clinician</td><td>Intermediate features in clinical vocabulary — not IoU or model architecture</td></tr>
+<tr><td>XAI for practitioners</td><td>ML engineer</td><td>Guidance on method disagreement — not full faithfulness proofs</td></tr>
+<tr><td>LLM outputs</td><td>General user</td><td>Source citations and confidence — not attention weights</td></tr>
+</tbody>
+</table></div>
+<p>The correct level of explanation is not a property of the explanation method; it is a property of the audience-task pair.</p>
+<h2 id="the-betty-crocker-principle-generalized">The Betty Crocker Principle Generalized</h2>
+<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>&#x27;s Betty Crocker metaphor (add the egg) generalizes: in every domain, leave the user one meaningful cognitive action that:</p>
+<ol>
+<li>Builds ownership and engagement</li>
+<li>Creates an error-interception opportunity</li>
+<li>Preserves the human&#x27;s sense of judgment and accountability</li>
+</ol>
+<p>In Bayesian stats: the scientist chooses the prior and checks model fit. In medical AI: the clinician confirms the intermediate features. In LLM use: the expert verifies citations and challenges reasoning chains.</p>
+<h2 id="the-deeper-connection">The Deeper Connection</h2>
+<p>Both the Bayesian and AI explainability arguments are ultimately about <strong>causal reasoning</strong>. The Bayesian DAG is a causal model. The AI-Human Causal Prediction Machine surfaces the causes behind predictions. The XAI credibility gap is largely a failure to expose causal reasoning.</p>
+<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency as Epistemic Virtue&quot;">Transparency as Epistemic Virtue</span> for the normative synthesis.</p>
+<h2 id="essay-seeds">Essay Seeds</h2>
+<ul>
+<li><strong>&quot;The Right Level of Detail&quot;</strong>: a unified treatment of calibrated explanation across scientific communication, AI design, and statistical modeling</li>
+<li><strong>&quot;Causes All the Way Down&quot;</strong>: why causal transparency — not just any transparency — is the standard that matters</li>
+<li><strong>&quot;The Expert&#x27;s Eye&quot;</strong>: on the domain expert as the essential calibration point for AI systems</li>
+</ul>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Calibrated Explanation&quot;">Calibrated Explanation</span> — the design principle</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bayesian Statistics&quot;">Bayesian Statistics</span> — statistical instantiation</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — AI instantiation</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI-Human Causal Prediction Machine&quot;">AI-Human Causal Prediction Machine</span> — design target</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — related design philosophy</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unwarranted Faith in Numbers&quot;">Unwarranted Faith in Numbers</span> — the failure mode of miscalibrated transparency</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency as Epistemic Virtue&quot;">Transparency as Epistemic Virtue</span> — normative synthesis</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generating Process&quot;">Data Generating Process</span> — the shared underlying concept</li>
+<li>Sources: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Road to Bayesian Stats&quot;">My Road to Bayesian Stats</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Briefing: The State of Explainable AI (XAI)&quot;">Briefing: The State of Explainable AI (XAI)</span></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

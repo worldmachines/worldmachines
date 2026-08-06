@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why Every Biotech Research Group Needs a Data Lakehouse — World Machines</title>
+  <meta name="description" content="A technical essay arguing that biotech research groups should adopt data lakehouse architecture (specifically DuckLake) to solve heterogeneous data management, reproducibility, and vendor lock-in prob">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Why Every Biotech Research Group Needs a Data Lakehouse</span></nav>
+  <article class="note">
+    <h1>Why Every Biotech Research Group Needs a Data Lakehouse</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/why-every-biotech-research-group-needs-a-data-lakehouse.md">source on GitHub</a></div>
+  <div class="note-summary">A technical essay arguing that biotech research groups should adopt data lakehouse architecture (specifically DuckLake) to solve heterogeneous data management, reproducibility, and vendor lock-in problems.</div>
+  <div class="tags"><span class="tag">biotech</span><span class="tag">data-engineering</span><span class="tag">lakehouse</span><span class="tag">duckdb</span><span class="tag">ducklake</span><span class="tag">open-data</span><span class="tag">reproducibility</span><span class="tag">compliance</span></div>
+    <div class="prose">
+<p><strong>Source</strong>: <a href="https://aneeshsathe.com/why-every-biotech-research-group-needs-a-data-lakehouse/">Why Every Biotech Research Group Needs a Data Lakehouse</a><br>
+<strong>Date</strong>: 2025-07-29<br>
+<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span></p>
+<h2 id="central-argument">Central Argument</h2>
+<p>Modern biotech labs generate petabyte-scale heterogeneous data (images, sequences, flow cytometry, lab notebooks) that traditional architectures (raw files + SQL warehouse) cannot manage well. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span> model — combining cheap schema-agnostic storage with ACID guarantees and governance — solves this. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span> specifically offers an open, low-lock-in entry point that scales from laptop to cluster.</p>
+<h2 id="key-claims">Key Claims</h2>
+<ol>
+<li><strong>Data loss is structural, not accidental</strong> — data ends up on laptops with only a poster plot as evidence it existed; this is an architectural problem.</li>
+<li><strong>Lakehouse merges the best of both worlds</strong>: data lake (cheap, schema-agnostic) + warehouse (ACID, time-travel, governance) on one platform.</li>
+<li><strong>Compliance as a first-class concern</strong>: column-level lineage and time-travel are necessary for FDA/EMA/GLP audits.</li>
+<li><strong>DuckLake&#x27;s design inversion</strong>: metadata in a SQL database, data in Parquet on blob storage — simpler than Iceberg/Delta&#x27;s scattered manifests.</li>
+<li><strong>No ETL ping-pong</strong>: push compute to data rather than pulling data to compute; critical for AI/ML at scale.</li>
+<li><strong>Progressive scaling</strong>: same DuckDB code runs on laptop and cluster; switching storage backends doesn&#x27;t require refactoring.</li>
+</ol>
+<h2 id="technical-vocabulary">Technical Vocabulary</h2>
+<ul>
+<li><strong>ACID</strong>: Atomicity, Consistency, Isolation, Durability — transactional guarantees</li>
+<li><strong>Time-travel</strong>: ability to query data as of a past timestamp</li>
+<li><strong>Open table formats</strong>: Iceberg, Delta Lake, Hudi, DuckLake — Parquet-based, portable</li>
+<li><strong>Object storage</strong>: S3, MinIO — cost-elastic blob storage</li>
+<li><strong>ETL ping-pong</strong>: anti-pattern of repeatedly moving data between systems for each analysis</li>
+</ul>
+<h2 id="intellectual-lineage">Intellectual Lineage</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckDB&quot;">DuckDB</span> project and team</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Apache Iceberg&quot;">Apache Iceberg</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Delta Lake&quot;">Delta Lake</span> — prior art in open table formats</li>
+<li>Implicit: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Mesh&quot;">Data Mesh</span> principles (domain ownership, federated governance)</li>
+</ul>
+<h2 id="what-the-essay-doesnt-address">What the Essay Doesn&#x27;t Address</h2>
+<ul>
+<li>Governance and access control at the organizational level</li>
+<li>How to migrate existing messy lab data into a lakehouse</li>
+<li>The human/cultural change management required (not just technical)</li>
+<li>Cost comparison with commercial alternatives (Databricks, Snowflake)</li>
+</ul>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Lakehouse&quot;">Data Lakehouse</span> — core architectural concept</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span> — the specific tool advocated</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Open Data Formats&quot;">Open Data Formats</span> — vendor lock-in prevention</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scientific Reproducibility&quot;">Scientific Reproducibility</span> — compliance angle connects here</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Biotech Data Management&quot;">Biotech Data Management</span> — domain context</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

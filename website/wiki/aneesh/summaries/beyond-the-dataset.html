@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond the Dataset — World Machines</title>
+  <meta name="description" content="Argues that data science must rigorously trace both how data is measured and how comparisons are drawn, or all downstream analysis is untrustworthy.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Beyond the Dataset</span></nav>
+  <article class="note">
+    <h1>Beyond the Dataset</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/beyond-the-dataset.md">source on GitHub</a></div>
+  <div class="note-summary">Argues that data science must rigorously trace both how data is measured and how comparisons are drawn, or all downstream analysis is untrustworthy.</div>
+  <div class="tags"><span class="tag">data-science</span><span class="tag">epistemology</span><span class="tag">measurement</span><span class="tag">causality</span><span class="tag">statistics</span></div>
+    <div class="prose">
+<p><strong>Source</strong>: Aneesh Sathe, <em>Beyond the Dataset</em> (2025-07-11) — https://aneeshsathe.com/beyond-the-dataset/</p>
+<h2 id="central-argument">Central Argument</h2>
+<p>A data scientist must understand the full data generation process before doing any analysis. This process rests on two load-bearing pillars: <strong>how we measure</strong> (the trip from reality to raw numbers) and <strong>how we compare</strong> (the causal and statistical logic that lets numbers answer questions). A crack in either pillar invalidates everything built on top — plots, significance tests, AI predictions alike.</p>
+<h2 id="key-frameworks">Key Frameworks</h2>
+<h3 id="the-two-pillars-of-trustworthy-analysis">The Two Pillars of Trustworthy Analysis</h3>
+<ol>
+<li><strong>How we measure</strong> — instrument design, sensor calibration, feature extraction, label quality. Analogized to a misaligned microscope: no post-processing can recover a photon that never hit the sensor. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Point Spread Function and Measurement Fidelity&quot;">Point Spread Function and Measurement Fidelity</span>.</li>
+<li><strong>How we compare</strong> — randomization, controls, confounders, causal structure. Sound comparisons must be designed before data is collected, not retrofitted afterward.</li>
+</ol>
+<h3 id="data-centric-ai-andrew-ng">Data-Centric AI (Andrew Ng)</h3>
+<p>Tightening labels, fixing sensor drift, and writing clear provenance notes often outperform switching to fancier models. The key insight: improving <em>data quality</em> beats improving <em>model architecture</em> when the data generation process is poorly understood. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Centric AI&quot;">Data-Centric AI</span>.</p>
+<h3 id="breimans-two-cultures">Breiman&#x27;s Two Cultures</h3>
+<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Leo Breiman&quot;">Leo Breiman</span> (2001) warned that many analysts chase algorithmic accuracy while skipping the question of how data were generated. Today&#x27;s auto-chart and one-click-model tooling intensifies this temptation. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Breiman&#x27;s Two Cultures&quot;">Breiman&#x27;s Two Cultures</span>.</p>
+<h2 id="key-examples">Key Examples</h2>
+<ul>
+<li><strong>Fluorescence imaging</strong>: Point-spread functions and photon noise mean a cell appearing &quot;twice as bright&quot; may be an artifact of instrument settings.</li>
+<li><strong>Fertilizer trial on sunny plots</strong>: Confounding by sunlight invalidates any causal inference about the fertilizer.</li>
+<li><strong>COVID-19 regional death rates</strong>: Early claims of miracle policies collapsed when confounders (age distribution, testing access, hospital load) were controlled for.</li>
+</ul>
+<h2 id="structural-organizational-argument">Structural / Organizational Argument</h2>
+<p>In startups and scientific settings alike, the necessary expertise must be split across people. The data scientist&#x27;s job is to collect information <em>horizontally</em> — bridging domain science, instrumentation knowledge, and statistical reasoning. Leadership must enable this culture or accept uninformed risk.</p>
+<h2 id="what-the-author-doesnt-address">What the Author Doesn&#x27;t Address</h2>
+<ul>
+<li>How to institutionalize data provenance tracking in organizations with high turnover.</li>
+<li>The tension between data-centric AI (clean labels) and the practical reality of scarce labeling budgets.</li>
+<li>When &quot;good enough&quot; data quality is genuinely sufficient vs. when the pillar is cracking unnoticed.</li>
+</ul>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Measurement and Epistemology&quot;">Measurement and Epistemology</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Causal Inference&quot;">Causal Inference</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confounding Variables&quot;">Confounding Variables</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Centric AI&quot;">Data-Centric AI</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Leo Breiman&quot;">Leo Breiman</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Andrew Ng&quot;">Andrew Ng</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Breiman&#x27;s Two Cultures&quot;">Breiman&#x27;s Two Cultures</span></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from <span class="count">8</span></h2>
+    <ul>
+      <li><a href="/wiki/aneesh/entities/andrew-ng">Andrew Ng</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/breimanss-two-cultures">Breiman&#x27;s Two Cultures</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/causal-inference">Causal Inference</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/confounding-variables">Confounding Variables</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/data-generating-process">Data Generating Process (DGP)</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/data-centric-ai">Data-Centric AI</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/synthesis/invisible-power-and-untrustworthy-data">Invisible Infrastructure: Antimemetics and the Data Generation Problem</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/entities/leo-breiman">Leo Breiman</a> <span class="muted">Aneesh</span></li>
+    </ul>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>
