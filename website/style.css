@@ -98,6 +98,11 @@ header h1 {
 
 .sitenav a { color: var(--muted); text-decoration: none; }
 .sitenav a:hover { color: var(--text); text-decoration: none; }
+.sitenav a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
 
 /* The bar is the positioning context, so every row hangs from the bar's
    bottom edge — the same place whether the bar sits on one line or two. */
@@ -166,11 +171,15 @@ header h1 {
    Hidden wherever a pointer can hover, because there hovering does the job. */
 .nav-open,
 .nav-shut {
-  align-self: stretch;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   width: 1.9rem;
+  /* A 44px-tall target that costs no height: the negative margins hand the
+     overflow back to the bar's own padding. */
+  height: 2.75rem;
+  margin-block: -0.66rem;
   color: var(--muted);
 }
 .nav-shut { display: none; }
