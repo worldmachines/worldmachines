@@ -20,9 +20,9 @@
   // exists, then `npx wrangler deploy`. With no route and workers_dev:false the
   // Worker deploys but is deliberately unreachable, which is the safe default.
   //
-  // "routes": [
-  //   { "pattern": "scribe.worldmachines.org", "custom_domain": true }
-  // ],
+  "routes": [
+    { "pattern": "scribe.worldmachines.org", "custom_domain": true }
+  ],
 
   // Contributor registry: email → {handle, name, url, bio}. The SAME namespace the
   // website uses (website/wrangler.jsonc) — one registry, so a member who can submit
@@ -50,7 +50,9 @@
   //   "ACCESS_AUD": "<the Access application's Audience tag>",
   "vars": {
     "GITHUB_REPO": "worldmachines/worldmachines",
-    "GITHUB_BRANCH": "main"
+    "GITHUB_BRANCH": "main",
+    "ACCESS_TEAM_DOMAIN": "aneeshsathe.cloudflareaccess.com",
+    "ACCESS_AUD": "13c4ed9631ec29ce1ad44c5a497f3b9a503dab6eaadc2847c532a473523b32ea"
   },
 
   // The PWA. run_worker_first means the Worker sees every request and hands
