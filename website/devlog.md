@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-08-05 · aneesh (2)
+Published `raw-notes/` as a browsable wiki at `/wiki/` — 999 notes indexed by contributor and by book, with resolved `[[wiki-links]]`, backlinks ("linked from"), bylines and source-on-GitHub links on every page; dangling links render as muted text instead of dead hrefs, which is what 4,600 of the 11,000 links in the corpus currently are. Added a `/wiki/glossary/` layer where members develop the club's own definitions (`raw-notes/commons/glossary/`, one term per file, status seed → developing → settled), seeded with *World Machine*, *Legibility* and *Psychohistory*. The generator (`website/scripts/build_wiki.py`, stdlib only) is deterministic and incremental: `wiki-rebuild.yml` diffs each push against its base and re-renders only the pages a note change actually invalidates (~0.1s for one note vs ~1s for all 1,000), so Pages re-uploads a handful of files rather than the whole tree.
+
 ## 2026-08-05 · aneesh
 Shipped member login and closed two auth holes. `/api/admin/handles` (the contributor registry, emails included) was reachable unauthenticated because the old Access policy covered `/admin/*` but not `/api/admin/*`; it now enforces an admin allowlist in-function, fail-closed. Worse, every member endpoint would also accept an email read from the *unverified* `CF_Authorization` cookie payload — a client-forgeable identity — so identity now flows through one shared library (`functions/_lib/access.js`) that cryptographically verifies the Access JWT when `ACCESS_TEAM_DOMAIN` is configured. The Witness/MCP panel gains a real "Sign in" button, sign-out, and self-service token list/revoke; a new `scripts/provision-access.mjs` creates the members + admin Access applications idempotently from the command line.
 

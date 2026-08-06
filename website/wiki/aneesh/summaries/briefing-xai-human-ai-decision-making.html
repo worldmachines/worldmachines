@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making — World Machines</title>
+  <meta name="description" content="A research briefing on the state of Explainable AI (XAI), identifying a credibility gap between technical faithfulness and human usefulness, the disagreement problem between XAI methods, and the frami">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making</span></nav>
+  <article class="note">
+    <h1>Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/briefing-xai-human-ai-decision-making.md">source on GitHub</a></div>
+  <div class="note-summary">A research briefing on the state of Explainable AI (XAI), identifying a credibility gap between technical faithfulness and human usefulness, the disagreement problem between XAI methods, and the framing of XAI within Responsible AI.</div>
+  <div class="tags"><span class="tag">explainable-ai</span><span class="tag">responsible-ai</span><span class="tag">human-factors</span><span class="tag">decision-making</span><span class="tag">SHAP</span><span class="tag">LIME</span><span class="tag">CIU</span><span class="tag">XAI</span></div>
+    <div class="prose">
+<p><strong>Source</strong>: <a href="https://aneeshsathe.com/briefing-the-state-of-explainable-ai-xai-and-its-impact-on-human-ai-decision-making/">aneeshsathe.com, 2025-07-24</a><br>
+<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span></p>
+<h2 id="central-argument">Central Argument</h2>
+<p>The XAI field has a structural credibility gap: it optimizes for technical faithfulness to model internals rather than measurable usefulness to human decision-makers. Despite roots in the 1970s (MYCIN), XAI largely ignores decades of philosophy, psychology, and cognitive science. The field also has an underacknowledged <strong>disagreement problem</strong> — different XAI methods produce conflicting feature attributions for the same model, which practitioners identify as the most trust-eroding failure mode even though it&#x27;s statistically rare. The solution space is more organizational and methodological than technical.</p>
+<h2 id="key-sections">Key Sections</h2>
+<h3 id="the-xai-credibility-gap">The XAI Credibility Gap</h3>
+<ul>
+<li>Field emerged ~2016 as a major research focus; roots in MYCIN (1970s)</li>
+<li>Most research optimizes &quot;faithfulness&quot; (does the explanation match model internals?) rather than usefulness</li>
+<li>Ignores accumulated knowledge from philosophy, psychology, cognitive science about how people actually form understanding</li>
+</ul>
+<h3 id="explanations-as-means-not-ends">Explanations as Means, Not Ends</h3>
+<ul>
+<li>Grounded in <strong>statistical decision theory</strong>: an explanation has value only if it measurably improves performance on a concrete task</li>
+<li><p>Three metrics proposed:</p>
+<ol>
+<li>Theoretical ceiling: what a perfectly rational agent could gain</li>
+<li>Potential gain: information the human doesn&#x27;t already have</li>
+<li>Actual behavioral improvement: observed in controlled experiments</li>
+</ol></li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Contextual Importance and Utility (CIU)&quot;">Contextual Importance and Utility (CIU)</span></strong>: a framework that quantifies how feature importance <em>and</em> favorability of its value shift with context — addresses a core weakness of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;SHAP&quot;">SHAP</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LIME&quot;">LIME</span>, which lack a &quot;utility&quot; concept and produce misleading scores in non-linear models</li>
+</ul>
+<h3 id="the-disagreement-problem">The Disagreement Problem</h3>
+<ul>
+<li>Stack Overflow dataset analysis of practitioner challenges</li>
+<li>Different XAI methods routinely produce conflicting feature attributions for the same model</li>
+<li>Model integration issues: most common technical barrier (31% prevalence)</li>
+<li>Visualization problems: 30% prevalence</li>
+<li>Compatibility failures: 20% prevalence</li>
+<li><strong>Disagreement between methods</strong>: only ~2% of reported issues by volume, but ranked most severe by 36.5% of practitioners — because it strikes after adoption and directly erodes trust</li>
+</ul>
+<h3 id="human-factors-and-unintentional-harm">Human Factors and Unintentional Harm</h3>
+<ul>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Human Factors Engineering (HFE)&quot;">Human Factors Engineering (HFE)</span></strong> as a framework for &quot;explainability pitfalls&quot; (EPs): unintended negative consequences of adding explanations</li>
+<li>Study finding: both AI experts and non-experts displayed <strong>&quot;unwarranted faith in numbers&quot;</strong> — Q-values for robot actions perceived as intelligence signals even when opaque</li>
+<li>Remedy: <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span></strong> — strategically revealing information that aids and concealing information that distracts</li>
+<li><strong>Counterfactual (&quot;what-if&quot;) explanations</strong> as tools for introducing productive cognitive friction and deliberate rather than automatic thinking</li>
+<li>Shift: from acceptance-driven AI adoption toward critical reflection</li>
+</ul>
+<h3 id="what-practitioners-actually-want">What Practitioners Actually Want</h3>
+<ul>
+<li>Better documentation and tutorials (55.8% strongly agree)</li>
+<li>Clearer best-practice guidance (48.1%)</li>
+<li>Simplified configuration and setup (40.4%)</li>
+<li>Explicit guidance on how to handle disagreements between XAI methods</li>
+<li>These are organizational/methodological problems, not purely technical</li>
+</ul>
+<h3 id="responsible-ai-as-the-frame">Responsible AI as the Frame</h3>
+<ul>
+<li><p>XAI inside a <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Responsible AI (RAI)&quot;">Responsible AI (RAI)</span></strong> framework with four pillars:</p>
+<ol>
+<li>Ethics (fairness, accountability, compliance)</li>
+<li>Explainability</li>
+<li>Privacy-preserving and secure AI</li>
+<li>Trustworthiness as emergent property of the first three</li>
+</ol></li>
+<li>Key distinction: <strong>explanation</strong> (understanding AI&#x27;s internal process) vs. <strong>justification</strong> (external evidence supporting AI&#x27;s output) — both required for human decision-makers who may need to defend choices</li>
+<li>Open problems: longitudinal studies, interdisciplinary collaboration, standardized benchmarks for RAI requirements</li>
+</ul>
+<h2 id="whats-missing">What&#x27;s Missing</h2>
+<ul>
+<li>Doesn&#x27;t engage with the political economy of who funds and controls XAI research (predominantly industry labs with product incentives)</li>
+<li>No discussion of cases where explanation actively <em>misleads</em> rather than merely failing to help</li>
+<li>Limited engagement with non-Western regulatory contexts (EU AI Act gets no mention)</li>
+</ul>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — central domain</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;SHAP&quot;">SHAP</span> — widely used attribution method, critiqued here</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LIME&quot;">LIME</span> — widely used attribution method, critiqued here</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Contextual Importance and Utility (CIU)&quot;">Contextual Importance and Utility (CIU)</span> — proposed alternative</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — design philosophy from HFE</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Responsible AI (RAI)&quot;">Responsible AI (RAI)</span> — broader framing</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Human Factors Engineering (HFE)&quot;">Human Factors Engineering (HFE)</span> — analytical framework for explainability pitfalls</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;MYCIN&quot;">MYCIN</span> — historical precedent (1970s medical AI)</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counterfactual Explanations&quot;">Counterfactual Explanations</span> — practical tool for productive friction</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unwarranted Faith in Numbers&quot;">Unwarranted Faith in Numbers</span> — empirical finding on over-trust</li>
+<li>Related summary: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span> — Sathe&#x27;s product-practice companion piece</li>
+<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainability Across Domains&quot;">Explainability Across Domains</span> — the shared design challenge</li>
+<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency as Epistemic Virtue&quot;">Transparency as Epistemic Virtue</span> — the normative throughline</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

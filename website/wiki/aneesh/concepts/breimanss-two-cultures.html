@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breiman&#x27;s Two Cultures — World Machines</title>
+  <meta name="description" content="Leo Breiman&#x27;s 2001 diagnosis of a split in statistics between data modelers (who prioritize understanding mechanisms) and algorithmic modelers (who prioritize predictive accuracy), with consequences f">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Breiman&#x27;s Two Cultures</span></nav>
+  <article class="note">
+    <h1>Breiman&#x27;s Two Cultures</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/breimanss-two-cultures.md">source on GitHub</a></div>
+  <div class="note-summary">Leo Breiman&#x27;s 2001 diagnosis of a split in statistics between data modelers (who prioritize understanding mechanisms) and algorithmic modelers (who prioritize predictive accuracy), with consequences for how data generation is treated.</div>
+  <div class="tags"><span class="tag">statistics</span><span class="tag">data-science</span><span class="tag">Leo-Breiman</span><span class="tag">epistemology</span><span class="tag">machine-learning</span></div>
+    <div class="prose">
+<p>In his 2001 paper &quot;Statistical Modeling: The Two Cultures,&quot; <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Leo Breiman&quot;">Leo Breiman</span> identified a fundamental split in how statisticians and analysts approach data:</p>
+<h2 id="the-two-cultures">The Two Cultures</h2>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>Data Modeling Culture</th><th>Algorithmic Modeling Culture</th></tr></thead>
+<tbody>
+<tr><td><strong>Goal</strong></td><td>Understand the mechanism that generated the data</td><td>Maximize predictive accuracy</td></tr>
+<tr><td><strong>Method</strong></td><td>Fit interpretable models (regression, ANOVA) with explicit assumptions</td><td>Fit black-box models (random forests, neural networks) without strong assumptions</td></tr>
+<tr><td><strong>Question asked</strong></td><td>&quot;How was this generated?&quot;</td><td>&quot;How well can we predict this?&quot;</td></tr>
+<tr><td><strong>DGP status</strong></td><td>Central — model is a hypothesis about the DGP</td><td>Largely bypassed</td></tr>
+</tbody>
+</table></div>
+<h2 id="breimans-warning">Breiman&#x27;s Warning</h2>
+<p>Breiman argued the algorithmic culture was ascendant and that this was causing analysts to skip the question of how data were generated — pursuing accuracy metrics on potentially flawed data. The accuracy can look good even when the model is learning noise or spurious correlations in a badly collected dataset.</p>
+<h2 id="contemporary-relevance">Contemporary Relevance</h2>
+<p>Today&#x27;s ML ecosystem — auto-charts, one-click models, pre-trained everything — represents an extreme of the algorithmic culture. The tools make it trivially easy to get a model running and temptingly hard to justify the time investment of DGP analysis.</p>
+<p>Aneesh Sathe&#x27;s <a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a> uses Breiman&#x27;s warning as the diagnostic framing for why the two pillars of trustworthy data science get skipped.</p>
+<h2 id="what-breiman-did-not-argue">What Breiman Did NOT Argue</h2>
+<p>Breiman did not argue that algorithmic models were inferior — he built the random forest. He argued that ignoring the DGP was an epistemic error regardless of which culture you inhabited.</p>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Leo Breiman&quot;">Leo Breiman</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generation Process&quot;">Data Generation Process</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Centric AI&quot;">Data-Centric AI</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Measurement and Epistemology&quot;">Measurement and Epistemology</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Causal Inference&quot;">Causal Inference</span></li>
+</ul>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset">Beyond the Dataset</a> (Aneesh Sathe, 2025)</li>
+<li>Leo Breiman, &quot;Statistical Modeling: The Two Cultures&quot; (2001), <em>Statistical Science</em></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mission-Critical AI — World Machines</title>
+  <meta name="description" content="AI applications in domains where errors have severe, potentially irreversible consequences — the context where the AI Tool vs. Advisor distinction, explainability requirements, and regulation debates ">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Mission-Critical AI</span></nav>
+  <article class="note">
+    <h1>Mission-Critical AI</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/mission-critical-ai.md">source on GitHub</a></div>
+  <div class="note-summary">AI applications in domains where errors have severe, potentially irreversible consequences — the context where the AI Tool vs. Advisor distinction, explainability requirements, and regulation debates become most acute.</div>
+  <div class="tags"><span class="tag">ai-safety</span><span class="tag">healthcare-ai</span><span class="tag">regulation</span><span class="tag">explainability</span><span class="tag">high-stakes</span></div>
+    <div class="prose">
+<h2 id="definition">Definition</h2>
+<p>Mission-critical AI refers to AI deployment in domains where incorrect outputs can cause serious harm: healthcare diagnosis, drug dosing, legal proceedings, defense systems, infrastructure management. The category is defined not by the technology but by the consequence profile of failures.</p>
+<h2 id="why-it-demands-different-standards">Why It Demands Different Standards</h2>
+<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span>) identifies two specific demands:</p>
+<ol>
+<li><p><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span></strong>: In critical applications, users must be able to apply their own judgment to AI outputs and know when to override them. A system that produces confident outputs with no traceable reasoning chain places undue trust requirements on users who may not have the expertise to detect errors.</p></li>
+<li><p><strong>No tasteless advisors</strong>: The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span> distinction is most consequential here. Using an LLM as an advisor in a clinical context — where it will confidently produce <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span>s with no confidence signal — is a patient safety risk.</p></li>
+</ol>
+<h2 id="the-regulation-balance">The Regulation Balance</h2>
+<p>&quot;In mission-critical fields like healthcare, balancing exploration and regulation is crucial. Over-regulation can hinder society from benefiting from innovative uses and discoveries, while a lack of regulation places undue risk on vulnerable populations, as seen in historical clinical trials.&quot; (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span>)</p>
+<p>This is the classic pharmaceutical dilemma applied to AI:</p>
+<ul>
+<li><strong>Over-regulation</strong>: Good AI tools are delayed or blocked; patients who would benefit are denied access</li>
+<li><strong>Under-regulation</strong>: Bad AI tools proliferate; vulnerable populations (elderly, low-income, patients with rare conditions) bear disproportionate risk</li>
+</ul>
+<p>Sathe argues AI has an advantage over drugs in one respect: software can be corrected relatively easily once errors are detected. This argues for a more exploratory regulatory posture than is typical in drug development.</p>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the minimum technical standard</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span> — the deployment model that preserves human oversight</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Regulation&quot;">AI Regulation</span> — the policy dimension</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> — what humans bring that AI cannot replace in critical settings</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span> — the specific failure mode that makes high-stakes AI dangerous</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequentist Statistics — World Machines</title>
+  <meta name="description" content="The dominant statistical paradigm in which probability is defined as the long-run frequency of events; associated with p-values, null hypothesis significance testing, and assumptions of normality — a ">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Frequentist Statistics</span></nav>
+  <article class="note">
+    <h1>Frequentist Statistics</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/frequentist-statistics.md">source on GitHub</a></div>
+  <div class="note-summary">The dominant statistical paradigm in which probability is defined as the long-run frequency of events; associated with p-values, null hypothesis significance testing, and assumptions of normality — a paradigm critiqued for hiding assumptions and being logically incapable of affirming the null hypothesis.</div>
+  <div class="tags"><span class="tag">statistics</span><span class="tag">frequentist</span><span class="tag">p-values</span><span class="tag">null-hypothesis</span><span class="tag">scientific-method</span><span class="tag">epistemology</span></div>
+    <div class="prose">
+<p>The dominant statistical paradigm in 20th-century science, in which probability is defined as the <em>long-run relative frequency</em> of events in repeated experiments. Does not assign probabilities to hypotheses — only to data given a null hypothesis (P(data | H₀)).</p>
+<h2 id="core-mechanisms">Core Mechanisms</h2>
+<ul>
+<li><strong>Null hypothesis significance testing (NHST)</strong>: test whether the data would be unlikely if a null hypothesis were true</li>
+<li><strong>p-value</strong>: P(data as extreme as observed | null is true). A low p-value rejects the null; it does not confirm the alternative</li>
+<li><strong>Significance threshold</strong>: conventionally p &lt; 0.05, but threshold choice is arbitrary</li>
+<li><strong>Assumptions</strong>: most tests assume normality and equal variance in the underlying population</li>
+</ul>
+<h2 id="key-logical-limitations-from-aneesh-sathes-critique">Key Logical Limitations (from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>&#x27;s critique)</h2>
+<ol>
+<li><strong>Cannot accept the null hypothesis</strong>: can only fail to reject it — you can never conclude &quot;there is no difference&quot;</li>
+<li><strong>Cannot confirm the alternative</strong>: low p-value shows evidence against the null, not evidence for an alternative model</li>
+<li><strong>Cannot communicate uncertainty quantitatively</strong>: p-values do not indicate the probability the hypothesis is true</li>
+<li><strong>Minimum sample size requirements</strong>: t-tests perform poorly with small samples; biological experiments often cannot meet this threshold</li>
+<li><strong>Hidden assumptions</strong>: normality and equal variance assumptions are enforced by the test selection, without explicit statement — a kind of epistemic smuggling</li>
+</ol>
+<h2 id="the-significance-stars-problem">The Significance Stars Problem</h2>
+<p>The proliferation of &quot;***&quot; notation has created a cultural shortcut that Sathe describes as &quot;you put in your data, click t-test, and woosh, you see stars.&quot; This shortcuts genuine causal reasoning, creating the appearance of scientific rigor without the substance.</p>
+<h2 id="why-it-remains-dominant">Why It Remains Dominant</h2>
+<ul>
+<li>Computational simplicity (pre-computer era statistics)</li>
+<li>Institutional inertia (journals, training, peer review conventions)</li>
+<li>Faster communication: results can be stated as a single threshold pass/fail</li>
+</ul>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bayesian Statistics&quot;">Bayesian Statistics</span> — the proposed alternative</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;P-Value Problem&quot;">P-Value Problem</span> — the specific failure of significance testing</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency in Scientific Method&quot;">Transparency in Scientific Method</span> — the meta-value frequentism fails</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generating Process&quot;">Data Generating Process</span> — the concept frequentism ignores</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Causal Inference&quot;">Causal Inference</span> — the goal frequentism cannot reach</li>
+<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Road to Bayesian Stats&quot;">My Road to Bayesian Stats</span></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

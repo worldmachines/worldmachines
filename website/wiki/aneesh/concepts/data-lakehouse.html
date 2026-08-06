@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Lakehouse — World Machines</title>
+  <meta name="description" content="A data architecture pattern that combines the cheap, schema-agnostic storage of a data lake with the ACID guarantees, governance, and query performance of a data warehouse.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Data Lakehouse</span></nav>
+  <article class="note">
+    <h1>Data Lakehouse</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/data-lakehouse.md">source on GitHub</a></div>
+  <div class="note-summary">A data architecture pattern that combines the cheap, schema-agnostic storage of a data lake with the ACID guarantees, governance, and query performance of a data warehouse.</div>
+  <div class="tags"><span class="tag">data-engineering</span><span class="tag">architecture</span><span class="tag">data-lake</span><span class="tag">data-warehouse</span><span class="tag">biotech</span><span class="tag">open-formats</span><span class="tag">ACID</span></div>
+    <div class="prose">
+<p>A data lakehouse is a unified data architecture that merges:</p>
+<ul>
+<li><strong>Data lake</strong>: cheap, schema-agnostic storage (typically object storage like S3 or MinIO); stores raw files in any format (TIFF, FASTQ, CSV, Parquet, PDF).</li>
+<li><strong>Data warehouse</strong>: ACID transactions, structured query support, governance, access control, time-travel queries.</li>
+</ul>
+<h2 id="why-the-hybrid">Why the Hybrid</h2>
+<p>Traditional approaches force a choice:</p>
+<ul>
+<li>Raw files in folders: cheap, but no queryability, no lineage, no governance.</li>
+<li>SQL warehouse: queryable and governed, but expensive, schema-rigid, and forces data into one format.</li>
+</ul>
+<p>A lakehouse keeps data in open formats on cheap storage while adding a catalog layer that provides transactional guarantees and query capability.</p>
+<h2 id="key-capabilities">Key Capabilities</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Capability</th><th>Why It Matters in Biotech</th></tr></thead>
+<tbody>
+<tr><td><strong>Native multimodal storage</strong></td><td>Keep TIFF stacks, FASTQ, Parquet side-by-side</td></tr>
+<tr><td><strong>Column-level lineage</strong></td><td>Trace any value back to its source for FDA/EMA audits</td></tr>
+<tr><td><strong>Time-travel</strong></td><td>Reproduce analysis as of a specific date for GLP compliance</td></tr>
+<tr><td><strong>In-place analytics</strong></td><td>Push DuckDB/Spark compute to the data; no ETL movement</td></tr>
+<tr><td><strong>Open formats</strong></td><td>Exit any vendor; Parquet files are readable by any engine</td></tr>
+</tbody>
+</table></div>
+<h2 id="open-table-formats">Open Table Formats</h2>
+<p>The lakehouse pattern requires an open table format to provide the catalog layer:</p>
+<ul>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Apache Iceberg&quot;">Apache Iceberg</span></strong>: widely adopted; scatters JSON manifests across object storage.</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Delta Lake&quot;">Delta Lake</span></strong>: Databricks-originated; similar approach.</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span></strong>: newest entrant; stores all metadata in a SQL database, simpler design.</li>
+</ul>
+<h2 id="biotech-specific-value">Biotech-Specific Value</h2>
+<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Why Every Biotech Research Group Needs a Data Lakehouse&quot;">Why Every Biotech Research Group Needs a Data Lakehouse</span>. The case is especially strong in biotech because:</p>
+<ol>
+<li>Data types are maximally heterogeneous (images, sequences, tabular assay data, PDFs).</li>
+<li>Regulatory compliance requires reproducibility and lineage.</li>
+<li>Research teams are small and cannot afford dedicated data engineering headcount.</li>
+<li>ML/AI workflows require moving data and compute together.</li>
+</ol>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;DuckLake&quot;">DuckLake</span> — the specific implementation recommended for biotech</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scientific Reproducibility&quot;">Scientific Reproducibility</span> — time-travel and lineage serve this goal</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Open Data Formats&quot;">Open Data Formats</span> — vendor lock-in prevention</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Biotech Data Management&quot;">Biotech Data Management</span></li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Why Every Biotech Research Group Needs a Data Lakehouse&quot;">Why Every Biotech Research Group Needs a Data Lakehouse</span> — source essay</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

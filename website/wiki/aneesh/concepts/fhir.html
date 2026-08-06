@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FHIR (Fast Healthcare Interoperability Resources) — World Machines</title>
+  <meta name="description" content="Fast Healthcare Interoperability Resources — a standard framework for structuring and exchanging electronic health record data, enabling AI systems to integrate patient data across disparate healthcar">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>FHIR (Fast Healthcare Interoperability Resources)</span></nav>
+  <article class="note">
+    <h1>FHIR (Fast Healthcare Interoperability Resources)</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/fhir.md">source on GitHub</a></div>
+  <div class="note-summary">Fast Healthcare Interoperability Resources — a standard framework for structuring and exchanging electronic health record data, enabling AI systems to integrate patient data across disparate healthcare systems.</div>
+  <div class="tags"><span class="tag">healthcare-ai</span><span class="tag">data-standards</span><span class="tag">ehr</span><span class="tag">interoperability</span><span class="tag">fhir</span></div>
+    <div class="prose">
+<h2 id="definition">Definition</h2>
+<p>FHIR (pronounced &quot;fire&quot;) is a standard for healthcare data exchange developed by HL7 International. It defines a set of &quot;resources&quot; — modular data structures representing clinical concepts (Patient, Observation, Medication, Condition, etc.) — and RESTful APIs for exchanging them between systems. The goal is interoperability: any FHIR-compliant system can exchange data with any other, regardless of the underlying EHR vendor.</p>
+<h2 id="role-in-ai-healthcare-architecture">Role in AI Healthcare Architecture</h2>
+<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR Knowledge Graphs Healthcare&quot;">FHIR Knowledge Graphs Healthcare</span>) positions FHIR as the interoperability layer that enables <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> to be constructed from real patient data:</p>
+<ol>
+<li>FHIR standardizes EHR data into typed, structured resources</li>
+<li>FHIR resources map naturally to KG nodes and typed edges</li>
+<li>The resulting KG combines real-time patient data with population-level medical knowledge</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span> operating over this KG enables context-aware, patient-specific AI responses</li>
+</ol>
+<p>Without FHIR, every EHR system would require bespoke integration work to feed a knowledge graph. With FHIR, the mapping is standardized.</p>
+<h2 id="connection-to-advanced-rag">Connection to Advanced RAG</h2>
+<p>&quot;Integrated with knowledge graphs, FHIR transforms healthcare data into a format ideal for AI applications, enriching the AI&#x27;s ability to predict complex medical conditions through a dynamic use of real-time and historical data.&quot; The key word is &quot;dynamic&quot; — unlike a static document corpus, FHIR-backed KGs can be updated in near-real-time as patient data changes.</p>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — the structure FHIR data gets mapped into</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span> — the query mechanism operating over FHIR-backed KGs</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Agents in Healthcare&quot;">AI Agents in Healthcare</span> — the delivery mechanism for clinical AI</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — what FHIR-grounded AI achieves (auditable, traceable to actual patient records)</li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

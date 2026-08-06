@@ -1,0 +1,108 @@
+name: Rebuild wiki
+
+# Regenerates website/wiki/ from raw-notes/, commits the changed pages, and
+# deploys. Modelled on rebuild.yml; the difference is that this one rebuilds
+# incrementally — a one-note change re-renders that note plus the handful of
+# pages whose backlinks or link resolution it touches, not all ~1000 pages.
+#
+# Loop guard: the bot's own commit only ever touches website/wiki/**, which is
+# deliberately absent from the trigger paths below. (Pushes made with
+# GITHUB_TOKEN do not re-trigger workflows either, and the commit is marked
+# [trivial] so devlog-check passes the same way the ingest bot's commits do.)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'raw-notes/**'
+      - 'website/scripts/build_wiki.py'
+  workflow_dispatch:
+
+# Two pushes in quick succession would otherwise race on `git push`.
+concurrency:
+  group: wiki-rebuild
+  cancel-in-progress: false
+
+jobs:
+  wiki:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # Full history: the generator reads `git log` for per-note "last changed"
+      # bylines and the recent-changes list, and the diff below needs the base.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # build_wiki.py is stdlib-only on purpose — nothing to pip install.
+
+      - name: Work out what changed
+        id: scope
+        env:
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+        run: |
+          set -uo pipefail
+          MODE=incremental
+          if [ -z "${GITHUB_EVENT_BEFORE:-}" ] \
+             || [ "$GITHUB_EVENT_BEFORE" = "0000000000000000000000000000000000000000" ] \
+             || ! git cat-file -e "${GITHUB_EVENT_BEFORE}^{commit}" 2>/dev/null; then
+            echo "No usable push base — full rebuild."
+            MODE=full
+          elif ! git diff --name-only "$GITHUB_EVENT_BEFORE"..HEAD > /tmp/changed-all.txt; then
+            echo "git diff failed — full rebuild."
+            MODE=full
+          elif grep -qx 'website/scripts/build_wiki\.py' /tmp/changed-all.txt; then
+            echo "Generator changed — every page may change, full rebuild."
+            MODE=full
+          fi
+
+          if [ "$MODE" = incremental ]; then
+            grep '^raw-notes/' /tmp/changed-all.txt > /tmp/changed-notes.txt || true
+            if [ ! -s /tmp/changed-notes.txt ]; then
+              echo "No raw-notes changes in this push — nothing to do."
+              MODE=skip
+            else
+              echo "Changed notes:"; cat /tmp/changed-notes.txt
+            fi
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild wiki
+        if: steps.scope.outputs.mode != 'skip'
+        run: |
+          set -euo pipefail
+          if [ "${{ steps.scope.outputs.mode }}" = "full" ]; then
+            python3 website/scripts/build_wiki.py --full
+          else
+            # Note filenames contain spaces and apostrophes — read them as lines.
+            mapfile -t CHANGED < /tmp/changed-notes.txt
+            python3 website/scripts/build_wiki.py --changed "${CHANGED[@]}"
+          fi
+
+      - name: Commit regenerated pages
+        if: steps.scope.outputs.mode != 'skip'
+        run: |
+          git config user.name  "worldmachines-bot"
+          git config user.email "bot@worldmachines.org"
+          git add website/wiki
+          git diff --staged --quiet && echo "Wiki already up to date." && exit 0
+          git commit -m "[trivial] Rebuild wiki from note changes"
+          git push
+
+      - name: Install wrangler
+        if: steps.scope.outputs.mode != 'skip'
+        run: npm install -g wrangler
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.scope.outputs.mode != 'skip'
+        working-directory: website
+        run: wrangler pages deploy . --project-name worldmachines --branch main --commit-dirty=true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

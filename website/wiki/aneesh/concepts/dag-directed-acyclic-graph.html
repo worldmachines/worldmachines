@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DAG (Directed Acyclic Graph) — World Machines</title>
+  <meta name="description" content="A diagram of nodes and directed edges with no cycles, used in causal inference and Bayesian statistics to represent the data generating process — which variables cause which others.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>DAG (Directed Acyclic Graph)</span></nav>
+  <article class="note">
+    <h1>DAG (Directed Acyclic Graph)</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/dag-directed-acyclic-graph.md">source on GitHub</a></div>
+  <div class="note-summary">A diagram of nodes and directed edges with no cycles, used in causal inference and Bayesian statistics to represent the data generating process — which variables cause which others.</div>
+  <div class="tags"><span class="tag">DAGs</span><span class="tag">causal-inference</span><span class="tag">bayesian-statistics</span><span class="tag">data-generating-process</span><span class="tag">scientific-method</span></div>
+    <div class="prose">
+<p>A graphical representation of causal relationships: nodes represent variables; directed edges (arrows) represent hypothesized causal influence; the &quot;acyclic&quot; constraint means no variable can be its own cause through a chain of effects.</p>
+<h2 id="role-in-bayesian-statistics">Role in Bayesian Statistics</h2>
+<p>In Bayesian modeling, the DAG is the formalization of the <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generating Process&quot;">Data Generating Process</span></strong>: a hypothesis about <em>how the data came to exist</em>. Building a Bayesian model requires constructing a DAG, which forces the analyst to:</p>
+<ol>
+<li>State which variables they believe are causally relevant</li>
+<li>State the direction of causal influence</li>
+<li>State which variables are observed and which are latent</li>
+</ol>
+<p>Testing whether the model (DAG) fits the observed data is then a way of validating or falsifying the causal hypothesis.</p>
+<h2 id="as-scientific-infrastructure">As Scientific Infrastructure</h2>
+<p>Even outside Bayesian analysis, DAGs serve a function that <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> calls &quot;laying out your thoughts.&quot; A DAG is a communicable representation of a scientific hypothesis — it can be checked, critiqued, and corrected by others.</p>
+<p>This is the epistemic virtue Sathe contrasts with frequentist analysis: frequentist tests execute quickly, hiding their causal assumptions; DAGs make those assumptions legible.</p>
+<h2 id="connection-to-judea-pearl">Connection to Judea Pearl</h2>
+<p>The modern theory of causal inference via DAGs is associated with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Judea Pearl&quot;">Judea Pearl</span> (<em>Causality</em>, 2000; <em>The Book of Why</em>, 2018), though Sathe does not cite Pearl explicitly. Pearl&#x27;s do-calculus provides the formal machinery for inferring interventional effects from observational DAGs.</p>
+<h2 id="cross-references">Cross-References</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bayesian Statistics&quot;">Bayesian Statistics</span> — DAGs as the modeling scaffold</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data Generating Process&quot;">Data Generating Process</span> — what the DAG represents</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Causal Inference&quot;">Causal Inference</span> — the goal DAGs serve</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency in Scientific Method&quot;">Transparency in Scientific Method</span> — the meta-value DAGs embody</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Judea Pearl&quot;">Judea Pearl</span> — the theoretical anchor for causal DAGs</li>
+<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Road to Bayesian Stats&quot;">My Road to Bayesian Stats</span></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

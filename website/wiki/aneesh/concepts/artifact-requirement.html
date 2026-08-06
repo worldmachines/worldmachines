@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Artifact Requirement — World Machines</title>
+  <meta name="description" content="The architectural constraint that forces participants in a live zone to leave a non-retractable deposit. Documentation enforcement, compile-time verification, tapeout finality, format discipline, open">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>The Artifact Requirement</span></nav>
+  <article class="note">
+    <h1>The Artifact Requirement</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 23 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/artifact-requirement.md">source on GitHub</a></div>
+  <div class="note-summary">The architectural constraint that forces participants in a live zone to leave a non-retractable deposit. Documentation enforcement, compile-time verification, tapeout finality, format discipline, open-license archival. The cultural analogue of the flagellum at low Reynolds number: the structure that makes a non-reciprocal stroke mandatory.</div>
+  <div class="tags"><span class="tag">architecture</span><span class="tag">live-zones</span><span class="tag">infrastructure</span><span class="tag">accumulation</span><span class="tag">viscous-frontier</span></div>
+    <div class="prose">
+<h2 id="the-pattern">The Pattern</h2>
+<p>Across independent science, small protocol communities, craft cultures, revival trades, and off-platform knowledge projects, one structural feature recurs wherever durable accumulation is observed: <strong>no motion without artifact</strong>. Participation requires leaving a committed deposit that cannot be retracted, and the deposit becomes part of a permanent public archive.</p>
+<p>The requirement is architectural, not cultural. It is implemented in upload forms, build systems, file-format validators, and fabrication queues rather than in codes of conduct. Communities that rely on cultural norms alone tend to drift toward dissipation; communities whose architecture enforces deposit tend to accumulate.</p>
+<h2 id="worked-examples">Worked Examples</h2>
+<ul>
+<li><strong>CTAN</strong> (the TeX archive). Upload rejected without documentation. 34 years of versioned packages accessible to every TeX distribution globally.</li>
+<li><strong>Tiny Tapeout.</strong> Participants commit RTL that will be fabricated on silicon; a design either passes DRC and physically exists, or it does not. Tapeout is irreversible.</li>
+<li><strong>Mathlib</strong> (Lean). Proofs are rejected at compile time unless they typecheck against the formal system. A proof that does not compile cannot enter the archive.</li>
+<li><strong>ARAS</strong> (amateur spectroscopy). Contributed spectra must be in FDSN-compliant format with documented wavelength solution; the contribution cannot be faked by eye.</li>
+<li><strong>suckless.org.</strong> Tools ship without settings files; behavioural changes require source-code patches that become part of the public archive.</li>
+<li><strong>Structural Genomics Consortium.</strong> Open chemical probes are deposited with a structurally related negative control, making the probe falsifiable and therefore usable.</li>
+</ul>
+<h2 id="relation-to-the-scallop-theorem">Relation to the Scallop Theorem</h2>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/scallop-theorem">scallop-theorem</a> states that reciprocal motion at low Reynolds number produces zero net displacement. The cultural analogue is that reciprocal participation (engagement followed by withdrawal, attention followed by retraction) leaves no durable trace. The artifact requirement is the architectural analogue of the rotating flagellum: a non-reciprocal mechanism whose motion cannot be undone by its reverse. A published chip cannot be un-fabricated; a versioned package cannot be un-submitted; a compiled proof cannot be un-verified.</p>
+<h2 id="negative-definition">Negative Definition</h2>
+<p>The absence of the artifact requirement is the signature of a dissipative structure. The attention economy — feeds, engagement platforms, most &quot;communities&quot; — permit motion without deposit. Energy goes in, heat goes out, nothing accumulates. These are the <a class="wikilink" href="/wiki/aneesh/concepts/scallop-theorem">scallops</a> of the <a class="wikilink" href="/wiki/aneesh/concepts/low-reynolds-culture">low-Reynolds cultural fluid</a>: energetic, hyperactive, and structurally static.</p>
+<h2 id="design-principle">Design Principle</h2>
+<p>Designing a live zone means designing the architectural constraint that makes motion-without-deposit impossible. The choice is not between &quot;open&quot; and &quot;closed&quot; or between &quot;community&quot; and &quot;institution&quot;; it is between requiring an artifact and not requiring one. Every other design decision is downstream.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/scallop-theorem">scallop-theorem</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/live-zones">live-zones</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/low-reynolds-culture">low-reynolds-culture</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/wayfinding-as-practice">wayfinding-as-practice</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">the-cost-of-intent-across-machines</a></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from <span class="count">11</span></h2>
+    <ul>
+      <li><a href="/wiki/aneesh/entities/anne-carpenter">Anne E. Carpenter</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/entities/edward-purcell">Edward Mills Purcell (1912–1997)</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/live-zones">Live Zones</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/low-reynolds-culture">Low-Reynolds Culture</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/entities/mau-piailug">Pius &quot;Mau&quot; Piailug (c. 1932–2010)</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/scallop-theorem">The Scallop Theorem</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/synthesis/viscous-frontier-and-cost-of-intent">The Viscous Frontier and the Cost of Intent</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/summaries/the-viscous-frontier">The Viscous Frontier — Summary</a> <span class="muted">Aneesh</span></li>
+      <li><a href="/wiki/aneesh/concepts/wayfinding-as-practice">Wayfinding as Practice</a> <span class="muted">Aneesh</span></li>
+    </ul>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>

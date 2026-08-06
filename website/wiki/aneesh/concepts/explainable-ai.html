@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explainable AI (XAI) — World Machines</title>
+  <meta name="description" content="The principle that AI systems must expose their reasoning chain so users can audit, override, or calibrate trust — treated by Sathe as the minimum standard for AI in critical applications; expanded by">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav">
+    <a href="/theory">Theory</a>
+    <a href="/contributions">Contributions</a>
+    <a href="/resources">Resources</a>
+    <a href="/evolution/">Evolution</a>
+    <a href="/wiki/">Wiki</a>
+    <a href="/wiki/glossary/">Glossary</a>
+    <a href="/contributors">Contributors</a>
+    <a href="/devlog">Devlog</a>
+    <a href="/oracle">Oracle</a>
+    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <main class="wiki">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Explainable AI (XAI)</span></nav>
+  <article class="note">
+    <h1>Explainable AI (XAI)</h1>
+  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/explainable-ai.md">source on GitHub</a></div>
+  <div class="note-summary">The principle that AI systems must expose their reasoning chain so users can audit, override, or calibrate trust — treated by Sathe as the minimum standard for AI in critical applications; expanded by XAI research into methods, design standards, and responsible AI frameworks.</div>
+  <div class="tags"><span class="tag">ai-safety</span><span class="tag">epistemics</span><span class="tag">transparency</span><span class="tag">healthcare-ai</span><span class="tag">trust</span><span class="tag">XAI</span><span class="tag">responsible-ai</span><span class="tag">human-factors</span></div>
+    <div class="prose">
+<h2 id="definition">Definition</h2>
+<p>Explainable AI (XAI) refers to AI systems whose outputs are accompanied by accessible reasoning chains, citations, or structured evidence that allow users to evaluate the basis for a conclusion. The standard is epistemic: a user should be able to apply their own judgment to the AI&#x27;s answer and know when to override it.</p>
+<h2 id="historical-roots">Historical Roots</h2>
+<p>The XAI problem is old: <strong>MYCIN</strong> (1970s) was among the first medical expert systems and famously couldn&#x27;t explain its numerical reasoning to physicians. Despite decades of accumulated knowledge in philosophy, psychology, and cognitive science about how people form understanding, the XAI field as named emerged around 2016 and has been slow to incorporate that inheritance.</p>
+<h2 id="why-it-matters">Why It Matters</h2>
+<p>In Sathe&#x27;s framing (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span>), explainability is not a nice-to-have but the precondition for AI being usable in any domain where errors have consequences. The specific failure of LLMs is that they produce answers with high surface confidence but no verifiable provenance. Users &quot;instinctively accept&quot; confident outputs as truth — which is dangerous when the underlying source could be hallucinated.</p>
+<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> are positioned as the primary mechanism delivering explainability: KGs store not just data but typed relationships and metadata, making reasoning paths auditable.</p>
+<h2 id="the-xai-credibility-gap">The XAI Credibility Gap</h2>
+<p>Most XAI research optimizes for <strong>technical faithfulness</strong> — does the explanation accurately represent the model&#x27;s internal mechanics? — rather than <strong>human usefulness</strong> — does the explanation improve decision quality? This is a field-level miscalibration documented in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Briefing: The State of Explainable AI (XAI)&quot;">Briefing: The State of Explainable AI (XAI)</span>.</p>
+<h2 id="the-explainable-enough-standard">The &quot;Explainable Enough&quot; Standard</h2>
+<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span> offers a product-design corrective: pitch explanation at the <em>lowest level of detail the domain expert actually cares about</em> — neither full architecture nor bare verdict. The goal is an <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI-Human Causal Prediction Machine&quot;">AI-Human Causal Prediction Machine</span> that surfaces intermediate features (causes) so the expert can confirm, catching AI errors before they become decisions.</p>
+<ul>
+<li>Too much: IoU scores and architecture details glaze over expert users</li>
+<li>Too little: verdict-only excludes the user from causal reasoning and raises regulatory risk</li>
+<li>Sweet spot: &quot;it&#x27;s likely disease X because features A, B, C&quot; — the expert&#x27;s vocabulary level</li>
+</ul>
+<h2 id="key-xai-methods-and-their-problems">Key XAI Methods and Their Problems</h2>
+<ul>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;SHAP&quot;">SHAP</span></strong> (SHapley Additive exPlanations): game-theoretic feature attribution — widely used, but lacks a &quot;utility&quot; concept and produces misleading scores in non-linear models</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LIME&quot;">LIME</span></strong> (Local Interpretable Model-agnostic Explanations): local surrogate approximation — same limitations</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Contextual Importance and Utility (CIU)&quot;">Contextual Importance and Utility (CIU)</span></strong>: addresses both weaknesses by quantifying how feature importance <em>and</em> value favorability shift with context</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counterfactual Explanations&quot;">Counterfactual Explanations</span></strong>: &quot;what would need to change?&quot; — useful for deliberative human decision-making</li>
+<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;GradCAM&quot;">GradCAM</span></strong>: gradient-based visual explanations for CNNs</li>
+</ul>
+<h2 id="the-disagreement-problem">The Disagreement Problem</h2>
+<p>A critical operational failure: different XAI methods routinely produce <strong>conflicting feature attributions</strong> for the same model. Practitioners rank this the most trust-eroding failure (36.5% rate it most severe) even though it appears in only ~2% of reported issues by volume — because it strikes after adoption. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Briefing: The State of Explainable AI (XAI)&quot;">Briefing: The State of Explainable AI (XAI)</span>.</p>
+<h2 id="human-factors-pitfalls">Human Factors Pitfalls</h2>
+<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Human Factors Engineering (HFE)&quot;">Human Factors Engineering (HFE)</span> documents &quot;explainability pitfalls&quot; (EPs): unintended negative effects of adding explanation. Key finding: both experts and non-experts show <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unwarranted Faith in Numbers&quot;">Unwarranted Faith in Numbers</span></strong> — numerical outputs are perceived as intelligence signals even when their meaning is opaque. Remedy: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — strategic information disclosure that aids understanding and conceals distraction.</p>
+<h2 id="responsible-ai-frame">Responsible AI Frame</h2>
+<p>XAI sits within a broader <strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Responsible AI (RAI)&quot;">Responsible AI (RAI)</span></strong> framework with four pillars: ethics, explainability, privacy/security, and trustworthiness as emergent property. Key distinction for human decision-makers: <strong>explanation</strong> (understanding AI internals) vs. <strong>justification</strong> (external evidence supporting output) — both required when a human must defend a choice.</p>
+<h2 id="mechanisms">Mechanisms</h2>
+<ul>
+<li><strong>Citation-backed generation</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perplexity AI&quot;">Perplexity AI</span> attempts to retrofit citations onto LLM outputs; Sathe is cautiously skeptical.</li>
+<li><strong>KG-grounded retrieval</strong>: When the answer is retrieved from a knowledge graph rather than generated from latent weights, the path is traceable.</li>
+<li><strong>RAG pipelines</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span> can improve explainability by grounding generation in retrieved passages, but basic RAG over flat text still obscures relational reasoning.</li>
+</ul>
+<h2 id="tensions">Tensions</h2>
+<ul>
+<li>Explainability and capability trade off: the most powerful models tend to be the least interpretable.</li>
+<li>&quot;Citation&quot; does not equal &quot;correctness&quot; — a model can cite a source it has misrepresented.</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mission-Critical AI&quot;">Mission-Critical AI</span> contexts (healthcare, defense) demand explainability most, but also attract investment in the most powerful opaque models.</li>
+<li>The field&#x27;s organizational/methodological problems (documentation, best-practice guidance, method disagreement) are not solvable through purely technical XAI advances.</li>
+</ul>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span> — the failure mode explainability is meant to mitigate</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Citation Problem in LLMs&quot;">Citation Problem in LLMs</span> — the specific absence that Perplexity and RAG try to address</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — structural approach to grounded, auditable AI</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — explainability through KG integration</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Calibrated Explanation&quot;">Calibrated Explanation</span> — the design standard for domain-appropriate depth</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI-Human Causal Prediction Machine&quot;">AI-Human Causal Prediction Machine</span> — the positive design target</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — strategic information design philosophy</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Responsible AI (RAI)&quot;">Responsible AI (RAI)</span> — broader governance frame</li>
+<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency in Scientific Method&quot;">Transparency in Scientific Method</span> — the parallel principle in statistical inference</li>
+<li>Sources: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Briefing: The State of Explainable AI (XAI)&quot;">Briefing: The State of Explainable AI (XAI)</span></li>
+</ul>
+    </div>
+  </article>
+  <section class="backlinks">
+    <h2>Linked from</h2>
+    <p class="empty-state">No other note links here yet.</p>
+  </section>
+  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </main>
+</body>
+</html>
