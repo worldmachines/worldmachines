@@ -6,13 +6,16 @@
 <!-- ================================================================
   HOW TO ADD A LINK — this section is never deleted by the workflow.
 
-  1. Add one line per link BELOW the dashes (---).
+  1. Add one line per link BELOW the dashes (---). The workflow ignores
+     everything above the dashes, even lines that look like submissions.
   2. Format:
        handle | type | url
        handle | type | url | optional description
+     Descriptions are not copied from the linked page. Include the fourth
+     field if you want a description shown on the site.
 
-  3. `handle` is your site handle (not your GitHub username) — find yours at
-       https://worldmachines.org/contributors
+  3. `handle` is your site handle without @ (not your GitHub username) — find
+     yours at https://worldmachines.org/contributors
 
   4. `type` is whether the link is your own original writing or a third-party link:
        contribution   your own original writing
@@ -20,7 +23,8 @@
 
   5. Commit and push directly to main — no fork, no PR, no login needed.
      The workflow ingests your entries, clears this section, rebuilds the
-     site, and deploys. Lines starting with # are ignored.
+     site, and deploys. Lines starting with # are ignored. Check the
+     "Ingest Writing Inbox" action, then verify the link on worldmachines.org.
 ================================================================ -->
 
 ---
