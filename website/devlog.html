@@ -28,6 +28,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">6 August 2026 · aneesh</div>
+    <p>Scribe went live: **scribe.worldmachines.org**, an installable phone-first PWA (behind its own Access application, JWT-verified) through which members capture thoughts, book notes, glossary entries and link-notes straight into their <code>raw-notes/</code> directory as <code>[trivial]</code> commits — no git required. Access provisioning learned to split applications under Cloudflare's 5-destination-per-app cap, MCP joined the site navigation on every page (it was unreachable except by URL), Kyle's contribution-workflow docs merged (#37), and the July DNS-incident handoff PRs (#29, #31) closed as completed history.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">5 August 2026 · aneesh</div>
     <p>Published <code>raw-notes/</code> as a browsable wiki at <code>/wiki/</code> — 999 notes indexed by contributor and by book, with resolved <code>[[wiki-links]]</code>, backlinks ("linked from"), bylines and source-on-GitHub links on every page; dangling links render as muted text instead of dead hrefs, which is what 4,600 of the 11,000 links in the corpus currently are. Added a <code>/wiki/glossary/</code> layer where members develop the club's own definitions (<code>raw-notes/commons/glossary/</code>, one term per file, status seed → developing → settled), seeded with *World Machine*, *Legibility* and *Psychohistory*. The generator (<code>website/scripts/build_wiki.py</code>, stdlib only) is deterministic and incremental: <code>wiki-rebuild.yml</code> diffs each push against its base and re-renders only the pages a note change actually invalidates (~0.1s for one note vs ~1s for all 1,000), so Pages re-uploads a handful of files rather than the whole tree.</p>
   </article>
@@ -117,6 +121,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-08-06T07:28:45Z -->
+  <!-- built: 2026-08-06T07:30:36Z -->
 </body>
 </html>
