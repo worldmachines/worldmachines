@@ -1,4 +1,10 @@
 {
+  "name": "worldmachines",
+  "private": true,
+  "scripts": {
+    "build:wiki": "python3 website/scripts/build_wiki.py --full",
+    "build:wiki:changed": "python3 website/scripts/build_wiki.py --changed"
+  },
   "devDependencies": {
     "wrangler": "^4.90.1"
   }
