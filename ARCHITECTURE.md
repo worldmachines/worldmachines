@@ -94,15 +94,20 @@ The `--branch main` flag is required to update the production deployment. Omitti
 
 ## Authentication
 
-Cloudflare Access gates three areas:
+Two Cloudflare Access applications, provisioned by
+`website/scripts/provision-access.mjs` — see **[`website/ACCESS-SETUP.md`](website/ACCESS-SETUP.md)**
+for the full runbook, test plan and rollback.
 
-| Path pattern | Who can access |
-|-------------|---------------|
-| `/submit` | All registered contributors |
-| `/profile` | All registered contributors |
-| `/admin/*` | Venkat only (admin policy) |
+| Path pattern | Access application | Who can access |
+|-------------|---------------|---------------|
+| `/login`, `/profile*`, `/submit*` | members | Every email in the HANDLES registry |
+| `/api/submit`, `/api/profile`, `/api/mcp-token`, `/api/library/private`, `/api/pdf/private/*` | members | Every email in the HANDLES registry |
+| `/admin*`, `/api/admin*` | admin | `ADMIN_EMAILS` only |
+| `/api/me` | *none, deliberately* | Answers 401/403/200 in JSON — public pages call it to decide whether to show a sign-in prompt |
 
-Access uses **email OTP** — visitors enter their email, receive a one-time code, and are admitted if their email matches an Access policy rule. On admission, Access injects a `Cf-Access-Authenticated-User-Email` header into every request, which Pages Functions read to identify the caller. There is also a JWT fallback for programmatic access.
+Access uses **email OTP** — visitors enter their email, receive a one-time code, and are admitted if their email matches an Access policy rule. On admission, Access issues a signed JWT (the `CF_Authorization` cookie / `Cf-Access-Jwt-Assertion` header) and injects a `Cf-Access-Authenticated-User-Email` header.
+
+`website/functions/_lib/access.js` is the single place identity is resolved. With the `ACCESS_TEAM_DOMAIN` variable set it **verifies that JWT** against the team's JWKS and trusts nothing else; without it, it falls back to the injected header. It never decodes the cookie without checking the signature — doing so was, until 2026-08, a complete identity forgery against every member endpoint.
 
 The contributors page (`/contributors`) and all article/resource pages are **public** — no authentication required.
 
@@ -110,23 +115,23 @@ The contributors page (`/contributors`) and all article/resource pages are **pub
 
 ## Adding a contributor
 
-Two steps are both required. Doing only one leaves the contributor either unable to log in (step 1 missing) or unable to submit (step 2 missing).
+The KV handle registry is the source of truth for both who can log in and who can submit — the Access policy is generated from it.
 
-**Step 1 — Cloudflare Access (controls who can log in):**
-1. dash.cloudflare.com → Zero Trust → Access → Applications
-2. Find the worldmachines application protecting `/submit`
-3. Edit the policy → add the contributor's email → save
-
-**Step 2 — KV handle registry (maps their email to a handle/profile):**
-
-Either use the admin UI at `worldmachines.org/admin/handles` (Access-gated), or write directly via wrangler:
+**Step 1 — add them to HANDLES.** Either the admin UI at `worldmachines.org/admin/handles` (Access-gated), or wrangler from `website/`:
 
 ```bash
 wrangler kv key put "email@example.com" \
-  '{"handle":"theirhandle","name":"Their Name","url":null,"bio":null}' \
-  --namespace-id ca021379904746528348029c242faaff \
-  --remote
+  '{"handle":"theirhandle","name":"Their Name","url":null,"bio":null,"github":null}' \
+  --binding HANDLES --remote
 ```
+
+**Step 2 — push that list into the Access policy:**
+
+```bash
+cd website && node scripts/provision-access.mjs --apply
+```
+
+Skipping step 2 leaves them registered but unable to sign in.
 
 ---
 
@@ -140,8 +145,12 @@ All Functions live in `website/functions/api/` and are served as Cloudflare Page
 | `POST /api/submit` | Access | Looks up caller's handle from KV; fires `repository_dispatch` to trigger ingest |
 | `GET /api/profile` | Access | Returns caller's profile from KV |
 | `POST /api/profile` | Access | Updates caller's name/url/bio in KV (handle and email are immutable) |
+| `GET /api/me` | Self-verified | Auth state as JSON: 200 + profile, 403 `not_registered`, or 401 |
+| `POST /api/mcp-token` | Access | Mints a 90-day Witness bearer token into `MCP_TOKENS` KV |
+| `GET /api/mcp-token` | Access | Lists the caller's live tokens, masked |
+| `DELETE /api/mcp-token` | Access | Revokes one of the caller's tokens by id |
 | `GET /api/admin/handles` | Admin | Lists all KV entries including emails |
-| `POST /api/admin/handles` | Admin | Creates or updates a KV entry `{ email, handle, name, url, bio }` |
+| `POST /api/admin/handles` | Admin | Creates or updates a KV entry `{ email, handle, name, url, bio, github }` |
 | `DELETE /api/admin/handles` | Admin | Removes a KV entry by email |
 | `GET /api/notes-parquet` | Public | Range-aware R2 proxy — serves `notes.parquet` for DuckDB-WASM HTTP range reads |
 | `POST /api/embed` | Public | Returns a Workers AI embedding vector for a query string |
