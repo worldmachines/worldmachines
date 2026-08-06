@@ -94,6 +94,20 @@ export const GLOSSARY_DIR = "raw-notes/commons/glossary";
 export const GLOSSARY_STATUSES = ["seed", "developing", "settled"];
 export const NOTE_TYPES = ["book", "glossary", "observation", "link"];
 
+// The canon layer. raw-notes/README.md: these folders hold "hand-written canon
+// (wiki) proposals — the reviewed layer", and "Hand-written canon pages follow the
+// same path: open a PR, a curator reviews and merges." Scribe never creates into
+// them, and it will not direct-commit an edit to one either — it shows the diff so
+// the member can take it to a PR. Prose capture is the job; the review gate is not
+// Scribe's to open.
+export const CANON_DIRS = ["concepts", "entities", "summaries", "synthesis"];
+
+/** Is this path in the review-gated canon layer? (raw-notes/<who>/<canon>/…) */
+export function isCanonPath(path) {
+  const parts = String(path || "").split("/");
+  return parts.length > 3 && parts[0] === "raw-notes" && CANON_DIRS.includes(parts[2]);
+}
+
 /* --------------------------------- builders ---------------------------------- */
 
 /**

@@ -24,9 +24,11 @@ import {
   editCommitMessage,
   extractWikiLinks,
   assertSafePath,
+  isCanonPath,
   NOTE_TYPES,
   GLOSSARY_DIR,
   GLOSSARY_STATUSES,
+  CANON_DIRS,
 } from "./lib/notes.js";
 import { writeNote, readNote } from "./lib/github.js";
 import { corpus, searchNotes, danglingLinks } from "./lib/corpus.js";
@@ -71,6 +73,7 @@ export default {
           glossaryStatuses: GLOSSARY_STATUSES,
           glossaryDir: GLOSSARY_DIR,
           memberDirs: MEMBER_DIRS,
+          canonDirs: CANON_DIRS,
           notice: commitsEnabled
             ? "Commits ENABLED — 'Save to repo' writes one [trivial] commit to raw-notes/."
             : "Dry-run mode: every save shows the exact file, path and commit it would make. Set GITHUB_TOKEN to enable real commits.",
@@ -112,13 +115,19 @@ export default {
       // scope=mine  → the caller's own directory (edit flow)
       // scope=commons → the shared tree
       // scope=all (default) → everything, for the wiki-link picker
+      // prefix=… → a path prefix, e.g. raw-notes/commons/reading/<source-id>/ so a
+      //            book note can link the section it is reacting to
       if (pathname === "/api/notes" && request.method === "GET") {
         const c = await corpus(env);
         const scope = url.searchParams.get("scope") || "all";
         const dir = scope === "mine" ? me.dir : scope === "commons" ? "commons" : null;
         const limit = Math.min(Number(url.searchParams.get("limit")) || 40, 200);
-        const notes = searchNotes(c.notes, url.searchParams.get("q") || "", { dir, limit });
-        return json({ ok: true, scope, live: c.live, total: c.notes.length, count: notes.length, notes });
+        const prefix = url.searchParams.get("prefix") || "";
+        const pool = prefix ? c.notes.filter((n) => n.path.startsWith(prefix)) : c.notes;
+        const notes = searchNotes(pool, url.searchParams.get("q") || "", { dir, limit }).map((n) =>
+          isCanonPath(n.path) ? { ...n, canon: true } : n
+        );
+        return json({ ok: true, scope, prefix, live: c.live, total: pool.length, count: notes.length, notes });
       }
 
       // ---- /api/note : read one note for editing (content + sha) ----
@@ -143,6 +152,7 @@ export default {
           path: file.path,
           sha: file.sha,
           mine: file.path.startsWith(`raw-notes/${me.dir}/`),
+          canon: isCanonPath(file.path),
           content: file.content,
           ...parsed,
         });
@@ -225,6 +235,21 @@ export default {
         const shared = path.startsWith("raw-notes/commons/");
         if (!mine && !shared) {
           return json({ ok: false, error: `${path} is not yours to edit — you own raw-notes/${me.dir}/ and share raw-notes/commons/.` }, 403);
+        }
+
+        // The canon layer is review-gated even inside your own directory. Previewing
+        // is fine and useful — it produces the exact file to take to a PR — but a
+        // direct commit would walk past the gate, so it is refused.
+        const canon = isCanonPath(path);
+        if (canon && !dryRun) {
+          return json(
+            {
+              ok: false,
+              canon: true,
+              error: `${path} is a canon page (${CANON_DIRS.join("/")}), which lands by PR review, not by direct commit. Preview it here, then open a PR with the result.`,
+            },
+            409
+          );
         }
 
         const original = typeof payload.original === "string" ? payload.original : null;
