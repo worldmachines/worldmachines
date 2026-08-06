@@ -14,6 +14,7 @@ This document describes the full technical stack for worldmachines.org — how i
 | Notes corpus | Cloudflare R2 (`NOTES`) | Stores `notes.parquet` for Oracle retrieval |
 | Oracle AI | Cloudflare Workers AI | Embedding (`EmbeddingGemma-300M`) + chat (`Gemma-4-26b-a4b-it`) |
 | Static build | Python (`scripts/build.py`) | Generates HTML pages from Markdown + article JSON |
+| Public wiki | Python (`scripts/build_wiki.py`) | Renders `raw-notes/` into `website/wiki/` (incremental) |
 | Article ingest | Python (`scripts/ingest.py`) + `trafilatura` | Full-text extraction, article JSON creation |
 | CI/CD | GitHub Actions | Article ingestion, site rebuild, notes ingest |
 
@@ -66,6 +67,13 @@ Two workflows deploy to Pages automatically:
 1. Runs `scripts/build.py` to regenerate HTML.
 2. Commits the rebuilt HTML files back to `main`.
 3. Deploys to Pages via `wrangler pages deploy --branch main`.
+
+**`wiki-rebuild.yml`** — triggers on push to `main` when `raw-notes/**` or the generator changes:
+1. Diffs the push against `github.event.before` to get the changed note paths.
+2. Runs `scripts/build_wiki.py --changed <paths>` (or `--full` when there is no usable base, or when the generator itself changed).
+3. Commits the regenerated pages as `[trivial] Rebuild wiki from note changes` and deploys to Pages.
+
+The workflow's own commit only touches `website/wiki/**`, which is *not* in the trigger paths — that is the loop guard.
 
 **`ingest.yml`** — triggers on `repository_dispatch` event of type `article-submission` (fired by `/api/submit` when a contributor submits a link):
 1. Runs `scripts/ingest.py` to extract article text and write a JSON file to `website/content/articles/`.
@@ -189,6 +197,34 @@ cd website
 ```
 
 Changes to `blurbs.md` or `devlog.md` trigger an automatic rebuild and deploy via `rebuild.yml`. All other changes to article content or build logic require a manual rebuild and deploy.
+
+---
+
+## Public wiki (`scripts/build_wiki.py`)
+
+Renders every note under `raw-notes/` into static pages under `website/wiki/` — the published counterpart to the Oracle, which searches the same corpus. The generated HTML is **committed**, like `build.py`'s output; Pages serves it directly.
+
+```bash
+npm run build:wiki                                        # full rebuild
+python3 website/scripts/build_wiki.py --changed <paths>   # rebuild only what those notes touch
+```
+
+| Output | Contents |
+|--------|----------|
+| `wiki/index.html` | Contributors, books, recent changes (from `git log`) |
+| `wiki/all.html` | Every note, client-side filterable |
+| `wiki/<member>/…` | One page per note, mirroring the `raw-notes/` tree |
+| `wiki/commons/reading/<book>/` | Per-book index of the club's reading notes |
+| `wiki/glossary/` | Terms from `raw-notes/commons/glossary/`, with backlinks |
+| `wiki/wiki-manifest.json` | Note index + link graph; the input that makes `--changed` possible |
+
+Three properties are load-bearing:
+
+- **Deterministic.** No page carries a build timestamp. Two builds over the same tree produce byte-identical bytes, so `wrangler pages deploy` re-uploads only genuinely changed files. Do not add a wall-clock stamp to a page.
+- **Incremental.** `--changed` re-renders the changed notes, the notes they link to (whose backlink lists moved) and any note whose links flipped between dangling and live. It must stay byte-identical to `--full`; the manifest exists to make that possible, so any new field a page renders has to be in the manifest too.
+- **Case-sensitive link resolution.** `[[some-note]]` matches a filename stem exactly, the same rule the knowledge lake uses. Unresolved links render as muted text, never as dead hrefs.
+
+The internal `wiki/` directory at the repo root is the club's private wiki and is **not** published — only `raw-notes/` is.
 
 ---
 
