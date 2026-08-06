@@ -499,6 +499,7 @@ async function submitCapture(dryRun) {
 
   if (data.commit && data.commit.committed) {
     setStatus("#capture-status", `Committed ${data.commit.commit.sha.slice(0, 7)} — ${data.path}`, "ok");
+    showSaveToast(data);
     clearDraft();
     $("#c-clear").click();
   } else {
@@ -531,6 +532,51 @@ function renderOut(data, outSel, badgeSel, pathSel, mdSel, msgSel, planSel, dang
   $(outSel).hidden = false;
   $(outSel).scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
+
+/* Save-success toast: the compose form clears itself after a commit, which
+   looks like "nothing happened" on a phone — this makes success unmissable.
+   Links go to the GitHub commit and (when the path is already slug-shaped so
+   the wiki URL is derivable) the note's future wiki page. */
+let toastTimer = null;
+
+function wikiUrlFor(path) {
+  if (!path || !path.startsWith("raw-notes/")) return null;
+  const p = path.slice("raw-notes/".length).replace(/\.md$/, "");
+  return /^[a-z0-9/-]+$/.test(p) ? `https://worldmachines.org/wiki/${p}` : null;
+}
+
+function showSaveToast(data) {
+  const links = $("#toast-links");
+  links.textContent = "";
+  const commit = data.commit && data.commit.commit;
+  const sha = commit && commit.sha;
+  if (sha) {
+    const a = document.createElement("a");
+    a.href = (commit && commit.url) || `https://github.com/${(state.config && state.config.repo) || "worldmachines/worldmachines"}/commit/${sha}`;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = `commit ${sha.slice(0, 7)}`;
+    links.append("Committed as ", a, ". ");
+  }
+  const wiki = wikiUrlFor(data.path);
+  if (wiki) {
+    const a = document.createElement("a");
+    a.href = wiki;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = "on the wiki";
+    links.append("It appears ", a, " in a couple of minutes.");
+  }
+  const toast = $("#toast");
+  toast.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { toast.hidden = true; }, 12000);
+}
+
+$("#toast-close").addEventListener("click", () => {
+  clearTimeout(toastTimer);
+  $("#toast").hidden = true;
+});
 
 function setStatus(sel, msg, kind) {
   const el = $(sel);
@@ -647,6 +693,7 @@ async function submitEdit(dryRun) {
   renderOut(data, "#editor-out", "#eout-badge", "#eout-path", "#eout-md", "#eout-msg", null, "#eout-dangling");
   if (data.commit && data.commit.committed) {
     setStatus("#editor-status", `Committed ${data.commit.commit.sha.slice(0, 7)}`, "ok");
+    showSaveToast(data);
     state.editing.sha = data.commit.commit.blobSha;
     state.editing.original = data.markdown;
   } else if (!data.changed) {

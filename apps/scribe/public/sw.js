@@ -11,7 +11,7 @@
 //             rather than a dead promise — a draft is safe in localStorage either
 //             way, so the honest answer is better than a stale one.
 
-const CACHE = "scribe-v1";
+const CACHE = "scribe-v2"; // v2: save-success toast
 const SHELL = [
   "/",
   "/index.html",

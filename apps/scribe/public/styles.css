@@ -173,3 +173,44 @@ input:focus, textarea:focus, select:focus { border-color: var(--blue); box-shado
 }
 .tab .ti { font-size: 1.15rem; line-height: 1; }
 .tab.is-active { color: var(--blue); }
+
+/* ── Save-success toast ──────────────────────────────────────────────
+   Fixed to the top so a commit is unmissable on a phone; the compose
+   form clears itself on success, which otherwise reads as "nothing
+   happened". Colors ride the existing --ok tokens (dark-mode aware). */
+.toast {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: min(92vw, 480px);
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--ok-bg);
+  color: var(--ok-fg);
+  border: 1px solid color-mix(in srgb, var(--ok-fg) 35%, transparent);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  animation: toast-in 0.25s ease-out;
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, -12px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+.toast-check { font-size: 1.3rem; line-height: 1.2; font-weight: 700; }
+.toast-body { display: flex; flex-direction: column; gap: 2px; font-size: 0.92rem; }
+.toast-body a { color: inherit; font-weight: 600; text-decoration: underline; }
+.toast-links { display: inline; }
+.toast-close {
+  margin-left: 4px;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+}

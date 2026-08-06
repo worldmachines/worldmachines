@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <!-- Save confirmation. Fixed to the top of the viewport so a successful commit
+       is unmissable on a phone — the form clears itself on success, which read as
+       "nothing happened" without this. -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    <span class="toast-check" aria-hidden="true">✓</span>
+    <div class="toast-body">
+      <strong id="toast-title">Saved to the repo</strong>
+      <span id="toast-links"></span>
+    </div>
+    <button id="toast-close" class="toast-close" type="button" aria-label="Dismiss">×</button>
+  </div>
+
   <!-- No in-app login. The host sits behind Cloudflare Access, so identity arrives
        with the request; the Worker resolves it to a handle and the app just asks
        /api/me who it is. If that fails, this gate explains why. -->
