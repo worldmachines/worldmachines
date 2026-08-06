@@ -16,6 +16,11 @@
   --badge-pdf-bg:            #d1fae5;
   --badge-pdf-text:          #065f46;
   --max-width: 720px;
+
+  /* Nav: the tint a pulled-open second row is printed on, and the dotted
+     rule that marks a label as having one. Both are one step off the page. */
+  --nav-drawer: #f2efe9;
+  --nav-dot:    #c3bdb2;
 }
 
 /* ─── Base ───────────────────────────────────────────────────── */
@@ -68,25 +73,160 @@ header h1 {
 .submit-link:hover { background: #333; color: var(--bg); text-decoration: none; }
 
 /* Nav sits immediately below the header title row, shares the same
-   max-width box, and carries the border that separates chrome from content */
+   max-width box, and carries the border that separates chrome from content.
+
+   Two rows, one slot. The bar names five places; each place that holds more
+   than one page keeps its own second row, and every second row is drawn in
+   the same slot directly under the bar. A dotted rule under a label says
+   "there is a row under this one"; the rule turns solid when the row is out,
+   so the hairline the nav sits on appears to travel down with the drawer.
+   On the wiki that slot is already occupied — the wiki's own row is the Wiki
+   group standing permanently open (see wiki.css) — so the site never stacks
+   two competing navigations.
+
+   Mechanics are CSS only: hover and :focus-within where a pointer can hover,
+   and an explicit disclosure control driving :target where it cannot. Both
+   work with JavaScript switched off. */
 .sitenav {
   max-width: var(--max-width);
   margin: 0 auto 0;          /* zero top and bottom — spacing handled below */
-  padding: 0.5rem 0 0.6rem;
   border-bottom: 1px solid var(--border);
-  display: flex;
-  gap: 1.5rem;
   font-family: system-ui, sans-serif;
   font-size: 0.79rem;
   letter-spacing: 0.01em;
-  flex-wrap: wrap;
 }
 
-.sitenav a {
-  color: var(--muted);
-  text-decoration: none;
-}
+.sitenav a { color: var(--muted); text-decoration: none; }
 .sitenav a:hover { color: var(--text); text-decoration: none; }
+.sitenav a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* The bar is the positioning context, so every row hangs from the bar's
+   bottom edge — the same place whether the bar sits on one line or two. */
+.nav-bar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
+  list-style: none;
+}
+
+/* Each item fills the bar's full height, so travelling from a label down to
+   its row never crosses dead space and closes it. */
+.nav-item {
+  position: static;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0 0.6rem;
+}
+
+.nav-label { display: inline-block; }
+.nav-item.has-row > .nav-label {
+  border-bottom: 1px dotted var(--nav-dot);
+}
+.nav-item.is-current > .nav-label {
+  color: var(--text);
+  border-bottom: 2px solid var(--text);
+}
+
+/* ─── The second row ─────────────────────────────────────────── */
+
+.nav-row {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.4rem;
+  margin: 0 -0.9rem;        /* the drawer bleeds a little past the column */
+  padding: 0.5rem 0.9rem 0.55rem;
+  font-size: 0.75rem;
+  background: var(--nav-drawer);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 18px rgba(28, 28, 28, 0.07);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.12s ease, visibility 0s linear 0.12s;
+}
+.nav-row a { color: #5f5a51; }
+.nav-row a:hover { color: var(--text); }
+
+/* Keyboard focus opens a row everywhere; so does the disclosure control,
+   which is the whole mechanism on a screen that cannot hover. */
+.nav-item:focus-within > .nav-row,
+.nav-item:target > .nav-row {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+.nav-item:focus-within > .nav-label { color: var(--text); border-bottom-style: solid; }
+
+/* The disclosure control: two chevrons in one place, one opening the row and
+   one closing it again, so the second tap lands where the first one did.
+   Hidden wherever a pointer can hover, because there hovering does the job. */
+.nav-open,
+.nav-shut {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 1.9rem;
+  /* A 44px-tall target that costs no height: the negative margins hand the
+     overflow back to the bar's own padding. */
+  height: 2.75rem;
+  margin-block: -0.66rem;
+  color: var(--muted);
+}
+.nav-shut { display: none; }
+.nav-open i,
+.nav-shut i {
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+.nav-open i { transform: translateY(-1px) rotate(45deg); }
+.nav-shut i { transform: translateY(1px) rotate(-135deg); }
+.nav-item:target > .nav-open { display: none; }
+.nav-item:target > .nav-shut { display: inline-flex; color: var(--text); }
+.nav-item:target > .nav-label { color: var(--text); border-bottom-style: solid; }
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-open,
+  .nav-item:target > .nav-shut { display: none; }
+  /* A stray #fragment must not pin a row open under a mouse. */
+  .nav-item:target > .nav-row { visibility: hidden; opacity: 0; }
+  .nav-item:hover > .nav-row,
+  .nav-item:focus-within > .nav-row {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  .nav-item:hover > .nav-label { color: var(--text); border-bottom-style: solid; }
+}
+
+@media (hover: none) {
+  .nav-item { padding: 0.62rem 0 0.7rem; }   /* room for a finger */
+  .nav-bar { gap: 0 1.15rem; }
+  .nav-row { gap: 0.45rem 1.2rem; padding: 0.6rem 0.9rem 0.65rem; }
+}
+
+@media (max-width: 420px) {
+  .nav-bar { gap: 0 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-row { transition: none; }
+}
+
+@media print {
+  .nav-row, .nav-open, .nav-shut { display: none; }
+}
 
 /* ─── Content containers ─────────────────────────────────────── */
 

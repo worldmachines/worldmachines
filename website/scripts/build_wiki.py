@@ -102,22 +102,83 @@ HOME_HUBS = 22
 HOME_WANTED = 8
 HOME_CHANGES = 8
 
-# ─── Site chrome (kept in step with website/scripts/build.py NAV) ────────────
+# ─── Site chrome ─────────────────────────────────────────────────────────────
+#
+# NAV_GROUPS and sitenav() below are duplicated, deliberately and identically,
+# from website/scripts/build.py — both builders are stdlib-only and neither
+# imports the other. Change one, change the other, then run both.
+#
+# On the wiki the Wiki group is the page you are standing in, and its row is
+# already printed under the bar by wikinav() — the wiki toolbar *is* that
+# group standing permanently open. So the Wiki group's hover row is suppressed
+# here: the site never draws two navigations on top of each other.
+#
+#   (group id, label, the group's own page, [(href, label), ...])
+NAV_GROUPS = [
+    ("theory", "Theory", "/theory", []),
+    ("library", "Library", "/contributions", [
+        ("/contributions", "Contributions"),
+        ("/resources", "Resources"),
+        ("/evolution/", "Evolution field guide"),
+    ]),
+    ("wiki", "Wiki", "/wiki/", [
+        ("/wiki/", "Index"),
+        ("/wiki/all", "A–Z"),
+        ("/wiki/glossary/", "Glossary"),
+        ("/wiki/topics/", "Topics"),
+        ("/wiki/hubs", "Most linked"),
+        ("/wiki/wanted/", "Wanted"),
+        ("/wiki/special", "Special"),
+        ("/wiki/search", "Search"),
+    ]),
+    ("ask", "Ask", "/oracle", [
+        ("/oracle", "Oracle"),
+        ("/mcp", "MCP access"),
+    ]),
+    ("club", "Club", "/contributors", [
+        ("/contributors", "Contributors"),
+        ("/devlog", "Devlog"),
+        ("/join", "Join"),
+        ("https://discord.gg/tqUFztN3r", "Project chat ↗"),
+    ]),
+]
 
-SITENAV = '''\
-  <nav class="sitenav">
-    <a href="/theory">Theory</a>
-    <a href="/contributions">Contributions</a>
-    <a href="/resources">Resources</a>
-    <a href="/evolution/">Evolution</a>
-    <a href="/wiki/">Wiki</a>
-    <a href="/wiki/glossary/">Glossary</a>
-    <a href="/contributors">Contributors</a>
-    <a href="/devlog">Devlog</a>
-    <a href="/oracle">Oracle</a>
-    <a href="/mcp">MCP</a>
-    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
-  </nav>'''
+
+def sitenav(current: str = "", suppress_current_row: bool = False) -> str:
+    """The site bar. `current` marks the group you are standing in.
+
+    `suppress_current_row` is for pages that already print that group's row
+    themselves — the wiki does — so the group stands open below the bar
+    instead of hiding behind a hover.
+    """
+    items = []
+    for gid, label, href, row in NAV_GROUPS:
+        show_row = bool(row) and not (suppress_current_row and gid == current)
+        classes = "nav-item"
+        if show_row:
+            classes += " has-row"
+        if gid == current:
+            classes += " is-current"
+        if not show_row:
+            items.append(f'      <li class="{classes}">'
+                         f'<a class="nav-label" href="{href}">{label}</a></li>')
+            continue
+        links = "\n".join(f'          <a href="{h}">{text}</a>' for h, text in row)
+        items.append(
+            f'      <li class="{classes}" id="nav-{gid}">\n'
+            f'        <a class="nav-label" href="{href}">{label}</a>\n'
+            f'        <a class="nav-open" href="#nav-{gid}" aria-label="Show {label} links"><i></i></a>\n'
+            f'        <a class="nav-shut" href="#" aria-label="Hide {label} links"><i></i></a>\n'
+            f'        <div class="nav-row">\n{links}\n        </div>\n'
+            f'      </li>'
+        )
+    body = "\n".join(items)
+    return ('  <nav class="sitenav" aria-label="Main">\n'
+            f'    <ul class="nav-bar">\n{body}\n    </ul>\n'
+            '  </nav>')
+
+
+SITENAV = sitenav("wiki", suppress_current_row=True)
 
 # ─── Display metadata ────────────────────────────────────────────────────────
 
@@ -2085,6 +2146,12 @@ WIKI_CSS = """/* Wiki styles. Loaded after /style.css, which supplies the site t
 body.wiki-page header,
 body.wiki-page .sitenav { max-width: var(--wiki-width); }
 
+/* The toolbar below is the Wiki group of the site bar, standing open. So the
+   bar gives up its own rule and the toolbar keeps one: bar, row, one hairline
+   — the same shape every other group takes when you open it, never a second
+   navigation stacked under the first. */
+body.wiki-page .sitenav { border-bottom: none; }
+
 main.wiki { max-width: var(--wiki-width); margin: 2.2rem auto 6rem; }
 main.wiki > h1,
 main.wiki > .eyebrow,
@@ -2099,7 +2166,7 @@ main.wiki > form { max-width: 46rem; }
   border-radius: 1px;
 }
 
-/* ─── Wiki toolbar ─────────────────────────────────────────── */
+/* ─── Wiki toolbar: the Wiki group, permanently open ───────── */
 
 .wikinav {
   max-width: var(--wiki-width);

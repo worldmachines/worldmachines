@@ -41,6 +41,12 @@
 body.wiki-page header,
 body.wiki-page .sitenav { max-width: var(--wiki-width); }
 
+/* The toolbar below is the Wiki group of the site bar, standing open. So the
+   bar gives up its own rule and the toolbar keeps one: bar, row, one hairline
+   — the same shape every other group takes when you open it, never a second
+   navigation stacked under the first. */
+body.wiki-page .sitenav { border-bottom: none; }
+
 main.wiki { max-width: var(--wiki-width); margin: 2.2rem auto 6rem; }
 main.wiki > h1,
 main.wiki > .eyebrow,
@@ -55,7 +61,7 @@ main.wiki > form { max-width: 46rem; }
   border-radius: 1px;
 }
 
-/* ─── Wiki toolbar ─────────────────────────────────────────── */
+/* ─── Wiki toolbar: the Wiki group, permanently open ───────── */
 
 .wikinav {
   max-width: var(--wiki-width);

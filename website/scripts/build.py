@@ -15,20 +15,97 @@ BLURBS_FILE  = Path('blurbs.md')
 DEVLOG_FILE  = Path('devlog.md')
 
 
-NAV = '''\
-  <nav class="sitenav">
-    <a href="/theory">Theory</a>
-    <a href="/contributions">Contributions</a>
-    <a href="/resources">Resources</a>
-    <a href="/evolution/">Evolution</a>
-    <a href="/wiki/">Wiki</a>
-    <a href="/wiki/glossary/">Glossary</a>
-    <a href="/contributors">Contributors</a>
-    <a href="/devlog">Devlog</a>
-    <a href="/oracle">Oracle</a>
-    <a href="/mcp">MCP</a>
-    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
-  </nav>'''
+# ─── Site navigation ─────────────────────────────────────────────────────────
+#
+# Five places, not eleven links. Each group whose contents run to more than one
+# page carries a second row, drawn in a single slot under the bar: hover or
+# keyboard focus on a pointer that can hover, an explicit chevron on one that
+# cannot. Styling lives in website/style.css.
+#
+# This table is duplicated, deliberately and identically, in
+# website/scripts/build_wiki.py — the two builders are stdlib-only and must not
+# import each other. Change one, change the other, then run both.
+#
+#   (group id, label, the group's own page, [(href, label), ...])
+NAV_GROUPS = [
+    ('theory', 'Theory', '/theory', []),
+    ('library', 'Library', '/contributions', [
+        ('/contributions', 'Contributions'),
+        ('/resources', 'Resources'),
+        ('/evolution/', 'Evolution field guide'),
+    ]),
+    ('wiki', 'Wiki', '/wiki/', [
+        ('/wiki/', 'Index'),
+        ('/wiki/all', 'A–Z'),
+        ('/wiki/glossary/', 'Glossary'),
+        ('/wiki/topics/', 'Topics'),
+        ('/wiki/hubs', 'Most linked'),
+        ('/wiki/wanted/', 'Wanted'),
+        ('/wiki/special', 'Special'),
+        ('/wiki/search', 'Search'),
+    ]),
+    ('ask', 'Ask', '/oracle', [
+        ('/oracle', 'Oracle'),
+        ('/mcp', 'MCP access'),
+    ]),
+    ('club', 'Club', '/contributors', [
+        ('/contributors', 'Contributors'),
+        ('/devlog', 'Devlog'),
+        ('/join', 'Join'),
+        ('https://discord.gg/tqUFztN3r', 'Project chat ↗'),
+    ]),
+]
+
+
+def sitenav(current='', suppress_current_row=False):
+    """The site bar. `current` marks the group you are standing in.
+
+    `suppress_current_row` is for pages that already print that group's row
+    themselves — the wiki does — so the group stands open below the bar
+    instead of hiding behind a hover.
+    """
+    items = []
+    for gid, label, href, row in NAV_GROUPS:
+        show_row = bool(row) and not (suppress_current_row and gid == current)
+        classes = 'nav-item'
+        if show_row:
+            classes += ' has-row'
+        if gid == current:
+            classes += ' is-current'
+        if not show_row:
+            items.append(f'      <li class="{classes}">'
+                         f'<a class="nav-label" href="{href}">{label}</a></li>')
+            continue
+        links = '\n'.join(f'          <a href="{h}">{text}</a>' for h, text in row)
+        items.append(
+            f'      <li class="{classes}" id="nav-{gid}">\n'
+            f'        <a class="nav-label" href="{href}">{label}</a>\n'
+            f'        <a class="nav-open" href="#nav-{gid}" aria-label="Show {label} links"><i></i></a>\n'
+            f'        <a class="nav-shut" href="#" aria-label="Hide {label} links"><i></i></a>\n'
+            f'        <div class="nav-row">\n{links}\n        </div>\n'
+            f'      </li>'
+        )
+    body = '\n'.join(items)
+    return ('  <nav class="sitenav" aria-label="Main">\n'
+            f'    <ul class="nav-bar">\n{body}\n    </ul>\n'
+            '  </nav>')
+
+
+# Pages written by hand still carry a copy of the bar. The generator owns it:
+# `build.py` rewrites the block in place so a copy can never drift again.
+STATIC_NAV_PAGES = {
+    'admin/handles.html': '',
+    'contributors.html': 'club',
+    'join.html': 'club',
+    'mcp.html': 'ask',
+    'oracle.html': 'ask',
+    'profile.html': '',
+    'submit.html': '',
+    'supplements/business-of-enlightenment-translations.html': 'library',
+    'theory.html': 'theory',
+}
+
+SITENAV_BLOCK = re.compile(r'[ \t]*<nav class="sitenav"[^>]*>.*?</nav>', re.DOTALL)
 
 
 # PROTOCOL RESEARCH webring bar. Kept in sync by hand with the footer block
@@ -281,7 +358,7 @@ def build_index(articles):
     <h1>World Machines</h1>
     <a href="/submit" class="submit-link">Submit</a>
   </header>
-{NAV}
+{sitenav()}
   <main>
 {blurb_html}
   </main>
@@ -297,7 +374,7 @@ def build_index(articles):
 def build_contributions(articles):
     items = contribution_items(articles)
     body, script = render_list(items, 'No contributions yet.')
-    html = page_shell('Contributions', NAV, body, script=script)
+    html = page_shell('Contributions', sitenav('library'), body, script=script)
     Path('contributions.html').write_text(html, encoding='utf-8')
     print(f'Built contributions.html — {len(items)} contribution(s)')
 
@@ -384,7 +461,7 @@ def build_resources(articles):
     list_body, sort_script = render_list(items, 'No resources yet.')
     body = list_body + '\n' + PRIVATE_LIBRARY_HTML
     script = sort_script + PRIVATE_LIBRARY_SCRIPT
-    html = page_shell('Resources', NAV, body, script=script)
+    html = page_shell('Resources', sitenav('library'), body, script=script)
     Path('resources.html').write_text(html, encoding='utf-8')
     print(f'Built resources.html — {len(items)} resource(s)')
 
@@ -451,9 +528,34 @@ def build_devlog():
         )
     else:
         body = '  <p class="empty-state">No devlog entries yet.</p>'
-    html = page_shell('Devlog', NAV, body)
+    html = page_shell('Devlog', sitenav('club'), body)
     Path('devlog.html').write_text(html, encoding='utf-8')
     print(f'Built devlog.html — {len(entries)} entry/entries')
+
+
+def sync_static_navs():
+    """Rewrite the nav block in every hand-written page that carries one.
+
+    Only the block between <nav class="sitenav"> and its </nav> is touched, so
+    the rest of each page is left exactly as its author wrote it.
+    """
+    changed = []
+    for rel, current in sorted(STATIC_NAV_PAGES.items()):
+        path = Path(rel)
+        if not path.exists():
+            print(f'  ! {rel} is listed in STATIC_NAV_PAGES but missing')
+            continue
+        text = path.read_text(encoding='utf-8')
+        replacement = sitenav(current)
+        new, hits = SITENAV_BLOCK.subn(lambda _m: replacement, text, count=1)
+        if not hits:
+            print(f'  ! {rel} has no <nav class="sitenav"> block')
+            continue
+        if new != text:
+            path.write_text(new, encoding='utf-8')
+            changed.append(rel)
+    print(f'Synced sitenav into {len(changed)} hand-written page(s)'
+          + (': ' + ', '.join(changed) if changed else ''))
 
 
 def build():
@@ -462,6 +564,7 @@ def build():
     build_contributions(articles)
     build_resources(articles)
     build_devlog()
+    sync_static_navs()
 
 
 if __name__ == '__main__':

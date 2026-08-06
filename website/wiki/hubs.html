@@ -13,18 +13,41 @@
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
   </header>
-  <nav class="sitenav">
-    <a href="/theory">Theory</a>
-    <a href="/contributions">Contributions</a>
-    <a href="/resources">Resources</a>
-    <a href="/evolution/">Evolution</a>
-    <a href="/wiki/">Wiki</a>
-    <a href="/wiki/glossary/">Glossary</a>
-    <a href="/contributors">Contributors</a>
-    <a href="/devlog">Devlog</a>
-    <a href="/oracle">Oracle</a>
-    <a href="/mcp">MCP</a>
-    <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
   </nav>
   <nav class="wikinav" aria-label="Wiki sections">
     <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs" aria-current="page">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
