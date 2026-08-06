@@ -28,6 +28,75 @@ NAV = '''\
   </nav>'''
 
 
+# PROTOCOL RESEARCH webring bar. Kept in sync by hand with the footer block
+# in index.html — see website/network.json (our manifest) and
+# website/wormhole.js (vendored widget, mounted below against it).
+WEBRING_FOOTER = '''\
+  <footer>
+    <style>
+      /* Scoped to the webring footer bar; maps --wormhole-* theme hooks
+         onto this site's own design tokens (see :root in style.css). */
+      footer {
+        max-width: var(--max-width);
+        margin: 0 auto 3rem;
+        padding-top: 1.4rem;
+        border-top: 1px solid var(--border);
+      }
+      .webring-bar {
+        font-family: system-ui, sans-serif;
+        font-size: 0.73rem;
+        line-height: 1.7;
+        color: var(--muted);
+        --wormhole-font: system-ui, sans-serif;
+        --wormhole-size: 0.73rem;
+        --wormhole-fg: var(--muted);
+        --wormhole-accent: var(--link);
+        --wormhole-bg: transparent;
+        --wormhole-border: var(--border);
+        --wormhole-overlay-bg: rgba(250, 249, 247, 0.97);
+        --wormhole-edge: var(--border);
+        --wormhole-node: var(--bg);
+        --wormhole-muted: var(--muted);
+        --wormhole-card-bg: rgba(250, 249, 247, 0.97);
+        --wormhole-card-solid: var(--bg);
+      }
+      .webring-bar span { color: var(--link); font-weight: 600; }
+      .webring-bar ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem 0.9rem;
+        margin-top: 0.5rem;
+        padding: 0;
+      }
+      .webring-bar li { white-space: nowrap; }
+      .webring-bar a {
+        color: var(--muted);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--border);
+      }
+      .webring-bar a:hover { color: var(--link); border-bottom-color: var(--link); }
+      #wormhole { display: block; margin-top: 0.4rem; }
+    </style>
+    <div class="webring-bar">
+      ◆ This <span>PROTOCOL RESEARCH</span> Webring site is maintained by Aneesh Sathe ◆
+      <div id="wormhole" data-manifest="/network.json" data-depth="2" data-title="off">
+        <!-- Static fallback for no-JS visitors and crawlers: -->
+        <ul>
+          <li><a href="https://rafael.fyi">rafa.</a></li>
+          <li><a href="https://djinna.com/">Djinna</a></li>
+          <li><a href="https://sachinbenny.xyz/">Sachin Benny</a></li>
+          <li><a href="https://florianlohse.com/">Florian Lohse</a></li>
+          <li><a href="https://pioneeringspirit.xyz">Pioneering Spirit</a></li>
+          <li><a href="https://slackersmuse.com">Slacker's Muse</a></li>
+          <li><a href="https://aneeshsathe.com/">Aneesh Sathe</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="/wormhole.js" defer></script>'''
+
+
 SORT_CONTROLS = '''\
   <div class="sort-controls">
     <span>Sort by</span>
@@ -213,6 +282,7 @@ def build_index(articles):
   <main>
 {blurb_html}
   </main>
+{WEBRING_FOOTER}
   <!-- built: {built} -->
 </body>
 </html>
