@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Giovanni Boccaccio</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Giovanni Boccaccio</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/giovanni-boccaccio.md">source on GitHub</a></div>
-  <div class="note-summary">Italian author, poet, and humanist (1313–1375) — author of The Decameron, the foundational hundred-tale frame narrative of plague-era Florence, and a pioneer of vernacular prose who defended secular storytelling as consolation, moral instruction, and a literature worthy of serving the Muses.</div>
-  <div class="tags"><span class="tag">boccaccio</span><span class="tag">decameron</span><span class="tag">medieval-florence</span><span class="tag">vernacular-literature</span><span class="tag">frame-narrative</span><span class="tag">humanism</span><span class="tag">italy</span><span class="tag">fourteenth-century</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/giovanni-boccaccio.md">source on GitHub</a></div>
+    <div class="note-summary">Italian author, poet, and humanist (1313–1375) — author of The Decameron, the foundational hundred-tale frame narrative of plague-era Florence, and a pioneer of vernacular prose who defended secular storytelling as consolation, moral instruction, and a literature worthy of serving the Muses.</div>
     <div class="prose">
 <p><strong>Giovanni Boccaccio</strong> (1313–1375) was an Italian author, poet, and early humanist, best known for <a class="wikilink" href="/wiki/aneesh/summaries/the-decameron">the-decameron</a> (c. 1349–1353), the hundred-tale frame narrative set during and after the 1348 Florentine plague. With Dante and Petrarch he is counted among the <em>tre corone</em> — the &quot;three crowns&quot; of fourteenth-century Florentine letters — and he is a central figure in the early development of European vernacular prose.</p>
 <h2 id="the-decameron">The Decameron</h2>
@@ -56,18 +65,44 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a> — the wiki&#x27;s reading of the <em>Decameron</em> as an early polyphonic catalog</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-clerks-tale">The Clerk&#x27;s Tale: Griselda&#x27;s Patience and Chaucer&#x27;s Ironic Envoy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-1">Troilus and Cressida: Editor&#x27;s Preface and the First Book</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>496</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-clerks-tale">The Clerk&#x27;s Tale: Griselda&#x27;s Patience and Chaucer&#x27;s Ironic Envoy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-troilus-book-1">Troilus and Cressida: Editor&#x27;s Preface and the First Book</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-proem">DEC 01 — Proem &amp; Author&#x27;s Introduction</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-01">DEC 02 — Day the First</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-03">DEC 04 — Day the Third</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-06">DEC 07 — Day the Sixth</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-07">DEC 08 — Day the Seventh</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-10">DEC 11 — Day the Tenth</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/boccaccio">boccaccio</a><a class="tag" href="/wiki/topics/decameron">decameron</a><a class="tag" href="/wiki/topics/medieval-florence">medieval-florence</a><a class="tag" href="/wiki/topics/vernacular-literature">vernacular-literature</a><a class="tag" href="/wiki/topics/frame-narrative">frame-narrative</a><a class="tag" href="/wiki/topics/humanism">humanism</a><a class="tag" href="/wiki/topics/italy">italy</a><span class="tag tag-lone" title="Only this note uses it">fourteenth-century</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

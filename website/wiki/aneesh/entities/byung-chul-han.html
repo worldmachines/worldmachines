@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Byung-Chul Han</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Byung-Chul Han</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/byung-chul-han.md">source on GitHub</a></div>
-  <div class="note-summary">Byung-Chul Han (b. 1959), Korean-German philosopher of technology and culture, known for diagnostic essays on transparency, burnout, and the commodification of narrative.</div>
-  <div class="tags"><span class="tag">han</span><span class="tag">philosophy</span><span class="tag">technology</span><span class="tag">culture</span><span class="tag">narrative</span><span class="tag">burnout</span><span class="tag">capitalism</span><span class="tag">germany</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/byung-chul-han.md">source on GitHub</a></div>
+    <div class="note-summary">Byung-Chul Han (b. 1959), Korean-German philosopher of technology and culture, known for diagnostic essays on transparency, burnout, and the commodification of narrative.</div>
     <div class="prose">
 <p><strong>Born</strong>: 1959, Seoul, South Korea<br>
 <strong>Works at</strong>: Universität der Künste Berlin<br>
@@ -45,7 +54,7 @@
 <ul>
 <li><strong>Burnout Society</strong>: the achievement society demands self-optimization; subjects exploit themselves freely.</li>
 <li><strong>Transparency Society</strong>: radical transparency destroys trust, intimacy, and ritual.</li>
-<li><strong>Narrative crisis</strong>: storytelling has been colonized by commerce — <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Storyselling vs. Storytelling&quot;">Storyselling vs. Storytelling</span>.</li>
+<li><strong>Narrative crisis</strong>: storytelling has been colonized by commerce — <a class="wikilink" href="/wiki/aneesh/concepts/storyselling-vs-storytelling" title="Written [[Storyselling vs. Storytelling]], resolved to storyselling-vs-storytelling">Storyselling vs. Storytelling</a>.</li>
 </ul>
 <h2 id="the-crisis-of-narration-2024"><em>The Crisis of Narration</em> (2024)</h2>
 <p>The most relevant work in this corpus. Core claim:</p>
@@ -53,7 +62,7 @@
 <li>Stories historically created shared reality and transmitted culture.</li>
 <li>Under capitalism and social media, narrative has become storyselling: optimized to manufacture consumers.</li>
 <li>We have lost genuine storytelling capacity.</li>
-<li>Han offers no solution (noted critically in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Looking Forward to Montaigne&quot;">Looking Forward to Montaigne</span>).</li>
+<li>Han offers no solution (noted critically in <a class="wikilink" href="/wiki/aneesh/summaries/looking-forward-to-montaigne" title="Written [[Looking Forward to Montaigne]], resolved to looking-forward-to-montaigne">Looking Forward to Montaigne</a>).</li>
 </ul>
 <h2 id="criticisms">Criticisms</h2>
 <ul>
@@ -62,23 +71,57 @@
 <li>Short books read more as extended essays than sustained arguments — evidence is often impressionistic.</li>
 </ul>
 <h2 id="relation-to-montaigne">Relation to Montaigne</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Looking Forward to Montaigne&quot;">Looking Forward to Montaigne</span>, the author reads Han as naming a problem that <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> inadvertently solves: the personal, frank, meandering essay is structurally resistant to storyselling. The juxtaposition produces the tentative thesis that Montaigne-style writing is the antidote Han doesn&#x27;t offer.</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/summaries/looking-forward-to-montaigne" title="Written [[Looking Forward to Montaigne]], resolved to looking-forward-to-montaigne">Looking Forward to Montaigne</a>, the author reads Han as naming a problem that <a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> inadvertently solves: the personal, frank, meandering essay is structurally resistant to storyselling. The juxtaposition produces the tentative thesis that Montaigne-style writing is the antidote Han doesn&#x27;t offer.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Storyselling vs. Storytelling&quot;">Storyselling vs. Storytelling</span> — his central concept in <em>The Crisis of Narration</em></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> — the implicit counter-example</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Old Internet&quot;">The Old Internet</span> — the most recent pre-storyselling mode</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Authenticity and Commodification&quot;">Authenticity and Commodification</span> — synthesis concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Looking Forward to Montaigne&quot;">Looking Forward to Montaigne</span> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/storyselling-vs-storytelling" title="Written [[Storyselling vs. Storytelling]], resolved to storyselling-vs-storytelling">Storyselling vs. Storytelling</a> — his central concept in <em>The Crisis of Narration</em></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> — the implicit counter-example</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-old-internet" title="Written [[The Old Internet]], resolved to the-old-internet">The Old Internet</a> — the most recent pre-storyselling mode</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/authenticity-and-commodification" title="Written [[Authenticity and Commodification]], resolved to authenticity-and-commodification">Authenticity and Commodification</a> — synthesis concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/looking-forward-to-montaigne" title="Written [[Looking Forward to Montaigne]], resolved to looking-forward-to-montaigne">Looking Forward to Montaigne</a> — source essay</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>326</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/looking-forward-to-montaigne">Looking Forward to Montaigne</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-essay-as-form">Personal Essay as Form</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/storyselling-vs-storytelling">Storyselling vs. Storytelling</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-old-internet">The Old Internet</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/authenticity-and-commodification">Authenticity and Commodification</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/looking-forward-to-montaigne">Looking Forward to Montaigne</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-essay-as-form">Personal Essay as Form</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/storyselling-vs-storytelling">Storyselling vs. Storytelling</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-old-internet">The Old Internet</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/self-construction-through-writing">Self-Construction Through Writing</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/authenticity-and-commodification">Authenticity and Commodification</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/han">han</a><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/culture">culture</a><a class="tag" href="/wiki/topics/narrative">narrative</a><a class="tag" href="/wiki/topics/burnout">burnout</a><a class="tag" href="/wiki/topics/capitalism">capitalism</a><a class="tag" href="/wiki/topics/germany">germany</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Court of Love</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Court of Love</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-court-of-love.md">source on GitHub</a></div>
-  <div class="note-summary">A Cambridge clerk called Philogenet is summoned by Mercury before the King and Queen of Love, sworn under a codified oath to twenty binding Statutes of Love, and wins the favor of the lady Rosial, in a dream-vision poem of disputed Chaucerian authorship that closes with a choir of birds parodying the Latin Matins in praise of Cupid.</div>
-  <div class="tags"><span class="tag">dream-vision</span><span class="tag">courtly-love</span><span class="tag">chaucer-apocrypha</span><span class="tag">allegory</span><span class="tag">statutes-of-love</span><span class="tag">gender-and-desire</span><span class="tag">liturgical-parody</span><span class="tag">medieval-poetry</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-cuckoo-and-nightingale">chaucer-canterbury-tales-cuckoo-and-nightingale</a>, <a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-assembly-of-fowls">chaucer-canterbury-tales-assembly-of-fowls</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-court-of-love.md">source on GitHub</a></div>
+    <div class="note-summary">A Cambridge clerk called Philogenet is summoned by Mercury before the King and Queen of Love, sworn under a codified oath to twenty binding Statutes of Love, and wins the favor of the lady Rosial, in a dream-vision poem of disputed Chaucerian authorship that closes with a choir of birds parodying the Latin Matins in praise of Cupid.</div>
     <div class="prose">
 <p>This unit opens with an editorial headnote (dating the poem, on internal evidence, to Chaucer&#x27;s supposed eighteenth year at Cambridge c. 1346, and situating it against the French institution of literal, judicial Courts of Love) followed by a transcriber&#x27;s note flagging that modern scholarship doubts Chaucer wrote it at all. The poem itself follows, narrated by &quot;Philogenet,&quot; a clerk who is summoned by Mercury on pain of death to the Court of Love at Cithera, where Admetus and Alcestis reign as King and Queen. Chidden for his tardiness, he swears the Twenty Statutes of Love, prays to Venus for a lady he has only seen in a dream, and is instead introduced by the chamberwoman Philobone to Rosial, whose initial disdain melts (via a well-timed fainting fit) into promised favor. A tour of the Court&#x27;s allegorical population — Despair, Hope, Liar, Flattery, Envy, Shamefastness, Avaunter, Privy Thought — is interrupted by a textual hiatus, after which Rosial confesses her love outright and bids Philogenet abide with her until May Day, when the poem closes on a choir of birds singing a profane paraphrase of the Trinity Sunday Matins to the God of Love.</p>
 <h2 id="themes">Themes</h2>
@@ -46,18 +54,43 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The castle&#x27;s description (&quot;So them apace I journey&#x27;d forth among... / All was as bright as stars in winter be&#x27;n&quot;) establishes the Court as a rival built order to any earthly one, gold-plated and jewel-hidden — grandeur as institutional legitimation before a single statute is read. The recitation of the first three statutes (&quot;The first statute that on the book was spread... / All this was whole the Kinge&#x27;s ordinance&quot;) shows love rendered as enumerated, sworn law rather than felt sentiment. Rigour&#x27;s refusal to let Philogenet read the statutes of women (&quot;The officer, called Rigour... / There may no man statute of women know&quot;) stages the Court&#x27;s built-in epistemic asymmetry, backed by exemplary appeal to Solomon and Samson. The monks&#x27; and nuns&#x27; lament (&quot;Well may we curse our abbeys and our place... / Fortune, we curse thy wheel of variance!&quot;) is the poem&#x27;s most plainly aggrieved passage, desire protesting an imposed vow it never chose. And the bird Matins (&quot;On May Day, when the lark began to rise... / And then the wren began to skip and dance&quot;) closes the poem by making the liturgy itself sing Cupid&#x27;s praise, form outliving — and now serving — a wholly different content.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-chaucers-dream">Chaucer&#x27;s Dream</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-flower-and-leaf">The Flower and the Leaf</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>870</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-chaucers-dream">Chaucer&#x27;s Dream</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-flower-and-leaf">The Flower and the Leaf</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-clerks-tale">The Clerk&#x27;s Tale: Griselda&#x27;s Patience and Chaucer&#x27;s Ironic Envoy</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-cuckoo-and-nightingale">chaucer-canterbury-tales-cuckoo-and-nightingale</a></li><li><a class="wikilink" href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-assembly-of-fowls">chaucer-canterbury-tales-assembly-of-fowls</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dream-vision">dream-vision</a><a class="tag" href="/wiki/topics/courtly-love">courtly-love</a><a class="tag" href="/wiki/topics/chaucer-apocrypha">chaucer-apocrypha</a><a class="tag" href="/wiki/topics/allegory">allegory</a><span class="tag tag-lone" title="Only this note uses it">statutes-of-love</span><a class="tag" href="/wiki/topics/gender-and-desire">gender-and-desire</a><span class="tag tag-lone" title="Only this note uses it">liturgical-parody</span><a class="tag" href="/wiki/topics/medieval-poetry">medieval-poetry</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

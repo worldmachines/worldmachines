@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Homeopathic Critique</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Homeopathic Critique</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/homeopathic-critique.md">source on GitHub</a></div>
-  <div class="note-summary">Homeopathic critique names the paradox at the heart of Kulturkritik: attempts to cure the wounds of culture (self-alienation, rationalism, specialization) using the very tools of culture — reason treating the wound caused by reason, art treating the damage done by aestheticization.</div>
-  <div class="tags"><span class="tag">homeopathic-critique</span><span class="tag">kulturkritik</span><span class="tag">paradox</span><span class="tag">self-alienation</span><span class="tag">rousseau</span><span class="tag">schiller</span><span class="tag">enlightenment</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/homeopathic-critique.md">source on GitHub</a></div>
+    <div class="note-summary">Homeopathic critique names the paradox at the heart of Kulturkritik: attempts to cure the wounds of culture (self-alienation, rationalism, specialization) using the very tools of culture — reason treating the wound caused by reason, art treating the damage done by aestheticization.</div>
     <div class="prose">
 <h2 id="the-concept">The Concept</h2>
-<p>&quot;Homeopathic critique&quot; names the structural paradox identified by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Franz R. Kempf&quot;">Franz R. Kempf</span> in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span>: the attempt to heal a wound caused by culture <em>through</em> culture. Like homeopathy (the idea of treating like with like, diluting a harmful substance to create a cure), Kulturkritik proposes to use the very tools that caused self-alienation as the remedy for it.</p>
+<p>&quot;Homeopathic critique&quot; names the structural paradox identified by <a class="wikilink" href="/wiki/aneesh/entities/franz-r-kempf" title="Written [[Franz R. Kempf]], resolved to franz-r-kempf">Franz R. Kempf</a> in <a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a>: the attempt to heal a wound caused by culture <em>through</em> culture. Like homeopathy (the idea of treating like with like, diluting a harmful substance to create a cure), Kulturkritik proposes to use the very tools that caused self-alienation as the remedy for it.</p>
 <p>Kempf: &quot;Kulturkritik seeks a nontheological redemption that is paradoxical because it disavows the Fall without renouncing the fruit from the tree of knowledge.&quot; Kulturkritik both:</p>
 <ul>
 <li>Disavows the Fall: refuses to accept culture&#x27;s damage as simply given</li>
@@ -52,7 +61,7 @@
 <p>Goethe does not attempt homeopathic synthesis. Instead he endorses <em>Steigerung</em> (intensification) — a dynamic of irreducible polar opposites that never blend. Nature and culture remain permanently in tension, producing ever-higher energies but no resolution. This is not homeopathy but something like <em>dynamical chemistry</em> — elements that don&#x27;t dissolve into each other but react endlessly.</p>
 <h2 id="extended-applications">Extended Applications</h2>
 <p>The homeopathic critique structure appears beyond Kulturkritik:</p>
-<p><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castle Pattern&quot;">Shitty Castle Pattern</span></strong>: Building an intellectual structure you know won&#x27;t hold, in order to maintain the position/resources needed to eventually find something better. The shitty castle is a homeopathic response to paradigm collapse — using old tools to buy time for new ones.</p>
+<p><strong><a class="wikilink" href="/wiki/aneesh/concepts/shitty-castle-pattern" title="Written [[Shitty Castle Pattern]], resolved to shitty-castle-pattern">Shitty Castle Pattern</a></strong>: Building an intellectual structure you know won&#x27;t hold, in order to maintain the position/resources needed to eventually find something better. The shitty castle is a homeopathic response to paradigm collapse — using old tools to buy time for new ones.</p>
 <p><strong>Legibility critique</strong>: Attempts to critique algorithmic legibility (like <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a>) that use the very networked, digital, legible systems they critique to distribute the critique. The critique travels through the system it describes as the wound.</p>
 <p><strong>AI discourse</strong>: Many critiques of AI homogenization are distributed through AI-powered platforms, using AI-assisted writing, finding audiences through algorithmic recommendation. The treatment is delivered by the disease.</p>
 <h2 id="what-the-pattern-reveals">What the Pattern Reveals</h2>
@@ -60,22 +69,57 @@
 <p>The alternative — refusing all cultural tools and returning to pure nature — is not a real option. The bête never existed.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> — the mode within which homeopathic critique operates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> — entity (first great practitioner)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Friedrich Schiller&quot;">Friedrich Schiller</span> — entity (aesthetic version)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> — entity (the <em>Steigerung</em> alternative)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span> — summary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castle Pattern&quot;">Shitty Castle Pattern</span> — concept (parallel structure)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> — the mode within which homeopathic critique operates</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> — entity (first great practitioner)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/friedrich-schiller" title="Written [[Friedrich Schiller]], resolved to friedrich-schiller">Friedrich Schiller</a> — entity (aesthetic version)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> — entity (the <em>Steigerung</em> alternative)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/shitty-castle-pattern" title="Written [[Shitty Castle Pattern]], resolved to shitty-castle-pattern">Shitty Castle Pattern</a> — concept (parallel structure)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — concept (another possible homeopathic moment)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>604</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nature-culture-dialectic">Nature-Culture Dialectic</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/noble-savage">Noble Savage</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-wolfgang-von-goethe">Johann Wolfgang von Goethe (1749–1832)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">homeopathic-critique</span><a class="tag" href="/wiki/topics/kulturkritik">kulturkritik</a><span class="tag tag-lone" title="Only this note uses it">paradox</span><a class="tag" href="/wiki/topics/self-alienation">self-alienation</a><a class="tag" href="/wiki/topics/rousseau">rousseau</a><a class="tag" href="/wiki/topics/schiller">schiller</a><a class="tag" href="/wiki/topics/enlightenment">enlightenment</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

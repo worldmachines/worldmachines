@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Henri Bergson (1859–1941)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Henri Bergson (1859–1941)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/henri-bergson.md">source on GitHub</a></div>
-  <div class="note-summary">French philosopher (1859–1941) whose commitment to temporal duration over static representation made him, for Massey, a structural enemy of space despite his sympathy with her aims on time and becoming.</div>
-  <div class="tags"><span class="tag">bergson</span><span class="tag">philosophy</span><span class="tag">time</span><span class="tag">duration</span><span class="tag">space</span><span class="tag">representation</span><span class="tag">becoming</span><span class="tag">deleuze</span><span class="tag">massey</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/henri-bergson.md">source on GitHub</a></div>
+    <div class="note-summary">French philosopher (1859–1941) whose commitment to temporal duration over static representation made him, for Massey, a structural enemy of space despite his sympathy with her aims on time and becoming.</div>
     <div class="prose">
 <p>French philosopher, winner of the 1927 Nobel Prize in Literature. His philosophy centres on <em>durée</em> (duration) — the lived, continuous flow of time that resists discretization — against the &quot;spatialized&quot; time of science and measurement.</p>
 <h2 id="core-position">Core Position</h2>
@@ -66,26 +75,57 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-co-implication-of-space-and-time">the-co-implication-of-space-and-time</a> — Massey&#x27;s positive thesis on the Bergson question</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">12</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/ernesto-laclau">Ernesto Laclau (1935–2014)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/positive-versus-negative-multiplicity">Positive versus Negative Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-representation-critique">Space-as-Representation Critique</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-co-implication-of-space-and-time">The Co-Implication of Space and Time</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility">Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>685</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ernesto-laclau">Ernesto Laclau (1935–2014)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-representation-critique">Space-as-Representation Critique</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/positive-versus-negative-multiplicity">Positive versus Negative Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-co-implication-of-space-and-time">The Co-Implication of Space and Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility">Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/simultaneity-of-multiple-trajectories">Simultaneity of Multiple Trajectories</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-co-implication-of-space-and-time">The Co-Implication of Space and Time</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/aspatial-globalisation">Aspatial Globalisation</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/bergson">bergson</a><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/time">time</a><span class="tag tag-lone" title="Only this note uses it">duration</span><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/representation">representation</a><a class="tag" href="/wiki/topics/becoming">becoming</a><a class="tag" href="/wiki/topics/deleuze">deleuze</a><a class="tag" href="/wiki/topics/massey">massey</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> <b>/</b> <span>Back Matter: Acknowledgements, Notes, and References</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Back Matter: Acknowledgements, Notes, and References</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references.md">source on GitHub</a></div>
-  <div class="note-summary">The back matter reveals that the essay began as a 2020 University College Cork keynote and was assembled from fragments of three earlier Ingold books, and lists a reference lineage running from phenomenology and process philosophy through the anthropology of skill and perception to new-materialist theory.</div>
-  <div class="tags"><span class="tag">back-matter</span><span class="tag">acknowledgements</span><span class="tag">references</span><span class="tag">bibliography</span><span class="tag">tim-ingold</span><span class="tag">keynote-address</span><span class="tag">provenance</span><span class="tag">citation-lineage</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/entities/henri-bergson">henri-bergson</a>, <a class="wikilink" href="/wiki/aneesh/entities/martin-heidegger">martin-heidegger</a>, <a class="wikilink" href="/wiki/aneesh/entities/jane-bennett">jane-bennett</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references.md">source on GitHub</a></div>
+    <div class="note-summary">The back matter reveals that the essay began as a 2020 University College Cork keynote and was assembled from fragments of three earlier Ingold books, and lists a reference lineage running from phenomenology and process philosophy through the anthropology of skill and perception to new-materialist theory.</div>
     <div class="prose">
 <p>The closing pages of Ingold&#x27;s &quot;On not knowing and paying attention&quot; are not argumentative but they are informative about the essay&#x27;s origin and lineage: the Acknowledgements disclose that the piece is a collage of fragments from three of Ingold&#x27;s own earlier books, a Note dates it to a 2020 keynote address at University College Cork, and the References list the phenomenological, process-philosophical, and anthropological sources the essay draws on throughout. No conflicts of interest or funding are declared.</p>
 <h2 id="themes">Themes</h2>
@@ -44,16 +52,46 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The Acknowledgements&#x27; admission that the essay is stitched from fragments of Ingold&#x27;s own books is the single most load-bearing sentence in the back matter for anyone tracing where a given argument in the essay first appeared. The Notes entry on the workshop&#x27;s title and date fixes the essay&#x27;s occasion and register. The remaining Notes and References are standard scholarly apparatus (an ORCID iD, a Rilke citation via Macy and Barrows, and an alphabetical bibliography) and are not further discussed here.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>382</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning">Correspondence versus Interaction, Understanding versus Undercommoning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-serres">Michel Serres</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/entities/henri-bergson">henri-bergson</a></li><li><a class="wikilink" href="/wiki/aneesh/entities/martin-heidegger">martin-heidegger</a></li><li><a class="wikilink" href="/wiki/aneesh/entities/jane-bennett">jane-bennett</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">back-matter</span><span class="tag tag-lone" title="Only this note uses it">acknowledgements</span><span class="tag tag-lone" title="Only this note uses it">references</span><span class="tag tag-lone" title="Only this note uses it">bibliography</span><a class="tag" href="/wiki/topics/tim-ingold">tim-ingold</a><span class="tag tag-lone" title="Only this note uses it">keynote-address</span><span class="tag tag-lone" title="Only this note uses it">provenance</span><span class="tag tag-lone" title="Only this note uses it">citation-lineage</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

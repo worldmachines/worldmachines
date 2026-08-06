@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Solar as Flow vs Fossil as Stock</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Solar as Flow vs Fossil as Stock</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/solar-as-flow-vs-fossil-as-stock.md">source on GitHub</a></div>
-  <div class="note-summary">The structural framing under which fossil fuels are a finite stock with diminishing returns to extraction while solar is a flow with increasing returns to capture — a change in the geometry of energy, not a fuel substitution.</div>
-  <div class="tags"><span class="tag">energy</span><span class="tag">solar</span><span class="tag">fossil-fuels</span><span class="tag">eroi</span><span class="tag">swansons-law</span><span class="tag">civilizational-regimes</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/solar-as-flow-vs-fossil-as-stock.md">source on GitHub</a></div>
+    <div class="note-summary">The structural framing under which fossil fuels are a finite stock with diminishing returns to extraction while solar is a flow with increasing returns to capture — a change in the geometry of energy, not a fuel substitution.</div>
     <div class="prose">
 <p>The transition from fossil energy to solar energy is, in the standard framing, a <em>fuel substitution</em>: replace coal-fired generation with photovoltaic generation, replace internal-combustion vehicles with electric ones. This framing is correct as far as it goes but misses the deeper structural shift. <strong>Fossil fuels are a stock; solar is a flow.</strong> The two have opposite economic and thermodynamic geometries, and the transition between them is not substitution within a regime but a change of regime.</p>
 <p>This entry develops the framing as it appears in Section VII of <em>The Lightening of Intent</em> (Sathe, 2026), where the stock-versus-flow shift is the wager underneath the <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine">liveness-machine</a>&#x27;s viability.</p>
@@ -93,23 +102,54 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/ephemeralization">ephemeralization</a>: The &quot;doing more with less&quot; pattern — flows extend it; stocks bound it.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">9</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/eroi-thresholds">EROI Thresholds</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/infrastructure-inheritance">Infrastructure Inheritance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/renewal-of-materialism">Renewal of Materialism (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/solar-flows-and-the-energy-anomaly">Solar Flows and the Energy Anomaly</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/swansons-law">Swanson&#x27;s Law</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>1045</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/infrastructure-inheritance">Infrastructure Inheritance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/renewal-of-materialism">Renewal of Materialism (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/eroi-thresholds">EROI Thresholds</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/swansons-law">Swanson&#x27;s Law</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/solar-flows-and-the-energy-anomaly">Solar Flows and the Energy Anomaly</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/infrastructure-inheritance">Infrastructure Inheritance</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/swansons-law">Swanson&#x27;s Law</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/energy">energy</a><a class="tag" href="/wiki/topics/solar">solar</a><a class="tag" href="/wiki/topics/fossil-fuels">fossil-fuels</a><a class="tag" href="/wiki/topics/eroi">eroi</a><a class="tag" href="/wiki/topics/swansons-law">swansons-law</a><span class="tag tag-lone" title="Only this note uses it">civilizational-regimes</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

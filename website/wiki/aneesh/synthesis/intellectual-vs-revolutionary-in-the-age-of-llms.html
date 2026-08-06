@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Intellectual vs. Revolutionary in the Age of LLMs</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Intellectual vs. Revolutionary in the Age of LLMs</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/intellectual-vs-revolutionary-in-the-age-of-llms.md">source on GitHub</a></div>
-  <div class="note-summary">Cross-source synthesis examining whether LLMs dissolve the historical distinction between the intellectual who conceptualizes and the revolutionary who mobilizes — and what this means for political epistemology.</div>
-  <div class="tags"><span class="tag">LLMs</span><span class="tag">political-theory</span><span class="tag">intellectual-history</span><span class="tag">synthesis</span><span class="tag">cloister-web</span><span class="tag">communication-technology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/intellectual-vs-revolutionary-in-the-age-of-llms.md">source on GitHub</a></div>
+    <div class="note-summary">Cross-source synthesis examining whether LLMs dissolve the historical distinction between the intellectual who conceptualizes and the revolutionary who mobilizes — and what this means for political epistemology.</div>
     <div class="prose">
 <h2 id="the-historical-pattern">The Historical Pattern</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web — Reshaping the Political Maidan&quot;">Cloister Web — Reshaping the Political Maidan</span> essay identifies a structural pattern in political history: transformative intellectual movements require two distinct roles, typically occupied by different people.</p>
+<p>The <a class="wikilink-wanted" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan" title="No note is called &quot;Cloister Web — Reshaping the Political Maidan&quot; yet — see who is asking for it">Cloister Web — Reshaping the Political Maidan</a> essay identifies a structural pattern in political history: transformative intellectual movements require two distinct roles, typically occupied by different people.</p>
 <p>The <strong>intellectual</strong> (Tagore, Herzen, Liang Qichao, Paine/Jefferson) conceptualizes frameworks, articulates new visions, risks professional isolation.</p>
 <p>The <strong>revolutionary</strong> (Gandhi, Lenin, Sun Yat-sen, Adams/Henry) translates those frameworks into mass action, risks liberty and life.</p>
 <p>The gap between them is the gap between <em>having the right idea</em> and <em>moving specific people to act on it</em>. The revolutionary&#x27;s skill is essentially the skill of bespoke communication at scale: knowing what argument moves which person.</p>
@@ -55,10 +64,10 @@
 </ul>
 <p>The gap is not primarily intellectual — it is a <em>communication</em> gap. The revolutionary understands how to translate abstract frameworks into motivating messages for particular people in particular situations.</p>
 <h2 id="the-llm-intervention">The LLM Intervention</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> essay argues that LLMs can now close this gap programmatically:</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> essay argues that LLMs can now close this gap programmatically:</p>
 <ol>
 <li><strong>Personalization at scale</strong>: LLMs can adapt an intellectual&#x27;s framework to each individual recipient&#x27;s knowledge, values, and concerns — doing automatically what revolutionary orators did laboriously in person</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span></strong>: If intellectuals format their ideas in LLM-consumable structures (explicit entities, relationships, arguments), LLMs can traverse and adapt them</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/idea-graphs" title="Written [[Idea-Graphs]], resolved to idea-graphs">Idea-Graphs</a></strong>: If intellectuals format their ideas in LLM-consumable structures (explicit entities, relationships, arguments), LLMs can traverse and adapt them</li>
 <li><strong>Latent space propagation</strong>: The LLM may generate <em>new</em> connections and extrapolations that extend the idea in directions the intellectual didn&#x27;t anticipate — a form of collaborative generativity</li>
 </ol>
 <h2 id="historical-communication-technology-parallel">Historical Communication Technology Parallel</h2>
@@ -79,21 +88,36 @@
 <p>Thesis: LLMs close the communication gap that historically required two figures — the intellectual and the revolutionary — to effect political change. This is potentially democratizing (more intellectuals can effect change directly) and potentially dangerous (manipulation becomes indistinguishable from genuine engagement). The key question is whether bespoke persuasion constitutes genuine political communication or its sophisticated simulation.</p>
 <h2 id="related-pages">Related Pages</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> — concept page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> — the infrastructure argument</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span> — the mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mahatma Gandhi&quot;">Mahatma Gandhi</span> — the exceptional historical figure</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity as Epistemic Value&quot;">Generative Complexity as Epistemic Value</span> — the LLM-as-generator parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Political Discourse&quot;">Printing Press and Political Discourse</span> — historical analog</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> — concept page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> — the infrastructure argument</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/idea-graphs" title="Written [[Idea-Graphs]], resolved to idea-graphs">Idea-Graphs</a> — the mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/mahatma-gandhi" title="Written [[Mahatma Gandhi]], resolved to mahatma-gandhi">Mahatma Gandhi</a> — the exceptional historical figure</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/generative-complexity-as-epistemic-value" title="Written [[Generative Complexity as Epistemic Value]], resolved to generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</a> — the LLM-as-generator parallel</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/printing-press-and-political-discourse" title="No note is called &quot;Printing Press and Political Discourse&quot; yet — see who is asking for it">Printing Press and Political Discourse</a> — historical analog</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>645</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/cloister-web-reshaping-political-maidan">The Cloister Web: Reshaping the Political Maidan</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/llms">LLMs</a><a class="tag" href="/wiki/topics/political-theory">political-theory</a><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/cloister-web">cloister-web</a><span class="tag tag-lone" title="Only this note uses it">communication-technology</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

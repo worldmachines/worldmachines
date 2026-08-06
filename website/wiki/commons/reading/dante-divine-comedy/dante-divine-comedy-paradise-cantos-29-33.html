@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33.md">source on GitHub</a></div>
-  <div class="note-summary">Beatrice finishes her discourse on the angels&#x27; creation and fall and denounces preachers who trade the Gospel for fables and jests, after which Dante rises into the Empyrean&#x27;s river of light, beholds the blessed as a vast celestial rose, is handed off from Beatrice to St. Bernard, and through Bernard&#x27;s prayer to the Virgin Mary receives the poem&#x27;s closing beatific vision of the triune God.</div>
-  <div class="tags"><span class="tag">paradiso</span><span class="tag">empyrean</span><span class="tag">celestial-rose</span><span class="tag">beatific-vision</span><span class="tag">trinity</span><span class="tag">st-bernard</span><span class="tag">virgin-mary</span><span class="tag">ecclesiastical-corruption</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33.md">source on GitHub</a></div>
+    <div class="note-summary">Beatrice finishes her discourse on the angels&#x27; creation and fall and denounces preachers who trade the Gospel for fables and jests, after which Dante rises into the Empyrean&#x27;s river of light, beholds the blessed as a vast celestial rose, is handed off from Beatrice to St. Bernard, and through Bernard&#x27;s prayer to the Virgin Mary receives the poem&#x27;s closing beatific vision of the triune God.</div>
     <div class="prose">
 <p>This unit opens mid-Canto XXIX with Beatrice completing her theology of angelic creation — why the angels were made, how they differ in rank, why some fell — before pivoting into a scorching attack on corrupt preachers who abandon the Gospel for crowd-pleasing fable. Canto XXX then carries Dante past the Primum Mobile into the Empyrean, &quot;the heav&#x27;n, that is unbodied light,&quot; where a river of light resolves into the celestial rose: tiered thrones of the blessed, among them an empty seat reserved for the Emperor Henry VII, occasioning a bitter prophecy against a corrupt pope. In Canto XXXI, Beatrice returns to her throne and St. Bernard of Clairvaux takes over as guide, directing Dante&#x27;s gaze toward the Virgin Mary. Canto XXXII catalogues the rose&#x27;s order — Old Testament matriarchs, the two dividing &quot;roots&quot; Adam and Peter, infants saved without merit of their own — and touches on predestination before Bernard launches into prayer. Canto XXXIII is Bernard&#x27;s great intercessory prayer to Mary and then, granted grace, Dante&#x27;s direct vision of God: a burst of light in which the whole universe is bound &quot;in one volume,&quot; resolving into three circles of contained hue in which a human likeness is glimpsed, ending on the poem&#x27;s famous final line about the Love that moves the sun and stars.</p>
 <h2 id="themes">Themes</h2>
@@ -47,15 +55,32 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The passage on entering the Empyrean (&quot;Forth from the last corporeal are we come&quot;) names the realm precisely as it will function for the rest of the poem: unbodied light identical with intellect, love, and joy. The river-of-light sequence that follows — Dante drinking with his eyes until the river and its sparks resolve into the rose and &quot;either court of heav&#x27;n&quot; — dramatizes vision itself needing to be remade before it can perceive ultimate reality, a recurring Paradiso device now given its final, most literal staging. The prophecy over the &quot;proud stall&quot; awaiting Henry VII fuses eschatology with immediate Florentine and imperial politics, Dante&#x27;s harshest and most topical intrusion into an otherwise cosmic register. Bernard&#x27;s prayer to Mary (&quot;O virgin mother, daughter of thy Son&quot;) is the poem&#x27;s set-piece of Marian devotion, structured as paradox (mother and daughter of the same being) before pivoting to petition. The closing vision — three circled hues, one seemingly reflected from another, &quot;our image painted&quot; within the third, and Dante&#x27;s mind failing like a geometer unable to square the circle until &quot;a flash darted athwart my mind&quot; — resolves the entire poem&#x27;s ascent into a single instant of intellectual love, closing on the famous line about the force that moves the sun and the other stars.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>976</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/papal-revolution">papal-revolution</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/paradiso">paradiso</a><span class="tag tag-lone" title="Only this note uses it">empyrean</span><span class="tag tag-lone" title="Only this note uses it">celestial-rose</span><span class="tag tag-lone" title="Only this note uses it">beatific-vision</span><span class="tag tag-lone" title="Only this note uses it">trinity</span><span class="tag tag-lone" title="Only this note uses it">st-bernard</span><span class="tag tag-lone" title="Only this note uses it">virgin-mary</span><a class="tag" href="/wiki/topics/ecclesiastical-corruption">ecclesiastical-corruption</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Cognitive Diversity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Cognitive Diversity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/cognitive-diversity.md">source on GitHub</a></div>
-  <div class="note-summary">Cognitive diversity — variation in reasoning styles, perspectives, and linguistic expression across individuals and cultures — is a collective resource that enhances group problem-solving and adaptive capacity, and is currently threatened by AI homogenization.</div>
-  <div class="tags"><span class="tag">cognitive-diversity</span><span class="tag">collective-intelligence</span><span class="tag">ai</span><span class="tag">homogenization</span><span class="tag">epistemology</span><span class="tag">reasoning</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/cognitive-diversity.md">source on GitHub</a></div>
+    <div class="note-summary">Cognitive diversity — variation in reasoning styles, perspectives, and linguistic expression across individuals and cultures — is a collective resource that enhances group problem-solving and adaptive capacity, and is currently threatened by AI homogenization.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>Cognitive diversity refers to the variation in:</p>
@@ -59,38 +68,80 @@
 <li><em>Individual users</em> generate <em>more ideas</em> and <em>more detailed content</em> with LLM assistance</li>
 <li><em>Groups</em> generate <em>fewer and less creative ideas</em> when members all use LLMs</li>
 </ul>
-<p>This happens because LLMs reduce the variance between individual contributions — the very variance that makes group brainstorming productive. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;USC AI Homogenization Research&quot;">USC AI Homogenization Research</span>.</p>
+<p>This happens because LLMs reduce the variance between individual contributions — the very variance that makes group brainstorming productive. See <a class="wikilink-wanted" href="/wiki/wanted/usc-ai-homogenization-research" title="No note is called &quot;USC AI Homogenization Research&quot; yet — see who is asking for it">USC AI Homogenization Research</a>.</p>
 <h2 id="threats-from-llm-homogenization">Threats from LLM Homogenization</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLM Training Data Bias&quot;">LLM Training Data Bias</span> means that models trained on internet text (which overrepresents WEIRD populations and dominant languages) push users toward a statistical center that is culturally narrow. Even users who don&#x27;t feel constrained are being pulled toward:</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/llm-training-data-bias" title="Written [[LLM Training Data Bias]], resolved to llm-training-data-bias">LLM Training Data Bias</a> means that models trained on internet text (which overrepresents WEIRD populations and dominant languages) push users toward a statistical center that is culturally narrow. Even users who don&#x27;t feel constrained are being pulled toward:</p>
 <ul>
 <li>Chain-of-thought linear reasoning (suppressing intuitive and abstract modes)</li>
 <li>Standard Western academic expression styles</li>
 <li>Deference to model-suggested continuations over original composition</li>
 </ul>
 <h2 id="relationship-to-the-counter-enlightenment">Relationship to the Counter-Enlightenment</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span>&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> thinkers — especially <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> — argued that different cultures embody different and incommensurable forms of human excellence. Cognitive diversity is the contemporary empirical expression of this insight: it is not just that cultures <em>feel</em> different but that they <em>think</em> differently in ways that have measurable collective value.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> thinkers — especially <a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> — argued that different cultures embody different and incommensurable forms of human excellence. Cognitive diversity is the contemporary empirical expression of this insight: it is not just that cultures <em>feel</em> different but that they <em>think</em> differently in ways that have measurable collective value.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLM Training Data Bias&quot;">LLM Training Data Bias</span> — the mechanism of cognitive homogenization</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Collective Intelligence&quot;">Collective Intelligence</span> — what cognitive diversity supports</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;WEIRD Bias&quot;">WEIRD Bias</span> — the specific demographic skew in LLM training data</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Monoculture&quot;">Epistemic Monoculture</span> — the outcome when cognitive diversity collapses</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the philosophical tradition that valorized cognitive and cultural particularity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — the normative analogue in philosophy</li>
-<li>Sources: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;USC AI Homogenization Research&quot;">USC AI Homogenization Research</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span></li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Diversity as Infrastructure&quot;">Cognitive Diversity as Infrastructure</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/llm-training-data-bias" title="Written [[LLM Training Data Bias]], resolved to llm-training-data-bias">LLM Training Data Bias</a> — the mechanism of cognitive homogenization</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/collective-intelligence" title="No note is called &quot;Collective Intelligence&quot; yet — see who is asking for it">Collective Intelligence</a> — what cognitive diversity supports</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/weird-bias" title="Written [[WEIRD Bias]], resolved to weird-bias">WEIRD Bias</a> — the specific demographic skew in LLM training data</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/epistemic-monoculture" title="Written [[Epistemic Monoculture]], resolved to epistemic-monoculture">Epistemic Monoculture</a> — the outcome when cognitive diversity collapses</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the philosophical tradition that valorized cognitive and cultural particularity</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — the normative analogue in philosophy</li>
+<li>Sources: <a class="wikilink-wanted" href="/wiki/wanted/usc-ai-homogenization-research" title="No note is called &quot;USC AI Homogenization Research&quot; yet — see who is asking for it">USC AI Homogenization Research</a>, <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a></li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/cognitive-diversity-as-infrastructure" title="Written [[Cognitive Diversity as Infrastructure]], resolved to cognitive-diversity-as-infrastructure">Cognitive Diversity as Infrastructure</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/inter-world-opacity">Inter-World Opacity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-06-10">The Eagle, the Cross, and the Sun: Paradiso VI (cont.)–X</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>13</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>473</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/epistemic-monoculture">Epistemic Monoculture</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/inter-world-opacity">Inter-World Opacity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/weird-bias">WEIRD Bias</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/assumption-ground">Assumption-Ground</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cognitive-diversity-as-infrastructure">Cognitive Diversity as Infrastructure</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>5 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/llm-training-data-bias">LLM Training Data Bias</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/novalis">Novalis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/usc-ai-homogenization-cognitive-diversity">AI May Be Making Us Think and Write More Alike</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-06-10">The Eagle, the Cross, and the Sun: Paradiso VI (cont.)–X</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/epistemic-monoculture">Epistemic Monoculture</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/weird-bias">WEIRD Bias</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/llm-training-data-bias">LLM Training Data Bias</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/cognitive-diversity">cognitive-diversity</a><a class="tag" href="/wiki/topics/collective-intelligence">collective-intelligence</a><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/homogenization">homogenization</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/reasoning">reasoning</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

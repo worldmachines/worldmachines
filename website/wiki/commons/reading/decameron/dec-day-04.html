@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/decameron/">The Decameron</a> <b>/</b> <span>DEC 05 — Day the Fourth</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>DEC 05 — Day the Fourth</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/decameron/">The Decameron</a> · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/decameron/dec-day-04.md">source on GitHub</a></div>
-  <div class="note-summary">Day the Fourth, governed by the melancholy Filostrato, collects ten novels of tragic love alongside Boccaccio&#x27;s spirited author&#x27;s defence — the &#x27;green geese&#x27; half-tale — and spans the full range of love&#x27;s ruin: jealous fathers, murderous brothers, deception, sudden death, and the eaten heart.</div>
-  <div class="tags"><span class="tag">decameron</span><span class="tag">boccaccio</span><span class="tag">tragic-love</span><span class="tag">fortune</span><span class="tag">defiance</span><span class="tag">gender</span><span class="tag">storytelling-frame</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a>, <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>, <a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/decameron/">The Decameron</a> · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/decameron/dec-day-04.md">source on GitHub</a></div>
+    <div class="note-summary">Day the Fourth, governed by the melancholy Filostrato, collects ten novels of tragic love alongside Boccaccio&#x27;s spirited author&#x27;s defence — the &#x27;green geese&#x27; half-tale — and spans the full range of love&#x27;s ruin: jealous fathers, murderous brothers, deception, sudden death, and the eaten heart.</div>
     <div class="prose">
 <p>Day Four opens with something rare in the <em>Decameron</em>: Boccaccio stepping out of the frame to defend himself against critics who say he courts women too assiduously, wastes his maturity on frivolities, and neglects his Muses. His rebuttal takes the form of a half-finished tale — the hermit&#x27;s son Filippo Balducci, raised in total ignorance of women, who instantly desires one the moment he sees them (&quot;Father mine, I prithee get me one of these green geese&quot;). The moral is pointed: nature is stronger than wit, and anyone who blames Boccaccio for writing about women understands neither nature nor themselves. Filostrato then assumes the governance of the day and prescribes the theme: loves that ended unhappily. Under this dark mandate the brigata produces ten tales, ranging from the grand (Tancred and Ghismonda, the eaten heart of Guillaume de Guardestaing) to the intimate (Lisabetta&#x27;s pot of basil, Simona and the poisoned sage-bush), with a comic outlier at the end — Dioneo&#x27;s story of Ruggieri in the chest — that breaks the gloom by design.</p>
 <h2 id="themes">Themes</h2>
@@ -66,15 +74,32 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a> — conatus made lethal: the drive to love freely collides with an equally driven suppressive force; Girolamo wills himself dead by straitening his vital spirits — conatus inverted.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>1490</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/decameron">decameron</a><a class="tag" href="/wiki/topics/boccaccio">boccaccio</a><span class="tag tag-lone" title="Only this note uses it">tragic-love</span><a class="tag" href="/wiki/topics/fortune">fortune</a><span class="tag tag-lone" title="Only this note uses it">defiance</span><a class="tag" href="/wiki/topics/gender">gender</a><span class="tag tag-lone" title="Only this note uses it">storytelling-frame</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

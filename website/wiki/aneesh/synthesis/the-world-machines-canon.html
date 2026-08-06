@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The World Machines Canon — A Unified Map</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The World Machines Canon — A Unified Map</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-world-machines-canon.md">source on GitHub</a></div>
-  <div class="note-summary">A unified map of the World Machines framework as it has developed across Rao, Velitchkov, Lohse, and Atwater — from the Modernity Machine&#x27;s 13th-century origins through the Divergence Machine&#x27;s ascent to the Liveness Machine&#x27;s horizon — treating the series as a single evolving argument rather than a collection of posts.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">world-machines</span><span class="tag">modernity-machine</span><span class="tag">divergence-machine</span><span class="tag">liveness-machine</span><span class="tag">venkatesh-rao</span><span class="tag">velitchkov</span><span class="tag">lohse</span><span class="tag">atwater</span><span class="tag">meta-theory</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-world-machines-canon.md">source on GitHub</a></div>
+    <div class="note-summary">A unified map of the World Machines framework as it has developed across Rao, Velitchkov, Lohse, and Atwater — from the Modernity Machine&#x27;s 13th-century origins through the Divergence Machine&#x27;s ascent to the Liveness Machine&#x27;s horizon — treating the series as a single evolving argument rather than a collection of posts.</div>
     <div class="prose">
-<p><strong>Sources</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Modernity Machine&quot;">The Modernity Machine</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Modernity Machine II&quot;">The Modernity Machine II</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Modernity Machine III&quot;">The Modernity Machine III</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine II&quot;">The Divergence Machine II</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness&quot;">Engineering Liveness</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The World Machines Project&quot;">The World Machines Project</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Three Engineers of Modernity&quot;">Three Engineers of Modernity</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Voltaire the Entrepreneur&quot;">Voltaire the Entrepreneur</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins&quot;">History Machines in the Margins</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Walking the World Machines&quot;">Walking the World Machines</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;What Theory Is Not Theorizing Is&quot;">What Theory Is Not Theorizing Is</span></p>
+<p><strong>Sources</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a>, <a class="wikilink-wanted" href="/wiki/wanted/the-modernity-machine" title="No note is called &quot;The Modernity Machine&quot; yet — see who is asking for it">The Modernity Machine</a>, <a class="wikilink-wanted" href="/wiki/wanted/the-modernity-machine-ii" title="No note is called &quot;The Modernity Machine II&quot; yet — see who is asking for it">The Modernity Machine II</a>, <a class="wikilink-wanted" href="/wiki/wanted/the-modernity-machine-iii" title="No note is called &quot;The Modernity Machine III&quot; yet — see who is asking for it">The Modernity Machine III</a>, <a class="wikilink-wanted" href="/wiki/wanted/the-divergence-machine-ii" title="No note is called &quot;The Divergence Machine II&quot; yet — see who is asking for it">The Divergence Machine II</a>, <a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness" title="No note is called &quot;Engineering Liveness&quot; yet — see who is asking for it">Engineering Liveness</a>, <a class="wikilink-wanted" href="/wiki/wanted/the-world-machines-project" title="No note is called &quot;The World Machines Project&quot; yet — see who is asking for it">The World Machines Project</a>, <a class="wikilink-wanted" href="/wiki/wanted/three-engineers-of-modernity" title="No note is called &quot;Three Engineers of Modernity&quot; yet — see who is asking for it">Three Engineers of Modernity</a>, <a class="wikilink-wanted" href="/wiki/wanted/voltaire-the-entrepreneur" title="No note is called &quot;Voltaire the Entrepreneur&quot; yet — see who is asking for it">Voltaire the Entrepreneur</a>, <a class="wikilink-wanted" href="/wiki/wanted/history-machines-in-the-margins" title="No note is called &quot;History Machines in the Margins&quot; yet — see who is asking for it">History Machines in the Margins</a>, <a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a>, <a class="wikilink-wanted" href="/wiki/wanted/walking-the-world-machines" title="No note is called &quot;Walking the World Machines&quot; yet — see who is asking for it">Walking the World Machines</a>, <a class="wikilink-wanted" href="/wiki/wanted/what-theory-is-not-theorizing-is" title="No note is called &quot;What Theory Is Not Theorizing Is&quot; yet — see who is asking for it">What Theory Is Not Theorizing Is</a></p>
 <h2 id="the-architecture-of-the-argument">The Architecture of the Argument</h2>
 <p>The World Machines framework is not a single essay but a distributed, multi-author intellectual construction — itself a kind of history machine assembling in the margins. Its core claim: civilizational-scale change is best understood through the metaphor of <strong>machines</strong> — self-reinforcing systems of class relations, technologies, and epistemic norms that assemble over centuries, saturate, and then undergo phase transitions.</p>
 <h3 id="the-three-machines">The Three Machines</h3>
@@ -48,54 +57,81 @@
 </tbody>
 </table></div>
 <h3 id="the-modernity-machine-rao-mm-i-iii">The Modernity Machine (Rao, MM I–III)</h3>
-<p>The MM began not in the Reformation but in the 13th century, assembled through six shifting class relationships (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Modernity Machine&quot;">The Modernity Machine</span>). Its great achievement was <strong>legibility</strong> — making the world readable, compressible, interoperable. Its great failure was that legibility at scale generated excess complexity that legibility itself could not manage (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Modernity Machine III&quot;">The Modernity Machine III</span>). The MM optimized for legibility rather than truth or freedom, and its own success made internal repair impossible.</p>
+<p>The MM began not in the Reformation but in the 13th century, assembled through six shifting class relationships (see <a class="wikilink-wanted" href="/wiki/wanted/the-modernity-machine" title="No note is called &quot;The Modernity Machine&quot; yet — see who is asking for it">The Modernity Machine</a>). Its great achievement was <strong>legibility</strong> — making the world readable, compressible, interoperable. Its great failure was that legibility at scale generated excess complexity that legibility itself could not manage (see <a class="wikilink-wanted" href="/wiki/wanted/the-modernity-machine-iii" title="No note is called &quot;The Modernity Machine III&quot; yet — see who is asking for it">The Modernity Machine III</a>). The MM optimized for legibility rather than truth or freedom, and its own success made internal repair impossible.</p>
 <h3 id="the-divergence-machine-rao-dm-i-ii">The Divergence Machine (Rao, DM I–II)</h3>
-<p>The DM is the MM&#x27;s successor, not its opposite. Where the MM compressed, the DM differentiates. Rao traces its intellectual genealogy through Spinoza-Hume-Smith (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine II&quot;">The Divergence Machine II</span>) and frames Progress itself as a non-stationary argument on an expanding reality canvas — not an optimism/pessimism debate but a structural feature of a diverging world.</p>
+<p>The DM is the MM&#x27;s successor, not its opposite. Where the MM compressed, the DM differentiates. Rao traces its intellectual genealogy through Spinoza-Hume-Smith (see <a class="wikilink-wanted" href="/wiki/wanted/the-divergence-machine-ii" title="No note is called &quot;The Divergence Machine II&quot; yet — see who is asking for it">The Divergence Machine II</a>) and frames Progress itself as a non-stationary argument on an expanding reality canvas — not an optimism/pessimism debate but a structural feature of a diverging world.</p>
 <h3 id="the-liveness-machine-rao-engineering-liveness">The Liveness Machine (Rao, Engineering Liveness)</h3>
-<p>The speculative horizon. Rao uses the &quot;useless machine&quot; as a minimal model of liveness — the capacity to resist capture is life&#x27;s foundational property. &quot;New Nature&quot; is a regime of technological ecology as murderously competitive as Darwin&#x27;s tangled bank (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness&quot;">Engineering Liveness</span>).</p>
+<p>The speculative horizon. Rao uses the &quot;useless machine&quot; as a minimal model of liveness — the capacity to resist capture is life&#x27;s foundational property. &quot;New Nature&quot; is a regime of technological ecology as murderously competitive as Darwin&#x27;s tangled bank (see <a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness" title="No note is called &quot;Engineering Liveness&quot; yet — see who is asking for it">Engineering Liveness</a>).</p>
 <h2 id="the-contributors">The Contributors</h2>
 <h3 id="ivo-velitchkov-the-engineers">Ivo Velitchkov — The Engineers</h3>
-<p>Velitchkov provides case studies of <strong>individuals who engineered the MM</strong>: Fugger (capital), Wedgwood (manufacture), Voltaire (intellectual entrepreneurship). The pattern: each transformed class relations, generated legibility, and inadvertently opened civilizational space for the next machine (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Three Engineers of Modernity&quot;">Three Engineers of Modernity</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Voltaire the Entrepreneur&quot;">Voltaire the Entrepreneur</span>).</p>
+<p>Velitchkov provides case studies of <strong>individuals who engineered the MM</strong>: Fugger (capital), Wedgwood (manufacture), Voltaire (intellectual entrepreneurship). The pattern: each transformed class relations, generated legibility, and inadvertently opened civilizational space for the next machine (see <a class="wikilink-wanted" href="/wiki/wanted/three-engineers-of-modernity" title="No note is called &quot;Three Engineers of Modernity&quot; yet — see who is asking for it">Three Engineers of Modernity</a>, <a class="wikilink-wanted" href="/wiki/wanted/voltaire-the-entrepreneur" title="No note is called &quot;Voltaire the Entrepreneur&quot; yet — see who is asking for it">Voltaire the Entrepreneur</a>).</p>
 <h3 id="florian-lohse-the-margins-and-the-castles">Florian Lohse — The Margins and the Castles</h3>
 <p>Lohse contributes two crucial supplements:</p>
 <ol>
-<li><strong>History machines in the margins</strong> — modernity assembled not from singularly great men but from distributed components silently accumulating across centuries (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins&quot;">History Machines in the Margins</span>).</li>
-<li><strong>Shitty castles</strong> — the pragmatic function of intellectual constructions built by people who know they won&#x27;t hold (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span>). Leibniz&#x27;s monadology as a deliberate shitty castle, maintaining stability during a paradigm transition.</li>
+<li><strong>History machines in the margins</strong> — modernity assembled not from singularly great men but from distributed components silently accumulating across centuries (see <a class="wikilink-wanted" href="/wiki/wanted/history-machines-in-the-margins" title="No note is called &quot;History Machines in the Margins&quot; yet — see who is asking for it">History Machines in the Margins</a>).</li>
+<li><strong>Shitty castles</strong> — the pragmatic function of intellectual constructions built by people who know they won&#x27;t hold (see <a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a>). Leibniz&#x27;s monadology as a deliberate shitty castle, maintaining stability during a paradigm transition.</li>
 </ol>
 <h3 id="patrick-atwater-the-worms-eye">Patrick Atwater — The Worm&#x27;s Eye</h3>
-<p>Atwater connects Paul Salopek&#x27;s slow journalism to the framework, providing a methodological complement: the cyberpaleo perspective that reveals what civilizational-scale analysis misses (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Walking the World Machines&quot;">Walking the World Machines</span>).</p>
+<p>Atwater connects Paul Salopek&#x27;s slow journalism to the framework, providing a methodological complement: the cyberpaleo perspective that reveals what civilizational-scale analysis misses (see <a class="wikilink-wanted" href="/wiki/wanted/walking-the-world-machines" title="No note is called &quot;Walking the World Machines&quot; yet — see who is asking for it">Walking the World Machines</a>).</p>
 <h2 id="internal-tensions">Internal Tensions</h2>
 <ol>
-<li><strong>Scale vs. ground truth</strong>: The framework operates at civilizational scale but risks the Panglossian trap Lohse identifies — zooming out so far that local suffering disappears (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Zoom Ethics and the Panglossian Trap&quot;">Zoom Ethics and the Panglossian Trap</span>).</li>
-<li><strong>Theory vs. theorizing</strong>: By Weick&#x27;s standard, the WMP is not a theory but institutionalized theorizing — and this is a feature (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;World Machines as Interim Theory&quot;">World Machines as Interim Theory</span>).</li>
+<li><strong>Scale vs. ground truth</strong>: The framework operates at civilizational scale but risks the Panglossian trap Lohse identifies — zooming out so far that local suffering disappears (see <a class="wikilink" href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap" title="Written [[Zoom Ethics and the Panglossian Trap]], resolved to zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a>).</li>
+<li><strong>Theory vs. theorizing</strong>: By Weick&#x27;s standard, the WMP is not a theory but institutionalized theorizing — and this is a feature (see <a class="wikilink" href="/wiki/aneesh/synthesis/world-machines-as-interim-theory" title="Written [[World Machines as Interim Theory]], resolved to world-machines-as-interim-theory">World Machines as Interim Theory</a>).</li>
 <li><strong>Legibility of the framework itself</strong>: A framework about legibility&#x27;s limits must reckon with its own legibility. Is the MM/DM/LM taxonomy itself a legibility move?</li>
 </ol>
 <h2 id="what-the-canon-doesnt-yet-address">What the Canon Doesn&#x27;t Yet Address</h2>
 <ul>
 <li>The role of non-Western civilizational machines (Rao gestures at India; Lohse at Majapahit; but the framework remains Eurocentric)</li>
-<li>The relationship between the Liveness Machine and biological evolution (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness and Energy Rate Density&quot;">Liveness and Energy Rate Density</span>)</li>
+<li>The relationship between the Liveness Machine and biological evolution (see <a class="wikilink" href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density" title="Written [[Liveness and Energy Rate Density]], resolved to liveness-and-energy-rate-density">Liveness and Energy Rate Density</a>)</li>
 <li>How the framework handles the counter-Enlightenment tradition that Berlin documents — is the counter-Enlightenment an early commit to the Divergence Machine?</li>
 </ul>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility vs Divergence the Civilizational Tradeoff&quot;">Legibility vs Divergence the Civilizational Tradeoff</span> — the master tension</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Entrepreneur as Machine Engineer&quot;">Entrepreneur as Machine Engineer</span> — the pattern of individual agency within machine logic</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Slow Takes and World Machines&quot;">Slow Takes and World Machines</span> — the methodological corrective</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Spinoza Leibniz and the Paradigm Transition Problem&quot;">Spinoza Leibniz and the Paradigm Transition Problem</span> — intellectual honesty during phase transitions</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Terminal Medievals vs Early Moderns&quot;">Terminal Medievals vs Early Moderns</span> — the retrofitting problem</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-divergence-the-civilizational-tradeoff" title="Written [[Legibility vs Divergence the Civilizational Tradeoff]], resolved to legibility-vs-divergence-the-civilizational-tradeoff">Legibility vs Divergence the Civilizational Tradeoff</a> — the master tension</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/entrepreneur-as-machine-engineer" title="Written [[Entrepreneur as Machine Engineer]], resolved to entrepreneur-as-machine-engineer">Entrepreneur as Machine Engineer</a> — the pattern of individual agency within machine logic</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/slow-takes-and-world-machines" title="Written [[Slow Takes and World Machines]], resolved to slow-takes-and-world-machines">Slow Takes and World Machines</a> — the methodological corrective</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem" title="Written [[Spinoza Leibniz and the Paradigm Transition Problem]], resolved to spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza Leibniz and the Paradigm Transition Problem</a> — intellectual honesty during phase transitions</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/terminal-medievals-vs-early-moderns" title="Written [[Terminal Medievals vs Early Moderns]], resolved to terminal-medievals-vs-early-moderns">Terminal Medievals vs Early Moderns</a> — the retrofitting problem</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/df-history-generation-and-prime-radiant-seeding">DF History Generation and Prime Radiant Seeding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>740</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/worldmachines-org-theory">Theory — World Machines (Canonical)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/df-history-generation-and-prime-radiant-seeding">DF History Generation and Prime Radiant Seeding</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-divergence-the-civilizational-tradeoff">Legibility vs. Divergence: The Civilizational Tradeoff</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/modernity-machine">modernity-machine</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/liveness-machine">liveness-machine</a><a class="tag" href="/wiki/topics/venkatesh-rao">venkatesh-rao</a><a class="tag" href="/wiki/topics/velitchkov">velitchkov</a><a class="tag" href="/wiki/topics/lohse">lohse</a><a class="tag" href="/wiki/topics/atwater">atwater</a><span class="tag tag-lone" title="Only this note uses it">meta-theory</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

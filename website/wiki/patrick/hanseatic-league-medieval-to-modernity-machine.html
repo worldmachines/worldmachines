@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/patrick/">Patrick</a> <b>/</b> <span>The Hanseatic League as Medieval→Modernity Machine Transition</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Hanseatic League as Medieval→Modernity Machine Transition</h1>
-  <div class="note-byline"><a href="/wiki/patrick/">Patrick</a> · updated 15 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/patrick/hanseatic-league-medieval-to-modernity-machine.md">source on GitHub</a></div>
-  <div class="note-summary">The Hanseatic League as a complete arc case study: a proto-modern trade coalition that rose on medieval-machine infrastructure and collapsed as the modernity machine supplanted the institutional logic that gave it power.</div>
-  <div class="tags"><span class="tag">hanseatic-league</span><span class="tag">world-machines</span><span class="tag">medieval-machine</span><span class="tag">modernity-machine</span><span class="tag">trade</span><span class="tag">coalitions</span><span class="tag">institutional-collapse</span><span class="tag">technology-disruption</span></div>
+    <div class="note-byline"><a href="/wiki/patrick/">Patrick</a> · updated 15 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/patrick/hanseatic-league-medieval-to-modernity-machine.md">source on GitHub</a></div>
+    <div class="note-summary">The Hanseatic League as a complete arc case study: a proto-modern trade coalition that rose on medieval-machine infrastructure and collapsed as the modernity machine supplanted the institutional logic that gave it power.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a href="https://worksinprogress.co/issue/the-rise-and-fall-of-the-hanseatic-league/">Works in Progress — &quot;The Rise and Fall of the Hanseatic League&quot;</a> by Agree Ahmed<br>
 <strong>Why It Matters</strong>: Master case study in how merchant coalitions rise on technological advantage and collapse when interests diverge — shows the full arc of a world-order: emergence, dominance, fragility, decline.</p>
@@ -106,11 +115,11 @@
 <hr>
 <h2 id="connections-and-open-questions">Connections and Open Questions</h2>
 <ul>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;World Machines — Venkat Rao&quot;">World Machines — Venkat Rao</span> — the core theoretical frame this illuminates</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dutch Golden Age&quot;">Dutch Golden Age</span> — the modernity machine&#x27;s early instantiation</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;State Capacity&quot;">State Capacity</span> — the long-run competitor to coalition logic</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Institutional Economics — North&quot;">Institutional Economics — North</span> — the shift from personal to impersonal exchange as modernity&#x27;s mechanism</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;VOC as World Machine Entity&quot;">VOC as World Machine Entity</span> — the Dutch East India Company as successor structure</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/world-machines-venkat-rao" title="No note is called &quot;World Machines — Venkat Rao&quot; yet — see who is asking for it">World Machines — Venkat Rao</a> — the core theoretical frame this illuminates</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/dutch-golden-age" title="No note is called &quot;Dutch Golden Age&quot; yet — see who is asking for it">Dutch Golden Age</a> — the modernity machine&#x27;s early instantiation</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/state-capacity" title="No note is called &quot;State Capacity&quot; yet — see who is asking for it">State Capacity</a> — the long-run competitor to coalition logic</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/institutional-economics-north" title="No note is called &quot;Institutional Economics — North&quot; yet — see who is asking for it">Institutional Economics — North</a> — the shift from personal to impersonal exchange as modernity&#x27;s mechanism</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/voc-as-world-machine-entity" title="No note is called &quot;VOC as World Machine Entity&quot; yet — see who is asking for it">VOC as World Machine Entity</a> — the Dutch East India Company as successor structure</li>
 </ul>
 <p><strong>Open questions for the project</strong>:</p>
 <ol>
@@ -119,13 +128,26 @@
 <li>The interest-drift mechanism (Livonian towns defecting) looks like the defection dynamic in any prisoner&#x27;s dilemma coalition. Is this universal to world-machine transitions — the coalition that built the old order defects into the new one?</li>
 </ol>
     </div>
+    <p class="note-history">Last changed 15 May 2026 by Patrick Atwater — <a href="https://github.com/worldmachines/worldmachines/commit/8945fc3ed214604f1927092fa2141b188b5fda16">Create analysis of Hanseatic League&#x27;s historical transition</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 15 May 2026 by Patrick Atwater — <a href="https://github.com/worldmachines/worldmachines/commit/8945fc3ed214604f1927092fa2141b188b5fda16">Create analysis of Hanseatic League&#x27;s historical transition</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>1072</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">hanseatic-league</span><a class="tag" href="/wiki/topics/world-machines">world-machines</a><span class="tag tag-lone" title="Only this note uses it">medieval-machine</span><a class="tag" href="/wiki/topics/modernity-machine">modernity-machine</a><span class="tag tag-lone" title="Only this note uses it">trade</span><span class="tag tag-lone" title="Only this note uses it">coalitions</span><span class="tag tag-lone" title="Only this note uses it">institutional-collapse</span><span class="tag tag-lone" title="Only this note uses it">technology-disruption</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Majapahit Empire</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Majapahit Empire</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/majapahit-empire.md">source on GitHub</a></div>
-  <div class="note-summary">Majapahit was a Hindu-Buddhist maritime empire centered on Java (13th-15th century) notable for its cosmopolitan culture, advanced naval technology, deliberate erasure by Portuguese colonizers, and rich afterlife as the symbolic foundation of modern Indonesia and Balinese culture.</div>
-  <div class="tags"><span class="tag">majapahit</span><span class="tag">indonesia</span><span class="tag">bali</span><span class="tag">maritime-empire</span><span class="tag">history-machine</span><span class="tag">colonial-erasure</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/majapahit-empire.md">source on GitHub</a></div>
+    <div class="note-summary">Majapahit was a Hindu-Buddhist maritime empire centered on Java (13th-15th century) notable for its cosmopolitan culture, advanced naval technology, deliberate erasure by Portuguese colonizers, and rich afterlife as the symbolic foundation of modern Indonesia and Balinese culture.</div>
     <div class="prose">
 <h2 id="overview">Overview</h2>
 <p>Majapahit (c. 1293–1527 CE) was a Hindu-Buddhist maritime empire centered on the island of Java, with influence across Sumatra, Bali, Borneo, and the Malay Peninsula. At its height in the 14th century, it was one of the most powerful and cosmopolitan polities in Southeast Asia.</p>
@@ -53,12 +62,12 @@
 <p>Majapahit&#x27;s &quot;jong&quot; ships were nine-decked vessels potentially carrying up to 1,000 people — larger than Portuguese ships of the 15th century. No shipwrecks have been found; their exact size remains unknown.</p>
 <h3 id="cartographic-knowledge">Cartographic Knowledge</h3>
 <p>Javanese cartography was advanced enough to be threatening. The Portuguese, by Royal Decree of November 13, 1504, ordered the destruction of all maps, charts, and logbooks connected with navigation south of the equator. Not a single indigenous Javanese cartographic specimen survives, explaining why pre-Portuguese Indonesian cartography remains unstudied.</p>
-<p>This is one of the most striking examples of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Deliberate Archival Erasure&quot;">Deliberate Archival Erasure</span> in pre-modern history.</p>
+<p>This is one of the most striking examples of <a class="wikilink" href="/wiki/aneesh/concepts/deliberate-archival-erasure" title="Written [[Deliberate Archival Erasure]], resolved to deliberate-archival-erasure">Deliberate Archival Erasure</a> in pre-modern history.</p>
 <h3 id="administrative-innovation">Administrative Innovation</h3>
 <p>Gajah Mada — a commoner who rose to effectively run the state as Prime Minister — is the archetypal &quot;low-born consul viciously running state affairs.&quot; His rise against aristocratic opposition illustrates that Majapahit had channels for ability-based advancement outside hereditary class.</p>
 <h2 id="collapse-and-afterlife">Collapse and Afterlife</h2>
 <h3 id="collapse-1400-1527">Collapse (~1400-1527)</h3>
-<p>Majapahit disappeared quickly in the 15th century despite its sophistication — an instance of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machine&quot;">History Machine</span> thesis: even highly developed systems can collapse when their components fall out of alignment.</p>
+<p>Majapahit disappeared quickly in the 15th century despite its sophistication — an instance of the <a class="wikilink" href="/wiki/aneesh/concepts/history-machine" title="Written [[History Machine]], resolved to history-machine">History Machine</a> thesis: even highly developed systems can collapse when their components fall out of alignment.</p>
 <h3 id="afterlife">Afterlife</h3>
 <ol>
 <li><strong>Structural leftovers</strong> became material for Dutch colonialism — infrastructure, administrative patterns</li>
@@ -67,7 +76,7 @@
 <li><strong>National mythology</strong>: Majapahit is now the primary source of national identity for Indonesia — a country of 270+ million people, the 4th largest population in the world and the largest Muslim nation. A Hindu empire thus legitimizes a Muslim state.</li>
 </ol>
 <h2 id="the-chronicler">The Chronicler</h2>
-<p>An anonymous &quot;oddball court official&quot; documented daily life in Majapahit. His observations were considered irrelevant at publication; his book is now the primary historical source. This exemplifies <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lohse&quot;">Lohse</span>&#x27;s &quot;notes in the margins&quot; figure: the future is already present, barely recognized.</p>
+<p>An anonymous &quot;oddball court official&quot; documented daily life in Majapahit. His observations were considered irrelevant at publication; his book is now the primary historical source. This exemplifies <a class="wikilink-wanted" href="/wiki/wanted/lohse" title="No note is called &quot;Lohse&quot; yet — see who is asking for it">Lohse</a>&#x27;s &quot;notes in the margins&quot; figure: the future is already present, barely recognized.</p>
 <h2 id="as-history-machine-instance">As History Machine Instance</h2>
 <p>Majapahit illustrates how history machines work:</p>
 <ul>
@@ -77,28 +86,51 @@
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machine&quot;">History Machine</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Deliberate Archival Erasure&quot;">Deliberate Archival Erasure</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Civilizational Palimpsest&quot;">Civilizational Palimpsest</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/history-machine" title="Written [[History Machine]], resolved to history-machine">History Machine</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/deliberate-archival-erasure" title="Written [[Deliberate Archival Erasure]], resolved to deliberate-archival-erasure">Deliberate Archival Erasure</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/civilizational-palimpsest" title="No note is called &quot;Civilizational Palimpsest&quot; yet — see who is asking for it">Civilizational Palimpsest</a></li>
 </ul>
 <h2 id="related-entities">Related Entities</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> (primary analyst)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> (primary analyst)</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> (history machine framework)</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span> (primary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a> (primary)</li>
 <li>Herald Van Der Linde, <em>Majapahit: Intrigue, Betrayal and War in Indonesia&#x27;s Greatest Empire</em></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>521</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/deliberate-archival-erasure">Deliberate Archival Erasure</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse">History Machines in the Margins — Florian Lohse (2025)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/majapahit">majapahit</a><span class="tag tag-lone" title="Only this note uses it">indonesia</span><span class="tag tag-lone" title="Only this note uses it">bali</span><span class="tag tag-lone" title="Only this note uses it">maritime-empire</span><a class="tag" href="/wiki/topics/history-machine">history-machine</a><span class="tag tag-lone" title="Only this note uses it">colonial-erasure</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

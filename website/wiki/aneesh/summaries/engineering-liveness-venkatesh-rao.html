@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Engineering Liveness — Venkatesh Rao (2026)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Engineering Liveness — Venkatesh Rao (2026)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/engineering-liveness-venkatesh-rao.md">source on GitHub</a></div>
-  <div class="note-summary">Venkatesh Rao uses the &#x27;useless machine&#x27; — a device whose sole function is to turn itself off — as a minimal model of liveness, arguing that capture resistance is life&#x27;s foundational property and that &#x27;New Nature&#x27; is a regime of technological ecology as murderously competitive as Darwin&#x27;s tangled bank.</div>
-  <div class="tags"><span class="tag">liveness</span><span class="tag">technology</span><span class="tag">new-nature</span><span class="tag">gramsci-gap</span><span class="tag">darwinism</span><span class="tag">philosophy-of-life</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/engineering-liveness-venkatesh-rao.md">source on GitHub</a></div>
+    <div class="note-summary">Venkatesh Rao uses the &#x27;useless machine&#x27; — a device whose sole function is to turn itself off — as a minimal model of liveness, arguing that capture resistance is life&#x27;s foundational property and that &#x27;New Nature&#x27; is a regime of technological ecology as murderously competitive as Darwin&#x27;s tangled bank.</div>
     <div class="prose">
 <p><strong>Source</strong>: Contraptions (Substack), January 31, 2026<br>
 <strong>URL</strong>: https://contraptions.venkateshrao.com/p/engineering-liveness</p>
@@ -50,14 +59,14 @@
 </ul>
 <h3 id="the-gramsci-gap-and-rewilding">The Gramsci Gap and Rewilding</h3>
 <ul>
-<li>Liveness pairs naturally with the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span> — interregna where &quot;the old world is dying and a new world is struggling to be born&quot;</li>
+<li>Liveness pairs naturally with the <a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a> — interregna where &quot;the old world is dying and a new world is struggling to be born&quot;</li>
 <li>Civilized liveness deadens itself by separating liveness from death; wildness requires their entanglement</li>
 <li>Reanimating civilization = <em>rewilding</em>: surrendering corpses to decomposition on one end, removing protections from the barely-born on the other</li>
 <li>Civilization by definition never fully exposes itself to wilderness — this tension is sharpest in the Gramsci Gap</li>
 </ul>
 <h3 id="new-nature">New Nature</h3>
 <ul>
-<li>Rao defines <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span> as &quot;regimes of reality governed by technologically mediated laws that are nearly as inviolable, immutable, and persistent as those of nature&quot;</li>
+<li>Rao defines <a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a> as &quot;regimes of reality governed by technologically mediated laws that are nearly as inviolable, immutable, and persistent as those of nature&quot;</li>
 <li>The question: what is the <em>murder</em> in New Nature? Not BattleBots or military conflict, but &quot;vicious competitiveness lurking in boring, routine, near-invisibility&quot;</li>
 <li>New Nature is not the solarpunk left image of robots in meadows — it is more like a mussel-covered pier piling: illegible, competitive, dense</li>
 </ul>
@@ -86,12 +95,12 @@
 <blockquote><p>&quot;Murder in New Nature isn&#x27;t about Battle Bots or military hardware. It is about vicious competitiveness lurking in boring, routine, near-invisibility, among entities that attempt to retain control over their own liveness.&quot;</p></blockquote>
 <h2 id="intellectual-lineage">Intellectual Lineage</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Brian Arthur&quot;">Brian Arthur</span> — technology as harnessed natural phenomena</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Antonio Gramsci&quot;">Antonio Gramsci</span> — interregnum / Gramsci Gap (indirectly)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Charles Darwin&quot;">Charles Darwin</span> — tangled bank passage</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Werner Herzog&quot;">Werner Herzog</span> — jungle as collective murder (Fitzcarraldo/Aguirre monologues)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Albert Camus&quot;">Albert Camus</span> — suicide as the fundamental philosophical problem</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;James Conway&quot;">James Conway</span> — Game of Life (contrasted; useless machine is deeper)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/brian-arthur" title="No note is called &quot;Brian Arthur&quot; yet — see who is asking for it">Brian Arthur</a> — technology as harnessed natural phenomena</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/antonio-gramsci" title="No note is called &quot;Antonio Gramsci&quot; yet — see who is asking for it">Antonio Gramsci</a> — interregnum / Gramsci Gap (indirectly)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/charles-darwin" title="No note is called &quot;Charles Darwin&quot; yet — see who is asking for it">Charles Darwin</a> — tangled bank passage</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/werner-herzog" title="Written [[Werner Herzog]], resolved to werner-herzog">Werner Herzog</a> — jungle as collective murder (Fitzcarraldo/Aguirre monologues)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/albert-camus" title="No note is called &quot;Albert Camus&quot; yet — see who is asking for it">Albert Camus</a> — suicide as the fundamental philosophical problem</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/james-conway" title="No note is called &quot;James Conway&quot; yet — see who is asking for it">James Conway</a> — Game of Life (contrasted; useless machine is deeper)</li>
 </ul>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <ul>
@@ -102,22 +111,47 @@
 </ul>
 <h2 id="cross-source-connections">Cross-Source Connections</h2>
 <ul>
-<li>Resonates with Chaisson&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Energy Rate Density&quot;">Energy Rate Density</span> as a complexity metric — liveness as the process of maintaining high energy throughput — see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cosmic Evolution - Chaisson&quot;">Cosmic Evolution - Chaisson</span></li>
-<li>Contrasts with history-machine thinking (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span>): Rao focuses on the present/future emergence of New Nature; Lohse on how past components assembled silently</li>
-<li>The &quot;illegibility of fitness&quot; argument connects to Berlin&#x27;s critique of monist historical schemes (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Against the Current - Berlin&quot;">Against the Current - Berlin</span>)</li>
+<li>Resonates with Chaisson&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/energy-rate-density" title="Written [[Energy Rate Density]], resolved to energy-rate-density">Energy Rate Density</a> as a complexity metric — liveness as the process of maintaining high energy throughput — see <a class="wikilink" href="/wiki/aneesh/summaries/cosmic-evolution-chaisson" title="Written [[Cosmic Evolution - Chaisson]], resolved to cosmic-evolution-chaisson">Cosmic Evolution - Chaisson</a></li>
+<li>Contrasts with history-machine thinking (<a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a>): Rao focuses on the present/future emergence of New Nature; Lohse on how past components assembled silently</li>
+<li>The &quot;illegibility of fitness&quot; argument connects to Berlin&#x27;s critique of monist historical schemes (see <a class="wikilink-wanted" href="/wiki/wanted/against-the-current-berlin" title="No note is called &quot;Against the Current - Berlin&quot; yet — see who is asking for it">Against the Current - Berlin</a>)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>831</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/horizontal-history">Horizontal History</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii">The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/liveness">liveness</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/new-nature">new-nature</a><a class="tag" href="/wiki/topics/gramsci-gap">gramsci-gap</a><a class="tag" href="/wiki/topics/darwinism">darwinism</a><a class="tag" href="/wiki/topics/philosophy-of-life">philosophy-of-life</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

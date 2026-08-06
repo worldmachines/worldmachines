@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/my-grandfather-had-lore.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe argues that degrading search quality and hallucinating LLMs may produce a civilizational regression toward lore — informal oral expertise — as the default mode of accessing reliable information.</div>
-  <div class="tags"><span class="tag">information-access</span><span class="tag">llm</span><span class="tag">search</span><span class="tag">explainable-ai</span><span class="tag">lore</span><span class="tag">hallucination</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/my-grandfather-had-lore.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe argues that degrading search quality and hallucinating LLMs may produce a civilizational regression toward lore — informal oral expertise — as the default mode of accessing reliable information.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a href="https://aneeshsathe.com/my-grandfather-had-lore/">aneeshsathe.com, 2024-01-17</a><br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span></p>
+<strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a></p>
 <h2 id="central-argument">Central Argument</h2>
 <p>The arc of information access follows a cyclical pattern analogous to the Dubai camel proverb: from lore (oral expertise, pre-modern) → Google (search, early internet) → ChatGPT (generative AI, 2020s) → possibly back to lore. The mechanism driving regression: Google&#x27;s search quality has measurably declined while LLMs like ChatGPT produce confident falsehoods without citations or confidence scores, eroding the reliability of mass information access.</p>
 <h2 id="key-claims">Key Claims</h2>
@@ -49,28 +58,71 @@
 </ol>
 <h2 id="connections">Connections</h2>
 <ul>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the normative standard Sathe applies throughout</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span> — structural mechanism driving distrust</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Citation Problem in LLMs&quot;">Citation Problem in LLMs</span> — the specific epistemic failure</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lore vs. Search vs. LLM&quot;">Lore vs. Search vs. LLM</span> — the three-era typology</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Degradation of Search&quot;">Degradation of Search</span> — empirical backdrop to the argument</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perplexity AI&quot;">Perplexity AI</span> — the cited counterexample</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cyclical Information Epistemics&quot;">Cyclical Information Epistemics</span> — the Dubai proverb as civilizational frame</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the normative standard Sathe applies throughout</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/hallucination" title="Written [[Hallucination]], resolved to hallucination">Hallucination</a> — structural mechanism driving distrust</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/citation-problem-in-llms" title="Written [[Citation Problem in LLMs]], resolved to citation-problem-in-llms">Citation Problem in LLMs</a> — the specific epistemic failure</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/lore-vs-search-vs-llm" title="Written [[Lore vs. Search vs. LLM]], resolved to lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a> — the three-era typology</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/degradation-of-search" title="Written [[Degradation of Search]], resolved to degradation-of-search">Degradation of Search</a> — empirical backdrop to the argument</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/entities/perplexity-ai" title="Written [[Perplexity AI]], resolved to perplexity-ai">Perplexity AI</a> — the cited counterexample</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/cyclical-information-epistemics" title="Written [[Cyclical Information Epistemics]], resolved to cyclical-information-epistemics">Cyclical Information Epistemics</a> — the Dubai proverb as civilizational frame</li>
 </ul>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <ul>
-<li>No engagement with retrieval-augmented generation (RAG) as a middle path (addressed more fully in the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR Knowledge Graphs Healthcare&quot;">FHIR Knowledge Graphs Healthcare</span> summary)</li>
+<li>No engagement with retrieval-augmented generation (RAG) as a middle path (addressed more fully in the <a class="wikilink" href="/wiki/aneesh/summaries/fhir-knowledge-graphs-healthcare" title="Written [[FHIR Knowledge Graphs Healthcare]], resolved to fhir-knowledge-graphs-healthcare">FHIR Knowledge Graphs Healthcare</a> summary)</li>
 <li>The piece treats &quot;lore&quot; as monolithic; doesn&#x27;t distinguish between reliable expert traditions and misinformation folklore</li>
 <li>No analysis of why Google degraded (advertising incentives, SEO gaming) — leaves the cause at the level of observation</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>365</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/mission-critical-ai">Mission-Critical AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cyclical-information-epistemics">Cyclical Information Epistemics</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/degradation-of-search">Degradation of Search</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cost-disease-and-the-retreat-from-public-life">Cost Disease and the Retreat from Public Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-information-ecology">The Information Ecology — Noise, Lore, Libraries, and the Crisis of Navigation</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/information-access">information-access</a><a class="tag" href="/wiki/topics/llm">llm</a><a class="tag" href="/wiki/topics/search">search</a><a class="tag" href="/wiki/topics/explainable-ai">explainable-ai</a><a class="tag" href="/wiki/topics/lore">lore</a><span class="tag tag-lone" title="Only this note uses it">hallucination</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Purgatory, Cantos I–IV: Cato, Casella, and the Late-Repentant on the Mountain&#x27;s Shore</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Purgatory, Cantos I–IV: Cato, Casella, and the Late-Repentant on the Mountain&#x27;s Shore</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-01-04.md">source on GitHub</a></div>
-  <div class="note-summary">Newly escaped from Hell, Dante and Virgil are received on the shore of Mount Purgatory by its guardian Cato, watch an angel ferry a boatload of souls (including Dante&#x27;s musician friend Casella) across the sea, and among the late-repentant excommunicate — the slain King Manfred of Sicily and the indolent Belacqua — learn that Purgatory runs on an economy of contrition, intercessory prayer, and patient waiting rather than Hell&#x27;s fixed decree.</div>
-  <div class="tags"><span class="tag">dante</span><span class="tag">purgatorio</span><span class="tag">cato-the-younger</span><span class="tag">repentance</span><span class="tag">free-will</span><span class="tag">medieval-cosmology</span><span class="tag">liminal-space</span><span class="tag">excommunication</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-01-04.md">source on GitHub</a></div>
+    <div class="note-summary">Newly escaped from Hell, Dante and Virgil are received on the shore of Mount Purgatory by its guardian Cato, watch an angel ferry a boatload of souls (including Dante&#x27;s musician friend Casella) across the sea, and among the late-repentant excommunicate — the slain King Manfred of Sicily and the indolent Belacqua — learn that Purgatory runs on an economy of contrition, intercessory prayer, and patient waiting rather than Hell&#x27;s fixed decree.</div>
     <div class="prose">
 <p>Emerging from the &quot;cruel sea&quot; of Hell, Dante invokes the Muses and describes the sapphire dawn sky and four unfamiliar stars (seen only by Adam and Eve) before encountering Cato of Utica, the stern, radiant old man who guards the shore of Mount Purgatory. Virgil wins passage by invoking the &quot;Dame from heaven&quot; and Cato&#x27;s late wife Marcia, and Cato orders Dante washed of Hell&#x27;s grime and girt with a reed that miraculously regrows the instant it is plucked. At dawn an angelic pilot ferries a boatload of newly arrived souls singing the Psalm &quot;In Exitu Israel de Aegypto&quot;; among them is Casella, an old friend and musician whose attempted embrace passes through Dante&#x27;s living body, and who sings a love-canzone until Cato scatters the rapt crowd back to work. Canto III turns to the theologically fraught excommunicate dead, where Virgil confesses the limits of reason before revealed mystery, and Manfred of Sicily — killed in battle, buried outside consecrated ground, his bones later disinterred by a hostile bishop — testifies that &quot;goodness infinite&quot; receives even the excommunicate who repent at the last, though canon law still exacts a thirtyfold delay unless shortened by the prayers of the living. Canto IV closes with a laborious climb, a digression on the soul&#x27;s single-pointed attention and the perception of time, an astronomical excursus on the sun&#x27;s position relative to Jerusalem and the mountain (its antipodal twin), and the arrival at Belacqua, an old acquaintance so habitually lazy in life that he now sits indolently at the base of the ascent, in no hurry even in the afterlife, waiting out a term equal to his own lifespan unless &quot;prayer aid him first.&quot;</p>
 <h2 id="themes">Themes</h2>
@@ -49,13 +58,26 @@
 <p>Virgil&#x27;s confession of reason&#x27;s limits (&quot;Seek not the wherefore, race of human kind... I speak of Plato, and the Stagyrite&quot;) is the unit&#x27;s clearest doctrinal statement, delivered by the character whose entire narrative function elsewhere is confident guidance — his uncharacteristic reticence here is load-bearing for the whole Comedy&#x27;s later hand-off from Virgil to Beatrice.</p>
 <p>Manfred&#x27;s plea (&quot;When by two mortal blows... Hath goodness infinite, that it receives / All who turn to it&quot;) is the unit&#x27;s theological center of gravity: an excommunicate, disinterred king insisting that no curse of the Church can outrun grace, so long as repentance — however late — is genuine.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>994</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dante">dante</a><a class="tag" href="/wiki/topics/purgatorio">purgatorio</a><span class="tag tag-lone" title="Only this note uses it">cato-the-younger</span><span class="tag tag-lone" title="Only this note uses it">repentance</span><a class="tag" href="/wiki/topics/free-will">free-will</a><span class="tag tag-lone" title="Only this note uses it">medieval-cosmology</span><span class="tag tag-lone" title="Only this note uses it">liminal-space</span><span class="tag tag-lone" title="Only this note uses it">excommunication</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

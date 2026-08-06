@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Friar&#x27;s Tale</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Friar&#x27;s Tale</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-friars-tale.md">source on GitHub</a></div>
-  <div class="note-summary">In the Friar&#x27;s Tale, a corrupt ecclesiastical summoner who extorts money from sinners under threat of church prosecution swears brotherhood with a devil disguised as a fellow bailiff, learns from him that a curse only takes effect if meant in earnest, and is dragged bodily to hell when an old widow he tries to swindle damns him with genuine sincerity.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">canterbury-tales</span><span class="tag">friars-tale</span><span class="tag">anti-clericalism</span><span class="tag">ecclesiastical-corruption</span><span class="tag">devil-folklore</span><span class="tag">estates-satire</span><span class="tag">medieval-jurisdiction</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-friars-tale.md">source on GitHub</a></div>
+    <div class="note-summary">In the Friar&#x27;s Tale, a corrupt ecclesiastical summoner who extorts money from sinners under threat of church prosecution swears brotherhood with a devil disguised as a fellow bailiff, learns from him that a curse only takes effect if meant in earnest, and is dragged bodily to hell when an old widow he tries to swindle damns him with genuine sincerity.</div>
     <div class="prose">
 <p>The Friar, needled by the Wife of Bath&#x27;s incursion into clerkly territory and already trading glares with the Summoner riding beside him, takes his revenge in narrative form: a tale of a crooked ecclesiastical summoner who runs a bribery racket under an archdeacon&#x27;s court, falls in with a yeoman on the road who turns out to be a devil, and is carried off to hell at the tale&#x27;s end after trying to extort an old widow who curses him — and means it. The tale is one half of a two-part quarrel with the Summoner&#x27;s Tale that follows, both bitter satires on the venality of the medieval Church&#x27;s lower bureaucracy.</p>
 <h2 id="themes">Themes</h2>
@@ -48,16 +57,37 @@
 <p>The cart-in-the-mud episode, where the carter&#x27;s damning of his own horses turns out to be empty of intent (&quot;the churl spake one thing, but he thought another&quot;), is the tale&#x27;s proof-of-concept for its governing rule about curses, staged as comedy before the same rule is played straight for tragedy.</p>
 <p>The closing exchange with the widow Mabery — extortion demanded down to the last pan, met with a curse she means with her whole heart — delivers the tale&#x27;s payoff: &quot;Body and soul, he with the devil went,&quot; the summoner&#x27;s own instrument of jurisdiction turned, at last, against him.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sompnours-tale">The Sompnour&#x27;s Tale: A Friar&#x27;s Comeuppance</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>811</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-sompnours-tale">The Sompnour&#x27;s Tale: A Friar&#x27;s Comeuppance</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><span class="tag tag-lone" title="Only this note uses it">friars-tale</span><a class="tag" href="/wiki/topics/anti-clericalism">anti-clericalism</a><a class="tag" href="/wiki/topics/ecclesiastical-corruption">ecclesiastical-corruption</a><span class="tag tag-lone" title="Only this note uses it">devil-folklore</span><a class="tag" href="/wiki/topics/estates-satire">estates-satire</a><span class="tag tag-lone" title="Only this note uses it">medieval-jurisdiction</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

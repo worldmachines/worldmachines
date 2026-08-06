@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,30 +26,39 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Hacky Mindset</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Hacky Mindset</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/hacky-mindset.md">source on GitHub</a></div>
-  <div class="note-summary">The productive middle ground between fraudulence and mastery — imperfect shortcuts taken with playful momentum, solving real problems quickly without degrading output quality.</div>
-  <div class="tags"><span class="tag">hacking</span><span class="tag">problem-solving</span><span class="tag">play</span><span class="tag">fox-hedgehog</span><span class="tag">posture</span><span class="tag">lateral-thinking</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/hacky-mindset.md">source on GitHub</a></div>
+    <div class="note-summary">The productive middle ground between fraudulence and mastery — imperfect shortcuts taken with playful momentum, solving real problems quickly without degrading output quality.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>The hacky mindset occupies the middle of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Horseshoe Topology of Hack-Hacky-Hacker&quot;">Horseshoe Topology of Hack-Hacky-Hacker</span>: taking imperfect shortcuts through problems with playful momentum. It is &quot;play disguised as problem solving.&quot;</p>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span>:</p>
+<p>The hacky mindset occupies the middle of the <a class="wikilink-wanted" href="/wiki/wanted/horseshoe-topology-of-hack-hacky-hacker" title="No note is called &quot;Horseshoe Topology of Hack-Hacky-Hacker&quot; yet — see who is asking for it">Horseshoe Topology of Hack-Hacky-Hacker</a>: taking imperfect shortcuts through problems with playful momentum. It is &quot;play disguised as problem solving.&quot;</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a>:</p>
 <blockquote><p>&quot;My favored way is to take the Nakatomi Tunnel through problems. Be hacky. Try enough approaches, push buttons that may do the thing you want until the alignment is just so and you slip through.&quot;</p></blockquote>
 <p><strong>Effectiveness formula</strong>: Solving many real-world problems quickly while preserving playful momentum.</p>
 <h2 id="what-it-is-not">What It Is Not</h2>
 <ol>
 <li><strong>Not fraud (the &quot;hack&quot;)</strong>: The hack <em>pretends</em> to mastery. The hacky mindset makes no such pretense — it is openly improvisational.</li>
-<li><strong>Not <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jugaad&quot;">Jugaad</span></strong>: Jugaad accepts substandard output as acceptable. The hacky mindset routes through small issues <em>toward</em> good output — the destination is not compromised, only the path.</li>
+<li><strong>Not <a class="wikilink" href="/wiki/aneesh/concepts/jugaad" title="Written [[Jugaad]], resolved to jugaad">Jugaad</a></strong>: Jugaad accepts substandard output as acceptable. The hacky mindset routes through small issues <em>toward</em> good output — the destination is not compromised, only the path.</li>
 <li><strong>Not pure mastery (the &quot;hacker&quot;)</strong>: The hacker invests in deep expertise. The hacky mindset deliberately preserves breadth and momentum over depth.</li>
 </ol>
 <h2 id="the-fox-connection">The Fox Connection</h2>
-<p>The hacky mindset is explicitly aligned with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span>&#x27;s <strong>Fox</strong> archetype (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fox-Hedgehog Distinction&quot;">Fox-Hedgehog Distinction</span>): mediocre at many things, thriving on lateral moves and opportunistic shortcuts. The Fox doesn&#x27;t commit to a single big idea — it navigates.</p>
+<p>The hacky mindset is explicitly aligned with <a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a>&#x27;s <strong>Fox</strong> archetype (see <a class="wikilink" href="/wiki/aneesh/concepts/fox-hedgehog-distinction" title="Written [[Fox-Hedgehog Distinction]], resolved to fox-hedgehog-distinction">Fox-Hedgehog Distinction</a>): mediocre at many things, thriving on lateral moves and opportunistic shortcuts. The Fox doesn&#x27;t commit to a single big idea — it navigates.</p>
 <h2 id="the-nakatomi-tunnel">The Nakatomi Tunnel</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nakatomi Tunnel&quot;">Nakatomi Tunnel</span> metaphor (from <em>Die Hard</em>) captures the approach perfectly: rather than attacking a system head-on or mastering its internals, find the ventilation shaft — the lateral path of least resistance that still gets you through.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-tunnel" title="Written [[Nakatomi Tunnel]], resolved to nakatomi-tunnel">Nakatomi Tunnel</a> metaphor (from <em>Die Hard</em>) captures the approach perfectly: rather than attacking a system head-on or mastering its internals, find the ventilation shaft — the lateral path of least resistance that still gets you through.</p>
 <h2 id="when-it-applies">When It Applies</h2>
 <p>The hacky mindset is most valuable in:</p>
 <ul>
@@ -60,22 +69,66 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Horseshoe Topology of Hack-Hacky-Hacker&quot;">Horseshoe Topology of Hack-Hacky-Hacker</span> — the broader framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fox-Hedgehog Distinction&quot;">Fox-Hedgehog Distinction</span> — intellectual lineage</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nakatomi Tunnel&quot;">Nakatomi Tunnel</span> — the operative metaphor</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jugaad&quot;">Jugaad</span> — what the hacky mindset is explicitly distinguished from</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Documentation as Empathy&quot;">Documentation as Empathy</span> — the complementary posture (Divine Documentation is the &quot;non-evil twin&quot;)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Play as Problem-Solving&quot;">Play as Problem-Solving</span> — underlying philosophy</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a> — source essay</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/horseshoe-topology-of-hack-hacky-hacker" title="No note is called &quot;Horseshoe Topology of Hack-Hacky-Hacker&quot; yet — see who is asking for it">Horseshoe Topology of Hack-Hacky-Hacker</a> — the broader framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fox-hedgehog-distinction" title="Written [[Fox-Hedgehog Distinction]], resolved to fox-hedgehog-distinction">Fox-Hedgehog Distinction</a> — intellectual lineage</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-tunnel" title="Written [[Nakatomi Tunnel]], resolved to nakatomi-tunnel">Nakatomi Tunnel</a> — the operative metaphor</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/jugaad" title="Written [[Jugaad]], resolved to jugaad">Jugaad</a> — what the hacky mindset is explicitly distinguished from</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/documentation-as-empathy" title="Written [[Documentation as Empathy]], resolved to documentation-as-empathy">Documentation as Empathy</a> — the complementary posture (Divine Documentation is the &quot;non-evil twin&quot;)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/play-as-problem-solving" title="Written [[Play as Problem-Solving]], resolved to play-as-problem-solving">Play as Problem-Solving</a> — underlying philosophy</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>359</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/documentation-as-empathy">Documentation as Empathy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fox-hedgehog-distinction">Fox-Hedgehog Distinction</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/play-as-problem-solving">Play as Problem-Solving</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/jugaad">Jugaad</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-tunnel">Nakatomi Tunnel</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life">Anxiety, Play, and the Generative Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/richard-stallman">Richard Stallman</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/breadth-vs-depth-across-essays">Breadth vs. Depth Across Essays</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/horseshoe-topology-hack-hacky-hacker">Horseshoe Topology of Hack-Hacky-Hacker</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/fox-hedgehog-distinction">Fox-Hedgehog Distinction</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/play-as-problem-solving">Play as Problem-Solving</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-plato-plateau">The Plato Plateau</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-as-generative-force">Anxiety as Generative Force</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/hacking">hacking</a><a class="tag" href="/wiki/topics/problem-solving">problem-solving</a><a class="tag" href="/wiki/topics/play">play</a><a class="tag" href="/wiki/topics/fox-hedgehog">fox-hedgehog</a><a class="tag" href="/wiki/topics/posture">posture</a><a class="tag" href="/wiki/topics/lateral-thinking">lateral-thinking</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Rewilding Technology</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Rewilding Technology</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/rewilding-technology.md">source on GitHub</a></div>
-  <div class="note-summary">Rewilding technology is Venkatesh Rao&#x27;s prescription for injecting genuine liveness into a civilization marked by deadness — accepting the entanglement of liveness and death that wilderness requires and that civilization systematically suppresses.</div>
-  <div class="tags"><span class="tag">rewilding</span><span class="tag">technology</span><span class="tag">new-nature</span><span class="tag">liveness</span><span class="tag">rao</span><span class="tag">civilization</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/rewilding-technology.md">source on GitHub</a></div>
+    <div class="note-summary">Rewilding technology is Venkatesh Rao&#x27;s prescription for injecting genuine liveness into a civilization marked by deadness — accepting the entanglement of liveness and death that wilderness requires and that civilization systematically suppresses.</div>
     <div class="prose">
 <h2 id="the-problem">The Problem</h2>
-<p>Civilized forms of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span> deaden themselves. Civilization, by definition, is about <em>never quite</em> exposing itself to the unbridled forces of wilderness. The systematic separation of liveness from death creates what Rao calls an &quot;ersatz heaven&quot;:</p>
+<p>Civilized forms of <a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a> deaden themselves. Civilization, by definition, is about <em>never quite</em> exposing itself to the unbridled forces of wilderness. The systematic separation of liveness from death creates what Rao calls an &quot;ersatz heaven&quot;:</p>
 <ul>
 <li>Death is concentrated at the periphery (slaughterhouses, hospices, foreign wars, internment camps)</li>
 <li>An anemic form of liveness is enshrined at the center</li>
@@ -54,13 +63,13 @@
 <li>No legible aesthetic of &quot;fitness&quot; — no Instagram ideals, no BattleBots heroics</li>
 </ul>
 <h2 id="the-gramsci-gap-context">The Gramsci Gap Context</h2>
-<p>Rewilding is especially necessary in a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span>. When the old world is dying and the new is struggling to be born, the normal instinct is to either mourn the old or protect the new. Rewilding says: let both processes happen without management, at the cost of greater discomfort and greater liveness.</p>
+<p>Rewilding is especially necessary in a <a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a>. When the old world is dying and the new is struggling to be born, the normal instinct is to either mourn the old or protect the new. Rewilding says: let both processes happen without management, at the cost of greater discomfort and greater liveness.</p>
 <h2 id="werner-herzogs-witness">Werner Herzog&#x27;s Witness</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Werner Herzog&quot;">Werner Herzog</span>&#x27;s jungle monologue (from <em>Burden of Dreams</em>) provides the aesthetic:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/werner-herzog" title="Written [[Werner Herzog]], resolved to werner-herzog">Werner Herzog</a>&#x27;s jungle monologue (from <em>Burden of Dreams</em>) provides the aesthetic:</p>
 <blockquote><p>&quot;Taking a close look at what is around us, there is some sort of harmony. It is the harmony of overwhelming and collective murder.&quot;</p></blockquote>
 <p>The jungle is not peaceful; it is vicious. Civilization&#x27;s comfort zones are achieved by making that viciousness invisible. Rewilding makes it visible again — and accepts it.</p>
 <h2 id="technological-application">Technological Application</h2>
-<p>What does rewilding look like in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span>?</p>
+<p>What does rewilding look like in <a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a>?</p>
 <ul>
 <li>Allowing technological &quot;species&quot; to compete without regulatory protection (death at the periphery)</li>
 <li>Removing artificial supports for incumbent platforms (surrender corpses)</li>
@@ -69,25 +78,53 @@
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Technological Tangled Bank&quot;">Technological Tangled Bank</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/technological-tangled-bank" title="No note is called &quot;Technological Tangled Bank&quot; yet — see who is asking for it">Technological Tangled Bank</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span> (primary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a> (primary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>400</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/werner-herzog">Werner Herzog</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">rewilding</span><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/new-nature">new-nature</a><a class="tag" href="/wiki/topics/liveness">liveness</a><a class="tag" href="/wiki/topics/rao">rao</a><a class="tag" href="/wiki/topics/civilization">civilization</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>The Politics of the Event of Place</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Politics of the Event of Place</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/the-politics-of-the-event-of-place.md">source on GitHub</a></div>
-  <div class="note-summary">Chapter 13 of <em>For Space</em> (2005): Massey&#x27;s argument that place is itself an event requiring negotiation — and that this constitutive negotiation is what makes place political, before any explicit political question is raised.</div>
-  <div class="tags"><span class="tag">massey</span><span class="tag">for-space</span><span class="tag">place</span><span class="tag">politics</span><span class="tag">throwntogetherness</span><span class="tag">event</span><span class="tag">negotiation</span><span class="tag">hamburg</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/the-politics-of-the-event-of-place.md">source on GitHub</a></div>
+    <div class="note-summary">Chapter 13 of <em>For Space</em> (2005): Massey&#x27;s argument that place is itself an event requiring negotiation — and that this constitutive negotiation is what makes place political, before any explicit political question is raised.</div>
     <div class="prose">
 <p>The argument of Chapter 13 of <a class="wikilink" href="/wiki/aneesh/entities/doreen-massey">doreen-massey</a>&#x27;s <em>For Space</em> (2005). A place is not a setting on which politics later happens; <strong>place is already a political event</strong> because it is the unchosen co-presence of multiple trajectories that have to find a way to share this here-and-now.</p>
 <h2 id="the-thesis">The thesis</h2>
@@ -60,7 +69,7 @@
 <blockquote><p>&quot;Conflict is not something that befalls an originally, or potentially, harmonious urban space. Urban space is the product of conflict.&quot; (Deutsche 1996: 278, quoted 153)</p></blockquote>
 <p>Democratic public space is not harmony achieved but the legitimacy of ongoing debate about what is legitimate.</p>
 <h2 id="the-world-city-dimension">The world-city dimension</h2>
-<p>Chapter 13 also develops the <strong>London-as-world-city</strong> case (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;place-as-a-clash-of-trajectories&quot;">place-as-a-clash-of-trajectories</span> when written; for now, included here):</p>
+<p>Chapter 13 also develops the <strong>London-as-world-city</strong> case (see <a class="wikilink-wanted" href="/wiki/wanted/place-as-a-clash-of-trajectories" title="No note is called &quot;place-as-a-clash-of-trajectories&quot; yet — see who is asking for it">place-as-a-clash-of-trajectories</a> when written; for now, included here):</p>
 <ul>
 <li>London&#x27;s &quot;success&quot; as a global financial centre is one element in the production of poverty and exclusion across the rest of the city.</li>
 <li>The conjunction should not be &quot;London is successful <strong>but</strong> there is still poverty,&quot; but &quot;London is successful <strong>and partly as a result</strong> there is poverty.&quot;</li>
@@ -77,21 +86,47 @@
 <h2 id="source">Source</h2>
 <p>Massey, D. (2005). <em>For Space</em>. London: SAGE. Ch. 13, &quot;Throwntogetherness: the politics of the event of place,&quot; pp. 149–162.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">7</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/hamburgs-oldest-immigrant">Hamburg&#x27;s Oldest Immigrant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/making-and-contesting-time-spaces">Making and Contesting Time-Spaces</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-5-relational-politics">Massey, *For Space* (2005) — Part Five: A Relational Politics of the Spatial</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/politics-of-connectivity">Politics of Connectivity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/spatial-fetishism">Spatial Fetishism</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/no-rules-of-space-and-place">There Are No Rules of Space and Place</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>645</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/no-rules-of-space-and-place">There Are No Rules of Space and Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hamburgs-oldest-immigrant">Hamburg&#x27;s Oldest Immigrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/making-and-contesting-time-spaces">Making and Contesting Time-Spaces</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/politics-of-connectivity">Politics of Connectivity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/spatial-fetishism">Spatial Fetishism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-5-relational-politics">Massey, *For Space* (2005) — Part Five: A Relational Politics of the Spatial</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/throwntogetherness">Throwntogetherness</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/power-geometry">Power-Geometry</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/no-rules-of-space-and-place">There Are No Rules of Space and Place</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/ernesto-laclau">Ernesto Laclau (1935–2014)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/global-sense-of-place">Global Sense of Place</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/making-and-contesting-time-spaces">Making and Contesting Time-Spaces</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/massey">massey</a><a class="tag" href="/wiki/topics/for-space">for-space</a><a class="tag" href="/wiki/topics/place">place</a><a class="tag" href="/wiki/topics/politics">politics</a><a class="tag" href="/wiki/topics/throwntogetherness">throwntogetherness</a><a class="tag" href="/wiki/topics/event">event</a><a class="tag" href="/wiki/topics/negotiation">negotiation</a><a class="tag" href="/wiki/topics/hamburg">hamburg</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

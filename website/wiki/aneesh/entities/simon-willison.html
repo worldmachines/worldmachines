@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,19 +26,28 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Simon Willison</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Simon Willison</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/simon-willison.md">source on GitHub</a></div>
-  <div class="note-summary">British developer and writer; creator of Datasette; prominent practitioner and theorist of ethical link blogging as a form of intellectual curation.</div>
-  <div class="tags"><span class="tag">blogger</span><span class="tag">open-source</span><span class="tag">curation</span><span class="tag">link-blogging</span><span class="tag">tech</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/simon-willison.md">source on GitHub</a></div>
+    <div class="note-summary">British developer and writer; creator of Datasette; prominent practitioner and theorist of ethical link blogging as a form of intellectual curation.</div>
     <div class="prose">
 <h2 id="identity">Identity</h2>
 <p>British software developer, writer, and open-source practitioner. Creator of Datasette (a tool for exploring SQLite databases). Runs a personal blog and link blog known for consistently high-quality curation of technical and intellectual content.</p>
 <h2 id="link-blogging-model">Link Blogging Model</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 3, 2025&quot;">Jan. 3, 2025</span> cites Willison as the model for ethical link blogging. His principles:</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/jan-3-2025" title="Written [[Jan. 3, 2025]], resolved to jan-3-2025">Jan. 3, 2025</a> cites Willison as the model for ethical link blogging. His principles:</p>
 <ol>
 <li><strong>Always name the creator</strong> — not just as courtesy but for future searchability</li>
 <li><strong>Quote a key paragraph</strong> — help readers decide if the source is worth their time</li>
@@ -47,22 +56,45 @@
 <blockquote><p>&quot;My goal with any link blog post is that if you read both my post and the source material you&#x27;ll have an enhanced experience over if you read just the source material itself.&quot;</p></blockquote>
 <p>This is a quality standard — an explicit commitment against pure re-posting or empty aggregation.</p>
 <h2 id="significance-in-this-wiki">Significance in this Wiki</h2>
-<p>Willison exemplifies <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Personal Media vs Platform Media&quot;">Personal Media vs Platform Media</span> at its best: high-ownership, quality-first curation that improves on the source rather than merely redistributing it. His model is the antithesis of AI-generated summary content.</p>
-<p>He also connects to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling as Philosophical Concept&quot;">Dwelling as Philosophical Concept</span>: his link posts create a place where readers can dwell with ideas, rather than a platform-optimized feed that processes them through an engagement algorithm.</p>
+<p>Willison exemplifies <a class="wikilink" href="/wiki/aneesh/concepts/personal-media-vs-platform-media" title="Written [[Personal Media vs Platform Media]], resolved to personal-media-vs-platform-media">Personal Media vs Platform Media</a> at its best: high-ownership, quality-first curation that improves on the source rather than merely redistributing it. His model is the antithesis of AI-generated summary content.</p>
+<p>He also connects to <a class="wikilink" href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept" title="Written [[Dwelling as Philosophical Concept]], resolved to dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a>: his link posts create a place where readers can dwell with ideas, rather than a platform-optimized feed that processes them through an engagement algorithm.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Personal Media vs Platform Media&quot;">Personal Media vs Platform Media</span> — Willison as practitioner</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling as Philosophical Concept&quot;">Dwelling as Philosophical Concept</span> — his blog as a place to dwell</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Studiolo and Self-Cultivation&quot;">Studiolo and Self-Cultivation</span> — link blogging as a form of public studiolo</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/personal-media-vs-platform-media" title="Written [[Personal Media vs Platform Media]], resolved to personal-media-vs-platform-media">Personal Media vs Platform Media</a> — Willison as practitioner</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept" title="Written [[Dwelling as Philosophical Concept]], resolved to dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a> — his blog as a place to dwell</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/studiolo-and-self-cultivation" title="Written [[Studiolo and Self-Cultivation]], resolved to studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a> — link blogging as a form of public studiolo</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>261</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/jan-3-2025">Jan. 3, 2025</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-media-vs-platform-media">Personal Media vs Platform Media</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/blogger">blogger</a><a class="tag" href="/wiki/topics/open-source">open-source</a><a class="tag" href="/wiki/topics/curation">curation</a><a class="tag" href="/wiki/topics/link-blogging">link-blogging</a><span class="tag tag-lone" title="Only this note uses it">tech</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

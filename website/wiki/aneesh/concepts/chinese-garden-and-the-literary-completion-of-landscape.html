@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Chinese Garden and the Literary Completion of Landscape</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Chinese Garden and the Literary Completion of Landscape</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/chinese-garden-and-the-literary-completion-of-landscape.md">source on GitHub</a></div>
-  <div class="note-summary">In Chinese landscape art, words — inscriptions, colophons, short poems — are not labels for a completed visual scene but the element that completes it; the garden without words is visually present but humanly incomplete.</div>
-  <div class="tags"><span class="tag">chinese-garden</span><span class="tag">landscape</span><span class="tag">writing</span><span class="tag">inscription</span><span class="tag">tuan</span><span class="tag">art</span><span class="tag">place-making</span><span class="tag">literary-completion</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/chinese-garden-and-the-literary-completion-of-landscape.md">source on GitHub</a></div>
+    <div class="note-summary">In Chinese landscape art, words — inscriptions, colophons, short poems — are not labels for a completed visual scene but the element that completes it; the garden without words is visually present but humanly incomplete.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/tuan-1991-language-and-the-making-of-place">tuan-1991-language-and-the-making-of-place</a></p>
 <h2 id="the-case">The Case</h2>
@@ -66,18 +75,43 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/studiolo-and-self-cultivation">studiolo-and-self-cultivation</a> — the scholar&#x27;s studio as a related space where objects and texts combine</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/landscape-painting-as-place-making">Landscape Painting as Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/language-as-world-making">Language as World-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/maintenance-of-place-through-language">Maintenance of Place Through Language</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-1991-language-and-the-making-of-place">Tuan (1991): Language and the Making of Place: A Narrative-Descriptive Approach</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>762</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/language-as-world-making">Language as World-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-1991-language-and-the-making-of-place">Tuan (1991): Language and the Making of Place: A Narrative-Descriptive Approach</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/maintenance-of-place-through-language">Maintenance of Place Through Language</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/landscape-painting-as-place-making">Landscape Painting as Place-Making</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/naming-as-place-making">Naming as Place-Making</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/dreamtime-songlines-as-place-making">Dreamtime Songlines as Place-Making</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/language-as-world-making">Language as World-Making</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/maintenance-of-place-through-language">Maintenance of Place Through Language</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-1991-language-and-the-making-of-place">Tuan (1991): Language and the Making of Place: A Narrative-Descriptive Approach</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">chinese-garden</span><a class="tag" href="/wiki/topics/landscape">landscape</a><a class="tag" href="/wiki/topics/writing">writing</a><span class="tag tag-lone" title="Only this note uses it">inscription</span><a class="tag" href="/wiki/topics/tuan">tuan</a><a class="tag" href="/wiki/topics/art">art</a><a class="tag" href="/wiki/topics/place-making">place-making</a><span class="tag tag-lone" title="Only this note uses it">literary-completion</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

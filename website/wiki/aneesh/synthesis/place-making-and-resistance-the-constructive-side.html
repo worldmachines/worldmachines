@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,26 +26,35 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Place-Making and Resistance: The Constructive Side</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Place-Making and Resistance: The Constructive Side</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/Place-Making%20and%20Resistance%20%E2%80%94%20The%20Constructive%20Side.md">source on GitHub</a></div>
-  <div class="note-summary">A synthesis connecting Sathe&#x27;s shelter-as-epistemic-engine and architecture-of-resistance essays to argue that the thicket, the base camp, and Nakatomi space are all instances of the same constructive act: making place where the dominant system sees only undifferentiated space.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">place-making</span><span class="tag">resistance</span><span class="tag">thicket</span><span class="tag">explorer</span><span class="tag">nakatomi-space</span><span class="tag">epistemics</span><span class="tag">construction</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/Place-Making%20and%20Resistance%20%E2%80%94%20The%20Constructive%20Side.md">source on GitHub</a></div>
+    <div class="note-summary">A synthesis connecting Sathe&#x27;s shelter-as-epistemic-engine and architecture-of-resistance essays to argue that the thicket, the base camp, and Nakatomi space are all instances of the same constructive act: making place where the dominant system sees only undifferentiated space.</div>
     <div class="prose">
-<p><strong>Sources</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bldgblog Nakatomi Space&quot;">Bldgblog Nakatomi Space</span></p>
+<p><strong>Sources</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a>, <a class="wikilink" href="/wiki/aneesh/summaries/bldgblog-nakatomi-space" title="Written [[Bldgblog Nakatomi Space]], resolved to bldgblog-nakatomi-space">Bldgblog Nakatomi Space</a></p>
 <h2 id="the-problem">The Problem</h2>
 <p>Resistance is often framed as negation: <em>against</em> the system, <em>refusal</em> of legibility, <em>escape</em> from control. But three of the sources processed here suggest that the more important move is <strong>constructive</strong> — not just refusing the system&#x27;s grammar but building something new.</p>
 <h2 id="the-parallel-constructions">The Parallel Constructions</h2>
 <h3 id="the-base-camp-epistemic">The Base Camp (Epistemic)</h3>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span>, the Explorer builds a base camp in the unknown — not to live there permanently, but as a <strong>platform to project from</strong>. This is the constructive act that makes genuine exploration possible. Without it, exploration is drift.</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a>, the Explorer builds a base camp in the unknown — not to live there permanently, but as a <strong>platform to project from</strong>. This is the constructive act that makes genuine exploration possible. Without it, exploration is drift.</p>
 <p>The base camp converts raw Space into navigable Place. It is a processing center: data in, information out.</p>
 <h3 id="the-thicket-political-social">The Thicket (Political/Social)</h3>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span>, the thicket is a &quot;deliberate architecture of complexity&quot; — not just hiding but <strong>building a habitat</strong> with its own logic. Terroir, friction, local specificity. The thicket is not merely the absence of legibility; it is the presence of something the legibility system cannot replicate.</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a>, the thicket is a &quot;deliberate architecture of complexity&quot; — not just hiding but <strong>building a habitat</strong> with its own logic. Terroir, friction, local specificity. The thicket is not merely the absence of legibility; it is the presence of something the legibility system cannot replicate.</p>
 <h3 id="nakatomi-routes-architectural">Nakatomi Routes (Architectural)</h3>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bldgblog Nakatomi Space&quot;">Bldgblog Nakatomi Space</span>, the soldiers and McClane are not merely breaking the grammar — they are <strong>creating new routes</strong> through the space. The post-battle surveys of Nablus showed not just destruction but <em>construction</em>: one-to-eight openings creating new crossroutes. The Nakatomi traverser builds a map of something that had no map.</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/summaries/bldgblog-nakatomi-space" title="Written [[Bldgblog Nakatomi Space]], resolved to bldgblog-nakatomi-space">Bldgblog Nakatomi Space</a>, the soldiers and McClane are not merely breaking the grammar — they are <strong>creating new routes</strong> through the space. The post-battle surveys of Nablus showed not just destruction but <em>construction</em>: one-to-eight openings creating new crossroutes. The Nakatomi traverser builds a map of something that had no map.</p>
 <h2 id="the-underlying-unity">The Underlying Unity</h2>
 <p>All three are instances of <a class="wikilink" href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a>:</p>
 <ul>
@@ -69,21 +78,41 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — political/social case</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a> — who does the constructing</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> — architectural case</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span> — epistemic case</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> — epistemic case</li>
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a> — related synthesis; the negative/abandonment side</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/plasticity-vs-flexibility">Plasticity vs. Flexibility</a> — the cognitive demand</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> — the world-historical context</li>
 </ul>
     </div>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>497</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/resistance">resistance</a><a class="tag" href="/wiki/topics/thicket">thicket</a><a class="tag" href="/wiki/topics/explorer">explorer</a><a class="tag" href="/wiki/topics/nakatomi-space">nakatomi-space</a><a class="tag" href="/wiki/topics/epistemics">epistemics</a><a class="tag" href="/wiki/topics/construction">construction</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

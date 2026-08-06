@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Fox-Hedgehog Distinction</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Fox-Hedgehog Distinction</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/fox-hedgehog-distinction.md">source on GitHub</a></div>
-  <div class="note-summary">Isaiah Berlin&#x27;s famous essay-derived typology: hedgehogs know one big thing and organize life around it; foxes know many things and navigate by lateral, opportunistic moves.</div>
-  <div class="tags"><span class="tag">Isaiah-Berlin</span><span class="tag">foxes</span><span class="tag">hedgehogs</span><span class="tag">epistemology</span><span class="tag">expertise</span><span class="tag">posture</span><span class="tag">intellectual-style</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/fox-hedgehog-distinction.md">source on GitHub</a></div>
+    <div class="note-summary">Isaiah Berlin&#x27;s famous essay-derived typology: hedgehogs know one big thing and organize life around it; foxes know many things and navigate by lateral, opportunistic moves.</div>
     <div class="prose">
 <h2 id="origin">Origin</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span>&#x27;s essay <em>The Hedgehog and the Fox</em> (1953), drawing on a fragment attributed to the ancient Greek poet Archilochus: &quot;The fox knows many things, but the hedgehog knows one big thing.&quot;</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a>&#x27;s essay <em>The Hedgehog and the Fox</em> (1953), drawing on a fragment attributed to the ancient Greek poet Archilochus: &quot;The fox knows many things, but the hedgehog knows one big thing.&quot;</p>
 <p>Berlin applied this to intellectual styles, most famously using it to classify Tolstoy as a fox who wanted to be a hedgehog.</p>
 <h2 id="the-two-types">The Two Types</h2>
 <div class="table-wrap"><table>
@@ -46,31 +55,72 @@
 <tr><td><strong>Fox</strong></td><td>Knows many things; navigates by lateral moves and opportunistic shortcuts</td><td>Broad, adaptive, playful</td><td>Shallow; lacks sustained depth; may never achieve mastery</td></tr>
 </tbody>
 </table></div>
-<h2 id="application-in-hack-hacky-hacker">Application in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span></h2>
-<p>Aneesh Sathe explicitly aligns the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hacky Mindset&quot;">Hacky Mindset</span> with the Fox:</p>
+<h2 id="application-in-hack-hacky-hacker">Application in <a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a></h2>
+<p>Aneesh Sathe explicitly aligns the <a class="wikilink" href="/wiki/aneesh/concepts/hacky-mindset" title="Written [[Hacky Mindset]], resolved to hacky-mindset">Hacky Mindset</a> with the Fox:</p>
 <blockquote><p>&quot;A hacky mindset is a foxy mindset... The Fox thrives on lateral moves and opportunistic shortcuts, you know, hackiness. The hacky, foxy approach to life is more my style.&quot;</p></blockquote>
-<p>The Hedgehog maps onto the &quot;Hacker&quot; position in the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Horseshoe Topology of Hack-Hacky-Hacker&quot;">Horseshoe Topology of Hack-Hacky-Hacker</span> — deep mastery, narrowing world.</p>
-<h2 id="tension-with-levels-of-philosophical-engagement">Tension with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Levels of Philosophical Engagement&quot;">Levels of Philosophical Engagement</span></h2>
-<p>The five-tier philosophy taxonomy from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span> implicitly rewards foxiness — moving fluidly across levels as needed. But sustained engagement at Level IV or V (self-knowledge, meta-systems) may require hedgehog commitment. This is a productive tension: can a fox ever fully inhabit meta-systems philosophy, or does that require the hedgehog&#x27;s single-minded dedication?</p>
+<p>The Hedgehog maps onto the &quot;Hacker&quot; position in the <a class="wikilink-wanted" href="/wiki/wanted/horseshoe-topology-of-hack-hacky-hacker" title="No note is called &quot;Horseshoe Topology of Hack-Hacky-Hacker&quot; yet — see who is asking for it">Horseshoe Topology of Hack-Hacky-Hacker</a> — deep mastery, narrowing world.</p>
+<h2 id="tension-with-levels-of-philosophical-engagement">Tension with <a class="wikilink" href="/wiki/aneesh/concepts/levels-of-philosophical-engagement" title="Written [[Levels of Philosophical Engagement]], resolved to levels-of-philosophical-engagement">Levels of Philosophical Engagement</a></h2>
+<p>The five-tier philosophy taxonomy from <a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a> implicitly rewards foxiness — moving fluidly across levels as needed. But sustained engagement at Level IV or V (self-knowledge, meta-systems) may require hedgehog commitment. This is a productive tension: can a fox ever fully inhabit meta-systems philosophy, or does that require the hedgehog&#x27;s single-minded dedication?</p>
 <h2 id="intellectual-genealogy">Intellectual Genealogy</h2>
-<p>Berlin&#x27;s essay is about Tolstoy but has become one of the most cited frameworks in intellectual typology. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Philip Tetlock&quot;">Philip Tetlock</span>&#x27;s <em>Superforecasting</em> repurposed it empirically, finding foxes are better at forecasting than hedgehogs — one of the few empirical confirmations of the typology.</p>
+<p>Berlin&#x27;s essay is about Tolstoy but has become one of the most cited frameworks in intellectual typology. <a class="wikilink-wanted" href="/wiki/wanted/philip-tetlock" title="No note is called &quot;Philip Tetlock&quot; yet — see who is asking for it">Philip Tetlock</a>&#x27;s <em>Superforecasting</em> repurposed it empirically, finding foxes are better at forecasting than hedgehogs — one of the few empirical confirmations of the typology.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hacky Mindset&quot;">Hacky Mindset</span> — where the typology is applied</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Horseshoe Topology of Hack-Hacky-Hacker&quot;">Horseshoe Topology of Hack-Hacky-Hacker</span> — related topology</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Levels of Philosophical Engagement&quot;">Levels of Philosophical Engagement</span> — tension with fluid level-switching</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Philip Tetlock&quot;">Philip Tetlock</span> — empirical extension (Superforecasting)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/hacky-mindset" title="Written [[Hacky Mindset]], resolved to hacky-mindset">Hacky Mindset</a> — where the typology is applied</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/horseshoe-topology-of-hack-hacky-hacker" title="No note is called &quot;Horseshoe Topology of Hack-Hacky-Hacker&quot; yet — see who is asking for it">Horseshoe Topology of Hack-Hacky-Hacker</a> — related topology</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/levels-of-philosophical-engagement" title="Written [[Levels of Philosophical Engagement]], resolved to levels-of-philosophical-engagement">Levels of Philosophical Engagement</a> — tension with fluid level-switching</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a> — source essay</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/philip-tetlock" title="No note is called &quot;Philip Tetlock&quot; yet — see who is asking for it">Philip Tetlock</a> — empirical extension (Superforecasting)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>346</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hacky-mindset">Hacky Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/levels-of-philosophical-engagement">Levels of Philosophical Engagement</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/john-mcphee">John McPhee</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-tunnel">Nakatomi Tunnel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/richard-stallman">Richard Stallman</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/breadth-vs-depth-across-essays">Breadth vs. Depth Across Essays</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/horseshoe-topology-hack-hacky-hacker">Horseshoe Topology of Hack-Hacky-Hacker</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/hacky-mindset">Hacky Mindset</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/play-as-problem-solving">Play as Problem-Solving</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/jugaad">Jugaad</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-tunnel">Nakatomi Tunnel</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/a-good-dictionary">A Good Dictionary</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/isaiah-berlin">Isaiah-Berlin</a><span class="tag tag-lone" title="Only this note uses it">foxes</span><span class="tag tag-lone" title="Only this note uses it">hedgehogs</span><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/posture">posture</a><span class="tag tag-lone" title="Only this note uses it">intellectual-style</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

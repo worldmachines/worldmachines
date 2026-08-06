@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Ludic Feedback Loops</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Ludic Feedback Loops</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/ludic-feedback-loops.md">source on GitHub</a></div>
-  <div class="note-summary">The idea that sustainable work requires matching the feedback loop cadence of tasks to one&#x27;s intrinsic dopamine reward rhythm — when work achieves this, it feels like play.</div>
-  <div class="tags"><span class="tag">work</span><span class="tag">play</span><span class="tag">dopamine</span><span class="tag">motivation</span><span class="tag">feedback</span><span class="tag">flow</span><span class="tag">career</span><span class="tag">game-design</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/ludic-feedback-loops.md">source on GitHub</a></div>
+    <div class="note-summary">The idea that sustainable work requires matching the feedback loop cadence of tasks to one&#x27;s intrinsic dopamine reward rhythm — when work achieves this, it feels like play.</div>
     <div class="prose">
 <p><strong>Ludic</strong> (from Latin <em>ludus</em>, play) feedback loops are the cycles of reward and error that make activities feel game-like. The core claim: each person has an optimal <em>ludic frequency</em> — a rate of feedback at which work becomes intrinsically motivating.</p>
 <h2 id="the-concept">The Concept</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Work or Play? Ludic Feedback Loops&quot;">Work or Play? Ludic Feedback Loops</span> (Aneesh Sathe, 2025):</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops" title="Written [[Work or Play? Ludic Feedback Loops]], resolved to work-or-play-ludic-feedback-loops">Work or Play? Ludic Feedback Loops</a> (Aneesh Sathe, 2025):</p>
 <ul>
 <li><strong>Too slow</strong>: meaningful work with infrequent feedback becomes demotivating. Example: growing woody plants from seed takes 6 months to yield data — motivationally unsustainable.</li>
 <li><strong>Too fast but meaningless</strong>: rapid feedback on trivial tasks (LeetCode, A/B tests) doesn&#x27;t satisfy. Speed alone is insufficient.</li>
@@ -46,11 +55,11 @@
 <h2 id="ludic-frequency-as-career-compass">Ludic Frequency as Career Compass</h2>
 <p>The author uses ludic frequency as a retrospective explanation for career decisions: each switch was driven by felt sense rather than rational planning. The framework suggests it can also be used <em>prospectively</em> — when evaluating whether to persist in a domain or switch.</p>
 <h2 id="relation-to-flow">Relation to Flow</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mihaly Csikszentmihalyi&quot;">Mihaly Csikszentmihalyi</span>&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Flow&quot;">Flow</span> theory identifies the challenge-skill balance as key to optimal experience. Ludic feedback loops add a temporal dimension: it&#x27;s not just about challenge matching skill, but about <em>how often</em> the challenge-resolution cycle fires. Two people might require very different loop frequencies to feel in flow.</p>
+<p><a class="wikilink-wanted" href="/wiki/wanted/mihaly-csikszentmihalyi" title="No note is called &quot;Mihaly Csikszentmihalyi&quot; yet — see who is asking for it">Mihaly Csikszentmihalyi</a>&#x27;s <a class="wikilink-wanted" href="/wiki/wanted/flow" title="No note is called &quot;Flow&quot; yet — see who is asking for it">Flow</a> theory identifies the challenge-skill balance as key to optimal experience. Ludic feedback loops add a temporal dimension: it&#x27;s not just about challenge matching skill, but about <em>how often</em> the challenge-resolution cycle fires. Two people might require very different loop frequencies to feel in flow.</p>
 <h2 id="llms-as-ludic-amplifiers">LLMs as Ludic Amplifiers</h2>
 <p>In the source essay, LLMs are described as raising the effective reward per unit of effort — they allow more exploration in the same time, increasing the density of &quot;aha moments.&quot; This is a novel framing of AI tools: not primarily as productivity multipliers but as <em>ludic amplifiers</em> that tune the feedback loop to optimal frequency.</p>
 <h2 id="relation-to-the-infinite-game">Relation to the Infinite Game</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Infinite Game&quot;">Infinite Game</span> thinking says the point is to keep playing. Ludic feedback loops explain <em>why</em> you keep playing: because the activity rewards you at the right rate. A mismatch in ludic frequency is why people fall off wagons and don&#x27;t get back on.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/infinite-game" title="Written [[Infinite Game]], resolved to infinite-game">Infinite Game</a> thinking says the point is to keep playing. Ludic feedback loops explain <em>why</em> you keep playing: because the activity rewards you at the right rate. A mismatch in ludic frequency is why people fall off wagons and don&#x27;t get back on.</p>
 <h2 id="contradictions-open-questions">Contradictions / Open Questions</h2>
 <ul>
 <li>Is ludic frequency fixed or trainable? Can you cultivate tolerance for slow feedback?</li>
@@ -59,21 +68,56 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Flow State&quot;">Flow State</span> — adjacent concept (challenge-skill balance)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dopamine and Motivation&quot;">Dopamine and Motivation</span> — neurological grounding</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Infinite Game&quot;">Infinite Game</span> — complementary framework for keeping at play</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/flow-state" title="No note is called &quot;Flow State&quot; yet — see who is asking for it">Flow State</a> — adjacent concept (challenge-skill balance)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/dopamine-and-motivation" title="No note is called &quot;Dopamine and Motivation&quot; yet — see who is asking for it">Dopamine and Motivation</a> — neurological grounding</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/infinite-game" title="Written [[Infinite Game]], resolved to infinite-game">Infinite Game</a> — complementary framework for keeping at play</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> — introduced the reading/writing-as-play framing that prompted the essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Work or Play? Ludic Feedback Loops&quot;">Work or Play? Ludic Feedback Loops</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Self-Construction Through Writing&quot;">Self-Construction Through Writing</span> — writing as a ludic activity</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops" title="Written [[Work or Play? Ludic Feedback Loops]], resolved to work-or-play-ludic-feedback-loops">Work or Play? Ludic Feedback Loops</a> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/self-construction-through-writing" title="Written [[Self-Construction Through Writing]], resolved to self-construction-through-writing">Self-Construction Through Writing</a> — writing as a ludic activity</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>433</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/infinite-game">Infinite Game</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/self-construction-through-writing">Self-Construction Through Writing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops">Work or Play? Ludic Feedback Loops</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/habit-and-identity">Habit and Identity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/play-as-navigational-instrument">Play as Navigational Instrument</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/on-protocols-wagons-and-associated-acrobatics">On Protocols, Wagons, and Associated Acrobatics</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/infinite-game">Infinite Game</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/robert-peake">Robert Peake</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/habit-and-identity">Habit and Identity</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/self-construction-through-writing">Self-Construction Through Writing</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/looking-forward-to-montaigne">Looking Forward to Montaigne</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/work">work</a><a class="tag" href="/wiki/topics/play">play</a><a class="tag" href="/wiki/topics/dopamine">dopamine</a><a class="tag" href="/wiki/topics/motivation">motivation</a><span class="tag tag-lone" title="Only this note uses it">feedback</span><a class="tag" href="/wiki/topics/flow">flow</a><a class="tag" href="/wiki/topics/career">career</a><a class="tag" href="/wiki/topics/game-design">game-design</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

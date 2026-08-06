@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Algorithmic Management</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Algorithmic Management</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/algorithmic-management.md">source on GitHub</a></div>
-  <div class="note-summary">The replacement of human supervisors and overseers with algorithmic systems that monitor, incentivize, and discipline labor through data-driven mechanisms.</div>
-  <div class="tags"><span class="tag">platforms</span><span class="tag">labor</span><span class="tag">management</span><span class="tag">algorithms</span><span class="tag">political-economy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/algorithmic-management.md">source on GitHub</a></div>
+    <div class="note-summary">The replacement of human supervisors and overseers with algorithmic systems that monitor, incentivize, and discipline labor through data-driven mechanisms.</div>
     <div class="prose">
 <p>The deployment of automated systems — recommendation algorithms, performance dashboards, incentive structures — to perform the functions historically carried out by human supervisors and factory overseers. Algorithmic management does not require the worker to be present in a particular place or to follow a clock; it governs through incentives and visibility rather than physical presence.</p>
 <h2 id="core-features">Core Features</h2>
@@ -46,7 +55,7 @@
 <h2 id="historical-precedents">Historical Precedents</h2>
 <ul>
 <li>Factory overseers (18th–19th c.) — physical enforcement of productivity norms</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Putting-Out System&quot;">Putting-Out System</span> — the merchant-manufacturer&#x27;s version: incentivize production without direct supervision</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/putting-out-system" title="Written [[Putting-Out System]], resolved to putting-out-system">Putting-Out System</a> — the merchant-manufacturer&#x27;s version: incentivize production without direct supervision</li>
 <li>Scientific Management / Taylorism — measurement-based productivity maximization as precursor to algorithmic scoring</li>
 </ul>
 <h2 id="critiques">Critiques</h2>
@@ -54,26 +63,59 @@
 <li>Workers cannot contest or audit algorithmic decisions</li>
 <li>Gamification of incentives distorts output toward engagement over quality</li>
 <li>The algorithm&#x27;s &quot;neutrality&quot; is ideological cover for platform power</li>
-<li>Creates <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Financialization of Creativity&quot;">Financialization of Creativity</span> by making monetization legible and constant</li>
+<li>Creates <a class="wikilink" href="/wiki/aneesh/concepts/financialization-of-creativity" title="Written [[Financialization of Creativity]], resolved to financialization-of-creativity">Financialization of Creativity</a> by making monetization legible and constant</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Platforms as Neo-Bosses&quot;">Platforms as Neo-Bosses</span> — synthesis placing algorithmic management in historical context</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Putting-Out System&quot;">Putting-Out System</span> — the structural precedent</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creator-as-Hero Rhetoric&quot;">Creator-as-Hero Rhetoric</span> — the ideological layer that accompanies algorithmic management</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;David S. Landes&quot;">David S. Landes</span> — provides the historical framework for comparison</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;What Do Platforms Really Do?&quot;">What Do Platforms Really Do?</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/platforms-as-neo-bosses" title="Written [[Platforms as Neo-Bosses]], resolved to platforms-as-neo-bosses">Platforms as Neo-Bosses</a> — synthesis placing algorithmic management in historical context</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/putting-out-system" title="Written [[Putting-Out System]], resolved to putting-out-system">Putting-Out System</a> — the structural precedent</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/creator-as-hero-rhetoric" title="Written [[Creator-as-Hero Rhetoric]], resolved to creator-as-hero-rhetoric">Creator-as-Hero Rhetoric</a> — the ideological layer that accompanies algorithmic management</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/david-s-landes" title="Written [[David S. Landes]], resolved to david-s-landes">David S. Landes</a> — provides the historical framework for comparison</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do" title="Written [[What Do Platforms Really Do?]], resolved to what-do-platforms-really-do">What Do Platforms Really Do?</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11b-internet-asian-tigers-and-walmart">The Internet, the Four Little Tigers, and Walmart&#x27;s Information Machine</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>287</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/putting-out-system">Putting-Out System</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/platforms-as-neo-bosses">Platforms as Neo-Bosses</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/what-do-platforms-really-do">What Do Platforms Really Do?</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/financialization-of-creativity">Financialization of Creativity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/creator-as-hero-rhetoric">Creator-as-Hero Rhetoric</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/specialization-of-ideas">Specialization of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11b-internet-asian-tigers-and-walmart">The Internet, the Four Little Tigers, and Walmart&#x27;s Information Machine</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/what-do-platforms-really-do">What Do Platforms Really Do?</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/synthesis/platforms-as-neo-bosses">Platforms as Neo-Bosses</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/putting-out-system">Putting-Out System</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/financialization-of-creativity">Financialization of Creativity</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/creator-as-hero-rhetoric">Creator-as-Hero Rhetoric</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/platforms">platforms</a><a class="tag" href="/wiki/topics/labor">labor</a><a class="tag" href="/wiki/topics/management">management</a><a class="tag" href="/wiki/topics/algorithms">algorithms</a><a class="tag" href="/wiki/topics/political-economy">political-economy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

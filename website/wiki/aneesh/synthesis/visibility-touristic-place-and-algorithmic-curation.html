@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Visibility, Touristic Place, and Algorithmic Curation</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Visibility, Touristic Place, and Algorithmic Curation</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation.md">source on GitHub</a></div>
-  <div class="note-summary">Tuan&#x27;s Ch. 12 on visibility (Space and Place 1977) shows that place-visibility is manufactured through naming, monumentalization, ritual, and tourism — the algorithmic feed, the Maps annotation, and the Insta-pin are the contemporary &#x27;places royales,&#x27; and they make everyone a tourist by pre-naming the world.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">tuan</span><span class="tag">visibility</span><span class="tag">place-making</span><span class="tag">algorithmic-curation</span><span class="tag">insta-places</span><span class="tag">tourism</span><span class="tag">sathe</span><span class="tag">manufactured-attention</span><span class="tag">places-royales</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation.md">source on GitHub</a></div>
+    <div class="note-summary">Tuan&#x27;s Ch. 12 on visibility (Space and Place 1977) shows that place-visibility is manufactured through naming, monumentalization, ritual, and tourism — the algorithmic feed, the Maps annotation, and the Insta-pin are the contemporary &#x27;places royales,&#x27; and they make everyone a tourist by pre-naming the world.</div>
     <div class="prose">
 <h2 id="the-tuan-mechanism">The Tuan Mechanism</h2>
 <p><a class="wikilink" href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">visibility-and-the-creation-of-place</a> (Tuan, <em>Space and Place</em> Ch. 12) gives the wiki something it had only intuited: an explicit mechanism for how place-visibility is <em>manufactured</em>. The wiki&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/insta-places">insta-places</a> and <a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">algorithmic-curation-as-place-making</a> describe the contemporary effects; Tuan supplies the longer history and the structural typology.</p>
@@ -107,7 +116,7 @@
 <h2 id="cross-references">Cross-References</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/visibility-and-the-creation-of-place">visibility-and-the-creation-of-place</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/touristic-place-making">touristic-place-making</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/intimate-place">intimate-place</a></li>
@@ -128,18 +137,44 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/nationalism">nationalism</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>24</b><span>links out</span></div>
+      <div class="bearing"><b>1499</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/books-are-dwellings">Books Are Dwellings</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/tuan">tuan</a><a class="tag" href="/wiki/topics/visibility">visibility</a><a class="tag" href="/wiki/topics/place-making">place-making</a><span class="tag tag-lone" title="Only this note uses it">algorithmic-curation</span><a class="tag" href="/wiki/topics/insta-places">insta-places</a><a class="tag" href="/wiki/topics/tourism">tourism</a><a class="tag" href="/wiki/topics/sathe">sathe</a><span class="tag tag-lone" title="Only this note uses it">manufactured-attention</span><span class="tag tag-lone" title="Only this note uses it">places-royales</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

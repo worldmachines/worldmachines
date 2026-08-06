@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Shelter as Epistemic Engine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Shelter as Epistemic Engine</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-shelter-as-epistemic-engine.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe argues that &#x27;home&#x27; — whether literal shelter, a published paper, or a foundational thesis — is not a retreat from the unknown but an active epistemic engine that converts abstract space into navigable place.</div>
-  <div class="tags"><span class="tag">place-making</span><span class="tag">epistemology</span><span class="tag">configurancy</span><span class="tag">space-vs-place</span><span class="tag">exploration</span><span class="tag">knowledge-production</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-shelter-as-epistemic-engine.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe argues that &#x27;home&#x27; — whether literal shelter, a published paper, or a foundational thesis — is not a retreat from the unknown but an active epistemic engine that converts abstract space into navigable place.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a href="https://aneeshsathe.com/the-shelter-as-epistemic-engine/">aneeshsathe.com, 2025-12-17</a><br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span><br>
+<strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a><br>
 <strong>Series</strong>: Continuation of <em>We need homes in the delta quadrant</em>, <em>Thinking with places</em>, <em>Problems are places questions are spaces</em></p>
 <h2 id="central-argument">Central Argument</h2>
 <p><a class="wikilink" href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-making</a> is not passive shelter-seeking — it is the active work of rendering the world intelligible. Drawing on <a class="wikilink" href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a>&#x27;s phenomenological geography and <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s concept of <a class="wikilink" href="/wiki/aneesh/concepts/configurancy">Configurancy</a>, Sathe argues that homes, scientific papers, and startup theses all perform the same function: they interrupt the high-entropy flow of undifferentiated <a class="wikilink" href="/wiki/aneesh/concepts/space-vs-place">Space</a> and force relational alignment that makes exploration possible.</p>
@@ -61,7 +70,7 @@
 <ul>
 <li><strong><a class="wikilink" href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a></strong> — <em>Space and Place: The Perspective of Experience</em>; space as freedom + disorientation</li>
 <li><strong><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a></strong> — <a class="wikilink" href="/wiki/aneesh/concepts/configurancy">Configurancy</a> as ontological primitive; the Delta Quadrant metaphor</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Martin Heidegger&quot;">Martin Heidegger</span></strong> — explicitly contrasted: Configurancy is non-teleological, unlike Care (<em>Sorge</em>)</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/martin-heidegger" title="Written [[Martin Heidegger]], resolved to martin-heidegger">Martin Heidegger</a></strong> — explicitly contrasted: Configurancy is non-teleological, unlike Care (<em>Sorge</em>)</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
@@ -69,36 +78,79 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a> — core ontological distinction</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a> — the ethical/epistemic typology</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a> — the trap to avoid; treating shelter as endpoint</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Explorer&#x27;s Stack&quot;">The Explorer&#x27;s Stack</span> — three-layer model of intelligibility</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Architecture of Resistance&quot;">Architecture of Resistance</span> — how <em>The Architecture of Resistance</em> extends this: the thicket as deliberate place-making against legibility</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/the-explorers-stack" title="No note is called &quot;The Explorer&#x27;s Stack&quot; yet — see who is asking for it">The Explorer&#x27;s Stack</a> — three-layer model of intelligibility</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/architecture-of-resistance" title="No note is called &quot;Architecture of Resistance&quot; yet — see who is asking for it">Architecture of Resistance</a> — how <em>The Architecture of Resistance</em> extends this: the thicket as deliberate place-making against legibility</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> — spatial subversion as place-making in the negative; making new paths by breaking architectural grammar</li>
 </ul>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <ul>
 <li>No engagement with the failure modes of place-making — what happens when a &quot;home&quot; calcifies into dogma (cf. <a class="wikilink" href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a>)</li>
-<li>The scientific citation as place-making is suggestive but underdeveloped — connects well to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span></li>
+<li>The scientific citation as place-making is suggestive but underdeveloped — connects well to <a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a></li>
 <li>No treatment of collective vs. individual place-making; the Stack is entirely individual</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">11</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/homes-as-launchpads">Homes as Launchpads</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/place-as-interruption-of-space">Place as Interruption of Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/prenotions">Prenotions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>23</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>505</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/configurancy">Configurancy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>15 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/prenotions">Prenotions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/homes-as-launchpads">Homes as Launchpads</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/place-as-interruption-of-space">Place as Interruption of Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-making-and-resistance-the-constructive-side">Place-Making and Resistance: The Constructive Side</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-sensemaker-and-the-explorer">The Sensemaker and the Explorer</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/summaries/books-are-dwellings">Books Are Dwellings</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/explorer-vs-tourist">Explorer vs. Tourist</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/configurancy">configurancy</a><a class="tag" href="/wiki/topics/space-vs-place">space-vs-place</a><a class="tag" href="/wiki/topics/exploration">exploration</a><a class="tag" href="/wiki/topics/knowledge-production">knowledge-production</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

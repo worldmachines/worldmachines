@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,27 +26,36 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Anxiety as Generative Force</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Anxiety as Generative Force</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/anxiety-as-generative-force.md">source on GitHub</a></div>
-  <div class="note-summary">Kierkegaard&#x27;s anxiety as productive realization of radical freedom — the motor that drives identity formation through exploration and action.</div>
-  <div class="tags"><span class="tag">anxiety</span><span class="tag">kierkegaard</span><span class="tag">identity</span><span class="tag">existentialism</span><span class="tag">freedom</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/anxiety-as-generative-force.md">source on GitHub</a></div>
+    <div class="note-summary">Kierkegaard&#x27;s anxiety as productive realization of radical freedom — the motor that drives identity formation through exploration and action.</div>
     <div class="prose">
 <h2 id="core-idea">Core Idea</h2>
-<p>Anxiety, in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kierkegaard&quot;">Kierkegaard</span>&#x27;s formulation, is not nervousness or pathology. It is the felt recognition that you have absolute freedom of choice over your life — and therefore absolute responsibility. This is generative, not debilitating, when harnessed.</p>
+<p>Anxiety, in <a class="wikilink" href="/wiki/aneesh/entities/kierkegaard" title="Written [[Kierkegaard]], resolved to kierkegaard">Kierkegaard</a>&#x27;s formulation, is not nervousness or pathology. It is the felt recognition that you have absolute freedom of choice over your life — and therefore absolute responsibility. This is generative, not debilitating, when harnessed.</p>
 <p>The engine:</p>
 <blockquote><p><strong>Anxiety → Exploration → Action → Refreshed Identity</strong></p></blockquote>
 <p>Anxiety creates identity by locating stable positions from which to launch exploration. Without anxiety, identity becomes ephemeral.</p>
 <h2 id="contrast-with-common-conception">Contrast with Common Conception</h2>
 <p>The popular conception of anxiety as something to be eliminated is directly opposed to this view. Therapeutic elimination of anxiety would also eliminate the generative pressure that produces self-formation. The goal is modulation, not extinction.</p>
 <h2 id="anxiety-overload-and-identity-crash">Anxiety Overload and Identity Crash</h2>
-<p>When anxiety overwhelms — when radical freedom produces too many perceived signals — it becomes difficult to distinguish signal from noise. The system crashes into <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Identity Crash&quot;">Identity Crash</span>.</p>
-<p>Tools like <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Getting Things Done (GTD)&quot;">Getting Things Done (GTD)</span> function as anxiety regulators: they crash the immediate overwhelm by externalizing the signal inventory, then strategically reintroduce future anxiety via horizon planning.</p>
+<p>When anxiety overwhelms — when radical freedom produces too many perceived signals — it becomes difficult to distinguish signal from noise. The system crashes into <a class="wikilink" href="/wiki/aneesh/concepts/identity-crash" title="Written [[Identity Crash]], resolved to identity-crash">Identity Crash</a>.</p>
+<p>Tools like <a class="wikilink-wanted" href="/wiki/wanted/getting-things-done-gtd" title="No note is called &quot;Getting Things Done (GTD)&quot; yet — see who is asking for it">Getting Things Done (GTD)</a> function as anxiety regulators: they crash the immediate overwhelm by externalizing the signal inventory, then strategically reintroduce future anxiety via horizon planning.</p>
 <h2 id="relationship-to-philosophy-selection">Relationship to Philosophy Selection</h2>
-<p>Per <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span>, the philosophy someone reaches for is determined by the current state of their anxiety:</p>
+<p>Per <a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a>, the philosophy someone reaches for is determined by the current state of their anxiety:</p>
 <ul>
 <li>Low anxiety / high identity stability → no need for philosophy</li>
 <li>Moderate identity disruption → systems-level or social cohesion philosophies</li>
@@ -55,33 +64,80 @@
 <h2 id="whats-missing-in-the-source">What&#x27;s Missing in the Source</h2>
 <p>The essay doesn&#x27;t address whether some people structurally have higher or lower anxiety set-points, or how this interacts with psychological pathology (clinical anxiety vs. existential anxiety). The distinction matters for the argument&#x27;s scope.</p>
 <h2 id="blooms-complication">Bloom&#x27;s Complication</h2>
-<p>Harold Bloom&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> framework introduces a complication: for Bloom, literary anxiety is <em>not</em> cleanly generative. It is a productive force that also entrenches — the strong poet&#x27;s anxiety about precursors drives creation but also produces the permanent agon of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span>. Bloom&#x27;s vision is darker than Kierkegaard&#x27;s: the anxiety does not resolve into a &quot;refreshed identity&quot; but remains as an ongoing sublimated struggle.</p>
-<p>The synthesis these two perspectives suggest: anxiety is generative in the short-term (Kierkegaard) but can become a structural trap over time (Bloom). The resolution Bloom offers — <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span> — parallels Kierkegaard&#x27;s &quot;action&quot; step but is more agonistic: you don&#x27;t simply act <em>from</em> the anxiety, you act <em>against</em> the anxiety-producing precursor.</p>
+<p>Harold Bloom&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> framework introduces a complication: for Bloom, literary anxiety is <em>not</em> cleanly generative. It is a productive force that also entrenches — the strong poet&#x27;s anxiety about precursors drives creation but also produces the permanent agon of <a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a>. Bloom&#x27;s vision is darker than Kierkegaard&#x27;s: the anxiety does not resolve into a &quot;refreshed identity&quot; but remains as an ongoing sublimated struggle.</p>
+<p>The synthesis these two perspectives suggest: anxiety is generative in the short-term (Kierkegaard) but can become a structural trap over time (Bloom). The resolution Bloom offers — <a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a> — parallels Kierkegaard&#x27;s &quot;action&quot; step but is more agonistic: you don&#x27;t simply act <em>from</em> the anxiety, you act <em>against</em> the anxiety-producing precursor.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kierkegaard&quot;">Kierkegaard</span> — originating thinker</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Identity Crash&quot;">Identity Crash</span> — what happens when anxiety overloads</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;GTD and Anxiety Regulation&quot;">GTD and Anxiety Regulation</span> — practical modulation tool</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Philosophy as Maintenance&quot;">Philosophy as Maintenance</span> — downstream application</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> — Bloom&#x27;s literary theory parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span> — the dark version of this concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span> — Bloom&#x27;s resolution mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety, Play, and the Generative Life&quot;">Anxiety, Play, and the Generative Life</span> — synthesis page on the Kierkegaard-hacking parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/kierkegaard" title="Written [[Kierkegaard]], resolved to kierkegaard">Kierkegaard</a> — originating thinker</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/identity-crash" title="Written [[Identity Crash]], resolved to identity-crash">Identity Crash</a> — what happens when anxiety overloads</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/gtd-and-anxiety-regulation" title="Written [[GTD and Anxiety Regulation]], resolved to gtd-and-anxiety-regulation">GTD and Anxiety Regulation</a> — practical modulation tool</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/philosophy-as-maintenance" title="Written [[Philosophy as Maintenance]], resolved to philosophy-as-maintenance">Philosophy as Maintenance</a> — downstream application</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> — Bloom&#x27;s literary theory parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a> — the dark version of this concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a> — Bloom&#x27;s resolution mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life" title="Written [[Anxiety, Play, and the Generative Life]], resolved to anxiety-play-and-the-generative-life">Anxiety, Play, and the Generative Life</a> — synthesis page on the Kierkegaard-hacking parallel</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/crash-only-thinking-applied-to-self">Crash-Only Thinking Applied to the Self</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-07-my-time-is-my-time">RIT 07 — My Time Is My Time (Ch. 5)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>20</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>458</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-plato-plateau">The Plato Plateau</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/identity-crash">Identity Crash</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/levels-of-philosophical-engagement">Levels of Philosophical Engagement</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>12 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/philosophy-as-maintenance">Philosophy as Maintenance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/play-as-problem-solving">Play as Problem-Solving</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/kierkegaard">Kierkegaard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-07-my-time-is-my-time">RIT 07 — My Time Is My Time (Ch. 5)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-influence-of-anxiety">The Influence of Anxiety (The Point, ~2022–2024)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life">Anxiety, Play, and the Generative Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gtd-and-anxiety-regulation">GTD and Anxiety Regulation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/crash-only-thinking-applied-to-self">Crash-Only Thinking Applied to the Self</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein">The Literary and Cognitive Faces of Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-protestant-refugee-double-engine">The Protestant / Refugee Double Engine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/identity-crash">Identity Crash</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-plato-plateau">The Plato Plateau</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/creative-misreading">Creative Misreading</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/harold-bloom">Harold Bloom</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/levels-of-philosophical-engagement">Levels of Philosophical Engagement</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/anxiety">anxiety</a><a class="tag" href="/wiki/topics/kierkegaard">kierkegaard</a><a class="tag" href="/wiki/topics/identity">identity</a><a class="tag" href="/wiki/topics/existentialism">existentialism</a><a class="tag" href="/wiki/topics/freedom">freedom</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

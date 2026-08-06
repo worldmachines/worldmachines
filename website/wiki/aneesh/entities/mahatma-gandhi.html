@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,19 +26,28 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Mahatma Gandhi</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Mahatma Gandhi</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/mahatma-gandhi.md">source on GitHub</a></div>
-  <div class="note-summary">Indian independence leader who uniquely embodied both the intellectual and revolutionary roles — the exceptional case in the typology of intellectual-revolutionary dyads.</div>
-  <div class="tags"><span class="tag">India</span><span class="tag">independence</span><span class="tag">political-theory</span><span class="tag">intellectual-history</span><span class="tag">nonviolence</span><span class="tag">leadership</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/mahatma-gandhi.md">source on GitHub</a></div>
+    <div class="note-summary">Indian independence leader who uniquely embodied both the intellectual and revolutionary roles — the exceptional case in the typology of intellectual-revolutionary dyads.</div>
     <div class="prose">
 <p><strong>Mohandas Karamchand Gandhi</strong> (1869–1948), known as the Mahatma (&quot;Great Soul&quot;), was the preeminent leader of the Indian independence movement. He developed and practiced nonviolent civil disobedience as a political strategy, leading campaigns that eventually resulted in India&#x27;s independence from Britain in 1947.</p>
 <h2 id="role-in-the-intellectual-revolutionary-typology">Role in the Intellectual/Revolutionary Typology</h2>
-<p>In the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> essay&#x27;s historical typology of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> dyads, Gandhi is singled out as the <strong>exceptional case</strong>: he uniquely embodied both roles simultaneously.</p>
-<p>Where <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rabindranath Tagore&quot;">Rabindranath Tagore</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sri Aurobindo&quot;">Sri Aurobindo</span> were the intellectual framework-builders and Gandhi was expected to be the mobilizer, Gandhi in practice both articulated philosophical frameworks (on nonviolence, <em>swaraj</em>, civil disobedience) <em>and</em> directly mobilized mass action (the Salt March, the Non-Cooperation Movement).</p>
+<p>In the <a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> essay&#x27;s historical typology of <a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> dyads, Gandhi is singled out as the <strong>exceptional case</strong>: he uniquely embodied both roles simultaneously.</p>
+<p>Where <a class="wikilink" href="/wiki/aneesh/entities/rabindranath-tagore" title="Written [[Rabindranath Tagore]], resolved to rabindranath-tagore">Rabindranath Tagore</a> and <a class="wikilink-wanted" href="/wiki/wanted/sri-aurobindo" title="No note is called &quot;Sri Aurobindo&quot; yet — see who is asking for it">Sri Aurobindo</a> were the intellectual framework-builders and Gandhi was expected to be the mobilizer, Gandhi in practice both articulated philosophical frameworks (on nonviolence, <em>swaraj</em>, civil disobedience) <em>and</em> directly mobilized mass action (the Salt March, the Non-Cooperation Movement).</p>
 <p>This makes Gandhi a key data point for the claim that the intellectual/revolutionary distinction is contingent rather than necessary — and thus that LLMs might make the split role more available to others.</p>
 <h2 id="intellectual-contributions">Intellectual Contributions</h2>
 <ul>
@@ -48,29 +57,59 @@
 </ul>
 <h2 id="related-figures">Related Figures</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rabindranath Tagore&quot;">Rabindranath Tagore</span> — intellectual contemporary, occasional intellectual sparring partner</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sri Aurobindo&quot;">Sri Aurobindo</span> — earlier revolutionary nationalist who later retreated to spiritual philosophy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Subhas Chandra Bose&quot;">Subhas Chandra Bose</span> — rival revolutionary leader who pursued armed resistance</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/rabindranath-tagore" title="Written [[Rabindranath Tagore]], resolved to rabindranath-tagore">Rabindranath Tagore</a> — intellectual contemporary, occasional intellectual sparring partner</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/sri-aurobindo" title="No note is called &quot;Sri Aurobindo&quot; yet — see who is asking for it">Sri Aurobindo</a> — earlier revolutionary nationalist who later retreated to spiritual philosophy</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/subhas-chandra-bose" title="No note is called &quot;Subhas Chandra Bose&quot; yet — see who is asking for it">Subhas Chandra Bose</a> — rival revolutionary leader who pursued armed resistance</li>
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> — the typology in which Gandhi is the exception</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> — essay where this typology is developed</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> — the typology in which Gandhi is the exception</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> — essay where this typology is developed</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web — Reshaping the Political Maidan&quot;">Cloister Web — Reshaping the Political Maidan</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan" title="No note is called &quot;Cloister Web — Reshaping the Political Maidan&quot; yet — see who is asking for it">Cloister Web — Reshaping the Political Maidan</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12b-eastern-europe-and-indias-transformation">Eastern Europe&#x27;s Shock Therapy and India&#x27;s Long Road from Empire to Boom</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>259</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12b-eastern-europe-and-indias-transformation">Eastern Europe&#x27;s Shock Therapy and India&#x27;s Long Road from Empire to Boom</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/rabindranath-tagore">Rabindranath Tagore</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/intellectual-vs-revolutionary-in-the-age-of-llms">Intellectual vs. Revolutionary in the Age of LLMs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/cloister-web-reshaping-political-maidan">The Cloister Web: Reshaping the Political Maidan</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/idea-graphs">Idea-Graphs</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-herzen">Alexander Herzen</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/liang-qichao">Liang Qichao</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/rabindranath-tagore">Rabindranath Tagore</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-paine">Thomas Paine</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/india">India</a><span class="tag tag-lone" title="Only this note uses it">independence</span><a class="tag" href="/wiki/topics/political-theory">political-theory</a><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a><span class="tag tag-lone" title="Only this note uses it">nonviolence</span><a class="tag" href="/wiki/topics/leadership">leadership</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

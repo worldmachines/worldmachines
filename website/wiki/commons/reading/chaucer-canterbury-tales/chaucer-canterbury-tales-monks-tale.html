@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Monk&#x27;s Tale: The Catalogue of Fortune&#x27;s Falls</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Monk&#x27;s Tale: The Catalogue of Fortune&#x27;s Falls</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-monks-tale.md">source on GitHub</a></div>
-  <div class="note-summary">The Monk, prodded by the Host&#x27;s bawdy jab at clerical celibacy, delivers his catalogue of &quot;tragedies&quot; — a de casibus series running from Lucifer and Adam through Sampson, Hercules, Nebuchadnezzar, Zenobia, Nero, Holofernes, Antiochus, Alexander, Julius Caesar, Croesus, and on into near-contemporary falls (Pedro of Castile, Petro of Cyprus, Bernabò Visconti, Ugolino of Pisa) — each figure raised to greatness only to be broken by Fortune&#x27;s wheel.</div>
-  <div class="tags"><span class="tag">canterbury-tales</span><span class="tag">monks-tale</span><span class="tag">de-casibus-tragedy</span><span class="tag">wheel-of-fortune</span><span class="tag">medieval-historiography</span><span class="tag">anti-clericalism</span><span class="tag">antifeminist-tradition</span><span class="tag">dante-reception</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/commons/summaries/dante-divine-comedy">dante-divine-comedy</a>, <a class="wikilink" href="/wiki/commons/entities/adams-dynamic-theory-of-history">adams-dynamic-theory-of-history</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-monks-tale.md">source on GitHub</a></div>
+    <div class="note-summary">The Monk, prodded by the Host&#x27;s bawdy jab at clerical celibacy, delivers his catalogue of &quot;tragedies&quot; — a de casibus series running from Lucifer and Adam through Sampson, Hercules, Nebuchadnezzar, Zenobia, Nero, Holofernes, Antiochus, Alexander, Julius Caesar, Croesus, and on into near-contemporary falls (Pedro of Castile, Petro of Cyprus, Bernabò Visconti, Ugolino of Pisa) — each figure raised to greatness only to be broken by Fortune&#x27;s wheel.</div>
     <div class="prose">
 <p>After the Tale of Melibee, the Host turns his attention to the Monk, teasing him first for his robust, unclerical physique and lamenting that celibacy has hoarded all the best breeding stock away from the lay world&#x27;s wives — a coarse, comic overture before the Monk, taking the jibe &quot;in patience,&quot; announces he will tell not one tale but &quot;an hundred&quot; tragedies from his &quot;cell.&quot; What follows is not a story but a formal catalogue: seventeen exempla, from Lucifer&#x27;s fall out of Heaven to the starvation of the Earl of Pisa&#x27;s children, each illustrating the same mechanism — a figure raised to &quot;great prosperity&quot; and then, without warning, broken by the turn of Fortune&#x27;s wheel. The series moves promiscuously across biblical, classical, and near-contemporary history, treating Adam, Hercules, Zenobia, Nero, Julius Caesar, and Bernabò Visconti (d. 1385, the latest event Chaucer mentions anywhere in the <em>Tales</em>) as instances of one undifferentiated moral pattern, and ends — as the text we have it cuts off — with the pathos of Ugolino, borrowed explicitly from Dante.</p>
 <h2 id="themes">Themes</h2>
@@ -50,15 +58,32 @@
 <p>The Croesus exemplum ends with one of the catalogue&#x27;s few moments of dramatic irony rather than blunt narration: his daughter Phanie correctly interprets his dream of being washed and dried atop a tree as a premonition of the gallows, a small embedded scene of prophecy ignored.</p>
 <p>The Ugolino passage, adapted from Dante, is the emotional climax of the fragment as we have it — the starving children first begging for bread, then offering their own flesh to their father, dying one by one in his lap. It is the unit&#x27;s clearest demonstration that the catalogue, however schematic its Fortune-wheel logic, can still produce genuine pathos.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>1004</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/commons/summaries/dante-divine-comedy">dante-divine-comedy</a></li><li><a class="wikilink" href="/wiki/commons/entities/adams-dynamic-theory-of-history">adams-dynamic-theory-of-history</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><span class="tag tag-lone" title="Only this note uses it">monks-tale</span><span class="tag tag-lone" title="Only this note uses it">de-casibus-tragedy</span><span class="tag tag-lone" title="Only this note uses it">wheel-of-fortune</span><span class="tag tag-lone" title="Only this note uses it">medieval-historiography</span><a class="tag" href="/wiki/topics/anti-clericalism">anti-clericalism</a><a class="tag" href="/wiki/topics/antifeminist-tradition">antifeminist-tradition</a><span class="tag tag-lone" title="Only this note uses it">dante-reception</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

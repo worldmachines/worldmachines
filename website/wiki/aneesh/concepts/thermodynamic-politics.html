@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Thermodynamic Politics</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Thermodynamic Politics</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/thermodynamic-politics.md">source on GitHub</a></div>
-  <div class="note-summary">Bryant&#x27;s concept for political engagement that targets a machine&#x27;s actual flows of energy and information (what it is operationally open to) rather than appealing to moral or communicative flows the machine cannot register.</div>
-  <div class="tags"><span class="tag">bryant</span><span class="tag">onto-cartography</span><span class="tag">politics</span><span class="tag">institutions</span><span class="tag">machines</span><span class="tag">activism</span><span class="tag">thermodynamics</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/thermodynamic-politics.md">source on GitHub</a></div>
+    <div class="note-summary">Bryant&#x27;s concept for political engagement that targets a machine&#x27;s actual flows of energy and information (what it is operationally open to) rather than appealing to moral or communicative flows the machine cannot register.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>&quot;We can call these forms of engagement <em>thermodynamic politics</em>. Thermodynamic politics is a form of political engagement that targets a machine&#x27;s sources of energy and capacity for work.&quot; (<em>Onto-Cartography</em>, p. 72)</p>
@@ -79,24 +88,55 @@
 <li><strong>Thermodynamic vs. semiotic ↔ the Gramsci gap</strong>: the wiki has a concept <a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap">gramsci-gap</a> — the disconnect between ideological critique and material power. Bryant&#x27;s thermodynamic/semiotic distinction maps onto this: semiotic politics operates at the ideological level; thermodynamic politics operates at the material-energetic level.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">10</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/alien-phenomenology">Alien Phenomenology</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/corporeal-incorporeal-machines">Corporeal and Incorporeal Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/non-human-ethics">Non-Human Ethics</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch2-3">Onto-Cartography Ch 2–3: What Is a Machine? / Alien Phenomenology</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/pluripotency-and-exaptation">Pluripotency and Exaptation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/rigid-plastic-machines">Rigid and Plastic Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/structural-openness-operational-closure">Structural Openness and Operational Closure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/for-itself-machine">The For-Itself of a Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-07-military-discipline">The Calculated Restraint of Utopian War</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>736</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/alien-phenomenology">Alien Phenomenology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/structural-openness-operational-closure">Structural Openness and Operational Closure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rigid-plastic-machines">Rigid and Plastic Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/pluripotency-and-exaptation">Pluripotency and Exaptation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/for-itself-machine">The For-Itself of a Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/corporeal-incorporeal-machines">Corporeal and Incorporeal Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/non-human-ethics">Non-Human Ethics</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-07-military-discipline">The Calculated Restraint of Utopian War</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch2-3">Onto-Cartography Ch 2–3: What Is a Machine? / Alien Phenomenology</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/alien-phenomenology">Alien Phenomenology</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/structural-openness-operational-closure">Structural Openness and Operational Closure</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/operations-not-substance">Operations, Not Substance</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/ian-bogost">Ian Bogost</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/rigid-plastic-machines">Rigid and Plastic Machines</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/bryant">bryant</a><a class="tag" href="/wiki/topics/onto-cartography">onto-cartography</a><a class="tag" href="/wiki/topics/politics">politics</a><a class="tag" href="/wiki/topics/institutions">institutions</a><a class="tag" href="/wiki/topics/machines">machines</a><span class="tag tag-lone" title="Only this note uses it">activism</span><a class="tag" href="/wiki/topics/thermodynamics">thermodynamics</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

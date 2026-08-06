@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/more-utopia/">Utopia</a> <b>/</b> <span>Of Their Traffic</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Of Their Traffic</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book2-04-traffic.md">source on GitHub</a></div>
-  <div class="note-summary">Raphael Hythloday details the administrative machinery beneath Utopian &#x27;traffic&#x27; — patriarchal households capped and rebalanced by demographic quota, colonization justified by a natural-law claim on uncultivated land, and a moneyless economy of common storehouses, communal dining halls, and public hospitals engineered to eliminate want and the pride it breeds.</div>
-  <div class="tags"><span class="tag">utopia</span><span class="tag">thomas-more</span><span class="tag">legibility</span><span class="tag">colonization</span><span class="tag">common-ownership</span><span class="tag">population-control</span><span class="tag">communal-dining</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a>, <a class="wikilink" href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">more-utopia-book1-08-common-ownership</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book2-04-traffic.md">source on GitHub</a></div>
+    <div class="note-summary">Raphael Hythloday details the administrative machinery beneath Utopian &#x27;traffic&#x27; — patriarchal households capped and rebalanced by demographic quota, colonization justified by a natural-law claim on uncultivated land, and a moneyless economy of common storehouses, communal dining halls, and public hospitals engineered to eliminate want and the pride it breeds.</div>
     <div class="prose">
 <p>This unit of Book II describes the machinery underlying Utopian &#x27;commerce&#x27; in the broadest sense — not foreign trade but the internal circulation of people, land, and goods. Hythloday walks through the patriarchal family as the base unit of production; the strict numerical caps on family and city size, rebalanced by shuffling children and citizens between households, towns, and overseas colonies; the natural-law justification for seizing land from neighbors who refuse to conform to Utopian law; and the moneyless system of central storehouses, communal dining halls (organized under the Syphogrants), and public hospitals through which goods and care are distributed without payment, exchange, or want.</p>
 <h2 id="themes">Themes</h2>
@@ -50,17 +58,47 @@
 <p>The hospital passage is the unit&#x27;s most sympathetic institutional description, notable for its almost inverted logic: a well-run public institution people would rather use than avoid, sited outside the walls both for practical contagion control and, implicitly, for civic cleanliness.</p>
 <p>The meal-ritual passage closes the unit by showing that Utopian commensality is not egalitarian in the flat sense — it is graded by age and office at every table, every day, with the young&#x27;s characters actively probed by their elders during the meal itself.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-09-island-of-utopia">The Shape of Utopia: Utopus&#x27;s Island and Its Ordered Countryside</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>934</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-09-island-of-utopia">The Shape of Utopia: Utopus&#x27;s Island and Its Ordered Countryside</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-01-towns-amaurot">Amaurot: The Legible Anatomy of a Utopian Town</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-03-trades">Of Their Trades, and Manner of Life</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-03-cardinal-morton-theft">Sheep Devouring Men: Hythloday&#x27;s Case Against Hanging Thieves</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-07-military-discipline">The Calculated Restraint of Utopian War</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li><li><a class="wikilink" href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">more-utopia-book1-08-common-ownership</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/utopia">utopia</a><a class="tag" href="/wiki/topics/thomas-more">thomas-more</a><a class="tag" href="/wiki/topics/legibility">legibility</a><span class="tag tag-lone" title="Only this note uses it">colonization</span><a class="tag" href="/wiki/topics/common-ownership">common-ownership</a><span class="tag tag-lone" title="Only this note uses it">population-control</span><span class="tag tag-lone" title="Only this note uses it">communal-dining</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

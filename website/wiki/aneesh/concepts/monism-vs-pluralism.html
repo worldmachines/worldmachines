@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Monism vs. Pluralism</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Monism vs. Pluralism</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/monism-vs-pluralism.md">source on GitHub</a></div>
-  <div class="note-summary">The monism/pluralism divide in political philosophy turns on whether ultimate human values can be ranked on a single scale (monism) or are genuinely multiple and sometimes incommensurable (pluralism) — with major consequences for political authority and institutional design.</div>
-  <div class="tags"><span class="tag">monism</span><span class="tag">pluralism</span><span class="tag">berlin</span><span class="tag">political-philosophy</span><span class="tag">values</span><span class="tag">incommensurability</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/monism-vs-pluralism.md">source on GitHub</a></div>
+    <div class="note-summary">The monism/pluralism divide in political philosophy turns on whether ultimate human values can be ranked on a single scale (monism) or are genuinely multiple and sometimes incommensurable (pluralism) — with major consequences for political authority and institutional design.</div>
     <div class="prose">
 <h2 id="the-distinction">The Distinction</h2>
 <p><strong>Monism</strong> (in the context of value theory): the view that there is ultimately one value — or one correct ranking of values — to which all other moral and political questions can be reduced. The Enlightenment tradition tends toward monism: reason can, in principle, tell us the one right answer to all genuine questions about how to live.</p>
 <p><strong>Pluralism</strong> (Berlin&#x27;s value pluralism): the view that ultimate values are genuinely many, sometimes incommensurable, and sometimes in real conflict — such that choosing one valuable thing irreversibly sacrifices another. No master algorithm resolves these conflicts.</p>
 <h2 id="why-the-distinction-matters">Why the Distinction Matters</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> argues this is the most important divide in the history of political thought, because:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> argues this is the most important divide in the history of political thought, because:</p>
 <ul>
 <li><strong>Monism licenses totalitarianism</strong>: if there is one correct answer to how humans should live, those who know it are justified in forcing it on those who don&#x27;t. The Jacobins, Soviet central planners, and utopian social engineers all operated on monist assumptions.</li>
 <li><strong>Pluralism licenses toleration</strong>: if genuinely valuable things conflict, and no resolution is final, then the best we can do is preserve a space in which different conceptions of the good can coexist.</li>
@@ -54,32 +63,65 @@
 <li><strong>Liberal perfectionism</strong>: realize rational nature (one human essence)</li>
 </ul>
 <h2 id="the-counter-enlightenment-response">The Counter-Enlightenment Response</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> thinkers — Vico, Hamann, Herder — challenged Enlightenment monism by insisting on the irreducible particularity of cultures, languages, and ways of life. Berlin takes this as proto-pluralism: an insight, however untheorized, that different human communities embody different and incomparable goods.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> thinkers — Vico, Hamann, Herder — challenged Enlightenment monism by insisting on the irreducible particularity of cultures, languages, and ways of life. Berlin takes this as proto-pluralism: an insight, however untheorized, that different human communities embody different and incomparable goods.</p>
 <h2 id="contemporary-relevance">Contemporary Relevance</h2>
 <p>The monism/pluralism divide has contemporary echoes:</p>
 <ul>
 <li><strong>AI alignment</strong>: specifying a single utility function for AI systems faces the problem that human values are genuinely plural and conflicting — monist alignment is a category error</li>
-<li><strong>LLM epistemics</strong>: LLMs implicitly treat &quot;good reasoning&quot; as a single standard (typically: Western academic linear logic), enacting a kind of epistemic monism (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Monoculture&quot;">Epistemic Monoculture</span>)</li>
+<li><strong>LLM epistemics</strong>: LLMs implicitly treat &quot;good reasoning&quot; as a single standard (typically: Western academic linear logic), enacting a kind of epistemic monism (see <a class="wikilink" href="/wiki/aneesh/concepts/epistemic-monoculture" title="Written [[Epistemic Monoculture]], resolved to epistemic-monoculture">Epistemic Monoculture</a>)</li>
 <li><strong>Platform design</strong>: algorithmic ranking systems assume commensurable preferences — a monist assumption that erases value diversity</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — Berlin&#x27;s developed position</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the tradition that intuited pluralism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Monoculture&quot;">Epistemic Monoculture</span> — contemporary enactment of epistemic monism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Incommensurability&quot;">Value Incommensurability</span> — the logical core of pluralism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — Berlin&#x27;s developed position</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the tradition that intuited pluralism</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/epistemic-monoculture" title="Written [[Epistemic Monoculture]], resolved to epistemic-monoculture">Epistemic Monoculture</a> — contemporary enactment of epistemic monism</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/value-incommensurability" title="No note is called &quot;Value Incommensurability&quot; yet — see who is asking for it">Value Incommensurability</a> — the logical core of pluralism</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-01-toleration">The Religions of Utopia: Natural Theology, Christian Reception, and the Law of Toleration</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>416</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/weird-bias">WEIRD Bias</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/enlightenment-monism">Enlightenment Monism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-01-toleration">The Religions of Utopia: Natural Theology, Christian Reception, and the Law of Toleration</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/monism">monism</a><a class="tag" href="/wiki/topics/pluralism">pluralism</a><a class="tag" href="/wiki/topics/berlin">berlin</a><a class="tag" href="/wiki/topics/political-philosophy">political-philosophy</a><span class="tag tag-lone" title="Only this note uses it">values</span><a class="tag" href="/wiki/topics/incommensurability">incommensurability</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

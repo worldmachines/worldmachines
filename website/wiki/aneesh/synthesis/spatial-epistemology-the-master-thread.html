@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Spatial Epistemology — The Master Thread</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Spatial Epistemology — The Master Thread</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/spatial-epistemology-the-master-thread.md">source on GitHub</a></div>
-  <div class="note-summary">The deepest recurring pattern across Sathe&#x27;s essays: knowledge is fundamentally spatial — thinking is place-making, inquiry is navigation, shelter is an epistemic engine, books are dwellings, the mind is a landscape of semi-solid smoke — and every information technology is judged by whether it creates inhabitable places or formless, disorienting space.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">epistemology</span><span class="tag">space</span><span class="tag">place</span><span class="tag">architecture</span><span class="tag">dwelling</span><span class="tag">navigation</span><span class="tag">shelter</span><span class="tag">master-thread</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/spatial-epistemology-the-master-thread.md">source on GitHub</a></div>
+    <div class="note-summary">The deepest recurring pattern across Sathe&#x27;s essays: knowledge is fundamentally spatial — thinking is place-making, inquiry is navigation, shelter is an epistemic engine, books are dwellings, the mind is a landscape of semi-solid smoke — and every information technology is judged by whether it creates inhabitable places or formless, disorienting space.</div>
     <div class="prose">
-<p><strong>Sources</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">we-need-homes-in-the-delta-quadrant</a> (the canonical source-text — Sathe&#x27;s foundational 2025 statement), <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thinking with Places&quot;">Thinking with Places</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems are Places Questions are Spaces&quot;">Problems are Places Questions are Spaces</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Mind as Semi-Solid Smoke&quot;">The Mind as Semi-Solid Smoke</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Books Are Dwellings&quot;">Books Are Dwellings</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bldgblog Nakatomi Space&quot;">Bldgblog Nakatomi Space</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling vs Scrolling&quot;">Dwelling vs Scrolling</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Digital Studiolo&quot;">The Digital Studiolo</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Building Thinking Dwelling as Product Design&quot;">Building Thinking Dwelling as Product Design</span></p>
+<p><strong>Sources</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">we-need-homes-in-the-delta-quadrant</a> (the canonical source-text — Sathe&#x27;s foundational 2025 statement), <a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a>, <a class="wikilink" href="/wiki/aneesh/summaries/thinking-with-places" title="Written [[Thinking with Places]], resolved to thinking-with-places">Thinking with Places</a>, <a class="wikilink" href="/wiki/aneesh/summaries/problems-are-places-questions-are-spaces" title="Written [[Problems are Places Questions are Spaces]], resolved to problems-are-places-questions-are-spaces">Problems are Places Questions are Spaces</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke" title="Written [[The Mind as Semi-Solid Smoke]], resolved to the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a>, <a class="wikilink" href="/wiki/aneesh/summaries/books-are-dwellings" title="Written [[Books Are Dwellings]], resolved to books-are-dwellings">Books Are Dwellings</a>, <a class="wikilink" href="/wiki/aneesh/summaries/bldgblog-nakatomi-space" title="Written [[Bldgblog Nakatomi Space]], resolved to bldgblog-nakatomi-space">Bldgblog Nakatomi Space</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/dwelling-vs-scrolling" title="Written [[Dwelling vs Scrolling]], resolved to dwelling-vs-scrolling">Dwelling vs Scrolling</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/the-digital-studiolo" title="Written [[The Digital Studiolo]], resolved to the-digital-studiolo">The Digital Studiolo</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design" title="Written [[Building Thinking Dwelling as Product Design]], resolved to building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a></p>
 <p><strong>Source-text note</strong>: <em>We Need Homes in the Delta Quadrant</em> (2025-04-29) is the originating essay for this master thread — it states the framework explicitly (&quot;To build a home is to interrupt space. To be born is to interrupt infinity&quot;) and develops it across five sections through Tuan, Lefebvre, Massey, Casey, Mbembe, Harvey, Foucault, Bachelard, and Anderson. The other Sathe essays listed here apply the framework to particular domains; the Delta Quadrant essay is the framework itself.</p>
 <h2 id="the-core-claim">The Core Claim</h2>
 <p>Across at least ten essays, Sathe develops a single implicit framework: <strong>knowing is a spatial act</strong>. This is not a metaphor deployed for rhetorical convenience — it is a structural claim about the nature of cognition. The recurring vocabulary (place, space, shelter, dwelling, navigation, exploration, landmarks, thicket, base camp) constitutes a coherent epistemology.</p>
@@ -43,23 +52,23 @@
 <h3 id="1-space-undifferentiated-possibility">1. Space — Undifferentiated Possibility</h3>
 <p>Space is what exists before knowledge. It is formless, overwhelming, and disorienting. The infinite feed, the universal library before curation, the raw internet, the stranger&#x27;s city at night.</p>
 <h3 id="2-place-bounded-inhabitable-knowledge">2. Place — Bounded, Inhabitable Knowledge</h3>
-<p>Place is what knowledge creates. A place has boundaries, landmarks, and affordances. The published paper, the familiar neighborhood, the domain ontology, the personal blog. Place is what the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">shelter</span> produces: a bounded region of navigable reality carved from undifferentiated space.</p>
+<p>Place is what knowledge creates. A place has boundaries, landmarks, and affordances. The published paper, the familiar neighborhood, the domain ontology, the personal blog. Place is what the <a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">shelter</a> produces: a bounded region of navigable reality carved from undifferentiated space.</p>
 <h3 id="3-navigation-the-act-of-knowing">3. Navigation — The Act of Knowing</h3>
-<p>Knowing is moving between places. The Socratic method is &quot;cartography applied to belief&quot; (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thinking with Places&quot;">Thinking with Places</span>). Problems are bounded places; questions are open spaces that invite exploration (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems are Places Questions are Spaces&quot;">Problems are Places Questions are Spaces</span>). The mind itself is a landscape of &quot;semi-solid smoke&quot; — navigable landmarks that dissolve under scrutiny (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Mind as Semi-Solid Smoke&quot;">The Mind as Semi-Solid Smoke</span>).</p>
+<p>Knowing is moving between places. The Socratic method is &quot;cartography applied to belief&quot; (<a class="wikilink" href="/wiki/aneesh/summaries/thinking-with-places" title="Written [[Thinking with Places]], resolved to thinking-with-places">Thinking with Places</a>). Problems are bounded places; questions are open spaces that invite exploration (<a class="wikilink" href="/wiki/aneesh/summaries/problems-are-places-questions-are-spaces" title="Written [[Problems are Places Questions are Spaces]], resolved to problems-are-places-questions-are-spaces">Problems are Places Questions are Spaces</a>). The mind itself is a landscape of &quot;semi-solid smoke&quot; — navigable landmarks that dissolve under scrutiny (<a class="wikilink" href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke" title="Written [[The Mind as Semi-Solid Smoke]], resolved to the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a>).</p>
 <h2 id="applications-across-sources">Applications Across Sources</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>Source</th><th>Spatial Claim</th></tr></thead>
 <tbody>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span></td><td>Home/shelter/thesis as base camp that converts space into place</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thinking with Places&quot;">Thinking with Places</span></td><td>Thinking IS place-making; Socratic dialogue IS cartography</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems are Places Questions are Spaces&quot;">Problems are Places Questions are Spaces</span></td><td>Problems = bounded places; Questions = open spaces</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Mind as Semi-Solid Smoke&quot;">The Mind as Semi-Solid Smoke</span></td><td>The mind is an imperfect self-conjured place with smoke-landmarks</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Books Are Dwellings&quot;">Books Are Dwellings</span></td><td>Books are dwellings you inhabit; feeds are billboards you pass</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bldgblog Nakatomi Space&quot;">Bldgblog Nakatomi Space</span></td><td>Buildings contain hidden traversable interiors — architectural illegibility</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span></td><td>The thicket as deliberately opaque place resisting legibility</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Building Thinking Dwelling as Product Design&quot;">Building Thinking Dwelling as Product Design</span></td><td>Good tools free users to dwell, bad tools force conformity</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Digital Studiolo&quot;">The Digital Studiolo</span></td><td>The private representational space mediating self and world</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling vs Scrolling&quot;">Dwelling vs Scrolling</span></td><td>Dwelling (bounded, inhabitable) vs. scrolling (formless, extractive)</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a></td><td>Home/shelter/thesis as base camp that converts space into place</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/thinking-with-places" title="Written [[Thinking with Places]], resolved to thinking-with-places">Thinking with Places</a></td><td>Thinking IS place-making; Socratic dialogue IS cartography</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/problems-are-places-questions-are-spaces" title="Written [[Problems are Places Questions are Spaces]], resolved to problems-are-places-questions-are-spaces">Problems are Places Questions are Spaces</a></td><td>Problems = bounded places; Questions = open spaces</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke" title="Written [[The Mind as Semi-Solid Smoke]], resolved to the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a></td><td>The mind is an imperfect self-conjured place with smoke-landmarks</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/books-are-dwellings" title="Written [[Books Are Dwellings]], resolved to books-are-dwellings">Books Are Dwellings</a></td><td>Books are dwellings you inhabit; feeds are billboards you pass</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/bldgblog-nakatomi-space" title="Written [[Bldgblog Nakatomi Space]], resolved to bldgblog-nakatomi-space">Bldgblog Nakatomi Space</a></td><td>Buildings contain hidden traversable interiors — architectural illegibility</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a></td><td>The thicket as deliberately opaque place resisting legibility</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design" title="Written [[Building Thinking Dwelling as Product Design]], resolved to building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a></td><td>Good tools free users to dwell, bad tools force conformity</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/synthesis/the-digital-studiolo" title="Written [[The Digital Studiolo]], resolved to the-digital-studiolo">The Digital Studiolo</a></td><td>The private representational space mediating self and world</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/synthesis/dwelling-vs-scrolling" title="Written [[Dwelling vs Scrolling]], resolved to dwelling-vs-scrolling">Dwelling vs Scrolling</a></td><td>Dwelling (bounded, inhabitable) vs. scrolling (formless, extractive)</td></tr>
 </tbody>
 </table></div>
 <h2 id="the-evaluative-criterion">The Evaluative Criterion</h2>
@@ -74,9 +83,9 @@
 </ul>
 <h2 id="connections-to-other-synthesis-pages">Connections to Other Synthesis Pages</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Biology of Meaning-Making&quot;">Biology of Meaning-Making</span> — the spatial framework has evolutionary roots; orientation is a biological necessity from chemotaxis to philosophy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Technology as Place-Maker&quot;">Technology as Place-Maker</span> — all technologies create places, but some orient and some disorient</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Places Problems and the Act of Bounding&quot;">Places Problems and the Act of Bounding</span> — bounding is constitutive of both knowledge and governance</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/biology-of-meaning-making" title="Written [[Biology of Meaning-Making]], resolved to biology-of-meaning-making">Biology of Meaning-Making</a> — the spatial framework has evolutionary roots; orientation is a biological necessity from chemotaxis to philosophy</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/technology-as-place-maker" title="Written [[Technology as Place-Maker]], resolved to technology-as-place-maker">Technology as Place-Maker</a> — all technologies create places, but some orient and some disorient</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/places-problems-and-the-act-of-bounding" title="Written [[Places Problems and the Act of Bounding]], resolved to places-problems-and-the-act-of-bounding">Places Problems and the Act of Bounding</a> — bounding is constitutive of both knowledge and governance</li>
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a> — agents who abandon designed grammars to navigate Nakatomi space</li>
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/the-opacity-turn-thicket-nakatomi-iltifat">The Opacity Turn — Thicket, Nakatomi, Iltifat</a> — opacity as a place-making strategy against legibility</li>
 </ul>
@@ -84,7 +93,7 @@
 <p>The spatial epistemology is powerful but not universal. It struggles with:</p>
 <ul>
 <li><strong>Temporal knowledge</strong> — history, narrative, and process are harder to render spatially (though Rao&#x27;s &quot;world machines&quot; are partly temporal)</li>
-<li><strong>Embodied knowledge</strong> — taste, craft, and kinesthetic knowing resist spatialization (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Taste Gap in AI Systems&quot;">The Taste Gap in AI Systems</span>)</li>
+<li><strong>Embodied knowledge</strong> — taste, craft, and kinesthetic knowing resist spatialization (<a class="wikilink" href="/wiki/aneesh/synthesis/the-taste-gap-in-ai-systems" title="Written [[The Taste Gap in AI Systems]], resolved to the-taste-gap-in-ai-systems">The Taste Gap in AI Systems</a>)</li>
 <li><strong>The problem of scale</strong> — the framework works beautifully at the individual level but strains at civilizational scale, where &quot;place&quot; becomes metaphorical in ways that may lose the original force</li>
 </ul>
 <h2 id="what-the-bryant-tuan-ingest-adds">What the Bryant/Tuan Ingest Adds</h2>
@@ -100,39 +109,72 @@
 </ul>
 <p>The eight new synthesis pages (<a class="wikilink" href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">place-as-the-human-form-of-worlding</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/naming-as-anchoring">naming-as-anchoring</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">the-gravity-of-infrastructure</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">machinic-assemblage-and-world-machines</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">temporal-topology-and-the-viscous-frontier</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">alien-phenomenology-vs-experiential-perspective</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">architecture-and-books-as-crystallized-awareness</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">visibility-touristic-place-and-algorithmic-curation</a>) are the integration points. The master thread is no longer self-contained; it now opens out into a cross-source ontology that runs from individual cognition to civilizational worlding.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">25</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/coexisting-heterogeneity">Coexisting Heterogeneity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/correlationism">Correlationism</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/edward-casey">Edward Casey (b. 1939)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/inter-world-opacity">Inter-World Opacity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/kei-kreutler">Kei Kreutler</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/limits-of-mapping-bryant">Limits of Mapping (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-1-setting-the-scene">Massey, *For Space* — Part One: Setting the Scene</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/material-power-vs-discursive-power">Material Power vs. Discursive Power</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch8-earth-maps-practices">Onto-Cartography Ch 8: Earth, Maps, and Practices — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/place-as-interruption-of-space">Place as Interruption of Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/post-human-media-ecology">Post-Human Media Ecology (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/simultaneity-of-stories-so-far">Simultaneity of Stories-So-Far</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-always-under-construction">Space as Always Under Construction</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-relational-product">Space as Relational Product</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/synthesis-by-composition">Synthesis by Composition</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-cortes-vignette">The Cortés Vignette (Tenochtitlán Encounter)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-three-propositions">The Three Propositions (Massey)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/worlding">Worlding (Bryant)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>27</b><span>linked from</span></div>
+      <div class="bearing"><b>31</b><span>links out</span></div>
+      <div class="bearing"><b>1268</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-three-propositions">The Three Propositions (Massey)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-always-under-construction">Space as Always Under Construction</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/post-human-media-ecology">Post-Human Media Ecology (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/correlationism">Correlationism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/coexisting-heterogeneity">Coexisting Heterogeneity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>19 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/space-as-relational-product">Space as Relational Product</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/worlding">Worlding (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/material-power-vs-discursive-power">Material Power vs. Discursive Power</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/inter-world-opacity">Inter-World Opacity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/place-as-interruption-of-space">Place as Interruption of Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/simultaneity-of-stories-so-far">Simultaneity of Stories-So-Far</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-cortes-vignette">The Cortés Vignette (Tenochtitlán Encounter)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/limits-of-mapping-bryant">Limits of Mapping (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/synthesis-by-composition">Synthesis by Composition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/edward-casey">Edward Casey (b. 1939)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-1-setting-the-scene">Massey, *For Space* — Part One: Setting the Scene</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/kei-kreutler">Kei Kreutler</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch8-earth-maps-practices">Onto-Cartography Ch 8: Earth, Maps, and Practices — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-sensemaker-and-the-explorer">The Sensemaker and the Explorer</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-three-propositions">The Three Propositions (Massey)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/coexisting-heterogeneity">Coexisting Heterogeneity</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/imaginations-of-space">Imaginations of Space</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/place">place</a><a class="tag" href="/wiki/topics/architecture">architecture</a><a class="tag" href="/wiki/topics/dwelling">dwelling</a><a class="tag" href="/wiki/topics/navigation">navigation</a><a class="tag" href="/wiki/topics/shelter">shelter</a><span class="tag tag-lone" title="Only this note uses it">master-thread</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

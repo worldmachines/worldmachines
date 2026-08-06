@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The Digital Studiolo</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Digital Studiolo</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-digital-studiolo.md">source on GitHub</a></div>
-  <div class="note-summary">A synthesis connecting the Renaissance studiolo, Heidegger&#x27;s dwelling, personal blogs, and the Sims proposal: the recurring human need for a private representational space that holds intimate knowledge of a particular self and mediates between that self and the world.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">studiolo</span><span class="tag">dwelling</span><span class="tag">AI</span><span class="tag">Machiavelli</span><span class="tag">Heidegger</span><span class="tag">personal-media</span><span class="tag">self-cultivation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-digital-studiolo.md">source on GitHub</a></div>
+    <div class="note-summary">A synthesis connecting the Renaissance studiolo, Heidegger&#x27;s dwelling, personal blogs, and the Sims proposal: the recurring human need for a private representational space that holds intimate knowledge of a particular self and mediates between that self and the world.</div>
     <div class="prose">
 <h2 id="the-recurring-structure">The Recurring Structure</h2>
 <p>Across four source documents from 2024-2025, a single structural idea recurs in different registers:</p>
@@ -41,15 +50,15 @@
 <div class="table-wrap"><table>
 <thead><tr><th>Manifestation</th><th>Source</th><th>Key Feature</th></tr></thead>
 <tbody>
-<tr><td>Renaissance studiolo</td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study&quot;">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</span></td><td>Physical room, accumulated books, conversation with the dead</td></tr>
-<tr><td>Montaigne&#x27;s <em>arrière-boutique</em></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study&quot;">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</span></td><td>Mental back room, reserved liberty</td></tr>
-<tr><td>Heidegger&#x27;s dwelling</td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 7, 2025: Building Dwelling Thinking&quot;">Jan. 7, 2025: Building Dwelling Thinking</span></td><td>Place as generative boundary, sparing as freedom</td></tr>
-<tr><td>Personal blog</td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 3, 2025&quot;">Jan. 3, 2025</span></td><td>High-ownership space resisting AI degradation</td></tr>
-<tr><td>Shah &amp; White&#x27;s Sims</td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study&quot;">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</span></td><td>Computational user-representation</td></tr>
+<tr><td>Renaissance studiolo</td><td><a class="wikilink" href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study" title="Written [[Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study]], resolved to jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a></td><td>Physical room, accumulated books, conversation with the dead</td></tr>
+<tr><td>Montaigne&#x27;s <em>arrière-boutique</em></td><td><a class="wikilink" href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study" title="Written [[Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study]], resolved to jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a></td><td>Mental back room, reserved liberty</td></tr>
+<tr><td>Heidegger&#x27;s dwelling</td><td><a class="wikilink" href="/wiki/aneesh/summaries/jan-7-2025-building-dwelling-thinking" title="Written [[Jan. 7, 2025: Building Dwelling Thinking]], resolved to jan-7-2025-building-dwelling-thinking">Jan. 7, 2025: Building Dwelling Thinking</a></td><td>Place as generative boundary, sparing as freedom</td></tr>
+<tr><td>Personal blog</td><td><a class="wikilink" href="/wiki/aneesh/summaries/jan-3-2025" title="Written [[Jan. 3, 2025]], resolved to jan-3-2025">Jan. 3, 2025</a></td><td>High-ownership space resisting AI degradation</td></tr>
+<tr><td>Shah &amp; White&#x27;s Sims</td><td><a class="wikilink" href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study" title="Written [[Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study]], resolved to jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a></td><td>Computational user-representation</td></tr>
 </tbody>
 </table></div>
 <h2 id="the-machiavelli-sim-parallel-implicit-in-sources">The Machiavelli-Sim Parallel (Implicit in Sources)</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study&quot;">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</span> places the Sims proposal and the Machiavelli studiolo discussion in the same essay without explicitly connecting them. The implicit argument:</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study" title="Written [[Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study]], resolved to jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a> places the Sims proposal and the Machiavelli studiolo discussion in the same essay without explicitly connecting them. The implicit argument:</p>
 <ul>
 <li>Machiavelli dresses in court garments to enter his books and &quot;converse with the ancients&quot;</li>
 <li>A Sim holds intimate knowledge of a user to represent their interests in AI interactions</li>
@@ -60,17 +69,17 @@
 <p>In every manifestation, the private intellectual space is simultaneously liberating and potentially enclosing:</p>
 <ul>
 <li>The studiolo as <strong>pharmakon</strong> (cure/poison): sanctuary for self-cultivation OR retreat from collective life</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Virginia Woolf&quot;">Virginia Woolf</span></strong>&#x27;s critique: the studiolo&#x27;s voluntary freedom was structurally unavailable to most women</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/virginia-woolf" title="No note is called &quot;Virginia Woolf&quot; yet — see who is asking for it">Virginia Woolf</a></strong>&#x27;s critique: the studiolo&#x27;s voluntary freedom was structurally unavailable to most women</li>
 <li><strong>Blogging</strong>: genuine intellectual dwelling OR echo chamber / performative authenticity</li>
 <li><strong>Sims</strong>: personalized AI companion OR surveillance infrastructure / training data for corporate profit</li>
 </ul>
-<p>The Heideggerian framework (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sparing and Freeing&quot;">Sparing and Freeing</span>) provides the normative test: does the space spare its inhabitant — preserve their nature and expand their capacity — or does it capture them in its own logic?</p>
+<p>The Heideggerian framework (<a class="wikilink" href="/wiki/aneesh/concepts/sparing-and-freeing" title="Written [[Sparing and Freeing]], resolved to sparing-and-freeing">Sparing and Freeing</a>) provides the normative test: does the space spare its inhabitant — preserve their nature and expand their capacity — or does it capture them in its own logic?</p>
 <h2 id="the-structural-inequality-thread">The Structural Inequality Thread</h2>
 <p>A line runs through:</p>
 <ol>
 <li>Virginia Woolf: physical private space was gendered</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span>: cognitive private space (ability to dwell effectively with AI tools) is expertise-stratified</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sims (AI User Simulation)&quot;">Sims (AI User Simulation)</span>: who trains the Sim and whose interests it serves determines whether it liberates or captures</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a>: cognitive private space (ability to dwell effectively with AI tools) is expertise-stratified</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/sims-ai-user-simulation" title="No note is called &quot;Sims (AI User Simulation)&quot; yet — see who is asking for it">Sims (AI User Simulation)</a>: who trains the Sim and whose interests it serves determines whether it liberates or captures</li>
 </ol>
 <p>The digital studiolo, like the physical one, is not equally available. Its liberating potential and its capture potential are both distributed according to existing social structure.</p>
 <h2 id="essay-seed">Essay Seed</h2>
@@ -85,25 +94,56 @@
 <p><strong>Productive tension</strong>: Heidegger&#x27;s sparing ideal vs. the commercial incentive to build AI companions that capture rather than free</p>
 <h2 id="related-pages">Related Pages</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Studiolo and Self-Cultivation&quot;">Studiolo and Self-Cultivation</span> — the historical concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Niccolò Machiavelli&quot;">Niccolò Machiavelli</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Virginia Woolf&quot;">Virginia Woolf</span> — entity (the structural critique)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling as Philosophical Concept&quot;">Dwelling as Philosophical Concept</span> — the philosophical framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sparing and Freeing&quot;">Sparing and Freeing</span> — the normative test</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Personal Media vs Platform Media&quot;">Personal Media vs Platform Media</span> — blog as digital studiolo</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sims (AI User Simulation)&quot;">Sims (AI User Simulation)</span> — computational studiolo</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Principal-Agent Problem in AI&quot;">Principal-Agent Problem in AI</span> — whose interests does the Sim serve?</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composability and Inequality&quot;">Composability and Inequality</span> — related structural question</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/studiolo-and-self-cultivation" title="Written [[Studiolo and Self-Cultivation]], resolved to studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a> — the historical concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/niccolo-machiavelli" title="Written [[Niccolò Machiavelli]], resolved to niccolo-machiavelli">Niccolò Machiavelli</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> — entity</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/virginia-woolf" title="No note is called &quot;Virginia Woolf&quot; yet — see who is asking for it">Virginia Woolf</a> — entity (the structural critique)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept" title="Written [[Dwelling as Philosophical Concept]], resolved to dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a> — the philosophical framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sparing-and-freeing" title="Written [[Sparing and Freeing]], resolved to sparing-and-freeing">Sparing and Freeing</a> — the normative test</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/personal-media-vs-platform-media" title="Written [[Personal Media vs Platform Media]], resolved to personal-media-vs-platform-media">Personal Media vs Platform Media</a> — blog as digital studiolo</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/sims-ai-user-simulation" title="No note is called &quot;Sims (AI User Simulation)&quot; yet — see who is asking for it">Sims (AI User Simulation)</a> — computational studiolo</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/principal-agent-problem-in-ai" title="Written [[Principal-Agent Problem in AI]], resolved to principal-agent-problem-in-ai">Principal-Agent Problem in AI</a> — whose interests does the Sim serve?</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/composability-and-inequality" title="Written [[Composability and Inequality]], resolved to composability-and-inequality">Composability and Inequality</a> — related structural question</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>673</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-ethics-of-place-making">The Ethics of Place-Making</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/books-are-dwellings">Books Are Dwellings</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-gravity-as-power">Bryant&#x27;s Gravity as Power</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/dwelling-vs-scrolling">Dwelling vs. Scrolling — Two Modes of Inhabiting Text</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/studiolo">studiolo</a><a class="tag" href="/wiki/topics/dwelling">dwelling</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/machiavelli">Machiavelli</a><a class="tag" href="/wiki/topics/heidegger">Heidegger</a><span class="tag tag-lone" title="Only this note uses it">personal-media</span><a class="tag" href="/wiki/topics/self-cultivation">self-cultivation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

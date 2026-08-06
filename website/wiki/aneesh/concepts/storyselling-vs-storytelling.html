@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Storyselling vs. Storytelling</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Storyselling vs. Storytelling</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/storyselling-vs-storytelling.md">source on GitHub</a></div>
-  <div class="note-summary">Byung-Chul Han&#x27;s distinction between authentic storytelling (which creates shared reality) and storyselling (narrative commodified to manufacture consumers).</div>
-  <div class="tags"><span class="tag">narrative</span><span class="tag">commodification</span><span class="tag">han</span><span class="tag">social-media</span><span class="tag">authenticity</span><span class="tag">storytelling</span><span class="tag">capitalism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/storyselling-vs-storytelling.md">source on GitHub</a></div>
+    <div class="note-summary">Byung-Chul Han&#x27;s distinction between authentic storytelling (which creates shared reality) and storyselling (narrative commodified to manufacture consumers).</div>
     <div class="prose">
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Byung-Chul Han&quot;">Byung-Chul Han</span>&#x27;s concept from <em>The Crisis of Narration</em> (2024):</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/byung-chul-han" title="Written [[Byung-Chul Han]], resolved to byung-chul-han">Byung-Chul Han</a>&#x27;s concept from <em>The Crisis of Narration</em> (2024):</p>
 <ul>
 <li><strong>Storytelling</strong>: narrative that creates a shared reality, builds community, transmits culture.</li>
 <li><strong>Storyselling</strong>: narrative instrumentalized to create consumers — the form of story is preserved, but the function is commercial extraction.</li>
@@ -45,9 +54,9 @@
 <h2 id="the-loss">The Loss</h2>
 <p>What&#x27;s lost is a particular kind of shared reality — the sense that a story <em>happened</em> and now we all live in its wake. Storyselling produces no such common world. It produces individual consumers who feel they&#x27;ve been told a story but have only been sold something.</p>
 <h2 id="the-influencer-instantiation">The Influencer Instantiation</h2>
-<p>The comparison in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Looking Forward to Montaigne&quot;">Looking Forward to Montaigne</span>: influencers perform authenticity in a manner that is structurally storyselling — the content is calibrated for engagement, not for truth-telling. By contrast, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> wrote with frank, meandering honesty that had no commercial purpose. He is paradoxically more alive.</p>
+<p>The comparison in <a class="wikilink" href="/wiki/aneesh/summaries/looking-forward-to-montaigne" title="Written [[Looking Forward to Montaigne]], resolved to looking-forward-to-montaigne">Looking Forward to Montaigne</a>: influencers perform authenticity in a manner that is structurally storyselling — the content is calibrated for engagement, not for truth-telling. By contrast, <a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> wrote with frank, meandering honesty that had no commercial purpose. He is paradoxically more alive.</p>
 <h2 id="hans-silence-on-solutions">Han&#x27;s Silence on Solutions</h2>
-<p>Notably, Han offers no prescriptions in <em>The Crisis of Narration</em>. The author of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Looking Forward to Montaigne&quot;">Looking Forward to Montaigne</span> supplies a tentative one: Montaigne-style personal writing — small, honest, non-teleological — as a counter-practice.</p>
+<p>Notably, Han offers no prescriptions in <em>The Crisis of Narration</em>. The author of <a class="wikilink" href="/wiki/aneesh/summaries/looking-forward-to-montaigne" title="Written [[Looking Forward to Montaigne]], resolved to looking-forward-to-montaigne">Looking Forward to Montaigne</a> supplies a tentative one: Montaigne-style personal writing — small, honest, non-teleological — as a counter-practice.</p>
 <h2 id="relation-to-the-old-internet">Relation to the Old Internet</h2>
 <p>The &quot;old internet&quot; — personal homepages, early blogs, niche forums — operated in a pre-storyselling mode. Writing was done for self-expression or community rather than conversion. The nostalgia for this mode is a marker of the felt loss Han describes.</p>
 <h2 id="open-questions">Open Questions</h2>
@@ -58,24 +67,56 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Byung-Chul Han&quot;">Byung-Chul Han</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> — the counter-example</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Personal Essay as Form&quot;">Personal Essay as Form</span> — the form that resists storyselling</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Old Internet&quot;">The Old Internet</span> — the lost mode</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Authenticity and Commodification&quot;">Authenticity and Commodification</span> — broader synthesis</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Looking Forward to Montaigne&quot;">Looking Forward to Montaigne</span> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/byung-chul-han" title="Written [[Byung-Chul Han]], resolved to byung-chul-han">Byung-Chul Han</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> — the counter-example</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/personal-essay-as-form" title="Written [[Personal Essay as Form]], resolved to personal-essay-as-form">Personal Essay as Form</a> — the form that resists storyselling</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-old-internet" title="Written [[The Old Internet]], resolved to the-old-internet">The Old Internet</a> — the lost mode</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/authenticity-and-commodification" title="Written [[Authenticity and Commodification]], resolved to authenticity-and-commodification">Authenticity and Commodification</a> — broader synthesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/looking-forward-to-montaigne" title="Written [[Looking Forward to Montaigne]], resolved to looking-forward-to-montaigne">Looking Forward to Montaigne</a> — source essay</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-pardoners-tale">The Pardoner&#x27;s Prologue and Tale</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>369</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/looking-forward-to-montaigne">Looking Forward to Montaigne</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-essay-as-form">Personal Essay as Form</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/byung-chul-han">Byung-Chul Han</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-old-internet">The Old Internet</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/authenticity-and-commodification">Authenticity and Commodification</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-pardoners-tale">The Pardoner&#x27;s Prologue and Tale</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/byung-chul-han">Byung-Chul Han</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/looking-forward-to-montaigne">Looking Forward to Montaigne</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-old-internet">The Old Internet</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-essay-as-form">Personal Essay as Form</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/self-construction-through-writing">Self-Construction Through Writing</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/narrative">narrative</a><a class="tag" href="/wiki/topics/commodification">commodification</a><a class="tag" href="/wiki/topics/han">han</a><a class="tag" href="/wiki/topics/social-media">social-media</a><a class="tag" href="/wiki/topics/authenticity">authenticity</a><a class="tag" href="/wiki/topics/storytelling">storytelling</a><a class="tag" href="/wiki/topics/capitalism">capitalism</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

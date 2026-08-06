@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,32 +26,41 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Universal Library</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Universal Library</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/universal-library.md">source on GitHub</a></div>
-  <div class="note-summary">The recurring human aspiration to gather all recorded knowledge into a single, comprehensive repository — a myth that each era re-instantiates with its dominant technology.</div>
-  <div class="tags"><span class="tag">knowledge-systems</span><span class="tag">epistemology</span><span class="tag">information-theory</span><span class="tag">myth</span><span class="tag">universalism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/universal-library.md">source on GitHub</a></div>
+    <div class="note-summary">The recurring human aspiration to gather all recorded knowledge into a single, comprehensive repository — a myth that each era re-instantiates with its dominant technology.</div>
     <div class="prose">
 <p>The <strong>Universal Library</strong> is one of the most enduring myths in intellectual history: the idea that all recorded human knowledge could be gathered, organized, and made accessible in a single repository. It functions less as a practical project than as a regulative ideal — each generation attempts it anew and confronts the same fundamental tensions.</p>
 <h2 id="historical-instantiations">Historical Instantiations</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Library of Alexandria&quot;">Library of Alexandria</span></strong> — archetypal symbol; reportedly held every important work of its era</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Conrad Gessner&quot;">Conrad Gessner</span>&#x27;s <em>Bibliotheca Universalis</strong></em> (1545) — early modern attempt to catalog all known books</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Francis Bacon&quot;">Francis Bacon</span>&#x27;s <em>Instauratio Magna</strong></em> — aspiration to reorganize all sciences</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/library-of-alexandria" title="No note is called &quot;Library of Alexandria&quot; yet — see who is asking for it">Library of Alexandria</a></strong> — archetypal symbol; reportedly held every important work of its era</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/conrad-gessner" title="No note is called &quot;Conrad Gessner&quot; yet — see who is asking for it">Conrad Gessner</a>&#x27;s <em>Bibliotheca Universalis</strong></em> (1545) — early modern attempt to catalog all known books</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/francis-bacon" title="Written [[Francis Bacon]], resolved to francis-bacon">Francis Bacon</a>&#x27;s <em>Instauratio Magna</strong></em> — aspiration to reorganize all sciences</li>
 <li><strong>Enlightenment encyclopedias</strong> — collective projects to codify knowledge</li>
 <li><strong>Google</strong> — &quot;library of the web,&quot; indexing and ranking at unprecedented scale (founded 1998, same year as Kruk&#x27;s paper)</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wikipedia&quot;">Wikipedia</span></strong> — collaborative, perpetually updating encyclopedia; the most direct contemporary heir</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs&quot;">LLMs</span></strong> — dynamic synthesis of web-scale training data; approximates the library function through generation rather than retrieval</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/wikipedia" title="No note is called &quot;Wikipedia&quot; yet — see who is asking for it">Wikipedia</a></strong> — collaborative, perpetually updating encyclopedia; the most direct contemporary heir</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/llms" title="No note is called &quot;LLMs&quot; yet — see who is asking for it">LLMs</a></strong> — dynamic synthesis of web-scale training data; approximates the library function through generation rather than retrieval</li>
 </ul>
 <h2 id="core-tensions">Core Tensions</h2>
 <ol>
 <li><strong>Inclusivity vs. quality</strong>: The more universal the library, the more it risks becoming an &quot;ocean of meaninglessness&quot; (Miroslav Kruk&#x27;s phrase). The more curated, the more exclusionary.</li>
 <li><strong>Zero-sum → infinite copy</strong>: Pre-digital libraries were zero-sum (manuscript in one place = absent elsewhere). Digitization breaks scarcity but creates new issues: licensing, infrastructure inequality.</li>
 <li><strong>Rock of certainty vs. ocean of doubt</strong>: The dream was to anchor knowledge; the pursuit revealed the fragility of objective reality itself.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span> vs. natural language</strong>: The library dream is linked to the dream of a language without ambiguity — one exact word per concept. LLM embeddings are the latest attempt.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/perfect-language" title="Written [[Perfect Language]], resolved to perfect-language">Perfect Language</a> vs. natural language</strong>: The library dream is linked to the dream of a language without ambiguity — one exact word per concept. LLM embeddings are the latest attempt.</li>
 </ol>
 <h2 id="miroslav-kruks-critique-1999">Miroslav Kruk&#x27;s Critique (1999)</h2>
 <p>Kruk&#x27;s &quot;The Internet and the Revival of the Myth of the Universal Library&quot; is the key modern interlocutor. He:</p>
@@ -63,24 +72,68 @@
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — proposed as structural bridges between curated knowledge and generated text</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span> — provide the semantic scaffolding that gives a knowledge repository coherence</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noise as Generative Force&quot;">Noise as Generative Force</span> — reframes the &quot;oceans of meaninglessness&quot; as potentially productive</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Slop&quot;">AI Slop</span> — the contemporary name for the quality problem at scale</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span> — the companion myth: a language as universal as the library</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> — proposed as structural bridges between curated knowledge and generated text</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/domain-ontologies" title="Written [[Domain Ontologies]], resolved to domain-ontologies">Domain Ontologies</a> — provide the semantic scaffolding that gives a knowledge repository coherence</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/noise-as-generative-force" title="Written [[Noise as Generative Force]], resolved to noise-as-generative-force">Noise as Generative Force</a> — reframes the &quot;oceans of meaninglessness&quot; as potentially productive</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-slop" title="Written [[AI Slop]], resolved to ai-slop">AI Slop</a> — the contemporary name for the quality problem at scale</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/perfect-language" title="Written [[Perfect Language]], resolved to perfect-language">Perfect Language</a> — the companion myth: a language as universal as the library</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>420</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/perfect-language">Perfect Language</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cynefin-framework">Cynefin Framework</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-slop">AI Slop</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/francis-bacon">Francis Bacon</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/noise-as-generative-force">Noise as Generative Force</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/umberto-eco">Umberto Eco</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fair-principles">FAIR Principles</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ontologies-vs-embeddings">Ontologies vs. Embeddings — Two Paths to Semantic Structure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/universal-library-river-of-noise">The Universal Library in the River of Noise</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/perfect-language">Perfect Language</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/domain-ontologies-knowledge-graph-construction">Domain Ontologies: Indispensable for Knowledge Graph Construction</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/umberto-eco">Umberto Eco</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-slop">AI Slop</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/knowledge-systems">knowledge-systems</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/information-theory">information-theory</a><a class="tag" href="/wiki/topics/myth">myth</a><a class="tag" href="/wiki/topics/universalism">universalism</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

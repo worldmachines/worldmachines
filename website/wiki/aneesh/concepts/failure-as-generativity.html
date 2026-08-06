@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,21 +26,30 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Failure as Generativity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Failure as Generativity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/failure-as-generativity.md">source on GitHub</a></div>
-  <div class="note-summary">The design and intellectual principle that failure is not the termination of a process but its most generative moment — the source of the richest stories, learning, and forward momentum.</div>
-  <div class="tags"><span class="tag">design</span><span class="tag">creativity</span><span class="tag">games</span><span class="tag">epistemology</span><span class="tag">resilience</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/failure-as-generativity.md">source on GitHub</a></div>
+    <div class="note-summary">The design and intellectual principle that failure is not the termination of a process but its most generative moment — the source of the richest stories, learning, and forward momentum.</div>
     <div class="prose">
 <p>The conventional view of failure is terminal — it ends the game, the project, the experiment. The alternative view: <strong>failure is the most generative moment</strong>, producing the richest stories, sharpest learning, and most interesting problems.</p>
 <h2 id="dwarf-fortress-losing-is-fun">Dwarf Fortress: &quot;Losing is FUN&quot;</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress&quot;">Dwarf Fortress</span> has no win condition. The game&#x27;s tagline is &quot;Losing is FUN!&quot; Every fortress eventually falls — to goblin siege, tantrum spiral, forgotten beast, or dwarf-on-dwarf violence. These catastrophes are the point. They are the stories players tell. The most famous DF legends (Boatmurdered, Oilfurnace) are stories of spectacular failure.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/dwarf-fortress" title="Written [[Dwarf Fortress]], resolved to dwarf-fortress">Dwarf Fortress</a> has no win condition. The game&#x27;s tagline is &quot;Losing is FUN!&quot; Every fortress eventually falls — to goblin siege, tantrum spiral, forgotten beast, or dwarf-on-dwarf violence. These catastrophes are the point. They are the stories players tell. The most famous DF legends (Boatmurdered, Oilfurnace) are stories of spectacular failure.</p>
 <p>The design insight: remove the win state, and failure stops being the opposite of success — it becomes the <em>texture</em> of the experience. See <a class="wikilink" href="/wiki/aneesh/summaries/the-best-game-ever-made">The Best Game Ever Made</a>.</p>
 <h2 id="epistemic-failure">Epistemic Failure</h2>
-<p>In scientific inquiry, failed experiments contain more information than successful ones — they eliminate hypotheses and often reveal unexpected confounders or mechanisms. The Socratic question (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs Questions&quot;">Problems vs Questions</span>) progresses through productive failures: each wrong path is a placed waypoint.</p>
+<p>In scientific inquiry, failed experiments contain more information than successful ones — they eliminate hypotheses and often reveal unexpected confounders or mechanisms. The Socratic question (<a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs Questions]], resolved to problems-vs-questions">Problems vs Questions</a>) progresses through productive failures: each wrong path is a placed waypoint.</p>
 <h2 id="organizational-failure">Organizational Failure</h2>
 <p>Startups and research teams that treat failure as terminal create cultures of risk aversion. Teams that treat failure as information create cultures of experimentation. The key is what happens <em>after</em> failure: is it analyzed and integrated, or hidden and moved past?</p>
 <h2 id="the-conditions-for-generative-failure">The Conditions for Generative Failure</h2>
@@ -59,26 +68,64 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress&quot;">Dwarf Fortress</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Emergent Complexity&quot;">Emergent Complexity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs Questions&quot;">Problems vs Questions</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Long-Form Creative Projects&quot;">Long-Form Creative Projects</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/dwarf-fortress" title="Written [[Dwarf Fortress]], resolved to dwarf-fortress">Dwarf Fortress</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/emergent-complexity" title="Written [[Emergent Complexity]], resolved to emergent-complexity">Emergent Complexity</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs Questions]], resolved to problems-vs-questions">Problems vs Questions</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/long-form-creative-projects" title="Written [[Long-Form Creative Projects]], resolved to long-form-creative-projects">Long-Form Creative Projects</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/summaries/the-best-game-ever-made">The Best Game Ever Made</a> (Aneesh Sathe, 2025)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/awkward-grace">Awkward Grace</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/crash-only-thinking-applied-to-self">Crash-Only Thinking Applied to the Self</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>332</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/dwarf-fortress">Dwarf Fortress</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/emergent-complexity">Emergent Complexity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/long-form-creative-projects">Long-Form Creative Projects</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-game-ever-made">The Best Game Ever Made</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/simulation-as-world-building">Simulation as World-Building</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/awkward-grace">Awkward Grace</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/simulation-and-the-socratic-question">Simulation and the Socratic Question: Removing the Win Condition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/audacity-and-the-long-game">Audacity and the Long Game</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/crash-only-thinking-applied-to-self">Crash-Only Thinking Applied to the Self</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/dwarf-fortress">Dwarf Fortress</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/tarn-adams">Tarn Adams</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/emergent-complexity">Emergent Complexity</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/long-form-creative-projects">Long-Form Creative Projects</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-game-ever-made">The Best Game Ever Made</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/community-built-creative-works">Community-Built Creative Works</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/simulation-as-world-building">Simulation as World-Building</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/design">design</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/games">games</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/resilience">resilience</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

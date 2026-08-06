@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Sensemaking and Frame Fixation in Technological Disruption</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Sensemaking and Frame Fixation in Technological Disruption</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption.md">source on GitHub</a></div>
-  <div class="note-summary">Cross-source synthesis: the Data-Frame Theory of Sensemaking predicts that experienced practitioners face a specific risk during technological disruption — frame fixation — and prescribes a counter-strategy distinct from both conventional wisdom and forecasting.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">sensemaking</span><span class="tag">expertise</span><span class="tag">technology</span><span class="tag">disruption</span><span class="tag">AI</span><span class="tag">frame-fixation</span><span class="tag">data-frame-theory</span><span class="tag">commoncog</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption.md">source on GitHub</a></div>
+    <div class="note-summary">Cross-source synthesis: the Data-Frame Theory of Sensemaking predicts that experienced practitioners face a specific risk during technological disruption — frame fixation — and prescribes a counter-strategy distinct from both conventional wisdom and forecasting.</div>
     <div class="prose">
 <h2 id="the-central-synthesis">The Central Synthesis</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How to Make Sense of AI&quot;">How to Make Sense of AI</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span> together constitute a two-layer argument about expertise and technological change:</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/how-to-make-sense-of-ai" title="Written [[How to Make Sense of AI]], resolved to how-to-make-sense-of-ai">How to Make Sense of AI</a> and <a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a> together constitute a two-layer argument about expertise and technological change:</p>
 <ol>
-<li><strong>Practical layer</strong> (Part 1): Filter AI content ruthlessly; consume only field reports; apply the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Four Questions of Uncertainty&quot;">Four Questions of Uncertainty</span></li>
-<li><strong>Theoretical grounding</strong> (Part 2): The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> explains <em>why</em> this works — and reveals what can still go wrong</li>
+<li><strong>Practical layer</strong> (Part 1): Filter AI content ruthlessly; consume only field reports; apply the <a class="wikilink" href="/wiki/aneesh/concepts/four-questions-of-uncertainty" title="Written [[Four Questions of Uncertainty]], resolved to four-questions-of-uncertainty">Four Questions of Uncertainty</a></li>
+<li><strong>Theoretical grounding</strong> (Part 2): The <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> explains <em>why</em> this works — and reveals what can still go wrong</li>
 </ol>
-<p>The synthesis is: <strong>the primary failure mode for experienced practitioners facing revolutionary technology is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — not ignorance, not lack of exposure, but the inability to let go of the expert frames that have made them successful.</strong></p>
+<p>The synthesis is: <strong>the primary failure mode for experienced practitioners facing revolutionary technology is <a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — not ignorance, not lack of exposure, but the inability to let go of the expert frames that have made them successful.</strong></p>
 <h2 id="why-expertise-creates-vulnerability">Why Expertise Creates Vulnerability</h2>
 <p>Paradoxically, expertise creates a <em>specific</em> type of vulnerability during technological disruption:</p>
 <ul>
@@ -68,31 +77,58 @@
 <li>Know which specific data points would force a reframe (e.g., seeing quality collapse in these reports)</li>
 </ul>
 <h2 id="connection-to-fast-adaptation">Connection to Fast Adaptation</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fast Adaptation Under Uncertainty&quot;">Fast Adaptation Under Uncertainty</span> is the competitive stance that emerges from this synthesis. The implication is institutional as well as individual: organizations that structure themselves for fast reframing — information-sharing, experimentation culture, low cost of direction changes — will outperform organizations that optimize for accuracy of initial predictions.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty" title="Written [[Fast Adaptation Under Uncertainty]], resolved to fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a> is the competitive stance that emerges from this synthesis. The implication is institutional as well as individual: organizations that structure themselves for fast reframing — information-sharing, experimentation culture, low cost of direction changes — will outperform organizations that optimize for accuracy of initial predictions.</p>
 <p>The Walmart case study from Chin is the canonical historical fragment: Walmart didn&#x27;t predict that PCs would create the world&#x27;s most successful retailer. They coupled the technology to a new organizational form (decentralized logistics, cross-docking, supplier-facing inventory systems) in a way competitors couldn&#x27;t easily copy. The sensemaking was in recognizing <em>that coupling</em> as the real opportunity.</p>
 <h2 id="essay-direction">Essay Direction</h2>
 <p><strong>Seed</strong>: &quot;The Expert&#x27;s Blind Spot: Why Experience Is the Enemy of Innovation&quot;</p>
-<p>The argument: the literature on expertise (NDM, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span>) shows us that experts have powerful frames that make them fast and accurate in familiar territory. But <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span> in Bloom&#x27;s sense and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> in Klein&#x27;s sense describe the same phenomenon from different angles — the trap of excessive investment in inherited structure. The essay could draw this parallel and propose that the cure for both is the same: deliberate cultivation of alternative frames, even before you believe them.</p>
+<p>The argument: the literature on expertise (NDM, <a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a>) shows us that experts have powerful frames that make them fast and accurate in familiar territory. But <a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a> in Bloom&#x27;s sense and <a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> in Klein&#x27;s sense describe the same phenomenon from different angles — the trap of excessive investment in inherited structure. The essay could draw this parallel and propose that the cure for both is the same: deliberate cultivation of alternative frames, even before you believe them.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — theoretical foundation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — the central failure mode</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — the research tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Four Questions of Uncertainty&quot;">Four Questions of Uncertainty</span> — the practical protocol</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fast Adaptation Under Uncertainty&quot;">Fast Adaptation Under Uncertainty</span> — the competitive stance</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span> — Chin&#x27;s treatment</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How to Make Sense of AI&quot;">How to Make Sense of AI</span> — the applied method</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span> — the literary theory parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> — another framing of the same trap</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — theoretical foundation</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — the central failure mode</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — the research tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/four-questions-of-uncertainty" title="Written [[Four Questions of Uncertainty]], resolved to four-questions-of-uncertainty">Four Questions of Uncertainty</a> — the practical protocol</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty" title="Written [[Fast Adaptation Under Uncertainty]], resolved to fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a> — the competitive stance</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a> — Chin&#x27;s treatment</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-to-make-sense-of-ai" title="Written [[How to Make Sense of AI]], resolved to how-to-make-sense-of-ai">How to Make Sense of AI</a> — the applied method</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a> — the literary theory parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> — another framing of the same trap</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>740</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-sensemaker-and-the-explorer">The Sensemaker and the Explorer</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/theorizing-as-sensemaking-weick-klein-convergence">Theorizing as Sensemaking — The Weick-Klein Convergence</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/karl-weick">Karl E. Weick</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/technology">technology</a><span class="tag tag-lone" title="Only this note uses it">disruption</span><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/frame-fixation">frame-fixation</a><a class="tag" href="/wiki/topics/data-frame-theory">data-frame-theory</a><a class="tag" href="/wiki/topics/commoncog">commoncog</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

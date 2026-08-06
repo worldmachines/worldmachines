@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Johann Wolfgang von Goethe (1749–1832)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Johann Wolfgang von Goethe (1749–1832)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/johann-wolfgang-von-goethe.md">source on GitHub</a></div>
-  <div class="note-summary">Johann Wolfgang von Goethe (1749–1832) is the most skeptical of the Kulturkritik thinkers, rejecting the English garden as aesthetically dishonest and proposing instead a dynamic of irreducible polar opposites (Steigerung) in which nature and culture never synthesize but perpetually intensify each other.</div>
-  <div class="tags"><span class="tag">goethe</span><span class="tag">kulturkritik</span><span class="tag">elective-affinities</span><span class="tag">faust</span><span class="tag">steigerung</span><span class="tag">english-garden</span><span class="tag">kunstwahrheit</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/johann-wolfgang-von-goethe.md">source on GitHub</a></div>
+    <div class="note-summary">Johann Wolfgang von Goethe (1749–1832) is the most skeptical of the Kulturkritik thinkers, rejecting the English garden as aesthetically dishonest and proposing instead a dynamic of irreducible polar opposites (Steigerung) in which nature and culture never synthesize but perpetually intensify each other.</div>
     <div class="prose">
 <h2 id="biographical-context">Biographical Context</h2>
 <ul>
 <li>Poet, novelist, scientist, statesman</li>
 <li>Dabbled in gardening (vegetable and botanical gardens at his Weimar residence)</li>
-<li>Key texts for <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span>: <em>Elective Affinities</em> (1809), <em>Faust I &amp; II</em>, &quot;On Dilettantism&quot; (<em>SW18</em>), the poem &quot;Der Spaziergang&quot; (echoing Schiller&#x27;s similar poem)</li>
+<li>Key texts for <a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a>: <em>Elective Affinities</em> (1809), <em>Faust I &amp; II</em>, &quot;On Dilettantism&quot; (<em>SW18</em>), the poem &quot;Der Spaziergang&quot; (echoing Schiller&#x27;s similar poem)</li>
 <li>Correspondence with his sister Cornelia (1767): &quot;Don&#x27;t laugh about this seemingly foolish philosophy, the seemingly paradoxical pronouncements, they are the most splendid truths&quot;</li>
 </ul>
 <h2 id="goethes-relationship-to-rousseau">Goethe&#x27;s Relationship to Rousseau</h2>
@@ -71,22 +80,65 @@
 <p>The English garden&#x27;s error is precisely that it pretends to be a synthesis. Goethe sees this as aesthetically and metaphysically dishonest.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> — Goethe&#x27;s most skeptical engagement with the tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> — predecessor and cultural context</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Friedrich Schiller&quot;">Friedrich Schiller</span> — contemporary and sometime ally/contrast</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The English Garden as Epistemic Object&quot;">The English Garden as Epistemic Object</span> — Goethe&#x27;s key site of critique</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nature-Culture Dialectic&quot;">Nature-Culture Dialectic</span> — Goethe&#x27;s <em>Steigerung</em> alternative to synthesis</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Franz R. Kempf&quot;">Franz R. Kempf</span> — scholar analyzing Goethe&#x27;s position</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> — Goethe&#x27;s most skeptical engagement with the tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> — predecessor and cultural context</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/friedrich-schiller" title="Written [[Friedrich Schiller]], resolved to friedrich-schiller">Friedrich Schiller</a> — contemporary and sometime ally/contrast</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object" title="Written [[The English Garden as Epistemic Object]], resolved to the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a> — Goethe&#x27;s key site of critique</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/nature-culture-dialectic" title="Written [[Nature-Culture Dialectic]], resolved to nature-culture-dialectic">Nature-Culture Dialectic</a> — Goethe&#x27;s <em>Steigerung</em> alternative to synthesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/franz-r-kempf" title="Written [[Franz R. Kempf]], resolved to franz-r-kempf">Franz R. Kempf</a> — scholar analyzing Goethe&#x27;s position</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a> — summary</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>731</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schiller">Friedrich Schiller (1759–1805)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeopathic-critique">Homeopathic Critique</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nature-culture-dialectic">Nature-Culture Dialectic</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/the-jena-circle">The Jena Circle</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturphilosophie">Naturphilosophie</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/friedrich-schiller">Friedrich Schiller (1759–1805)</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/jean-jacques-rousseau">Jean-Jacques Rousseau (1712–1778)</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/franz-r-kempf">Franz R. Kempf</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/homeopathic-critique">Homeopathic Critique</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/goethe">goethe</a><a class="tag" href="/wiki/topics/kulturkritik">kulturkritik</a><span class="tag tag-lone" title="Only this note uses it">elective-affinities</span><span class="tag tag-lone" title="Only this note uses it">faust</span><a class="tag" href="/wiki/topics/steigerung">steigerung</a><a class="tag" href="/wiki/topics/english-garden">english-garden</a><span class="tag tag-lone" title="Only this note uses it">kunstwahrheit</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

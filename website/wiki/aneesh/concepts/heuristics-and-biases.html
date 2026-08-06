@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,21 +26,30 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Heuristics and Biases</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Heuristics and Biases</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/heuristics-and-biases.md">source on GitHub</a></div>
-  <div class="note-summary">The research tradition founded by Kahneman and Tversky that catalogues systematic cognitive errors — challenged by Naturalistic Decision Making researchers who argue the methodology studies the wrong people doing the wrong tasks.</div>
-  <div class="tags"><span class="tag">kahneman</span><span class="tag">tversky</span><span class="tag">cognitive-bias</span><span class="tag">decision-making</span><span class="tag">psychology</span><span class="tag">lab-methodology</span><span class="tag">confirmation-bias</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/heuristics-and-biases.md">source on GitHub</a></div>
+    <div class="note-summary">The research tradition founded by Kahneman and Tversky that catalogues systematic cognitive errors — challenged by Naturalistic Decision Making researchers who argue the methodology studies the wrong people doing the wrong tasks.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>The <strong>Heuristics and Biases</strong> (H&amp;B) program in cognitive psychology, developed primarily by Daniel Kahneman and Amos Tversky in the 1970s, catalogues systematic departures from normative rationality in human judgment and decision-making. These departures are labeled &quot;biases&quot; — anchoring bias, availability heuristic, representativeness heuristic, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confirmation Bias&quot;">Confirmation Bias</span>, framing effects, and dozens more.</p>
+<p>The <strong>Heuristics and Biases</strong> (H&amp;B) program in cognitive psychology, developed primarily by Daniel Kahneman and Amos Tversky in the 1970s, catalogues systematic departures from normative rationality in human judgment and decision-making. These departures are labeled &quot;biases&quot; — anchoring bias, availability heuristic, representativeness heuristic, <a class="wikilink-wanted" href="/wiki/wanted/confirmation-bias" title="No note is called &quot;Confirmation Bias&quot; yet — see who is asking for it">Confirmation Bias</a>, framing effects, and dozens more.</p>
 <p>The program&#x27;s claims: human cognition uses fast, automatic heuristics that work well in some domains but systematically fail in others, producing predictable errors. The prescription: awareness of biases + deliberate &quot;slow thinking&quot; (System 2) can improve decision quality.</p>
 <p>Popularized by Kahneman&#x27;s <em>Thinking, Fast and Slow</em> (2011).</p>
 <h2 id="the-methodological-critique">The Methodological Critique</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> (NDM) tradition, led by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span>, mounts a fundamental methodological challenge:</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> (NDM) tradition, led by <a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a>, mounts a fundamental methodological challenge:</p>
 <p>H&amp;B findings are produced by:</p>
 <ul>
 <li><strong>Subject pool</strong>: undergraduate students — the least expert possible population</li>
@@ -75,23 +84,55 @@
 <p>The dispute is about: whether these processes are <em>defects</em> to be corrected, or <em>tools</em> whose quality depends on the expertise and domain context of deployment.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — the opposing paradigm</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Confirmation Bias&quot;">Confirmation Bias</span> — the paradigm case of the dispute</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — principal NDM critic</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — the NDM replacement for H&amp;B models of sensemaking</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Abductive Reasoning&quot;">Abductive Reasoning</span> — what H&amp;B mislabels as confirmation bias</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — a real bias identified <em>within</em> NDM framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — the opposing paradigm</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/confirmation-bias" title="No note is called &quot;Confirmation Bias&quot; yet — see who is asking for it">Confirmation Bias</a> — the paradigm case of the dispute</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — principal NDM critic</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — the NDM replacement for H&amp;B models of sensemaking</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/abductive-reasoning" title="Written [[Abductive Reasoning]], resolved to abductive-reasoning">Abductive Reasoning</a> — what H&amp;B mislabels as confirmation bias</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — a real bias identified <em>within</em> NDM framework</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>565</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/klein-data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/data-and-frames-in-analysis-and-art">Data is Always Constructed: From Sensemaking to Art</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/abductive-reasoning">Abductive Reasoning</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/karl-weick">Karl E. Weick</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">kahneman</span><span class="tag tag-lone" title="Only this note uses it">tversky</span><a class="tag" href="/wiki/topics/cognitive-bias">cognitive-bias</a><a class="tag" href="/wiki/topics/decision-making">decision-making</a><a class="tag" href="/wiki/topics/psychology">psychology</a><span class="tag tag-lone" title="Only this note uses it">lab-methodology</span><span class="tag tag-lone" title="Only this note uses it">confirmation-bias</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

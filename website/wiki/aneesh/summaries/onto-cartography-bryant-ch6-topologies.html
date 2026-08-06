@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Summary: Bryant, *Onto-Cartography* Ch. 6 — &quot;Topologies of Space and Time&quot; (pp. 140–183)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Summary: Bryant, *Onto-Cartography* Ch. 6 — &quot;Topologies of Space and Time&quot; (pp. 140–183)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/onto-cartography-bryant-ch6-topologies.md">source on GitHub</a></div>
-  <div class="note-summary">Bryant&#x27;s Ch. 6 argues that space and time are not containers but products of machine-relations, replacing Cartesian/Euclidean geometry with topological analysis across spatial fields, temporal rhythms, overdetermination, and the politics of fatigue.</div>
-  <div class="tags"><span class="tag">onto-cartography</span><span class="tag">topology</span><span class="tag">space</span><span class="tag">time</span><span class="tag">machines</span><span class="tag">assemblage</span><span class="tag">bryant</span><span class="tag">geophilosophy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/onto-cartography-bryant-ch6-topologies.md">source on GitHub</a></div>
+    <div class="note-summary">Bryant&#x27;s Ch. 6 argues that space and time are not containers but products of machine-relations, replacing Cartesian/Euclidean geometry with topological analysis across spatial fields, temporal rhythms, overdetermination, and the politics of fatigue.</div>
     <div class="prose">
 <h2 id="chapter-arc">Chapter Arc</h2>
 <p>Chapter 6 is the most expansive chapter of <em>Onto-Cartography</em>, making good on the book&#x27;s central methodological claim: that mapping worlds requires not Cartesian geometry but topology — the science of nearness, distance, and connectivity as <em>produced</em> by relations between machines. Bryant opens by stressing that space and time are inseparable (&quot;spatio-temporality&quot;), each always having the dimension of the other, and closes with a theory of overdetermination that explains why no local manifestation of a machine can be attributed to a single cause.</p>
@@ -121,16 +130,36 @@
 <li><p>&quot;All subsequent revolutionary thought has consisted in arguing [that relations are external and contingent], while all reactionary thought — prior and after Lucretius — has argued for the internality of relations, for the relational or &#x27;natural&#x27; being of machines.&quot; (p. 182)</p></li>
 </ol>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/massey-bryant-relational-space">Massey and Bryant: Relational Space — Two Versions</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>2145</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/massey-bryant-relational-space">Massey and Bryant: Relational Space — Two Versions</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/bryant-gravity-as-power">Bryant&#x27;s Gravity as Power</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/onto-cartography">onto-cartography</a><a class="tag" href="/wiki/topics/topology">topology</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/time">time</a><a class="tag" href="/wiki/topics/machines">machines</a><a class="tag" href="/wiki/topics/assemblage">assemblage</a><a class="tag" href="/wiki/topics/bryant">bryant</a><a class="tag" href="/wiki/topics/geophilosophy">geophilosophy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

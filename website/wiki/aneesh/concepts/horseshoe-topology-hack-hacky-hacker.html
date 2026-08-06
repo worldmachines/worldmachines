@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Horseshoe Topology of Hack-Hacky-Hacker</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Horseshoe Topology of Hack-Hacky-Hacker</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/horseshoe-topology-hack-hacky-hacker.md">source on GitHub</a></div>
-  <div class="note-summary">The structural claim that hack (fraud) and hacker (master) share more with each other than either does with the hacky middle — both narrow the world, require dedication, and eliminate play.</div>
-  <div class="tags"><span class="tag">topology</span><span class="tag">hacking</span><span class="tag">posture</span><span class="tag">horseshoe</span><span class="tag">extremes</span><span class="tag">middle-path</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/horseshoe-topology-hack-hacky-hacker.md">source on GitHub</a></div>
+    <div class="note-summary">The structural claim that hack (fraud) and hacker (master) share more with each other than either does with the hacky middle — both narrow the world, require dedication, and eliminate play.</div>
     <div class="prose">
 <h2 id="the-structure">The Structure</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span>, the three positions form a <strong>horseshoe</strong>: the two ends (fraud and mastery) are closer to each other than either is to the hacky middle.</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a>, the three positions form a <strong>horseshoe</strong>: the two ends (fraud and mastery) are closer to each other than either is to the hacky middle.</p>
 <pre><code>Hack (fraud) ——————— Hacky ——————— Hacker (master)
      |                                     |
      └—————————————————————————————————————┘
@@ -55,27 +64,40 @@
 <ol>
 <li>Preserves play</li>
 <li>Maximizes real-world problem-solving throughput</li>
-<li>Maintains breadth and flexibility (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fox-Hedgehog Distinction&quot;">Fox-Hedgehog Distinction</span>)</li>
-<li>Does not compromise final output quality (unlike <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jugaad&quot;">Jugaad</span>)</li>
+<li>Maintains breadth and flexibility (see <a class="wikilink" href="/wiki/aneesh/concepts/fox-hedgehog-distinction" title="Written [[Fox-Hedgehog Distinction]], resolved to fox-hedgehog-distinction">Fox-Hedgehog Distinction</a>)</li>
+<li>Does not compromise final output quality (unlike <a class="wikilink" href="/wiki/aneesh/concepts/jugaad" title="Written [[Jugaad]], resolved to jugaad">Jugaad</a>)</li>
 </ol>
 <h2 id="tension">Tension</h2>
 <p>There may be domains where the horseshoe doesn&#x27;t hold — where mastery genuinely is joyful and not narrowing (e.g., certain craftspeople, mathematicians, athletes who describe being &quot;in flow&quot;). The essay doesn&#x27;t address whether the hacker position is <em>always</em> narrowing or only contingently so.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hacky Mindset&quot;">Hacky Mindset</span> — the preferred middle position</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fox-Hedgehog Distinction&quot;">Fox-Hedgehog Distinction</span> — intellectual parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jugaad&quot;">Jugaad</span> — another trap distinguished from hacky</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hack Hacky Hacker&quot;">Hack Hacky Hacker</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Play as Problem-Solving&quot;">Play as Problem-Solving</span> — what the middle preserves</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/hacky-mindset" title="Written [[Hacky Mindset]], resolved to hacky-mindset">Hacky Mindset</a> — the preferred middle position</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fox-hedgehog-distinction" title="Written [[Fox-Hedgehog Distinction]], resolved to fox-hedgehog-distinction">Fox-Hedgehog Distinction</a> — intellectual parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/jugaad" title="Written [[Jugaad]], resolved to jugaad">Jugaad</a> — another trap distinguished from hacky</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/hack-hacky-hacker" title="Written [[Hack Hacky Hacker]], resolved to hack-hacky-hacker">Hack Hacky Hacker</a> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/play-as-problem-solving" title="Written [[Play as Problem-Solving]], resolved to play-as-problem-solving">Play as Problem-Solving</a> — what the middle preserves</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>311</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/topology">topology</a><a class="tag" href="/wiki/topics/hacking">hacking</a><a class="tag" href="/wiki/topics/posture">posture</a><span class="tag tag-lone" title="Only this note uses it">horseshoe</span><span class="tag tag-lone" title="Only this note uses it">extremes</span><span class="tag tag-lone" title="Only this note uses it">middle-path</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

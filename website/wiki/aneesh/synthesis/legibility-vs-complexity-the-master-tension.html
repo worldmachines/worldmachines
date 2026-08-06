@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,87 +26,123 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Legibility vs. Complexity — The Master Tension</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Legibility vs. Complexity — The Master Tension</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/legibility-vs-complexity-the-master-tension.md">source on GitHub</a></div>
-  <div class="note-summary">The single deepest tension running through the entire essays wiki: the drive to make things legible (compressible, measurable, governable) versus the irreducible complexity that resists legibility — traced across AI, architecture, politics, data science, knowledge systems, gardens, and the counter-Enlightenment.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">legibility</span><span class="tag">complexity</span><span class="tag">master-tension</span><span class="tag">james-scott</span><span class="tag">ai</span><span class="tag">architecture</span><span class="tag">politics</span><span class="tag">data-science</span><span class="tag">counter-enlightenment</span><span class="tag">thicket</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/legibility-vs-complexity-the-master-tension.md">source on GitHub</a></div>
+    <div class="note-summary">The single deepest tension running through the entire essays wiki: the drive to make things legible (compressible, measurable, governable) versus the irreducible complexity that resists legibility — traced across AI, architecture, politics, data science, knowledge systems, gardens, and the counter-Enlightenment.</div>
     <div class="prose">
-<p><strong>Sources</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Modernity Machine III&quot;">The Modernity Machine III</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI May Be Making Us Think and Write More Alike&quot;">AI May Be Making Us Think and Write More Alike</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gardens Thickets and the Illegibility Problem&quot;">Gardens Thickets and the Illegibility Problem</span>, <a class="wikilink" href="/wiki/aneesh/synthesis/the-opacity-turn-thicket-nakatomi-iltifat">The Opacity Turn — Thicket, Nakatomi, Iltifat</a>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bldgblog Nakatomi Space&quot;">Bldgblog Nakatomi Space</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Beyond the Dataset&quot;">Beyond the Dataset</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Road to Bayesian Stats&quot;">My Road to Bayesian Stats</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin Against the Current&quot;">Isaiah Berlin Against the Current</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Royalty Administration and Antimemetics&quot;">Royalty Administration and Antimemetics</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Universal Library in the River of Noise&quot;">The Universal Library in the River of Noise</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwarf Fortress Emacs AI Generative Complexity&quot;">Dwarf Fortress Emacs AI Generative Complexity</span></p>
+<p><strong>Sources</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a>, <a class="wikilink-wanted" href="/wiki/wanted/the-modernity-machine-iii" title="No note is called &quot;The Modernity Machine III&quot; yet — see who is asking for it">The Modernity Machine III</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a>, <a class="wikilink-wanted" href="/wiki/wanted/ai-may-be-making-us-think-and-write-more-alike" title="No note is called &quot;AI May Be Making Us Think and Write More Alike&quot; yet — see who is asking for it">AI May Be Making Us Think and Write More Alike</a>, <a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem" title="Written [[Gardens Thickets and the Illegibility Problem]], resolved to gardens-thickets-and-the-illegibility-problem">Gardens Thickets and the Illegibility Problem</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/the-opacity-turn-thicket-nakatomi-iltifat">The Opacity Turn — Thicket, Nakatomi, Iltifat</a>, <a class="wikilink" href="/wiki/aneesh/summaries/bldgblog-nakatomi-space" title="Written [[Bldgblog Nakatomi Space]], resolved to bldgblog-nakatomi-space">Bldgblog Nakatomi Space</a>, <a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset" title="Written [[Beyond the Dataset]], resolved to beyond-the-dataset">Beyond the Dataset</a>, <a class="wikilink" href="/wiki/aneesh/summaries/my-road-to-bayesian-stats" title="Written [[My Road to Bayesian Stats]], resolved to my-road-to-bayesian-stats">My Road to Bayesian Stats</a>, <a class="wikilink" href="/wiki/aneesh/concepts/domain-ontologies" title="Written [[Domain Ontologies]], resolved to domain-ontologies">Domain Ontologies</a>, <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin Against the Current</a>, <a class="wikilink" href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics" title="Written [[Royalty Administration and Antimemetics]], resolved to royalty-administration-and-antimemetics">Royalty Administration and Antimemetics</a>, <a class="wikilink-wanted" href="/wiki/wanted/the-universal-library-in-the-river-of-noise" title="No note is called &quot;The Universal Library in the River of Noise&quot; yet — see who is asking for it">The Universal Library in the River of Noise</a>, <a class="wikilink" href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity" title="Written [[Dwarf Fortress Emacs AI Generative Complexity]], resolved to dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress Emacs AI Generative Complexity</a></p>
 <h2 id="the-tension">The Tension</h2>
 <p>If there is a single intellectual thread that connects every domain in this wiki — from data science to architecture to political philosophy to AI to gardening — it is the tension between <strong>legibility</strong> and <strong>complexity</strong>.</p>
-<p><strong>Legibility</strong> is the drive to make the world readable, compressible, measurable, and governable. It is the Modernity Machine&#x27;s core optimizer (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Modernity Machine III&quot;">The Modernity Machine III</span>). It produces taxonomies, ontologies, dashboards, p-values, zoning laws, algorithmic recommendations, and universal standards.</p>
+<p><strong>Legibility</strong> is the drive to make the world readable, compressible, measurable, and governable. It is the Modernity Machine&#x27;s core optimizer (<a class="wikilink-wanted" href="/wiki/wanted/the-modernity-machine-iii" title="No note is called &quot;The Modernity Machine III&quot; yet — see who is asking for it">The Modernity Machine III</a>). It produces taxonomies, ontologies, dashboards, p-values, zoning laws, algorithmic recommendations, and universal standards.</p>
 <p><strong>Complexity</strong> is what resists legibility — not as defiance but as irreducible structure. It is the thicket that cannot be mapped without destroying it, the embodied knowledge that cannot be codified, the cultural particularity that cannot be universalized, the emergent behavior that cannot be predicted from components.</p>
 <h2 id="the-manifestations">The Manifestations</h2>
 <h3 id="ai-and-cognition">AI and Cognition</h3>
 <ul>
-<li>LLMs homogenize cognition by imposing statistical averages on language and reasoning (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI May Be Making Us Think and Write More Alike&quot;">AI May Be Making Us Think and Write More Alike</span>)</li>
-<li>This is the empirical instantiation of what the counter-Enlightenment feared: a single rational-universalist standard erasing irreducible particularity (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span>)</li>
-<li>Explainable AI faces the legibility/complexity tradeoff directly: how much to explain, to whom, at what cost to accuracy (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainability Across Domains&quot;">Explainability Across Domains</span>)</li>
+<li>LLMs homogenize cognition by imposing statistical averages on language and reasoning (<a class="wikilink-wanted" href="/wiki/wanted/ai-may-be-making-us-think-and-write-more-alike" title="No note is called &quot;AI May Be Making Us Think and Write More Alike&quot; yet — see who is asking for it">AI May Be Making Us Think and Write More Alike</a>)</li>
+<li>This is the empirical instantiation of what the counter-Enlightenment feared: a single rational-universalist standard erasing irreducible particularity (<a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a>)</li>
+<li>Explainable AI faces the legibility/complexity tradeoff directly: how much to explain, to whom, at what cost to accuracy (<a class="wikilink" href="/wiki/aneesh/synthesis/explainability-across-domains" title="Written [[Explainability Across Domains]], resolved to explainability-across-domains">Explainability Across Domains</a>)</li>
 </ul>
 <h3 id="architecture-and-space">Architecture and Space</h3>
 <ul>
-<li>Buildings encode legibility (designed corridors, functional zoning) but contain illegible space traversable only by those who break the grammar (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bldgblog Nakatomi Space&quot;">Bldgblog Nakatomi Space</span>)</li>
-<li>The thicket is deliberately cultivated illegibility — a habitat that protects divergence from averaging systems (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span>)</li>
-<li>The English garden attempts to reconcile nature and culture but ends up as a controlled illegibility — a garden that looks wild but is maintained (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gardens Thickets and the Illegibility Problem&quot;">Gardens Thickets and the Illegibility Problem</span>)</li>
+<li>Buildings encode legibility (designed corridors, functional zoning) but contain illegible space traversable only by those who break the grammar (<a class="wikilink" href="/wiki/aneesh/summaries/bldgblog-nakatomi-space" title="Written [[Bldgblog Nakatomi Space]], resolved to bldgblog-nakatomi-space">Bldgblog Nakatomi Space</a>)</li>
+<li>The thicket is deliberately cultivated illegibility — a habitat that protects divergence from averaging systems (<a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a>)</li>
+<li>The English garden attempts to reconcile nature and culture but ends up as a controlled illegibility — a garden that looks wild but is maintained (<a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem" title="Written [[Gardens Thickets and the Illegibility Problem]], resolved to gardens-thickets-and-the-illegibility-problem">Gardens Thickets and the Illegibility Problem</a>)</li>
 </ul>
 <h3 id="data-science-and-measurement">Data Science and Measurement</h3>
 <ul>
-<li>Measurement is an act of bounding — it makes phenomena legible but forecloses what lies outside the boundary (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Beyond the Dataset&quot;">Beyond the Dataset</span>)</li>
-<li>Bayesian statistics makes assumptions explicit (legible) rather than hiding them in procedural defaults (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Road to Bayesian Stats&quot;">My Road to Bayesian Stats</span>)</li>
-<li>Ontologies impose semantic structure on domains — legibility as a prerequisite for machine reasoning (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domain Ontologies&quot;">Domain Ontologies</span>)</li>
+<li>Measurement is an act of bounding — it makes phenomena legible but forecloses what lies outside the boundary (<a class="wikilink" href="/wiki/aneesh/summaries/beyond-the-dataset" title="Written [[Beyond the Dataset]], resolved to beyond-the-dataset">Beyond the Dataset</a>)</li>
+<li>Bayesian statistics makes assumptions explicit (legible) rather than hiding them in procedural defaults (<a class="wikilink" href="/wiki/aneesh/summaries/my-road-to-bayesian-stats" title="Written [[My Road to Bayesian Stats]], resolved to my-road-to-bayesian-stats">My Road to Bayesian Stats</a>)</li>
+<li>Ontologies impose semantic structure on domains — legibility as a prerequisite for machine reasoning (<a class="wikilink" href="/wiki/aneesh/concepts/domain-ontologies" title="Written [[Domain Ontologies]], resolved to domain-ontologies">Domain Ontologies</a>)</li>
 </ul>
 <h3 id="political-philosophy">Political Philosophy</h3>
 <ul>
-<li>The counter-Enlightenment&#x27;s core objection: the Enlightenment&#x27;s universal legibility (natural law, rational ethics, human rights) erases the irreducible complexity of cultures, languages, and value systems (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin Against the Current&quot;">Isaiah Berlin Against the Current</span>)</li>
-<li>Royal administrations were antimemetic — deliberately illegible — because visible power is vulnerable power (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Royalty Administration and Antimemetics&quot;">Royalty Administration and Antimemetics</span>)</li>
-<li>The Modernity Machine optimized for legibility and generated byproducts (excess agency, excess information, excess scale) that made its own repair impossible (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Modernity Machine III&quot;">The Modernity Machine III</span>)</li>
+<li>The counter-Enlightenment&#x27;s core objection: the Enlightenment&#x27;s universal legibility (natural law, rational ethics, human rights) erases the irreducible complexity of cultures, languages, and value systems (<a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin Against the Current</a>)</li>
+<li>Royal administrations were antimemetic — deliberately illegible — because visible power is vulnerable power (<a class="wikilink" href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics" title="Written [[Royalty Administration and Antimemetics]], resolved to royalty-administration-and-antimemetics">Royalty Administration and Antimemetics</a>)</li>
+<li>The Modernity Machine optimized for legibility and generated byproducts (excess agency, excess information, excess scale) that made its own repair impossible (<a class="wikilink-wanted" href="/wiki/wanted/the-modernity-machine-iii" title="No note is called &quot;The Modernity Machine III&quot; yet — see who is asking for it">The Modernity Machine III</a>)</li>
 </ul>
 <h3 id="knowledge-systems">Knowledge Systems</h3>
 <ul>
-<li>The universal library dream is a legibility project: all knowledge in one place, searchable, combinable (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Universal Library in the River of Noise&quot;">The Universal Library in the River of Noise</span>)</li>
-<li>But noise in information systems is generative — noise is illegible signal that produces unexpected value (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Generative Complexity as Epistemic Value&quot;">Generative Complexity as Epistemic Value</span>)</li>
-<li>Platforms impose legibility (algorithmic ranking, engagement metrics) on the illegible richness of human communication (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Protocol Gods and Platform Demons&quot;">Protocol Gods and Platform Demons</span>)</li>
+<li>The universal library dream is a legibility project: all knowledge in one place, searchable, combinable (<a class="wikilink-wanted" href="/wiki/wanted/the-universal-library-in-the-river-of-noise" title="No note is called &quot;The Universal Library in the River of Noise&quot; yet — see who is asking for it">The Universal Library in the River of Noise</a>)</li>
+<li>But noise in information systems is generative — noise is illegible signal that produces unexpected value (<a class="wikilink" href="/wiki/aneesh/synthesis/generative-complexity-as-epistemic-value" title="Written [[Generative Complexity as Epistemic Value]], resolved to generative-complexity-as-epistemic-value">Generative Complexity as Epistemic Value</a>)</li>
+<li>Platforms impose legibility (algorithmic ranking, engagement metrics) on the illegible richness of human communication (<a class="wikilink" href="/wiki/aneesh/synthesis/protocol-gods-and-platform-demons" title="Written [[Protocol Gods and Platform Demons]], resolved to protocol-gods-and-platform-demons">Protocol Gods and Platform Demons</a>)</li>
 </ul>
 <h2 id="the-productive-version-of-the-tension">The Productive Version of the Tension</h2>
 <p>The essays do not simply side with illegibility against legibility. The position is subtler:</p>
 <ol>
 <li><strong>Legibility is necessary</strong> — you cannot think, govern, or build without making some things readable</li>
 <li><strong>Legibility is dangerous</strong> — when it becomes totalizing, it destroys the complexity it cannot represent</li>
-<li><strong>The goal is calibrated legibility</strong> — the right amount, at the right level, for the right audience (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainability Across Domains&quot;">Explainability Across Domains</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency as Epistemic Virtue&quot;">Transparency as Epistemic Virtue</span>)</li>
-<li><strong>Illegibility must be cultivated</strong> — the thicket, the Nakatomi space, the lore tradition are not natural wilderness but deliberately maintained complexity (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span>)</li>
+<li><strong>The goal is calibrated legibility</strong> — the right amount, at the right level, for the right audience (<a class="wikilink" href="/wiki/aneesh/synthesis/explainability-across-domains" title="Written [[Explainability Across Domains]], resolved to explainability-across-domains">Explainability Across Domains</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue" title="Written [[Transparency as Epistemic Virtue]], resolved to transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a>)</li>
+<li><strong>Illegibility must be cultivated</strong> — the thicket, the Nakatomi space, the lore tradition are not natural wilderness but deliberately maintained complexity (<a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a>)</li>
 </ol>
 <h2 id="relationship-to-other-synthesis-pages">Relationship to Other Synthesis Pages</h2>
 <p>This page is the meta-synthesis — the tension that other synthesis pages instantiate in specific domains:</p>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility and Divergence&quot;">Legibility and Divergence</span> — the MM/DM version of this tension</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility vs Divergence the Civilizational Tradeoff&quot;">Legibility vs Divergence the Civilizational Tradeoff</span> — the civilizational-scale version</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/legibility-and-divergence" title="Written [[Legibility and Divergence]], resolved to legibility-and-divergence">Legibility and Divergence</a> — the MM/DM version of this tension</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-divergence-the-civilizational-tradeoff" title="Written [[Legibility vs Divergence the Civilizational Tradeoff]], resolved to legibility-vs-divergence-the-civilizational-tradeoff">Legibility vs Divergence the Civilizational Tradeoff</a> — the civilizational-scale version</li>
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/the-opacity-turn-thicket-nakatomi-iltifat">The Opacity Turn — Thicket, Nakatomi, Iltifat</a> — the architectural/literary version</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gardens Thickets and the Illegibility Problem&quot;">Gardens Thickets and the Illegibility Problem</span> — the garden/nature version</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Diversity as Infrastructure&quot;">Cognitive Diversity as Infrastructure</span> — cognitive complexity as infrastructure</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ontologies vs Embeddings&quot;">Ontologies vs Embeddings</span> — two strategies for making knowledge legible to machines</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Invisible Power and Untrustworthy Data&quot;">Invisible Power and Untrustworthy Data</span> — what happens when legibility systems fail silently</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The World Machines Canon&quot;">The World Machines Canon</span> — legibility as the Modernity Machine&#x27;s optimizer</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Explorer and the Tourist&quot;">The Explorer and the Tourist</span> — the explorer navigates illegibility; the tourist consumes legibility</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem" title="Written [[Gardens Thickets and the Illegibility Problem]], resolved to gardens-thickets-and-the-illegibility-problem">Gardens Thickets and the Illegibility Problem</a> — the garden/nature version</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/cognitive-diversity-as-infrastructure" title="Written [[Cognitive Diversity as Infrastructure]], resolved to cognitive-diversity-as-infrastructure">Cognitive Diversity as Infrastructure</a> — cognitive complexity as infrastructure</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/ontologies-vs-embeddings" title="Written [[Ontologies vs Embeddings]], resolved to ontologies-vs-embeddings">Ontologies vs Embeddings</a> — two strategies for making knowledge legible to machines</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/invisible-power-and-untrustworthy-data" title="Written [[Invisible Power and Untrustworthy Data]], resolved to invisible-power-and-untrustworthy-data">Invisible Power and Untrustworthy Data</a> — what happens when legibility systems fail silently</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/the-world-machines-canon" title="Written [[The World Machines Canon]], resolved to the-world-machines-canon">The World Machines Canon</a> — legibility as the Modernity Machine&#x27;s optimizer</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist" title="Written [[The Explorer and the Tourist]], resolved to the-explorer-and-the-tourist">The Explorer and the Tourist</a> — the explorer navigates illegibility; the tourist consumes legibility</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">6</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/axial-age">Axial Age</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-abstract-and-keywords">Abstract: Attention, Not-Knowing, and the Wisdom of a Possible World</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13a-the-2008-financial-crisis">The 2008 Financial Crisis: Deregulation, Leverage, and the House of Cards</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility">Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>24</b><span>links out</span></div>
+      <div class="bearing"><b>802</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/axial-age">Axial Age</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-real-problems-real-freedom-conclusion">Real Problems; Real Freedom</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13a-the-2008-financial-crisis">The 2008 Financial Crisis: Deregulation, Leverage, and the House of Cards</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility">Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-abstract-and-keywords">Abstract: Attention, Not-Knowing, and the Wisdom of a Possible World</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/complexity">complexity</a><span class="tag tag-lone" title="Only this note uses it">master-tension</span><a class="tag" href="/wiki/topics/james-scott">james-scott</a><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/architecture">architecture</a><a class="tag" href="/wiki/topics/politics">politics</a><a class="tag" href="/wiki/topics/data-science">data-science</a><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><a class="tag" href="/wiki/topics/thicket">thicket</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Johann Georg Hamann (1730–1788)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Johann Georg Hamann (1730–1788)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/johann-georg-hamann.md">source on GitHub</a></div>
-  <div class="note-summary">Johann Georg Hamann (1730–1788), &#x27;the Magus of the North,&#x27; was the founding anti-rationalist of the German counter-Enlightenment, arguing that all truth is particular, language precedes reason, and passion gives life to abstractions that reason kills.</div>
-  <div class="tags"><span class="tag">hamann</span><span class="tag">counter-enlightenment</span><span class="tag">anti-rationalism</span><span class="tag">language</span><span class="tag">faith</span><span class="tag">pietism</span><span class="tag">sturm-und-drang</span><span class="tag">berlin</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/johann-georg-hamann.md">source on GitHub</a></div>
+    <div class="note-summary">Johann Georg Hamann (1730–1788), &#x27;the Magus of the North,&#x27; was the founding anti-rationalist of the German counter-Enlightenment, arguing that all truth is particular, language precedes reason, and passion gives life to abstractions that reason kills.</div>
     <div class="prose">
 <p><strong>Born</strong>: Königsberg, Prussia, 1730<br>
 <strong>Died</strong>: Münster, 1788<br>
@@ -57,36 +66,70 @@
 <h2 id="intellectual-lineage">Intellectual Lineage</h2>
 <p>Hamann is the fountainhead of a tradition Berlin traces as follows:</p>
 <ul>
-<li><strong>Direct disciples</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span>, Jacobi, Möser, Young, Burke</li>
+<li><strong>Direct disciples</strong>: <a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a>, Jacobi, Möser, Young, Burke</li>
 <li><strong>Influenced</strong>: Schelling (who became the most eloquent system-builder in this anti-systematic tradition)</li>
 <li><strong>Descendants</strong>: Bergson, and through them the entire anti-positivist schools of the 19th and 20th centuries</li>
 <li><strong>Most brilliant and profound disciple</strong>: Kierkegaard</li>
 </ul>
-<h2 id="relation-to-isaiah-berlin">Relation to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span></h2>
+<h2 id="relation-to-isaiah-berlin">Relation to <a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a></h2>
 <p>Berlin regarded Hamann as philosophically less coherent than Vico or Herder — his thought comes in &quot;irregular, isolated flashes of insight&quot; — but historically crucial. Hamann is the first systematic attacker of the Enlightenment&#x27;s central presuppositions from within Germany, and his influence through Herder was enormous. Berlin takes Hamann&#x27;s diagnosis seriously (reason is limited; the particular always exceeds the general) while rejecting his fideist prescriptions.</p>
 <h2 id="significance-for-contemporary-ai-debates">Significance for Contemporary AI Debates</h2>
-<p>Hamann&#x27;s critique of &quot;monstrous bureaucratic machines&quot; built on abstract rules that crush the variety of living experience is strikingly applicable to contemporary algorithmic systems. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Monoculture&quot;">Epistemic Monoculture</span>.</p>
+<p>Hamann&#x27;s critique of &quot;monstrous bureaucratic machines&quot; built on abstract rules that crush the variety of living experience is strikingly applicable to contemporary algorithmic systems. See <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a> and <a class="wikilink" href="/wiki/aneesh/concepts/epistemic-monoculture" title="Written [[Epistemic Monoculture]], resolved to epistemic-monoculture">Epistemic Monoculture</a>.</p>
 <h2 id="key-quotation">Key Quotation</h2>
 <p>&quot;&#x27;What is this much lauded reason with its universality, infallibility, overweening claims, certainty, self-evidence but an <em>ens rationis</em>, a stuffed dummy which the howling superstition of unreason has endowed with divine attributes?&#x27;&quot; (<em>Sämtliche Werke</em>, W iii 225.3)</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the tradition Hamann founds within Germany</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> — his most important disciple</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> — parallel figure (different tradition, same insurgency)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sturm und Drang&quot;">Sturm und Drang</span> — the literary movement Hamann inspired</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> — who recovered and theorized Hamann&#x27;s importance</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — Berlin&#x27;s doctrine that Hamann&#x27;s particularism anticipates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Monoculture&quot;">Epistemic Monoculture</span> — contemporary structural echo</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the tradition Hamann founds within Germany</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> — his most important disciple</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> — parallel figure (different tradition, same insurgency)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sturm-und-drang" title="Written [[Sturm und Drang]], resolved to sturm-und-drang">Sturm und Drang</a> — the literary movement Hamann inspired</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> — who recovered and theorized Hamann&#x27;s importance</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — Berlin&#x27;s doctrine that Hamann&#x27;s particularism anticipates</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/epistemic-monoculture" title="Written [[Epistemic Monoculture]], resolved to epistemic-monoculture">Epistemic Monoculture</a> — contemporary structural echo</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>889</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/enlightenment-monism">Enlightenment Monism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sturm-und-drang">Sturm und Drang</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/hamann">hamann</a><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><a class="tag" href="/wiki/topics/anti-rationalism">anti-rationalism</a><a class="tag" href="/wiki/topics/language">language</a><span class="tag tag-lone" title="Only this note uses it">faith</span><span class="tag tag-lone" title="Only this note uses it">pietism</span><a class="tag" href="/wiki/topics/sturm-und-drang">sturm-und-drang</a><a class="tag" href="/wiki/topics/berlin">berlin</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

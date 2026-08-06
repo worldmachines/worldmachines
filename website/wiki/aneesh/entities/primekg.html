@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,36 +26,74 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>PrimeKG</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>PrimeKG</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/primekg.md">source on GitHub</a></div>
-  <div class="note-summary">A multimodal precision medicine knowledge graph that integrates multiple domain-specific KGs to enable cross-domain clinical reasoning — cited as an example of the kind of shared knowledge infrastructure that could accelerate healthcare.</div>
-  <div class="tags"><span class="tag">knowledge-graphs</span><span class="tag">precision-medicine</span><span class="tag">drug-discovery</span><span class="tag">clinical-ai</span><span class="tag">datasets</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/primekg.md">source on GitHub</a></div>
+    <div class="note-summary">A multimodal precision medicine knowledge graph that integrates multiple domain-specific KGs to enable cross-domain clinical reasoning — cited as an example of the kind of shared knowledge infrastructure that could accelerate healthcare.</div>
     <div class="prose">
 <p>PrimeKG (Precision Medicine Knowledge Graph) is a research project and dataset that combines multiple domain-specific knowledge graphs — covering diseases, genes, proteins, drugs, side effects, and clinical pathways — into a unified multimodal knowledge graph for precision medicine applications.</p>
 <h2 id="why-it-matters">Why It Matters</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>) cites PrimeKG as an example of progress on the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">knowledge graph</span> integration problem in healthcare. The challenge is that medical knowledge is distributed across many siloed KGs (drug databases, disease ontologies, genomic datasets) — PrimeKG represents an effort to integrate them into a single traversable resource.</p>
-<p>From the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> perspective, PrimeKG is the kind of substrate that makes the architecture viable: a sufficiently comprehensive and integrated KG that an LLM-mediated interface can navigate to provide clinically meaningful answers.</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>) cites PrimeKG as an example of progress on the <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">knowledge graph</a> integration problem in healthcare. The challenge is that medical knowledge is distributed across many siloed KGs (drug databases, disease ontologies, genomic datasets) — PrimeKG represents an effort to integrate them into a single traversable resource.</p>
+<p>From the <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> perspective, PrimeKG is the kind of substrate that makes the architecture viable: a sufficiently comprehensive and integrated KG that an LLM-mediated interface can navigate to provide clinically meaningful answers.</p>
 <h2 id="connection-to-drug-discovery">Connection to Drug Discovery</h2>
-<p>Multimodal KGs like PrimeKG are especially powerful in drug discovery, where the challenge is identifying connections across molecular, cellular, and clinical domains that no single human expert can hold simultaneously. This is the prototype case for the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wright&#x27;s Law&quot;">Wright&#x27;s Law</span> acceleration claim: a shared, traversable knowledge infrastructure could compress the drug discovery process by surfacing cross-domain connections that would otherwise take years of literature review to identify.</p>
+<p>Multimodal KGs like PrimeKG are especially powerful in drug discovery, where the challenge is identifying connections across molecular, cellular, and clinical domains that no single human expert can hold simultaneously. This is the prototype case for the <a class="wikilink" href="/wiki/aneesh/concepts/wrights-law" title="Written [[Wright&#x27;s Law]], resolved to wrights-law">Wright&#x27;s Law</a> acceleration claim: a shared, traversable knowledge infrastructure could compress the drug discovery process by surfacing cross-domain connections that would otherwise take years of literature review to identify.</p>
 <h2 id="related-entities-and-concepts">Related Entities and Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — the class of data structure PrimeKG exemplifies</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR&quot;">FHIR</span> — a complementary standard for clinical (patient-level) data that could integrate with PrimeKG&#x27;s population-level knowledge</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — the architecture PrimeKG-class KGs enable</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mayo Clinic&quot;">Mayo Clinic</span> — another institutional actor in the KG-for-healthcare space</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> — the class of data structure PrimeKG exemplifies</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fhir" title="Written [[FHIR]], resolved to fhir">FHIR</a> — a complementary standard for clinical (patient-level) data that could integrate with PrimeKG&#x27;s population-level knowledge</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> — the architecture PrimeKG-class KGs enable</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/mayo-clinic" title="Written [[Mayo Clinic]], resolved to mayo-clinic">Mayo Clinic</a> — another institutional actor in the KG-for-healthcare space</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>267</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/domain-ontologies-knowledge-graph-construction">Domain Ontologies: Indispensable for Knowledge Graph Construction</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ai-slop">AI Slop</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/fair-principles">FAIR Principles</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/wrights-law">Wright&#x27;s Law</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/knowledge-graphs">knowledge-graphs</a><span class="tag tag-lone" title="Only this note uses it">precision-medicine</span><a class="tag" href="/wiki/topics/drug-discovery">drug-discovery</a><a class="tag" href="/wiki/topics/clinical-ai">clinical-ai</a><span class="tag tag-lone" title="Only this note uses it">datasets</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

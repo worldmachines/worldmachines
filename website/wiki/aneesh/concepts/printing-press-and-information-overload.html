@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Printing Press and Information Overload</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Printing Press and Information Overload</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/printing-press-and-information-overload.md">source on GitHub</a></div>
-  <div class="note-summary">The historical analogy between the printing press&#x27;s initial information overload and today&#x27;s social internet — both flooded culture with more signal than existing filters could handle, and both required new place-making practices (criticism, scientific method; Socratic inquiry) to restore orientation.</div>
-  <div class="tags"><span class="tag">printing-press</span><span class="tag">information-overload</span><span class="tag">history</span><span class="tag">technology</span><span class="tag">Giordano-Bruno</span><span class="tag">scientific-revolution</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/printing-press-and-information-overload.md">source on GitHub</a></div>
+    <div class="note-summary">The historical analogy between the printing press&#x27;s initial information overload and today&#x27;s social internet — both flooded culture with more signal than existing filters could handle, and both required new place-making practices (criticism, scientific method; Socratic inquiry) to restore orientation.</div>
     <div class="prose">
 <h2 id="the-historical-analogy">The Historical Analogy</h2>
 <p>When printing was invented, Europe gained sudden access to all books that had existed — mystical texts, astronomical observations, medical treatises, heretical pamphlets — with no guides to evaluate quality. The result was disorientation: too much signal, not enough tools to convert it into orientation.</p>
 <p>The correction took generations: people learned to compare, organize, and evaluate. This act of place-making — building critical tools and shared standards — is argued (by Sathe) to have triggered the scientific revolution.</p>
 <h2 id="giordano-bruno-as-cautionary-example">Giordano Bruno as Cautionary Example</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span> is invoked as the extreme case of printing-press disorientation:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a> is invoked as the extreme case of printing-press disorientation:</p>
 <ul>
 <li>Took mystical click-bait texts.</li>
 <li>Mixed them with Copernican heliocentric theory (contemporary and credible).</li>
@@ -60,28 +69,67 @@
 </table></div>
 <h2 id="the-lesson">The Lesson</h2>
 <p>The answer to too much information is never less information — it is better tools for place-making. The scientific revolution was a better set of tools for converting signal → information → orientation, not a reduction in signal.</p>
-<p>The same applies today: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Waldenponding&quot;">Waldenponding</span> is the wrong move. The move is developing Socratic/critical tools for navigating the social internet.</p>
+<p>The same applies today: <a class="wikilink" href="/wiki/aneesh/concepts/waldenponding" title="Written [[Waldenponding]], resolved to waldenponding">Waldenponding</a> is the wrong move. The move is developing Socratic/critical tools for navigating the social internet.</p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span> — cautionary example</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span> — the same problem recurs</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Curation as Place-Making&quot;">Algorithmic Curation as Place-Making</span> — today&#x27;s dysfunctional place-making</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Waldenponding&quot;">Waldenponding</span> — the rejected solution</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — proposed corrective</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tools and Worldview Commitment&quot;">Tools and Worldview Commitment</span> — the scientific method as a new tool-commitment</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a> — cautionary example</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a> — the same problem recurs</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making" title="Written [[Algorithmic Curation as Place-Making]], resolved to algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a> — today&#x27;s dysfunctional place-making</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/waldenponding" title="Written [[Waldenponding]], resolved to waldenponding">Waldenponding</a> — the rejected solution</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — proposed corrective</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/tools-and-worldview-commitment" title="Written [[Tools and Worldview Commitment]], resolved to tools-and-worldview-commitment">Tools and Worldview Commitment</a> — the scientific method as a new tool-commitment</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/infrastructure-inheritance">Infrastructure Inheritance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/jeremiah-dittmar">Jeremiah Dittmar</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>362</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/giordano-bruno">Giordano Bruno (1548-1600)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/infrastructure-inheritance">Infrastructure Inheritance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/tools-and-worldview-commitment">Tools and Worldview Commitment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/waldenponding">Waldenponding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/technology-as-place-maker">Technology as Place-Maker</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/information-overload-across-eras">Information Overload Across Eras</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jeremiah-dittmar">Jeremiah Dittmar</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/giordano-bruno">Giordano Bruno (1548-1600)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/printing-press">printing-press</a><a class="tag" href="/wiki/topics/information-overload">information-overload</a><a class="tag" href="/wiki/topics/history">history</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/giordano-bruno">Giordano-Bruno</a><a class="tag" href="/wiki/topics/scientific-revolution">scientific-revolution</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Responsible AI (RAI)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Responsible AI (RAI)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/responsible-ai.md">source on GitHub</a></div>
-  <div class="note-summary">A governance framework for AI systems built on four pillars — ethics, explainability, privacy/security, and trustworthiness — where trustworthiness is an emergent property of the other three, not a separate technical property.</div>
-  <div class="tags"><span class="tag">responsible-ai</span><span class="tag">AI-governance</span><span class="tag">ethics</span><span class="tag">explainability</span><span class="tag">trustworthiness</span><span class="tag">regulation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/responsible-ai.md">source on GitHub</a></div>
+    <div class="note-summary">A governance framework for AI systems built on four pillars — ethics, explainability, privacy/security, and trustworthiness — where trustworthiness is an emergent property of the other three, not a separate technical property.</div>
     <div class="prose">
 <p>A governance and design framework for AI systems that treats trustworthiness not as a single technical property but as an emergent outcome of four jointly-satisfied pillars.</p>
 <h2 id="the-four-pillars">The Four Pillars</h2>
 <ol>
 <li><strong>Ethics</strong>: fairness, accountability, compliance with applicable norms and laws</li>
-<li><strong>Explainability</strong>: users can understand why a system made a decision (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span>)</li>
+<li><strong>Explainability</strong>: users can understand why a system made a decision (see <a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a>)</li>
 <li><strong>Privacy-preserving and secure AI</strong>: data minimization, adversarial robustness, confidentiality</li>
 <li><strong>Trustworthiness</strong>: emerges from the other three — not achievable by optimizing for trust directly</li>
 </ol>
@@ -52,7 +61,7 @@
 <p>Both are required. A user who understands the model but has no external validation is underequipped. A user with external evidence but no process understanding cannot catch model errors.</p>
 <h2 id="ai-as-empowerment-tool">AI as Empowerment Tool</h2>
 <p>RAI frames AI in high-stakes decision-making as an <strong>empowerment tool</strong> — the human retains accountability and must be able to justify decisions. This is opposed to AI-as-authority, where the human defers to the AI&#x27;s judgment.</p>
-<p>This framing has direct implications for <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Calibrated Explanation&quot;">Calibrated Explanation</span>: the explanation must enable the human to exercise and justify judgment, not merely accept or reject a verdict.</p>
+<p>This framing has direct implications for <a class="wikilink" href="/wiki/aneesh/concepts/calibrated-explanation" title="Written [[Calibrated Explanation]], resolved to calibrated-explanation">Calibrated Explanation</a>: the explanation must enable the human to exercise and justify judgment, not merely accept or reject a verdict.</p>
 <h2 id="open-problems">Open Problems</h2>
 <ul>
 <li>Longitudinal studies: most XAI evaluations are point-in-time; long-term effects on trust and decision quality are understudied</li>
@@ -61,21 +70,34 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the second pillar</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Calibrated Explanation&quot;">Calibrated Explanation</span> — how explainability is operationalized at the product level</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — a design approach aligned with RAI principles</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unwarranted Faith in Numbers&quot;">Unwarranted Faith in Numbers</span> — a failure case RAI must anticipate</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency in Scientific Method&quot;">Transparency in Scientific Method</span> — parallel principle in research methodology</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Briefing: The State of Explainable AI (XAI)&quot;">Briefing: The State of Explainable AI (XAI)</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the second pillar</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/calibrated-explanation" title="Written [[Calibrated Explanation]], resolved to calibrated-explanation">Calibrated Explanation</a> — how explainability is operationalized at the product level</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/seamful-design" title="Written [[Seamful Design]], resolved to seamful-design">Seamful Design</a> — a design approach aligned with RAI principles</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers" title="Written [[Unwarranted Faith in Numbers]], resolved to unwarranted-faith-in-numbers">Unwarranted Faith in Numbers</a> — a failure case RAI must anticipate</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/transparency-in-scientific-method" title="Written [[Transparency in Scientific Method]], resolved to transparency-in-scientific-method">Transparency in Scientific Method</a> — parallel principle in research methodology</li>
+<li>Source: <a class="wikilink-wanted" href="/wiki/wanted/briefing-the-state-of-explainable-ai-xai" title="No note is called &quot;Briefing: The State of Explainable AI (XAI)&quot; yet — see who is asking for it">Briefing: The State of Explainable AI (XAI)</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>331</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/responsible-ai">responsible-ai</a><a class="tag" href="/wiki/topics/ai-governance">AI-governance</a><a class="tag" href="/wiki/topics/ethics">ethics</a><a class="tag" href="/wiki/topics/explainability">explainability</a><span class="tag tag-lone" title="Only this note uses it">trustworthiness</span><a class="tag" href="/wiki/topics/regulation">regulation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

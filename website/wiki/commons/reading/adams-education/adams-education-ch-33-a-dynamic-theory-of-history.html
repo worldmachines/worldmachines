@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>A Dynamic Theory of History (1904)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>A Dynamic Theory of History (1904)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history.md">source on GitHub</a></div>
-  <div class="note-summary">Adams proposes a mechanics of history in which Progress is redefined as the development and economy of Forces that capture and educate man — from fetish, the Cross, and Rome&#x27;s slave-system through the Baconian reversal of mind and nature to the accelerating &quot;supersensual forces&quot; of 1900.</div>
-  <div class="tags"><span class="tag">dynamic-theory-of-history</span><span class="tag">force-and-attraction</span><span class="tag">law-of-acceleration</span><span class="tag">philosophy-of-history</span><span class="tag">roman-empire-decline</span><span class="tag">baconian-science</span><span class="tag">religion-as-fetish-power</span><span class="tag">henry-adams</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/world-machines">world-machines</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/machines-as-energy-regimes">machines-as-energy-regimes</a>, <a class="wikilink" href="/wiki/aneesh/concepts/history-machine">history-machine</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history.md">source on GitHub</a></div>
+    <div class="note-summary">Adams proposes a mechanics of history in which Progress is redefined as the development and economy of Forces that capture and educate man — from fetish, the Cross, and Rome&#x27;s slave-system through the Baconian reversal of mind and nature to the accelerating &quot;supersensual forces&quot; of 1900.</div>
     <div class="prose">
 <p>In this chapter Adams sets aside narrative autobiography and states, in his own voice, the mechanics he thinks underlies all of history: Progress is &quot;the development and economy of Forces,&quot; and man is not the agent who captures energy but the particle captured by it — a spider in a web, an animal educated by fire, running water, and grain, whose &quot;body and thought are alike their product&quot; of whatever forces impinge on him. From that axiom Adams runs the whole span of Western history as one continuous physics problem: the primal worship of an unnameable unity later called God; Rome&#x27;s economizing of the gods into the Cross, which Constantine wields as literal military and political force; the Cross&#x27;s failure at the sack of Rome and its retreat into St. Augustine&#x27;s purely spiritual Civitas Dei; the mysterious, simultaneous ninth-to-thirteenth-century arrival of the compass, Greek fire, and gunpowder as forces of a wholly new order; and finally Bacon&#x27;s reversal of the relation between mind and nature, after which &quot;thought did not evolve nature, but nature evolved thought,&quot; carrying Europe through Newton, Franklin, and Watt to a nineteenth-century acceleration that by 1900 produces forces beyond the physicist&#x27;s comprehension. It is Adams&#x27;s most explicit attempt to write a general theory of historical causation, and the chapter that most directly proposes history as the study of forces acting on and through human institutions rather than the reverse.</p>
 <h2 id="themes">Themes</h2>
@@ -55,20 +63,50 @@
 <p>The Bacon passage marks the chapter&#x27;s hinge, where Adams credits the entire trajectory of modern science to a reversal of method rather than a discovery of fact — the moment thought agrees to be evolved by nature instead of the reverse.</p>
 <p>The closing passage on the acceleration after 1800 is the chapter&#x27;s forward-looking payoff, naming the &quot;supersensual forces&quot; of 1900 as the point at which even trained scientific observers lose their bearings — the same bewilderment, Adams insists, that a priest of Isis felt before the Cross of Christ in the fourth century.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">6</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>1137</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-21-twenty-years-after">Twenty Years After (1892): An Education Declared Finished</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-30-vis-inertiae">Vis Inertiae (1903)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-34-a-law-of-acceleration">A Law of Acceleration</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/world-machines">world-machines</a></li><li><a class="wikilink" href="/wiki/aneesh/synthesis/machines-as-energy-regimes">machines-as-energy-regimes</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/history-machine">history-machine</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dynamic-theory-of-history">dynamic-theory-of-history</a><a class="tag" href="/wiki/topics/force-and-attraction">force-and-attraction</a><a class="tag" href="/wiki/topics/law-of-acceleration">law-of-acceleration</a><a class="tag" href="/wiki/topics/philosophy-of-history">philosophy-of-history</a><span class="tag tag-lone" title="Only this note uses it">roman-empire-decline</span><span class="tag tag-lone" title="Only this note uses it">baconian-science</span><span class="tag tag-lone" title="Only this note uses it">religion-as-fetish-power</span><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

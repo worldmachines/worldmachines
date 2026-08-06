@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Value Pluralism</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Value Pluralism</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/value-pluralism.md">source on GitHub</a></div>
-  <div class="note-summary">Isaiah Berlin&#x27;s value pluralism holds that ultimate human values are genuinely plural, often incommensurable, and sometimes in irresolvable conflict — a claim distinct from relativism and with significant political consequences.</div>
-  <div class="tags"><span class="tag">berlin</span><span class="tag">value-pluralism</span><span class="tag">political-philosophy</span><span class="tag">monism</span><span class="tag">incommensurability</span><span class="tag">liberalism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/value-pluralism.md">source on GitHub</a></div>
+    <div class="note-summary">Isaiah Berlin&#x27;s value pluralism holds that ultimate human values are genuinely plural, often incommensurable, and sometimes in irresolvable conflict — a claim distinct from relativism and with significant political consequences.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>Value pluralism is Isaiah Berlin&#x27;s doctrine that ultimate human values are:</p>
@@ -59,7 +68,7 @@
 <li>Tragic choices — where real goods are sacrificed — are permanent features of political life, not temporary imperfections to be engineered away</li>
 </ul>
 <h2 id="relation-to-negative-liberty">Relation to Negative Liberty</h2>
-<p>Berlin&#x27;s value pluralism provides the deeper foundation for his defense of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Negative Liberty&quot;">Negative Liberty</span> (freedom from interference) over <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Positive Liberty&quot;">Positive Liberty</span> (freedom to realize one&#x27;s rational nature). If there is no single rational nature to realize, positive liberty becomes a vehicle for imposing one conception of the good life on everyone.</p>
+<p>Berlin&#x27;s value pluralism provides the deeper foundation for his defense of <a class="wikilink-wanted" href="/wiki/wanted/negative-liberty" title="No note is called &quot;Negative Liberty&quot; yet — see who is asking for it">Negative Liberty</a> (freedom from interference) over <a class="wikilink-wanted" href="/wiki/wanted/positive-liberty" title="No note is called &quot;Positive Liberty&quot; yet — see who is asking for it">Positive Liberty</a> (freedom to realize one&#x27;s rational nature). If there is no single rational nature to realize, positive liberty becomes a vehicle for imposing one conception of the good life on everyone.</p>
 <h2 id="critics">Critics</h2>
 <ul>
 <li><strong>Charles Taylor</strong> and others argue that Berlin&#x27;s pluralism has a conservative tilt: by treating value conflicts as permanent, it forecloses the possibility of social arrangements that actually resolve them</li>
@@ -70,27 +79,78 @@
 <p>The <em>Against the Current</em> essays ground value pluralism in the counter-Enlightenment tradition: Vico&#x27;s <em>verum ipsum factum</em> establishes that different cultures are genuinely different in kind (not merely degree); Herder&#x27;s <em>Schwerpunkt</em> concept shows each culture embodies its own incommensurable centre of gravity; Machiavelli&#x27;s two incommensurable moralities (civic/pagan vs. Christian) provide the explicit model for Berlin&#x27;s own pluralism.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin&quot;">Isaiah Berlin</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the tradition Berlin excavated as anticipating pluralism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Monism vs. Pluralism&quot;">Monism vs. Pluralism</span> — the central opposition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cultural Incommensurability&quot;">Cultural Incommensurability</span> — the historical-cultural grounding for the doctrine</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Enlightenment Monism&quot;">Enlightenment Monism</span> — the target doctrine</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/isaiah-berlin" title="Written [[Isaiah Berlin]], resolved to isaiah-berlin">Isaiah Berlin</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the tradition Berlin excavated as anticipating pluralism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/monism-vs-pluralism" title="Written [[Monism vs. Pluralism]], resolved to monism-vs-pluralism">Monism vs. Pluralism</a> — the central opposition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cultural-incommensurability" title="Written [[Cultural Incommensurability]], resolved to cultural-incommensurability">Cultural Incommensurability</a> — the historical-cultural grounding for the doctrine</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/enlightenment-monism" title="Written [[Enlightenment Monism]], resolved to enlightenment-monism">Enlightenment Monism</a> — the target doctrine</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a> — the hermeneutic method that makes pluralism practicable</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Herder&#x27;s Schwerpunkt&quot;">Herder&#x27;s Schwerpunkt</span> — Herder&#x27;s concept that directly anticipates pluralism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Verum Ipsum Factum&quot;">Verum Ipsum Factum</span> — Vico&#x27;s epistemological grounding</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Incommensurability&quot;">Value Incommensurability</span> — the logical core of pluralism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Negative Liberty&quot;">Negative Liberty</span> — Berlin&#x27;s related political concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span> — synthesis connecting this to contemporary concerns</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/herders-schwerpunkt" title="Written [[Herder&#x27;s Schwerpunkt]], resolved to herders-schwerpunkt">Herder&#x27;s Schwerpunkt</a> — Herder&#x27;s concept that directly anticipates pluralism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/verum-ipsum-factum" title="Written [[Verum Ipsum Factum]], resolved to verum-ipsum-factum">Verum Ipsum Factum</a> — Vico&#x27;s epistemological grounding</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/value-incommensurability" title="No note is called &quot;Value Incommensurability&quot; yet — see who is asking for it">Value Incommensurability</a> — the logical core of pluralism</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/negative-liberty" title="No note is called &quot;Negative Liberty&quot; yet — see who is asking for it">Negative Liberty</a> — Berlin&#x27;s related political concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a> — synthesis connecting this to contemporary concerns</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>19</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>596</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nationalism">Nationalism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-diversity">Cognitive Diversity</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>11 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/romanticism-and-political-danger">Romanticism and Political Danger</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/epistemic-monoculture">Epistemic Monoculture</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/monism-vs-pluralism">Monism vs. Pluralism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-georg-hamann">Johann Georg Hamann (1730–1788)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/enlightenment-monism">Enlightenment Monism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/herders-schwerpunkt">Herder&#x27;s Schwerpunkt</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/verum-ipsum-factum">Verum Ipsum Factum</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/niccolo-machiavelli">Niccolò Machiavelli</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/counter-enlightenment-and-nationalism">Counter-Enlightenment and Nationalism — The Dangerous Slide</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">18</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">14</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">13</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">8</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/berlin">berlin</a><a class="tag" href="/wiki/topics/value-pluralism">value-pluralism</a><a class="tag" href="/wiki/topics/political-philosophy">political-philosophy</a><a class="tag" href="/wiki/topics/monism">monism</a><a class="tag" href="/wiki/topics/incommensurability">incommensurability</a><a class="tag" href="/wiki/topics/liberalism">liberalism</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

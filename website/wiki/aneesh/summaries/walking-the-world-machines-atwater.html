@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Walking the World Machines</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Walking the World Machines</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/walking-the-world-machines-atwater.md">source on GitHub</a></div>
-  <div class="note-summary">Patrick Atwater&#x27;s personal essay connecting Paul Salopek&#x27;s &#x27;Out of Eden Walk&#x27; slow journalism project to the World Machines framework, with speculative extensions on pre-Axial history, numerals, domestication, and the &#x27;cyberpaleo&#x27; approach to liveness.</div>
-  <div class="tags"><span class="tag">world-machines</span><span class="tag">liveness-machine</span><span class="tag">slow-journalism</span><span class="tag">cyberpaleo</span><span class="tag">numerals</span><span class="tag">domestication</span><span class="tag">atwater</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/walking-the-world-machines-atwater.md">source on GitHub</a></div>
+    <div class="note-summary">Patrick Atwater&#x27;s personal essay connecting Paul Salopek&#x27;s &#x27;Out of Eden Walk&#x27; slow journalism project to the World Machines framework, with speculative extensions on pre-Axial history, numerals, domestication, and the &#x27;cyberpaleo&#x27; approach to liveness.</div>
     <div class="prose">
 <p><strong>Source:</strong> &quot;Walking the World Machines&quot; by Patrick Atwater (Pioneering Spirit, Substack/Paragraph), March 30, 2026.</p>
 <h2 id="central-argument">Central Argument</h2>
@@ -97,25 +106,38 @@
 <h2 id="cross-references">Cross-References</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/world-machines-framework">world-machines-framework</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness Machine&quot;">Liveness Machine</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Paul Salopek — Out of Eden Walk&quot;">Paul Salopek — Out of Eden Walk</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Numeracy as Legibility Substrate&quot;">Numeracy as Legibility Substrate</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Domestication and Self-Domestication&quot;">Domestication and Self-Domestication</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nomadic vs Sedentary Civilizations&quot;">Nomadic vs Sedentary Civilizations</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bicameral Mind — Julian Jaynes&quot;">Bicameral Mind — Julian Jaynes</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cyberpaleo Perspective&quot;">Cyberpaleo Perspective</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Contraptions Book Club&quot;">Contraptions Book Club</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine" title="Written [[Liveness Machine]], resolved to liveness-machine">Liveness Machine</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/paul-salopek-out-of-eden-walk" title="No note is called &quot;Paul Salopek — Out of Eden Walk&quot; yet — see who is asking for it">Paul Salopek — Out of Eden Walk</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/numeracy-as-legibility-substrate" title="No note is called &quot;Numeracy as Legibility Substrate&quot; yet — see who is asking for it">Numeracy as Legibility Substrate</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/domestication-and-self-domestication" title="No note is called &quot;Domestication and Self-Domestication&quot; yet — see who is asking for it">Domestication and Self-Domestication</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/nomadic-vs-sedentary-civilizations" title="No note is called &quot;Nomadic vs Sedentary Civilizations&quot; yet — see who is asking for it">Nomadic vs Sedentary Civilizations</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/bicameral-mind-julian-jaynes" title="No note is called &quot;Bicameral Mind — Julian Jaynes&quot; yet — see who is asking for it">Bicameral Mind — Julian Jaynes</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cyberpaleo-perspective" title="Written [[Cyberpaleo Perspective]], resolved to cyberpaleo-perspective">Cyberpaleo Perspective</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/contraptions-book-club" title="No note is called &quot;Contraptions Book Club&quot; yet — see who is asking for it">Contraptions Book Club</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-two-sides-of-attention-falling-forwards">The Two Sides of Attention: From Exposure to Falling Forwards</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>639</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-two-sides-of-attention-falling-forwards">The Two Sides of Attention: From Exposure to Falling Forwards</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/liveness-machine">liveness-machine</a><a class="tag" href="/wiki/topics/slow-journalism">slow-journalism</a><a class="tag" href="/wiki/topics/cyberpaleo">cyberpaleo</a><span class="tag tag-lone" title="Only this note uses it">numerals</span><span class="tag tag-lone" title="Only this note uses it">domestication</span><a class="tag" href="/wiki/topics/atwater">atwater</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

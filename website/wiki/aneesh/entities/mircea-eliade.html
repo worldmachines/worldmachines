@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Mircea Eliade</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Mircea Eliade</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/mircea-eliade.md">source on GitHub</a></div>
-  <div class="note-summary">Romanian historian of religion whose concept of sacred consecration — the ritual act that incorporates new territory into a divine cosmos, erasing its prior existence — provides the religious-historical dimension of place-making through language and ceremony.</div>
-  <div class="tags"><span class="tag">eliade</span><span class="tag">religion</span><span class="tag">sacred</span><span class="tag">profane</span><span class="tag">consecration</span><span class="tag">place-making</span><span class="tag">history-of-religion</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/mircea-eliade.md">source on GitHub</a></div>
+    <div class="note-summary">Romanian historian of religion whose concept of sacred consecration — the ritual act that incorporates new territory into a divine cosmos, erasing its prior existence — provides the religious-historical dimension of place-making through language and ceremony.</div>
     <div class="prose">
 <p><strong>Dates</strong>: 1907–1986<br>
 <strong>Field</strong>: History of religions, comparative mythology<br>
@@ -55,19 +64,47 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a> — the sacred/profane distinction as precursor to Tuan&#x27;s space/place</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">5</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/christian-norberg-schulz">Christian Norberg-Schulz (1926–2000)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/mythical-space">Mythical Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/sacred-and-profane-space-tuan">Sacred and Profane Space (Tuan)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch7-9">Tuan, *Space and Place: The Perspective of Experience* — Chapters 7–9</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>359</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/tuan-1991-language-and-the-making-of-place">Tuan (1991): Language and the Making of Place: A Narrative-Descriptive Approach</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/tuan-explorer-pioneer-naming">Explorer and Pioneer Naming</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/mythical-space">Mythical Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch7-9">Tuan, *Space and Place: The Perspective of Experience* — Chapters 7–9</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sacred-and-profane-space-tuan">Sacred and Profane Space (Tuan)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/christian-norberg-schulz">Christian Norberg-Schulz (1926–2000)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/cosmogonic-architecture">Cosmogonic Architecture</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/dreamtime-songlines-as-place-making">Dreamtime Songlines as Place-Making</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/architecture-as-crystallized-awareness">Architecture as Crystallized Awareness</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/mythical-space">Mythical Space</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/naming-as-place-making">Naming as Place-Making</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-philosophy">Space and Place Philosophy</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">eliade</span><a class="tag" href="/wiki/topics/religion">religion</a><span class="tag tag-lone" title="Only this note uses it">sacred</span><span class="tag tag-lone" title="Only this note uses it">profane</span><span class="tag tag-lone" title="Only this note uses it">consecration</span><a class="tag" href="/wiki/topics/place-making">place-making</a><span class="tag tag-lone" title="Only this note uses it">history-of-religion</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

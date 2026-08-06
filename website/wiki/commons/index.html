@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,82 +26,156 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
   <main class="wiki">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <span>Commons</span></nav>
+  <p class="eyebrow">Contributor</p>
   <h1>Commons</h1>
-  <p class="lede small">211 published notes from <code>raw-notes/commons/</code>.</p>
   <p class="lede">Shared, communal notes — AI-ingested reading notes for the books the whole club works through, plus the canon pages derived from them. Attributed to the pseudo-author <em>commons</em>, not to any one member.</p>
+  <div class="figure-band">
+      <div class="band-cell"><b>211</b><span>notes</span></div>
+      <div class="band-cell"><b>473</b><span>inbound links</span></div>
+      <div class="band-cell"><b>8</b><span>books</span></div>
+  </div>
+  <p class="lede small">Ranked by how much the rest of the corpus leans on each note. Source files live in <code>raw-notes/commons/</code>.</p>
   <section>
-    <h2>Books</h2>
-    <ul class="book-list">
-      <li class="book-card"><a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a><span class="muted">Tim Ingold · 2023 · 9 notes</span></li>
-      <li class="book-card"><a href="/wiki/commons/reading/landes-revolution-in-time/">Revolution in Time</a><span class="muted">David S. Landes · 1983 · 24 notes</span></li>
-      <li class="book-card"><a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a><span class="muted">Geoffrey Chaucer · c.1400 · 41 notes</span></li>
-      <li class="book-card"><a href="/wiki/commons/reading/decameron/">The Decameron</a><span class="muted">Giovanni Boccaccio · c.1353 · 12 notes</span></li>
-      <li class="book-card"><a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a><span class="muted">Dante Alighieri (Cary tr.) · c.1320 · 21 notes</span></li>
-      <li class="book-card"><a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a><span class="muted">Henry Adams · 1918 · 37 notes</span></li>
-      <li class="book-card"><a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a><span class="muted">Joyce Appleby · 2010 · 22 notes</span></li>
-      <li class="book-card"><a href="/wiki/commons/reading/more-utopia/">Utopia</a><span class="muted">Thomas More · 1516 · 24 notes</span></li>
+    <h2 class="register"><span>Books read</span></h2>
+    <ul class="plate">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">9<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Tim Ingold · 2023</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/landes-revolution-in-time/">Revolution in Time</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">24<span class="plate-unit"> notes</span></span></span><span class="plate-meta">David S. Landes · 1983</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">41<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Geoffrey Chaucer · c.1400</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/decameron/">The Decameron</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">12<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Giovanni Boccaccio · c.1353</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">21<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Dante Alighieri (Cary tr.) · c.1320</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">37<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Henry Adams · 1918</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">22<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Joyce Appleby · 2010</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/more-utopia/">Utopia</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">24<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Thomas More · 1516</span>
+      </li>
     </ul>
   </section>
   <section>
-    <h2>Entities <span class="count">10</span></h2>
-    <ul class="rows">
-      <li class="row"><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a>
-        <p class="row-gloss">Henry Adams&#x27;s attempt to make history a branch of mechanics — Progress redefined as &#x27;the development and economy of Forces&#x27;, man as the particle captured rather than the agent capturing, and a law of acceleration measured by coal output dou…</p></li>
-      <li class="row"><a href="/wiki/commons/entities/beatrice">Beatrice</a>
-        <p class="row-gloss">Beatrice as first mover and heavenly guide of Dante&#x27;s journey — the beloved behind the poem&#x27;s opening intercession, the stern confessor of the Earthly Paradise, and the doctrinal teacher who voices the Comedy&#x27;s most totalizing images of a l…</p></li>
-      <li class="row"><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a>
-        <p class="row-gloss">Geoffrey Chaucer (c. 1328–1400), English courtier, customs official, diplomat, and poet — credited with fusing England&#x27;s Teutonic and French-derived speech into a single literary vernacular, whose career is legible almost entirely through a…</p></li>
-      <li class="row"><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a>
-        <p class="row-gloss">Historian of capitalism and author of The Relentless Revolution (2010), whose signature method is a sustained refusal of inevitability — &#x27;a succession is not a process&#x27; — applied against Smith, Marx, the Marxist agrarian story, the label &#x27;I…</p></li>
-      <li class="row"><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a>
-        <p class="row-gloss">Raphael Hythloday — the fictional Portuguese philosopher-traveller of Utopia, who refuses to counsel princes in Book 1, diagnoses the evils of enclosure-era England at Cardinal Morton&#x27;s table, and narrates the whole eyewitness account of th…</p></li>
-      <li class="row"><a href="/wiki/commons/entities/agricultural-revolution">The Agricultural Revolution (Appleby&#x27;s account)</a>
-        <p class="row-gloss">The seventeenth-century shift from fallow-field farming to Dutch four-part crop rotation, adopted and extended by English freeholders and improving landlords, which Appleby treats as capitalism&#x27;s causal keystone — breaking the Malthusian fo…</p></li>
-      <li class="row"><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a>
-        <p class="row-gloss">Adams&#x27;s paired figure for the two greatest forces he thought history had produced, and — more consequentially — his proposal to abandon causation and measure all historical force by the attraction it exerts on human minds, the only property…</p></li>
-      <li class="row"><a href="/wiki/commons/entities/thomas-more">Thomas More</a>
-        <p class="row-gloss">Sir Thomas More (b. 1478) — Tudor humanist, lawyer, and royal servant; author of Utopia and, as the persona &#x27;Mr. More&#x27;, a character inside its dialogue who argues the case for engaged &#x27;civil philosophy&#x27; against Hythloday&#x27;s withdrawal.</p></li>
-      <li class="row"><a href="/wiki/commons/entities/utopus">Utopus</a>
-        <p class="row-gloss">Utopus — the conqueror-founder-legislator who, in Book 2, digs the island free of the continent, lays out its uniform civic plan while leaving its completion to successors, and establishes its founding law of religious toleration; a paradig…</p></li>
-      <li class="row"><a href="/wiki/commons/entities/virgil">Virgil</a>
-        <p class="row-gloss">The Roman poet Virgil as Dante&#x27;s guide through Hell and Purgatory — emblem of unaided human reason and the classical inheritance, an ordering intelligence whose competence has an explicit terminus and who unwittingly authored a prophecy leg…</p></li>
+    <h2 class="register"><span>Entities</span><span class="section-aside">10</span></h2>
+    <ul class="plate">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">5</span></span>
+      <p class="plate-gloss">Henry Adams&#x27;s attempt to make history a branch of mechanics — Progress redefined as &#x27;the development and economy of Forces&#x27;, man as the particle captured rather than the agent capt…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">4</span></span>
+      <p class="plate-gloss">Adams&#x27;s paired figure for the two greatest forces he thought history had produced, and — more consequentially — his proposal to abandon causation and measure all historical force b…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">3</span></span>
+      <p class="plate-gloss">Historian of capitalism and author of The Relentless Revolution (2010), whose signature method is a sustained refusal of inevitability — &#x27;a succession is not a process&#x27; — applied a…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/beatrice">Beatrice</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      <p class="plate-gloss">Beatrice as first mover and heavenly guide of Dante&#x27;s journey — the beloved behind the poem&#x27;s opening intercession, the stern confessor of the Earthly Paradise, and the doctrinal t…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      <p class="plate-gloss">Raphael Hythloday — the fictional Portuguese philosopher-traveller of Utopia, who refuses to counsel princes in Book 1, diagnoses the evils of enclosure-era England at Cardinal Mor…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/agricultural-revolution">The Agricultural Revolution (Appleby&#x27;s account)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      <p class="plate-gloss">The seventeenth-century shift from fallow-field farming to Dutch four-part crop rotation, adopted and extended by English freeholders and improving landlords, which Appleby treats …</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/virgil">Virgil</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      <p class="plate-gloss">The Roman poet Virgil as Dante&#x27;s guide through Hell and Purgatory — emblem of unaided human reason and the classical inheritance, an ordering intelligence whose competence has an e…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">Geoffrey Chaucer (c. 1328–1400), English courtier, customs official, diplomat, and poet — credited with fusing England&#x27;s Teutonic and French-derived speech into a single literary v…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/thomas-more">Thomas More</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">Sir Thomas More (b. 1478) — Tudor humanist, lawyer, and royal servant; author of Utopia and, as the persona &#x27;Mr. More&#x27;, a character inside its dialogue who argues the case for enga…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/entities/utopus">Utopus</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">Utopus — the conqueror-founder-legislator who, in Book 2, digs the island free of the continent, lays out its uniform civic plan while leaving its completion to successors, and est…</p>
+      </li>
     </ul>
   </section>
   <section>
-    <h2>Summaries <span class="count">5</span></h2>
-    <ul class="rows">
-      <li class="row"><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a>
-        <p class="row-gloss">Dante&#x27;s Divine Comedy (in Cary&#x27;s verse translation): a hundred-canto journey through Hell, Purgatory, and Paradise whose insistently classified afterlife builds a totally legible moral cosmos while raging at institutional decay and a leader…</p></li>
-      <li class="row"><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a>
-        <p class="row-gloss">D. Laing Purves&#x27;s Victorian popular edition of Geoffrey Chaucer&#x27;s works — the frame-narrative Canterbury Tales, the five-book Troilus and Criseyde, the dream-visions and their apocryphal imitations, and the shorter poems — bound together by…</p></li>
-      <li class="row"><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a>
-        <p class="row-gloss">Henry Adams&#x27;s third-person account of his own miseducation (1918 Massachusetts Historical Society edition, ed. Henry Cabot Lodge), built as the twentieth-century-multiplicity counterweight to Mont-Saint-Michel and Chartres and ending in an …</p></li>
-      <li class="row"><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a>
-        <p class="row-gloss">Joyce Appleby&#x27;s 2010 history of capitalism, which reframes the subject&#x27;s central puzzle as capitalism&#x27;s four-thousand-year delay rather than its triumph and argues that capitalism is a contingent cultural system — not a natural law, not an …</p></li>
-      <li class="row"><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a>
-        <p class="row-gloss">Thomas More&#x27;s Utopia (1516) — a two-book Latin dialogue (read here in Burnet&#x27;s 1684 translation) that diagnoses the social evils of enclosure-era England and answers them with a fictional traveller&#x27;s report of a communal, standardized islan…</p></li>
+    <h2 class="register"><span>Summaries</span><span class="section-aside">5</span></h2>
+    <ul class="plate">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">7</span></span>
+      <p class="plate-gloss">Henry Adams&#x27;s third-person account of his own miseducation (1918 Massachusetts Historical Society edition, ed. Henry Cabot Lodge), built as the twentieth-century-multiplicity count…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">6</span></span>
+      <p class="plate-gloss">Thomas More&#x27;s Utopia (1516) — a two-book Latin dialogue (read here in Burnet&#x27;s 1684 translation) that diagnoses the social evils of enclosure-era England and answers them with a fi…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">3</span></span>
+      <p class="plate-gloss">Dante&#x27;s Divine Comedy (in Cary&#x27;s verse translation): a hundred-canto journey through Hell, Purgatory, and Paradise whose insistently classified afterlife builds a totally legible m…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">3</span></span>
+      <p class="plate-gloss">Joyce Appleby&#x27;s 2010 history of capitalism, which reframes the subject&#x27;s central puzzle as capitalism&#x27;s four-thousand-year delay rather than its triumph and argues that capitalism …</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1</span></span>
+      <p class="plate-gloss">D. Laing Purves&#x27;s Victorian popular edition of Geoffrey Chaucer&#x27;s works — the frame-narrative Canterbury Tales, the five-book Troilus and Criseyde, the dream-visions and their apoc…</p>
+      </li>
     </ul>
   </section>
   <section>
-    <h2>Synthesis <span class="count">6</span></h2>
-    <ul class="rows">
-      <li class="row"><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a>
-        <p class="row-gloss">Across the Canterbury Tales Chaucer repeatedly builds an intact apparatus of measurement, record, and proof — a counting-house, a single-key garden, seals and relics, a donor-ledger, astronomical instruments, a confessor&#x27;s audit of the soul…</p></li>
-      <li class="row"><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a>
-        <p class="row-gloss">The Wife of Bath, Clerk, Merchant, and Franklin conduct a distributed, explicitly cross-referencing debate over sovereignty and mastery in marriage — extended by the Manciple&#x27;s caged bird and the Court of Love&#x27;s imposed vows into a sustaine…</p></li>
-      <li class="row"><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a>
-        <p class="row-gloss">Across the Comedy Dante builds the supreme fantasy of a fully readable moral cosmos — Hell&#x27;s calibrated contrapasso, Malebolge&#x27;s engineered trenches, Cocytus&#x27;s cadastre, Purgatory&#x27;s gate-apparatus, Paradise&#x27;s self-spelling eagle — and then,…</p></li>
-      <li class="row"><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a>
-        <p class="row-gloss">Reading Appleby&#x27;s five centuries of measuring-and-standardizing installations in sequence — Amsterdam&#x27;s bookkeeping stack, England&#x27;s fiscal transparency, the Zollverein, corporate bureaucracy, IBM&#x27;s punch card, colonial Indian railways, Wal…</p></li>
-      <li class="row"><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a>
-        <p class="row-gloss">Utopia answers the enclosure-era dispossession it diagnoses in Book 1 not by rejecting legibility but by universalizing it in Book 2 — the poison and the cure are the same instrument, making the book the Modernity Machine&#x27;s legibility dream…</p></li>
-      <li class="row"><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a>
-        <p class="row-gloss">Adams&#x27;s four archivally documented reversals all run the same direction — design dissolving into confusion — which makes his late &#x27;struggle not of men but of forces&#x27; doctrine an induction from his own forecasting failures rather than borrow…</p></li>
+    <h2 class="register"><span>Synthesis</span><span class="section-aside">6</span></h2>
+    <ul class="plate">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">4</span></span>
+      <p class="plate-gloss">Adams&#x27;s four archivally documented reversals all run the same direction — design dissolving into confusion — which makes his late &#x27;struggle not of men but of forces&#x27; doctrine an in…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">3</span></span>
+      <p class="plate-gloss">Across the Canterbury Tales Chaucer repeatedly builds an intact apparatus of measurement, record, and proof — a counting-house, a single-key garden, seals and relics, a donor-ledge…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">3</span></span>
+      <p class="plate-gloss">Reading Appleby&#x27;s five centuries of measuring-and-standardizing installations in sequence — Amsterdam&#x27;s bookkeeping stack, England&#x27;s fiscal transparency, the Zollverein, corporate …</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      <p class="plate-gloss">The Wife of Bath, Clerk, Merchant, and Franklin conduct a distributed, explicitly cross-referencing debate over sovereignty and mastery in marriage — extended by the Manciple&#x27;s cag…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      <p class="plate-gloss">Across the Comedy Dante builds the supreme fantasy of a fully readable moral cosmos — Hell&#x27;s calibrated contrapasso, Malebolge&#x27;s engineered trenches, Cocytus&#x27;s cadastre, Purgatory&#x27;…</p>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2</span></span>
+      <p class="plate-gloss">Utopia answers the enclosure-era dispossession it diagnoses in Book 1 not by rejecting legibility but by universalizing it in Book 2 — the poison and the cure are the same instrume…</p>
+      </li>
     </ul>
   </section>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

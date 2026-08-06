@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Wife of Bath&#x27;s Prologue and Tale</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Wife of Bath&#x27;s Prologue and Tale</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-wife-of-baths-tale.md">source on GitHub</a></div>
-  <div class="note-summary">The Wife of Bath defends her five marriages and her mastery over each husband in a long autobiographical prologue, then tells an Arthurian tale in which a knight who has raped a maiden is spared only if he can answer what women most desire, and the answer — sovereignty — is what redeems him.</div>
-  <div class="tags"><span class="tag">wife-of-bath</span><span class="tag">marriage-and-gender</span><span class="tag">sovereignty</span><span class="tag">experience-vs-authority</span><span class="tag">gentillesse</span><span class="tag">medieval-satire</span><span class="tag">canterbury-tales</span><span class="tag">capture-resistance</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-wife-of-baths-tale.md">source on GitHub</a></div>
+    <div class="note-summary">The Wife of Bath defends her five marriages and her mastery over each husband in a long autobiographical prologue, then tells an Arthurian tale in which a knight who has raped a maiden is spared only if he can answer what women most desire, and the answer — sovereignty — is what redeems him.</div>
     <div class="prose">
 <p>The unit contains both halves of the Wife of Bath&#x27;s performance: the Prologue, a sprawling autobiographical apologia in which she defends serial marriage against clerical authority and recounts, in ferocious comic detail, how she dominated five husbands (the first three old and rich, the fourth a philanderer, the fifth a young Oxford clerk named Jenkin who read aloud from a book of &quot;wicked wives&quot; until she tore out its pages and won the marriage&#x27;s governance for good); and the Tale proper, in which a knight of Arthur&#x27;s court, condemned to death for raping a maiden, is given a year to discover what women most desire, learns the answer — sovereignty — from a loathly old woman who then claims him as her price, and is transformed (and the marriage saved) once he cedes her the choice and the mastery she asked for.</p>
 <h2 id="themes">Themes</h2>
@@ -47,18 +55,44 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The Prologue&#x27;s opening move — &quot;Husbands at the church door have I had five&quot; through her rejection of a fixed scriptural number for marriages — sets the entire argumentative strategy: turning ambiguous authority back on itself. The &quot;neigheboure&#x27;s wife&quot; tirade catalogues, in the mouth of the imagined jealous husband, every contradictory slander levelled at women (too poor is costly, too rich is proud, too fair invites seduction, too foul is desperate) — a compressed satire of impossible double binds. Her declaration &quot;we will be at our large,&quot; followed by the (self-attributed) Ptolemy proverb about not envying other people&#x27;s fortune, states the autonomy thesis in miniature. The book-burning scene — from Jenkin reading &quot;all night&quot; through her collapse, his blow, her feigned death, and his surrender of &quot;the governance of house and land&quot; — is the Prologue&#x27;s dramatic resolution of the sovereignty argument into physical action. In the Tale, the knight&#x27;s answer, &quot;Women desire to have the sovereignty... and for to be in mast&#x27;ry him above,&quot; is the fulcrum the whole narrative was built to reach. And the old wife&#x27;s gentillesse speech, arguing that nobility &quot;is not annexed to possession&quot; and closing on &quot;that he is gentle that doth gentle deedes,&quot; is the Tale&#x27;s independent philosophical payload, extending the Prologue&#x27;s anti-authoritarian logic to the class hierarchy of medieval England itself.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-clerks-tale">The Clerk&#x27;s Tale: Griselda&#x27;s Patience and Chaucer&#x27;s Ironic Envoy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-franklins-tale">The Franklin&#x27;s Tale: Troth, Mastery, and the Contest of Gentillesse</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-merchants-tale">The Merchant&#x27;s Tale: The Walled Garden and the Counterfeited Key</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>913</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-clerks-tale">The Clerk&#x27;s Tale: Griselda&#x27;s Patience and Chaucer&#x27;s Ironic Envoy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-merchants-tale">The Merchant&#x27;s Tale: The Walled Garden and the Counterfeited Key</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-franklins-tale">The Franklin&#x27;s Tale: Troth, Mastery, and the Contest of Gentillesse</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/untimely">Untimely</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">wife-of-bath</span><span class="tag tag-lone" title="Only this note uses it">marriage-and-gender</span><a class="tag" href="/wiki/topics/sovereignty">sovereignty</a><span class="tag tag-lone" title="Only this note uses it">experience-vs-authority</span><a class="tag" href="/wiki/topics/gentillesse">gentillesse</a><a class="tag" href="/wiki/topics/medieval-satire">medieval-satire</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><a class="tag" href="/wiki/topics/capture-resistance">capture-resistance</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

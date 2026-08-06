@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Composite AI Architecture (Experts + LLM + KG)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Composite AI Architecture (Experts + LLM + KG)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/composite-ai-architecture.md">source on GitHub</a></div>
-  <div class="note-summary">The thesis that combining domain experts, large language models, and knowledge graphs creates a system capable of accelerating knowledge-intensive fields by externalizing expertise and making it traversable.</div>
-  <div class="tags"><span class="tag">ai-architecture</span><span class="tag">knowledge-graphs</span><span class="tag">llm</span><span class="tag">expertise</span><span class="tag">healthcare-ai</span><span class="tag">explainability</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/composite-ai-architecture.md">source on GitHub</a></div>
+    <div class="note-summary">The thesis that combining domain experts, large language models, and knowledge graphs creates a system capable of accelerating knowledge-intensive fields by externalizing expertise and making it traversable.</div>
     <div class="prose">
 <h2 id="the-thesis">The Thesis</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR Knowledge Graphs Healthcare&quot;">FHIR Knowledge Graphs Healthcare</span>) argues that the current dominant approach to AI — &quot;throwing mountains of data into hot cauldrons of compute&quot; — has fundamental structural limitations: LLMs hallucinate, lack explainability, and cannot be cheaply or reliably updated with new domain knowledge. The alternative is not to fix LLMs but to pair them with complementary systems:</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>, <a class="wikilink" href="/wiki/aneesh/summaries/fhir-knowledge-graphs-healthcare" title="Written [[FHIR Knowledge Graphs Healthcare]], resolved to fhir-knowledge-graphs-healthcare">FHIR Knowledge Graphs Healthcare</a>) argues that the current dominant approach to AI — &quot;throwing mountains of data into hot cauldrons of compute&quot; — has fundamental structural limitations: LLMs hallucinate, lack explainability, and cannot be cheaply or reliably updated with new domain knowledge. The alternative is not to fix LLMs but to pair them with complementary systems:</p>
 <pre><code>Domain Expert  +  Large Language Model  +  Knowledge Graph
 (taste / judgment) (natural language interface) (grounded, auditable facts)</code></pre>
 <p>Each component addresses the weaknesses of the others:</p>
@@ -55,38 +64,51 @@
 <h2 id="the-giants-causeway-metaphor">The Giant&#x27;s Causeway Metaphor</h2>
 <p>Newton&#x27;s &quot;standing on the shoulders of giants&quot; describes vertical accumulation — climbing knowledge slowly through education and experience. The composite architecture creates what Sathe calls &quot;the Giant&#x27;s Causeway of Intelligence&quot; — a horizontal crossing, walking across externalized expertise rather than climbing it. The crossing is made possible by:</p>
 <ol>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> — extracting tacit expert knowledge into KG-compatible form</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — encoding that knowledge as traversable structure</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> — extracting tacit expert knowledge into KG-compatible form</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> — encoding that knowledge as traversable structure</li>
 <li>LLMs — providing natural language navigation across the graph</li>
 </ol>
 <h2 id="applications">Applications</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Healthcare&quot;">Healthcare</span></strong>: Integrating <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;FHIR&quot;">FHIR</span> EHR data, clinical knowledge KGs, and LLM interface for diagnosis support, drug discovery, outcome prediction</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/healthcare" title="No note is called &quot;Healthcare&quot; yet — see who is asking for it">Healthcare</a></strong>: Integrating <a class="wikilink" href="/wiki/aneesh/concepts/fhir" title="Written [[FHIR]], resolved to fhir">FHIR</a> EHR data, clinical knowledge KGs, and LLM interface for diagnosis support, drug discovery, outcome prediction</li>
 <li><strong>Drug discovery</strong>: Multi-domain disease complexity exceeds any single human mind&#x27;s capacity; composite architecture manages the complexity</li>
 <li><strong>Knowledge diffusion</strong>: Compressing generational knowledge transfer — applying each breakthrough without waiting a generation</li>
 </ul>
 <h2 id="economic-case">Economic Case</h2>
 <p>Retrieving an answer from a KG is 50x cheaper than generating it with an LLM. The composite architecture routes factual queries to the KG, using the LLM only for interaction and synthesis — dramatically reducing cost while improving reliability.</p>
 <h2 id="relationship-to-wrights-law">Relationship to Wright&#x27;s Law</h2>
-<p>This architecture is the proposed mechanism for applying <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wright&#x27;s Law&quot;">Wright&#x27;s Law</span> dynamics to healthcare — creating the shared knowledge infrastructure that enables compounding efficiency gains.</p>
+<p>This architecture is the proposed mechanism for applying <a class="wikilink" href="/wiki/aneesh/concepts/wrights-law" title="Written [[Wright&#x27;s Law]], resolved to wrights-law">Wright&#x27;s Law</a> dynamics to healthcare — creating the shared knowledge infrastructure that enables compounding efficiency gains.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — the grounding layer</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Retrieval-Augmented Generation&quot;">Retrieval-Augmented Generation</span> — a simpler precursor architecture</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — what the architecture achieves</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Expertise&quot;">Expertise</span> — the human component the architecture supports</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> — what the human expert brings that the architecture cannot replace</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wright&#x27;s Law&quot;">Wright&#x27;s Law</span> — the efficiency-compounding aspiration</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> — the knowledge extraction method</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> — the grounding layer</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/retrieval-augmented-generation" title="Written [[Retrieval-Augmented Generation]], resolved to retrieval-augmented-generation">Retrieval-Augmented Generation</a> — a simpler precursor architecture</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — what the architecture achieves</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/expertise" title="Written [[Expertise]], resolved to expertise">Expertise</a> — the human component the architecture supports</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity" title="Written [[Taste as Epistemic Capacity]], resolved to taste-as-epistemic-capacity">Taste as Epistemic Capacity</a> — what the human expert brings that the architecture cannot replace</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/wrights-law" title="Written [[Wright&#x27;s Law]], resolved to wrights-law">Wright&#x27;s Law</a> — the efficiency-compounding aspiration</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> — the knowledge extraction method</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>480</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ai-architecture">ai-architecture</a><a class="tag" href="/wiki/topics/knowledge-graphs">knowledge-graphs</a><a class="tag" href="/wiki/topics/llm">llm</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/healthcare-ai">healthcare-ai</a><a class="tag" href="/wiki/topics/explainability">explainability</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

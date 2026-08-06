@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Sowers of Discord and Falsifiers: Malebolge&#x27;s Ninth Chasm to the Giants&#x27; Well (Inf. XXVIII–XXXI)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Sowers of Discord and Falsifiers: Malebolge&#x27;s Ninth Chasm to the Giants&#x27; Well (Inf. XXVIII–XXXI)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-28-31.md">source on GitHub</a></div>
-  <div class="note-summary">Dante and Virgil cross the eighth and ninth chasms of Malebolge, where sowers of discord (Mohammed, Bertrand de Born) are eternally hacked apart and falsifiers of metal, person, coin, and word (Griffolino, Capocchio, Gianni Schicchi, Myrrha, Master Adam, Sinon) rot with disease, before descending past the giants Nimrod, Ephialtes, and Antaeus into the pit of treachery.</div>
-  <div class="tags"><span class="tag">dante</span><span class="tag">inferno</span><span class="tag">malebolge</span><span class="tag">contrapasso</span><span class="tag">sowers-of-discord</span><span class="tag">falsifiers</span><span class="tag">giants</span><span class="tag">babel</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-28-31.md">source on GitHub</a></div>
+    <div class="note-summary">Dante and Virgil cross the eighth and ninth chasms of Malebolge, where sowers of discord (Mohammed, Bertrand de Born) are eternally hacked apart and falsifiers of metal, person, coin, and word (Griffolino, Capocchio, Gianni Schicchi, Myrrha, Master Adam, Sinon) rot with disease, before descending past the giants Nimrod, Ephialtes, and Antaeus into the pit of treachery.</div>
     <div class="prose">
 <p>This unit carries Dante and Virgil through the end of the ninth Malebolge chasm — the sowers of scandal and schism, mutilated and re-wounded in an endless circuit — into the tenth chasm of the falsifiers (alchemists, impersonators, counterfeiters, and liars, all afflicted with plague-like disease), and finally to the rim of the pit where the giants Nimrod, Ephialtes, and Antaeus stand sentinel; Antaeus lowers the two pilgrims down toward Cocytus, the frozen floor reserved for traitors.</p>
 <h2 id="themes">Themes</h2>
@@ -45,13 +54,26 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>Mohammed&#x27;s self-display (&quot;How is Mohammed mangled!&quot;) states the chasm&#x27;s contrapasso doctrine directly: those who &quot;did sow / Scandal and schism&quot; are correspondingly &quot;rent.&quot; Bertrand de Born&#x27;s closing lines make the logic explicit as legal-sounding retribution (&quot;Thus the law / Of retribution fiercely works in me&quot;), the poem&#x27;s clearest statement of the mechanism governing the whole ninth chasm. The falsifiers&#x27; introduction (&quot;the minister of the most mighty Lord, / All-searching Justice&quot;) frames the tenth chasm as a ledger of forgery being audited eternally. The Sinon–Adamo quarrel and Virgil&#x27;s rebuke (&quot;Such wrangling is a joy for vulgar minds&quot;) supply the unit&#x27;s moment of moral self-awareness. Nimrod&#x27;s gibberish and Virgil&#x27;s gloss on the confusion of tongues mark the pit&#x27;s edge as a place where language itself has failed. The unit closes with Antaeus stooping to lift Virgil and Dante and set them down at the threshold of Cocytus, &quot;that Lucifer with Judas low ingulfs&quot; — the physical and moral floor of the whole descent now in view.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>657</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dante">dante</a><a class="tag" href="/wiki/topics/inferno">inferno</a><a class="tag" href="/wiki/topics/malebolge">malebolge</a><a class="tag" href="/wiki/topics/contrapasso">contrapasso</a><span class="tag tag-lone" title="Only this note uses it">sowers-of-discord</span><span class="tag tag-lone" title="Only this note uses it">falsifiers</span><span class="tag tag-lone" title="Only this note uses it">giants</span><span class="tag tag-lone" title="Only this note uses it">babel</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

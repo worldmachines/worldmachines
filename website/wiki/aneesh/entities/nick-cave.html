@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,36 +26,77 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Nick Cave</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Nick Cave</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/nick-cave.md">source on GitHub</a></div>
-  <div class="note-summary">Australian musician and writer whose open letter arguing that AI creativity is soulless became an unexpected entry point for Sathe&#x27;s argument about taste as an irreducibly experience-dependent faculty.</div>
-  <div class="tags"><span class="tag">music</span><span class="tag">creativity</span><span class="tag">ai-critique</span><span class="tag">culture</span><span class="tag">letters</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/nick-cave.md">source on GitHub</a></div>
+    <div class="note-summary">Australian musician and writer whose open letter arguing that AI creativity is soulless became an unexpected entry point for Sathe&#x27;s argument about taste as an irreducibly experience-dependent faculty.</div>
     <div class="prose">
 <p>Australian musician, novelist, and cultural figure. Most relevant here as the author of a widely-circulated letter arguing that using ChatGPT to write songs is fundamentally wrong — not merely stylistically inferior but spiritually empty.</p>
 <h2 id="the-letter">The Letter</h2>
-<p>Cave&#x27;s argument, as narrated by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Stephen Fry&quot;">Stephen Fry</span> in a video Sathe cites (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span>): AI creativity shortcuts bypass the formation of the judgment required to recognize greatness. The imperfection of the creative process is not a bug — it is the mechanism through which taste develops. AI can approximate the output of creative work without having undergone the experience that makes the output meaningful.</p>
+<p>Cave&#x27;s argument, as narrated by <a class="wikilink" href="/wiki/aneesh/entities/stephen-fry" title="Written [[Stephen Fry]], resolved to stephen-fry">Stephen Fry</a> in a video Sathe cites (see <a class="wikilink" href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good" title="Written [[On Being Good vs. Knowing Good]], resolved to on-being-good-vs-knowing-good">On Being Good vs. Knowing Good</a>): AI creativity shortcuts bypass the formation of the judgment required to recognize greatness. The imperfection of the creative process is not a bug — it is the mechanism through which taste develops. AI can approximate the output of creative work without having undergone the experience that makes the output meaningful.</p>
 <p>Sathe&#x27;s response is notably sympathetic: &quot;Surprisingly, I found myself in agreement.&quot; He relocates Cave&#x27;s intuition from a spiritual/artistic register to an epistemological one: the problem with AI as a creative shortcut is not mystical but structural — taste is experience-dependent, and shortcuts skip the experience.</p>
 <h2 id="intellectual-position">Intellectual Position</h2>
 <p>Cave&#x27;s letter represents one of the more philosophically interesting critiques of AI creativity — not &quot;AI can&#x27;t be as good as humans&quot; (empirically contested) but &quot;the process of striving and failing is constitutive of creative capacity.&quot; This maps to a virtue-ethics framework: excellence is a habit formed through practice, not a property of outputs.</p>
 <h2 id="related-entities-and-concepts">Related Entities and Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Stephen Fry&quot;">Stephen Fry</span> — narrator of Cave&#x27;s letter</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> — the concept Cave&#x27;s intuition points toward</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span> — the operational frame Sathe builds from Cave&#x27;s starting point</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> — the unusual alignment between a data scientist and a rock musician</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/stephen-fry" title="Written [[Stephen Fry]], resolved to stephen-fry">Stephen Fry</a> — narrator of Cave&#x27;s letter</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity" title="Written [[Taste as Epistemic Capacity]], resolved to taste-as-epistemic-capacity">Taste as Epistemic Capacity</a> — the concept Cave&#x27;s intuition points toward</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor" title="Written [[AI as Tool vs. Advisor]], resolved to ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a> — the operational frame Sathe builds from Cave&#x27;s starting point</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> — the unusual alignment between a data scientist and a rock musician</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>264</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">Taste as Epistemic Capacity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good">On Being Good vs. Knowing Good: Perspectives on AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cyclical-information-epistemics">Cyclical Information Epistemics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-taste-gap-in-ai-systems">The Taste Gap in AI Systems</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/stephen-fry">Stephen Fry</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good">On Being Good vs. Knowing Good: Perspectives on AI</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">Taste as Epistemic Capacity</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/mission-critical-ai">Mission-Critical AI</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">music</span><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/ai-critique">ai-critique</a><a class="tag" href="/wiki/topics/culture">culture</a><span class="tag tag-lone" title="Only this note uses it">letters</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

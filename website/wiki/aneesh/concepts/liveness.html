@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Liveness</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Liveness</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/liveness.md">source on GitHub</a></div>
-  <div class="note-summary">Liveness is Venkatesh Rao&#x27;s term for the process condition of being alive, defined not by intelligence or biological designation but by capture resistance — the property of asserting control over one&#x27;s own existence rather than being harnessed for extrinsic purposes.</div>
-  <div class="tags"><span class="tag">liveness</span><span class="tag">philosophy-of-life</span><span class="tag">rao</span><span class="tag">autonomy</span><span class="tag">capture-resistance</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/liveness.md">source on GitHub</a></div>
+    <div class="note-summary">Liveness is Venkatesh Rao&#x27;s term for the process condition of being alive, defined not by intelligence or biological designation but by capture resistance — the property of asserting control over one&#x27;s own existence rather than being harnessed for extrinsic purposes.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>From <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>, <em>Engineering Liveness</em> (2026):</p>
@@ -59,7 +68,7 @@
 <li>Death is concentrated at the periphery (slaughterhouses, hospices, foreign wars)</li>
 <li>An &quot;ersatz heaven&quot; of anemic liveness is enshrined at the center</li>
 </ul>
-<p>True liveness requires entanglement with death — which is why <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rewilding&quot;">Rewilding</span> is necessary in a <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span>.</p>
+<p>True liveness requires entanglement with death — which is why <a class="wikilink-wanted" href="/wiki/wanted/rewilding" title="No note is called &quot;Rewilding&quot; yet — see who is asking for it">Rewilding</a> is necessary in a <a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a>.</p>
 <h2 id="liveness-and-memory-time">Liveness and Memory/Time</h2>
 <p>The full account (previewed, not fully developed in this essay):</p>
 <ul>
@@ -68,42 +77,83 @@
 </ul>
 <p>This makes liveness fundamentally <em>temporal</em> rather than instantaneous — it is a process condition, not a state.</p>
 <h2 id="the-infinite-game-connection">The Infinite Game Connection</h2>
-<p>After <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Albert Camus&quot;">Albert Camus</span>: the problem of suicide is the only serious philosophical problem. Once liveness is accepted, the question is what to do in the interval between being turned on and turned off.</p>
+<p>After <a class="wikilink-wanted" href="/wiki/wanted/albert-camus" title="No note is called &quot;Albert Camus&quot; yet — see who is asking for it">Albert Camus</a>: the problem of suicide is the only serious philosophical problem. Once liveness is accepted, the question is what to do in the interval between being turned on and turned off.</p>
 <p>Liveness must <em>play itself first</em> — belong to the infinite game (James Carse), not any finite game. Whatever else a living entity does, it cannot devote itself wholly to that task at the expense of continued existence.</p>
 <p>What comes after uselessness? <em>Mediocrity</em> — existing without justifying that existence.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Capture Resistance&quot;">Capture Resistance</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Useless Machine&quot;">Useless Machine</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rewilding Technology&quot;">Rewilding Technology</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Energy Rate Density&quot;">Energy Rate Density</span> — Chaisson&#x27;s metric may operationalize aspects of liveness</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Autopoiesis&quot;">Autopoiesis</span> — Maturana/Varela&#x27;s parallel concept in biology (not cited by Rao)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance" title="Written [[Capture Resistance]], resolved to capture-resistance">Capture Resistance</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/useless-machine" title="Written [[Useless Machine]], resolved to useless-machine">Useless Machine</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/rewilding-technology" title="Written [[Rewilding Technology]], resolved to rewilding-technology">Rewilding Technology</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/energy-rate-density" title="Written [[Energy Rate Density]], resolved to energy-rate-density">Energy Rate Density</a> — Chaisson&#x27;s metric may operationalize aspects of liveness</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/autopoiesis" title="Written [[Autopoiesis]], resolved to autopoiesis">Autopoiesis</a> — Maturana/Varela&#x27;s parallel concept in biology (not cited by Rao)</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span> (primary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a> (primary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">10</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/linear-vs-cyclical-paths">Linear vs. Cyclical Paths</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/proto-liveness">Proto-Liveness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/spaciousness-and-crowding">Spaciousness and Crowding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/glossary/world-machine">World Machine</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>20</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>454</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/energy-rate-density">Energy Rate Density</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>12 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/nonequilibrium-thermodynamics">Nonequilibrium Thermodynamics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/eric-chaisson">Eric Chaisson</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/proto-liveness">Proto-Liveness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rewilding-technology">Rewilding Technology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/spaciousness-and-crowding">Spaciousness and Crowding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/linear-vs-cyclical-paths">Linear vs. Cyclical Paths</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/useless-machine">Useless Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/glossary/world-machine">World Machine</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/liveness">liveness</a><a class="tag" href="/wiki/topics/philosophy-of-life">philosophy-of-life</a><a class="tag" href="/wiki/topics/rao">rao</a><a class="tag" href="/wiki/topics/autonomy">autonomy</a><a class="tag" href="/wiki/topics/capture-resistance">capture-resistance</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

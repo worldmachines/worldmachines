@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Data is Always Constructed: From Sensemaking to Art</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Data is Always Constructed: From Sensemaking to Art</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/data-and-frames-in-analysis-and-art.md">source on GitHub</a></div>
-  <div class="note-summary">Cross-source synthesis: the Data-Frame Theory&#x27;s claim that &#x27;data is always constructed&#x27; — that nothing is data without a frame — has deep resonances across intelligence analysis, artistic creation, and scientific paradigms.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">sensemaking</span><span class="tag">data</span><span class="tag">frames</span><span class="tag">construction</span><span class="tag">epistemology</span><span class="tag">art</span><span class="tag">analysis</span><span class="tag">paradigm</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/data-and-frames-in-analysis-and-art.md">source on GitHub</a></div>
+    <div class="note-summary">Cross-source synthesis: the Data-Frame Theory&#x27;s claim that &#x27;data is always constructed&#x27; — that nothing is data without a frame — has deep resonances across intelligence analysis, artistic creation, and scientific paradigms.</div>
     <div class="prose">
 <h2 id="the-core-claim">The Core Claim</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Klein et al</span> make a radical epistemological claim:</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Klein et al</a> make a radical epistemological claim:</p>
 <blockquote><p>&quot;Data is always constructed — you have to <em>choose</em> to interpret certain facts and events as data.&quot;</p></blockquote>
 <p>A frame determines what counts as data in the first place. Without a frame, you don&#x27;t see more — you see nothing coherently. The analyst who &quot;misses&quot; a pattern in a dashboard isn&#x27;t failing to observe; they are observing without the frame that would make the observation meaningful.</p>
 <h2 id="resonances-across-domains">Resonances Across Domains</h2>
@@ -46,10 +55,10 @@
 <h3 id="scientific-observation">Scientific Observation</h3>
 <p>Kuhn&#x27;s paradigm-dependence of observation: anomalies are invisible within a successful paradigm. They only become data once a competing framework makes them relevant. This is the same structural claim as the Data-Frame theory applied to the level of scientific communities rather than individual analysts.</p>
 <h3 id="artistic-creation-and-the-literary-canon">Artistic Creation and the Literary Canon</h3>
-<p>Bloom&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Western Canon&quot;">Western Canon</span> argument has the same structure: the significance of a literary work is not intrinsic — it is constituted by the frame of literary tradition, influence, and readerly practice. Works &quot;enter&quot; or &quot;exit&quot; the canon not because of fixed properties but because the frames of readers and writers change.</p>
-<p>Even more specifically: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span> is the mechanism by which a writer constructs a new frame for reading a precursor, which then makes previously invisible features of the precursor&#x27;s work visible as significant.</p>
+<p>Bloom&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/western-canon" title="Written [[Western Canon]], resolved to western-canon">Western Canon</a> argument has the same structure: the significance of a literary work is not intrinsic — it is constituted by the frame of literary tradition, influence, and readerly practice. Works &quot;enter&quot; or &quot;exit&quot; the canon not because of fixed properties but because the frames of readers and writers change.</p>
+<p>Even more specifically: <a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a> is the mechanism by which a writer constructs a new frame for reading a precursor, which then makes previously invisible features of the precursor&#x27;s work visible as significant.</p>
 <h3 id="technology-adoption">Technology Adoption</h3>
-<p>Chin&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span> example: an exec notices a customer-retention anomaly that their lead data analyst sees only as noise. The analyst has the data; they lack the frame. When the exec provides the frame (&quot;this might be a broken onboarding flow&quot;), the &quot;data&quot; becomes visible.</p>
+<p>Chin&#x27;s <a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a> example: an exec notices a customer-retention anomaly that their lead data analyst sees only as noise. The analyst has the data; they lack the frame. When the exec provides the frame (&quot;this might be a broken onboarding flow&quot;), the &quot;data&quot; becomes visible.</p>
 <p>Applied to AI: the field reports that indicate autonomous AI coding is possible are <em>already available</em> — they&#x27;re in public view. But practitioners without a frame that makes &quot;AI without human code review&quot; even hypothetically possible will not register these reports as significant data.</p>
 <h2 id="the-constructivist-implication">The Constructivist Implication</h2>
 <p>This convergence suggests a broad epistemological claim: <strong>structured knowledge (expertise, canon, paradigm) is not just a filter on data — it constitutes what data is available.</strong> The price of having no framework is not neutrality but blindness.</p>
@@ -66,23 +75,36 @@
 <p>Thesis: across intelligence analysis, scientific inquiry, and artistic creation, the same epistemological structure appears — what you can see depends on the frame you bring. This is not a limitation to overcome but a condition to work with. The expert move in each domain is to develop better frames and cultivate the discipline to notice when the current frame stops working.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — primary source</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — the pathological form</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Western Canon&quot;">Western Canon</span> — Bloom&#x27;s version in literary tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span> — the artistic mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> — the literary context</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — the research tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heuristics and Biases&quot;">Heuristics and Biases</span> — the opposing view (data arrives pre-formed)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Outcome Orientation&quot;">Outcome Orientation</span> — the applied operationalization</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — primary source</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — the pathological form</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/western-canon" title="Written [[Western Canon]], resolved to western-canon">Western Canon</a> — Bloom&#x27;s version in literary tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a> — the artistic mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> — the literary context</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — the research tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/heuristics-and-biases" title="Written [[Heuristics and Biases]], resolved to heuristics-and-biases">Heuristics and Biases</a> — the opposing view (data arrives pre-formed)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/outcome-orientation" title="No note is called &quot;Outcome Orientation&quot; yet — see who is asking for it">Outcome Orientation</a> — the applied operationalization</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>691</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/data">data</a><a class="tag" href="/wiki/topics/frames">frames</a><a class="tag" href="/wiki/topics/construction">construction</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/art">art</a><span class="tag tag-lone" title="Only this note uses it">analysis</span><a class="tag" href="/wiki/topics/paradigm">paradigm</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

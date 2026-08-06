@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Paradiso I–V: Invocation, the Sphere of the Moon, and the Ascent to Mercury</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Paradiso I–V: Invocation, the Sphere of the Moon, and the Ascent to Mercury</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-01-05.md">source on GitHub</a></div>
-  <div class="note-summary">Guided by Beatrice, Dante ascends past the sphere of fire into the heaven of the Moon, where natural philosophy explains the moon&#x27;s dark spots and the soul&#x27;s power to rise, the shade of Piccarda Donati (and the empress Constance) illustrates that perfect blessedness lies in willing what God wills, and Beatrice&#x27;s long discourse on vows, free will, and violence resolves Dante&#x27;s doubts before the pair are swept upward into the second heaven, Mercury.</div>
-  <div class="tags"><span class="tag">dante</span><span class="tag">paradiso</span><span class="tag">divine-comedy</span><span class="tag">cosmic-order</span><span class="tag">free-will</span><span class="tag">vows</span><span class="tag">piccarda-donati</span><span class="tag">natural-philosophy</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-15-19">dante-divine-comedy-purgatory-cantos-15-19</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-01-05.md">source on GitHub</a></div>
+    <div class="note-summary">Guided by Beatrice, Dante ascends past the sphere of fire into the heaven of the Moon, where natural philosophy explains the moon&#x27;s dark spots and the soul&#x27;s power to rise, the shade of Piccarda Donati (and the empress Constance) illustrates that perfect blessedness lies in willing what God wills, and Beatrice&#x27;s long discourse on vows, free will, and violence resolves Dante&#x27;s doubts before the pair are swept upward into the second heaven, Mercury.</div>
     <div class="prose">
 <p>This unit opens Dante&#x27;s <em>Paradiso</em> with the poet&#x27;s invocation to Apollo and his admission that paradise exceeds both memory and language, then follows Dante and Beatrice as they rise through the sphere of fire into the heaven of the Moon. There Beatrice corrects Dante&#x27;s belief about the moon&#x27;s dark markings with an extended natural-philosophical argument (culminating in a three-mirror thought experiment), explains the metaphysics of celestial influence, and introduces Dante to the shade of Piccarda Donati, a nun torn from her convent, and to the empress Constance. Piccarda&#x27;s account of contented blessedness within a fixed hierarchy prompts two doubts in Dante — whether souls truly return to their appointed stars, and whether violence can excuse a broken vow — which Beatrice resolves across Cantos IV and V with a sustained meditation on free will as God&#x27;s greatest gift and the vow as an irrevocable covenant. The unit closes as Beatrice and Dante are shot like an arrow into the second heaven, Mercury, where a crowd of joyful spirits rushes toward them.</p>
 <h2 id="themes">Themes</h2>
@@ -45,13 +53,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The proem&#x27;s confession of the ascent&#x27;s unsayability, the moment of &quot;transhuman&quot; change modeled on Glaucus, the cosmic-order speech that gives the sphere hierarchy its theological logic, Piccarda&#x27;s declaration that peace lies in willing one&#x27;s rank, the mirror-experiment refutation of the moon-spot theory, and Beatrice&#x27;s account of the vow as an unbreakable covenant together form the argumentative spine of this unit — moving from what cannot be told, to how the universe is ordered, to what it means to be bound by one&#x27;s own free choice within that order.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>894</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-15-19">dante-divine-comedy-purgatory-cantos-15-19</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dante">dante</a><a class="tag" href="/wiki/topics/paradiso">paradiso</a><a class="tag" href="/wiki/topics/divine-comedy">divine-comedy</a><a class="tag" href="/wiki/topics/cosmic-order">cosmic-order</a><a class="tag" href="/wiki/topics/free-will">free-will</a><span class="tag tag-lone" title="Only this note uses it">vows</span><span class="tag tag-lone" title="Only this note uses it">piccarda-donati</span><a class="tag" href="/wiki/topics/natural-philosophy">natural-philosophy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

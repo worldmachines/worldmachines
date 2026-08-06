@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>AI May Be Making Us Think and Write More Alike</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>AI May Be Making Us Think and Write More Alike</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/usc-ai-homogenization-cognitive-diversity.md">source on GitHub</a></div>
-  <div class="note-summary">USC researchers argue that widespread LLM use is homogenizing human cognition — standardizing language, reasoning styles, and perspectives — and that this reduction in cognitive diversity threatens collective intelligence and adaptive capacity.</div>
-  <div class="tags"><span class="tag">ai</span><span class="tag">llm</span><span class="tag">cognitive-diversity</span><span class="tag">homogenization</span><span class="tag">collective-intelligence</span><span class="tag">epistemic-monoculture</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/usc-ai-homogenization-cognitive-diversity.md">source on GitHub</a></div>
+    <div class="note-summary">USC researchers argue that widespread LLM use is homogenizing human cognition — standardizing language, reasoning styles, and perspectives — and that this reduction in cognitive diversity threatens collective intelligence and adaptive capacity.</div>
     <div class="prose">
 <p><strong>Source</strong>: Julia Grimmett, USC Dornsife News, March 11, 2026<br>
 <strong>URL</strong>: https://dornsife.usc.edu/news/stories/ai-may-be-making-us-think-and-write-more-alike/<br>
@@ -63,24 +72,37 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Diversity&quot;">Cognitive Diversity</span> — the threatened resource</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLM Training Data Bias&quot;">LLM Training Data Bias</span> — the structural cause</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;WEIRD Bias&quot;">WEIRD Bias</span> — the demographic skew in training data</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Collective Intelligence&quot;">Collective Intelligence</span> — what homogenization threatens</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chain-of-Thought Reasoning&quot;">Chain-of-Thought Reasoning</span> — the reasoning monoculture</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Monoculture&quot;">Epistemic Monoculture</span> — broader concept this fits within</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agency and AI Assistance&quot;">Agency and AI Assistance</span> — the deferred-continuations finding</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span></li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Diversity as Infrastructure&quot;">Cognitive Diversity as Infrastructure</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-diversity" title="Written [[Cognitive Diversity]], resolved to cognitive-diversity">Cognitive Diversity</a> — the threatened resource</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/llm-training-data-bias" title="Written [[LLM Training Data Bias]], resolved to llm-training-data-bias">LLM Training Data Bias</a> — the structural cause</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/weird-bias" title="Written [[WEIRD Bias]], resolved to weird-bias">WEIRD Bias</a> — the demographic skew in training data</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/collective-intelligence" title="No note is called &quot;Collective Intelligence&quot; yet — see who is asking for it">Collective Intelligence</a> — what homogenization threatens</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/chain-of-thought-reasoning" title="No note is called &quot;Chain-of-Thought Reasoning&quot; yet — see who is asking for it">Chain-of-Thought Reasoning</a> — the reasoning monoculture</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/epistemic-monoculture" title="Written [[Epistemic Monoculture]], resolved to epistemic-monoculture">Epistemic Monoculture</a> — broader concept this fits within</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/agency-and-ai-assistance" title="No note is called &quot;Agency and AI Assistance&quot; yet — see who is asking for it">Agency and AI Assistance</a> — the deferred-continuations finding</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a></li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/cognitive-diversity-as-infrastructure" title="Written [[Cognitive Diversity as Infrastructure]], resolved to cognitive-diversity-as-infrastructure">Cognitive Diversity as Infrastructure</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>516</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/llm">llm</a><a class="tag" href="/wiki/topics/cognitive-diversity">cognitive-diversity</a><a class="tag" href="/wiki/topics/homogenization">homogenization</a><a class="tag" href="/wiki/topics/collective-intelligence">collective-intelligence</a><a class="tag" href="/wiki/topics/epistemic-monoculture">epistemic-monoculture</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

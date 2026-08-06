@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Lore vs. Search vs. LLM</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Lore vs. Search vs. LLM</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/lore-vs-search-vs-llm.md">source on GitHub</a></div>
-  <div class="note-summary">A three-era typology of how humans access reliable information — lore (oral expertise), search (hyperlinked retrieval), and LLMs (generative language models) — used to argue that technology may have produced a U-shaped regression.</div>
-  <div class="tags"><span class="tag">information-access</span><span class="tag">epistemics</span><span class="tag">technology-history</span><span class="tag">lore</span><span class="tag">search</span><span class="tag">llm</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/lore-vs-search-vs-llm.md">source on GitHub</a></div>
+    <div class="note-summary">A three-era typology of how humans access reliable information — lore (oral expertise), search (hyperlinked retrieval), and LLMs (generative language models) — used to argue that technology may have produced a U-shaped regression.</div>
     <div class="prose">
 <h2 id="the-typology">The Typology</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span>) frames three historical modes of accessing reliable information:</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a>) frames three historical modes of accessing reliable information:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Era</th><th>Mode</th><th>Reliability Mechanism</th></tr></thead>
 <tbody>
@@ -60,26 +69,59 @@
 <ul>
 <li><strong>Lore</strong>: gatekept by social access, geographic proximity, and the limits of human memory</li>
 <li><strong>Search</strong>: gameable by SEO, degraded by advertising incentives, does not synthesize</li>
-<li><strong>LLM</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span>, no confidence scoring, no citation trail, confidently wrong</li>
+<li><strong>LLM</strong>: <a class="wikilink" href="/wiki/aneesh/concepts/hallucination" title="Written [[Hallucination]], resolved to hallucination">Hallucination</a>, no confidence scoring, no citation trail, confidently wrong</li>
 </ul>
-<p>The ideal mode — and the one the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> attempts to recover — would combine LLM&#x27;s accessibility with lore&#x27;s authority and search&#x27;s traceability.</p>
+<p>The ideal mode — and the one the <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> attempts to recover — would combine LLM&#x27;s accessibility with lore&#x27;s authority and search&#x27;s traceability.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the standard that would distinguish good LLM from hallucinating LLM</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span> — the specific failure mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Citation Problem in LLMs&quot;">Citation Problem in LLMs</span> — the missing link between LLM output and sources</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Degradation of Search&quot;">Degradation of Search</span> — the empirical backdrop</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perplexity AI&quot;">Perplexity AI</span> — the attempt to restore citations</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cyclical Information Epistemics&quot;">Cyclical Information Epistemics</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the standard that would distinguish good LLM from hallucinating LLM</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/hallucination" title="Written [[Hallucination]], resolved to hallucination">Hallucination</a> — the specific failure mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/citation-problem-in-llms" title="Written [[Citation Problem in LLMs]], resolved to citation-problem-in-llms">Citation Problem in LLMs</a> — the missing link between LLM output and sources</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/degradation-of-search" title="Written [[Degradation of Search]], resolved to degradation-of-search">Degradation of Search</a> — the empirical backdrop</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/perplexity-ai" title="Written [[Perplexity AI]], resolved to perplexity-ai">Perplexity AI</a> — the attempt to restore citations</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/cyclical-information-epistemics" title="Written [[Cyclical Information Epistemics]], resolved to cyclical-information-epistemics">Cyclical Information Epistemics</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>327</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/degradation-of-search">Degradation of Search</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-taste-gap-in-ai-systems">The Taste Gap in AI Systems</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/information-access">information-access</a><a class="tag" href="/wiki/topics/epistemics">epistemics</a><span class="tag tag-lone" title="Only this note uses it">technology-history</span><a class="tag" href="/wiki/topics/lore">lore</a><a class="tag" href="/wiki/topics/search">search</a><a class="tag" href="/wiki/topics/llm">llm</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Creator-as-Hero Rhetoric</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Creator-as-Hero Rhetoric</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/creator-as-hero-rhetoric.md">source on GitHub</a></div>
-  <div class="note-summary">The ideological framing, deployed by platforms, that positions creators as heroic culture-makers in order to obscure the platform&#x27;s own power and the asymmetric risk arrangement it enforces.</div>
-  <div class="tags"><span class="tag">platforms</span><span class="tag">ideology</span><span class="tag">rhetoric</span><span class="tag">labor</span><span class="tag">political-economy</span><span class="tag">cultural-economy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/creator-as-hero-rhetoric.md">source on GitHub</a></div>
+    <div class="note-summary">The ideological framing, deployed by platforms, that positions creators as heroic culture-makers in order to obscure the platform&#x27;s own power and the asymmetric risk arrangement it enforces.</div>
     <div class="prose">
 <p>The discursive strategy through which platforms — Substack, YouTube, TikTok, Patreon — frame their role as empowering individual creators, positioning those creators as autonomous cultural heroes whose success is self-generated. The rhetoric naturalizes the platform&#x27;s extraction of a revenue cut by making the platform&#x27;s role invisible or incidental.</p>
 <h2 id="the-specific-case">The Specific Case</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> cites Substack&#x27;s fundraise announcement calling writers &quot;the heroes of culture&quot; as a paradigmatic example. The alarm it should trigger: the louder a platform&#x27;s rhetoric of creator empowerment, the more thoroughly the platform has structured the underlying relationship to extract value while the creator bears risk.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> cites Substack&#x27;s fundraise announcement calling writers &quot;the heroes of culture&quot; as a paradigmatic example. The alarm it should trigger: the louder a platform&#x27;s rhetoric of creator empowerment, the more thoroughly the platform has structured the underlying relationship to extract value while the creator bears risk.</p>
 <h2 id="structure-of-the-ideological-move">Structure of the Ideological Move</h2>
 <ol>
 <li><strong>Emphasis on creator agency</strong> (&quot;you set your own schedule, you build your audience&quot;)</li>
@@ -50,26 +59,58 @@
 <ul>
 <li>The putting-out merchant who praised the skilled handloom weaver while extracting margin on every yard</li>
 <li>Factory philanthropy (Carnegie, Pullman) — benevolence framing that obscured labor suppression</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gig Economy&quot;">Gig Economy</span> framing: &quot;be your own boss&quot; as cover for zero-hours employment without protections</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/gig-economy" title="No note is called &quot;Gig Economy&quot; yet — see who is asking for it">Gig Economy</a> framing: &quot;be your own boss&quot; as cover for zero-hours employment without protections</li>
 </ul>
 <h2 id="critique">Critique</h2>
 <p>The rhetoric is not merely false — it may be psychologically functional for creators who need motivation to endure the high failure rate of platform content. But it systematically prevents creators from analyzing and contesting the underlying economic structure.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Putting-Out System&quot;">Putting-Out System</span> — the structural reality being obscured</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Management&quot;">Algorithmic Management</span> — the mechanism of control beneath the empowerment frame</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Financialization of Creativity&quot;">Financialization of Creativity</span> — the downstream distortion of creative motivation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Platforms as Neo-Bosses&quot;">Platforms as Neo-Bosses</span> — synthesis</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;What Do Platforms Really Do?&quot;">What Do Platforms Really Do?</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/putting-out-system" title="Written [[Putting-Out System]], resolved to putting-out-system">Putting-Out System</a> — the structural reality being obscured</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-management" title="Written [[Algorithmic Management]], resolved to algorithmic-management">Algorithmic Management</a> — the mechanism of control beneath the empowerment frame</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/financialization-of-creativity" title="Written [[Financialization of Creativity]], resolved to financialization-of-creativity">Financialization of Creativity</a> — the downstream distortion of creative motivation</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/platforms-as-neo-bosses" title="Written [[Platforms as Neo-Bosses]], resolved to platforms-as-neo-bosses">Platforms as Neo-Bosses</a> — synthesis</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do" title="Written [[What Do Platforms Really Do?]], resolved to what-do-platforms-really-do">What Do Platforms Really Do?</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>306</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/putting-out-system">Putting-Out System</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/platforms-as-neo-bosses">Platforms as Neo-Bosses</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/what-do-platforms-really-do">What Do Platforms Really Do?</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-management">Algorithmic Management</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/financialization-of-creativity">Financialization of Creativity</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/algorithmic-management">Algorithmic Management</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/financialization-of-creativity">Financialization of Creativity</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/platforms-as-neo-bosses">Platforms as Neo-Bosses</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/putting-out-system">Putting-Out System</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/what-do-platforms-really-do">What Do Platforms Really Do?</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/platforms">platforms</a><a class="tag" href="/wiki/topics/ideology">ideology</a><a class="tag" href="/wiki/topics/rhetoric">rhetoric</a><a class="tag" href="/wiki/topics/labor">labor</a><a class="tag" href="/wiki/topics/political-economy">political-economy</a><a class="tag" href="/wiki/topics/cultural-economy">cultural-economy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

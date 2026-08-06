@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Naming as Anchoring</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Naming as Anchoring</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/naming-as-anchoring.md">source on GitHub</a></div>
-  <div class="note-summary">Tuan&#x27;s &#x27;naming is power&#x27; (1991, p. 688) is the primordial anchoring act that Klein&#x27;s data-frame theory of sensemaking describes formally — naming creates frame, frame creates place, and narrative is the temporal axis along which place-making unfolds.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">tuan</span><span class="tag">klein</span><span class="tag">naming</span><span class="tag">anchoring</span><span class="tag">sensemaking</span><span class="tag">place-making</span><span class="tag">narrative</span><span class="tag">frames</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/naming-as-anchoring.md">source on GitHub</a></div>
+    <div class="note-summary">Tuan&#x27;s &#x27;naming is power&#x27; (1991, p. 688) is the primordial anchoring act that Klein&#x27;s data-frame theory of sensemaking describes formally — naming creates frame, frame creates place, and narrative is the temporal axis along which place-making unfolds.</div>
     <div class="prose">
 <h2 id="the-closure">The Closure</h2>
 <p><a class="wikilink" href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">frames-as-places-sensemaking-as-place-making</a> established that Klein&#x27;s sensemaking frames map onto the wiki&#x27;s spatial epistemology — frames are places, anchors are landmarks, reframing is place-making. That synthesis left a gap. It described the mechanism (frame construction around 3–4 anchors) but not the <em>primordial</em> act by which any anchor first acquires its anchoring force. The Tuan 1991 article fills the gap.</p>
@@ -45,7 +54,7 @@
 <p><strong>Australian Aboriginal songlines</strong> (Tuan 1991, pp. 686–687): Dreamtime ancestors literally sang the world into being. Place is wherever an ancestor stopped to act, not a resource locality. The song is the maintenance protocol; without re-singing, the places fade. Klein&#x27;s &quot;preservation cycle&quot; — the work required to keep a frame alive against anomalies and entropy — is the cognitive form of this maintenance. Songs and frames both decay if not retold.</p>
 <p><strong>&quot;Mount Misery&quot;</strong> (Tuan 1991, p. 689): &quot;Mount Misery will fade from consciousness if the name is not passed on, if stories are not continuingly elaborated.&quot; This is the Klein &quot;preservation vs. reframing&quot; cycle as cultural fact: a frame that is not actively elaborated weakens; eventually the territory feels different and the old name no longer fits.</p>
 <h2 id="the-closure-of-a-wiki-gap">The Closure of a Wiki Gap</h2>
-<p><a class="wikilink" href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">frames-as-places-sensemaking-as-place-making</a> noted that &quot;the explorer in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Explorer and the Tourist&quot;">The Explorer and the Tourist</span> is the figure who reframes — who builds new places in unfamiliar space. The tourist is the figure who elaborates — who fills in the details of a frame provided by someone else.&quot; Tuan 1991 closes this in a way the earlier synthesis could not: the explorer&#x27;s reframing is <em>naming</em>, and the tourist&#x27;s frame-consumption is <em>visiting a place that was named by someone else</em>. Klein gave the cognitive cycle. Tuan gives the constitutive act that opens any cycle at all.</p>
+<p><a class="wikilink" href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">frames-as-places-sensemaking-as-place-making</a> noted that &quot;the explorer in <a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist" title="Written [[The Explorer and the Tourist]], resolved to the-explorer-and-the-tourist">The Explorer and the Tourist</a> is the figure who reframes — who builds new places in unfamiliar space. The tourist is the figure who elaborates — who fills in the details of a frame provided by someone else.&quot; Tuan 1991 closes this in a way the earlier synthesis could not: the explorer&#x27;s reframing is <em>naming</em>, and the tourist&#x27;s frame-consumption is <em>visiting a place that was named by someone else</em>. Klein gave the cognitive cycle. Tuan gives the constitutive act that opens any cycle at all.</p>
 <h2 id="narrative-as-the-temporal-axis">Narrative as the Temporal Axis</h2>
 <p>Klein&#x27;s framework is mostly synchronic. Frame, anchors, data; cycle of elaboration; possible reframing. The temporal dimension is implicit at best — sensemaking happens in time, but time is not a first-class theoretical citizen.</p>
 <p>Tuan 1991 makes narrative the temporal axis of place-making. The Mole/Rat dialogue from <em>The Wind in the Willows</em> (Tuan 1991, p. 689): Rat verbally recreates Mole&#x27;s house, transforming it from &quot;a source of shame&quot; to &quot;the jolliest place I ever was in.&quot; The transformation is not merely descriptive; it is <em>temporal</em> — Rat&#x27;s narrative weaves the past inhabitations of the house into a present that can hold them. Updike on London (Tuan 1991, pp. 690–691): &quot;221B Baker Street is more vividly present to some Londoners than are the apartment homes of their maiden aunts.&quot; The literary work is a temporal place-maintenance technology — what oral re-telling did for Mt. Misery, written narrative does at scale.</p>
@@ -87,22 +96,48 @@
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">place-as-the-human-form-of-worlding</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">8</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-1-setting-the-scene">Massey, *For Space* — Part One: Setting the Scene</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-cortes-vignette">The Cortés Vignette (Tenochtitlán Encounter)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>21</b><span>links out</span></div>
+      <div class="bearing"><b>1204</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-cortes-vignette">The Cortés Vignette (Tenochtitlán Encounter)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-1-setting-the-scene">Massey, *For Space* — Part One: Setting the Scene</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/tuan">tuan</a><a class="tag" href="/wiki/topics/klein">klein</a><a class="tag" href="/wiki/topics/naming">naming</a><span class="tag tag-lone" title="Only this note uses it">anchoring</span><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/narrative">narrative</a><a class="tag" href="/wiki/topics/frames">frames</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

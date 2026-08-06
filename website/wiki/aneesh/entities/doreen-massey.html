@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Doreen Massey</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Doreen Massey</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/doreen-massey.md">source on GitHub</a></div>
-  <div class="note-summary">British geographer (1944–2016) whose relational, constructive account of space as always-in-process and never closed is a key ally for Bryant&#x27;s topological conception of worlds.</div>
-  <div class="tags"><span class="tag">geography</span><span class="tag">space</span><span class="tag">relational-ontology</span><span class="tag">place</span><span class="tag">massey</span><span class="tag">feminist-geography</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/doreen-massey.md">source on GitHub</a></div>
+    <div class="note-summary">British geographer (1944–2016) whose relational, constructive account of space as always-in-process and never closed is a key ally for Bryant&#x27;s topological conception of worlds.</div>
     <div class="prose">
 <p>British human geographer (1944–2016), professor at the Open University. Her major work <em>For Space</em> (2005) and <em>Space, Place and Gender</em> (1994) constitute one of the most rigorous relational accounts of space in contemporary social theory.</p>
 <h2 id="core-position">Core Position</h2>
@@ -129,86 +138,117 @@
 <p>In §II, Sathe invokes Massey to correct any reading of space as static or neutral: &quot;Doreen Massey reminds us that space is not inert. It is relational, always in flux, co-constituted by those who traverse it.&quot; This serves to establish that space is not a passive background awaiting human place-making action but is itself already relational and dynamic — which makes the act of interruption (building a home, making a place) all the more significant. Space is not blank canvas; it is charged with existing relations. Place-making is therefore always a negotiation with existing conditions, not creation ex nihilo.</p>
 <p>→ See <a class="wikilink" href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">we-need-homes-in-the-delta-quadrant</a>, §II → See <a class="wikilink" href="/wiki/aneesh/concepts/place-defined-by-what-it-touches">place-defined-by-what-it-touches</a> — the relational constitution of place identity</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">72</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/aspatial-globalisation">Aspatial Globalisation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/billiard-ball-geography">Billiard-Ball Geography</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bryant-topology-of-worlds">Bryant&#x27;s Topology of Worlds</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/chantal-mouffe">Chantal Mouffe (b. 1943)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/claude-levi-strauss">Claude Lévi-Strauss (1908–2009)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/coevalness">Coevalness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/coexisting-heterogeneity">Coexisting Heterogeneity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/cosmopolitan-time-queue">Cosmopolitan Time Queue</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">Cosmopolitan Time Queue and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/coupure-and-causal-closure">Coupure and Causal Closure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/deep-time-and-place-identity">Deep Time and Place Identity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/ernesto-laclau">Ernesto Laclau (1935–2014)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/geophilosophy">Geophilosophy</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/global-sense-of-place">Global Sense of Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/globalisation-as-inevitability-rhetoric">Globalisation as Inevitability Rhetoric</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/hamburgs-oldest-immigrant">Hamburg&#x27;s Oldest Immigrant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/happenstance-juxtaposition">Happenstance Juxtaposition</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/henri-lefebvre">Henri Lefebvre (1901–1991)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/imaginations-of-space">Imaginations of Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/immigrant-rocks">Immigrant Rocks</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/instantaneity-depthlessness">Instantaneity / Depthlessness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/jacques-derrida">Jacques Derrida (1930–2004)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/johannes-fabian">Johannes Fabian (b. 1937)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/lefebvre-spatial-triad">Lefebvre&#x27;s Spatial Triad</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/loose-ends-and-missing-links">Loose Ends and Missing Links</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/louis-althusser">Louis Althusser (1918–1990)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/making-and-contesting-time-spaces">Making and Contesting Time-Spaces</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/maps-as-technologies-of-power">Maps as Technologies of Power</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/massey-bryant-multiplicity">Massey and Bryant on Positive Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/massey-bryant-relational-space">Massey and Bryant: Relational Space — Two Versions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/massey-tuan-place-as-event-vs-pause">Massey and Tuan: Place as Event vs. Place as Pause</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-5-relational-politics">Massey, *For Space* (2005) — Part Five: A Relational Politics of the Spatial</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-3-living-in-spatial-times">Massey, *For Space* (2005) — Part Three: Living in Spatial Times?</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-2-unpromising-associations">Massey, *For Space* (2005) — Part Two: Unpromising Associations</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/massey-for-space-part-4-reorientations">Massey, *For Space*, Part Four: Reorientations (2005)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/michel-de-certeau">Michel de Certeau (1925–1986)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/nostalgia-as-spacialization">Nostalgia as Spatialisation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/place-defined-by-what-it-touches">Place Defined by What It Touches</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/places-as-events">Places as Events</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/places-of-knowledge-production">Places of Knowledge Production</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/politics-of-connectivity">Politics of Connectivity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/positive-versus-negative-multiplicity">Positive versus Negative Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/power-geometry">Power-Geometry</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/simultaneity-of-multiple-trajectories">Simultaneity of Multiple Trajectories</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/simultaneity-of-stories-so-far">Simultaneity of Stories-So-Far</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/slices-through-space">Slices through Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-always-under-construction">Space as Always Under Construction</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-event">Space as Event</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-relational-product">Space as Relational Product</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-cannot-be-annihilated-by-time">Space Cannot Be Annihilated by Time</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-as-representation-critique">Space-as-Representation Critique</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/spatial-fetishism">Spatial Fetishism</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/spatialising-modernity">Spatialising Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/stories-so-far">Stories-So-Far</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/temporal-topology-of-machines">Temporal Topology of Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-chance-of-space">The Chance of Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-co-implication-of-space-and-time">The Co-Implication of Space and Time</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-cortes-vignette">The Cortés Vignette (Tenochtitlán Encounter)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/horizontalities-of-deconstruction">The Horizontalities of Deconstruction</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-lake-district-as-meeting-place">The Lake District as Meeting Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-politics-of-the-event-of-place">The Politics of the Event of Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-three-propositions">The Three Propositions (Massey)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/no-rules-of-space-and-place">There Are No Rules of Space and Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/throwntogetherness">Throwntogetherness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/topological-distance">Topological Distance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/trajectories-as-stories-so-far">Trajectories as Stories-So-Far</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/untimely-time-and-spatial-multiplicity">Untimely Time and Spatial Multiplicity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>72</b><span>linked from</span></div>
+      <div class="bearing"><b>50</b><span>links out</span></div>
+      <div class="bearing"><b>1403</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/power-geometry">Power-Geometry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/throwntogetherness">Throwntogetherness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/places-as-events">Places as Events</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/trajectories-as-stories-so-far">Trajectories as Stories-So-Far</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmopolitan-time-queue">Cosmopolitan Time Queue</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-4-reorientations">Massey, *For Space*, Part Four: Reorientations (2005)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-three-propositions">The Three Propositions (Massey)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>64 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/aspatial-globalisation">Aspatial Globalisation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/coevalness">Coevalness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ernesto-laclau">Ernesto Laclau (1935–2014)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/dynamic-simultaneity">Dynamic Simultaneity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-always-under-construction">Space as Always Under Construction</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-the-dimension-of-multiplicity">Space as the Dimension of Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/temporal-topology-of-machines">Temporal Topology of Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/global-sense-of-place">Global Sense of Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/prison-house-of-synchrony">The Prison-House of Synchrony</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/coexisting-heterogeneity">Coexisting Heterogeneity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/slices-through-space">Slices through Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-representation-critique">Space-as-Representation Critique</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/spatialising-modernity">Spatialising Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-topology-of-worlds">Bryant&#x27;s Topology of Worlds</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/simultaneity-of-multiple-trajectories">Simultaneity of Multiple Trajectories</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-relational-product">Space as Relational Product</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-lake-district-as-meeting-place">The Lake District as Meeting Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/loose-ends-and-missing-links">Loose Ends and Missing Links</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/positive-versus-negative-multiplicity">Positive versus Negative Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/imaginations-of-space">Imaginations of Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/horizontalities-of-deconstruction">The Horizontalities of Deconstruction</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/coupure-and-causal-closure">Coupure and Causal Closure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/globalisation-as-inevitability-rhetoric">Globalisation as Inevitability Rhetoric</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/immigrant-rocks">Immigrant Rocks</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johannes-fabian">Johannes Fabian (b. 1937)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-politics-of-the-event-of-place">The Politics of the Event of Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/no-rules-of-space-and-place">There Are No Rules of Space and Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/chantal-mouffe">Chantal Mouffe (b. 1943)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nostalgia-as-spacialization">Nostalgia as Spatialisation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-as-event">Space as Event</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-co-implication-of-space-and-time">The Co-Implication of Space and Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/happenstance-juxtaposition">Happenstance Juxtaposition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jacques-derrida">Jacques Derrida (1930–2004)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-certeau">Michel de Certeau (1925–1986)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/place-defined-by-what-it-touches">Place Defined by What It Touches</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/simultaneity-of-stories-so-far">Simultaneity of Stories-So-Far</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-cortes-vignette">The Cortés Vignette (Tenochtitlán Encounter)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/billiard-ball-geography">Billiard-Ball Geography</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hamburgs-oldest-immigrant">Hamburg&#x27;s Oldest Immigrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/louis-althusser">Louis Althusser (1918–1990)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/making-and-contesting-time-spaces">Making and Contesting Time-Spaces</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-3-living-in-spatial-times">Massey, *For Space* (2005) — Part Three: Living in Spatial Times?</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/politics-of-connectivity">Politics of Connectivity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-cannot-be-annihilated-by-time">Space Cannot Be Annihilated by Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/spatial-fetishism">Spatial Fetishism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/topological-distance">Topological Distance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/claude-levi-strauss">Claude Lévi-Strauss (1908–2009)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmopolitan-time-queue-and-world-machines">Cosmopolitan Time Queue and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/deep-time-and-place-identity">Deep Time and Place Identity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/geophilosophy">Geophilosophy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-lefebvre">Henri Lefebvre (1901–1991)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/stories-so-far">Stories-So-Far</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/instantaneity-depthlessness">Instantaneity / Depthlessness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/lefebvre-spatial-triad">Lefebvre&#x27;s Spatial Triad</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/maps-as-technologies-of-power">Maps as Technologies of Power</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/massey-bryant-relational-space">Massey and Bryant: Relational Space — Two Versions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/massey-tuan-place-as-event-vs-pause">Massey and Tuan: Place as Event vs. Place as Pause</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-2-unpromising-associations">Massey, *For Space* (2005) — Part Two: Unpromising Associations</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-chance-of-space">The Chance of Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-5-relational-politics">Massey, *For Space* (2005) — Part Five: A Relational Politics of the Spatial</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/massey-bryant-multiplicity">Massey and Bryant on Positive Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/places-of-knowledge-production">Places of Knowledge Production</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/untimely-time-and-spatial-multiplicity">Untimely Time and Spatial Multiplicity</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/power-geometry">Power-Geometry</a><span class="rail-where">27</span></li>
+        <li><a href="/wiki/aneesh/concepts/throwntogetherness">Throwntogetherness</a><span class="rail-where">24</span></li>
+        <li><a href="/wiki/aneesh/concepts/places-as-events">Places as Events</a><span class="rail-where">22</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-4-reorientations">Massey, *For Space*, Part Four: Reorientations (2005)</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-three-propositions">The Three Propositions (Massey)</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/trajectories-as-stories-so-far">Trajectories as Stories-So-Far</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/aspatial-globalisation">Aspatial Globalisation</a><span class="rail-where">15</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/geography">geography</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/relational-ontology">relational-ontology</a><a class="tag" href="/wiki/topics/place">place</a><a class="tag" href="/wiki/topics/massey">massey</a><span class="tag tag-lone" title="Only this note uses it">feminist-geography</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

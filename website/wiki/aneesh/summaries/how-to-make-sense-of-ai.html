@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>How to Make Sense of AI (Chin, 2026)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>How to Make Sense of AI (Chin, 2026)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/how-to-make-sense-of-ai.md">source on GitHub</a></div>
-  <div class="note-summary">Cedric Chin&#x27;s practical sensemaking method for navigating AI uncertainty — filter all AI content except detailed field reports of use, then apply the four questions of uncertainty to evaluate possible outcomes, actions, values, and causal mechanisms.</div>
-  <div class="tags"><span class="tag">sensemaking</span><span class="tag">AI</span><span class="tag">uncertainty</span><span class="tag">attention</span><span class="tag">commoncog</span><span class="tag">field-reports</span><span class="tag">outcome-orientation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/how-to-make-sense-of-ai.md">source on GitHub</a></div>
+    <div class="note-summary">Cedric Chin&#x27;s practical sensemaking method for navigating AI uncertainty — filter all AI content except detailed field reports of use, then apply the four questions of uncertainty to evaluate possible outcomes, actions, values, and causal mechanisms.</div>
     <div class="prose">
-<p><strong>Source</strong>: commoncog.com, published March 2026. Part 1 of a sensemaking series; Part 2 is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span>.</p>
+<p><strong>Source</strong>: commoncog.com, published March 2026. Part 1 of a sensemaking series; Part 2 is <a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a>.</p>
 <h2 id="central-argument">Central Argument</h2>
-<p>Effective AI sensemaking is a special case of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Outcome Orientation&quot;">Outcome Orientation</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fast Adaptation Under Uncertainty&quot;">Fast Adaptation Under Uncertainty</span>. The correct stance is not to predict AI&#x27;s trajectory but to maintain clarity about your own outcomes and act experimentally. The method: consume only <strong>detailed field reports of use</strong>, not analysis, forecasts, or opinion — and filter those reports through <strong>four questions of uncertainty</strong>.</p>
+<p>Effective AI sensemaking is a special case of <a class="wikilink-wanted" href="/wiki/wanted/outcome-orientation" title="No note is called &quot;Outcome Orientation&quot; yet — see who is asking for it">Outcome Orientation</a> and <a class="wikilink" href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty" title="Written [[Fast Adaptation Under Uncertainty]], resolved to fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a>. The correct stance is not to predict AI&#x27;s trajectory but to maintain clarity about your own outcomes and act experimentally. The method: consume only <strong>detailed field reports of use</strong>, not analysis, forecasts, or opinion — and filter those reports through <strong>four questions of uncertainty</strong>.</p>
 <h2 id="the-method">The Method</h2>
 <p><strong>Step 1 — Ignore</strong>: All opinions, predictions, scenario essays, forecasts, &quot;situational awareness&quot; updates. Regardless of author prestige.</p>
 <p><strong>Step 2 — Attend</strong>: Only detailed field reports of actual AI use. Judged by: adequacy of detail, credibility of author, context of use, stated goals. If a field report contains embedded speculation, read only the report portion.</p>
-<p><strong>Step 3 — Apply the Four Questions of Uncertainty</strong> (attributed to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Vaughn Tan&quot;">Vaughn Tan</span>, <em>Not Knowing</em> series, 2023–24):</p>
+<p><strong>Step 3 — Apply the Four Questions of Uncertainty</strong> (attributed to <a class="wikilink" href="/wiki/aneesh/entities/vaughn-tan" title="Written [[Vaughn Tan]], resolved to vaughn-tan">Vaughn Tan</a>, <em>Not Knowing</em> series, 2023–24):</p>
 <ol>
 <li>What <strong>new outcomes</strong> are now possible?</li>
 <li>What <strong>actions</strong> can I take in response?</li>
@@ -57,7 +66,7 @@
 </ul>
 <h2 id="the-outcome-orientation-frame">The Outcome Orientation Frame</h2>
 <blockquote><p>&quot;You must know what to ignore. Attention is a limited resource.&quot;</p></blockquote>
-<p>The method operationalizes <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Outcome Orientation&quot;">Outcome Orientation</span>: before consuming any content, ask &quot;What outcome am I trying to achieve here?&quot; This alone reportedly resolves information overload for consistent practitioners.</p>
+<p>The method operationalizes <a class="wikilink-wanted" href="/wiki/wanted/outcome-orientation" title="No note is called &quot;Outcome Orientation&quot; yet — see who is asking for it">Outcome Orientation</a>: before consuming any content, ask &quot;What outcome am I trying to achieve here?&quot; This alone reportedly resolves information overload for consistent practitioners.</p>
 <h2 id="fast-adaptation-as-superior-strategy">Fast Adaptation as Superior Strategy</h2>
 <p>Forecasting is cognitively expensive and unreliable. The better stance: set up organizational and personal structures for rapid experimentation and adaptation. Advantage accrues to those who sensemake faster and act in response to present conditions — not those who predict correctly.</p>
 <blockquote><p>&quot;You don&#x27;t have to predict the future if you can see the present moment clearly.&quot;</p></blockquote>
@@ -77,23 +86,56 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Four Questions of Uncertainty&quot;">Four Questions of Uncertainty</span> — Vaughn Tan&#x27;s framework at the core of the method</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Outcome Orientation&quot;">Outcome Orientation</span> — the meta-frame</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fast Adaptation Under Uncertainty&quot;">Fast Adaptation Under Uncertainty</span> — the competitive stance</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Field Reports of Use&quot;">Field Reports of Use</span> — the approved input type</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span> — Part 2 (the theoretical grounding)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Vaughn Tan&quot;">Vaughn Tan</span> — originator of the four questions</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — the failure mode this method partially addresses</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — the theory that explains why this works</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/four-questions-of-uncertainty" title="Written [[Four Questions of Uncertainty]], resolved to four-questions-of-uncertainty">Four Questions of Uncertainty</a> — Vaughn Tan&#x27;s framework at the core of the method</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/outcome-orientation" title="No note is called &quot;Outcome Orientation&quot; yet — see who is asking for it">Outcome Orientation</a> — the meta-frame</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty" title="Written [[Fast Adaptation Under Uncertainty]], resolved to fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a> — the competitive stance</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/field-reports-of-use" title="No note is called &quot;Field Reports of Use&quot; yet — see who is asking for it">Field Reports of Use</a> — the approved input type</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a> — Part 2 (the theoretical grounding)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/vaughn-tan" title="Written [[Vaughn Tan]], resolved to vaughn-tan">Vaughn Tan</a> — originator of the four questions</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — the failure mode this method partially addresses</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — the theory that explains why this works</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>560</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-questions-of-uncertainty">Four Questions of Uncertainty</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/vaughn-tan">Vaughn Tan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-sensemaker-and-the-explorer">The Sensemaker and the Explorer</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-questions-of-uncertainty">Four Questions of Uncertainty</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/fast-adaptation-under-uncertainty">Fast Adaptation Under Uncertainty</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/frame-fixation">Frame Fixation</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/uncertainty">uncertainty</a><a class="tag" href="/wiki/topics/attention">attention</a><a class="tag" href="/wiki/topics/commoncog">commoncog</a><span class="tag tag-lone" title="Only this note uses it">field-reports</span><a class="tag" href="/wiki/topics/outcome-orientation">outcome-orientation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

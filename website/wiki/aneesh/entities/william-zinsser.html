@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,41 +26,83 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>William Zinsser</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>William Zinsser</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/william-zinsser.md">source on GitHub</a></div>
-  <div class="note-summary">William Zinsser (1922–2015), American writer and writing teacher, author of On Writing Well and Writing to Learn — foundational texts in the series of essays on documentation, dictionaries, and prose craft.</div>
-  <div class="tags"><span class="tag">writing</span><span class="tag">craft</span><span class="tag">non-fiction</span><span class="tag">pedagogy</span><span class="tag">Zinsser</span><span class="tag">journalism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/william-zinsser.md">source on GitHub</a></div>
+    <div class="note-summary">William Zinsser (1922–2015), American writer and writing teacher, author of On Writing Well and Writing to Learn — foundational texts in the series of essays on documentation, dictionaries, and prose craft.</div>
     <div class="prose">
 <p><strong>William Knowlton Zinsser</strong> (1922–2015) was an American writer, editor, literary critic, and teacher. He taught writing at Yale and the New School. He is best known for <em>On Writing Well</em> (1976), one of the most widely used style guides for non-fiction prose.</p>
 <h2 id="key-works-as-referenced">Key Works (as referenced)</h2>
 <h3 id="on-writing-well-1976-many-editions">On Writing Well (1976, many editions)</h3>
 <p>The foundational text for non-fiction writing. Emphasizes clarity, simplicity, and the elimination of clutter. Zinsser&#x27;s core argument: writing is thinking, and bad writing is unclear thinking made visible.</p>
-<p>Referenced in both <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span>: Zinsser credits the <strong>dictionary</strong> as one of his key writing tools — the prompt that led to the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;1913 Webster&#x27;s Dictionary&quot;">1913 Webster&#x27;s Dictionary</span> thread.</p>
+<p>Referenced in both <a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> and <a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a>: Zinsser credits the <strong>dictionary</strong> as one of his key writing tools — the prompt that led to the <a class="wikilink" href="/wiki/aneesh/concepts/1913-websters-dictionary" title="Written [[1913 Webster&#x27;s Dictionary]], resolved to 1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a> thread.</p>
 <h3 id="writing-to-learn-1988">Writing to Learn (1988)</h3>
-<p>Argues that writing is not just a way to <em>communicate</em> ideas but to <em>discover</em> them. Writing as a tool of cognition, not just expression. Referenced in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> as the first step in the staged reading sequence.</p>
+<p>Argues that writing is not just a way to <em>communicate</em> ideas but to <em>discover</em> them. Writing as a tool of cognition, not just expression. Referenced in <a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> as the first step in the staged reading sequence.</p>
 <h2 id="intellectual-position">Intellectual Position</h2>
-<p>Zinsser is in the plain-prose Anglo-American tradition: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Strunk and White&quot;">Strunk and White</span> → Zinsser → modern clarity advocates. He is suspicious of jargon, passive voice, and abstraction. His approach is deeply empathetic — always asking what the reader needs, not what the writer wants to say.</p>
-<p>This aligns with <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Documentation as Empathy&quot;">Documentation as Empathy</span>: Zinsser&#x27;s writing pedagogy is a form of documentation practice.</p>
+<p>Zinsser is in the plain-prose Anglo-American tradition: <a class="wikilink-wanted" href="/wiki/wanted/strunk-and-white" title="No note is called &quot;Strunk and White&quot; yet — see who is asking for it">Strunk and White</a> → Zinsser → modern clarity advocates. He is suspicious of jargon, passive voice, and abstraction. His approach is deeply empathetic — always asking what the reader needs, not what the writer wants to say.</p>
+<p>This aligns with <a class="wikilink" href="/wiki/aneesh/concepts/documentation-as-empathy" title="Written [[Documentation as Empathy]], resolved to documentation-as-empathy">Documentation as Empathy</a>: Zinsser&#x27;s writing pedagogy is a form of documentation practice.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> — source essay referencing Zinsser</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span> — Zinsser&#x27;s reference to the dictionary triggers the next essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Documentation as Empathy&quot;">Documentation as Empathy</span> — Zinsser&#x27;s pedagogy as empathy practice</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Staged Learning&quot;">Staged Learning</span> — Zinsser&#x27;s books occupy the foundational stages</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Strunk and White&quot;">Strunk and White</span> — predecessor in the same tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> — source essay referencing Zinsser</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a> — Zinsser&#x27;s reference to the dictionary triggers the next essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/documentation-as-empathy" title="Written [[Documentation as Empathy]], resolved to documentation-as-empathy">Documentation as Empathy</a> — Zinsser&#x27;s pedagogy as empathy practice</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/staged-learning" title="Written [[Staged Learning]], resolved to staged-learning">Staged Learning</a> — Zinsser&#x27;s books occupy the foundational stages</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/strunk-and-white" title="No note is called &quot;Strunk and White&quot; yet — see who is asking for it">Strunk and White</a> — predecessor in the same tradition</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>271</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/a-good-dictionary">A Good Dictionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/staged-learning">Staged Learning</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/john-mcphee">John McPhee</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/virginia-tufte">Virginia Tufte</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/documentation-as-gift-economy">Documentation as Gift Economy</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/lexicographic-richness">Lexicographic Richness</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/anti-library">Anti-Library</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/documentation-as-empathy">Documentation as Empathy</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/james-somers">James Somers</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/staged-learning">Staged Learning</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/writing">writing</a><a class="tag" href="/wiki/topics/craft">craft</a><a class="tag" href="/wiki/topics/non-fiction">non-fiction</a><a class="tag" href="/wiki/topics/pedagogy">pedagogy</a><a class="tag" href="/wiki/topics/zinsser">Zinsser</a><a class="tag" href="/wiki/topics/journalism">journalism</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

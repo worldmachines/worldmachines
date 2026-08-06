@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Not My Lever — Summary</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Not My Lever — Summary</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/not-my-lever.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe&#x27;s essay &#x27;Not My Lever — The Last Container&#x27; (2026), arguing that as metaphysical containers have receded across two millennia, modern individuals face a surface of concern five orders of magnitude wider than the cohort psychology was built for, and that the discipline of refusing most levers — paired with a thicket that gives the kept ones real feedback — is the working mode of the Liveness era.</div>
-  <div class="tags"><span class="tag">essay</span><span class="tag">world-machines</span><span class="tag">liveness-era</span><span class="tag">lever-discipline</span><span class="tag">thicket</span><span class="tag">containers</span><span class="tag">secularization</span><span class="tag">auteuring</span><span class="tag">marcus-aurelius</span><span class="tag">author-aneesh-sathe</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/not-my-lever.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe&#x27;s essay &#x27;Not My Lever — The Last Container&#x27; (2026), arguing that as metaphysical containers have receded across two millennia, modern individuals face a surface of concern five orders of magnitude wider than the cohort psychology was built for, and that the discipline of refusing most levers — paired with a thicket that gives the kept ones real feedback — is the working mode of the Liveness era.</div>
     <div class="prose">
 <h2 id="source">Source</h2>
 <p>Aneesh Sathe, &quot;Not My Lever — The Last Container,&quot; aneeshsathe.com, May 2026. Draft-03, the publishable iteration of the project that began in May 2026 with <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">Rao&#x27;s</a> world-machines framework as scaffolding and Phaeodaria (Haeckel) as the cover image.</p>
@@ -66,7 +75,7 @@
 <ul>
 <li>World-machines framework (<a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">MM</a>, <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">DM</a>, <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine">Liveness Era</a>): <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">Rao</a>, especially <a class="wikilink" href="/wiki/aneesh/summaries/venkatesh-rao-the-divergence-machine-ii">&quot;The Divergence Machine II&quot;</a> and <a class="wikilink" href="/wiki/aneesh/summaries/engineering-liveness-venkatesh-rao">&quot;Engineering Liveness&quot;</a></li>
 <li>Cost-collapse argument: Sathe&#x27;s own <a class="wikilink" href="/wiki/aneesh/summaries/the-lightening-of-intent">&quot;The Lightening of Intent&quot;</a></li>
-<li>The thicket: companion essay <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Birth of Thickets&quot;">The Birth of Thickets</span></li>
+<li>The thicket: companion essay <a class="wikilink-wanted" href="/wiki/wanted/the-birth-of-thickets" title="No note is called &quot;The Birth of Thickets&quot; yet — see who is asking for it">The Birth of Thickets</a></li>
 <li>Design-rises-above-skill: <a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">Landes</a>&#x27;s <em>Revolution in Time</em> (1983); Jaquet-Droz in La Chaux-de-Fonds, 1750s</li>
 <li>Headland passage: <em>Meditations</em> IV.49 (Long translation); biographical reconstruction via Birley, McLynn (not the <em>Historia Augusta</em>)</li>
 <li>Receding-containers reading owes a debt to Charles Taylor&#x27;s <em>A Secular Age</em> (2007) without making Taylor&#x27;s argument</li>
@@ -84,7 +93,7 @@
 <h2 id="relationship-to-other-wiki-pages">Relationship to Other Wiki Pages</h2>
 <ul>
 <li><strong>Direct predecessor</strong>: <a class="wikilink" href="/wiki/aneesh/summaries/the-lightening-of-intent">the-lightening-of-intent</a>. <em>Lightening</em> is the historical-thermodynamic case for the five-orders-of-magnitude collapse in cost-of-intent; <em>Not My Lever</em> is the psychological-operational corollary — what to do when the surface of concern has expanded that much and the containers have receded.</li>
-<li><strong>Direct sibling</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Birth of Thickets&quot;">The Birth of Thickets</span>. <em>Birth of Thickets</em> defines the habitat; <em>Not My Lever</em> names the discipline the habitat supports, and identifies thicket-pairing as the operative variable.</li>
+<li><strong>Direct sibling</strong>: <a class="wikilink-wanted" href="/wiki/wanted/the-birth-of-thickets" title="No note is called &quot;The Birth of Thickets&quot; yet — see who is asking for it">The Birth of Thickets</a>. <em>Birth of Thickets</em> defines the habitat; <em>Not My Lever</em> names the discipline the habitat supports, and identifies thicket-pairing as the operative variable.</li>
 <li><strong>One rung down</strong>: <a class="wikilink" href="/wiki/aneesh/concepts/auteuring">auteuring</a>. Lever discipline is auteuring at the level of intents rather than outputs; the picking is the work in both.</li>
 <li><strong>Direct counter-mirror</strong>: <a class="wikilink" href="/wiki/aneesh/concepts/dark-forestry">dark-forestry</a>. The dark-mirror version of lever discipline is dark-forestry of the self — refusal that vacates space for extraction rather than creating space for a way of being.</li>
 </ul>
@@ -97,7 +106,7 @@
 <h2 id="see-also">See Also</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/summaries/the-lightening-of-intent">the-lightening-of-intent</a> — the cost-collapse argument the essay rides on</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Birth of Thickets&quot;">The Birth of Thickets</span> — the habitat that pairs with lever discipline</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/the-birth-of-thickets" title="No note is called &quot;The Birth of Thickets&quot; yet — see who is asking for it">The Birth of Thickets</a> — the habitat that pairs with lever discipline</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/auteuring">auteuring</a> — the sibling one rung down</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">not-my-lever</a> — the central concept</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/receding-containers">receding-containers</a> — the historical thesis of Section II</li>
@@ -110,13 +119,26 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/dark-forestry">dark-forestry</a> — the dark mirror</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>20</b><span>links out</span></div>
+      <div class="bearing"><b>1397</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/essay">essay</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/liveness-era">liveness-era</a><a class="tag" href="/wiki/topics/lever-discipline">lever-discipline</a><a class="tag" href="/wiki/topics/thicket">thicket</a><a class="tag" href="/wiki/topics/containers">containers</a><a class="tag" href="/wiki/topics/secularization">secularization</a><a class="tag" href="/wiki/topics/auteuring">auteuring</a><a class="tag" href="/wiki/topics/marcus-aurelius">marcus-aurelius</a><a class="tag" href="/wiki/topics/author-aneesh-sathe">author-aneesh-sathe</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

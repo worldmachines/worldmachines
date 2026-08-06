@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,19 +26,28 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>The Arrival of Composable Knowledge</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Arrival of Composable Knowledge</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-arrival-of-composable-knowledge.md">source on GitHub</a></div>
-  <div class="note-summary">A historical survey of how knowledge transmission evolved from oral tradition to digital repositories, arguing that composability — the ability to combine and recombine information into new understanding — has been the throughline of intellectual progress.</div>
-  <div class="tags"><span class="tag">composability</span><span class="tag">knowledge</span><span class="tag">history</span><span class="tag">technology</span><span class="tag">communication</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/the-arrival-of-composable-knowledge.md">source on GitHub</a></div>
+    <div class="note-summary">A historical survey of how knowledge transmission evolved from oral tradition to digital repositories, arguing that composability — the ability to combine and recombine information into new understanding — has been the throughline of intellectual progress.</div>
     <div class="prose">
 <p><strong>Source</strong>: Aneesh Sathe, <em>The Arrival of Composable Knowledge</em> (2024-06-12)<br>
 <strong>URL</strong>: https://aneeshsathe.com/the-arrival-of-composable-knowledge/</p>
 <h2 id="central-argument">Central Argument</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span> has evolved continuously across human history — not linearly, but through discrete technological and institutional leaps that each dramatically lowered the cost of combining ideas. The essay positions this as prelude to a claim (developed in a follow-up) that composability itself is now undergoing a qualitative upgrade.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a> has evolved continuously across human history — not linearly, but through discrete technological and institutional leaps that each dramatically lowered the cost of combining ideas. The essay positions this as prelude to a claim (developed in a follow-up) that composability itself is now undergoing a qualitative upgrade.</p>
 <h2 id="historical-arc">Historical Arc</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>Era</th><th>Mechanism</th><th>Composability Leap</th></tr></thead>
@@ -61,28 +70,53 @@
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <ul>
 <li>No engagement with the <em>quality</em> of composition — accessibility of knowledge doesn&#x27;t guarantee quality synthesis.</li>
-<li>The follow-up essay (referenced but not included) promises to explore implications of the current upgrade. The upgrade itself is unnamed here — likely a reference to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Large Language Models&quot;">Large Language Models</span> as composability infrastructure.</li>
-<li>Doesn&#x27;t address <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composability and Inequality&quot;">Composability and Inequality</span> — whether broader access creates equal capacity to compose.</li>
+<li>The follow-up essay (referenced but not included) promises to explore implications of the current upgrade. The upgrade itself is unnamed here — likely a reference to <a class="wikilink-wanted" href="/wiki/wanted/large-language-models" title="No note is called &quot;Large Language Models&quot; yet — see who is asking for it">Large Language Models</a> as composability infrastructure.</li>
+<li>Doesn&#x27;t address <a class="wikilink" href="/wiki/aneesh/synthesis/composability-and-inequality" title="Written [[Composability and Inequality]], resolved to composability-and-inequality">Composability and Inequality</a> — whether broader access creates equal capacity to compose.</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span> — central concept, developed here</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Transmission&quot;">Knowledge Transmission</span> — historical modes</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span> — the Jan 3 2025 source directly challenges the democratization assumption implied here</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Knowledge&quot;">Printing Press and Knowledge</span> — pivotal historical case</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Internet and Open Access&quot;">Internet and Open Access</span> — the current state described</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jargon as Compression&quot;">Jargon as Compression</span> — related: precision in language affects composability quality</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a> — central concept, developed here</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/knowledge-transmission" title="No note is called &quot;Knowledge Transmission&quot; yet — see who is asking for it">Knowledge Transmission</a> — historical modes</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a> — the Jan 3 2025 source directly challenges the democratization assumption implied here</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/printing-press-and-knowledge" title="No note is called &quot;Printing Press and Knowledge&quot; yet — see who is asking for it">Printing Press and Knowledge</a> — pivotal historical case</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/internet-and-open-access" title="No note is called &quot;Internet and Open Access&quot; yet — see who is asking for it">Internet and Open Access</a> — the current state described</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/jargon-as-compression" title="Written [[Jargon as Compression]], resolved to jargon-as-compression">Jargon as Compression</a> — related: precision in language affects composability quality</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-05-travelling-04-greek-learning">Utopian Vigor, Greek Learning, and the Reinvention of Printing</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>392</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/composable-knowledge">Composable Knowledge</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/composability-and-inequality">Composability and Inequality</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-05-travelling-04-greek-learning">Utopian Vigor, Greek Learning, and the Reinvention of Printing</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-information-ecology">The Information Ecology — Noise, Lore, Libraries, and the Crisis of Navigation</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-3-2025">Jan. 3, 2025</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/jargon-as-compression">Jargon as Compression</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/composability">composability</a><a class="tag" href="/wiki/topics/knowledge">knowledge</a><a class="tag" href="/wiki/topics/history">history</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/communication">communication</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

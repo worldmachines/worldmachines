@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Achille Mbembe (b. 1957)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Achille Mbembe (b. 1957)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/achille-mbembe.md">source on GitHub</a></div>
-  <div class="note-summary">Cameroonian philosopher and political theorist (b. 1957) whose concept of necropolitics — the power to determine who lives and who is made to die, biologically and spatially — extends Foucault&#x27;s biopolitics into the postcolonial condition.</div>
-  <div class="tags"><span class="tag">mbembe</span><span class="tag">necropolitics</span><span class="tag">postcolonialism</span><span class="tag">africa</span><span class="tag">biopolitics</span><span class="tag">power</span><span class="tag">race</span><span class="tag">death</span><span class="tag">political-philosophy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/achille-mbembe.md">source on GitHub</a></div>
+    <div class="note-summary">Cameroonian philosopher and political theorist (b. 1957) whose concept of necropolitics — the power to determine who lives and who is made to die, biologically and spatially — extends Foucault&#x27;s biopolitics into the postcolonial condition.</div>
     <div class="prose">
 <p><strong>Nationality</strong>: Cameroonian<br>
 <strong>Field</strong>: Political philosophy, postcolonial theory, African studies<br>
@@ -62,16 +71,38 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/bryant-gravity-as-power">bryant-gravity-as-power</a> — the material mechanism that sustains necropolitical spatial arrangements</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/necropolitics">Necropolitics (Mbembe)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>588</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/necropolitics">Necropolitics (Mbembe)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/heterotopias">Heterotopias (Foucault)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/uneven-spatial-production">Uneven Spatial Production (Harvey)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/mbembe">mbembe</a><a class="tag" href="/wiki/topics/necropolitics">necropolitics</a><a class="tag" href="/wiki/topics/postcolonialism">postcolonialism</a><span class="tag tag-lone" title="Only this note uses it">africa</span><a class="tag" href="/wiki/topics/biopolitics">biopolitics</a><a class="tag" href="/wiki/topics/power">power</a><a class="tag" href="/wiki/topics/race">race</a><span class="tag tag-lone" title="Only this note uses it">death</span><a class="tag" href="/wiki/topics/political-philosophy">political-philosophy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

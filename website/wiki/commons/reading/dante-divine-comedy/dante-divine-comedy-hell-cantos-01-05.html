@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05.md">source on GitHub</a></div>
-  <div class="note-summary">Dante, lost in a dark wood and blocked by three beasts, is rescued by the shade of Virgil (sent at the intercession of Beatrice, Lucia, and Rachel) and led through the inscribed gate of Hell, past the neutral souls and Charon&#x27;s crossing, into Limbo among the virtuous pagans, and finally into the second circle, where the whirlwind of the lustful carries Francesca da Rimini, whose account of the love that damned her and Paolo overwhelms him.</div>
-  <div class="tags"><span class="tag">dante</span><span class="tag">inferno</span><span class="tag">dark-wood</span><span class="tag">virgil</span><span class="tag">beatrice</span><span class="tag">limbo</span><span class="tag">lust</span><span class="tag">gate-of-hell</span><span class="tag">allegory</span><span class="tag">translation</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence">anxiety-of-influence</a>, <a class="wikilink" href="/wiki/aneesh/concepts/belatedness">belatedness</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05.md">source on GitHub</a></div>
+    <div class="note-summary">Dante, lost in a dark wood and blocked by three beasts, is rescued by the shade of Virgil (sent at the intercession of Beatrice, Lucia, and Rachel) and led through the inscribed gate of Hell, past the neutral souls and Charon&#x27;s crossing, into Limbo among the virtuous pagans, and finally into the second circle, where the whirlwind of the lustful carries Francesca da Rimini, whose account of the love that damned her and Paolo overwhelms him.</div>
     <div class="prose">
 <p>This unit (Cary&#x27;s 19th-century blank-verse translation) opens the <em>Inferno</em> proper: the narrator, astray in a &quot;gloomy wood&quot; at the midpoint of life, is turned back from a sunlit hill by a panther, a lion, and a ravenous she-wolf, and is rescued by the shade of Virgil, who reveals he was sent by Beatrice — herself moved by Lucia and seated in the company of Rachel — to guide Dante through Hell. Cantos III–V then move the pilgrim through the inscribed gate of Hell, past the wailing neutral souls and Charon&#x27;s ferry across Acheron, into the noble castle of Limbo among unbaptized virtuous pagans and poets, and down into the second circle, where the eternal whirlwind battering the lustful culminates in Dante&#x27;s encounter with Francesca da Rimini, whose account of illicit love told through the romance of Lancelot leaves him fainting.</p>
 <h2 id="themes">Themes</h2>
@@ -45,15 +53,32 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The opening lines set the entire poem&#x27;s frame in miniature: lost in &quot;a gloomy wood... how savage wild / That forest,&quot; the narrator&#x27;s midlife disorientation is immediately literalized as terrain. The gate of Hell&#x27;s inscription is the unit&#x27;s most compressed statement of theme — Hell as an eternal artifact of &quot;Justice,&quot; &quot;power divine,&quot; &quot;Supremest wisdom,&quot; and &quot;primeval love&quot; all at once, closing on the famous &quot;All hope abandon ye who enter here.&quot; Beatrice&#x27;s own account of her descent (&quot;I was among the tribe, / Who rest suspended...&quot;) shows the intercessory machinery of the poem&#x27;s cosmos operating in the beloved&#x27;s own words rather than Virgil&#x27;s report of it. The Limbo passage where Virgil explains &quot;these of sin / Were blameless&quot; but are lost &quot;for these defects&quot; alone is the clearest statement of the poem&#x27;s harshest doctrinal edge — virtue is necessary but insufficient. Canto V&#x27;s description of the lustful as souls where &quot;Reason by lust is sway&#x27;d,&quot; borne like starlings and cranes in &quot;the tyrannous gust,&quot; gives the circle its governing image before Francesca ever speaks. And her narration — how she and Paolo, reading of Lancelot, were undone at the moment &quot;of that smile we read... We read no more&quot; — ends the canto on Dante&#x27;s own collapse, &quot;like a corpse fell to the ground,&quot; the pilgrim&#x27;s compassion overwhelming his judgment for the first (and most quoted) time in the poem.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>750</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence">anxiety-of-influence</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/belatedness">belatedness</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dante">dante</a><a class="tag" href="/wiki/topics/inferno">inferno</a><span class="tag tag-lone" title="Only this note uses it">dark-wood</span><a class="tag" href="/wiki/topics/virgil">virgil</a><a class="tag" href="/wiki/topics/beatrice">beatrice</a><a class="tag" href="/wiki/topics/limbo">limbo</a><a class="tag" href="/wiki/topics/lust">lust</a><span class="tag tag-lone" title="Only this note uses it">gate-of-hell</span><a class="tag" href="/wiki/topics/allegory">allegory</a><a class="tag" href="/wiki/topics/translation">translation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

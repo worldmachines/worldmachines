@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Probability as Epistemology</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Probability as Epistemology</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/probability-as-epistemology.md">source on GitHub</a></div>
-  <div class="note-summary">Probability is not an objective feature of the world but a construction from judgment and assumption; de Finetti&#x27;s exchangeability theorem shows you can act as if it&#x27;s real without it needing to be.</div>
-  <div class="tags"><span class="tag">probability</span><span class="tag">epistemology</span><span class="tag">statistics</span><span class="tag">philosophy</span><span class="tag">de-Finetti</span><span class="tag">Spiegelhalter</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/probability-as-epistemology.md">source on GitHub</a></div>
+    <div class="note-summary">Probability is not an objective feature of the world but a construction from judgment and assumption; de Finetti&#x27;s exchangeability theorem shows you can act as if it&#x27;s real without it needing to be.</div>
     <div class="prose">
 <h2 id="the-claim">The Claim</h2>
-<p>Numerical probability is not a fact about the world — it is a <em>construction</em> from judgment and assumption. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;David Spiegelhalter&quot;">David Spiegelhalter</span>, writing in <em>Nature</em>, argues that outside a narrow set of cases, there is no &quot;true&quot; probability lurking behind estimates.</p>
-<p>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 3, 2025&quot;">Jan. 3, 2025</span></p>
+<p>Numerical probability is not a fact about the world — it is a <em>construction</em> from judgment and assumption. <a class="wikilink" href="/wiki/aneesh/entities/david-spiegelhalter" title="Written [[David Spiegelhalter]], resolved to david-spiegelhalter">David Spiegelhalter</a>, writing in <em>Nature</em>, argues that outside a narrow set of cases, there is no &quot;true&quot; probability lurking behind estimates.</p>
+<p>Source: <a class="wikilink" href="/wiki/aneesh/summaries/jan-3-2025" title="Written [[Jan. 3, 2025]], resolved to jan-3-2025">Jan. 3, 2025</a></p>
 <h2 id="where-objective-probability-exists-maybe">Where Objective Probability Exists (Maybe)</h2>
 <p>The narrow exceptions:</p>
 <ul>
@@ -61,31 +70,54 @@
 <li>Vaihinger&#x27;s <em>philosophy of as-if</em></li>
 </ul>
 <h2 id="implications-for-data-science-and-knowledge-work">Implications for Data Science and Knowledge Work</h2>
-<p>For the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Worker&quot;">Knowledge Worker</span> operating on probabilistic models:</p>
+<p>For the <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-worker" title="Written [[Knowledge Worker]], resolved to knowledge-worker">Knowledge Worker</a> operating on probabilistic models:</p>
 <ul>
 <li>Acknowledging that &quot;a probability&quot; rather than &quot;the probability&quot; is at stake changes the ethical and epistemic status of claims</li>
 <li>Model outputs are not discoveries but constructions — calibrated bets, not revealed facts</li>
-<li>This matters enormously for communicating uncertainty to non-experts (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span>)</li>
+<li>This matters enormously for communicating uncertainty to non-experts (see <a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a>)</li>
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;de Finetti Exchangeability&quot;">de Finetti Exchangeability</span> — the key formal theorem</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;David Spiegelhalter&quot;">David Spiegelhalter</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Worker&quot;">Knowledge Worker</span> — practitioners who use probabilistic reasoning</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Democratization Gap&quot;">AI Democratization Gap</span> — simplified probability claims strip epistemic nuance</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span> — the role of probabilistic reasoning in knowledge synthesis</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/de-finetti-exchangeability" title="No note is called &quot;de Finetti Exchangeability&quot; yet — see who is asking for it">de Finetti Exchangeability</a> — the key formal theorem</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/david-spiegelhalter" title="Written [[David Spiegelhalter]], resolved to david-spiegelhalter">David Spiegelhalter</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-worker" title="Written [[Knowledge Worker]], resolved to knowledge-worker">Knowledge Worker</a> — practitioners who use probabilistic reasoning</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-democratization-gap" title="Written [[AI Democratization Gap]], resolved to ai-democratization-gap">AI Democratization Gap</a> — simplified probability claims strip epistemic nuance</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a> — the role of probabilistic reasoning in knowledge synthesis</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility">Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>379</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/jan-3-2025">Jan. 3, 2025</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/david-spiegelhalter">David Spiegelhalter</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility">Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/probability">probability</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/statistics">statistics</a><a class="tag" href="/wiki/topics/philosophy">philosophy</a><span class="tag tag-lone" title="Only this note uses it">de-Finetti</span><span class="tag tag-lone" title="Only this note uses it">Spiegelhalter</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

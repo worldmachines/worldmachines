@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> <b>/</b> <span>The Man in the Moon: Knowledge, Wisdom, Self and Soul</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Man in the Moon: Knowledge, Wisdom, Self and Soul</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom.md">source on GitHub</a></div>
-  <div class="note-summary">A childhood memory of finding a stranger watching the moon through a telescope becomes Ingold&#x27;s occasion for distinguishing knowledge from wisdom and the self from the soul, arguing that knowledge encloses the world within explanatory categories while wisdom exposes us, undefended, to its living presence.</div>
-  <div class="tags"><span class="tag">knowledge-and-wisdom</span><span class="tag">self-and-soul</span><span class="tag">attention</span><span class="tag">wonder</span><span class="tag">moon</span><span class="tag">education</span><span class="tag">michel-serres</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/entities/michel-serres">michel-serres</a>, <a class="wikilink" href="/wiki/aneesh/concepts/unselfing">unselfing</a>, <a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">curiosity-as-ego-dissolution</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom.md">source on GitHub</a></div>
+    <div class="note-summary">A childhood memory of finding a stranger watching the moon through a telescope becomes Ingold&#x27;s occasion for distinguishing knowledge from wisdom and the self from the soul, arguing that knowledge encloses the world within explanatory categories while wisdom exposes us, undefended, to its living presence.</div>
     <div class="prose">
 <p>Ingold opens with a poem recalling a childhood encounter with a stranger crouched in the bushes with a telescope, watching the moon — an image of patient, uncertain attention that he uses to introduce a distinction between knowledge and wisdom, and, underneath it, between the self and the soul. Knowledge, he argues, has swollen at wisdom&#x27;s expense; recovering the balance means recovering the soul&#x27;s undefended openness to the world rather than the self&#x27;s fortified command of it.</p>
 <h2 id="themes">Themes</h2>
@@ -49,17 +57,47 @@
 <p>The citadel passage (<strong>c4</strong>) is where the knowledge/wisdom distinction becomes explicitly architectural and defensive — knowledge as wall-building, wisdom as exposure — before Ingold restates it as a series of paired oppositions (fixing/unfixing, protection/exposure, safety/vulnerability, power/existential strength).</p>
 <p>The closing passage (<strong>c5</strong>) resolves the essay&#x27;s frame: knowledge may investigate the moon, but wisdom refuses possession, receiving its light instead — a stewardship-not-extraction stance that closes the loop back to the poem&#x27;s final line, &quot;the moon looked back.&quot;</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>765</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning">Correspondence versus Interaction, Understanding versus Undercommoning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/entities/michel-serres">michel-serres</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/unselfing">unselfing</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">curiosity-as-ego-dissolution</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/knowledge-and-wisdom">knowledge-and-wisdom</a><span class="tag tag-lone" title="Only this note uses it">self-and-soul</span><a class="tag" href="/wiki/topics/attention">attention</a><span class="tag tag-lone" title="Only this note uses it">wonder</span><a class="tag" href="/wiki/topics/moon">moon</a><a class="tag" href="/wiki/topics/education">education</a><span class="tag tag-lone" title="Only this note uses it">michel-serres</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Dwelling as Philosophical Concept</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Dwelling as Philosophical Concept</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/dwelling-as-philosophical-concept.md">source on GitHub</a></div>
-  <div class="note-summary">Heidegger&#x27;s dwelling is the fundamental way humans are in the world — not merely occupying but living in and through places; applied to knowledge work, it frames the ethical demand on product builders to free rather than constrain users.</div>
-  <div class="tags"><span class="tag">Heidegger</span><span class="tag">phenomenology</span><span class="tag">dwelling</span><span class="tag">place</span><span class="tag">knowledge-work</span><span class="tag">product-design</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/dwelling-as-philosophical-concept.md">source on GitHub</a></div>
+    <div class="note-summary">Heidegger&#x27;s dwelling is the fundamental way humans are in the world — not merely occupying but living in and through places; applied to knowledge work, it frames the ethical demand on product builders to free rather than constrain users.</div>
     <div class="prose">
 <h2 id="heideggers-original-formulation">Heidegger&#x27;s Original Formulation</h2>
 <p>From <em>Building Dwelling Thinking</em> (in <em>Poetry, Language, Thought</em>, 1971):</p>
 <blockquote><p>&quot;Man&#x27;s relation to locations, and through locations to spaces, inheres in his dwelling. The relationship between man and space is none other than dwelling, strictly thought and spoken.&quot;</p></blockquote>
 <p>Dwelling is not a passive state — it is the <em>primary</em> way of being in relation to the world. We don&#x27;t first exist and then dwell; dwelling is the mode of our existence.</p>
-<p>Developed in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jan. 7, 2025: Building Dwelling Thinking&quot;">Jan. 7, 2025: Building Dwelling Thinking</span>.</p>
+<p>Developed in <a class="wikilink" href="/wiki/aneesh/summaries/jan-7-2025-building-dwelling-thinking" title="Written [[Jan. 7, 2025: Building Dwelling Thinking]], resolved to jan-7-2025-building-dwelling-thinking">Jan. 7, 2025: Building Dwelling Thinking</a>.</p>
 <h2 id="place-location-space">Place, Location, Space</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Martin Heidegger&quot;">Martin Heidegger</span> distinguishes:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/martin-heidegger" title="Written [[Martin Heidegger]], resolved to martin-heidegger">Martin Heidegger</a> distinguishes:</p>
 <ul>
 <li><strong>Locations</strong>: specific, ordered sites of human activity</li>
 <li><strong>Spaces</strong>: domains opened up from locations (reinterpreted in the source as &quot;AI-space,&quot; &quot;biotech-space&quot;)</li>
@@ -58,15 +67,15 @@
 <p>For knowledge workers: the analysis, visualization, or product they build is a place where others will dwell. The ethical demand follows from this.</p>
 <h2 id="sparing-as-the-positive-obligation">Sparing as the Positive Obligation</h2>
 <p>Heidegger&#x27;s definition of &quot;to free&quot; is the normative core: <em>to spare</em> — to leave something in its own nature, to return it to its being. Good dwelling preserves and protects.</p>
-<p>Applied to product design (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sparing and Freeing&quot;">Sparing and Freeing</span>): a product&#x27;s primary obligation is to enable the user&#x27;s freedom, not the product&#x27;s own logic.</p>
+<p>Applied to product design (see <a class="wikilink" href="/wiki/aneesh/concepts/sparing-and-freeing" title="Written [[Sparing and Freeing]], resolved to sparing-and-freeing">Sparing and Freeing</a>): a product&#x27;s primary obligation is to enable the user&#x27;s freedom, not the product&#x27;s own logic.</p>
 <h2 id="connections-across-sources">Connections Across Sources</h2>
 <div class="table-wrap"><table>
 <thead><tr><th>Source</th><th>Parallel Concept</th></tr></thead>
 <tbody>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Studiolo and Self-Cultivation&quot;">Studiolo and Self-Cultivation</span></td><td>Private space enabling intellectual dwelling</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composable Knowledge&quot;">Composable Knowledge</span></td><td>Infrastructure for cognitive dwelling</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sims (AI User Simulation)&quot;">Sims (AI User Simulation)</span></td><td>Computational dwelling space</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Personal Media vs Platform Media&quot;">Personal Media vs Platform Media</span></td><td>Blogs as places you own and dwell in</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/concepts/studiolo-and-self-cultivation" title="Written [[Studiolo and Self-Cultivation]], resolved to studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a></td><td>Private space enabling intellectual dwelling</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/concepts/composable-knowledge" title="Written [[Composable Knowledge]], resolved to composable-knowledge">Composable Knowledge</a></td><td>Infrastructure for cognitive dwelling</td></tr>
+<tr><td><a class="wikilink-wanted" href="/wiki/wanted/sims-ai-user-simulation" title="No note is called &quot;Sims (AI User Simulation)&quot; yet — see who is asking for it">Sims (AI User Simulation)</a></td><td>Computational dwelling space</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/concepts/personal-media-vs-platform-media" title="Written [[Personal Media vs Platform Media]], resolved to personal-media-vs-platform-media">Personal Media vs Platform Media</a></td><td>Blogs as places you own and dwell in</td></tr>
 </tbody>
 </table></div>
 <h2 id="what-dwelling-is-not">What Dwelling Is Not</h2>
@@ -77,35 +86,81 @@
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Martin Heidegger&quot;">Martin Heidegger</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Place vs Space (Heidegger)&quot;">Place vs Space (Heidegger)</span> — the conceptual distinction</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sparing and Freeing&quot;">Sparing and Freeing</span> — the normative principle</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Worker&quot;">Knowledge Worker</span> — the modern subject of dwelling</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Studiolo and Self-Cultivation&quot;">Studiolo and Self-Cultivation</span> — Renaissance parallel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Building Thinking Dwelling as Product Design&quot;">Building Thinking Dwelling as Product Design</span> — synthesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/martin-heidegger" title="Written [[Martin Heidegger]], resolved to martin-heidegger">Martin Heidegger</a> — entity</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/place-vs-space-heidegger" title="No note is called &quot;Place vs Space (Heidegger)&quot; yet — see who is asking for it">Place vs Space (Heidegger)</a> — the conceptual distinction</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sparing-and-freeing" title="Written [[Sparing and Freeing]], resolved to sparing-and-freeing">Sparing and Freeing</a> — the normative principle</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/knowledge-worker" title="Written [[Knowledge Worker]], resolved to knowledge-worker">Knowledge Worker</a> — the modern subject of dwelling</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/studiolo-and-self-cultivation" title="Written [[Studiolo and Self-Cultivation]], resolved to studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a> — Renaissance parallel</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design" title="Written [[Building Thinking Dwelling as Product Design]], resolved to building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a> — synthesis</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">13</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/anne-buttimer">Anne Buttimer (1938–2017)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/architecture-as-crystallized-awareness">Architecture as Crystallized Awareness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/christian-norberg-schulz">Christian Norberg-Schulz (1926–2000)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/cosmogonic-architecture">Cosmogonic Architecture</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/edward-casey">Edward Casey (b. 1939)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/gaston-bachelard">Gaston Bachelard (1884–1962)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/mythical-space">Mythical Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/place-as-pause">Place as Pause (Tuan)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch7-9">Tuan, *Space and Place: The Perspective of Experience* — Chapters 7–9</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning">Correspondence versus Interaction, Understanding versus Undercommoning</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>28</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>419</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/place-as-pause">Place as Pause (Tuan)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/composable-knowledge">Composable Knowledge</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/architecture-as-crystallized-awareness">Architecture as Crystallized Awareness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-worker">Knowledge Worker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/martin-heidegger">Martin Heidegger</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmogonic-architecture">Cosmogonic Architecture</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>20 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/mythical-space">Mythical Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sparing-and-freeing">Sparing and Freeing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/building-thinking-dwelling-as-product-design">Building Thinking Dwelling as Product Design</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-media-vs-platform-media">Personal Media vs Platform Media</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/principal-agent-problem-in-ai">Principal-Agent Problem in AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch7-9">Tuan, *Space and Place: The Perspective of Experience* — Chapters 7–9</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-7-2025-building-dwelling-thinking">Jan. 7, 2025: Building Dwelling Thinking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/topophilia">Topophilia</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-digital-studiolo">The Digital Studiolo</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gaston-bachelard">Gaston Bachelard (1884–1962)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/niccolo-machiavelli">Niccolò Machiavelli</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/chirag-shah">Chirag Shah</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning">Correspondence versus Interaction, Understanding versus Undercommoning</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/edward-casey">Edward Casey (b. 1939)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/simon-willison">Simon Willison</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/anne-buttimer">Anne Buttimer (1938–2017)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/christian-norberg-schulz">Christian Norberg-Schulz (1926–2000)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a><span class="rail-where">12</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-10-2025-ai-agents-machiavellis-study">Jan 10, 2025 - AI Agents, Machiavelli&#x27;s Study</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-democratization-gap">AI Democratization Gap</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/personal-media-vs-platform-media">Personal Media vs Platform Media</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/sparing-and-freeing">Sparing and Freeing</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/jan-7-2025-building-dwelling-thinking">Jan. 7, 2025: Building Dwelling Thinking</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-worker">Knowledge Worker</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/heidegger">Heidegger</a><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><a class="tag" href="/wiki/topics/dwelling">dwelling</a><a class="tag" href="/wiki/topics/place">place</a><a class="tag" href="/wiki/topics/knowledge-work">knowledge-work</a><a class="tag" href="/wiki/topics/product-design">product-design</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

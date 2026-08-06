@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Problems are Places, Questions are Spaces</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Problems are Places, Questions are Spaces</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/problems-are-places-questions-are-spaces.md">source on GitHub</a></div>
-  <div class="note-summary">Maps Callard&#x27;s Socratic distinction between problems and questions onto the spatial framework of places and spaces, arguing that problems are bounded, tractable places while questions are open, exploratory spaces.</div>
-  <div class="tags"><span class="tag">philosophy</span><span class="tag">epistemology</span><span class="tag">Socrates</span><span class="tag">Agnes-Callard</span><span class="tag">space-place</span><span class="tag">inquiry</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/problems-are-places-questions-are-spaces.md">source on GitHub</a></div>
+    <div class="note-summary">Maps Callard&#x27;s Socratic distinction between problems and questions onto the spatial framework of places and spaces, arguing that problems are bounded, tractable places while questions are open, exploratory spaces.</div>
     <div class="prose">
 <p><strong>Source</strong>: Aneesh Sathe, <em>Problems are Places, Questions are Spaces</em> (2025-07-14) — https://aneeshsathe.com/problems-are-places-questions-are-spaces/</p>
 <h2 id="central-argument">Central Argument</h2>
@@ -72,28 +81,55 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Method and Inquiry&quot;">Socratic Method and Inquiry</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place Philosophy&quot;">Space and Place Philosophy</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs Questions&quot;">Problems vs Questions</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Orientation&quot;">Epistemic Orientation</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Horizon as Metaphor&quot;">Horizon as Metaphor</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Tractability&quot;">Tractability</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/socratic-method-and-inquiry" title="No note is called &quot;Socratic Method and Inquiry&quot; yet — see who is asking for it">Socratic Method and Inquiry</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-philosophy" title="Written [[Space and Place Philosophy]], resolved to space-and-place-philosophy">Space and Place Philosophy</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs Questions]], resolved to problems-vs-questions">Problems vs Questions</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/epistemic-orientation" title="No note is called &quot;Epistemic Orientation&quot; yet — see who is asking for it">Epistemic Orientation</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/horizon-as-metaphor" title="No note is called &quot;Horizon as Metaphor&quot; yet — see who is asking for it">Horizon as Metaphor</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/tractability" title="No note is called &quot;Tractability&quot; yet — see who is asking for it">Tractability</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">5</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-and-place-philosophy">Space and Place Philosophy</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>451</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-philosophy">Space and Place Philosophy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/thinking-with-places">Thinking with Places</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/alien-phenomenology-vs-experiential-perspective">Alien Phenomenology vs. Experiential Perspective</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/philosophy">philosophy</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/socrates">Socrates</a><a class="tag" href="/wiki/topics/agnes-callard">Agnes-Callard</a><a class="tag" href="/wiki/topics/space-place">space-place</a><a class="tag" href="/wiki/topics/inquiry">inquiry</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

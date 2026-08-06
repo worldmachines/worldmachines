@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Documentation as Empathy</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Documentation as Empathy</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/documentation-as-empathy.md">source on GitHub</a></div>
-  <div class="note-summary">The proposition that writing good documentation is fundamentally an act of empathy — projecting into the future reader&#x27;s context to give them everything they need.</div>
-  <div class="tags"><span class="tag">documentation</span><span class="tag">empathy</span><span class="tag">writing</span><span class="tag">craft</span><span class="tag">technology</span><span class="tag">knowledge-transfer</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/documentation-as-empathy.md">source on GitHub</a></div>
+    <div class="note-summary">The proposition that writing good documentation is fundamentally an act of empathy — projecting into the future reader&#x27;s context to give them everything they need.</div>
     <div class="prose">
 <h2 id="core-idea">Core Idea</h2>
-<p>Good documentation is not a technical deliverable — it is an exercise in <strong>deep empathy</strong> with a future reader whose context, level, and specific problem are unknown. From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span>:</p>
+<p>Good documentation is not a technical deliverable — it is an exercise in <strong>deep empathy</strong> with a future reader whose context, level, and specific problem are unknown. From <a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a>:</p>
 <blockquote><p>&quot;Writing good documentation is hard. It is an exercise in deep empathy with my user. Reaching into the future to give them all they need is part of creating good technology.&quot;</p></blockquote>
 <h2 id="the-time-travel-frame">The Time Travel Frame</h2>
 <p>Documentation is a form of <strong>temporal empathy</strong>: the writer projects into a future moment, inhabits a future reader&#x27;s confusion, and leaves behind exactly what that reader will need. This is structurally similar to writing a will, or leaving instructions for your future self.</p>
@@ -49,7 +58,7 @@
 <tr><td>Good documentation</td><td>Anticipatory care, removes friction</td><td>&quot;A kindly spirit ancestor parting the mist&quot;</td></tr>
 </tbody>
 </table></div>
-<p>Both serve learning, but in opposite ways. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Method&quot;">Socratic Method</span> builds capability through struggle; documentation eliminates unnecessary struggle so real work can proceed.</p>
+<p>Both serve learning, but in opposite ways. The <a class="wikilink-wanted" href="/wiki/wanted/socratic-method" title="No note is called &quot;Socratic Method&quot; yet — see who is asking for it">Socratic Method</a> builds capability through struggle; documentation eliminates unnecessary struggle so real work can proceed.</p>
 <h2 id="why-good-documentation-is-rare">Why Good Documentation Is Rare</h2>
 <p>Documentation requires the author to:</p>
 <ol>
@@ -61,20 +70,61 @@
 <p>All four are cognitively and motivationally expensive. Most documentation fails at step 1.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> — source essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Staged Learning&quot;">Staged Learning</span> — documentation shapes what learning stages are available</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hacky Mindset&quot;">Hacky Mindset</span> — the adjacent posture that substitutes for documentation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Method&quot;">Socratic Method</span> — contrasted learning modality</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Words as Buttons&quot;">Words as Buttons</span> — the pivot to language as the same domain</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> — source essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/staged-learning" title="Written [[Staged Learning]], resolved to staged-learning">Staged Learning</a> — documentation shapes what learning stages are available</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/hacky-mindset" title="Written [[Hacky Mindset]], resolved to hacky-mindset">Hacky Mindset</a> — the adjacent posture that substitutes for documentation</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/socratic-method" title="No note is called &quot;Socratic Method&quot; yet — see who is asking for it">Socratic Method</a> — contrasted learning modality</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/words-as-buttons" title="No note is called &quot;Words as Buttons&quot; yet — see who is asking for it">Words as Buttons</a> — the pivot to language as the same domain</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>315</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hacky-mindset">Hacky Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/lexicographic-richness">Lexicographic Richness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/staged-learning">Staged Learning</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/william-zinsser">William Zinsser</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/small-web">Small Web</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/documentation-as-gift-economy">Documentation as Gift Economy</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/tools-that-shape-thought">Tools That Shape Thought</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/a-good-dictionary">A Good Dictionary</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/divine-documentation">Divine Documentation</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/james-somers">James Somers</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/lexicographic-richness">Lexicographic Richness</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/john-mcphee">John McPhee</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/documentation">documentation</a><a class="tag" href="/wiki/topics/empathy">empathy</a><a class="tag" href="/wiki/topics/writing">writing</a><a class="tag" href="/wiki/topics/craft">craft</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/knowledge-transfer">knowledge-transfer</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

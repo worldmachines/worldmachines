@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>Diplomacy (1861): The Cabin-Boy&#x27;s Education</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Diplomacy (1861): The Cabin-Boy&#x27;s Education</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-08-diplomacy.md">source on GitHub</a></div>
-  <div class="note-summary">Henry Adams sails to London in 1861 as his father&#x27;s unpaid private secretary, where England&#x27;s swift recognition of Confederate belligerency, the Trent Affair, and total social ostracism teach him that his family&#x27;s inherited, eighteenth-century assumptions about American diplomacy are worthless, and that deliberate obscurity, not usefulness, is the only survivable posture.</div>
-  <div class="tags"><span class="tag">henry-adams</span><span class="tag">civil-war-diplomacy</span><span class="tag">confederate-belligerency</span><span class="tag">trent-affair</span><span class="tag">social-ostracism</span><span class="tag">generational-anachronism</span><span class="tag">obscurity-as-strategy</span><span class="tag">anglo-american-relations</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-08-diplomacy.md">source on GitHub</a></div>
+    <div class="note-summary">Henry Adams sails to London in 1861 as his father&#x27;s unpaid private secretary, where England&#x27;s swift recognition of Confederate belligerency, the Trent Affair, and total social ostracism teach him that his family&#x27;s inherited, eighteenth-century assumptions about American diplomacy are worthless, and that deliberate obscurity, not usefulness, is the only survivable posture.</div>
     <div class="prose">
 <p>When Lincoln names Charles Francis Adams Minister to England in the same weeks the Civil War opens, twenty-three-year-old Henry Adams abandons his unfinished legal education and sails with his father to a London that proves indifferent or hostile rather than the friendly, anti-slavery ally the Adams family had assumed; the chapter tracks his first year as private secretary — the shock of England&#x27;s recognition of Confederate belligerency, his near-total social and professional uselessness, the crisis of the Trent Affair, and the handful of allies and one loyal household that slowly make the Legation&#x27;s position bearable — as an education administered entirely through humiliation, obscurity, and the failure of inherited certainties.</p>
 <h2 id="themes">Themes</h2>
@@ -50,15 +58,32 @@
 <p>The Trent Affair / usefulness passage marks Henry&#x27;s decisive retreat from ambition: after a satirical <em>Times</em> leader exposes his freelance letters to the American press, he learns &quot;the value of obscurity&quot; and resolves never to try to be useful again — a lesson he treats as permanent rather than incidental.</p>
 <p>The Mount Felix passage is the chapter&#x27;s one warm counter-current: amid &quot;two years of miserable solitude,&quot; Mrs. Russell Sturgis&#x27;s household is singled out as the sole place offering &quot;a liberal education&quot; of a different, humane kind, standing apart from the diplomatic humiliations that dominate the rest of the year.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>783</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><a class="tag" href="/wiki/topics/civil-war-diplomacy">civil-war-diplomacy</a><span class="tag tag-lone" title="Only this note uses it">confederate-belligerency</span><span class="tag tag-lone" title="Only this note uses it">trent-affair</span><span class="tag tag-lone" title="Only this note uses it">social-ostracism</span><span class="tag tag-lone" title="Only this note uses it">generational-anachronism</span><span class="tag tag-lone" title="Only this note uses it">obscurity-as-strategy</span><a class="tag" href="/wiki/topics/anglo-american-relations">anglo-american-relations</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

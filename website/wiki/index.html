@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,114 +26,155 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/" aria-current="page">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/" aria-current="page">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
   <main class="wiki">
-  <h1>Wiki</h1>
-  <p class="lede">Everything the club has written in <code>raw-notes/</code>, published as it
-  stands: reading notes on the books we work through, concept and entity pages, essays,
-  and the loose fragments in between. Notes are rough by design — this is the working
-  layer, not a finished encyclopedia. The <a href="/oracle">Oracle</a> searches the same
-  corpus; this is the version you can read and link.</p>
-  <p class="lede">Currently defining: <a href="/wiki/glossary/legibility">Legibility</a>, <a href="/wiki/glossary/psychohistory">Psychohistory</a>, <a href="/wiki/glossary/world-machine">World Machine</a>. <a href="/wiki/glossary/">Open the glossary →</a></p>
-  <ul class="stat-row">
-    <li><b>1000</b> notes</li>
-    <li><b>7</b> contributors</li>
-    <li><b>8</b> books</li>
-    <li><b>3</b> glossary terms</li>
-    <li><b>6411</b> resolved links</li>
-  </ul>
-
+  <p class="eyebrow">A book club writing its own theory, in the open</p>
+  <h1 class="home-title">The wiki</h1>
+  <p class="lede home-lede">1000 working notes held together by
+  10201 links. Nothing here is finished — this is the layer where
+  the thinking happens, and the fastest way through it is to follow a concept
+  sideways rather than read a folder top to bottom.</p>
+  <div class="figure-band">
+      <div class="band-cell"><b>1000</b><span>notes</span></div>
+      <div class="band-cell"><b>3</b><span>terms defined</span></div>
+      <div class="band-cell"><b>313</b><span>pages wanted</span></div>
+      <div class="band-cell"><b>937</b><span>shared topics</span></div>
+      <div class="band-cell"><b>8</b><span>books read</span></div>
+  </div>
   <section>
-    <h2>By contributor</h2>
-    <ul class="member-list">
-      <li class="member-card">
-        <a href="/wiki/aneesh/">Aneesh</a>
-        <span class="count">763</span>
-        <span class="muted">Concepts · Entities · Loose notes · Summaries · Synthesis</span>
+    <h2 class="register"><span>Defined</span><span class="section-aside"><a href="/wiki/glossary/">the glossary →</a></span></h2>
+    <p class="section-note">Terms the club has argued about on purpose. Each carries a status and gathers every note that uses it.</p>
+    <ul class="term-list">
+      <li class="term-card">
+        <div class="term-head"><a href="/wiki/glossary/legibility">Legibility</a> <span class="status status-developing">developing</span> </div>
+        <p class="term-gloss">The condition of being readable by a system that has the power to act on what it reads — mapped, predicted, categorized, managed. In this project legibility is treated as the core optimization target of the Modernity Machine, and therefore as a precondition for scale rather than a neutral technique.</p>
+        <div class="term-meta">28 notes use it · 46 tagged</div>
       </li>
-      <li class="member-card">
-        <a href="/wiki/brandon/">Brandon</a>
-        <span class="count">4</span>
-        <span class="muted">Essays · Literature notes</span>
+      <li class="term-card">
+        <div class="term-head"><a href="/wiki/glossary/psychohistory">Psychohistory</a> <span class="status status-seed">seed</span> </div>
+        <p class="term-gloss">Asimov&#x27;s fictional science of forecasting the statistical behaviour of civilizations, adopted here as the project&#x27;s guiding conceit rather than its method — the thing we are building toward while remaining explicit that we cannot currently do it.</p>
+        <div class="term-meta">0 notes use it · 2 tagged</div>
       </li>
-      <li class="member-card">
-        <a href="/wiki/florian/">Florian</a>
-        <span class="count">14</span>
-        <span class="muted">Loose notes</span>
-      </li>
-      <li class="member-card">
-        <a href="/wiki/patrick/">Patrick</a>
-        <span class="count">5</span>
-        <span class="muted">Loose notes</span>
-      </li>
-      <li class="member-card">
-        <a href="/wiki/sean/">Sean</a>
-        <span class="count">1</span>
-        <span class="muted">Loose notes</span>
-      </li>
-      <li class="member-card">
-        <a href="/wiki/venkat/">Venkat</a>
-        <span class="count">2</span>
-        <span class="muted">Concepts</span>
-      </li>
-      <li class="member-card">
-        <a href="/wiki/commons/">Commons</a>
-        <span class="count">211</span>
-        <span class="muted">Entities · Reading notes · Summaries · Synthesis</span>
+      <li class="term-card">
+        <div class="term-head"><a href="/wiki/glossary/world-machine">World Machine</a> <span class="status status-developing">developing</span> <span class="muted">also called World Machines</span></div>
+        <p class="term-gloss">A civilization-scale contraption — institutions, technologies, practices and assumptions interlocked — that embodies the logic of how the world works for a period of centuries, and that rises, operates and decays on a roughly thousand-year lifecycle.</p>
+        <div class="term-meta">56 notes use it</div>
       </li>
     </ul>
   </section>
-
   <section>
-    <h2>By book</h2>
-    <p class="section-note">Communal reading notes in <code>raw-notes/commons/reading/</code>,
-    one page per section of each source.</p>
-    <ul class="book-list">
-      <li class="book-card">
-        <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a>
-        <span class="count">9</span>
-        <span class="muted">Tim Ingold · 2023</span>
+    <h2 class="register"><span>Load-bearing</span><span class="section-aside"><a href="/wiki/hubs">all →</a></span></h2>
+    <p class="section-note">Nobody nominated these. They are the notes the rest of the writing keeps reaching for, ranked by inbound links — the club's centre of gravity, measured.</p>
+    <ul class="plate">
+      <li class="plate-row mag-4">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">130</span></span><span class="plate-meta">Aneesh · Concepts</span>
       </li>
-      <li class="book-card">
-        <a href="/wiki/commons/reading/landes-revolution-in-time/">Revolution in Time</a>
-        <span class="count">24</span>
-        <span class="muted">David S. Landes · 1983</span>
+      <li class="plate-row mag-4">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">119</span></span><span class="plate-meta">Aneesh · Concepts</span>
       </li>
-      <li class="book-card">
-        <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a>
-        <span class="count">41</span>
-        <span class="muted">Geoffrey Chaucer · c.1400</span>
+      <li class="plate-row mag-4">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">119</span></span><span class="plate-meta">Aneesh · Concepts</span>
       </li>
-      <li class="book-card">
-        <a href="/wiki/commons/reading/decameron/">The Decameron</a>
-        <span class="count">12</span>
-        <span class="muted">Giovanni Boccaccio · c.1353</span>
+      <li class="plate-row mag-4">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">87</span></span><span class="plate-meta">Aneesh · Entities</span>
       </li>
-      <li class="book-card">
-        <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a>
-        <span class="count">21</span>
-        <span class="muted">Dante Alighieri (Cary tr.) · c.1320</span>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">73</span></span><span class="plate-meta">Aneesh · Entities</span>
       </li>
-      <li class="book-card">
-        <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a>
-        <span class="count">37</span>
-        <span class="muted">Henry Adams · 1918</span>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">72</span></span><span class="plate-meta">Aneesh · Entities</span>
       </li>
-      <li class="book-card">
-        <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a>
-        <span class="count">22</span>
-        <span class="muted">Joyce Appleby · 2010</span>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">65</span></span><span class="plate-meta">Aneesh · Concepts</span>
       </li>
-      <li class="book-card">
-        <a href="/wiki/commons/reading/more-utopia/">Utopia</a>
-        <span class="count">24</span>
-        <span class="muted">Thomas More · 1516</span>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">63</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">61</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">56</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">55</span></span><span class="plate-meta">Aneesh · Entities</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">55</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">52</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">45</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">43</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">39</span></span><span class="plate-meta">Aneesh · Entities</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">35</span></span><span class="plate-meta">Aneesh · Summaries</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/untimely">Untimely</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">33</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/world-machines-framework">World Machines Framework</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">33</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/place-as-pause">Place as Pause (Tuan)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">32</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">30</span></span><span class="plate-meta">Aneesh · Concepts</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">30</span></span><span class="plate-meta">Aneesh · Concepts</span>
       </li>
     </ul>
   </section>
-
   <section>
-    <h2>Recent changes</h2>
+    <h2 class="register"><span>Wanted</span><span class="section-aside"><a href="/wiki/wanted/">all →</a></span></h2>
+    <p class="section-note">Titles the notes keep linking to that nobody has written. Whoever writes one inherits its inbound links on the first commit.</p>
+    <ul class="plate plate-wanted-list">
+      <li class="plate-row mag-2 plate-wanted">
+        <span class="plate-line"><a class="plate-name" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg">Composite AI Architecture (Experts + LLM + KG)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">22<span class="plate-unit"> notes</span></span></span>
+      </li>
+      <li class="plate-row mag-1 plate-wanted">
+        <span class="plate-line"><a class="plate-name" href="/wiki/wanted/not-my-lever-the-last-container">Not My Lever — The Last Container</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">15<span class="plate-unit"> notes</span></span></span>
+      </li>
+      <li class="plate-row mag-1 plate-wanted">
+        <span class="plate-line"><a class="plate-name" href="/wiki/wanted/universal-library-in-the-river-of-noise">Universal Library in the River of Noise</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">13<span class="plate-unit"> notes</span></span></span>
+      </li>
+      <li class="plate-row mag-1 plate-wanted">
+        <span class="plate-line"><a class="plate-name" href="/wiki/wanted/chatbots-bats-and-broken-oracles">Chatbots, Bats &amp; Broken Oracles</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">13<span class="plate-unit"> notes</span></span></span>
+      </li>
+      <li class="plate-row mag-1 plate-wanted">
+        <span class="plate-line"><a class="plate-name" href="/wiki/wanted/engineering-liveness-rao">Engineering Liveness - Rao</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">12<span class="plate-unit"> notes</span></span></span>
+      </li>
+      <li class="plate-row mag-1 plate-wanted">
+        <span class="plate-line"><a class="plate-name" href="/wiki/wanted/data-generation-process">Data Generation Process</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">11<span class="plate-unit"> notes</span></span></span>
+      </li>
+      <li class="plate-row mag-1 plate-wanted">
+        <span class="plate-line"><a class="plate-name" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan">Cloister Web — Reshaping the Political Maidan</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">10<span class="plate-unit"> notes</span></span></span>
+      </li>
+      <li class="plate-row mag-1 plate-wanted">
+        <span class="plate-line"><a class="plate-name" href="/wiki/wanted/breimans-two-cultures">Breiman&#x27;s Two Cultures</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">9<span class="plate-unit"> notes</span></span></span>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="register"><span>Open threads</span><span class="section-aside"><a href="/wiki/changes">all changes →</a></span></h2>
     <ul class="changes">
       <li class="change">
         <div class="change-meta">6 August 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/ce779833b65693abacd10cef23ebf8c6c47ca8f9">ce77983</a></div>
@@ -158,12 +199,12 @@
       <li class="change">
         <div class="change-meta">27 July 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">fb9394e</a></div>
         <div class="change-subject">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</div>
-        <div class="change-notes"><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a>, <a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-assembly-of-fowls">The Assembly of Fowls (The Parliament of Fowls)</a>, <a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale">The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</a>, <a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-chaucers-dream">Chaucer&#x27;s Dream</a>, <a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-clerks-tale">The Clerk&#x27;s Tale: Griselda&#x27;s Patience and Chaucer&#x27;s Ironic Envoy</a> <span class="muted">+40 more</span></div>
+        <div class="change-notes"><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a>, <a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-assembly-of-fowls">The Assembly of Fowls (The Parliament of Fowls)</a>, <a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale">The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</a>, <a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-chaucers-dream">Chaucer&#x27;s Dream</a> <span class="muted">+41 more</span></div>
       </li>
       <li class="change">
         <div class="change-meta">25 July 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">f059e30</a></div>
         <div class="change-subject">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</div>
-        <div class="change-notes"><a href="/wiki/commons/entities/beatrice">Beatrice</a>, <a href="/wiki/commons/entities/virgil">Virgil</a>, <a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05">Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</a>, <a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11">Through Gluttony, Avarice, and Wrath to the Gates of Dis</a>, <a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-12-17">Hell, Cantos XII–XVII: Violence Against Neighbor, Self, and God, and the Descent to Fraud</a> <span class="muted">+20 more</span></div>
+        <div class="change-notes"><a href="/wiki/commons/entities/beatrice">Beatrice</a>, <a href="/wiki/commons/entities/virgil">Virgil</a>, <a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-01-05">Inferno, Cantos I–V: From the Dark Wood to the Circle of Lust</a>, <a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11">Through Gluttony, Avarice, and Wrath to the Gates of Dis</a> <span class="muted">+21 more</span></div>
       </li>
       <li class="change">
         <div class="change-meta">19 July 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/b95d92ede04e20242d0c2bcbe26e96cd824e9eda">b95d92e</a></div>
@@ -173,37 +214,73 @@
       <li class="change">
         <div class="change-meta">19 July 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">b59d012</a></div>
         <div class="change-subject">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</div>
-        <div class="change-notes"><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a>, <a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch02-trading-in-new-directions">Trade Is Not Capitalism: Empire, Commerce, and Institutional Divergence, 1500–1700</a>, <a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03a-basket-of-consumables-and-population">The Vise of Scarcity: Food, Population, and the Preconditions for Capitalism</a>, <a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements">Priming the Pump of Capitalism: The Agricultural Revolution in England and the Netherlands</a>, <a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04a-market-discourse-and-usury">Debating the Market: Discourse, Mercantilism, and the Decline of the Usury Taboo</a> <span class="muted">+17 more</span></div>
-      </li>
-      <li class="change">
-        <div class="change-meta">17 July 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">37c8d36</a></div>
-        <div class="change-subject">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</div>
-        <div class="change-notes"><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a>, <a href="/wiki/commons/reading/adams-education/adams-education-ch-04-harvard-college">Harvard College (1854-1858)</a>, <a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a>, <a href="/wiki/commons/reading/adams-education/adams-education-ch-14-dilettantism">Dilettantism: The Failure of Art and Antiquarianism as Careers (1865-1866)</a>, <a href="/wiki/commons/reading/adams-education/adams-education-ch-18-free-fight">Free Fight (1869-70)</a> <span class="muted">+4 more</span></div>
-      </li>
-      <li class="change">
-        <div class="change-meta">17 July 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">e2f2f5f</a></div>
-        <div class="change-subject">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</div>
-        <div class="change-notes"><a href="/wiki/aneesh/concepts/history-machine">History Machine</a>, <a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a>, <a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a>, <a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a>, <a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a> <span class="muted">+39 more</span></div>
-      </li>
-      <li class="change">
-        <div class="change-meta">15 July 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">d490fd7</a></div>
-        <div class="change-subject">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</div>
-        <div class="change-notes"><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a>, <a href="/wiki/commons/entities/thomas-more">Thomas More</a>, <a href="/wiki/commons/entities/utopus">Utopus</a>, <a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a>, <a href="/wiki/commons/reading/more-utopia/more-utopia-book1-02-serving-princes">Raphael’s Refusal: Counsel, Flattery, and the Uselessness of Wisdom at Court</a> <span class="muted">+24 more</span></div>
-      </li>
-      <li class="change">
-        <div class="change-meta">15 July 2026 · Aneesh Sathe · <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">790cb14</a></div>
-        <div class="change-subject">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</div>
-        <div class="change-notes"><a href="/wiki/commons/reading/decameron/dec-conclusion">DEC 12 — Conclusion of the Author</a>, <a href="/wiki/commons/reading/decameron/dec-day-01">DEC 02 — Day the First</a>, <a href="/wiki/commons/reading/decameron/dec-day-02">DEC 03 — Day the Second</a>, <a href="/wiki/commons/reading/decameron/dec-day-03">DEC 04 — Day the Third</a>, <a href="/wiki/commons/reading/decameron/dec-day-04">DEC 05 — Day the Fourth</a> <span class="muted">+40 more</span></div>
+        <div class="change-notes"><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a>, <a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch02-trading-in-new-directions">Trade Is Not Capitalism: Empire, Commerce, and Institutional Divergence, 1500–1700</a>, <a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03a-basket-of-consumables-and-population">The Vise of Scarcity: Food, Population, and the Preconditions for Capitalism</a>, <a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements">Priming the Pump of Capitalism: The Agricultural Revolution in England and the Netherlands</a> <span class="muted">+18 more</span></div>
       </li>
     </ul>
   </section>
-
-  <p class="note-foot">Links written <code>[[like this]]</code> resolve by exact,
-  case-sensitive note id; 4623 links point at
-  notes that do not exist in this repo and are shown as <span class="wikilink-missing">plain
-  grey text</span>. Browse <a href="/wiki/all">all notes</a>.</p>
+  <section>
+    <h2 class="register"><span>On the table</span><span class="section-aside"><a href="/wiki/topics/">browse topics →</a></span></h2>
+    <p class="section-note">Books the club reads together. Notes are written about them section by section; the source text never enters the repository.</p>
+    <ul class="plate">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">41<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Geoffrey Chaucer · c.1400</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">37<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Henry Adams · 1918</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/landes-revolution-in-time/">Revolution in Time</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">24<span class="plate-unit"> notes</span></span></span><span class="plate-meta">David S. Landes · 1983</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/more-utopia/">Utopia</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">24<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Thomas More · 1516</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">22<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Joyce Appleby · 2010</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">21<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Dante Alighieri (Cary tr.) · c.1320</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/decameron/">The Decameron</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">12<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Giovanni Boccaccio · c.1353</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">9<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Tim Ingold · 2023</span>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="register"><span>Who wrote it</span><span class="section-aside"><a href="/wiki/all">A–Z →</a></span></h2>
+    <p class="section-note">The folder view. Useful when you know whose note you are after, less useful than following a link when you do not.</p>
+    <ul class="plate plate-dense">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/">Aneesh</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">763<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Concepts · Entities · Loose notes · Summaries · Synthesis</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/brandon/">Brandon</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">4<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Essays · Literature notes</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/florian/">Florian</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">14<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Loose notes</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/patrick/">Patrick</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">5<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Loose notes</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/sean/">Sean</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">1<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Loose notes</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/venkat/">Venkat</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">2<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Concepts</span>
+      </li>
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/commons/">Commons</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">211<span class="plate-unit"> notes</span></span></span><span class="plate-meta">Entities · Reading notes · Summaries · Synthesis</span>
+      </li>
+    </ul>
+  </section>
+  <p class="note-foot">The <a href="/oracle">Oracle</a> answers questions against
+  this same corpus; the wiki is the version you can read, link and edit. Source
+  notes live in <code>raw-notes/</code> — every page links to its own file on GitHub.</p>
 
   </main>
+  <script src="/wiki/wiki.js" defer></script>
   <!-- generated from raw-notes at ce779833b656 (2026-08-06) -->
 </body>
 </html>

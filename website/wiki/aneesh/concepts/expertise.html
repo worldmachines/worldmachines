@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,29 +26,38 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Expertise</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Expertise</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/expertise.md">source on GitHub</a></div>
-  <div class="note-summary">A two-component model of expertise: knowledge (propositional, transmissible) and taste (experiential, judgment-based) — and the argument that AI can approximate the former but not the latter.</div>
-  <div class="tags"><span class="tag">epistemics</span><span class="tag">expertise</span><span class="tag">knowledge</span><span class="tag">taste</span><span class="tag">ai-limitations</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/expertise.md">source on GitHub</a></div>
+    <div class="note-summary">A two-component model of expertise: knowledge (propositional, transmissible) and taste (experiential, judgment-based) — and the argument that AI can approximate the former but not the latter.</div>
     <div class="prose">
 <h2 id="the-two-component-model">The Two-Component Model</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>) implicitly constructs a two-part model of expertise:</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good" title="Written [[On Being Good vs. Knowing Good]], resolved to on-being-good-vs-knowing-good">On Being Good vs. Knowing Good</a>, <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>) implicitly constructs a two-part model of expertise:</p>
 <ol>
 <li><strong>Knowledge</strong> — the structured accumulation of facts, frameworks, and relationships. Transmissible through text, education, and increasingly through knowledge graphs. Approximatable by LLMs.</li>
 <li><strong>Taste</strong> — the experiential capacity to make good judgments, to distinguish the right option, to know when the question is the wrong question. Develops through imperfect experience. Not yet approximatable by AI.</li>
 </ol>
-<p>This split maps onto the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> concept and drives the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span> distinction.</p>
+<p>This split maps onto the <a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity" title="Written [[Taste as Epistemic Capacity]], resolved to taste-as-epistemic-capacity">Taste as Epistemic Capacity</a> concept and drives the <a class="wikilink" href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor" title="Written [[AI as Tool vs. Advisor]], resolved to ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a> distinction.</p>
 <h2 id="the-network-structure-of-knowledge">The Network Structure of Knowledge</h2>
-<p>&quot;Dancing on the Shoulders of Giants&quot; adds structural depth: expertise is less about total knowledge held than about <em>how</em> knowledge is organized and <em>how flexibly</em> it can be traversed. The expert&#x27;s advantage is a denser, better-organized knowledge network — which allows faster navigation and more efficient &quot;muddling through&quot; (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Muddling Through&quot;">Muddling Through</span>).</p>
-<p>This is why <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> matter: they externalize the relational structure of expert knowledge into a traversable artifact. The gap between novice and expert is, at its core, a gap in knowledge network density and structure — and that gap is partially bridgeable if you can give novices access to a well-structured external network.</p>
+<p>&quot;Dancing on the Shoulders of Giants&quot; adds structural depth: expertise is less about total knowledge held than about <em>how</em> knowledge is organized and <em>how flexibly</em> it can be traversed. The expert&#x27;s advantage is a denser, better-organized knowledge network — which allows faster navigation and more efficient &quot;muddling through&quot; (see <a class="wikilink" href="/wiki/aneesh/concepts/muddling-through" title="Written [[Muddling Through]], resolved to muddling-through">Muddling Through</a>).</p>
+<p>This is why <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> matter: they externalize the relational structure of expert knowledge into a traversable artifact. The gap between novice and expert is, at its core, a gap in knowledge network density and structure — and that gap is partially bridgeable if you can give novices access to a well-structured external network.</p>
 <h2 id="the-acceleration-claim">The Acceleration Claim</h2>
-<p>&quot;Expertise can be accelerated by giving people with base training access to new networks of knowledge.&quot; The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> operationalizes this: KGs encode expert knowledge structure; LLMs make it accessible; domain experts provide taste to adjudicate outputs.</p>
+<p>&quot;Expertise can be accelerated by giving people with base training access to new networks of knowledge.&quot; The <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> operationalizes this: KGs encode expert knowledge structure; LLMs make it accessible; domain experts provide taste to adjudicate outputs.</p>
 <h2 id="the-data-frame-theory-extension-klein-et-al-2007">The Data-Frame Theory Extension (Klein et al, 2007)</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span>&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> adds a third dimension to expertise not covered by the knowledge/taste binary: <strong>frame repertoire and expectancy richness</strong>.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> adds a third dimension to expertise not covered by the knowledge/taste binary: <strong>frame repertoire and expectancy richness</strong>.</p>
 <p>Experts and novices use <em>identical</em> sensemaking processes (data-frame cycles, elaboration, preservation, reframing). What differs is the quality of the raw material:</p>
 <ul>
 <li><strong>Richer causal mental models</strong>: experts know more about <em>why</em> things happen in their domain — more causal relationships</li>
@@ -59,28 +68,73 @@
 <p>This suggests a third component of expertise beyond knowledge and taste: <strong>the ability to rapidly construct, elaborate, and abandon explanatory frames</strong> — a dynamic skill rather than a static accumulation.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> — the non-transmissible component</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Muddling Through&quot;">Muddling Through</span> — expert mode of frontier problem-solving</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hunter vs. Dancer Curiosity&quot;">Hunter vs. Dancer Curiosity</span> — the cognitive style underlying expert exploration</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> — method for extracting tacit expert knowledge</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — architectural application of the expertise model</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — Klein&#x27;s account of expert-novice differences in sensemaking</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — the failure mode that expertise creates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — the research tradition that grounds these claims</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity" title="Written [[Taste as Epistemic Capacity]], resolved to taste-as-epistemic-capacity">Taste as Epistemic Capacity</a> — the non-transmissible component</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/muddling-through" title="Written [[Muddling Through]], resolved to muddling-through">Muddling Through</a> — expert mode of frontier problem-solving</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/hunter-vs-dancer-curiosity" title="Written [[Hunter vs. Dancer Curiosity]], resolved to hunter-vs-dancer-curiosity">Hunter vs. Dancer Curiosity</a> — the cognitive style underlying expert exploration</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> — method for extracting tacit expert knowledge</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> — architectural application of the expertise model</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — Klein&#x27;s account of expert-novice differences in sensemaking</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — the failure mode that expertise creates</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — the research tradition that grounds these claims</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/route-vs-survey-knowledge">Route vs. Survey Knowledge</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-14-dilettantism">Dilettantism: The Failure of Art and Antiquarianism as Careers (1865-1866)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>18</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>504</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">Taste as Epistemic Capacity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/wrights-law">Wright&#x27;s Law</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good">On Being Good vs. Knowing Good: Perspectives on AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/how-experts-sensemake">How Experts Sensemake (Chin, 2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/recognition-primed-decision-model">Recognition-Primed Decision Model</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>10 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/just-in-time-mental-models">Just-in-Time Mental Models</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/muddling-through">Muddling Through</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/hunter-vs-dancer-curiosity">Hunter vs. Dancer Curiosity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/route-vs-survey-knowledge">Route vs. Survey Knowledge</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaac-newton">Isaac Newton (1643–1727)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/paul-feyerabend">Paul Feyerabend (1924–1994)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rules-of-thumb-as-portable-place">Rules of Thumb as Portable Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-14-dilettantism">Dilettantism: The Failure of Art and Antiquarianism as Careers (1865-1866)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/composite-ai-architecture">Composite AI Architecture (Experts + LLM + KG)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/muddling-through">Muddling Through</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/wrights-law">Wright&#x27;s Law</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/sensemaking-forms">Forms of Sensemaking</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/frames-and-framing">Frames and Framing</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/epistemics">epistemics</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/knowledge">knowledge</a><a class="tag" href="/wiki/topics/taste">taste</a><a class="tag" href="/wiki/topics/ai-limitations">ai-limitations</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

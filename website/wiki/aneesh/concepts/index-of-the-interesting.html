@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Index of the Interesting</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Index of the Interesting</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Index%20of%20the%20Interesting.md">source on GitHub</a></div>
-  <div class="note-summary">Davis&#x27;s 12-category taxonomy of logical moves by which propositions deny taken-for-granted assumptions — the structural grammar of what makes ideas interesting.</div>
-  <div class="tags"><span class="tag">epistemology</span><span class="tag">rhetoric</span><span class="tag">interestingness</span><span class="tag">assumptions</span><span class="tag">taxonomy</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Index%20of%20the%20Interesting.md">source on GitHub</a></div>
+    <div class="note-summary">Davis&#x27;s 12-category taxonomy of logical moves by which propositions deny taken-for-granted assumptions — the structural grammar of what makes ideas interesting.</div>
     <div class="prose">
 <p>The Index of the Interesting is <a class="wikilink" href="/wiki/aneesh/entities/murray-s-davis">Murray S Davis</a>&#x27;s taxonomy of the 12 logical categories by which propositions can deny their audience&#x27;s taken-for-granted assumptions, making them <em>interesting</em> rather than obvious or absurd.</p>
 <h2 id="the-12-categories">The 12 Categories</h2>
@@ -62,20 +71,46 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/maximal-interestingness">maximal-interestingness</a> — the wiki&#x27;s operational concept built on this foundation</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">6</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/assumption-ground">Assumption-Ground</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/murray-s-davis">Murray S. Davis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/sociology-of-the-interesting">Sociology of the Interesting</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>309</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/assumption-ground">Assumption-Ground</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/murray-s-davis">Murray S. Davis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sociology-of-the-interesting">Sociology of the Interesting</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/interestingness-as-frame-denial">Interestingness as Frame Denial</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/assumption-ground">Assumption-Ground</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/davis-thats-interesting">That&#x27;s Interesting! — Murray S. Davis (1971)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/murray-s-davis">Murray S. Davis</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/maximal-interestingness">Maximal Interestingness</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/sociology-of-the-interesting">Sociology of the Interesting</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/rhetoric">rhetoric</a><a class="tag" href="/wiki/topics/interestingness">interestingness</a><a class="tag" href="/wiki/topics/assumptions">assumptions</a><a class="tag" href="/wiki/topics/taxonomy">taxonomy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

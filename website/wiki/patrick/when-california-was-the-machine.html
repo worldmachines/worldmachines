@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/patrick/">Patrick</a> <b>/</b> <span>When California Was The Machine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>When California Was The Machine</h1>
-  <div class="note-byline"><a href="/wiki/patrick/">Patrick</a> · updated 23 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/patrick/When%20California%20Was%20the%20Machine.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/patrick/">Patrick</a> · updated 23 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/patrick/When%20California%20Was%20the%20Machine.md">source on GitHub</a></div>
     <div class="prose">
 <p>When California Was the Machine On the state that built a civilization and then forgot how There&#x27;s a photograph I keep thinking about. Pat Brown, 1960, standing at the groundbreaking for the State Water Project -- the largest water infrastructure undertaking in the history of any government anywhere. Behind him: the raw desert of the Sacramento-San Joaquin Delta, which would be turned into the hydraulic backbone of a civilization. The man is grinning. He has no idea the fight is already half-lost. Not because the project would fail. It would mostly succeed. But because the coalition required to build it -- the administrative confidence, the political will, the sheer belief that the state could organize the physical world in service of a public vision -- had a shorter lifespan than the concrete they were pouring. I&#x27;ve been thinking about this in the context of Venkatesh Rao&#x27;s World Machines framework, which I&#x27;ve been working through in a series of posts here. The core argument: civilizational history is organized not by nations or ideologies but by successive &quot;world machines,&quot; large-scale coordination systems that define what&#x27;s possible, what&#x27;s legible, what&#x27;s normal. We are living through the late Dusk of the Modernity Machine -- the system built on nation-state power, industrial infrastructure, and mass institutional coordination -- while two successor machines struggle to Dawn around it. California built itself on the Modernity Machine&#x27;s purest logic. And California is now the clearest case study of what that machine&#x27;s Dusk looks like from the inside.</p>
 <p>The postwar decade in California was a machine in full Day. Pat Brown&#x27;s administration alone produced the State Water Project, the Master Plan for Higher Education, and 1,000 miles of new freeway. Not sequentially. Simultaneously. The UC system went from five campuses to nine in a decade. The California Aqueduct, at 444 miles, remains the longest water conveyance structure in the world. These were not incremental improvements on existing systems. They were the physical instantiation of a coordinating vision: a state that could harness expertise, capital, and democratic mandate to transform the landscape in service of human flourishing. What made this possible was not just Pat Brown&#x27;s considerable political gifts. It was the administrative apparatus underneath him. The New York Bureau of Municipal Research model, which had been spreading through American government since the Progressive Era, had by 1960 produced something genuinely capable in Sacramento: engineers who had been trained to study actual operations, budget analysts who knew where the money was and what it could do, project managers who understood construction schedules were not suggestions. The machinery of government matched the ambition of the politicians running it. Venkat describes the Modernity Machine as fundamentally a legibility engine. Its core logic is the compression of variety into canonical order, making the world manageable by simplifying it into forms that can be counted, planned, and acted upon. Water flows as acre-feet. Miles of highway are standardized. University admissions become a scoring system. The compression has costs -- James Scott has written the book on what gets lost when a complex living system gets flattened into a legible map. But the Modernity Machine&#x27;s great genius was that the legibility created real coordination. You could actually build things.</p>
@@ -39,13 +49,22 @@
 <p>I am not, by temperament, a declinist. The bones remain. The aqueduct still runs. The UC campuses still graduate engineers and doctors and policy analysts who do remarkable things. The administrative capacity to do large things is not gone; it is encrusted, in some places, in ways that a capable governor with a real coalition and a genuine theory of reform might still clear. The question the World Machines framework poses is not whether the institutions can be saved. It is whether the next coordination logic will emerge from within them or around them. The Divergence Machine -- the successor logic, which organizes around variety and experimentation and plural coexistence rather than canonical order -- does not necessarily require fixing CEQA. It may simply route around it, the way the internet routed around broadcast media without reforming NBC. What California could be, in that framing, is not the Modernity Machine&#x27;s best remaining practitioner but the Divergence Machine&#x27;s first significant laboratory. A state that stopped insisting everything pass through a canonical process and started creating a genuine ecosystem of pilot programs, data collaboratives, financing innovations, and institutional experiments that demonstrate what works before asking the whole machine to replicate it. That is a different kind of pioneer. Not the canal-building, freeway-paving, university-founding titan of 1960. Something more nimble, more comfortable with uncertainty, more interested in what&#x27;s actually working than in what the plan said would work. Pat Brown grinned at the groundbreaking because he knew what he was going to build. The next version of that grin will belong to someone who knows which experiments to run.</p>
 <p>Tags: world-machines, california, state-capacity, modernity-machine, infrastructure Part of the World Machines series engaging with Venkatesh Rao&#x27;s civilizational framework. Previous installments: [Walking the World Machines], [AI in World Machine Theory], [The Divergence Machine].</p>
     </div>
+    <p class="note-history">Last changed 23 May 2026 by Patrick Atwater — <a href="https://github.com/worldmachines/worldmachines/commit/900170b61af93057d5a56e7a48bbb4bc3269d1fe">Create When California Was the Machine.md</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 23 May 2026 by Patrick Atwater — <a href="https://github.com/worldmachines/worldmachines/commit/900170b61af93057d5a56e7a48bbb4bc3269d1fe">Create When California Was the Machine.md</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>1486</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

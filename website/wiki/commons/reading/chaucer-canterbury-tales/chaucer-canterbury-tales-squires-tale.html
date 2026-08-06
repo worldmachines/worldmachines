@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Squire&#x27;s Tale: Marvels of Sarra and the Falcon&#x27;s Lament</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Squire&#x27;s Tale: Marvels of Sarra and the Falcon&#x27;s Lament</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-squires-tale.md">source on GitHub</a></div>
-  <div class="note-summary">Chaucer&#x27;s unfinished romance opens at Cambuscan&#x27;s Tartar court with a mysterious knight&#x27;s gift of four marvels — a brass horse, a truth-revealing mirror, a language-granting ring, and a wounding-and-healing sword — then pivots to Canace&#x27;s rescue of a peregrine falcon whose confession exposes a courtly lover&#x27;s practiced hypocrisy.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">canterbury-tales</span><span class="tag">squires-tale</span><span class="tag">medieval-romance</span><span class="tag">automata</span><span class="tag">courtly-love</span><span class="tag">legibility</span><span class="tag">unfinished-work</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a>, <a class="wikilink" href="/wiki/aneesh/concepts/bryant-machine-concept">bryant-machine-concept</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-squires-tale.md">source on GitHub</a></div>
+    <div class="note-summary">Chaucer&#x27;s unfinished romance opens at Cambuscan&#x27;s Tartar court with a mysterious knight&#x27;s gift of four marvels — a brass horse, a truth-revealing mirror, a language-granting ring, and a wounding-and-healing sword — then pivots to Canace&#x27;s rescue of a peregrine falcon whose confession exposes a courtly lover&#x27;s practiced hypocrisy.</div>
     <div class="prose">
 <p>The Host&#x27;s prologue — a comic aside on his own shrewish, gossiping wife, delivered as a segue from the Merchant&#x27;s tale — hands the floor to the Squire, who narrates the (famously incomplete) romance of Cambuscan, Tartar king of Sarra. Part I stages a birthday feast interrupted by a strange armed knight riding a horse of brass, bearing gifts from the King of Arabia and India: the horse itself (which can carry a rider anywhere on earth in a day and vanish or return at the twist of a pin), a mirror that reveals hidden danger and any lover&#x27;s treachery, a ring for Cambuscan&#x27;s daughter Canace that lets her understand the speech of birds and the medicinal virtue of every herb, and a sword that both wounds and — reversed — heals. The court&#x27;s astonished, argumentative reception of these objects closes Part I. Part II drops the automata plot entirely: at dawn Canace, walking in the park, finds a peregrine falcon tearing at herself in grief atop a withered tree; using her ring she draws out the falcon&#x27;s confession — a hypocritical tercelet wooed her for years, won her trust, then abandoned her for a kite, in an extended set-piece on love&#x27;s counterfeiting. The tale breaks off as the Squire promises future adventures (Cambuscan&#x27;s wars, Algarsife winning Theodora with the horse&#x27;s aid, Camballo&#x27;s tourney for Canace&#x27;s hand) that Chaucer never wrote — the editorial notes confirm the poem was left &quot;half-told&quot; by its author, not truncated by manuscript loss.</p>
 <h2 id="themes">Themes</h2>
@@ -51,15 +59,32 @@
 <p>The falcon&#x27;s indictment of the tercelet (&quot;Right as a serpent hides him under flow&#x27;rs&quot; through &quot;That, save the fiend, none wiste what he meant&quot;) is the emotional and moral center of Part II, rendering courtly love&#x27;s performative vocabulary as indistinguishable, from the inside, between sincerity and craft.</p>
 <p>The caged-bird analogy (&quot;That alle thing repairing to his kind&quot; through &quot;No gentleness of bloode may them bind&quot;) universalizes the betrayal into a Boethian law of nature, the tale&#x27;s closest approach to a stated moral before it breaks off unfinished.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>1045</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/bryant-machine-concept">bryant-machine-concept</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><span class="tag tag-lone" title="Only this note uses it">squires-tale</span><a class="tag" href="/wiki/topics/medieval-romance">medieval-romance</a><span class="tag tag-lone" title="Only this note uses it">automata</span><a class="tag" href="/wiki/topics/courtly-love">courtly-love</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/unfinished-work">unfinished-work</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

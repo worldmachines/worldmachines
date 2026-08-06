@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,28 +26,37 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Intellectual vs. Revolutionary</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Intellectual vs. Revolutionary</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/intellectual-vs-revolutionary.md">source on GitHub</a></div>
-  <div class="note-summary">The historical bifurcation between the intellectual who conceptualizes new frameworks and the revolutionary leader who translates them into mass action — and the question of whether LLMs collapse this distinction.</div>
-  <div class="tags"><span class="tag">intellectual-history</span><span class="tag">political-theory</span><span class="tag">revolution</span><span class="tag">leadership</span><span class="tag">media-theory</span><span class="tag">LLMs</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/intellectual-vs-revolutionary.md">source on GitHub</a></div>
+    <div class="note-summary">The historical bifurcation between the intellectual who conceptualizes new frameworks and the revolutionary leader who translates them into mass action — and the question of whether LLMs collapse this distinction.</div>
     <div class="prose">
 <p>A recurring pattern in political history: the <strong>intellectual</strong> who conceptualizes and articulates new frameworks, and the <strong>revolutionary leader</strong> who galvanizes public action around those concepts. These have historically been distinct roles, often occupied by different people with different skill sets, social positions, and risks.</p>
 <h2 id="historical-typology">Historical Typology</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web — Reshaping the Political Maidan&quot;">Cloister Web — Reshaping the Political Maidan</span>:</p>
+<p>From <a class="wikilink-wanted" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan" title="No note is called &quot;Cloister Web — Reshaping the Political Maidan&quot; yet — see who is asking for it">Cloister Web — Reshaping the Political Maidan</a>:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Intellectual</th><th>Revolutionary</th><th>Context</th></tr></thead>
 <tbody>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rabindranath Tagore&quot;">Rabindranath Tagore</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sri Aurobindo&quot;">Sri Aurobindo</span></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mahatma Gandhi&quot;">Mahatma Gandhi</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Subhas Chandra Bose&quot;">Subhas Chandra Bose</span></td><td>Indian independence</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alexander Herzen&quot;">Alexander Herzen</span></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Vladimir Lenin&quot;">Vladimir Lenin</span></td><td>Russian revolution</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liang Qichao&quot;">Liang Qichao</span></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sun Yat-sen&quot;">Sun Yat-sen</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mao Zedong&quot;">Mao Zedong</span></td><td>Chinese modernization</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Paine&quot;">Thomas Paine</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thomas Jefferson&quot;">Thomas Jefferson</span></td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Samuel Adams&quot;">Samuel Adams</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Patrick Henry&quot;">Patrick Henry</span></td><td>American revolution</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/rabindranath-tagore" title="Written [[Rabindranath Tagore]], resolved to rabindranath-tagore">Rabindranath Tagore</a>, <a class="wikilink-wanted" href="/wiki/wanted/sri-aurobindo" title="No note is called &quot;Sri Aurobindo&quot; yet — see who is asking for it">Sri Aurobindo</a></td><td><a class="wikilink" href="/wiki/aneesh/entities/mahatma-gandhi" title="Written [[Mahatma Gandhi]], resolved to mahatma-gandhi">Mahatma Gandhi</a>, <a class="wikilink-wanted" href="/wiki/wanted/subhas-chandra-bose" title="No note is called &quot;Subhas Chandra Bose&quot; yet — see who is asking for it">Subhas Chandra Bose</a></td><td>Indian independence</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/alexander-herzen" title="Written [[Alexander Herzen]], resolved to alexander-herzen">Alexander Herzen</a></td><td><a class="wikilink-wanted" href="/wiki/wanted/vladimir-lenin" title="No note is called &quot;Vladimir Lenin&quot; yet — see who is asking for it">Vladimir Lenin</a></td><td>Russian revolution</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/liang-qichao" title="Written [[Liang Qichao]], resolved to liang-qichao">Liang Qichao</a></td><td><a class="wikilink-wanted" href="/wiki/wanted/sun-yat-sen" title="No note is called &quot;Sun Yat-sen&quot; yet — see who is asking for it">Sun Yat-sen</a>, <a class="wikilink-wanted" href="/wiki/wanted/mao-zedong" title="No note is called &quot;Mao Zedong&quot; yet — see who is asking for it">Mao Zedong</a></td><td>Chinese modernization</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/thomas-paine" title="Written [[Thomas Paine]], resolved to thomas-paine">Thomas Paine</a>, <a class="wikilink-wanted" href="/wiki/wanted/thomas-jefferson" title="No note is called &quot;Thomas Jefferson&quot; yet — see who is asking for it">Thomas Jefferson</a></td><td><a class="wikilink-wanted" href="/wiki/wanted/samuel-adams" title="No note is called &quot;Samuel Adams&quot; yet — see who is asking for it">Samuel Adams</a>, <a class="wikilink-wanted" href="/wiki/wanted/patrick-henry" title="No note is called &quot;Patrick Henry&quot; yet — see who is asking for it">Patrick Henry</a></td><td>American revolution</td></tr>
 </tbody>
 </table></div>
-<p><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mahatma Gandhi&quot;">Mahatma Gandhi</span></strong> is the exceptional case: uniquely embodied both roles simultaneously.</p>
+<p><strong><a class="wikilink" href="/wiki/aneesh/entities/mahatma-gandhi" title="Written [[Mahatma Gandhi]], resolved to mahatma-gandhi">Mahatma Gandhi</a></strong> is the exceptional case: uniquely embodied both roles simultaneously.</p>
 <h2 id="the-structural-difference">The Structural Difference</h2>
 <p>The <strong>intellectual</strong> risks:</p>
 <ul>
@@ -62,11 +71,11 @@
 </ul>
 <p>The intellectual translates <em>ideas</em> into frameworks; the revolutionary translates frameworks into <em>action</em>. Mass persuasion has historically required the latter role because intellectual communication lacks the affective, mobilizing quality of political oratory and presence.</p>
 <h2 id="the-llm-disruption">The LLM Disruption</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> essay argues that LLMs may dissolve this distinction by enabling intellectuals to:</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> essay argues that LLMs may dissolve this distinction by enabling intellectuals to:</p>
 <ol>
 <li><strong>Bypass gatekeepers</strong> (editors, publishers, party structures) and reach individuals directly</li>
 <li><strong>Personalize delivery</strong> — tailoring the message to each recipient&#x27;s cognitive framework and priors</li>
-<li><strong>Generate LLM-consumable <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Idea-Graphs&quot;">Idea-Graphs</span></strong> — knowledge structures that LLMs can then further propagate and adapt</li>
+<li><strong>Generate LLM-consumable <a class="wikilink" href="/wiki/aneesh/concepts/idea-graphs" title="Written [[Idea-Graphs]], resolved to idea-graphs">Idea-Graphs</a></strong> — knowledge structures that LLMs can then further propagate and adapt</li>
 </ol>
 <p>If the revolutionary&#x27;s function was to translate abstract ideas into forms that moved <em>particular people</em> — accounting for their specific beliefs, emotions, and social contexts — then LLMs can now do this at scale automatically.</p>
 <h2 id="risks-of-the-collapse">Risks of the Collapse</h2>
@@ -78,23 +87,54 @@
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> — the new infrastructure that enables this potential collapse</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maidan&quot;">Maidan</span> — the public square that LLMs are reshaping</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Political Discourse&quot;">Printing Press and Political Discourse</span> — the prior communication-technology revolution</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bespoke Distribution&quot;">Bespoke Distribution</span> — the mechanism of personalized idea delivery</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> — the new infrastructure that enables this potential collapse</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/maidan" title="No note is called &quot;Maidan&quot; yet — see who is asking for it">Maidan</a> — the public square that LLMs are reshaping</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/printing-press-and-political-discourse" title="No note is called &quot;Printing Press and Political Discourse&quot; yet — see who is asking for it">Printing Press and Political Discourse</a> — the prior communication-technology revolution</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/bespoke-distribution" title="No note is called &quot;Bespoke Distribution&quot; yet — see who is asking for it">Bespoke Distribution</a> — the mechanism of personalized idea delivery</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web — Reshaping the Political Maidan&quot;">Cloister Web — Reshaping the Political Maidan</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan" title="No note is called &quot;Cloister Web — Reshaping the Political Maidan&quot; yet — see who is asking for it">Cloister Web — Reshaping the Political Maidan</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>392</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/idea-graphs">Idea-Graphs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/mahatma-gandhi">Mahatma Gandhi</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/rabindranath-tagore">Rabindranath Tagore</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-herzen">Alexander Herzen</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/liang-qichao">Liang Qichao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-paine">Thomas Paine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/intellectual-vs-revolutionary-in-the-age-of-llms">Intellectual vs. Revolutionary in the Age of LLMs</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/idea-graphs">Idea-Graphs</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/mahatma-gandhi">Mahatma Gandhi</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a><a class="tag" href="/wiki/topics/political-theory">political-theory</a><a class="tag" href="/wiki/topics/revolution">revolution</a><a class="tag" href="/wiki/topics/leadership">leadership</a><a class="tag" href="/wiki/topics/media-theory">media-theory</a><a class="tag" href="/wiki/topics/llms">LLMs</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

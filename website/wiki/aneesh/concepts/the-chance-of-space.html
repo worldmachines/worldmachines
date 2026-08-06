@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>The Chance of Space</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Chance of Space</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/the-chance-of-space.md">source on GitHub</a></div>
-  <div class="note-summary">Massey&#x27;s concept for the constitutive openness and surprise-capacity of space: the element of unexpected encounter, accidental juxtaposition, and unforeseeable meeting that follows from space being a sphere of multiple coeval trajectories rather than a closed system.</div>
-  <div class="tags"><span class="tag">massey</span><span class="tag">space</span><span class="tag">chance</span><span class="tag">encounter</span><span class="tag">openness</span><span class="tag">situationism</span><span class="tag">architecture</span><span class="tag">relational-geography</span><span class="tag">surprise</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/the-chance-of-space.md">source on GitHub</a></div>
+    <div class="note-summary">Massey&#x27;s concept for the constitutive openness and surprise-capacity of space: the element of unexpected encounter, accidental juxtaposition, and unforeseeable meeting that follows from space being a sphere of multiple coeval trajectories rather than a closed system.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a class="wikilink" href="/wiki/aneesh/entities/doreen-massey">doreen-massey</a>, <em>For Space</em>, Ch. 11 (2005: 111–117)</p>
 <h2 id="the-core-claim">The Core Claim</h2>
@@ -67,16 +76,41 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/power-geometry">power-geometry</a> — who controls the conditions of chance encounter</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/maps-as-technologies-of-power">Maps as Technologies of Power</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>848</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/doreen-massey">Doreen Massey</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/maps-as-technologies-of-power">Maps as Technologies of Power</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/loose-ends-and-missing-links">Loose Ends and Missing Links</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/massey-for-space-part-4-reorientations">Massey, *For Space*, Part Four: Reorientations (2005)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/nostalgia-as-spacialization">Nostalgia as Spatialisation</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/power-geometry">Power-Geometry</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/slices-through-space">Slices through Space</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/trajectories-as-stories-so-far">Trajectories as Stories-So-Far</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/massey">massey</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/chance">chance</a><a class="tag" href="/wiki/topics/encounter">encounter</a><a class="tag" href="/wiki/topics/openness">openness</a><span class="tag tag-lone" title="Only this note uses it">situationism</span><a class="tag" href="/wiki/topics/architecture">architecture</a><a class="tag" href="/wiki/topics/relational-geography">relational-geography</a><span class="tag tag-lone" title="Only this note uses it">surprise</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

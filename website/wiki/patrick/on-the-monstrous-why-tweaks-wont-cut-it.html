@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/patrick/">Patrick</a> <b>/</b> <span>On the Monstrous: Why Tweaks Won&#x27;t Cut It</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>On the Monstrous: Why Tweaks Won&#x27;t Cut It</h1>
-  <div class="note-byline"><a href="/wiki/patrick/">Patrick</a> · updated 23 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/patrick/On%20the%20Monstrous%20-Why%20Tweaks%20Won%27t%20Cut%20It.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/patrick/">Patrick</a> · updated 23 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/patrick/On%20the%20Monstrous%20-Why%20Tweaks%20Won%27t%20Cut%20It.md">source on GitHub</a></div>
     <div class="prose">
 <p><em>Series: 2042 — The Interregnum Deepens | Post 2 of 3</em></p>
 <hr>
@@ -56,13 +66,22 @@
 <p>Californians have done this before. After the railroad came the progressive reform. After the water crisis of the early 20th century came the State Water Project — not elegant, not without its own contradictions, but a genuine attempt to build infrastructure equal to the state&#x27;s scale and ambition. William Hammond Hall&#x27;s vision of a neo-Mediterranean commonwealth took ninety years and multiple institutional cycles to partially realize.</p>
 <p>The question for 2042 is whether the current interregnum produces a third such cycle, or whether the monstrous institutions outlast the political energy required to unmake them.</p>
     </div>
+    <p class="note-history">Last changed 23 May 2026 by Patrick Atwater — <a href="https://github.com/worldmachines/worldmachines/commit/789f7cde1ea76568ef1a4c670a2d786074994898">Create On the Monstrous -Why Tweaks Won&#x27;t Cut It.md</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 23 May 2026 by Patrick Atwater — <a href="https://github.com/worldmachines/worldmachines/commit/789f7cde1ea76568ef1a4c670a2d786074994898">Create On the Monstrous -Why Tweaks Won&#x27;t Cut It.md</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>920</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

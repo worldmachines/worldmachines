@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/florian/">Florian</a> <b>/</b> <span>Design Questions for a Divergence-Age Oracle</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Design Questions for a Divergence-Age Oracle</h1>
-  <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/divergence-age-oracle-v3.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/divergence-age-oracle-v3.md">source on GitHub</a></div>
     <div class="prose">
 <p><em>Six questions for the WMP / SIGPSY circle.</em></p>
 <h2 id="frame">Frame</h2>
@@ -72,16 +82,25 @@
 <h3 id="the-machines-of-the-plan-q6">The Machines of the Plan <em>(Q6)</em></h3>
 <p>Three devices carry the Plan, in three different modes. The <strong>Time Vault</strong> on Terminus is one-way: pre-recorded holograms of Seldon appear at scheduled crises to explain the “obvious” solution to an audience that cannot reply. The <strong>Prime Radiant</strong> — a “dark opaque cube” projecting a “river of mathematical symbolism” — is a living, editable model: “attuned to the mind,” adjusted through “mental rapport,” with Speakers’ additions showing as red markings over Seldon’s black equations; access is restricted to the Second Foundation. The <strong>Electro-Clarifier</strong>, built late in Seldon’s life, is a refinement <em>layer</em> rather than a predictor — used with the achaotic equations to “cram” more information into the model and get “around the problem of chaos”; an intensified version becomes a weapon against robots. (Lesser tools appear too — Seldon’s handheld calculator pad, the portable Micro-Radiant.) <em>(Foundation; Second Foundation; Forward the Foundation.)</em></p>
 <hr>
-<p><em>Created by <a href="https://substack.com/@florianlohse">Florian Lohse</a> for <a href="https://worldmachines.org/">World Machine Project</a>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;2026-06-10&quot;">2026-06-10</span></em></p>
+<p><em>Created by <a href="https://substack.com/@florianlohse">Florian Lohse</a> for <a href="https://worldmachines.org/">World Machine Project</a>, <a class="wikilink-wanted" href="/wiki/wanted/2026-06-10" title="No note is called &quot;2026-06-10&quot; yet — see who is asking for it">2026-06-10</a></em></p>
 <p>[^1]: Venkatesh Rao, <em>Prolegomena to Any Dark-Age Psychohistory</em>, ribbonfarm, 30 Nov 2017 (part 10 of his 15-part <em>Psychohistory</em> series). “Right ambition, wrong methodology” is a synthesis of his position, not a verbatim quote; in the post he frames psychohistory as “the most ambitious design enterprise ever” (invoking Herbert Simon’s definition of design) and seeks a redesigned methodology rather than Asimov’s mass-statistical one. [^2]: Foundation-text specifics (“mere guesswork,” the gas/particle analogy, the math never shown) are NotebookLM-mediated, summarised in the appendix. That Asimov never endorsed it as more than fiction rests on documented interviews — Gunn’s (1979–82), where Asimov says of Campbell’s hope of rationalising psychohistory “Well, this I didn’t believe,” and the 1987 Science Fiction Studies interview framing it as “the struggle between free will and determinism.” [^3]: James C. Scott, <em>Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed</em> (Yale University Press, 1998). Scott argues that the state’s drive for legibility (rendering society readable and governable from a centre) turns destructive when combined with high-modernist ideology and coercive authority: the “thin,” schematic plan suppresses the local, practical knowledge (mētis) that actually makes a system work, producing failures from scientific forestry to collectivisation. The parallel here is the legibility-for-a-managing-elite structure, but not necessarily a claim that any such tool is authoritarian on its own. [^4]: Frank Knight, <em>Risk, Uncertainty, and Profit</em> (1921) — risk = measurable odds; true uncertainty = unmeasurable unknowns. Applied by Vaughn Tan, <em>The Uncertainty Mindset</em> (vaughntan.org). Note: Tan now treats the clean binary as “accurate but incomplete,” developing a richer “types of not-knowing” framework — so cite the binary as Knight-via-Tan, not as Tan’s current position.</p>
     </div>
+    <p class="note-history">Last changed 10 June 2026 by florianlohse — <a href="https://github.com/worldmachines/worldmachines/commit/1a036d97fd939843e5ac276484dfe5021a3bb8f9">added research on foundation relevant for WMP</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 10 June 2026 by florianlohse — <a href="https://github.com/worldmachines/worldmachines/commit/1a036d97fd939843e5ac276484dfe5021a3bb8f9">added research on foundation relevant for WMP</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>1994</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

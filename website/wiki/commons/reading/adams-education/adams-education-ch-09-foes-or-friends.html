@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>Foes or Friends: London Diplomacy and the Discovery of Swinburne (1862)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Foes or Friends: London Diplomacy and the Discovery of Swinburne (1862)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-09-foes-or-friends.md">source on GitHub</a></div>
-  <div class="note-summary">In 1862 London, Henry Adams learns to survive a society that treats Lincoln and Seward as demons by masking every feeling among nominal friends as carefully as before enemies, watches his father read Lord Palmerston&#x27;s hidden motives through the near-rupture of the Butler &quot;woman-order&quot; crisis, and then, at Monckton Milnes&#x27;s Fryston house party, finds his cultivated taste dwarfed by the genius of Algernon Swinburne.</div>
-  <div class="tags"><span class="tag">anglo-american-diplomacy</span><span class="tag">civil-war-era-britain</span><span class="tag">lord-palmerston</span><span class="tag">diplomatic-motive</span><span class="tag">self-restraint</span><span class="tag">monckton-milnes</span><span class="tag">algernon-swinburne</span><span class="tag">aesthetic-education</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-09-foes-or-friends.md">source on GitHub</a></div>
+    <div class="note-summary">In 1862 London, Henry Adams learns to survive a society that treats Lincoln and Seward as demons by masking every feeling among nominal friends as carefully as before enemies, watches his father read Lord Palmerston&#x27;s hidden motives through the near-rupture of the Butler &quot;woman-order&quot; crisis, and then, at Monckton Milnes&#x27;s Fryston house party, finds his cultivated taste dwarfed by the genius of Algernon Swinburne.</div>
     <div class="prose">
 <p>Serving as his father&#x27;s private secretary at the American Legation during the darkest year of Anglo-American Civil War tension, Henry Adams spends 1862 learning two overlapping lessons: how to keep a composed face in a London society that has turned Lincoln and Seward into demons and treats every Union setback as an occasion for gloating, and, when the diplomatic terror briefly lifts at year&#x27;s end, how small a private secretary&#x27;s cultivated taste can feel next to the overwhelming, uncategorizable genius of Algernon Swinburne, met at Monckton Milnes&#x27;s Yorkshire house party.</p>
 <h2 id="themes">Themes</h2>
@@ -49,16 +58,41 @@
 <p>The Butler crisis passage is the diplomatic climax: Minister Adams&#x27;s curt &quot;Palmerston wants a quarrel!&quot; sets up a confrontation over General Butler&#x27;s New Orleans order that the Legation narrowly survives, ending — mysteriously, even to the participants — with Palmerston himself backing down and behaving, against all expectation, &quot;like a well-bred gentleman who felt himself in the wrong.&quot;</p>
 <p>The Fryston passages mark the chapter&#x27;s turn: &quot;Then, at last, if never before, Adams acquired education&quot; as Swinburne&#x27;s talk astonishes even Milnes&#x27;s other seasoned guests, and the encounter culminates in Adams&#x27;s own verdict on his negligibility before genius — that he &quot;could no more interest Algernon Swinburne than he could interest Encke&#x27;s comet&quot; and had, in the end, &quot;nothing even to offer.&quot;</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>899</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-28-the-height-of-knowledge">The Height of Knowledge (1902)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-07-treason">Treason: An Education in Universal Ignorance (Washington, Winter 1860-61)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">anglo-american-diplomacy</span><span class="tag tag-lone" title="Only this note uses it">civil-war-era-britain</span><span class="tag tag-lone" title="Only this note uses it">lord-palmerston</span><span class="tag tag-lone" title="Only this note uses it">diplomatic-motive</span><span class="tag tag-lone" title="Only this note uses it">self-restraint</span><span class="tag tag-lone" title="Only this note uses it">monckton-milnes</span><span class="tag tag-lone" title="Only this note uses it">algernon-swinburne</span><a class="tag" href="/wiki/topics/aesthetic-education">aesthetic-education</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>From Artifact to Process — The Death of the Finished Work</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>From Artifact to Process — The Death of the Finished Work</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/from-artifact-to-process.md">source on GitHub</a></div>
-  <div class="note-summary">A structural shift across Sathe&#x27;s essays: culture is moving from valuing the finished artifact (the perfect book, the solo masterwork, the fixed text) toward valuing the ongoing process (the evolving argument, the collaborative project, the living feed). This shift is driven by LLMs, collaboration, and new reading practices.</div>
-  <div class="tags"><span class="tag">creativity</span><span class="tag">authorship</span><span class="tag">collaboration</span><span class="tag">process</span><span class="tag">artifact</span><span class="tag">books</span><span class="tag">rss</span><span class="tag">llm</span><span class="tag">post-print</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/from-artifact-to-process.md">source on GitHub</a></div>
+    <div class="note-summary">A structural shift across Sathe&#x27;s essays: culture is moving from valuing the finished artifact (the perfect book, the solo masterwork, the fixed text) toward valuing the ongoing process (the evolving argument, the collaborative project, the living feed). This shift is driven by LLMs, collaboration, and new reading practices.</div>
     <div class="prose">
 <h2 id="the-pattern">The Pattern</h2>
 <p>Three of the four essays from August–December 2025 converge on a single structural shift: the cultural unit of value is moving from the <strong>finished artifact</strong> to the <strong>ongoing process</strong>.</p>
@@ -49,7 +58,7 @@
 </table></div>
 <h2 id="evidence-from-each-essay">Evidence from Each Essay</h2>
 <h3 id="the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</h3>
-<p>Directly argues the shift: &quot;What will matter in the coming decades is not the finished artifact but the evolving line of thought carried forward by teams willing to take risks together.&quot; <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Print Culture and the Individual Author&quot;">Print culture</span> fixed texts and elevated the single author; the post-LLM era devalues both.</p>
+<p>Directly argues the shift: &quot;What will matter in the coming decades is not the finished artifact but the evolving line of thought carried forward by teams willing to take risks together.&quot; <a class="wikilink" href="/wiki/aneesh/concepts/print-culture-and-the-individual-author" title="Written [[Print Culture and the Individual Author]], resolved to print-culture-and-the-individual-author">Print culture</a> fixed texts and elevated the single author; the post-LLM era devalues both.</p>
 <h3 id="the-small-god-of-the-internet">The Small God of the Internet</h3>
 <p>RSS embodies process over artifact: the River of Posts is never finished; there is always tomorrow&#x27;s bundle. The god &quot;promises tomorrow will come with its own bundle.&quot; The miracle of RSS is not a completed archive but a daily rhythm — an <em>ongoing relationship</em> between publisher and reader. The archive is secondary to the stream.</p>
 <h3 id="books-are-dwellings">Books Are Dwellings</h3>
@@ -57,7 +66,7 @@
 <p>The book club amplifies this: discussion converts a finished artifact into an ongoing social process — &quot;doorways between rooms&quot; that keep opening.</p>
 <h2 id="the-llm-accelerant">The LLM Accelerant</h2>
 <p>LLMs make artifact production cheap. This doesn&#x27;t destroy the value of artifacts; it destroys the value of <em>labor as a proxy for artifact quality</em>. When anyone can produce a polished text, polish stops signaling effort. The new signal is <em>commitment over time</em> — the ongoing project, the team that keeps pushing, the argument that evolves in public.</p>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Authorship as Courage&quot;">Authorship as Courage</span>: commitment is the new scarce signal precisely because it is a process claim (I will keep defending this), not an artifact claim (I have finished this).</p>
+<p>See <a class="wikilink" href="/wiki/aneesh/concepts/authorship-as-courage" title="Written [[Authorship as Courage]], resolved to authorship-as-courage">Authorship as Courage</a>: commitment is the new scarce signal precisely because it is a process claim (I will keep defending this), not an artifact claim (I have finished this).</p>
 <h2 id="tensions">Tensions</h2>
 <ol>
 <li><p><strong>Books as dwellings vs. books as finished artifacts</strong>: If books are valuable as ongoing dwellings, are <em>re-readable</em> books more valuable than page-turners? Does the dwelling model privilege certain genres (Proust, philosophy) over others (plot-driven fiction)?</p></li>
@@ -72,32 +81,58 @@
 </ol>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Tortured Artist Is So Yesterday&quot;">The Tortured Artist Is So Yesterday</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Books Are Dwellings&quot;">Books Are Dwellings</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Small God of the Internet&quot;">The Small God of the Internet</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Authorship as Courage&quot;">Authorship as Courage</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Cloister Web&quot;">The Cloister Web</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Print Culture and the Individual Author&quot;">Print Culture and the Individual Author</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;RSS as Protocol Theology&quot;">RSS as Protocol Theology</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Collaborative Creativity&quot;">Collaborative Creativity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling vs. Scrolling — Two Modes of Inhabiting Text&quot;">Dwelling vs. Scrolling — Two Modes of Inhabiting Text</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday" title="Written [[The Tortured Artist Is So Yesterday]], resolved to the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/books-are-dwellings" title="Written [[Books Are Dwellings]], resolved to books-are-dwellings">Books Are Dwellings</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-small-god-of-the-internet" title="Written [[The Small God of the Internet]], resolved to the-small-god-of-the-internet">The Small God of the Internet</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/authorship-as-courage" title="Written [[Authorship as Courage]], resolved to authorship-as-courage">Authorship as Courage</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-cloister-web" title="Written [[The Cloister Web]], resolved to the-cloister-web">The Cloister Web</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/print-culture-and-the-individual-author" title="Written [[Print Culture and the Individual Author]], resolved to print-culture-and-the-individual-author">Print Culture and the Individual Author</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/rss-as-protocol-theology" title="Written [[RSS as Protocol Theology]], resolved to rss-as-protocol-theology">RSS as Protocol Theology</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/collaborative-creativity" title="Written [[Collaborative Creativity]], resolved to collaborative-creativity">Collaborative Creativity</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/dwelling-vs-scrolling-two-modes-of-inhabiting-text" title="No note is called &quot;Dwelling vs. Scrolling — Two Modes of Inhabiting Text&quot; yet — see who is asking for it">Dwelling vs. Scrolling — Two Modes of Inhabiting Text</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">7</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>641</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/books-are-dwellings">Books Are Dwellings</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/entropy-and-assemblage-maintenance">Entropy and Assemblage Maintenance</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/authorship">authorship</a><a class="tag" href="/wiki/topics/collaboration">collaboration</a><a class="tag" href="/wiki/topics/process">process</a><span class="tag tag-lone" title="Only this note uses it">artifact</span><a class="tag" href="/wiki/topics/books">books</a><a class="tag" href="/wiki/topics/rss">rss</a><a class="tag" href="/wiki/topics/llm">llm</a><a class="tag" href="/wiki/topics/post-print">post-print</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

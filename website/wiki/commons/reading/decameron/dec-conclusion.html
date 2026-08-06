@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/decameron/">The Decameron</a> <b>/</b> <span>DEC 12 — Conclusion of the Author</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>DEC 12 — Conclusion of the Author</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/decameron/">The Decameron</a> · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/decameron/dec-conclusion.md">source on GitHub</a></div>
-  <div class="note-summary">Boccaccio&#x27;s closing self-defence refutes anticipated charges of licentiousness, partiality toward women, uneven quality, excessive length, and satirising friars, grounding each rebuttal in the reader&#x27;s own disposition as the decisive variable.</div>
-  <div class="tags"><span class="tag">decameron</span><span class="tag">boccaccio</span><span class="tag">rhetoric</span><span class="tag">literary-defence</span><span class="tag">reader-response</span><span class="tag">censorship</span><span class="tag">authorial-voice</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a>, <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>, <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a>, <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/decameron/">The Decameron</a> · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/decameron/dec-conclusion.md">source on GitHub</a></div>
+    <div class="note-summary">Boccaccio&#x27;s closing self-defence refutes anticipated charges of licentiousness, partiality toward women, uneven quality, excessive length, and satirising friars, grounding each rebuttal in the reader&#x27;s own disposition as the decisive variable.</div>
     <div class="prose">
 <p>The Conclusion follows immediately after the close of the Tenth Day and the brigata&#x27;s dispersal. There is no narrative frame — the storytelling society dissolves off-page — and Boccaccio steps forward as author-in-his-own-person to address &quot;most noble damsels&quot; directly. The unit is an extended rhetorical apologia, anticipating five classes of objection and disposing of each in turn before a brief envoi.</p>
 <h2 id="themes">Themes</h2>
@@ -67,16 +75,46 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a> — the legibility impulse appears here at the scale of the book-as-object rather than the state: a precursor of the MM&#x27;s drive to make contents readable and classifiable.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>974</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-proem">DEC 01 — Proem &amp; Author&#x27;s Introduction</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-01">DEC 02 — Day the First</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-03">DEC 04 — Day the Third</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-06">DEC 07 — Day the Sixth</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-07">DEC 08 — Day the Seventh</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-10">DEC 11 — Day the Tenth</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/decameron">decameron</a><a class="tag" href="/wiki/topics/boccaccio">boccaccio</a><a class="tag" href="/wiki/topics/rhetoric">rhetoric</a><span class="tag tag-lone" title="Only this note uses it">literary-defence</span><span class="tag tag-lone" title="Only this note uses it">reader-response</span><span class="tag tag-lone" title="Only this note uses it">censorship</span><span class="tag tag-lone" title="Only this note uses it">authorial-voice</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

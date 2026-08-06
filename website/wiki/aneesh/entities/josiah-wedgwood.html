@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,21 +26,30 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Josiah Wedgwood</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Josiah Wedgwood</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/josiah-wedgwood.md">source on GitHub</a></div>
-  <div class="note-summary">Josiah Wedgwood (1730–1795), English potter who industrialized ceramics, pioneered modern marketing and branding, advanced industrial legibility, and contributed to both the Modernity Machine and (through the Lunar Society) the Divergence Machine.</div>
-  <div class="tags"><span class="tag">josiah-wedgwood</span><span class="tag">modernity-machine</span><span class="tag">divergence-machine</span><span class="tag">industrial-revolution</span><span class="tag">branding</span><span class="tag">legibility</span><span class="tag">lunar-society</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/josiah-wedgwood.md">source on GitHub</a></div>
+    <div class="note-summary">Josiah Wedgwood (1730–1795), English potter who industrialized ceramics, pioneered modern marketing and branding, advanced industrial legibility, and contributed to both the Modernity Machine and (through the Lunar Society) the Divergence Machine.</div>
     <div class="prose">
 <h2 id="biographical-sketch">Biographical Sketch</h2>
 <p><strong>Born</strong>: 1730, Burslem, Staffordshire, England<br>
 <strong>Died</strong>: 1795</p>
-<p>English potter who transformed a craft into an industry. Known as &quot;Potter to Her Majesty&quot; (Queen Charlotte). Grandfather of Charles Darwin. Member of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lunar Society&quot;">Lunar Society</span> of Birmingham.</p>
+<p>English potter who transformed a craft into an industry. Known as &quot;Potter to Her Majesty&quot; (Queen Charlotte). Grandfather of Charles Darwin. Member of the <a class="wikilink" href="/wiki/aneesh/entities/lunar-society" title="Written [[Lunar Society]], resolved to lunar-society">Lunar Society</a> of Birmingham.</p>
 <h2 id="role-in-the-modernity-machine">Role in the Modernity Machine</h2>
-<p>Per <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ivo Velitchkov&quot;">Ivo Velitchkov</span>&#x27;s &quot;Three Engineers of Modernity,&quot; Wedgwood was a key engineer of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span>, transforming multiple class relationships:</p>
+<p>Per <a class="wikilink" href="/wiki/aneesh/entities/ivo-velitchkov" title="Written [[Ivo Velitchkov]], resolved to ivo-velitchkov">Ivo Velitchkov</a>&#x27;s &quot;Three Engineers of Modernity,&quot; Wedgwood was a key engineer of the <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a>, transforming multiple class relationships:</p>
 <h3 id="monarch-technocracy-oligarchy-technocracy-cascade">Monarch-Technocracy → Oligarchy-Technocracy Cascade</h3>
 <p>By securing Queen Charlotte&#x27;s patronage (&quot;Queen&#x27;s ware&quot;) and Catherine the Great&#x27;s patronage (944-piece dinner service), Wedgwood converted royal taste into a market signal:</p>
 <ul>
@@ -73,27 +82,68 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility as Machine Core&quot;">Legibility as Machine Core</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Four Class Relations of Modernity&quot;">Four Class Relations of Modernity</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lunar Society&quot;">Lunar Society</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jakob Fugger&quot;">Jakob Fugger</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Voltaire&quot;">Voltaire</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ivo Velitchkov&quot;">Ivo Velitchkov</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core" title="Written [[Legibility as Machine Core]], resolved to legibility-as-machine-core">Legibility as Machine Core</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/four-class-relations-of-modernity" title="Written [[Four Class Relations of Modernity]], resolved to four-class-relations-of-modernity">Four Class Relations of Modernity</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/lunar-society" title="Written [[Lunar Society]], resolved to lunar-society">Lunar Society</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jakob-fugger" title="Written [[Jakob Fugger]], resolved to jakob-fugger">Jakob Fugger</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/voltaire" title="Written [[Voltaire]], resolved to voltaire">Voltaire</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/ivo-velitchkov" title="Written [[Ivo Velitchkov]], resolved to ivo-velitchkov">Ivo Velitchkov</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch05b-science-enlightenment-and-technology-culture">How Science Became Machines: Invention, Factory Discipline, and the Enlightenment Case for Progress</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">RIT 16 — The Ups and Downs of International Competition (Ch. 14)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>13</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>399</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/voltaire">Voltaire</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-class-relations-of-modernity">Four Class Relations of Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jakob-fugger">Jakob Fugger</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ivo-velitchkov">Ivo Velitchkov</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-16-ups-and-downs-of-international-competition">RIT 16 — The Ups and Downs of International Competition (Ch. 14)</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>5 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/lunar-society">Lunar Society of Birmingham</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch05b-science-enlightenment-and-technology-culture">How Science Became Machines: Invention, Factory Discipline, and the Enlightenment Case for Progress</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/voltaire-the-entrepreneur-velitchkov">Voltaire, the Entrepreneur</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/entrepreneur-as-machine-engineer">The Entrepreneur as Machine Engineer</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/three-engineers-of-modernity-velitchkov">Three Engineers of Modernity</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/entities/voltaire">Voltaire</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/entities/jakob-fugger">Jakob Fugger</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/four-class-relations-of-modernity">Four Class Relations of Modernity</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/ivo-velitchkov">Ivo Velitchkov</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/josiah-wedgwood">josiah-wedgwood</a><a class="tag" href="/wiki/topics/modernity-machine">modernity-machine</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/industrial-revolution">industrial-revolution</a><span class="tag tag-lone" title="Only this note uses it">branding</span><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/lunar-society">lunar-society</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

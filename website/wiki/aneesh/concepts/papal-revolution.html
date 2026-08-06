@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Papal Revolution</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Papal Revolution</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/papal-revolution.md">source on GitHub</a></div>
-  <div class="note-summary">Harold Berman&#x27;s thesis that the Investiture Controversy (1075-1122) was the generative event of Western institutional complexity, producing six coexisting legal systems whose competition created the Western belief in the supremacy of law.</div>
-  <div class="tags"><span class="tag">berman</span><span class="tag">investiture-controversy</span><span class="tag">legal-pluralism</span><span class="tag">medieval</span><span class="tag">world-machines</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/papal-revolution.md">source on GitHub</a></div>
+    <div class="note-summary">Harold Berman&#x27;s thesis that the Investiture Controversy (1075-1122) was the generative event of Western institutional complexity, producing six coexisting legal systems whose competition created the Western belief in the supremacy of law.</div>
     <div class="prose">
 <p>Harold Berman&#x27;s <em>Law and Revolution</em> (1983) argues that the Investiture Controversy — the struggle between Pope Gregory VII and Emperor Henry IV over the right to appoint bishops (1075–1122) — was the single most generative event in Western institutional history. The claim is not merely that it was important but that it created the structural preconditions for everything that followed: the Western legal tradition, the separation of church and state, the concept of corporate personality, and ultimately the institutional infrastructure of modernity.</p>
 <h2 id="the-six-legal-systems">The Six Legal Systems</h2>
@@ -57,25 +66,56 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/axial-age">axial-age</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">11</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23">Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33">The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-19-22">The Eagle of Jupiter and the Ladder of Saturn: Justice, Pagan Salvation, and Institutional Decay</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-06-10">The Eagle, the Cross, and the Sun: Paradiso VI (cont.)–X</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33">The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-15-19">Wrath&#x27;s Smoke, Sloth&#x27;s Haste, and the Root of All Sin: Purgatorio XV–XIX</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>345</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-18-23">Malebolge: From Panderers to Hypocrites (Inferno XVIII–XXIII)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33">The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-19-22">The Eagle of Jupiter and the Ladder of Saturn: Justice, Pagan Salvation, and Institutional Decay</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-15-19">Wrath&#x27;s Smoke, Sloth&#x27;s Haste, and the Root of All Sin: Purgatorio XV–XIX</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-06-10">The Eagle, the Cross, and the Sun: Paradiso VI (cont.)–X</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33">The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/untimely">Untimely</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">berman</span><span class="tag tag-lone" title="Only this note uses it">investiture-controversy</span><span class="tag tag-lone" title="Only this note uses it">legal-pluralism</span><a class="tag" href="/wiki/topics/medieval">medieval</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

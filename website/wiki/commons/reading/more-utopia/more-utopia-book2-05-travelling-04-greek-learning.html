@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/more-utopia/">Utopia</a> <b>/</b> <span>Utopian Vigor, Greek Learning, and the Reinvention of Printing</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Utopian Vigor, Greek Learning, and the Reinvention of Printing</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book2-05-travelling-04-greek-learning.md">source on GitHub</a></div>
-  <div class="note-summary">Utopians pair bodily vigor and relentless land-improvement with an explosive, self-motivated mastery of Greek learning, then — after being shown only a crude account of Aldine printing — independently reinvent papermaking and the press well enough to multiply their small library into thousands of copies, while insisting on managing their own foreign trade to preserve navigational skill.</div>
-  <div class="tags"><span class="tag">utopia</span><span class="tag">thomas-more</span><span class="tag">greek-learning</span><span class="tag">printing-press</span><span class="tag">natural-philosophy</span><span class="tag">agricultural-improvement</span><span class="tag">self-sufficiency</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/old-mother-press">old-mother-press</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-arrival-of-composable-knowledge">the-arrival-of-composable-knowledge</a>, <a class="wikilink" href="/wiki/aneesh/concepts/convivial-tools">convivial-tools</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book2-05-travelling-04-greek-learning.md">source on GitHub</a></div>
+    <div class="note-summary">Utopians pair bodily vigor and relentless land-improvement with an explosive, self-motivated mastery of Greek learning, then — after being shown only a crude account of Aldine printing — independently reinvent papermaking and the press well enough to multiply their small library into thousands of copies, while insisting on managing their own foreign trade to preserve navigational skill.</div>
     <div class="prose">
 <p>Continuing Raphael Hythloday&#x27;s account of Utopian custom, this unit moves from a guarded aside on Utopian religious opinion into a portrait of a physically vigorous, tirelessly industrious people who reshape their mediocre land by sheer effort, then narrates their startlingly fast (three-year) mastery of Greek, the library of classical authors left behind for them, a digression on why they revere natural philosophy and medicine as forms of devotion to &quot;this great machine of the universe,&quot; and finally their independent reinvention of papermaking and printing from only a crude description — closing on their preference to handle their own foreign trade rather than cede it to strangers.</p>
 <h2 id="themes">Themes</h2>
@@ -51,15 +59,32 @@
 <li>The closing sentence on trade quietly reframes commerce as a matter of sovereignty rather than profit: gold and iron hold no appeal, and exporting is kept in Utopian hands specifically so navigational skill is not allowed to atrophy.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>708</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/old-mother-press">old-mother-press</a></li><li><a class="wikilink" href="/wiki/aneesh/summaries/the-arrival-of-composable-knowledge">the-arrival-of-composable-knowledge</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/convivial-tools">convivial-tools</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/utopia">utopia</a><a class="tag" href="/wiki/topics/thomas-more">thomas-more</a><span class="tag tag-lone" title="Only this note uses it">greek-learning</span><a class="tag" href="/wiki/topics/printing-press">printing-press</a><a class="tag" href="/wiki/topics/natural-philosophy">natural-philosophy</a><span class="tag tag-lone" title="Only this note uses it">agricultural-improvement</span><span class="tag tag-lone" title="Only this note uses it">self-sufficiency</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

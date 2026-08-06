@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>Chapter XXIII — Silence (1894–1898)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Chapter XXIII — Silence (1894–1898)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-23-silence.md">source on GitHub</a></div>
-  <div class="note-summary">Between the Panic of 1893 and the sinking of the Maine in 1898, Adams abandons every systematic theory of &quot;education&quot; -- Clarence King&#x27;s ruined scientific-education scheme, statistics, the religious press -- and settles instead into restless world travel and a deliberate philosophy of silence, broken only by a chance family trip to Normandy that quietly relaunches his medieval scholarship.</div>
-  <div class="tags"><span class="tag">education-failure</span><span class="tag">clarence-king</span><span class="tag">statistics-and-legibility</span><span class="tag">medieval-normandy</span><span class="tag">silence</span><span class="tag">gilded-age-politics</span><span class="tag">spanish-american-war</span><span class="tag">henry-adams</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-23-silence.md">source on GitHub</a></div>
+    <div class="note-summary">Between the Panic of 1893 and the sinking of the Maine in 1898, Adams abandons every systematic theory of &quot;education&quot; -- Clarence King&#x27;s ruined scientific-education scheme, statistics, the religious press -- and settles instead into restless world travel and a deliberate philosophy of silence, broken only by a chance family trip to Normandy that quietly relaunches his medieval scholarship.</div>
     <div class="prose">
 <p>Between the Panic of 1893 and the sinking of the Maine in February 1898, Adams gives up looking for a system that could certify what &quot;education&quot; is for: he watches Clarence King&#x27;s scientific-education theory collapse into bankruptcy, chases arithmetic and the religious press for firmer ground and finds none, is jolted out of his university habits of mind by a family trip to Normandy, watches his Washington circle scatter after McKinley&#x27;s election, and settles -- half by philosophy, half by exhaustion -- into a practiced silence, punctuated by restless circuits of the globe.</p>
 <h2 id="themes">Themes</h2>
@@ -55,16 +63,46 @@
 <li><strong>The Maine at Karnak</strong> (c6): the chapter&#x27;s close, where personal philosophy (silence, deep time) meets the outbreak of a new geopolitical era.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>814</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-19-chaos">Chaos (1870)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-15-darwinism">Darwinism, Deep Time, and the Failure of Uniformity</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">education-failure</span><a class="tag" href="/wiki/topics/clarence-king">clarence-king</a><span class="tag tag-lone" title="Only this note uses it">statistics-and-legibility</span><span class="tag tag-lone" title="Only this note uses it">medieval-normandy</span><span class="tag tag-lone" title="Only this note uses it">silence</span><a class="tag" href="/wiki/topics/gilded-age-politics">gilded-age-politics</a><a class="tag" href="/wiki/topics/spanish-american-war">spanish-american-war</a><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

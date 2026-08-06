@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>Darwinism, Deep Time, and the Failure of Uniformity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Darwinism, Deep Time, and the Failure of Uniformity</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-15-darwinism.md">source on GitHub</a></div>
-  <div class="note-summary">In London and on Shropshire&#x27;s Wenlock Edge in 1867-1868, Henry Adams takes up Darwinism and geology as intellectual sport under Sir Charles Lyell&#x27;s tutelage, only to conclude that the fossil record proves mere change rather than uniform evolution, and that his own Darwinism is psychological convenience rather than conviction.</div>
-  <div class="tags"><span class="tag">darwinism</span><span class="tag">natural-selection</span><span class="tag">geology</span><span class="tag">charles-lyell</span><span class="tag">uniformitarianism</span><span class="tag">deep-time</span><span class="tag">unity-and-multiplicity</span><span class="tag">henry-adams</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-15-darwinism.md">source on GitHub</a></div>
+    <div class="note-summary">In London and on Shropshire&#x27;s Wenlock Edge in 1867-1868, Henry Adams takes up Darwinism and geology as intellectual sport under Sir Charles Lyell&#x27;s tutelage, only to conclude that the fossil record proves mere change rather than uniform evolution, and that his own Darwinism is psychological convenience rather than conviction.</div>
     <div class="prose">
 <p>In London between 1867 and 1868, with his diplomatic career offering no further outlet, Henry Adams takes up Darwinism as his next intellectual amusement, befriends the geologist Sir Charles Lyell, and even ghostwrites American notices of Lyell&#x27;s <em>Principles of Geology</em>. Testing Natural Selection against real fossils on Shropshire&#x27;s Wenlock Edge — tracing his own ancestry back through Pteraspis and Limulus to the Cambrian — he finds only proof of change, never proof of selection or of uniform, ascending evolution. The chapter ends with a comic detour into currency theory for the <em>North American Review</em>, a return to Rome and London, and Adams&#x27;s ironic verdict that seven years of intense, fashionable self-education left him exactly where he started.</p>
 <h2 id="themes">Themes</h2>
@@ -54,16 +63,46 @@
 <li>The closing return to London (c6) delivers the chapter&#x27;s punchline: for all the science and society absorbed, Adams judges himself no better educated in 1868 than when he landed in 1858.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>750</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-19-chaos">Chaos (1870)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-23-silence">Chapter XXIII — Silence (1894–1898)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Contradicts</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/summaries/cosmic-evolution-chaisson">cosmic-evolution-chaisson</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/darwinism">darwinism</a><span class="tag tag-lone" title="Only this note uses it">natural-selection</span><a class="tag" href="/wiki/topics/geology">geology</a><span class="tag tag-lone" title="Only this note uses it">charles-lyell</span><span class="tag tag-lone" title="Only this note uses it">uniformitarianism</span><a class="tag" href="/wiki/topics/deep-time">deep-time</a><a class="tag" href="/wiki/topics/unity-and-multiplicity">unity-and-multiplicity</a><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

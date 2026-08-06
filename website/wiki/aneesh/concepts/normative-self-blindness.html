@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Normative Self-Blindness</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Normative Self-Blindness</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/normative-self-blindness.md">source on GitHub</a></div>
-  <div class="note-summary">Agnes Callard&#x27;s term for the built-in cognitive refusal to examine the beliefs on which one currently stands — the mechanism that makes pre-answered questions invisible and Socratic inquiry threatening.</div>
-  <div class="tags"><span class="tag">epistemology</span><span class="tag">Agnes-Callard</span><span class="tag">cognition</span><span class="tag">self-knowledge</span><span class="tag">inquiry</span><span class="tag">insta-places</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/normative-self-blindness.md">source on GitHub</a></div>
+    <div class="note-summary">Agnes Callard&#x27;s term for the built-in cognitive refusal to examine the beliefs on which one currently stands — the mechanism that makes pre-answered questions invisible and Socratic inquiry threatening.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>Coined by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span> in <em>Open Socrates</em>.</p>
+<p>Coined by <a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a> in <em>Open Socrates</em>.</p>
 <blockquote><p>&quot;Normative self-blindness is a trick to gloss over details and keep moving.&quot;</p></blockquote>
 <p>The built-in refusal to saw off the branch we stand on — the cognitive mechanism that treats current beliefs as unexaminable foundations, because examining them would undermine the very stance from which examination proceeds.</p>
 <h2 id="mechanism">Mechanism</h2>
@@ -50,30 +59,73 @@
 <li>That a currently operational belief-place might be false <em>right now</em>.</li>
 </ul>
 <p>This is not irrationality but functional necessity: acting requires standing somewhere. Insta-places must be treated as solid even when they are semi-solid smoke.</p>
-<h2 id="relation-to-insta-places">Relation to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Insta-Places&quot;">Insta-Places</span></h2>
+<h2 id="relation-to-insta-places">Relation to <a class="wikilink" href="/wiki/aneesh/concepts/insta-places" title="Written [[Insta-Places]], resolved to insta-places">Insta-Places</a></h2>
 <p>Insta-places are the cognitive content; normative self-blindness is the <em>protection</em> mechanism that prevents them from being revised mid-operation. Together they explain why pre-answered questions remain pre-answered.</p>
 <h2 id="why-it-matters-for-socratic-inquiry">Why It Matters for Socratic Inquiry</h2>
-<p>Socratic thinking begins by admitting that everyone&#x27;s guiding landmarks may be made of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Insta-Places&quot;">semi-solid smoke</span>. This is psychologically threatening precisely because normative self-blindness is not a defect to be corrected but a feature of cognition.</p>
+<p>Socratic thinking begins by admitting that everyone&#x27;s guiding landmarks may be made of <a class="wikilink" href="/wiki/aneesh/concepts/insta-places" title="Written [[Insta-Places]], resolved to insta-places">semi-solid smoke</a>. This is psychologically threatening precisely because normative self-blindness is not a defect to be corrected but a feature of cognition.</p>
 <p>The practical implication: Socratic dialogue must be structured to make belief-revision feel like <em>advancement</em> (finding a better place) rather than <em>loss</em> (having a place taken away).</p>
 <h2 id="connection-to-the-turing-test">Connection to the Turing Test</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alan Turing&quot;">Alan Turing</span>&#x27;s move — converting &quot;What is thinking?&quot; into &quot;Can we detect thought?&quot; — can be read as normative self-blindness at the level of scientific inquiry: the original question is pre-answered (we already assume we know what &quot;detecting&quot; thinking would mean) and converted into a tractable problem.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/alan-turing" title="Written [[Alan Turing]], resolved to alan-turing">Alan Turing</a>&#x27;s move — converting &quot;What is thinking?&quot; into &quot;Can we detect thought?&quot; — can be read as normative self-blindness at the level of scientific inquiry: the original question is pre-answered (we already assume we know what &quot;detecting&quot; thinking would mean) and converted into a tractable problem.</p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span> — original coinage</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Insta-Places&quot;">Insta-Places</span> — the protected cognitive content</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — requires overcoming normative self-blindness</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Problems vs. Questions&quot;">Problems vs. Questions</span> — problems are where self-blindness succeeds; questions are where it fails</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — the landscape in which self-blindness operates</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Mind as Semi-Solid Smoke&quot;">The Mind as Semi-Solid Smoke</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chatbots, Bats &amp; Broken Oracles&quot;">Chatbots, Bats &amp; Broken Oracles</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a> — original coinage</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/insta-places" title="Written [[Insta-Places]], resolved to insta-places">Insta-Places</a> — the protected cognitive content</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — requires overcoming normative self-blindness</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/problems-vs-questions" title="Written [[Problems vs. Questions]], resolved to problems-vs-questions">Problems vs. Questions</a> — problems are where self-blindness succeeds; questions are where it fails</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — the landscape in which self-blindness operates</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke" title="Written [[The Mind as Semi-Solid Smoke]], resolved to the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a>, <a class="wikilink-wanted" href="/wiki/wanted/chatbots-bats-and-broken-oracles" title="No note is called &quot;Chatbots, Bats &amp; Broken Oracles&quot; yet — see who is asking for it">Chatbots, Bats &amp; Broken Oracles</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>349</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/thinking-with-places">Thinking with Places</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/identity-as-place">Identity as Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/socratic-method-and-ai">Socratic Method and AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/chatbots-bats-broken-oracles">Chatbots, Bats &amp; Broken Oracles</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/llms-as-epistemic-tools">LLMs as Epistemic Tools</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/problems-vs-questions">Problems vs. Questions</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/insta-places">Insta-Places</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/agnes-callard">Agnes-Callard</a><a class="tag" href="/wiki/topics/cognition">cognition</a><a class="tag" href="/wiki/topics/self-knowledge">self-knowledge</a><a class="tag" href="/wiki/topics/inquiry">inquiry</a><a class="tag" href="/wiki/topics/insta-places">insta-places</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

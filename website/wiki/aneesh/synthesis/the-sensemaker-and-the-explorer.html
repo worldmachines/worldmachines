@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The Sensemaker and the Explorer</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Sensemaker and the Explorer</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-sensemaker-and-the-explorer.md">source on GitHub</a></div>
-  <div class="note-summary">Klein&#x27;s expert sensemaker and the wiki&#x27;s explorer figure are the same person: both navigate illegible terrain by committing to provisional structures, building from fragments, and treating anomalies as signal — while the tourist and the novice both consume pre-made legibility.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">sensemaking</span><span class="tag">explorer</span><span class="tag">tourist</span><span class="tag">expertise</span><span class="tag">frame-construction</span><span class="tag">navigation</span><span class="tag">legibility</span><span class="tag">agency</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-sensemaker-and-the-explorer.md">source on GitHub</a></div>
+    <div class="note-summary">Klein&#x27;s expert sensemaker and the wiki&#x27;s explorer figure are the same person: both navigate illegible terrain by committing to provisional structures, building from fragments, and treating anomalies as signal — while the tourist and the novice both consume pre-made legibility.</div>
     <div class="prose">
 <h2 id="the-identification">The Identification</h2>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> describes expert cognition. <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Explorer and the Tourist&quot;">The Explorer and the Tourist</span> describes an epistemic posture. They are describing the same figure.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> describes expert cognition. <a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist" title="Written [[The Explorer and the Tourist]], resolved to the-explorer-and-the-tourist">The Explorer and the Tourist</a> describes an epistemic posture. They are describing the same figure.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Explorer (wiki figure)</th><th>Expert Sensemaker (Klein)</th></tr></thead>
 <tbody>
@@ -80,40 +89,53 @@
 <p>The explorer&#x27;s commitment to building (shelters, thickets, studioli) is not conservative or limiting — it is the prerequisite for genuine discovery. You cannot detect the anomaly that triggers reframing if you never committed to a frame that generated testable expectations.</p>
 <p>This resolves a tension in the wiki: the explorer seems to value both openness (breadth, serendipity, play) and commitment (building, dwelling, tending). Klein shows these are not in tension — commitment <em>enables</em> openness by generating the specific expectations whose violation constitutes discovery.</p>
 <h2 id="chins-field-reports-only-as-explorer-discipline">Chin&#x27;s &quot;Field Reports Only&quot; as Explorer Discipline</h2>
-<p>Cedric Chin&#x27;s practical method in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How to Make Sense of AI&quot;">How to Make Sense of AI</span> — ignore all opinion and analysis, consume only detailed field reports of use — is the explorer&#x27;s information discipline translated to the AI era.</p>
+<p>Cedric Chin&#x27;s practical method in <a class="wikilink" href="/wiki/aneesh/summaries/how-to-make-sense-of-ai" title="Written [[How to Make Sense of AI]], resolved to how-to-make-sense-of-ai">How to Make Sense of AI</a> — ignore all opinion and analysis, consume only detailed field reports of use — is the explorer&#x27;s information discipline translated to the AI era.</p>
 <p>The tourist consumes opinions, predictions, and summaries (pre-made legibility). The explorer consumes field reports (raw terrain data) because only raw observations can serve as anchors for frame construction. An opinion is someone else&#x27;s frame; a field report is data you can anchor your <em>own</em> frame on.</p>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Four Questions of Uncertainty&quot;">Four Questions of Uncertainty</span> (Vaughn Tan) are the explorer&#x27;s compass: What new outcomes are possible? What actions can I take? What are the values of these outcomes to me? What causal relationships drive them? These questions are frame-construction prompts — they force the reader to build a frame rather than consume one.</p>
+<p>The <a class="wikilink" href="/wiki/aneesh/concepts/four-questions-of-uncertainty" title="Written [[Four Questions of Uncertainty]], resolved to four-questions-of-uncertainty">Four Questions of Uncertainty</a> (Vaughn Tan) are the explorer&#x27;s compass: What new outcomes are possible? What actions can I take? What are the values of these outcomes to me? What causal relationships drive them? These questions are frame-construction prompts — they force the reader to build a frame rather than consume one.</p>
 <h2 id="the-ai-complication-sharpened">The AI Complication, Sharpened</h2>
 <p>The existing explorer-tourist page notes that LLMs can be either explorer tools or tourist infrastructure. Klein&#x27;s framework sharpens this:</p>
 <ul>
 <li><strong>LLM as frame-provider</strong>: the tourist use — asking the LLM for a summary, an analysis, a recommendation. The user receives a pre-constructed frame. They cannot detect anomalies within it because the frame is not theirs.</li>
 <li><strong>LLM as anchor-finder</strong>: the explorer use — asking the LLM to surface specific data points, field reports, contradictions, or anomalies. The user constructs their own frame from the anchors the LLM helps locate.</li>
 </ul>
-<p>The difference is not in the tool but in the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking Forms&quot;">sensemaking form</span>: elaborating your own frame vs. consuming someone else&#x27;s.</p>
+<p>The difference is not in the tool but in the <a class="wikilink" href="/wiki/aneesh/concepts/sensemaking-forms" title="Written [[Sensemaking Forms]], resolved to sensemaking-forms">sensemaking form</a>: elaborating your own frame vs. consuming someone else&#x27;s.</p>
 <h2 id="essay-seed">Essay Seed</h2>
 <p><strong>&quot;The Expert Explorer: On Navigation, Commitment, and the Cognitive Science of Not Keeping an Open Mind&quot;</strong></p>
 <p>Thesis: the counter-intuitive finding from naturalistic decision-making research — that experts who commit early to frames outperform those who &quot;keep an open mind&quot; — is the same insight the essays have been circling under the figure of the explorer. The explorer succeeds not through openness but through committed place-making that generates the specific expectations whose violation drives learning. The essay draws the practical implications for navigating the current AI transition.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Explorer and the Tourist&quot;">The Explorer and the Tourist</span> — the recurring figure this enriches</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — Klein&#x27;s framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How to Make Sense of AI&quot;">How to Make Sense of AI</span> — Chin&#x27;s explorer discipline for AI</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;How Experts Sensemake&quot;">How Experts Sensemake</span> — expert-novice differences as explorer-tourist differences</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking and Frame Fixation in Technological Disruption&quot;">Sensemaking and Frame Fixation in Technological Disruption</span> — when the expert explorer gets stuck</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Four Questions of Uncertainty&quot;">Four Questions of Uncertainty</span> — the explorer&#x27;s compass</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span> — building as prerequisite for exploration</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Play as Navigational Instrument&quot;">Play as Navigational Instrument</span> — play as the explorer&#x27;s mode of frame-seeking</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Spatial Epistemology — The Master Thread&quot;">Spatial Epistemology — The Master Thread</span> — the master thread</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames as Places, Sensemaking as Place-Making&quot;">Frames as Places, Sensemaking as Place-Making</span> — companion synthesis page</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist" title="Written [[The Explorer and the Tourist]], resolved to the-explorer-and-the-tourist">The Explorer and the Tourist</a> — the recurring figure this enriches</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — Klein&#x27;s framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-to-make-sense-of-ai" title="Written [[How to Make Sense of AI]], resolved to how-to-make-sense-of-ai">How to Make Sense of AI</a> — Chin&#x27;s explorer discipline for AI</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/how-experts-sensemake" title="Written [[How Experts Sensemake]], resolved to how-experts-sensemake">How Experts Sensemake</a> — expert-novice differences as explorer-tourist differences</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/sensemaking-and-frame-fixation-in-technological-disruption" title="Written [[Sensemaking and Frame Fixation in Technological Disruption]], resolved to sensemaking-and-frame-fixation-in-technological-disruption">Sensemaking and Frame Fixation in Technological Disruption</a> — when the expert explorer gets stuck</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/four-questions-of-uncertainty" title="Written [[Four Questions of Uncertainty]], resolved to four-questions-of-uncertainty">Four Questions of Uncertainty</a> — the explorer&#x27;s compass</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> — building as prerequisite for exploration</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/play-as-navigational-instrument" title="Written [[Play as Navigational Instrument]], resolved to play-as-navigational-instrument">Play as Navigational Instrument</a> — play as the explorer&#x27;s mode of frame-seeking</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread" title="Written [[Spatial Epistemology — The Master Thread]], resolved to spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a> — the master thread</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making" title="Written [[Frames as Places, Sensemaking as Place-Making]], resolved to frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a> — companion synthesis page</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>990</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/explorer">explorer</a><a class="tag" href="/wiki/topics/tourist">tourist</a><a class="tag" href="/wiki/topics/expertise">expertise</a><span class="tag tag-lone" title="Only this note uses it">frame-construction</span><a class="tag" href="/wiki/topics/navigation">navigation</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/agency">agency</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

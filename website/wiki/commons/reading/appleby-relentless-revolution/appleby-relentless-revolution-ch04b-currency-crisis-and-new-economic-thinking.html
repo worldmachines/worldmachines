@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> <b>/</b> <span>The Recoinage Crisis and the Making of Economic Thought in England and France</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Recoinage Crisis and the Making of Economic Thought in England and France</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04b-currency-crisis-and-new-economic-thinking.md">source on GitHub</a></div>
-  <div class="note-summary">England&#x27;s 1690s recoinage crisis pitted John Locke&#x27;s mistaken intrinsic-value theory of money against practical critics who saw legal tender as a social convention, and the deflationary aftermath, the founding of the Bank of England, and France&#x27;s contrasting Mississippi-Bubble and physiocratic experiments together illustrate Appleby&#x27;s larger claim that capitalism took root in England through trust and decentralized trial-and-error rather than top-down design or historical inevitability.</div>
-  <div class="tags"><span class="tag">recoinage-crisis</span><span class="tag">monetary-theory</span><span class="tag">john-locke</span><span class="tag">bank-of-england</span><span class="tag">mississippi-bubble</span><span class="tag">physiocracy</span><span class="tag">trust-and-commerce</span><span class="tag">capitalism-historiography</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a>, <a class="wikilink" href="/wiki/aneesh/entities/jakob-fugger">jakob-fugger</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/appleby-relentless-revolution/">The Relentless Revolution</a> · updated 19 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04b-currency-crisis-and-new-economic-thinking.md">source on GitHub</a></div>
+    <div class="note-summary">England&#x27;s 1690s recoinage crisis pitted John Locke&#x27;s mistaken intrinsic-value theory of money against practical critics who saw legal tender as a social convention, and the deflationary aftermath, the founding of the Bank of England, and France&#x27;s contrasting Mississippi-Bubble and physiocratic experiments together illustrate Appleby&#x27;s larger claim that capitalism took root in England through trust and decentralized trial-and-error rather than top-down design or historical inevitability.</div>
     <div class="prose">
 <p>A currency crisis in 1690s England — coin clipping, an undervalued mint ratio, and a wartime shortage of silver — forced a public reckoning over what gives money its value, pitting John Locke&#x27;s insistence that coin has only intrinsic silver value against practical critics who saw legal tender as a socially useful medium of exchange; Parliament sided with the philosopher, and mass deflation followed. From there Appleby traces how England&#x27;s post-1689 constitutional settlement, the Bank of England, and transparent taxation built the financial trust that outpaced France&#x27;s more centrally managed and more volatile experiments (Colbert&#x27;s dirigisme, John Law&#x27;s Mississippi Bubble, physiocracy), closing with her broader argument that capitalism&#x27;s emergence in England was a contingent cultural and intellectual achievement, not an inevitable one.</p>
 <h2 id="themes">Themes</h2>
@@ -48,18 +56,48 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The unit&#x27;s argumentative spine runs through six passages. Locke&#x27;s confident intrinsic-value claim — &quot;He was wrong, but confident, as only a philosopher can be&quot; — sets up the crisis&#x27;s central irony: the losing argument became policy. A pamphleteer&#x27;s rebuttal names the distributional stakes Locke&#x27;s theory obscured, protecting landlords and creditors at debtors&#x27; expense. The account of Parliament&#x27;s decision and its &quot;drastic deflation&quot; shows Appleby moving from theory to consequence, closing on soldiers unpaid and the poor rioting. John Law&#x27;s Mississippi Company supplies the cautionary counter-case — a bubble so damaging its name became the generic term for sudden inflation and equally sudden collapse. The physiocracy passage states Appleby&#x27;s comparative thesis most directly: French reformers tried to legislate top-down what English self-interested individuals achieved by accumulated trial and error. And the closing methodological passage — &quot;I want readers to resist the temptation to bring capitalism onto the historic stage as something inevitable, because it was not&quot; — is Appleby&#x27;s clearest statement of the book&#x27;s larger argument, of which this unit&#x27;s currency crisis is one case study.</p>
     </div>
+    <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04a-market-discourse-and-usury">Debating the Market: Discourse, Mercantilism, and the Decline of the Usury Taboo</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 19 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/b59d0129e436c5ceb61a6e945bd31658b76d08f5">[trivial] Add L1 reading notes for Appleby, The Relentless Revolution (#35)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>1025</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/legibility-as-precondition-not-cause">Legibility as Precondition, Not Cause</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04a-market-discourse-and-usury">Debating the Market: Discourse, Mercantilism, and the Decline of the Usury Taboo</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/adam-smith">Adam Smith (1723-1790)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry">Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06a-german-and-american-industrialization">Two Roads to Industrial Ascent: Germany and the United States Overtake Britain</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li><li><a class="wikilink" href="/wiki/aneesh/entities/jakob-fugger">jakob-fugger</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">recoinage-crisis</span><span class="tag tag-lone" title="Only this note uses it">monetary-theory</span><span class="tag tag-lone" title="Only this note uses it">john-locke</span><span class="tag tag-lone" title="Only this note uses it">bank-of-england</span><span class="tag tag-lone" title="Only this note uses it">mississippi-bubble</span><span class="tag tag-lone" title="Only this note uses it">physiocracy</span><span class="tag tag-lone" title="Only this note uses it">trust-and-commerce</span><span class="tag tag-lone" title="Only this note uses it">capitalism-historiography</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

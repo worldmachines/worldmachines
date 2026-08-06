@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>AI-Human Causal Prediction Machine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>AI-Human Causal Prediction Machine</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/ai-human-causal-prediction-machine.md">source on GitHub</a></div>
-  <div class="note-summary">Aneesh Sathe&#x27;s term for the ideal human-AI system: AI surfaces intermediate causal features, the human expert confirms and applies judgment, and the final decision remains with the human — a collaborative causal reasoning loop.</div>
-  <div class="tags"><span class="tag">explainable-ai</span><span class="tag">AI-design</span><span class="tag">human-computer-interaction</span><span class="tag">causality</span><span class="tag">medical-ai</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/ai-human-causal-prediction-machine.md">source on GitHub</a></div>
+    <div class="note-summary">Aneesh Sathe&#x27;s term for the ideal human-AI system: AI surfaces intermediate causal features, the human expert confirms and applies judgment, and the final decision remains with the human — a collaborative causal reasoning loop.</div>
     <div class="prose">
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>&#x27;s term for the ideal architecture of human-AI collaborative decision-making, developed in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span>.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>&#x27;s term for the ideal architecture of human-AI collaborative decision-making, developed in <a class="wikilink" href="/wiki/aneesh/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a>.</p>
 <h2 id="the-design">The Design</h2>
 <ol>
 <li><strong>AI identifies intermediate features</strong> — the causes, not just the conclusion. (&quot;Features A, B, C are present&quot; rather than &quot;diagnosis: malignant&quot;)</li>
@@ -51,7 +60,7 @@
 </ul>
 <p>Exposing causal features gives the human expert the ability to reason from first principles, not just ratify a statistical pattern.</p>
 <h2 id="connection-to-bayesian-thinking">Connection to Bayesian Thinking</h2>
-<p>The AI-Human Causal Prediction Machine is structurally parallel to Bayesian statistical reasoning: the AI provides a model of causality (posterior over features given data), the human provides domain knowledge (the prior), and the final conclusion is a human-AI synthesis. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency as Epistemic Virtue&quot;">Transparency as Epistemic Virtue</span> for the synthesis.</p>
+<p>The AI-Human Causal Prediction Machine is structurally parallel to Bayesian statistical reasoning: the AI provides a model of causality (posterior over features given data), the human provides domain knowledge (the prior), and the final conclusion is a human-AI synthesis. See <a class="wikilink" href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue" title="Written [[Transparency as Epistemic Virtue]], resolved to transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a> for the synthesis.</p>
 <h2 id="contrast-with">Contrast With</h2>
 <ul>
 <li><strong>Black box verdict-only AI</strong>: excludes human from causal reasoning; increases regulatory risk</li>
@@ -62,21 +71,55 @@
 <p>Sathe&#x27;s own microscopy work: biologists in 2015 would not accept deep learning outputs that couldn&#x27;t be explained. The solution was not to explain the deep learning model — it was to identify the intermediate features the biologist already reasoned in terms of, and surface those.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Calibrated Explanation&quot;">Calibrated Explanation</span> — the design standard that produces this architecture</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the broader domain</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Causal Inference&quot;">Causal Inference</span> — the epistemic goal</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Transparency as Epistemic Virtue&quot;">Transparency as Epistemic Virtue</span> — synthesis connecting to Bayesian statistics</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Seamful Design&quot;">Seamful Design</span> — the design philosophy that enables it</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI: Explainable Enough&quot;">AI: Explainable Enough</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/calibrated-explanation" title="Written [[Calibrated Explanation]], resolved to calibrated-explanation">Calibrated Explanation</a> — the design standard that produces this architecture</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the broader domain</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/causal-inference" title="Written [[Causal Inference]], resolved to causal-inference">Causal Inference</a> — the epistemic goal</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue" title="Written [[Transparency as Epistemic Virtue]], resolved to transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a> — synthesis connecting to Bayesian statistics</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/seamful-design" title="Written [[Seamful Design]], resolved to seamful-design">Seamful Design</a> — the design philosophy that enables it</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>376</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/calibrated-explanation">Calibrated Explanation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-generating-process">Data Generating Process (DGP)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/transparency-in-scientific-method">Transparency in Scientific Method</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/explainability-across-domains">Explainability Across Domains</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/bayesian-statistics">Bayesian Statistics</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/calibrated-explanation">Calibrated Explanation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/my-road-to-bayesian-stats">My Road to Bayesian Stats</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers">Unwarranted Faith in Numbers</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/explainable-ai">explainable-ai</a><a class="tag" href="/wiki/topics/ai-design">AI-design</a><a class="tag" href="/wiki/topics/human-computer-interaction">human-computer-interaction</a><a class="tag" href="/wiki/topics/causality">causality</a><a class="tag" href="/wiki/topics/medical-ai">medical-ai</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

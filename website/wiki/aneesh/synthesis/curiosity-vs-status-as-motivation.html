@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Curiosity vs. Status as Motivation for Learning</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Curiosity vs. Status as Motivation for Learning</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/curiosity-vs-status-as-motivation.md">source on GitHub</a></div>
-  <div class="note-summary">A recurring tension in Sathe&#x27;s essays: curiosity-driven engagement (ego dissolution, happiness, recovery) vs. status-driven engagement (performative polymathism, reputation management, exhaustion). The tension maps onto a broader question about the purpose of intellectual life.</div>
-  <div class="tags"><span class="tag">curiosity</span><span class="tag">status</span><span class="tag">ego</span><span class="tag">happiness</span><span class="tag">montaigne</span><span class="tag">russell</span><span class="tag">creativity</span><span class="tag">motivation</span><span class="tag">burnout</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/curiosity-vs-status-as-motivation.md">source on GitHub</a></div>
+    <div class="note-summary">A recurring tension in Sathe&#x27;s essays: curiosity-driven engagement (ego dissolution, happiness, recovery) vs. status-driven engagement (performative polymathism, reputation management, exhaustion). The tension maps onto a broader question about the purpose of intellectual life.</div>
     <div class="prose">
 <h2 id="the-core-tension">The Core Tension</h2>
-<p>Across <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Books Are Dwellings&quot;">Books Are Dwellings</span>, and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Tortured Artist Is So Yesterday&quot;">The Tortured Artist Is So Yesterday</span>, a consistent opposition emerges:</p>
+<p>Across <a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a>, <a class="wikilink" href="/wiki/aneesh/summaries/books-are-dwellings" title="Written [[Books Are Dwellings]], resolved to books-are-dwellings">Books Are Dwellings</a>, and <a class="wikilink" href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday" title="Written [[The Tortured Artist Is So Yesterday]], resolved to the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a>, a consistent opposition emerges:</p>
 <div class="table-wrap"><table>
 <thead><tr><th><strong>Curiosity-driven</strong></th><th><strong>Status-driven</strong></th></tr></thead>
 <tbody>
@@ -45,22 +54,22 @@
 <tr><td>Ego dissolves into the topic</td><td>Ego is extended through the topic</td></tr>
 <tr><td>Source of recovery from burnout</td><td>Source of exhaustion</td></tr>
 <tr><td>&quot;Better company than Caesar&quot;</td><td>Caesar</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bertrand Russell&quot;">Bertrand Russell</span>&#x27;s formula</td><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Performative Polymathism&quot;">Performative Polymathism</span></td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/entities/bertrand-russell" title="Written [[Bertrand Russell]], resolved to bertrand-russell">Bertrand Russell</a>&#x27;s formula</td><td><a class="wikilink" href="/wiki/aneesh/concepts/performative-polymathism" title="Written [[Performative Polymathism]], resolved to performative-polymathism">Performative Polymathism</a></td></tr>
 </tbody>
 </table></div>
 <h2 id="the-historical-record">The Historical Record</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span> documents status-driven learning in the ancient world: Caesar (engineering), Dionysus the Elder (poetry), Periander (bad poetry over good medicine). The pattern is ancient and appears concentrated in the powerful — those whose primary competence is in &quot;low-prestige&quot; domains (generalship, business, politics) who seek recognition in &quot;high-prestige&quot; domains (arts, sciences, engineering).</p>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> notes the contemporary parallel: tech CEOs and investors who perform competence in physics or engineering.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a> documents status-driven learning in the ancient world: Caesar (engineering), Dionysus the Elder (poetry), Periander (bad poetry over good medicine). The pattern is ancient and appears concentrated in the powerful — those whose primary competence is in &quot;low-prestige&quot; domains (generalship, business, politics) who seek recognition in &quot;high-prestige&quot; domains (arts, sciences, engineering).</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> notes the contemporary parallel: tech CEOs and investors who perform competence in physics or engineering.</p>
 <h2 id="the-burnout-connection">The Burnout Connection</h2>
-<p>The personal testimony in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span> is critical: burnout (end of 2023) was broken by curiosity-driven engagement — &quot;reading new things,&quot; the Contraptions book club. This suggests that status-driven intellectual engagement is <em>exhausting</em> (it feeds the ego&#x27;s anxieties) while curiosity-driven engagement is <em>restorative</em> (it temporarily dissolves the ego&#x27;s boundaries).</p>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maria Popova&quot;">Maria Popova</span>&#x27;s &quot;unselfing&quot; is the mechanism: curiosity-driven engagement is a form of &quot;wakefulness to an aspect of the world other than myself.&quot; It is structurally anti-exhausting because exhaustion is an ego condition.</p>
+<p>The personal testimony in <a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a> is critical: burnout (end of 2023) was broken by curiosity-driven engagement — &quot;reading new things,&quot; the Contraptions book club. This suggests that status-driven intellectual engagement is <em>exhausting</em> (it feeds the ego&#x27;s anxieties) while curiosity-driven engagement is <em>restorative</em> (it temporarily dissolves the ego&#x27;s boundaries).</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/maria-popova" title="Written [[Maria Popova]], resolved to maria-popova">Maria Popova</a>&#x27;s &quot;unselfing&quot; is the mechanism: curiosity-driven engagement is a form of &quot;wakefulness to an aspect of the world other than myself.&quot; It is structurally anti-exhausting because exhaustion is an ego condition.</p>
 <h2 id="the-creative-work-application">The Creative Work Application</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Tortured Artist Is So Yesterday&quot;">The Tortured Artist Is So Yesterday</span>, the same tension appears in a new form:</p>
+<p>In <a class="wikilink" href="/wiki/aneesh/summaries/the-tortured-artist-is-so-yesterday" title="Written [[The Tortured Artist Is So Yesterday]], resolved to the-tortured-artist-is-so-yesterday">The Tortured Artist Is So Yesterday</a>, the same tension appears in a new form:</p>
 <ul>
 <li><strong>Status-driven</strong> = the tortured artist, suffering for recognition, the solitary genius who wants to be known for the perfect artifact</li>
 <li><strong>Courage-driven</strong> (the positive alternative) = committing to a risky idea and accepting accountability — not for recognition but because the idea is worth taking a stand on</li>
 </ul>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Authorship as Courage&quot;">Authorship as Courage</span> is structurally closer to curiosity than to status: the courageous author doesn&#x27;t perform competence, they <em>stake</em> something. This is ego-exposing rather than ego-aggrandizing.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/authorship-as-courage" title="Written [[Authorship as Courage]], resolved to authorship-as-courage">Authorship as Courage</a> is structurally closer to curiosity than to status: the courageous author doesn&#x27;t perform competence, they <em>stake</em> something. This is ego-exposing rather than ego-aggrandizing.</p>
 <h2 id="a-note-on-the-essay-form-itself">A Note on the Essay Form Itself</h2>
 <p>The personal essay (Montaigne&#x27;s invention, Sathe&#x27;s chosen form) is perhaps inherently on the curiosity side of this divide: it publicly explores rather than publicly demonstrates. The essayist doesn&#x27;t claim to know; they think aloud. This is why Montaigne reads as more honest than contemporary &quot;thought leaders&quot; — the form self-selects for curiosity over status.</p>
 <h2 id="essay-seeds">Essay Seeds</h2>
@@ -71,24 +80,53 @@
 </ol>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Performative Polymathism&quot;">Performative Polymathism</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Curiosity as Ego Dissolution&quot;">Curiosity as Ego Dissolution</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Burnout and Intellectual Recovery&quot;">Burnout and Intellectual Recovery</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unselfing&quot;">Unselfing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Authorship as Courage&quot;">Authorship as Courage</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Michel de Montaigne&quot;">Michel de Montaigne</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bertrand Russell&quot;">Bertrand Russell</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Maria Popova&quot;">Maria Popova</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/performative-polymathism" title="Written [[Performative Polymathism]], resolved to performative-polymathism">Performative Polymathism</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution" title="Written [[Curiosity as Ego Dissolution]], resolved to curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/burnout-and-intellectual-recovery" title="No note is called &quot;Burnout and Intellectual Recovery&quot; yet — see who is asking for it">Burnout and Intellectual Recovery</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/unselfing" title="Written [[Unselfing]], resolved to unselfing">Unselfing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/authorship-as-courage" title="Written [[Authorship as Courage]], resolved to authorship-as-courage">Authorship as Courage</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/michel-de-montaigne" title="Written [[Michel de Montaigne]], resolved to michel-de-montaigne">Michel de Montaigne</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/bertrand-russell" title="Written [[Bertrand Russell]], resolved to bertrand-russell">Bertrand Russell</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/maria-popova" title="Written [[Maria Popova]], resolved to maria-popova">Maria Popova</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>528</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-play-epistemology">The Play Epistemology — Hacking, Ludics, and the Infinite Game</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/breadth-vs-depth-across-essays">Breadth vs. Depth Across Essays</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/dwarf-fortress-emacs-ai-generative-complexity">Dwarf Fortress, Emacs, &amp; AI: The Allure of Generative Complexity</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/hack-hacky-hacker">Hack, Hacky, Hacker</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/play-as-navigational-instrument">Play as Navigational Instrument</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/work-or-play-ludic-feedback-loops">Work or Play? Ludic Feedback Loops</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/curiosity">curiosity</a><a class="tag" href="/wiki/topics/status">status</a><a class="tag" href="/wiki/topics/ego">ego</a><a class="tag" href="/wiki/topics/happiness">happiness</a><a class="tag" href="/wiki/topics/montaigne">montaigne</a><a class="tag" href="/wiki/topics/russell">russell</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/motivation">motivation</a><a class="tag" href="/wiki/topics/burnout">burnout</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

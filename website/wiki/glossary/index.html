@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,37 +26,86 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/" aria-current="page">Glossary</a></nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/" aria-current="page">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
   <main class="wiki">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <span>Glossary</span></nav>
+  <p class="eyebrow">The vocabulary the club has agreed on</p>
   <h1>Glossary</h1>
-  <p class="lede">Terms the club is actively defining. A glossary entry is not a
-  dictionary definition copied in from outside — it is <em>our</em> working
-  definition, sharpened as the theory develops, with the notes that use the term
-  linked underneath it.</p>
-  <p class="lede small">Each entry carries a status: <span class="status status-seed">seed</span> first draft,
-  worth arguing with · <span class="status status-developing">developing</span> in active use, still moving ·
-  <span class="status status-settled">settled</span> the club has converged.
-  Add or evolve a term by editing <code>raw-notes/commons/glossary/</code> —
+  <p class="lede">A glossary entry is not a dictionary definition copied in from
+  outside. It is <em>our</em> working definition, sharpened as the theory
+  develops, with every note that uses the term gathered underneath it.</p>
+  <p class="lede small">Status says how settled a term is: <span class="status status-seed">seed</span> first
+  draft, worth arguing with · <span class="status status-developing">developing</span> in active use, still
+  moving · <span class="status status-settled">settled</span> the club has converged. Add or evolve a term
+  by editing <code>raw-notes/commons/glossary/</code> —
   <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/glossary/README.md">how to contribute</a>.</p>
-  <ul class="glossary-list">
-    <li class="glossary-row">
-      <div class="glossary-head"><a href="/wiki/glossary/legibility">Legibility</a> <span class="status status-developing">developing</span> </div>
-      <p class="glossary-gloss">The condition of being readable by a system that has the power to act on what it reads — mapped, predicted, categorized, managed. In this project legibility is treated as the core optimization target of the Modernity Machine, and therefore as a precondition for scale rather than a neutral technique.</p>
-      <div class="glossary-meta">1 note links here</div>
-    </li>
-    <li class="glossary-row">
-      <div class="glossary-head"><a href="/wiki/glossary/psychohistory">Psychohistory</a> <span class="status status-seed">seed</span> </div>
-      <p class="glossary-gloss">Asimov&#x27;s fictional science of forecasting the statistical behaviour of civilizations, adopted here as the project&#x27;s guiding conceit rather than its method — the thing we are building toward while remaining explicit that we cannot currently do it.</p>
-      <div class="glossary-meta">0 notes link here</div>
-    </li>
-    <li class="glossary-row">
-      <div class="glossary-head"><a href="/wiki/glossary/world-machine">World Machine</a> <span class="status status-developing">developing</span> <span class="muted">aka World Machines</span></div>
-      <p class="glossary-gloss">A civilization-scale contraption — institutions, technologies, practices and assumptions interlocked — that embodies the logic of how the world works for a period of centuries, and that rises, operates and decays on a roughly thousand-year lifecycle.</p>
-      <div class="glossary-meta">2 notes link here</div>
-    </li>
-  </ul>
+  <section>
+    <h2 class="register"><span>Defined</span><span class="section-aside">3 terms</span></h2>
+    <ul class="term-list">
+      <li class="term-card">
+        <div class="term-head"><a href="/wiki/glossary/legibility">Legibility</a> <span class="status status-developing">developing</span> </div>
+        <p class="term-gloss">The condition of being readable by a system that has the power to act on what it reads — mapped, predicted, categorized, managed. In this project legibility is treated as the core optimization target of the Modernity Machine, and therefore as a precondition for scale rather than a neutral technique.</p>
+        <div class="term-meta">28 notes use it · 46 tagged</div>
+      </li>
+      <li class="term-card">
+        <div class="term-head"><a href="/wiki/glossary/psychohistory">Psychohistory</a> <span class="status status-seed">seed</span> </div>
+        <p class="term-gloss">Asimov&#x27;s fictional science of forecasting the statistical behaviour of civilizations, adopted here as the project&#x27;s guiding conceit rather than its method — the thing we are building toward while remaining explicit that we cannot currently do it.</p>
+        <div class="term-meta">0 notes use it · 2 tagged</div>
+      </li>
+      <li class="term-card">
+        <div class="term-head"><a href="/wiki/glossary/world-machine">World Machine</a> <span class="status status-developing">developing</span> <span class="muted">also called World Machines</span></div>
+        <p class="term-gloss">A civilization-scale contraption — institutions, technologies, practices and assumptions interlocked — that embodies the logic of how the world works for a period of centuries, and that rises, operates and decays on a roughly thousand-year lifecycle.</p>
+        <div class="term-meta">56 notes use it</div>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="register"><span>Waiting for a definition</span><span class="section-aside"><a href="/wiki/hubs">all →</a></span></h2>
+    <p class="section-note">The concepts the corpus leans on hardest that no entry defines yet. The figure is how many notes link to them.</p>
+    <ul class="plate">
+      <li class="plate-row mag-4">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">130</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-4">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">119</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-4">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">119</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">65</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">63</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">61</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">56</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">52</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-3">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/conatus">Conatus</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">45</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+      <li class="plate-row mag-2">
+        <span class="plate-line"><a class="plate-name" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">43</span></span><span class="plate-meta">Aneesh</span>
+      </li>
+    </ul>
+  </section>
 
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

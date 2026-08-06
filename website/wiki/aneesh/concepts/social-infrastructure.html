@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Social Infrastructure</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Social Infrastructure</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/social-infrastructure.md">source on GitHub</a></div>
-  <div class="note-summary">Social infrastructure encompasses the physical and institutional spaces that enable communal life — parks, libraries, community centers, third places — and is subject to the same case for public investment as physical or digital infrastructure.</div>
-  <div class="tags"><span class="tag">social-infrastructure</span><span class="tag">policy</span><span class="tag">third-places</span><span class="tag">community</span><span class="tag">public-goods</span><span class="tag">baumol</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/social-infrastructure.md">source on GitHub</a></div>
+    <div class="note-summary">Social infrastructure encompasses the physical and institutional spaces that enable communal life — parks, libraries, community centers, third places — and is subject to the same case for public investment as physical or digital infrastructure.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>Social infrastructure refers to the physical spaces, institutions, and services that enable people to come together, form relationships, and sustain community life. Examples include:</p>
@@ -50,33 +59,71 @@
 <p>The argument for subsidizing social infrastructure parallels the argument for physical infrastructure:</p>
 <ul>
 <li>Social experiences are goods that generate positive externalities (reduced loneliness, civic participation, trust) that markets undervalue</li>
-<li>Many social experiences are subject to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span> — their relative prices will rise indefinitely without subsidy</li>
+<li>Many social experiences are subject to <a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a> — their relative prices will rise indefinitely without subsidy</li>
 <li>The market alternative (private, for-profit social venues) systematically selects against genuine sociality in favor of throughput and efficiency</li>
 </ul>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alex Mayyasi&quot;">Alex Mayyasi</span> asks whether the logic that justifies public pools and libraries should also extend to bowling alleys, dive bars, and sit-down restaurants — &quot;pro-social businesses&quot; whose value is not captured in market prices.</p>
+<p><a class="wikilink-wanted" href="/wiki/wanted/alex-mayyasi" title="No note is called &quot;Alex Mayyasi&quot; yet — see who is asking for it">Alex Mayyasi</a> asks whether the logic that justifies public pools and libraries should also extend to bowling alleys, dive bars, and sit-down restaurants — &quot;pro-social businesses&quot; whose value is not captured in market prices.</p>
 <h2 id="the-subsidy-model">The Subsidy Model</h2>
 <p>One proposed mechanism: tax-deductible donations to &quot;pro-social businesses,&quot; modeled on the existing charity exemption for arts organizations. If a violin performance is treated as a cultural good worth subsidizing, why not a neighborhood bar that functions as the same community&#x27;s third place?</p>
 <p>This is admittedly a difficult policy to design — who decides which businesses qualify? — but the underlying logic is sound: social experiences have positive externalities that the market systematically underprices.</p>
 <h2 id="connection-to-baumol">Connection to Baumol</h2>
-<p>Social infrastructure spending is precisely the &quot;dependable solution&quot; that Baumol identified for cost disease: progressive taxation in a growing economy funds services that the market will not provide at accessible prices. Healthcare and education are the canonical cases; social life is the underexplored extension. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span>.</p>
+<p>Social infrastructure spending is precisely the &quot;dependable solution&quot; that Baumol identified for cost disease: progressive taxation in a growing economy funds services that the market will not provide at accessible prices. Healthcare and education are the canonical cases; social life is the underexplored extension. See <a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a>.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Third Places&quot;">Third Places</span> — the specific venues social infrastructure policy protects</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span> — the economic mechanism requiring intervention</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Isolation&quot;">Social Isolation</span> — the outcome of infrastructure neglect</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scalability and Social Life&quot;">Scalability and Social Life</span> — why markets favor anti-social outcomes</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol Cost Disease and Toxic Solitude&quot;">Baumol Cost Disease and Toxic Solitude</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/third-places" title="Written [[Third Places]], resolved to third-places">Third Places</a> — the specific venues social infrastructure policy protects</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a> — the economic mechanism requiring intervention</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/social-isolation" title="No note is called &quot;Social Isolation&quot; yet — see who is asking for it">Social Isolation</a> — the outcome of infrastructure neglect</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/scalability-and-social-life" title="Written [[Scalability and Social Life]], resolved to scalability-and-social-life">Scalability and Social Life</a> — why markets favor anti-social outcomes</li>
+<li>Source: <a class="wikilink-wanted" href="/wiki/wanted/baumol-cost-disease-and-toxic-solitude" title="No note is called &quot;Baumol Cost Disease and Toxic Solitude&quot; yet — see who is asking for it">Baumol Cost Disease and Toxic Solitude</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/gravitational-attractor">Gravitational Attractor</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>378</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/gravitational-attractor">Gravitational Attractor</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/third-places">Third Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/baumols-cost-disease">Baumol&#x27;s Cost Disease</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/anti-social-business-model">Anti-Social Business Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/scalability-and-social-life">Scalability and Social Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/robert-putnam">Robert Putnam</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/william-baumol">William Baumol</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cost-disease-and-the-retreat-from-public-life">Cost Disease and the Retreat from Public Life</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/baumol-cost-disease-toxic-solitude">Why &#x27;Cost Disease&#x27; Is the Secret Force Behind America&#x27;s Toxic Solitude</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/baumols-cost-disease">Baumol&#x27;s Cost Disease</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/third-places">Third Places</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/anti-social-business-model">Anti-Social Business Model</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/scalability-and-social-life">Scalability and Social Life</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/robert-putnam">Robert Putnam</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/william-baumol">William Baumol</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/social-infrastructure">social-infrastructure</a><a class="tag" href="/wiki/topics/policy">policy</a><a class="tag" href="/wiki/topics/third-places">third-places</a><a class="tag" href="/wiki/topics/community">community</a><span class="tag tag-lone" title="Only this note uses it">public-goods</span><a class="tag" href="/wiki/topics/baumol">baumol</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

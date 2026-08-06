@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/brandon/">Brandon</a> <b>/</b> <span>Essays</span> <b>/</b> <span>Coexistence Within the Divergence Machine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Coexistence Within the Divergence Machine</h1>
-  <div class="note-byline"><a href="/wiki/brandon/">Brandon</a> · Essays · updated 2 August 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/brandon/Essays/Coexistence%20Within%20the%20Divergence%20Machine.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/brandon/">Brandon</a> · Essays · updated 2 August 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/brandon/Essays/Coexistence%20Within%20the%20Divergence%20Machine.md">source on GitHub</a></div>
     <div class="prose">
 <p><em>Brandon Pink · July 2026. A response to Venkatesh Rao&#x27;s &quot;The Divergence Machine.&quot;</em></p>
 <p>Earlier this month, Lauren Teixeira published a dispatch from the Hamilton Society, a fast-growing debate club for San Francisco&#x27;s right-leaning tech intellectuals. The Society hosts parliamentary-style debates on questions such as whether America needs a Caesar. Jackets and ties are mandatory, debaters address one another in the third person, meetings open with the Pledge of Allegiance, and membership is arranged in a hierarchy of titled members and untitled assistants. The founders, observant Catholics who met through Mass, know exactly how all of this looks. Teixeira&#x27;s read, in &quot;We All Want Daddy to Come Riding In,&quot; is that the form is the point: these are young men reaching for a structure and order that the institutions around them no longer provide.</p>
@@ -48,13 +58,22 @@
 <p>The coexisting that will be made possible by the Divergence Machine will be less active. It will be less intentional, in that it will happen regardless of attempts toward active imposition by any ideology. Its logics will be governed by forces largely outside the control of any one ideological group. And it will be much more <em>weird</em>, in the sense of Rao&#x27;s <em>Permaweird</em>, than anything the bumper-sticker imagination can picture. The various localities, living through their particular logics, will be far less intelligible to one another than the bumper-sticker-Coexist types envision. They will get along anyway, because the machine&#x27;s logic does not require mutual legibility as the price of peace.</p>
 <p>The Modernity Machine demanded that a locality be understood, mapped and labeled, before it could be accommodated. The Divergence Machine does not. The Hamilton Society will get to keep its jackets and ties, it will go on looking goofy to most of the localities around it, and under the logics of the new machine, that will not matter. What coexistence looks like without mutual intelligibility is, I suspect, one of the questions the next few decades will answer.</p>
     </div>
+    <p class="note-history">Last changed 2 August 2026 by Brandon Pink — <a href="https://github.com/worldmachines/worldmachines/commit/e5c7ac841598d8bcbd5743a04316debfa497ae2c">raw-notes/brandon: split into Literature Notes + Essays; publish two essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 2 August 2026 by Brandon Pink — <a href="https://github.com/worldmachines/worldmachines/commit/e5c7ac841598d8bcbd5743a04316debfa497ae2c">raw-notes/brandon: split into Literature Notes + Essays; publish two essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>1009</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

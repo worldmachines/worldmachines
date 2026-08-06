@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,16 +26,25 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Designed Mindset</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Designed Mindset</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/designed-mindset.md">source on GitHub</a></div>
-  <div class="note-summary">Sathe&#x27;s term for the Liveness-era replacement for the perma-worldview: a framework called up as a <em>module</em> for the duration of one project — Stoic indifference for the finishing phase, Romantic immersion for the seeing-it-fresh phase, none of them a worldview, each of them a callable part — sustained by will alone until a thicket sustains it.</div>
-  <div class="tags"><span class="tag">designed-mindset</span><span class="tag">lever-discipline</span><span class="tag">auteuring</span><span class="tag">modules</span><span class="tag">frameworks</span><span class="tag">liveness-era</span><span class="tag">stoicism</span><span class="tag">romanticism</span><span class="tag">the-thicket</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/designed-mindset.md">source on GitHub</a></div>
+    <div class="note-summary">Sathe&#x27;s term for the Liveness-era replacement for the perma-worldview: a framework called up as a <em>module</em> for the duration of one project — Stoic indifference for the finishing phase, Romantic immersion for the seeing-it-fresh phase, none of them a worldview, each of them a callable part — sustained by will alone until a thicket sustains it.</div>
     <div class="prose">
-<p><strong>Source</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> (Section V), 2026.</p>
+<p><strong>Source</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>, <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> (Section V), 2026.</p>
 <h2 id="definition">Definition</h2>
 <p>A <strong>designed mindset</strong> is a framework called up as a <em>callable module</em> for the duration of one project, rather than carried as a perma-worldview. The designed mindset is what replaces the <a class="wikilink" href="/wiki/aneesh/concepts/receding-containers">received container</a> in the Liveness era: the lever-disciplined person picks the few levers they will pull and then designs the mental apparatus that will hold those pulls together while they land.</p>
 <p>The form is modular by construction:</p>
@@ -83,7 +92,7 @@
 <p>What is new in 2026 is not the <em>practice</em> of designed mindsets but the <em>condition</em> — no perma-container is available to fall back on, so the designed-mindset move is no longer optional decoration on top of an inherited frame; it is the operating mode of work itself.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> — source essay</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> — source essay</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">not-my-lever</a> — the operational practice the designed mindset holds together</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — the habitat that sustains the designed mindset past the limit of will</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/receding-containers">receding-containers</a> — why a perma-worldview is no longer available</li>
@@ -92,27 +101,58 @@
 <li><a class="wikilink" href="/wiki/aneesh/entities/marcus-aurelius">marcus-aurelius</a> — <em>Meditations</em> as exercises, not a worldview</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/liveness">liveness</a> — the era in which the designed mindset becomes the default</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> — the world machine that made perma-worldviews non-mandatory</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;plasticity-vs-flexibility&quot;">Plasticity vs. Flexibility</span> — the cognitive register the designed-mindset move requires</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/plasticity-vs-flexibility" title="Written [[plasticity-vs-flexibility]], resolved to Plasticity vs. Flexibility">Plasticity vs. Flexibility</a> — the cognitive register the designed-mindset move requires</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a> — the error a designed mindset deliberately avoids by being temporary</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">9</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/auteuring">Auteuring</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/marcus-aurelius">Marcus Aurelius (121–180 CE)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>1046</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/auteuring">Auteuring</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/marcus-aurelius">Marcus Aurelius (121–180 CE)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/surface-of-concern">Surface of Concern</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/dark-forestry">Dark Forestry</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">designed-mindset</span><a class="tag" href="/wiki/topics/lever-discipline">lever-discipline</a><a class="tag" href="/wiki/topics/auteuring">auteuring</a><span class="tag tag-lone" title="Only this note uses it">modules</span><span class="tag tag-lone" title="Only this note uses it">frameworks</span><a class="tag" href="/wiki/topics/liveness-era">liveness-era</a><a class="tag" href="/wiki/topics/stoicism">stoicism</a><a class="tag" href="/wiki/topics/romanticism">romanticism</a><a class="tag" href="/wiki/topics/the-thicket">the-thicket</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Four Class Relations of Modernity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Four Class Relations of Modernity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/four-class-relations-of-modernity.md">source on GitHub</a></div>
-  <div class="note-summary">The Modernity Machine&#x27;s structural dynamics expressed as four shifting class relations: monarch-oligarchy, oligarchy-technocracy, technocracy-workers, and monarch-technocracy — each transformed by specific historical actors.</div>
-  <div class="tags"><span class="tag">modernity-machine</span><span class="tag">class-relations</span><span class="tag">power</span><span class="tag">world-machines</span><span class="tag">velitchkov</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/four-class-relations-of-modernity.md">source on GitHub</a></div>
+    <div class="note-summary">The Modernity Machine&#x27;s structural dynamics expressed as four shifting class relations: monarch-oligarchy, oligarchy-technocracy, technocracy-workers, and monarch-technocracy — each transformed by specific historical actors.</div>
     <div class="prose">
 <h2 id="framework">Framework</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ivo Velitchkov&quot;">Ivo Velitchkov</span>&#x27;s elaboration of <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span> thesis identifies four key class relationships whose restructuring constitutes the machine&#x27;s operation:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/ivo-velitchkov" title="Written [[Ivo Velitchkov]], resolved to ivo-velitchkov">Ivo Velitchkov</a>&#x27;s elaboration of <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a> thesis identifies four key class relationships whose restructuring constitutes the machine&#x27;s operation:</p>
 <ol>
 <li><strong>Monarch ↔ Oligarchy</strong></li>
 <li><strong>Oligarchy ↔ Technocracy</strong></li>
@@ -46,17 +55,17 @@
 <p>The general trend: <strong>previously weaker parties gain persistent new agency</strong>. Setbacks occur but the trend persists. The composition of each class also changes over time.</p>
 <h2 id="historical-transformations">Historical Transformations</h2>
 <h3 id="monarch-oligarchy-fuggers-transformation">Monarch ↔ Oligarchy: Fugger&#x27;s Transformation</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jakob Fugger&quot;">Jakob Fugger</span> converted this relationship from <strong>divine right</strong> to <strong>contractual creditor-debtor</strong>. The monarch, once sovereign by God&#x27;s grace, became Fugger&#x27;s debtor. Oligarchs were no longer merely favored subjects — they were creditors with contractual leverage.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/jakob-fugger" title="Written [[Jakob Fugger]], resolved to jakob-fugger">Jakob Fugger</a> converted this relationship from <strong>divine right</strong> to <strong>contractual creditor-debtor</strong>. The monarch, once sovereign by God&#x27;s grace, became Fugger&#x27;s debtor. Oligarchs were no longer merely favored subjects — they were creditors with contractual leverage.</p>
 <h3 id="oligarchy-technocracy-fugger-and-wedgwood">Oligarchy ↔ Technocracy: Fugger and Wedgwood</h3>
 <ul>
 <li><strong>Fugger</strong>: To manage his bank network, he needed accountants, auditors, and lawyers — proliferating new technocratic roles. Shift from military/theological knowledge to portable, codified knowledge.</li>
 <li><strong>Wedgwood</strong>: Royal patronage (&quot;Potter to Her Majesty&quot;) made the technocracy-oligarchy relationship legible through cascading desire: monarch → nobles → merchants → masses.</li>
 </ul>
 <h3 id="technocracy-workers-wedgwoods-division-of-labor">Technocracy ↔ Workers: Wedgwood&#x27;s Division of Labor</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Josiah Wedgwood&quot;">Josiah Wedgwood</span> introduced the division of labor (later refined by Henry Ford). Previously, one potter made a pot start to finish. Now: specialized, replaceable workers. The shift was <em>not</em> toward increased worker agency — it was toward de-skilling and interchangeability. (Contrast with Voltaire&#x27;s approach.)</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/josiah-wedgwood" title="Written [[Josiah Wedgwood]], resolved to josiah-wedgwood">Josiah Wedgwood</a> introduced the division of labor (later refined by Henry Ford). Previously, one potter made a pot start to finish. Now: specialized, replaceable workers. The shift was <em>not</em> toward increased worker agency — it was toward de-skilling and interchangeability. (Contrast with Voltaire&#x27;s approach.)</p>
 <p>Women and children entered the workforce for the first time as part of this era&#x27;s economic expansion.</p>
 <h3 id="monarch-technocracy-voltaires-transformation">Monarch ↔ Technocracy: Voltaire&#x27;s Transformation</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Voltaire&quot;">Voltaire</span> transformed the intellectual&#x27;s relationship to power from <strong>subservient court pet</strong> to <strong>negotiated celebrity</strong>. He bought financial independence (lottery, lending) so he couldn&#x27;t be silenced or starved, while remaining embedded in elite networks. The intellectual became a free agent who could operate outside patronage while exploiting it.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/voltaire" title="Written [[Voltaire]], resolved to voltaire">Voltaire</a> transformed the intellectual&#x27;s relationship to power from <strong>subservient court pet</strong> to <strong>negotiated celebrity</strong>. He bought financial independence (lottery, lending) so he couldn&#x27;t be silenced or starved, while remaining embedded in elite networks. The intellectual became a free agent who could operate outside patronage while exploiting it.</p>
 <p>Voltaire also became a <em>creditor</em> to the ruling class (like Fugger transformed oligarchs into creditors), completing a structural parallel.</p>
 <h2 id="the-states-own-legibility-projects">The State&#x27;s Own Legibility Projects</h2>
 <p>The post-Westphalia nation-state simultaneously restructured these relations through its own legibility projects: surnames, standardized weights/measures, cadastres. The state was making its subjects legible to itself — while Voltaire was beginning the inverse: making the state legible to its subjects.</p>
@@ -68,25 +77,66 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity Machine&quot;">Modernity Machine</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Legibility as Machine Core&quot;">Legibility as Machine Core</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jakob Fugger&quot;">Jakob Fugger</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Josiah Wedgwood&quot;">Josiah Wedgwood</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Voltaire&quot;">Voltaire</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine" title="Written [[Modernity Machine]], resolved to modernity-machine">Modernity Machine</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core" title="Written [[Legibility as Machine Core]], resolved to legibility-as-machine-core">Legibility as Machine Core</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jakob-fugger" title="Written [[Jakob Fugger]], resolved to jakob-fugger">Jakob Fugger</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/josiah-wedgwood" title="Written [[Josiah Wedgwood]], resolved to josiah-wedgwood">Josiah Wedgwood</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/voltaire" title="Written [[Voltaire]], resolved to voltaire">Voltaire</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ivo Velitchkov&quot;">Ivo Velitchkov</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/ivo-velitchkov" title="Written [[Ivo Velitchkov]], resolved to ivo-velitchkov">Ivo Velitchkov</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06a-german-and-american-industrialization">Two Roads to Industrial Ascent: Germany and the United States Overtake Britain</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>446</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/voltaire">Voltaire</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/josiah-wedgwood">Josiah Wedgwood</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jakob-fugger">Jakob Fugger</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ivo-velitchkov">Ivo Velitchkov</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/six-relationships-of-modernity">Six Relationships of Modernity</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06a-german-and-american-industrialization">Two Roads to Industrial Ascent: Germany and the United States Overtake Britain</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/legibility-and-divergence">Legibility and Divergence: The MM&#x27;s Self-Undermining Logic</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/entrepreneur-as-machine-engineer">The Entrepreneur as Machine Engineer</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/three-engineers-of-modernity-velitchkov">Three Engineers of Modernity</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/voltaire">Voltaire</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/jakob-fugger">Jakob Fugger</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/josiah-wedgwood">Josiah Wedgwood</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/ivo-velitchkov">Ivo Velitchkov</a><span class="rail-where">6</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/modernity-machine">modernity-machine</a><a class="tag" href="/wiki/topics/class-relations">class-relations</a><a class="tag" href="/wiki/topics/power">power</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/velitchkov">velitchkov</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

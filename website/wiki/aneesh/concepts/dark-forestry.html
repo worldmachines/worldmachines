@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,22 +26,31 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Dark Forestry</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Dark Forestry</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/dark-forestry.md">source on GitHub</a></div>
-  <div class="note-summary">Dark forestry is the constructed, extractive operation that captures human time, attention, and intent under the guise of community or refuge — run by platform-priests (influencers, religious authorities, inquisitors, recommendation algorithms) who legibilize what was previously a thicket. The reclaimed term in the Sathe canon, distinct from Strickler&#x27;s positive &#x27;Dark Forest Internet&#x27;. In Not My Lever (2026) the dark-mirror form of lever discipline — refusal that vacates space for extraction rather than creating space for a way of being — is named as dark forestry of the self.</div>
-  <div class="tags"><span class="tag">dark-forestry</span><span class="tag">dark-forest</span><span class="tag">extraction</span><span class="tag">legibility</span><span class="tag">platforms</span><span class="tag">influencers</span><span class="tag">capture</span><span class="tag">thicket</span><span class="tag">place-making</span><span class="tag">lever-discipline</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/dark-forestry.md">source on GitHub</a></div>
+    <div class="note-summary">Dark forestry is the constructed, extractive operation that captures human time, attention, and intent under the guise of community or refuge — run by platform-priests (influencers, religious authorities, inquisitors, recommendation algorithms) who legibilize what was previously a thicket. The reclaimed term in the Sathe canon, distinct from Strickler&#x27;s positive &#x27;Dark Forest Internet&#x27;. In Not My Lever (2026) the dark-mirror form of lever discipline — refusal that vacates space for extraction rather than creating space for a way of being — is named as dark forestry of the self.</div>
     <div class="prose">
-<p><strong>Coined / reclaimed in</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Birth of Thickets&quot;">The Birth of Thickets</span> (2026, in progress) by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>.</p>
+<p><strong>Coined / reclaimed in</strong>: <a class="wikilink-wanted" href="/wiki/wanted/the-birth-of-thickets" title="No note is called &quot;The Birth of Thickets&quot; yet — see who is asking for it">The Birth of Thickets</a> (2026, in progress) by <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>.</p>
 <h2 id="definition">Definition</h2>
 <p><strong>Dark forestry</strong> is the operation by which power constructs a pseudo-thicket: a space that <em>appears</em> to be a refuge from the legibility regime but is in fact a more efficient capture mechanism, run by gatekeepers who see in even when outsiders cannot. It is <strong>the act of legibilizing</strong>, performed under the cover of opacity.</p>
 <blockquote><p>&quot;Local cultures and thickets are natural. Dark forestry is an act of legibilizing.&quot; — Sathe, mindmap notes (2026-05-05)</p></blockquote>
 <p>The term reclaims &quot;dark forest&quot; from its earlier positive use in the Sathe canon (where it was conflated with the <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">thicket</a>). Dark forestry is what <em>captures</em> thickets, not what they are.</p>
 <h2 id="the-disambiguation">The Disambiguation</h2>
-<p>The wiki and prior canon — including the publication of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span> (2025) — used <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dark Forest Internet&quot;">Dark Forest Internet</span> (Strickler&#x27;s term) as a positive synonym for the <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">thicket</a>. The 2026 refinement separates them:</p>
+<p>The wiki and prior canon — including the publication of <a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a> (2025) — used <a class="wikilink-wanted" href="/wiki/wanted/dark-forest-internet" title="No note is called &quot;Dark Forest Internet&quot; yet — see who is asking for it">Dark Forest Internet</a> (Strickler&#x27;s term) as a positive synonym for the <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">thicket</a>. The 2026 refinement separates them:</p>
 <div class="table-wrap"><table>
 <thead><tr><th></th><th>[[The Thicket</th><th>Thicket]]</th><th>Dark Forestry</th></tr></thead>
 <tbody>
@@ -58,7 +67,7 @@
 <h3 id="religious-dark-forestry">Religious dark forestry</h3>
 <ul>
 <li>The medieval Church as dark-forestry operator: the parish, the confessional, the pulpit — apparatus that <em>appeared</em> to be communal refuge but functioned as extraction (tithes, conformity, behavioral legibility)</li>
-<li>The Inquisition as the immune response: when <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giordano Bruno&quot;">Giordano Bruno</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Galileo Galilei&quot;">Galileo Galilei</span> created actual thickets (heterodox communities of inquiry), dark forestry intensified into outright violence</li>
+<li>The Inquisition as the immune response: when <a class="wikilink" href="/wiki/aneesh/entities/giordano-bruno" title="Written [[Giordano Bruno]], resolved to giordano-bruno">Giordano Bruno</a> and <a class="wikilink-wanted" href="/wiki/wanted/galileo-galilei" title="No note is called &quot;Galileo Galilei&quot; yet — see who is asking for it">Galileo Galilei</a> created actual thickets (heterodox communities of inquiry), dark forestry intensified into outright violence</li>
 </ul>
 <h3 id="platform-dark-forestry">Platform dark forestry</h3>
 <ul>
@@ -68,14 +77,14 @@
 </ul>
 <h3 id="hustle-culture-as-dark-forestry-recruitment">Hustle culture as dark-forestry recruitment</h3>
 <ul>
-<li>The lowering of energy barriers (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Lightening of Intent&quot;">The Lightening of Intent</span>) makes both thicket creation and dark forestry cheap</li>
+<li>The lowering of energy barriers (see <a class="wikilink" href="/wiki/aneesh/summaries/the-lightening-of-intent" title="Written [[The Lightening of Intent]], resolved to the-lightening-of-intent">The Lightening of Intent</a>) makes both thicket creation and dark forestry cheap</li>
 <li>Hustle culture trains potential thicket-creators into dark-forestry agents: the &quot;creator&quot; who builds an audience that becomes the substrate of someone else&#x27;s extraction</li>
 </ul>
 <h2 id="why-it-matters-now">Why It Matters Now</h2>
 <p>Two structural facts converge in the 2020s:</p>
 <ol>
 <li>The <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> is now fully installed (per <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">Rao</a>, ~2000); its push-character means thickets are needed at scale, not as exceptions</li>
-<li>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Lightening of Intent&quot;">energy barriers for thicket creation</span> have collapsed, making thickets cheap to construct</li>
+<li>The <a class="wikilink" href="/wiki/aneesh/summaries/the-lightening-of-intent" title="Written [[The Lightening of Intent]], resolved to the-lightening-of-intent">energy barriers for thicket creation</a> have collapsed, making thickets cheap to construct</li>
 </ol>
 <p>The same conditions make dark forestry equally cheap. The result is an arms race: every cheap thicket invites a cheap dark-forestry operation to capture it. The disambiguation between the two becomes a critical literacy.</p>
 <h2 id="who-is-doing-dark-forestry">Who Is Doing Dark Forestry?</h2>
@@ -90,7 +99,7 @@
 </ul>
 <p>The forms are isomorphic; the ownership and energy flow are not.</p>
 <h2 id="the-dark-mirror-of-lever-discipline">The Dark Mirror of Lever Discipline</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> (2026), Sathe names a specifically <em>individual</em> form of dark forestry: the dark mirror of <a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">lever discipline</a> — same words, opposite ethics.</p>
+<p>In <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> (2026), Sathe names a specifically <em>individual</em> form of dark forestry: the dark mirror of <a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">lever discipline</a> — same words, opposite ethics.</p>
 <ul>
 <li>The middle manager who says <em>not my lever</em> about a colleague&#x27;s harassment: a responsibility he actually has, refused</li>
 <li>The influencer who says <em>not my lever</em> about the working conditions of writers in her newsletter network: extraction laundered</li>
@@ -105,40 +114,73 @@
 <h2 id="cross-references">Cross-References</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — what dark forestry captures or imitates</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Birth of Thickets&quot;">The Birth of Thickets</span> — the source essay for this disambiguation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> — names dark forestry of the self (the dark-mirror version of lever discipline)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/the-birth-of-thickets" title="No note is called &quot;The Birth of Thickets&quot; yet — see who is asking for it">The Birth of Thickets</a> — the source essay for this disambiguation</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> — names dark forestry of the self (the dark-mirror version of lever discipline)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">not-my-lever</a> — the generative form whose dark mirror is dark forestry at the level of individual refusal</li>
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/thicket-pairing-ratio">thicket-pairing-ratio</a> — the civilizational ratio of paired vs unpaired refusal</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dark Forest Internet&quot;">Dark Forest Internet</span> — Strickler&#x27;s positive use of &quot;dark forest&quot; (the term that this entry reclaims for the extractive operation)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/dark-forest-internet" title="No note is called &quot;Dark Forest Internet&quot; yet — see who is asking for it">Dark Forest Internet</a> — Strickler&#x27;s positive use of &quot;dark forest&quot; (the term that this entry reclaims for the extractive operation)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a> — the master concept; dark forestry is legibility-by-other-means</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Capture Resistance&quot;">Capture Resistance</span> — what dark forestry defeats</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance" title="Written [[Capture Resistance]], resolved to capture-resistance">Capture Resistance</a> — what dark forestry defeats</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/ai-homogenization">AI Homogenization</a> — the algorithmic-scale dark forestry of the 2020s</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Lightening of Intent&quot;">The Lightening of Intent</span> — why dark forestry is cheap now</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Architecture of Resistance&quot;">The Architecture of Resistance</span> — the source essay that originally conflated dark forest with thicket; this page is the canonical refinement</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Inquisition&quot;">Inquisition</span> — historical instance</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Influencer Platforms&quot;">Influencer Platforms</span> — modern instance</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-lightening-of-intent" title="Written [[The Lightening of Intent]], resolved to the-lightening-of-intent">The Lightening of Intent</a> — why dark forestry is cheap now</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance" title="Written [[The Architecture of Resistance]], resolved to the-architecture-of-resistance">The Architecture of Resistance</a> — the source essay that originally conflated dark forest with thicket; this page is the canonical refinement</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/inquisition" title="No note is called &quot;Inquisition&quot; yet — see who is asking for it">Inquisition</a> — historical instance</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/influencer-platforms" title="No note is called &quot;Influencer Platforms&quot; yet — see who is asking for it">Influencer Platforms</a> — modern instance</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">12</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/accommodation-of-modernity">Accommodation of Modernity</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/bayo-akomolafe">Bayo Akomolafe</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/bayo-akomolafe-the-untimely">Bayo Akomolafe — The Untimely</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/parapolitics-of-the-untimely">Parapolitics of the Untimely</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/surface-of-concern">Surface of Concern</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale">The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>14</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>1186</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/bayo-akomolafe-the-untimely">Bayo Akomolafe — The Untimely</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/surface-of-concern">Surface of Concern</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/thicket-pairing-ratio">The Thicket-Pairing Ratio</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/bayo-akomolafe">Bayo Akomolafe</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>6 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/parapolitics-of-the-untimely">Parapolitics of the Untimely</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/accommodation-of-modernity">Accommodation of Modernity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-opacity-turn-thicket-nakatomi-iltifat">The Opacity Turn: Thicket, Nakatomi, Iltifat</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-canon-yeomans-tale">The Canon&#x27;s Yeoman&#x27;s Prologue and Tale: Confession of an Alchemical Fraud</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">12</span></li>
+        <li><a href="/wiki/aneesh/concepts/receding-containers">Receding Containers</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/protistant">Protistant</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dark-forestry">dark-forestry</a><a class="tag" href="/wiki/topics/dark-forest">dark-forest</a><span class="tag tag-lone" title="Only this note uses it">extraction</span><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/platforms">platforms</a><span class="tag tag-lone" title="Only this note uses it">influencers</span><a class="tag" href="/wiki/topics/capture">capture</a><a class="tag" href="/wiki/topics/thicket">thicket</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/lever-discipline">lever-discipline</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

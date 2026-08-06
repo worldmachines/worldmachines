@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,24 +26,33 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The Literary and Cognitive Faces of Frame Fixation</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Literary and Cognitive Faces of Frame Fixation</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein.md">source on GitHub</a></div>
-  <div class="note-summary">Cross-source synthesis: Harold Bloom&#x27;s Anxiety of Influence and Gary Klein&#x27;s Frame Fixation describe the same cognitive-existential trap from literary theory and cognitive science respectively — excessive investment in inherited structure that prevents new creation.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">harold-bloom</span><span class="tag">gary-klein</span><span class="tag">anxiety-of-influence</span><span class="tag">frame-fixation</span><span class="tag">creativity</span><span class="tag">expertise</span><span class="tag">tradition</span><span class="tag">precursor</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/anxiety-as-frame-fixation-bloom-klein.md">source on GitHub</a></div>
+    <div class="note-summary">Cross-source synthesis: Harold Bloom&#x27;s Anxiety of Influence and Gary Klein&#x27;s Frame Fixation describe the same cognitive-existential trap from literary theory and cognitive science respectively — excessive investment in inherited structure that prevents new creation.</div>
     <div class="prose">
 <h2 id="the-structural-parallel">The Structural Parallel</h2>
-<p>Harold Bloom&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> and Gary Klein&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> converge on the same insight from entirely different disciplines:</p>
+<p>Harold Bloom&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> and Gary Klein&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> converge on the same insight from entirely different disciplines:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Bloom (literary theory)</th><th>Klein (cognitive science)</th></tr></thead>
 <tbody>
 <tr><td>Strong precursors create anxiety</td><td>Committed frames create blind spots</td></tr>
 <tr><td>New writers cannot simply absorb the tradition; must misread it</td><td>Analysts cannot see data that doesn&#x27;t fit their frame</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span>: weight of accumulated achievement</td><td>Anchor lock-in: data already used is hard to redeploy</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span>: willed distortion enables new creation</td><td>Alternative frame construction: new frame enables new data</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a>: weight of accumulated achievement</td><td>Anchor lock-in: data already used is hard to redeploy</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a>: willed distortion enables new creation</td><td>Alternative frame construction: new frame enables new data</td></tr>
 <tr><td>Resolution: through anxiety, not around it</td><td>Resolution: active reframing, not passive data collection</td></tr>
 </tbody>
 </table></div>
@@ -51,8 +60,8 @@
 <h2 id="why-this-parallel-is-interesting">Why This Parallel Is Interesting</h2>
 <p>It suggests that <strong>frame fixation is not a domain-specific bug but a feature of structured cognition in general</strong>. Bloom diagnosed it in literary creation in 1973; Klein diagnosed it in expert sensemaking in 2007. The same pattern appears in:</p>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kuhnian Paradigm Shifts&quot;">Kuhnian Paradigm Shifts</span>: scientists cannot see anomalies that don&#x27;t fit the current paradigm</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span>: the difficulty of thinking outside Enlightenment rationalism from within it</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/kuhnian-paradigm-shifts" title="No note is called &quot;Kuhnian Paradigm Shifts&quot; yet — see who is asking for it">Kuhnian Paradigm Shifts</a>: scientists cannot see anomalies that don&#x27;t fit the current paradigm</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a>: the difficulty of thinking outside Enlightenment rationalism from within it</li>
 <li>Technological disruption: experienced practitioners missing the significance of new capabilities</li>
 </ul>
 <h2 id="where-they-diverge">Where They Diverge</h2>
@@ -72,25 +81,38 @@
 <p>Thesis: both cognitive science and literary theory converge on a counter-intuitive prescription — don&#x27;t try to clear your mind; commit to a frame/precursor and then work against it. The &quot;open mind&quot; ideal, applied naively, produces inferior results in both domains. The generative life requires structure to push against.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety of Influence&quot;">Anxiety of Influence</span> — Bloom&#x27;s framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frame Fixation&quot;">Frame Fixation</span> — Klein&#x27;s framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creative Misreading&quot;">Creative Misreading</span> — Bloom&#x27;s resolution mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — Klein&#x27;s full theory</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Belatedness&quot;">Belatedness</span> — Bloom&#x27;s temporal dimension</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — Klein&#x27;s research tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Harold Bloom&quot;">Harold Bloom</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — entity page</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety as Generative Force&quot;">Anxiety as Generative Force</span> — Kierkegaard&#x27;s version of the same pattern</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anxiety, Play, and the Generative Life&quot;">Anxiety, Play, and the Generative Life</span> — existing synthesis page on related theme</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence" title="Written [[Anxiety of Influence]], resolved to anxiety-of-influence">Anxiety of Influence</a> — Bloom&#x27;s framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation" title="Written [[Frame Fixation]], resolved to frame-fixation">Frame Fixation</a> — Klein&#x27;s framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/creative-misreading" title="Written [[Creative Misreading]], resolved to creative-misreading">Creative Misreading</a> — Bloom&#x27;s resolution mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — Klein&#x27;s full theory</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/belatedness" title="Written [[Belatedness]], resolved to belatedness">Belatedness</a> — Bloom&#x27;s temporal dimension</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — Klein&#x27;s research tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/harold-bloom" title="Written [[Harold Bloom]], resolved to harold-bloom">Harold Bloom</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — entity page</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anxiety-as-generative-force" title="Written [[Anxiety as Generative Force]], resolved to anxiety-as-generative-force">Anxiety as Generative Force</a> — Kierkegaard&#x27;s version of the same pattern</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/anxiety-play-and-the-generative-life" title="Written [[Anxiety, Play, and the Generative Life]], resolved to anxiety-play-and-the-generative-life">Anxiety, Play, and the Generative Life</a> — existing synthesis page on related theme</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>11</b><span>links out</span></div>
+      <div class="bearing"><b>665</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/harold-bloom">harold-bloom</a><a class="tag" href="/wiki/topics/gary-klein">gary-klein</a><a class="tag" href="/wiki/topics/anxiety-of-influence">anxiety-of-influence</a><a class="tag" href="/wiki/topics/frame-fixation">frame-fixation</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/tradition">tradition</a><a class="tag" href="/wiki/topics/precursor">precursor</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

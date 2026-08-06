@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Solar Flows and the Energy Anomaly</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Solar Flows and the Energy Anomaly</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/solar-flows-and-the-energy-anomaly.md">source on GitHub</a></div>
-  <div class="note-summary">Connects <a class="wikilink" href="/wiki/aneesh/concepts/solar-as-flow-vs-fossil-as-stock">solar-as-flow-vs-fossil-as-stock</a>, <a class="wikilink" href="/wiki/aneesh/concepts/swansons-law">swansons-law</a>, <a class="wikilink" href="/wiki/aneesh/concepts/eroi-thresholds">eroi-thresholds</a>, and <a class="wikilink" href="/wiki/aneesh/synthesis/machines-as-energy-regimes">machines-as-energy-regimes</a> — arguing that the cost-of-intent collapse rests on a fossil-fuel windfall already below the complex-society EROI threshold, so whether the <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine">liveness-machine</a> matures or the era ends as a brief anomaly depends on whether stocks transition to flows in the next decade.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">solar</span><span class="tag">fossil-fuels</span><span class="tag">eroi</span><span class="tag">swansons-law</span><span class="tag">energy-anomaly</span><span class="tag">machines-as-energy-regimes</span><span class="tag">liveness-machine</span><span class="tag">charles-hall</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/solar-flows-and-the-energy-anomaly.md">source on GitHub</a></div>
+    <div class="note-summary">Connects <a class="wikilink" href="/wiki/aneesh/concepts/solar-as-flow-vs-fossil-as-stock">solar-as-flow-vs-fossil-as-stock</a>, <a class="wikilink" href="/wiki/aneesh/concepts/swansons-law">swansons-law</a>, <a class="wikilink" href="/wiki/aneesh/concepts/eroi-thresholds">eroi-thresholds</a>, and <a class="wikilink" href="/wiki/aneesh/synthesis/machines-as-energy-regimes">machines-as-energy-regimes</a> — arguing that the cost-of-intent collapse rests on a fossil-fuel windfall already below the complex-society EROI threshold, so whether the <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine">liveness-machine</a> matures or the era ends as a brief anomaly depends on whether stocks transition to flows in the next decade.</div>
     <div class="prose">
 <h2 id="the-anomaly">The Anomaly</h2>
 <p>The Lightening of Intent essay rests its entire argument on a thermodynamic windfall that no prior civilisation has had access to. Pre-industrial agriculture was a net source: about ten calories of food output per calorie of human labour, modest surplus, enough to free five to twenty-five percent of the population from the field. Modern agriculture is a net <em>sink</em>: 13.3 calories of fossil-fuel input per calorie of food consumed. The surplus that frees ninety-seven percent of the modern population from farming does not come from farming. It comes from ancient sunlight, banked underground over geological time and drawn down at rates millions of times faster than it accumulated.</p>
@@ -83,18 +92,44 @@
 <h2 id="essay-seed">Essay Seed</h2>
 <p>A follow-up essay could trace the <em>historical pattern</em> of energy transitions and ask whether the current one fits. Smil&#x27;s data suggests that prior energy transitions (wood to coal, coal to oil, oil to gas) each took roughly fifty to sixty years from one percent of primary energy to fifty percent. Solar is currently around five to seven percent of primary energy, with a deployment trajectory that — if Swanson&#x27;s law holds — could put it at fifty percent by 2050. That is <em>faster</em> than any prior energy transition, which is unusual enough to deserve scrutiny. The hypothesis: prior transitions were stock-to-stock substitutions, which had to renegotiate extraction infrastructure for each new resource. The current transition is stock-to-flow, which moves the binding constraint from extraction to manufacturing — and manufacturing scales differently than extraction. The pattern fit is therefore expected to be <em>poor</em>, in the optimistic direction. If the manufacturing curve continues to behave, the transition could be faster than any historical analogy predicts. If it stalls, the historical analogies set the upper bound at fifty to sixty years, which is too slow given where useful-stage EROI of fossils already sits. The essay seed: the transition is either much faster than precedent or much too slow.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/eroi-thresholds">EROI Thresholds</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>13</b><span>links out</span></div>
+      <div class="bearing"><b>1967</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/eroi-thresholds">EROI Thresholds</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/energy-rate-density">Energy Rate Density</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/liveness-and-energy-rate-density">Liveness and Energy Rate Density — A Synthesis</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/solar-as-flow-vs-fossil-as-stock">Solar as Flow vs Fossil as Stock</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/swansons-law">Swanson&#x27;s Law</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/solar">solar</a><a class="tag" href="/wiki/topics/fossil-fuels">fossil-fuels</a><a class="tag" href="/wiki/topics/eroi">eroi</a><a class="tag" href="/wiki/topics/swansons-law">swansons-law</a><span class="tag tag-lone" title="Only this note uses it">energy-anomaly</span><span class="tag tag-lone" title="Only this note uses it">machines-as-energy-regimes</span><a class="tag" href="/wiki/topics/liveness-machine">liveness-machine</a><span class="tag tag-lone" title="Only this note uses it">charles-hall</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Putting-Out System</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Putting-Out System</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/putting-out-system.md">source on GitHub</a></div>
-  <div class="note-summary">The proto-industrial production system in which merchant-manufacturers supplied raw materials to home workers who produced goods on their own equipment, shifting capital costs and production risk onto the laborer.</div>
-  <div class="tags"><span class="tag">economic-history</span><span class="tag">labor</span><span class="tag">platforms</span><span class="tag">political-economy</span><span class="tag">proto-industrialism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/putting-out-system.md">source on GitHub</a></div>
+    <div class="note-summary">The proto-industrial production system in which merchant-manufacturers supplied raw materials to home workers who produced goods on their own equipment, shifting capital costs and production risk onto the laborer.</div>
     <div class="prose">
 <p><em>(Also: outwork, cottage industry, domestic system)</em></p>
 <p>A mode of production common in 16th–19th century Europe in which a merchant-manufacturer (&quot;putter-outer&quot;) owned the raw materials and controlled distribution, but contracted production to home workers who used their own equipment and space. The merchant paid per piece and bore no fixed labor costs; the worker bore the cost of space, tools, and idle time.</p>
@@ -44,7 +53,7 @@
 <li><strong>Upside extraction</strong>: the merchant captures margin on every successful piece while insulated from failure</li>
 </ul>
 <h2 id="the-platform-analogy">The Platform Analogy</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> draws a direct structural parallel: digital platforms are the putting-out system for creative labor.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> draws a direct structural parallel: digital platforms are the putting-out system for creative labor.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Putting-Out System</th><th>Platform Economy</th></tr></thead>
 <tbody>
@@ -55,36 +64,74 @@
 <tr><td>Worker absorbs failure</td><td>Creator absorbs failed content</td></tr>
 </tbody>
 </table></div>
-<p>The critical move is that platforms deploy <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creator-as-Hero Rhetoric&quot;">Creator-as-Hero Rhetoric</span> to obscure this structure — framing the risk arrangement as empowerment.</p>
+<p>The critical move is that platforms deploy <a class="wikilink" href="/wiki/aneesh/concepts/creator-as-hero-rhetoric" title="Written [[Creator-as-Hero Rhetoric]], resolved to creator-as-hero-rhetoric">Creator-as-Hero Rhetoric</a> to obscure this structure — framing the risk arrangement as empowerment.</p>
 <h2 id="historical-sources">Historical Sources</h2>
 <ul>
-<li>Discussed in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;David S. Landes&quot;">David S. Landes</span>, &quot;What Do Bosses Really Do?&quot; (1986) — the essay that frames <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;What Do Platforms Really Do?&quot;">What Do Platforms Really Do?</span></li>
+<li>Discussed in <a class="wikilink" href="/wiki/aneesh/entities/david-s-landes" title="Written [[David S. Landes]], resolved to david-s-landes">David S. Landes</a>, &quot;What Do Bosses Really Do?&quot; (1986) — the essay that frames <a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do" title="Written [[What Do Platforms Really Do?]], resolved to what-do-platforms-really-do">What Do Platforms Really Do?</a></li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Management&quot;">Algorithmic Management</span> — the supervisory layer that replaced direct oversight in both systems</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Creator-as-Hero Rhetoric&quot;">Creator-as-Hero Rhetoric</span> — the ideological cover</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Platforms as Neo-Bosses&quot;">Platforms as Neo-Bosses</span> — synthesis</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Financialization of Creativity&quot;">Financialization of Creativity</span> — downstream cultural effect</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;What Do Platforms Really Do?&quot;">What Do Platforms Really Do?</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-management" title="Written [[Algorithmic Management]], resolved to algorithmic-management">Algorithmic Management</a> — the supervisory layer that replaced direct oversight in both systems</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/creator-as-hero-rhetoric" title="Written [[Creator-as-Hero Rhetoric]], resolved to creator-as-hero-rhetoric">Creator-as-Hero Rhetoric</a> — the ideological cover</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/platforms-as-neo-bosses" title="Written [[Platforms as Neo-Bosses]], resolved to platforms-as-neo-bosses">Platforms as Neo-Bosses</a> — synthesis</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/financialization-of-creativity" title="Written [[Financialization of Creativity]], resolved to financialization-of-creativity">Financialization of Creativity</a> — downstream cultural effect</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/what-do-platforms-really-do" title="Written [[What Do Platforms Really Do?]], resolved to what-do-platforms-really-do">What Do Platforms Really Do?</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">8</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements">Priming the Pump of Capitalism: The Agricultural Revolution in England and the Netherlands</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-06-the-greatest-necessity">RIT 06 — &quot;The Greatest Necessity for Every Rank of Men&quot; (Ch. 4)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/agricultural-revolution">The Agricultural Revolution (Appleby&#x27;s account)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>15</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>290</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/platforms-as-neo-bosses">Platforms as Neo-Bosses</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/what-do-platforms-really-do">What Do Platforms Really Do?</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-management">Algorithmic Management</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/financialization-of-creativity">Financialization of Creativity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-06-the-greatest-necessity">RIT 06 — &quot;The Greatest Necessity for Every Rank of Men&quot; (Ch. 4)</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>7 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/creator-as-hero-rhetoric">Creator-as-Hero Rhetoric</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements">Priming the Pump of Capitalism: The Agricultural Revolution in England and the Netherlands</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/specialization-of-ideas">Specialization of Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/agricultural-revolution">The Agricultural Revolution (Appleby&#x27;s account)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/platforms-as-neo-bosses">Platforms as Neo-Bosses</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/algorithmic-management">Algorithmic Management</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/david-s-landes">David S. Landes (1924–2013)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/what-do-platforms-really-do">What Do Platforms Really Do?</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/economic-history">economic-history</a><a class="tag" href="/wiki/topics/labor">labor</a><a class="tag" href="/wiki/topics/platforms">platforms</a><a class="tag" href="/wiki/topics/political-economy">political-economy</a><span class="tag tag-lone" title="Only this note uses it">proto-industrialism</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,27 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Alexander Herzen</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Alexander Herzen</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/alexander-herzen.md">source on GitHub</a></div>
-  <div class="note-summary">Russian political thinker and writer — the intellectual whose writings laid the groundwork for revolutionary Russian populism, before Lenin channeled such ideas into Bolshevik action.</div>
-  <div class="tags"><span class="tag">Russia</span><span class="tag">intellectual-history</span><span class="tag">political-philosophy</span><span class="tag">19th-century</span><span class="tag">populism</span><span class="tag">revolution</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/alexander-herzen.md">source on GitHub</a></div>
+    <div class="note-summary">Russian political thinker and writer — the intellectual whose writings laid the groundwork for revolutionary Russian populism, before Lenin channeled such ideas into Bolshevik action.</div>
     <div class="prose">
-<p><strong>Alexander Herzen</strong> (1812–1870) was a Russian political thinker, writer, and social critic, often called the &quot;father of Russian socialism.&quot; He is cited in the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> essay as the archetypal intellectual in the Russian revolutionary context — providing the ideological groundwork that <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Vladimir Lenin&quot;">Vladimir Lenin</span> later channeled into mass revolutionary action.</p>
+<p><strong>Alexander Herzen</strong> (1812–1870) was a Russian political thinker, writer, and social critic, often called the &quot;father of Russian socialism.&quot; He is cited in the <a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> essay as the archetypal intellectual in the Russian revolutionary context — providing the ideological groundwork that <a class="wikilink-wanted" href="/wiki/wanted/vladimir-lenin" title="No note is called &quot;Vladimir Lenin&quot; yet — see who is asking for it">Vladimir Lenin</a> later channeled into mass revolutionary action.</p>
 <h2 id="role-in-the-intellectual-revolutionary-typology">Role in the Intellectual/Revolutionary Typology</h2>
-<p>Herzen represents the <strong>intellectual</strong> pole in the Russian case of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> distinction. His writings — particularly from exile in London, where he published <em>The Bell</em> (<em>Kolokol</em>), the first free Russian press — laid the intellectual foundations of Russian populism (<em>narodnichestvo</em>) and broader socialist thought.</p>
+<p>Herzen represents the <strong>intellectual</strong> pole in the Russian case of the <a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> distinction. His writings — particularly from exile in London, where he published <em>The Bell</em> (<em>Kolokol</em>), the first free Russian press — laid the intellectual foundations of Russian populism (<em>narodnichestvo</em>) and broader socialist thought.</p>
 <p>He conceptualized and articulated the frameworks; Lenin (four decades later) provided the organizational structure and revolutionary will to realize a version of them.</p>
 <h2 id="key-works">Key Works</h2>
 <ul>
@@ -49,25 +58,53 @@
 <p>Herzen was notably pessimistic about teleological history — he rejected the idea that history inevitably moves toward a goal. This distinguished him from Marxist determinism and positioned him as a tragic liberal rather than a revolutionary ideologue. His influence on Lenin was indirect: the populist tradition he helped create became the soil in which Bolshevism grew, even as Lenin rejected much of Herzen&#x27;s specific politics.</p>
 <h2 id="related-figures">Related Figures</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Vladimir Lenin&quot;">Vladimir Lenin</span> — the revolutionary who channeled (and transformed) ideas from the intellectual tradition Herzen helped create</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/vladimir-lenin" title="No note is called &quot;Vladimir Lenin&quot; yet — see who is asking for it">Vladimir Lenin</a> — the revolutionary who channeled (and transformed) ideas from the intellectual tradition Herzen helped create</li>
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Intellectual vs. Revolutionary&quot;">Intellectual vs. Revolutionary</span> — typology in which Herzen exemplifies the intellectual role</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web&quot;">Cloister Web</span> — essay where this typology is developed</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/intellectual-vs-revolutionary" title="Written [[Intellectual vs. Revolutionary]], resolved to intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a> — typology in which Herzen exemplifies the intellectual role</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cloister-web" title="Written [[Cloister Web]], resolved to cloister-web">Cloister Web</a> — essay where this typology is developed</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cloister Web — Reshaping the Political Maidan&quot;">Cloister Web — Reshaping the Political Maidan</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/cloister-web-reshaping-the-political-maidan" title="No note is called &quot;Cloister Web — Reshaping the Political Maidan&quot; yet — see who is asking for it">Cloister Web — Reshaping the Political Maidan</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>299</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/intellectual-vs-revolutionary">Intellectual vs. Revolutionary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/cloister-web-reshaping-political-maidan">The Cloister Web: Reshaping the Political Maidan</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/cloister-web">Cloister Web</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/idea-graphs">Idea-Graphs</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/liang-qichao">Liang Qichao</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/mahatma-gandhi">Mahatma Gandhi</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/rabindranath-tagore">Rabindranath Tagore</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-paine">Thomas Paine</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/russia">Russia</a><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a><a class="tag" href="/wiki/topics/political-philosophy">political-philosophy</a><a class="tag" href="/wiki/topics/19th-century">19th-century</a><span class="tag tag-lone" title="Only this note uses it">populism</span><a class="tag" href="/wiki/topics/revolution">revolution</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

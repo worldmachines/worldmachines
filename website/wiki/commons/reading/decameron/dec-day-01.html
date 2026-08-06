@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/decameron/">The Decameron</a> <b>/</b> <span>DEC 02 — Day the First</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>DEC 02 — Day the First</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/decameron/">The Decameron</a> · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/decameron/dec-day-01.md">source on GitHub</a></div>
-  <div class="note-summary">The famous plague prologue establishes Florence 1348 as a world unmade, from which seven ladies and three men flee to form the brigata—a curated, governed retreat whose first day of free-topic storytelling sets up the Decameron&#x27;s core arguments about wit, faith, sacred fraud, noble speech, and the persistence of value under moral collapse. Its marquee novellas are Ser Ciappelletto&#x27;s false deathbed confession, which mints the wickedest of men into a venerated saint, and Abraham the Jew&#x27;s conversion after witnessing Rome&#x27;s clerical corruption—faith surviving its ministers.</div>
-  <div class="tags"><span class="tag">decameron</span><span class="tag">boccaccio</span><span class="tag">plague</span><span class="tag">brigata</span><span class="tag">wit-and-fortune</span><span class="tag">social-order</span><span class="tag">clergy-satire</span><span class="tag">frame-narrative</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a>, <a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap">gramsci-gap</a>, <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/decameron/">The Decameron</a> · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/decameron/dec-day-01.md">source on GitHub</a></div>
+    <div class="note-summary">The famous plague prologue establishes Florence 1348 as a world unmade, from which seven ladies and three men flee to form the brigata—a curated, governed retreat whose first day of free-topic storytelling sets up the Decameron&#x27;s core arguments about wit, faith, sacred fraud, noble speech, and the persistence of value under moral collapse. Its marquee novellas are Ser Ciappelletto&#x27;s false deathbed confession, which mints the wickedest of men into a venerated saint, and Abraham the Jew&#x27;s conversion after witnessing Rome&#x27;s clerical corruption—faith surviving its ministers.</div>
     <div class="prose">
 <p>The unit opens with Boccaccio&#x27;s Author-Prologue to the ladies (justifying the grim beginning as a &quot;rugged mountain&quot; one must cross for the plain beyond), moves into the celebrated plague description (1348 Florence), then narrates the formation of the <em>brigata</em>—seven ladies and three men who meet by chance at Santa Maria Novella and withdraw together to a hilltop palace two miles outside the city. Their first act in the country is to constitute a monarchy: Pampinea elected queen, a full household ordered, a daily schedule imposed. The stories of Day One are free-topic (each storyteller chooses what to tell); at day&#x27;s end Pampinea passes the crown to Filomena, who announces the theme for Day Two: people who, after adversity, attain an unexpectedly joyful outcome.</p>
 <h2 id="themes">Themes</h2>
@@ -67,16 +75,50 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a> — the plague is what legibility-failure feels like (burial records, census, kin-ties all break); Abraham&#x27;s audit of Rome catches labels decoupled from referents.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>1596</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-proem">DEC 01 — Proem &amp; Author&#x27;s Introduction</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-03">DEC 04 — Day the Third</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-06">DEC 07 — Day the Sixth</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-07">DEC 08 — Day the Seventh</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-10">DEC 11 — Day the Tenth</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-conclusion">DEC 12 — Conclusion of the Author</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Supports</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap">gramsci-gap</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap">gramsci-gap</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/decameron">decameron</a><a class="tag" href="/wiki/topics/boccaccio">boccaccio</a><a class="tag" href="/wiki/topics/plague">plague</a><a class="tag" href="/wiki/topics/brigata">brigata</a><span class="tag tag-lone" title="Only this note uses it">wit-and-fortune</span><span class="tag tag-lone" title="Only this note uses it">social-order</span><a class="tag" href="/wiki/topics/clergy-satire">clergy-satire</a><a class="tag" href="/wiki/topics/frame-narrative">frame-narrative</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

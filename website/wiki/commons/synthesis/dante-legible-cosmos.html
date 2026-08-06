@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Dante&#x27;s Legible Cosmos and Its Limit</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Dante&#x27;s Legible Cosmos and Its Limit</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Synthesis · updated 25 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/synthesis/dante-legible-cosmos.md">source on GitHub</a></div>
-  <div class="note-summary">Across the Comedy Dante builds the supreme fantasy of a fully readable moral cosmos — Hell&#x27;s calibrated contrapasso, Malebolge&#x27;s engineered trenches, Cocytus&#x27;s cadastre, Purgatory&#x27;s gate-apparatus, Paradise&#x27;s self-spelling eagle — and then, in the Eagle of Jupiter&#x27;s rebuke and the salvation of pagans, stages that legibility&#x27;s own limit.</div>
-  <div class="tags"><span class="tag">dante</span><span class="tag">legibility</span><span class="tag">contrapasso</span><span class="tag">divine-justice</span><span class="tag">world-machines</span><span class="tag">paradiso</span><span class="tag">inferno</span><span class="tag">cross-cutting</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Synthesis · updated 25 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/synthesis/dante-legible-cosmos.md">source on GitHub</a></div>
+    <div class="note-summary">Across the Comedy Dante builds the supreme fantasy of a fully readable moral cosmos — Hell&#x27;s calibrated contrapasso, Malebolge&#x27;s engineered trenches, Cocytus&#x27;s cadastre, Purgatory&#x27;s gate-apparatus, Paradise&#x27;s self-spelling eagle — and then, in the Eagle of Jupiter&#x27;s rebuke and the salvation of pagans, stages that legibility&#x27;s own limit.</div>
     <div class="prose">
 <p>A cross-cutting reading of the Comedy. Across all three canticles the poem constructs the most totalizing <em>legibility machine</em> imaginable — a moral universe in which every soul is examined, classified, measured, and assigned an exact spatial coordinate that encodes the nature and degree of its sin or merit — and then, at its theological summit, explicitly stages the point at which that legibility fails. No single reading unit states this; the claim lives in the combination.</p>
 <h2 id="the-machine">The machine</h2>
@@ -50,16 +59,37 @@
 <h2 id="the-connection">The connection</h2>
 <p>Read together, these units make one claim that none makes alone: the Comedy is at once the supreme <em>fantasy</em> of a fully readable cosmos and its own <em>critique</em> of legibility&#x27;s reach. The drive to total order is affirmed as divine — and then declared, by the highest authority inside the poem, to exceed any finite reading of it. This is a much older cousin of the tension WMP tracks between legibility as an optimization target and the illegible remainder it can never fully absorb, with one striking inversion: Dante locates the illegible not in resistant, low-level complexity beneath the grid but in a justice too deep <em>above</em> it.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-2">The Knight&#x27;s Tale, Part 2: The Lists, the Tournament, and the First Mover</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>552</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-knights-tale-part-2">The Knight&#x27;s Tale, Part 2: The Lists, the Tournament, and the First Mover</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/dante">dante</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/contrapasso">contrapasso</a><a class="tag" href="/wiki/topics/divine-justice">divine-justice</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/paradiso">paradiso</a><a class="tag" href="/wiki/topics/inferno">inferno</a><a class="tag" href="/wiki/topics/cross-cutting">cross-cutting</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

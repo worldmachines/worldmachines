@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Frames and Framing</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Frames and Framing</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/frames-and-framing.md">source on GitHub</a></div>
-  <div class="note-summary">A frame is an explanatory structure that defines entities by their relationships to other entities — the cognitive unit that organizes data, guides search, and makes perception possible.</div>
-  <div class="tags"><span class="tag">sensemaking</span><span class="tag">cognition</span><span class="tag">frames</span><span class="tag">knowledge-structures</span><span class="tag">naturalistic-decision-making</span><span class="tag">macrocognition</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/frames-and-framing.md">source on GitHub</a></div>
+    <div class="note-summary">A frame is an explanatory structure that defines entities by their relationships to other entities — the cognitive unit that organizes data, guides search, and makes perception possible.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>A <strong>frame</strong> is an explanatory structure that defines entities by describing their relationship to other entities. Klein et al. (2007) define it as &quot;a structure for accounting for the data and guiding the search for more data. It reflects a person&#x27;s compiled experiences.&quot;</p>
@@ -46,7 +55,7 @@
 <li><strong>Mental model</strong> — causal understanding of how a system works</li>
 </ul>
 <h2 id="the-data-frame-relationship">The Data-Frame Relationship</h2>
-<p>The core insight from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span>: <em>neither data nor frame comes first.</em> The relationship is constitutive and bidirectional:</p>
+<p>The core insight from <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a>: <em>neither data nor frame comes first.</em> The relationship is constitutive and bidirectional:</p>
 <blockquote><p>&quot;The data identify the relevant frame, and the frame determines which data are noticed. Neither of these comes first.&quot;</p></blockquote>
 <p>This is analogous to a hidden-figures task: once the frame becomes clear, you cannot <em>not</em> see the data it organizes. Before the frame, those same data are invisible.</p>
 <p>Frames &quot;accept&quot; information as it becomes available, and the frame is changed by that information; it is used to &quot;direct&quot; exploratory activities that make more data available, by which it is further modified. This is Neisser&#x27;s (1976) perceptual cycle applied to macrocognition.</p>
@@ -67,39 +76,83 @@
 <h2 id="what-a-frame-is-not">What a Frame Is Not</h2>
 <p>A frame is <em>not</em> a collection of inferences drawn from the data, although it can include inferences. Paraphrasing Neisser: a frame is &quot;that portion of the perceptual cycle that is internal to the perceiver, modifiable by experience, and specific to what is being perceived.&quot;</p>
 <h2 id="frame-vs-situation-awareness">Frame vs. Situation Awareness</h2>
-<p>Endsley&#x27;s (1995) <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Situation Awareness&quot;">Situation Awareness</span> describes sensemaking as a <em>state of knowledge</em>. The data-frame view differs critically: frames determine what counts as data in the first place. We are not just retrieving and assembling accurate information; we are constructing what &quot;data&quot; means. The frame is the constructive apparatus, not a filing cabinet being filled.</p>
+<p>Endsley&#x27;s (1995) <a class="wikilink-wanted" href="/wiki/wanted/situation-awareness" title="No note is called &quot;Situation Awareness&quot; yet — see who is asking for it">Situation Awareness</a> describes sensemaking as a <em>state of knowledge</em>. The data-frame view differs critically: frames determine what counts as data in the first place. We are not just retrieving and assembling accurate information; we are constructing what &quot;data&quot; means. The frame is the constructive apparatus, not a filing cabinet being filled.</p>
 <h2 id="frame-selection-and-anchors">Frame Selection and Anchors</h2>
-<p>Frames are selected from a small number of key anchors — typically 3–4 salient data elements. The initial anchor(s) elicit the initial frame, which then guides further data search. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anchoring in Sensemaking&quot;">Anchoring in Sensemaking</span>.</p>
+<p>Frames are selected from a small number of key anchors — typically 3–4 salient data elements. The initial anchor(s) elicit the initial frame, which then guides further data search. See <a class="wikilink" href="/wiki/aneesh/concepts/anchoring-in-sensemaking" title="Written [[Anchoring in Sensemaking]], resolved to anchoring-in-sensemaking">Anchoring in Sensemaking</a>.</p>
 <h2 id="frame-preservation-and-fixation">Frame Preservation and Fixation</h2>
-<p>Because frames filter what gets noticed, inconsistent data can be explained away rather than treated as evidence against the frame. This is adaptive (frames need stability to function) and pathological (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fixation Error&quot;">Fixation Error</span>). Feltovich, Coulson &amp; Spiro (2001) catalog &quot;knowledge shields&quot; — tactics experts use to preserve frames against countervailing evidence: arguing from authority, invoking special cases, ignoring secondary effects.</p>
+<p>Because frames filter what gets noticed, inconsistent data can be explained away rather than treated as evidence against the frame. This is adaptive (frames need stability to function) and pathological (see <a class="wikilink" href="/wiki/aneesh/concepts/fixation-error" title="Written [[Fixation Error]], resolved to fixation-error">Fixation Error</a>). Feltovich, Coulson &amp; Spiro (2001) catalog &quot;knowledge shields&quot; — tactics experts use to preserve frames against countervailing evidence: arguing from authority, invoking special cases, ignoring secondary effects.</p>
 <h2 id="piagets-parallel">Piaget&#x27;s Parallel</h2>
 <p>Elaborating a frame resembles Piaget&#x27;s <em>assimilation</em> — fitting new data into existing structure. Reframing resembles <em>accommodation</em> — restructuring the frame to fit data that cannot be assimilated.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — source paper</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anchoring in Sensemaking&quot;">Anchoring in Sensemaking</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fixation Error&quot;">Fixation Error</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Reframing&quot;">Reframing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Just-in-Time Mental Models&quot;">Just-in-Time Mental Models</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking Forms&quot;">Sensemaking Forms</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Situation Awareness — Endsley&quot;">Situation Awareness — Endsley</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Recognition-Primed Decision Model&quot;">Recognition-Primed Decision Model</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Macrocognition&quot;">Macrocognition</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — source paper</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anchoring-in-sensemaking" title="Written [[Anchoring in Sensemaking]], resolved to anchoring-in-sensemaking">Anchoring in Sensemaking</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fixation-error" title="Written [[Fixation Error]], resolved to fixation-error">Fixation Error</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/reframing" title="Written [[Reframing]], resolved to reframing">Reframing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/just-in-time-mental-models" title="Written [[Just-in-Time Mental Models]], resolved to just-in-time-mental-models">Just-in-Time Mental Models</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sensemaking-forms" title="Written [[Sensemaking Forms]], resolved to sensemaking-forms">Sensemaking Forms</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/situation-awareness-endsley" title="No note is called &quot;Situation Awareness — Endsley&quot; yet — see who is asking for it">Situation Awareness — Endsley</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/recognition-primed-decision-model" title="Written [[Recognition-Primed Decision Model]], resolved to recognition-primed-decision-model">Recognition-Primed Decision Model</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/macrocognition" title="Written [[Macrocognition]], resolved to macrocognition">Macrocognition</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">5</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/geophilosophy-three-dimensions">Geophilosophy: Three Dimensions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/limits-of-mapping-bryant">Limits of Mapping (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/onto-cartography-as-practice">Onto-Cartography as Practice</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/prenotions">Prenotions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/strategic-cartography">Strategic Cartography</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>18</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>631</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/sensemaking-forms">Forms of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/anchoring-in-sensemaking">Anchoring in Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/macrocognition">Macrocognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/fixation-error">Fixation Error</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/reframing">Reframing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/abductive-reasoning">Abductive Reasoning</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/recognition-primed-decision-model">Recognition-Primed Decision Model</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>10 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/just-in-time-mental-models">Just-in-Time Mental Models</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/onto-cartography-as-practice">Onto-Cartography as Practice</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/prenotions">Prenotions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/strategic-cartography">Strategic Cartography</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-the-unit-of-cognition">Frames as the Unit of Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/limits-of-mapping-bryant">Limits of Mapping (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/geophilosophy-three-dimensions">Geophilosophy: Three Dimensions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/klein-data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking — Klein, Phillips, Rall &amp; Peluso (2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-information-overload">Sensemaking and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/sensemaking-forms">Forms of Sensemaking</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/macrocognition">Macrocognition</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/fixation-error">Fixation Error</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/anchoring-in-sensemaking">Anchoring in Sensemaking</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">7</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/cognition">cognition</a><a class="tag" href="/wiki/topics/frames">frames</a><span class="tag tag-lone" title="Only this note uses it">knowledge-structures</span><a class="tag" href="/wiki/topics/naturalistic-decision-making">naturalistic-decision-making</a><a class="tag" href="/wiki/topics/macrocognition">macrocognition</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

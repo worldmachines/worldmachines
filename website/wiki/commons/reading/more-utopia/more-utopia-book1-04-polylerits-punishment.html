@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/more-utopia/">Utopia</a> <b>/</b> <span>Restitution, Not the Gallows: The Polylerits and Whose Ideas Get Heard</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Restitution, Not the Gallows: The Polylerits and Whose Ideas Get Heard</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book1-04-polylerits-punishment.md">source on GitHub</a></div>
-  <div class="note-summary">Raphael Hythloday rebuts the Counsellor&#x27;s defense of hanging thieves by describing the Polylerits, a Persian tributary people whose penal code replaces execution with restitution and unchained public labor secured by visible marks rather than walls, and the scene closes on the same proposal being scorned when Raphael offers it but applauded when the Cardinal repeats a hedged version of it.</div>
-  <div class="tags"><span class="tag">thomas-more</span><span class="tag">utopia</span><span class="tag">capital-punishment</span><span class="tag">restorative-justice</span><span class="tag">penal-labor</span><span class="tag">legibility</span><span class="tag">satire</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/accommodation-of-modernity">accommodation-of-modernity</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book1-04-polylerits-punishment.md">source on GitHub</a></div>
+    <div class="note-summary">Raphael Hythloday rebuts the Counsellor&#x27;s defense of hanging thieves by describing the Polylerits, a Persian tributary people whose penal code replaces execution with restitution and unchained public labor secured by visible marks rather than walls, and the scene closes on the same proposal being scorned when Raphael offers it but applauded when the Cardinal repeats a hedged version of it.</div>
     <div class="prose">
 <p>At Cardinal Morton&#x27;s dinner table, Raphael Hythloday resumes the argument he had begun about English justice, rebutting the Counsellor&#x27;s defense of hanging thieves on deterrence grounds, then laying out at length the penal code of the Polylerits — a Persian tributary people who replace execution with restitution to the victim and public forced labor secured not by walls or chains but by visible marks on the body — before the scene turns on itself: the Cardinal&#x27;s cautious rewording of Raphael&#x27;s own proposal wins instant approval from a table that had greeted Raphael&#x27;s version with silence and headshaking.</p>
 <h2 id="themes">Themes</h2>
@@ -50,16 +58,46 @@
 <p><strong>c4 — structural non-conspiracy and the path back to freedom.</strong> Escape prevented by engineered isolation between jurisdictions, balanced against a real, yearly-exercised route to parole.</p>
 <p><strong>c5 — the same proposal, two verdicts.</strong> The Counsellor&#x27;s flat dismissal of Raphael&#x27;s plan against the table&#x27;s applause for the Cardinal&#x27;s near-identical hedge, closing the unit on its satirical note.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>727</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-06-treasure-and-corrupt-counsel">Corrupt Counsel, Captured Courts, and the Macarian Vow Against Treasure</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-02-serving-princes">Raphael’s Refusal: Counsel, Flattery, and the Uselessness of Wisdom at Court</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-03-cardinal-morton-theft">Sheep Devouring Men: Hythloday&#x27;s Case Against Hanging Thieves</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-05-jester-and-mock-counsel">The Cardinal&#x27;s Fool and the Achorians: Court Flattery and the Case Against Conquest</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-07-philosophy-in-courts">The Play in Progress: Civil Philosophy versus Principled Withdrawal</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/accommodation-of-modernity">accommodation-of-modernity</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/thomas-more">thomas-more</a><a class="tag" href="/wiki/topics/utopia">utopia</a><a class="tag" href="/wiki/topics/capital-punishment">capital-punishment</a><span class="tag tag-lone" title="Only this note uses it">restorative-justice</span><span class="tag tag-lone" title="Only this note uses it">penal-labor</span><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/satire">satire</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

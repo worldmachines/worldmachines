@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,43 +26,83 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Hunter vs. Dancer Curiosity</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Hunter vs. Dancer Curiosity</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/hunter-vs-dancer-curiosity.md">source on GitHub</a></div>
-  <div class="note-summary">A typology of curiosity styles: the hunter (tight conceptual clusters, goal-directed) vs. the dancer (associative, high forward flow) — and the argument that breakthroughs require dancer-style exploration even in STEM.</div>
-  <div class="tags"><span class="tag">creativity</span><span class="tag">epistemics</span><span class="tag">curiosity</span><span class="tag">expertise</span><span class="tag">innovation</span><span class="tag">feyerabend</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/hunter-vs-dancer-curiosity.md">source on GitHub</a></div>
+    <div class="note-summary">A typology of curiosity styles: the hunter (tight conceptual clusters, goal-directed) vs. the dancer (associative, high forward flow) — and the argument that breakthroughs require dancer-style exploration even in STEM.</div>
     <div class="prose">
 <h2 id="the-distinction">The Distinction</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>) draws on cognitive research to distinguish two styles of intellectual exploration:</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>) draws on cognitive research to distinguish two styles of intellectual exploration:</p>
 <ul>
 <li><strong>Hunter curiosity</strong>: tight conceptual clusters, goal-directed exploration, efficient at finding answers within known territory. Characteristic of STEM education and professional expertise.</li>
 <li><strong>Dancer curiosity</strong>: associative, ranging, high <em>forward flow</em> — significant conceptual distance between successive thoughts. More likely to generate genuinely novel connections.</li>
 </ul>
-<p>&quot;Forward flow&quot; is a technical term from curiosity research: the degree to which one thought leads to a conceptually distant next thought, rather than a nearby one. High forward flow is closer to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Paul Feyerabend&quot;">Paul Feyerabend</span>&#x27;s epistemological &quot;anything goes&quot; — the claim that scientific discovery is not governed by a single method but requires methodological anarchy.</p>
+<p>&quot;Forward flow&quot; is a technical term from curiosity research: the degree to which one thought leads to a conceptually distant next thought, rather than a nearby one. High forward flow is closer to <a class="wikilink" href="/wiki/aneesh/entities/paul-feyerabend" title="Written [[Paul Feyerabend]], resolved to paul-feyerabend">Paul Feyerabend</a>&#x27;s epistemological &quot;anything goes&quot; — the claim that scientific discovery is not governed by a single method but requires methodological anarchy.</p>
 <h2 id="why-this-matters-for-expertise">Why This Matters for Expertise</h2>
 <p>The hunter/dancer distinction complicates the standard picture of expertise: deep expertise optimizes for hunter-style efficiency, which is productive within a paradigm but poor at generating cross-domain connections that produce paradigm shifts.</p>
 <p>Novel breakthroughs require dancer-style exploration — what the author calls &quot;walking&quot; rather than climbing. This is the metaphor behind &quot;Dancing on the Shoulders of Giants&quot; vs. the traditional &quot;standing on the shoulders of giants&quot;: standing is static accumulation, dancing is active traversal.</p>
 <h2 id="implications-for-ai">Implications for AI</h2>
 <p>LLMs, in their current form, mimic a kind of hyper-hunter style: they retrieve and recombine in statistically predictable ways, producing outputs close to the mean of their training data. This makes them useful for execution within known territory but not for generating genuinely novel conceptual leaps.</p>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> leaves dancer-curiosity with the human expert and gives the LLM the hunter role: navigating structured knowledge efficiently.</p>
+<p>The <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> leaves dancer-curiosity with the human expert and gives the LLM the hunter role: navigating structured knowledge efficiently.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Paul Feyerabend&quot;">Paul Feyerabend</span> — the epistemological anchor for high forward flow</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Expertise&quot;">Expertise</span> — dancer curiosity as the undervalued component of frontier expertise</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Muddling Through&quot;">Muddling Through</span> — the risk-managed mode of frontier problem-solving, distinct from both pure hunting and pure dancing</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — the division of cognitive labor</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/paul-feyerabend" title="Written [[Paul Feyerabend]], resolved to paul-feyerabend">Paul Feyerabend</a> — the epistemological anchor for high forward flow</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/expertise" title="Written [[Expertise]], resolved to expertise">Expertise</a> — dancer curiosity as the undervalued component of frontier expertise</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/muddling-through" title="Written [[Muddling Through]], resolved to muddling-through">Muddling Through</a> — the risk-managed mode of frontier problem-solving, distinct from both pure hunting and pure dancing</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> — the division of cognitive labor</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>335</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/muddling-through">Muddling Through</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaac-newton">Isaac Newton (1643–1727)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/paul-feyerabend">Paul Feyerabend (1924–1994)</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/muddling-through">Muddling Through</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/wrights-law">Wright&#x27;s Law</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/epistemics">epistemics</a><a class="tag" href="/wiki/topics/curiosity">curiosity</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/innovation">innovation</a><span class="tag tag-lone" title="Only this note uses it">feyerabend</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

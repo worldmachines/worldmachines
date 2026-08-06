@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Karl E. Weick</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Karl E. Weick</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/karl-weick.md">source on GitHub</a></div>
-  <div class="note-summary">Karl E. Weick — organizational theorist at the University of Michigan, known for sensemaking theory, loose coupling, and enactment; author of &#x27;What Theory Is Not, Theorizing Is&#x27; (1995).</div>
-  <div class="tags"><span class="tag">karl-weick</span><span class="tag">sensemaking</span><span class="tag">organizational-theory</span><span class="tag">theorizing</span><span class="tag">epistemology</span><span class="tag">mann-gulch</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/karl-weick.md">source on GitHub</a></div>
+    <div class="note-summary">Karl E. Weick — organizational theorist at the University of Michigan, known for sensemaking theory, loose coupling, and enactment; author of &#x27;What Theory Is Not, Theorizing Is&#x27; (1995).</div>
     <div class="prose">
 <h2 id="biographical-sketch">Biographical Sketch</h2>
 <p>Karl E. Weick is a professor of organizational behavior and psychology at the University of Michigan (Ross School of Business). One of the most influential organizational theorists of the 20th century.</p>
@@ -73,26 +82,73 @@
 <li>During reframing, previously discarded data become significant</li>
 </ul>
 <p>Key difference: Weick&#x27;s sensemaking is primarily organizational and retrospective (&quot;How do I make sense of what I just did?&quot;). Klein&#x27;s is primarily individual and prospective (&quot;What is happening, and what should I do?&quot;). Weick&#x27;s enactment thesis — that people actively constitute their environments — maps onto Klein&#x27;s claim that data are frame-constructed, not given.</p>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames as the Unit of Cognition&quot;">Frames as the Unit of Cognition</span>.</p>
+<p>See <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> and <a class="wikilink" href="/wiki/aneesh/synthesis/frames-as-the-unit-of-cognition" title="Written [[Frames as the Unit of Cognition]], resolved to frames-as-the-unit-of-cognition">Frames as the Unit of Cognition</a>.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Theory as Process vs Product&quot;">Theory as Process vs Product</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking and Organization — Weick&quot;">Sensemaking and Organization — Weick</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mann Gulch Disaster — Sensemaking Collapse&quot;">Mann Gulch Disaster — Sensemaking Collapse</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;World Machines as Interim Theory&quot;">World Machines as Interim Theory</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Merton — Levels of Theoretical Approximation&quot;">Merton — Levels of Theoretical Approximation</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> — Klein et al.&#x27;s extension of Weick&#x27;s theory</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames as the Unit of Cognition&quot;">Frames as the Unit of Cognition</span> — synthesis placing Weick in broader context</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — primary interlocutor</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/theory-as-process-vs-product" title="Written [[Theory as Process vs Product]], resolved to theory-as-process-vs-product">Theory as Process vs Product</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/sensemaking-and-organization-weick" title="No note is called &quot;Sensemaking and Organization — Weick&quot; yet — see who is asking for it">Sensemaking and Organization — Weick</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/mann-gulch-disaster-sensemaking-collapse" title="No note is called &quot;Mann Gulch Disaster — Sensemaking Collapse&quot; yet — see who is asking for it">Mann Gulch Disaster — Sensemaking Collapse</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/world-machines-as-interim-theory" title="Written [[World Machines as Interim Theory]], resolved to world-machines-as-interim-theory">World Machines as Interim Theory</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/merton-levels-of-theoretical-approximation" title="No note is called &quot;Merton — Levels of Theoretical Approximation&quot; yet — see who is asking for it">Merton — Levels of Theoretical Approximation</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> — Klein et al.&#x27;s extension of Weick&#x27;s theory</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/frames-as-the-unit-of-cognition" title="Written [[Frames as the Unit of Cognition]], resolved to frames-as-the-unit-of-cognition">Frames as the Unit of Cognition</a> — synthesis placing Weick in broader context</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — primary interlocutor</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>15</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>595</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/macrocognition">Macrocognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/world-machines-as-interim-theory">World Machines as Interim Theory: A Weickian Defense</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-places-sensemaking-as-place-making">Frames as Places, Sensemaking as Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/theory-as-process-vs-product">Theory as Process vs. Product</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/frames-as-the-unit-of-cognition">Frames as the Unit of Cognition</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>7 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/sociology-of-the-interesting">Sociology of the Interesting</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/klein-data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/data-frame-theory-of-sensemaking">A Data-Frame Theory of Sensemaking — Klein, Phillips, Rall &amp; Peluso (2007)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/belatedness-as-temporal-frame-fixation">Belatedness as Temporal Frame Fixation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/sensemaking-and-information-overload">Sensemaking and Information Overload</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/theorizing-as-sensemaking-weick-klein-convergence">Theorizing as Sensemaking — The Weick-Klein Convergence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/weick-what-theory-is-not">What Theory Is Not, Theorizing Is</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/gary-klein">Gary Klein</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturalistic-decision-making">Naturalistic Decision Making (NDM)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/sensemaking-forms">Forms of Sensemaking</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/frames-and-framing">Frames and Framing</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/anchoring-in-sensemaking">Anchoring in Sensemaking</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">karl-weick</span><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/organizational-theory">organizational-theory</a><a class="tag" href="/wiki/topics/theorizing">theorizing</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><span class="tag tag-lone" title="Only this note uses it">mann-gulch</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

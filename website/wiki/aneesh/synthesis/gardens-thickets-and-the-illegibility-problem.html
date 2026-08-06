@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,36 +26,45 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Gardens, Thickets, and the Illegibility Problem</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Gardens, Thickets, and the Illegibility Problem</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem.md">source on GitHub</a></div>
-  <div class="note-summary">Synthesis connecting Kempf&#x27;s analysis of the English garden as a failed reconciliation of nature and culture with Sathe&#x27;s thicket and Lohse&#x27;s nocturnal garden — three visions of what it means to cultivate something that isn&#x27;t legible to the systems that surround it; now anchored by a historical thicket, the Swiss Jura watchmaking fabrique (Landes).</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">garden</span><span class="tag">thicket</span><span class="tag">kulturkritik</span><span class="tag">legibility</span><span class="tag">rousseau</span><span class="tag">goethe</span><span class="tag">aneesh-sathe</span><span class="tag">florian-lohse</span><span class="tag">landes</span><span class="tag">terroir</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem.md">source on GitHub</a></div>
+    <div class="note-summary">Synthesis connecting Kempf&#x27;s analysis of the English garden as a failed reconciliation of nature and culture with Sathe&#x27;s thicket and Lohse&#x27;s nocturnal garden — three visions of what it means to cultivate something that isn&#x27;t legible to the systems that surround it; now anchored by a historical thicket, the Swiss Jura watchmaking fabrique (Landes).</div>
     <div class="prose">
 <h2 id="the-throughline">The Throughline</h2>
 <p>Three texts from this cluster all circle a common problem: <strong>what does it mean to cultivate something that can&#x27;t be explained to someone who isn&#x27;t standing in it?</strong></p>
 <p>The question surfaces differently in each:</p>
 <ul>
-<li>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span>: as a philosophical paradox — the English garden claims to be natural but is entirely artificial; Julie&#x27;s Elysium is a French garden pretending to be an English garden</li>
-<li>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span>: as a lived alternative — the nocturnal thicket gardener tends walnuts and frogs that &quot;came because the pond was right, not because I advertised it to the frogs&quot;; &quot;I couldn&#x27;t explain this place to someone who isn&#x27;t standing in it&quot;</li>
+<li>In <a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a>: as a philosophical paradox — the English garden claims to be natural but is entirely artificial; Julie&#x27;s Elysium is a French garden pretending to be an English garden</li>
+<li>In <a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a>: as a lived alternative — the nocturnal thicket gardener tends walnuts and frogs that &quot;came because the pond was right, not because I advertised it to the frogs&quot;; &quot;I couldn&#x27;t explain this place to someone who isn&#x27;t standing in it&quot;</li>
 <li>In <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> (Sathe&#x27;s concept): as a deliberate architecture — &quot;to build a thicket is to re-introduce friction into a world too smooth&quot;</li>
 </ul>
 <h2 id="the-english-gardens-failure-of-illegibility">The English Garden&#x27;s Failure of Illegibility</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span>&#x27;s diagnosis of the English garden is precisely that it tries to be legible — it tries to <em>look</em> natural while being entirely designed. It &quot;makes do with semblance because it turns reality into fantasia.&quot; Its naturalism is a brand, a performance, a calculated effect.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a>&#x27;s diagnosis of the English garden is precisely that it tries to be legible — it tries to <em>look</em> natural while being entirely designed. It &quot;makes do with semblance because it turns reality into fantasia.&quot; Its naturalism is a brand, a performance, a calculated effect.</p>
 <p>What makes the English garden <em>not</em> a thicket: it is designed to be navigable, pleasing, comprehensible. Its winding paths still go somewhere. Its &quot;wildness&quot; is curated. The illusion of freedom is manufactured to be consumed.</p>
 <p>Julie&#x27;s Elysium is the most honest version: she admits she created only the illusion. &quot;All this cannot be done without a modicum of illusion.&quot; But even this admission is designed — it maintains the semblance while confessing its constructedness.</p>
 <h2 id="the-thicket-as-anti-garden">The Thicket as Anti-Garden</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>&#x27;s thicket is the radical anti-garden:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>&#x27;s thicket is the radical anti-garden:</p>
 <ul>
 <li>Not designed to be seen from outside</li>
 <li>Cannot be mapped or indexed</li>
 <li>Does not simulate naturalness — it <em>is</em> unmanaged (or managed in ways invisible to outside observers)</li>
 <li>&quot;The walnuts fall and stay where they fall&quot;</li>
 </ul>
-<p>The nocturnal thicket in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span> makes this concrete: the gardener stumbled in by accident, stays because it makes sense from inside. &quot;I couldn&#x27;t explain this place to someone who isn&#x27;t standing in it. That used to bother me. Now I think that&#x27;s exactly what keeps it alive.&quot;</p>
+<p>The nocturnal thicket in <a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a> makes this concrete: the gardener stumbled in by accident, stays because it makes sense from inside. &quot;I couldn&#x27;t explain this place to someone who isn&#x27;t standing in it. That used to bother me. Now I think that&#x27;s exactly what keeps it alive.&quot;</p>
 <p>This is what the English garden cannot achieve: something that is kept alive precisely by its illegibility. The English garden&#x27;s beauty is exportable — Claude glass, picturesque aesthetic, printed guides. The thicket&#x27;s value is non-exportable.</p>
 <h2 id="a-historical-thicket-the-swiss-jura-landes">A Historical Thicket: The Swiss Jura (Landes)</h2>
 <p>The thicket has lived mostly as a concept and a near-future prescription. David Landes&#x27;s <em>Revolution in Time</em> (1983) supplies a fully historical instance that behaves exactly as the concept predicts — and one in which Landes uses the wiki&#x27;s own keyword, <em>terroir</em>, unprompted.</p>
@@ -78,7 +87,7 @@
 <p>The Voltairean garden endorses <strong>emplaced, particular, tended</strong> work without the Rousseauian claim that this heals the wound of civilization or the Goethe-Sathe insistence on illegibility. It is middle: legible but local, cultured but not grandiose.</p>
 <h2 id="the-tension">The Tension</h2>
 <p>A productive tension remains: the thicket&#x27;s value depends partly on remaining undiscovered — but essays about thickets (Sathe&#x27;s, Lohse&#x27;s) make the thicket legible. Every description of illegibility is an act of legibilization. Every map of unmappable territory becomes a map.</p>
-<p>This is the thicket version of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Homeopathic Critique&quot;">Homeopathic Critique</span>: using legible tools (essays, substack, wiki pages) to describe and advocate for illegibility. The treatment is delivered through the disease.</p>
+<p>This is the thicket version of <a class="wikilink" href="/wiki/aneesh/concepts/homeopathic-critique" title="Written [[Homeopathic Critique]], resolved to homeopathic-critique">Homeopathic Critique</a>: using legible tools (essays, substack, wiki pages) to describe and advocate for illegibility. The treatment is delivered through the disease.</p>
 <h2 id="essay-seeds">Essay Seeds</h2>
 <ul>
 <li><strong>&quot;The Garden of Illusions&quot;</strong>: An essay tracing the English garden from Rousseau to Goethe to the modern &quot;authentic experience&quot; industry (eco-tourism, farm-to-table, artisanal everything) — all English gardens pretending to be thickets</li>
@@ -86,35 +95,62 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The English Garden as Epistemic Object&quot;">The English Garden as Epistemic Object</span> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object" title="Written [[The English Garden as Epistemic Object]], resolved to the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a> — concept</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — concept (Sathe)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> — concept</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Homeopathic Critique&quot;">Homeopathic Critique</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span> — summary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/homeopathic-critique" title="Written [[Homeopathic Critique]], resolved to homeopathic-critique">Homeopathic Critique</a> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a> — summary</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">david-s-landes</a> — <em>Revolution in Time</em>; the Jura <em>fabrique</em> as historical thicket</li>
 <li><a class="wikilink" href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">rit-18-barrenness-of-the-soil</a> — the Jura terroir note</li>
 <li><a class="wikilink" href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">rit-17-multum-in-parvo</a> — Geneva&#x27;s guild legibility failing at the territorial edge</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">6</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-03">DEC 04 — Day the Third</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-06">DEC 07 — Day the Sixth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-07">DEC 08 — Day the Seventh</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>15</b><span>links out</span></div>
+      <div class="bearing"><b>1280</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">Legibility vs. Complexity — The Master Tension</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-18-barrenness-of-the-soil">RIT 18 — Notwithstanding the Barrenness of the Soil (Ch. 16)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-15-the-good-old-days-that-never-were">RIT 15 — The Good Old Days That Never Were (Ch. 13)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-03">DEC 04 — Day the Third</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-06">DEC 07 — Day the Sixth</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-07">DEC 08 — Day the Seventh</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/putting-out-system">Putting-Out System</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-17-multum-in-parvo">RIT 17 — Multum in Parvo (Ch. 15)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/garden">garden</a><a class="tag" href="/wiki/topics/thicket">thicket</a><a class="tag" href="/wiki/topics/kulturkritik">kulturkritik</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/rousseau">rousseau</a><a class="tag" href="/wiki/topics/goethe">goethe</a><span class="tag tag-lone" title="Only this note uses it">aneesh-sathe</span><a class="tag" href="/wiki/topics/florian-lohse">florian-lohse</a><a class="tag" href="/wiki/topics/landes">landes</a><a class="tag" href="/wiki/topics/terroir">terroir</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

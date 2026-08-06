@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Robert Putnam</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Robert Putnam</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/robert-putnam.md">source on GitHub</a></div>
-  <div class="note-summary">Robert Putnam (b. 1941) is an American political scientist best known for Bowling Alone (2000), which documented the decline of social capital and civic engagement in America over the second half of the 20th century.</div>
-  <div class="tags"><span class="tag">putnam</span><span class="tag">social-capital</span><span class="tag">civic-engagement</span><span class="tag">bowling-alone</span><span class="tag">community</span><span class="tag">social-isolation</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/robert-putnam.md">source on GitHub</a></div>
+    <div class="note-summary">Robert Putnam (b. 1941) is an American political scientist best known for Bowling Alone (2000), which documented the decline of social capital and civic engagement in America over the second half of the 20th century.</div>
     <div class="prose">
 <p><strong>Born</strong>: 1941<br>
 <strong>Affiliation</strong>: Harvard Kennedy School<br>
@@ -49,30 +58,59 @@
 <li>Electronic entertainment (especially television)</li>
 <li>Generational change (the &quot;civic generation&quot; of WWII-era Americans is dying out)</li>
 </ol>
-<p>The technological and values-based explanations — screens and individualism — that <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alex Mayyasi&quot;">Alex Mayyasi</span> characterizes as the dominant narrative of American social decline draw heavily on Putnam. Mayyasi&#x27;s contribution is to add the economic mechanism (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span>) that Putnam underweights.</p>
+<p>The technological and values-based explanations — screens and individualism — that <a class="wikilink-wanted" href="/wiki/wanted/alex-mayyasi" title="No note is called &quot;Alex Mayyasi&quot; yet — see who is asking for it">Alex Mayyasi</a> characterizes as the dominant narrative of American social decline draw heavily on Putnam. Mayyasi&#x27;s contribution is to add the economic mechanism (<a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a>) that Putnam underweights.</p>
 <h2 id="social-capital">Social Capital</h2>
 <p>Putnam distinguishes:</p>
 <ul>
 <li><strong>Bonding capital</strong>: ties within a group (family, ethnic community) — strong but potentially insular</li>
 <li><strong>Bridging capital</strong>: ties across groups — weaker but more valuable for civic life and information flow</li>
 </ul>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Third Places&quot;">Third Places</span> are primarily generators of bridging capital — the kind most under threat.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/third-places" title="Written [[Third Places]], resolved to third-places">Third Places</a> are primarily generators of bridging capital — the kind most under threat.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Third Places&quot;">Third Places</span> — the specific institution whose decline Putnam documents</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Isolation&quot;">Social Isolation</span> — the aggregate outcome of declining social capital</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span> — the underappreciated economic mechanism Mayyasi adds to Putnam&#x27;s account</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Infrastructure&quot;">Social Infrastructure</span> — the policy response implied by Putnam&#x27;s diagnosis</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol Cost Disease and Toxic Solitude&quot;">Baumol Cost Disease and Toxic Solitude</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/third-places" title="Written [[Third Places]], resolved to third-places">Third Places</a> — the specific institution whose decline Putnam documents</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/social-isolation" title="No note is called &quot;Social Isolation&quot; yet — see who is asking for it">Social Isolation</a> — the aggregate outcome of declining social capital</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a> — the underappreciated economic mechanism Mayyasi adds to Putnam&#x27;s account</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/social-infrastructure" title="Written [[Social Infrastructure]], resolved to social-infrastructure">Social Infrastructure</a> — the policy response implied by Putnam&#x27;s diagnosis</li>
+<li>Source: <a class="wikilink-wanted" href="/wiki/wanted/baumol-cost-disease-and-toxic-solitude" title="No note is called &quot;Baumol Cost Disease and Toxic Solitude&quot; yet — see who is asking for it">Baumol Cost Disease and Toxic Solitude</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>316</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/third-places">Third Places</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cost-disease-and-the-retreat-from-public-life">Cost Disease and the Retreat from Public Life</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/baumol-cost-disease-toxic-solitude">Why &#x27;Cost Disease&#x27; Is the Secret Force Behind America&#x27;s Toxic Solitude</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/baumols-cost-disease">Baumol&#x27;s Cost Disease</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/social-infrastructure">Social Infrastructure</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/anti-social-business-model">Anti-Social Business Model</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/scalability-and-social-life">Scalability and Social Life</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/third-places">Third Places</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/william-baumol">William Baumol</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">putnam</span><span class="tag tag-lone" title="Only this note uses it">social-capital</span><span class="tag tag-lone" title="Only this note uses it">civic-engagement</span><span class="tag tag-lone" title="Only this note uses it">bowling-alone</span><a class="tag" href="/wiki/topics/community">community</a><a class="tag" href="/wiki/topics/social-isolation">social-isolation</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

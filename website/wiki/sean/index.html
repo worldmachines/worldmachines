@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,18 +26,35 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
   <main class="wiki">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <span>Sean</span></nav>
+  <p class="eyebrow">Contributor</p>
   <h1>Sean</h1>
-  <p class="lede small">1 published note from <code>raw-notes/sean/</code>.</p>
+  <div class="figure-band">
+      <div class="band-cell"><b>1</b><span>notes</span></div>
+      <div class="band-cell"><b>0</b><span>inbound links</span></div>
+      <div class="band-cell"><b>0</b><span>books</span></div>
+  </div>
+  <p class="lede small">Ranked by how much the rest of the corpus leans on each note. Source files live in <code>raw-notes/sean/</code>.</p>
   <section>
-    <h2>Loose notes <span class="count">1</span></h2>
-    <ul class="rows">
-      <li class="row"><a href="/wiki/sean/babel-was-a-clue-1">Babel Was a Clue</a>
-        </li>
+    <h2 class="register"><span>Loose notes</span><span class="section-aside">1</span></h2>
+    <ul class="plate">
+      <li class="plate-row mag-1">
+        <span class="plate-line"><a class="plate-name" href="/wiki/sean/babel-was-a-clue-1">Babel Was a Clue</a><span class="plate-leader" aria-hidden="true"></span><span class="plate-figure">0</span></span>
+      </li>
     </ul>
   </section>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

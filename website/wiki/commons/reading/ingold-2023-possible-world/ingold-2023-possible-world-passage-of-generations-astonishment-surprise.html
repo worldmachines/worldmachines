@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> <b>/</b> <span>Generations as a Braid, and Astonishment Without Surprise</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Generations as a Braid, and Astonishment Without Surprise</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise.md">source on GitHub</a></div>
-  <div class="note-summary">Ingold replaces the image of generations as discrete stacked layers with an intergenerational braid of overlapping lives, then distinguishes the perpetual astonishment of open, attentive engagement with the world from the surprise that punctuates failed scientific prediction, arguing that not-knowing is not ignorance.</div>
-  <div class="tags"><span class="tag">generations</span><span class="tag">life-course</span><span class="tag">henri-bergson</span><span class="tag">not-knowing</span><span class="tag">anticipation-vs-prediction</span><span class="tag">astonishment</span><span class="tag">karl-popper</span><span class="tag">indigenous-knowledge</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/entities/henri-bergson">henri-bergson</a>, <a class="wikilink" href="/wiki/aneesh/concepts/trajectories-as-stories-so-far">trajectories-as-stories-so-far</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise.md">source on GitHub</a></div>
+    <div class="note-summary">Ingold replaces the image of generations as discrete stacked layers with an intergenerational braid of overlapping lives, then distinguishes the perpetual astonishment of open, attentive engagement with the world from the surprise that punctuates failed scientific prediction, arguing that not-knowing is not ignorance.</div>
     <div class="prose">
 <p>Ingold asks how the infinitude of life — lived, as he has argued elsewhere in this essay, as a &quot;one-possibility thing&quot; that carries on for an Aboriginal-cosmology &quot;everywhen&quot; — can be reconciled with the plain fact that every mortal being dies, and answers by rejecting the common-sense picture of generations as discrete layers that inherit from and replace one another in favour of an intergenerational braid whose overlapping strands keep the life-process going without any single strand being &quot;inherited.&quot; A childhood anecdote — meeting an &quot;aged, bearded moon-watcher&quot; while walking home from school — then pivots the unit into its second argument: that astonishment (the stance of those genuinely open to the world) is not the same thing as surprise (what happens to prediction when it fails), and that the not-knowing on which astonishment depends is categorically different from ignorance.</p>
 <h2 id="themes">Themes</h2>
@@ -49,18 +57,48 @@
 <p><strong>Not-knowing, ignorance, and the methodology of distance.</strong> The unit&#x27;s central conceptual move: astonishment is to surprise as anticipation is to prediction, and not-knowing is to ignorance as anticipation is to prediction&#x27;s failure — with Popper&#x27;s conjecture-and-refutation model named as the disciplinary machinery that keeps ignorance and prediction locked together, and scientific &quot;methodology&quot; glossed as a set of protocols for holding the world at a distance rather than opening oneself to it.</p>
 <p><strong>Scientists vs. the perpetually astonished.</strong> The unit&#x27;s closing contrast: scientists are surprised but not astonished because they believe the world can be &quot;held to account,&quot; while indigenous peoples and children — not yet disciplined out of openness — are astonished but never surprised, their vulnerability doubling as strength, resilience, and wisdom, ending on the rhetorical question that gives the essay&#x27;s larger argument its emotional close: why gaze at the moon at all, &quot;if it not because it is so astonishing?&quot;</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>1032</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-potential-fulfilment-doing-undergoing">Replenishing Potential, Not Fulfilling It: Doing and Undergoing</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom">The Man in the Moon: Knowledge, Wisdom, Self and Soul</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-two-sides-of-attention-falling-forwards">The Two Sides of Attention: From Exposure to Falling Forwards</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning">Correspondence versus Interaction, Understanding versus Undercommoning</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/entities/henri-bergson">henri-bergson</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/trajectories-as-stories-so-far">trajectories-as-stories-so-far</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/generations">generations</a><a class="tag" href="/wiki/topics/life-course">life-course</a><a class="tag" href="/wiki/topics/henri-bergson">henri-bergson</a><a class="tag" href="/wiki/topics/not-knowing">not-knowing</a><a class="tag" href="/wiki/topics/anticipation-vs-prediction">anticipation-vs-prediction</a><a class="tag" href="/wiki/topics/astonishment">astonishment</a><span class="tag tag-lone" title="Only this note uses it">karl-popper</span><span class="tag tag-lone" title="Only this note uses it">indigenous-knowledge</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

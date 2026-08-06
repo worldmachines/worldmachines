@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Man of Law&#x27;s Prologue and Tale: Constance Adrift</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Man of Law&#x27;s Prologue and Tale: Constance Adrift</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-man-of-laws-tale.md">source on GitHub</a></div>
-  <div class="note-summary">In his Prologue the Man of Law debates the theft of time, the miseries of poverty, and his own literary debts before telling of Constance, the Roman emperor&#x27;s daughter, who is twice married into foreign courts and twice set adrift on a rudderless ship by the schemes of two murderous, order-defending mothers-in-law, her serial survival offered throughout as proof that Christian providence, not the stars or Fortune, governs human affairs.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">canterbury-tales</span><span class="tag">man-of-law</span><span class="tag">constance-legend</span><span class="tag">providence-and-fortune</span><span class="tag">astrology</span><span class="tag">exile-and-the-sea</span><span class="tag">gender-and-marriage-politics</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/fiat-progress">fiat-progress</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-man-of-laws-tale.md">source on GitHub</a></div>
+    <div class="note-summary">In his Prologue the Man of Law debates the theft of time, the miseries of poverty, and his own literary debts before telling of Constance, the Roman emperor&#x27;s daughter, who is twice married into foreign courts and twice set adrift on a rudderless ship by the schemes of two murderous, order-defending mothers-in-law, her serial survival offered throughout as proof that Christian providence, not the stars or Fortune, governs human affairs.</div>
     <div class="prose">
 <p>The Host, having calculated the hour from the sun&#x27;s angle and the length of shadows, chides the pilgrims for wasting time and calls on the Man of Law to deliver his promised tale. The Man of Law agrees, but first surveys Chaucer&#x27;s own catalogue of works about faithful and wronged women, pointedly refusing to retell the incestuous stories of Canace and Apollonius of Tyre (a jab widely read as aimed at Chaucer&#x27;s contemporary Gower, who had told both). The Tale proper opens with a long moralizing meditation on the shame of poverty, then narrates the legend of Constance: married off to the Sultan of Syria after he converts for her sake, she alone survives a massacre engineered by her Saracen mother-in-law and is cast to sea in a rudderless ship; she washes up in Northumberland, converts her hosts, is falsely accused of murder by a spurned suitor and vindicated by a disembodied voice and instant divine judgement; she marries King Alla, only to be exiled again by a forged letter scheme run by his mother Donegild; she drifts for years, is rescued (unknowingly) by her own Roman kinsman, and is eventually reunited with husband, father, and — after Alla&#x27;s early death — lives out her life piously in Rome.</p>
 <h2 id="themes">Themes</h2>
@@ -47,17 +55,47 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The Host&#x27;s opening tirade on time (&quot;Lordings... Lose no time, as farforth as ye may... Let us not moulde thus in idleness&quot;) sets the frame-narrative&#x27;s urgency and its Senecan source. The Man of Law&#x27;s catalogue-refusal of Canace and Apollonius stages his curatorial ethics and the Gower subtext. The poverty exordium (&quot;O scatheful harm, condition of poverty&quot;) supplies the Tale&#x27;s Boethian/Innocentian moral ballast before the narrative proper begins. The Sultaness&#x27;s council speech is the clearest statement of an old order&#x27;s violent self-preservation. The astrological apostrophe to the Firmament stages the poem&#x27;s determinism-versus-providence argument at its most explicit. The Daniel/Jonah/Mary-of-Egypt catalogue, delivered while Constance drifts unprovisioned at sea, is the tale&#x27;s most concentrated statement of its providential thesis.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>863</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-parsons-tale">The Parson&#x27;s Tale: Penitence Replaces the &quot;Tale,&quot; and Chaucer Retracts</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/belatedness">Belatedness</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-legibility-machines">Chaucer&#x27;s Legibility Machines</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/synthesis/chaucer-marriage-group">Chaucer&#x27;s Marriage Group and the Striving to Self-Govern</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/fiat-progress">fiat-progress</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><span class="tag tag-lone" title="Only this note uses it">man-of-law</span><span class="tag tag-lone" title="Only this note uses it">constance-legend</span><span class="tag tag-lone" title="Only this note uses it">providence-and-fortune</span><span class="tag tag-lone" title="Only this note uses it">astrology</span><span class="tag tag-lone" title="Only this note uses it">exile-and-the-sea</span><span class="tag tag-lone" title="Only this note uses it">gender-and-marriage-politics</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

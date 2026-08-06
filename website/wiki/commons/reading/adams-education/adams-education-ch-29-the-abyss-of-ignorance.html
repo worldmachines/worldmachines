@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>The Abyss of Ignorance</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Abyss of Ignorance</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance.md">source on GitHub</a></div>
-  <div class="note-summary">At sixty-five, Adams hunts for a single &quot;unit of force&quot; to ground a science of history, and finds every candidate — occult attraction, Pascal&#x27;s ennui, the Virgin&#x27;s Love, Aquinas&#x27;s Multiplicity, the kinetic theory of gases, the new psychology&#x27;s dissolving self — collapsing the promised Unity back into Multiplicity, so he converts the unresolved philosophical question into a historiographical method: two books measuring motion between a thirteenth-century pole of Unity and his own pole of Multiplicity.</div>
-  <div class="tags"><span class="tag">henry-adams</span><span class="tag">unity-and-multiplicity</span><span class="tag">force</span><span class="tag">virgin-of-chartres</span><span class="tag">kinetic-theory-of-gases</span><span class="tag">psychology-of-self</span><span class="tag">historiography-method</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/synthesis/world-machines-as-interim-theory">world-machines-as-interim-theory</a>, <a class="wikilink" href="/wiki/aneesh/concepts/arrow-of-time">arrow-of-time</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance.md">source on GitHub</a></div>
+    <div class="note-summary">At sixty-five, Adams hunts for a single &quot;unit of force&quot; to ground a science of history, and finds every candidate — occult attraction, Pascal&#x27;s ennui, the Virgin&#x27;s Love, Aquinas&#x27;s Multiplicity, the kinetic theory of gases, the new psychology&#x27;s dissolving self — collapsing the promised Unity back into Multiplicity, so he converts the unresolved philosophical question into a historiographical method: two books measuring motion between a thirteenth-century pole of Unity and his own pole of Multiplicity.</div>
     <div class="prose">
 <p>Set in the summer of 1902, this chapter follows Adams&#x27;s private philosophical hunt for a &quot;unit of force&quot; that could anchor a science of history: he tests occult attraction, Pascal&#x27;s ennui, the Virgin of Chartres, Thomas Aquinas&#x27;s Schools, the kinetic theory of gases, and the new psychology of the divided mind, and finds each promised Unity dissolving back into Multiplicity — until he abandons the search for a philosophical answer and turns the dilemma itself into the method for his life&#x27;s two remaining books.</p>
 <h2 id="themes">Themes</h2>
@@ -54,18 +62,48 @@
 <p>Adams then turns the same collapse on his own mind, describing it as unstable rather than whole: <strong>&quot;The mind, like the body, kept its unity unless it happened to lose balance... He was an acrobat, with a dwarf on his back, crossing a chasm on a slack-rope, and commonly breaking his neck.&quot;</strong></p>
 <p>The chapter resolves not in an answer but in a plan: <strong>&quot;Eight or ten years of study had led Adams to think he might use the century 1150-1250... as the unit from which he might measure motion down to his own time&quot;</strong>, fixing the two books — <em>Mont-Saint-Michel and Chartres: a Study of Thirteenth-Century Unity</em> and <em>The Education of Henry Adams: a Study of Twentieth-Century Multiplicity</em> — as his two points of relation, <strong>&quot;subject to correction from any one who should know better.&quot;</strong></p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>817</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-30-vis-inertiae">Vis Inertiae (1903)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-34-a-law-of-acceleration">A Law of Acceleration</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-editors-preface">Editor&#x27;s Preface: The Making and Withholding of The Education of Henry Adams</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/synthesis/world-machines-as-interim-theory">world-machines-as-interim-theory</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/arrow-of-time">arrow-of-time</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><a class="tag" href="/wiki/topics/unity-and-multiplicity">unity-and-multiplicity</a><a class="tag" href="/wiki/topics/force">force</a><span class="tag tag-lone" title="Only this note uses it">virgin-of-chartres</span><span class="tag tag-lone" title="Only this note uses it">kinetic-theory-of-gases</span><span class="tag tag-lone" title="Only this note uses it">psychology-of-self</span><a class="tag" href="/wiki/topics/historiography-method">historiography-method</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Explorer vs. Tourist</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Explorer vs. Tourist</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Explorer%20vs.%20Tourist.md">source on GitHub</a></div>
-  <div class="note-summary">A typological distinction between those who generate intelligibility in new territory (Explorers) and those who consume pre-existing intelligibility made by others (Tourists) — relevant across epistemic, spatial, and political domains.</div>
-  <div class="tags"><span class="tag">explorer</span><span class="tag">tourist</span><span class="tag">place-making</span><span class="tag">agency</span><span class="tag">epistemology</span><span class="tag">spatial-theory</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/Explorer%20vs.%20Tourist.md">source on GitHub</a></div>
+    <div class="note-summary">A typological distinction between those who generate intelligibility in new territory (Explorers) and those who consume pre-existing intelligibility made by others (Tourists) — relevant across epistemic, spatial, and political domains.</div>
     <div class="prose">
-<p><strong>Primary source</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span> (2025-12-17)<br>
-<strong>Extended by</strong>: <a class="wikilink" href="/wiki/aneesh/entities/geoff-manaugh">Geoff Manaugh</a>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bldgblog Nakatomi Space&quot;">Bldgblog Nakatomi Space</span> (via Bond/Bourne and McClane)</p>
+<p><strong>Primary source</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>, <a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> (2025-12-17)<br>
+<strong>Extended by</strong>: <a class="wikilink" href="/wiki/aneesh/entities/geoff-manaugh">Geoff Manaugh</a>, <a class="wikilink" href="/wiki/aneesh/summaries/bldgblog-nakatomi-space" title="Written [[Bldgblog Nakatomi Space]], resolved to bldgblog-nakatomi-space">Bldgblog Nakatomi Space</a> (via Bond/Bourne and McClane)</p>
 <h2 id="the-distinction">The Distinction</h2>
 <div class="table-wrap"><table>
 <thead><tr><th></th><th>Tourist</th><th>Explorer</th></tr></thead>
@@ -64,7 +73,7 @@
 <p>The Tourist trap is comfortable and difficult to recognize from the inside: consuming the intelligibility of others feels like understanding. The Explorer&#x27;s risk is the opposite — wandering without a base camp, mistaking drift for exploration (<a class="wikilink" href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a> is the over-correction).</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Shelter as Epistemic Engine&quot;">The Shelter as Epistemic Engine</span> — primary source</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine" title="Written [[The Shelter as Epistemic Engine]], resolved to the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> — primary source</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/configurancy">Configurancy</a> — high configurancy = Explorer capacity</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a> — the terrain on which the distinction operates</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a> — the Explorer&#x27;s risk of over-anchoring</li>
@@ -73,31 +82,62 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a> — what the Tourist requires, what the Explorer transcends</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">17</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/configurancy">Configurancy</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/homes-as-launchpads">Homes as Launchpads</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/legibility">Legibility</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/bldgblog-nakatomi-space">Nakatomi Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-making-and-resistance-the-constructive-side">Place-Making and Resistance: The Constructive Side</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/touristic-place-making">Touristic Place-Making</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-24-27">Thieves, Serpents, and Fraudulent Counselors</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>17</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>428</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility">Legibility</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/configurancy">Configurancy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>9 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/bldgblog-nakatomi-space">Nakatomi Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/container-metaphysics">Container Metaphysics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/homes-as-launchpads">Homes as Launchpads</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/touristic-place-making">Touristic Place-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-making-and-resistance-the-constructive-side">Place-Making and Resistance: The Constructive Side</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-24-27">Thieves, Serpents, and Fraudulent Counselors</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/place-making-as-epistemic-act">Place-Making as Epistemic Act</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-vs-place">Space vs. Place</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-shelter-as-epistemic-engine">The Shelter as Epistemic Engine</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility">Legibility</a><span class="rail-where">6</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/explorer">explorer</a><a class="tag" href="/wiki/topics/tourist">tourist</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/agency">agency</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/spatial-theory">spatial-theory</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

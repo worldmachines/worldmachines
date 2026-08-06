@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Technology as Place-Maker</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Technology as Place-Maker</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/technology-as-place-maker.md">source on GitHub</a></div>
-  <div class="note-summary">A cross-source synthesis: all technologies are place-makers — they interrupt undifferentiated space and create structured, meaning-laden environments. The question is whether the places they create orient or disorient, constrain or liberate.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">technology</span><span class="tag">place-making</span><span class="tag">AI</span><span class="tag">social-media</span><span class="tag">tools</span><span class="tag">epistemology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/technology-as-place-maker.md">source on GitHub</a></div>
+    <div class="note-summary">A cross-source synthesis: all technologies are place-makers — they interrupt undifferentiated space and create structured, meaning-laden environments. The question is whether the places they create orient or disorient, constrain or liberate.</div>
     <div class="prose">
 <h2 id="the-core-synthesis">The Core Synthesis</h2>
 <p>Across Sathe&#x27;s four essays, a consistent argument emerges: <strong>every technology is a place-making act</strong>, and technologies can be evaluated by the quality of the places they create.</p>
@@ -53,7 +62,7 @@
 <p>A good place-making technology:</p>
 <ol>
 <li>Creates genuine orientation (accurate mental maps).</li>
-<li>Completes the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Signal-to-Orientation Ladder&quot;">Signal-to-Orientation Ladder</span> (signal → information → orientation).</li>
+<li>Completes the <a class="wikilink" href="/wiki/aneesh/concepts/signal-to-orientation-ladder" title="Written [[Signal-to-Orientation Ladder]], resolved to signal-to-orientation-ladder">Signal-to-Orientation Ladder</a> (signal → information → orientation).</li>
 <li>Opens questions rather than foreclosing them as problems.</li>
 <li>Serves the user&#x27;s knowledge-building goal, not the platform&#x27;s engagement goal.</li>
 </ol>
@@ -70,7 +79,7 @@
 <li><strong>Problem-solvers</strong> (default mode): convert questions to answers, dissolve quests.</li>
 <li><strong>Socratic partners</strong> (upgraded mode): hold question-space open, provide normative mirror.</li>
 </ul>
-<p>The difference is entirely in the user&#x27;s posture. The same tool, used with a problem-solving posture, produces pre-answers. Used with a Socratic posture, it produces inquiry. See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs as Epistemic Tools&quot;">LLMs as Epistemic Tools</span>.</p>
+<p>The difference is entirely in the user&#x27;s posture. The same tool, used with a problem-solving posture, produces pre-answers. Used with a Socratic posture, it produces inquiry. See: <a class="wikilink" href="/wiki/aneesh/concepts/llms-as-epistemic-tools" title="Written [[LLMs as Epistemic Tools]], resolved to llms-as-epistemic-tools">LLMs as Epistemic Tools</a>.</p>
 <h2 id="historical-pattern">Historical Pattern</h2>
 <p>The printing press analogy is generative: every major information technology initially creates disorienting places (too much signal, no quality filters) and requires a cultural/institutional correction (bibliography, peer review, Socratic norms). We are in the disorientation phase with social media.</p>
 <p>The question is whether Socratic norms can emerge bottom-up (individual posture) or require top-down coordination (platform design, regulation). The essays argue for individual posture while acknowledging social pain ahead.</p>
@@ -82,24 +91,50 @@
 </ol>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chatbots, Bats &amp; Broken Oracles&quot;">Chatbots, Bats &amp; Broken Oracles</span> — LLMs as Socratic place-makers</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Thinking with Places&quot;">Thinking with Places</span> — tools as micro-places</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span> — social media as bad place-maker</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Printing Press and Information Overload&quot;">Printing Press and Information Overload</span> — historical pattern</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/chatbots-bats-and-broken-oracles" title="No note is called &quot;Chatbots, Bats &amp; Broken Oracles&quot; yet — see who is asking for it">Chatbots, Bats &amp; Broken Oracles</a> — LLMs as Socratic place-makers</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/thinking-with-places" title="Written [[Thinking with Places]], resolved to thinking-with-places">Thinking with Places</a> — tools as micro-places</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a> — social media as bad place-maker</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/printing-press-and-information-overload" title="Written [[Printing Press and Information Overload]], resolved to printing-press-and-information-overload">Printing Press and Information Overload</a> — historical pattern</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/discursive-materialism-critique">Discursive Materialism (Bryant&#x27;s Critique)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/marshall-mcluhan">Marshall McLuhan</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/post-human-media-ecology">Post-Human Media Ecology (Bryant)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>5</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>495</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/discursive-materialism-critique">Discursive Materialism (Bryant&#x27;s Critique)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/post-human-media-ecology">Post-Human Media Ecology (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/marshall-mcluhan">Marshall McLuhan</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-machine-concept">Bryant&#x27;s Machine Concept</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/post-human-media-ecology">Post-Human Media Ecology (Bryant)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/renewal-of-materialism">Renewal of Materialism (Bryant)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/structural-coupling">Structural Coupling</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/technology">technology</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/social-media">social-media</a><a class="tag" href="/wiki/topics/tools">tools</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

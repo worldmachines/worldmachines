@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>History Machines in the Margins — Florian Lohse (2025)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>History Machines in the Margins — Florian Lohse (2025)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/history-machines-in-the-margins-lohse.md">source on GitHub</a></div>
-  <div class="note-summary">Florian Lohse uses the Majapahit empire and a Singapore airport layover to illustrate Venkatesh Rao&#x27;s &#x27;history machine&#x27; thesis: modernity emerges not from singularly great men but from distributed components assembling silently across centuries until paradigm shift suddenly arrives.</div>
-  <div class="tags"><span class="tag">history-machines</span><span class="tag">modernity</span><span class="tag">majapahit</span><span class="tag">historiography</span><span class="tag">periodization</span><span class="tag">rao</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/history-machines-in-the-margins-lohse.md">source on GitHub</a></div>
+    <div class="note-summary">Florian Lohse uses the Majapahit empire and a Singapore airport layover to illustrate Venkatesh Rao&#x27;s &#x27;history machine&#x27; thesis: modernity emerges not from singularly great men but from distributed components assembling silently across centuries until paradigm shift suddenly arrives.</div>
     <div class="prose">
 <p><strong>Source</strong>: Notefields (Substack), October 30, 2025<br>
 <strong>Author</strong>: Florian Lohse</p>
@@ -81,9 +90,9 @@
 <h2 id="intellectual-lineage">Intellectual Lineage</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> — history machine concept, Contraptions Book Club</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Barbara Tuchman&quot;">Barbara Tuchman</span> — <em>A Distant Mirror</em>, modernity as beginning with the Black Death</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/barbara-tuchman" title="No note is called &quot;Barbara Tuchman&quot; yet — see who is asking for it">Barbara Tuchman</a> — <em>A Distant Mirror</em>, modernity as beginning with the Black Death</li>
 <li>Herald Van Der Linde — <em>Majapahit: Intrigue, Betrayal and War in Indonesia&#x27;s Greatest Empire</em></li>
-<li>Implicit: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Ibn Khaldun&quot;">Ibn Khaldun</span> model of civilizational cycles (not cited but structurally present)</li>
+<li>Implicit: <a class="wikilink" href="/wiki/aneesh/entities/ibn-khaldun" title="Written [[Ibn Khaldun]], resolved to ibn-khaldun">Ibn Khaldun</a> model of civilizational cycles (not cited but structurally present)</li>
 </ul>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <ul>
@@ -94,19 +103,60 @@
 </ul>
 <h2 id="cross-source-connections">Cross-Source Connections</h2>
 <ul>
-<li>The erasure of Majapahit&#x27;s cartographic record connects to themes of knowledge destruction in colonial history — see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Deliberate Archival Erasure&quot;">Deliberate Archival Erasure</span></li>
-<li>The &quot;history machine&quot; concept of distributed emergence is structurally parallel to Chaisson&#x27;s cosmic evolution narrative — complexity assembles through distributed, non-teleological processes — see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cosmic Evolution - Chaisson&quot;">Cosmic Evolution - Chaisson</span></li>
-<li>Lohse&#x27;s &quot;notes in the margins&quot; figure resonates with Berlin&#x27;s attention to counter-currents and heretics in intellectual history — see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Against the Current - Berlin&quot;">Against the Current - Berlin</span></li>
+<li>The erasure of Majapahit&#x27;s cartographic record connects to themes of knowledge destruction in colonial history — see <a class="wikilink" href="/wiki/aneesh/concepts/deliberate-archival-erasure" title="Written [[Deliberate Archival Erasure]], resolved to deliberate-archival-erasure">Deliberate Archival Erasure</a></li>
+<li>The &quot;history machine&quot; concept of distributed emergence is structurally parallel to Chaisson&#x27;s cosmic evolution narrative — complexity assembles through distributed, non-teleological processes — see <a class="wikilink" href="/wiki/aneesh/summaries/cosmic-evolution-chaisson" title="Written [[Cosmic Evolution - Chaisson]], resolved to cosmic-evolution-chaisson">Cosmic Evolution - Chaisson</a></li>
+<li>Lohse&#x27;s &quot;notes in the margins&quot; figure resonates with Berlin&#x27;s attention to counter-currents and heretics in intellectual history — see <a class="wikilink-wanted" href="/wiki/wanted/against-the-current-berlin" title="No note is called &quot;Against the Current - Berlin&quot; yet — see who is asking for it">Against the Current - Berlin</a></li>
 <li>The Majapahit-Singapore proximity resonates as an instance of civilizational palimpsest — what remains beneath what is visible</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>734</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/cosmic-evolution-chaisson">Cosmic Evolution: State of the Science — Eric J. Chaisson (2009)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/deliberate-archival-erasure">Deliberate Archival Erasure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/engineering-liveness-venkatesh-rao">Engineering Liveness — Venkatesh Rao (2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/new-nature-as-life-era">New Nature as Life Era — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/majapahit-empire">Majapahit Empire</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/cosmic-evolution-chaisson">Cosmic Evolution: State of the Science — Eric J. Chaisson (2009)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/deliberate-archival-erasure">Deliberate Archival Erasure</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">history-machines</span><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/majapahit">majapahit</a><a class="tag" href="/wiki/topics/historiography">historiography</a><span class="tag tag-lone" title="Only this note uses it">periodization</span><a class="tag" href="/wiki/topics/rao">rao</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

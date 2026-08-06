@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,25 +26,34 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Mission-Critical AI</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Mission-Critical AI</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/mission-critical-ai.md">source on GitHub</a></div>
-  <div class="note-summary">AI applications in domains where errors have severe, potentially irreversible consequences — the context where the AI Tool vs. Advisor distinction, explainability requirements, and regulation debates become most acute.</div>
-  <div class="tags"><span class="tag">ai-safety</span><span class="tag">healthcare-ai</span><span class="tag">regulation</span><span class="tag">explainability</span><span class="tag">high-stakes</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/mission-critical-ai.md">source on GitHub</a></div>
+    <div class="note-summary">AI applications in domains where errors have severe, potentially irreversible consequences — the context where the AI Tool vs. Advisor distinction, explainability requirements, and regulation debates become most acute.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
 <p>Mission-critical AI refers to AI deployment in domains where incorrect outputs can cause serious harm: healthcare diagnosis, drug dosing, legal proceedings, defense systems, infrastructure management. The category is defined not by the technology but by the consequence profile of failures.</p>
 <h2 id="why-it-demands-different-standards">Why It Demands Different Standards</h2>
-<p>Sathe (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span>, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span>) identifies two specific demands:</p>
+<p>Sathe (see <a class="wikilink" href="/wiki/aneesh/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a>, <a class="wikilink" href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good" title="Written [[On Being Good vs. Knowing Good]], resolved to on-being-good-vs-knowing-good">On Being Good vs. Knowing Good</a>) identifies two specific demands:</p>
 <ol>
-<li><p><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span></strong>: In critical applications, users must be able to apply their own judgment to AI outputs and know when to override them. A system that produces confident outputs with no traceable reasoning chain places undue trust requirements on users who may not have the expertise to detect errors.</p></li>
-<li><p><strong>No tasteless advisors</strong>: The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span> distinction is most consequential here. Using an LLM as an advisor in a clinical context — where it will confidently produce <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span>s with no confidence signal — is a patient safety risk.</p></li>
+<li><p><strong><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a></strong>: In critical applications, users must be able to apply their own judgment to AI outputs and know when to override them. A system that produces confident outputs with no traceable reasoning chain places undue trust requirements on users who may not have the expertise to detect errors.</p></li>
+<li><p><strong>No tasteless advisors</strong>: The <a class="wikilink" href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor" title="Written [[AI as Tool vs. Advisor]], resolved to ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a> distinction is most consequential here. Using an LLM as an advisor in a clinical context — where it will confidently produce <a class="wikilink" href="/wiki/aneesh/concepts/hallucination" title="Written [[Hallucination]], resolved to hallucination">Hallucination</a>s with no confidence signal — is a patient safety risk.</p></li>
 </ol>
 <h2 id="the-regulation-balance">The Regulation Balance</h2>
-<p>&quot;In mission-critical fields like healthcare, balancing exploration and regulation is crucial. Over-regulation can hinder society from benefiting from innovative uses and discoveries, while a lack of regulation places undue risk on vulnerable populations, as seen in historical clinical trials.&quot; (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span>)</p>
+<p>&quot;In mission-critical fields like healthcare, balancing exploration and regulation is crucial. Over-regulation can hinder society from benefiting from innovative uses and discoveries, while a lack of regulation places undue risk on vulnerable populations, as seen in historical clinical trials.&quot; (see <a class="wikilink" href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good" title="Written [[On Being Good vs. Knowing Good]], resolved to on-being-good-vs-knowing-good">On Being Good vs. Knowing Good</a>)</p>
 <p>This is the classic pharmaceutical dilemma applied to AI:</p>
 <ul>
 <li><strong>Over-regulation</strong>: Good AI tools are delayed or blocked; patients who would benefit are denied access</li>
@@ -53,20 +62,55 @@
 <p>Sathe argues AI has an advantage over drugs in one respect: software can be corrected relatively easily once errors are detected. This argues for a more exploratory regulatory posture than is typical in drug development.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — the minimum technical standard</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span> — the deployment model that preserves human oversight</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Regulation&quot;">AI Regulation</span> — the policy dimension</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Taste as Epistemic Capacity&quot;">Taste as Epistemic Capacity</span> — what humans bring that AI cannot replace in critical settings</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hallucination&quot;">Hallucination</span> — the specific failure mode that makes high-stakes AI dangerous</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — the minimum technical standard</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor" title="Written [[AI as Tool vs. Advisor]], resolved to ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a> — the deployment model that preserves human oversight</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/ai-regulation" title="Written [[AI Regulation]], resolved to ai-regulation">AI Regulation</a> — the policy dimension</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/taste-as-epistemic-capacity" title="Written [[Taste as Epistemic Capacity]], resolved to taste-as-epistemic-capacity">Taste as Epistemic Capacity</a> — what humans bring that AI cannot replace in critical settings</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/hallucination" title="Written [[Hallucination]], resolved to hallucination">Hallucination</a> — the specific failure mode that makes high-stakes AI dangerous</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>343</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">Taste as Epistemic Capacity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good">On Being Good vs. Knowing Good: Perspectives on AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-agents-in-healthcare">AI Agents in Healthcare</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-regulation">AI Regulation</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/retrieval-augmented-generation">Retrieval-Augmented Generation (RAG)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/taste-as-epistemic-capacity">Taste as Epistemic Capacity</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ai-safety">ai-safety</a><a class="tag" href="/wiki/topics/healthcare-ai">healthcare-ai</a><a class="tag" href="/wiki/topics/regulation">regulation</a><a class="tag" href="/wiki/topics/explainability">explainability</a><span class="tag tag-lone" title="Only this note uses it">high-stakes</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

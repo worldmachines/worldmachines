@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/more-utopia/">Utopia</a> <b>/</b> <span>Sheep Devouring Men: Hythloday&#x27;s Case Against Hanging Thieves</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Sheep Devouring Men: Hythloday&#x27;s Case Against Hanging Thieves</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book1-03-cardinal-morton-theft.md">source on GitHub</a></div>
-  <div class="note-summary">At Cardinal Morton&#x27;s dinner table, the narrator rebuts an English lawyer&#x27;s satisfaction that thieves are hanged &quot;twenty on one gibbet&quot; by arguing that idle noble retainers, France&#x27;s standing armies, and sheep-pasture enclosures manufacture the very thieves the law then hangs, closing with the charge that lawmakers &quot;first make thieves and then punish them.&quot;</div>
-  <div class="tags"><span class="tag">thomas-more</span><span class="tag">utopia</span><span class="tag">capital-punishment</span><span class="tag">enclosure</span><span class="tag">idle-retainers</span><span class="tag">root-causes-of-crime</span><span class="tag">wool-trade</span><span class="tag">tudor-england</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/defenestration-of-prague">defenestration-of-prague</a>, <a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation">frame-fixation</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/more-utopia/">Utopia</a> · updated 15 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/more-utopia/more-utopia-book1-03-cardinal-morton-theft.md">source on GitHub</a></div>
+    <div class="note-summary">At Cardinal Morton&#x27;s dinner table, the narrator rebuts an English lawyer&#x27;s satisfaction that thieves are hanged &quot;twenty on one gibbet&quot; by arguing that idle noble retainers, France&#x27;s standing armies, and sheep-pasture enclosures manufacture the very thieves the law then hangs, closing with the charge that lawmakers &quot;first make thieves and then punish them.&quot;</div>
     <div class="prose">
 <p>At a dinner hosted by Cardinal John Morton, Archbishop of Canterbury, the narrator answers an English lawyer&#x27;s boast that thieves are &quot;hanged so fast that there were sometimes twenty on one gibbet&quot; by arguing that capital punishment for theft is both unjust and futile, then builds outward into a causal indictment of the conditions that manufacture thieves in the first place: noblemen&#x27;s idle armed retainers, turned out to starve when a lord dies or falls sick; France&#x27;s standing armies, kept &quot;in pay&quot; for the same reason noblemen keep retainers; and, at greatest length, the conversion of arable land to sheep pasture, which evicts entire villages and leaves the dispossessed no option but theft, begging, or death. The exchange closes on an aphorism that reframes the whole penal question: the state manufactures its own criminals and then hangs them for the crime it created.</p>
 <h2 id="themes">Themes</h2>
@@ -50,17 +58,47 @@
 <p><strong>Sheep devour men (c3).</strong> The unit&#x27;s centerpiece. Enclosure for wool empties villages, &quot;reserving only the churches,&quot; and turns the best inhabited places into solitudes — economic rationalization at the landlord&#x27;s scale converted directly into vagrancy and hunger at the tenant&#x27;s.</p>
 <p><strong>You first make thieves and then punish them (c5).</strong> The closing line is the unit&#x27;s thesis compressed to a single sentence, and the one most likely to be cited on its own: the entire preceding catalogue of causes — idle retainers, standing armies, enclosure, luxury and gaming — exists to earn this indictment.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/d490fd7d8d93c251b171b408e9eb21c956022e25">[trivial] Ingest Utopia (Thomas More, 1516) — 24 reading notes + 5 canon pages (#24)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>896</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/more-utopia">Utopia (Thomas More, 1516)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/raphael-hythloday">Raphael Hythloday</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/the-legible-commonwealth">The Legible Commonwealth</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-08-common-ownership">Against Private Property, For a Community of Goods</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-08-religions-04-conclusion">Utopia&#x27;s Peroration: The Conspiracy of the Rich and the Case Against Private Property</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-01-towns-amaurot">Amaurot: The Legible Anatomy of a Utopian Town</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-06-treasure-and-corrupt-counsel">Corrupt Counsel, Captured Courts, and the Macarian Vow Against Treasure</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book1-01-meeting-hythloday">Meeting Raphael Hythloday</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/more-utopia/more-utopia-book2-03-trades">Of Their Trades, and Manner of Life</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/defenestration-of-prague">defenestration-of-prague</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/frame-fixation">frame-fixation</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/thomas-more">thomas-more</a><a class="tag" href="/wiki/topics/utopia">utopia</a><a class="tag" href="/wiki/topics/capital-punishment">capital-punishment</a><a class="tag" href="/wiki/topics/enclosure">enclosure</a><span class="tag tag-lone" title="Only this note uses it">idle-retainers</span><span class="tag tag-lone" title="Only this note uses it">root-causes-of-crime</span><span class="tag tag-lone" title="Only this note uses it">wool-trade</span><a class="tag" href="/wiki/topics/tudor-england">tudor-england</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

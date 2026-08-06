@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/decameron/">The Decameron</a> <b>/</b> <span>DEC 03 — Day the Second</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>DEC 03 — Day the Second</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/decameron/">The Decameron</a> · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/decameron/dec-day-02.md">source on GitHub</a></div>
-  <div class="note-summary">Day the Second puts fortune&#x27;s wheel at full throttle — ten stories of travellers robbed, noblewomen shipwrecked, exiles disgraced, and a princess passed through nine men&#x27;s hands, all of whom arrive at unexpected restoration through a mixture of wit, luck, and resilient self-possession.</div>
-  <div class="tags"><span class="tag">decameron</span><span class="tag">boccaccio</span><span class="tag">fortune</span><span class="tag">resilience</span><span class="tag">disguise</span><span class="tag">exile</span><span class="tag">gender</span><span class="tag">merchants</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a>, <a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a>, <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/decameron/">The Decameron</a> · updated 11 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/decameron/dec-day-02.md">source on GitHub</a></div>
+    <div class="note-summary">Day the Second puts fortune&#x27;s wheel at full throttle — ten stories of travellers robbed, noblewomen shipwrecked, exiles disgraced, and a princess passed through nine men&#x27;s hands, all of whom arrive at unexpected restoration through a mixture of wit, luck, and resilient self-possession.</div>
     <div class="prose">
 <p>Filomena governs the Second Day. The theme she sets is explicit: those who, &quot;after being baffled by divers chances, have won at last to a joyful issue beyond their hope.&quot; The ten stories form the most structurally coherent day of the early Decameron: every tale deploys a long arc of catastrophe followed by a reversal that the protagonist could not have engineered from the start. The frame audience — seven ladies and three young men in a villa outside plague-struck Florence — listens to these restorations as implicit argument: fortune is real but not final.</p>
 <h2 id="themes">Themes</h2>
@@ -66,15 +74,36 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a> — identity restored only by re-inscription in recognized records (deathbed confession, tribunal, inn-register); the Day shows proto-legibility infrastructure failing an individual.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>1440</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Supports</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/decameron">decameron</a><a class="tag" href="/wiki/topics/boccaccio">boccaccio</a><a class="tag" href="/wiki/topics/fortune">fortune</a><a class="tag" href="/wiki/topics/resilience">resilience</a><a class="tag" href="/wiki/topics/disguise">disguise</a><a class="tag" href="/wiki/topics/exile">exile</a><a class="tag" href="/wiki/topics/gender">gender</a><span class="tag tag-lone" title="Only this note uses it">merchants</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

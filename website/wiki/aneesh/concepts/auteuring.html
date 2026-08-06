@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Auteuring</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Auteuring</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/auteuring.md">source on GitHub</a></div>
-  <div class="note-summary">The mode of work emerging when execution becomes near-free and the live quantity is intent and taste — the model generates, the auteur picks.</div>
-  <div class="tags"><span class="tag">auteuring</span><span class="tag">taste</span><span class="tag">ai</span><span class="tag">intent</span><span class="tag">work</span><span class="tag">liveness-era</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 12 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/auteuring.md">source on GitHub</a></div>
+    <div class="note-summary">The mode of work emerging when execution becomes near-free and the live quantity is intent and taste — the model generates, the auteur picks.</div>
     <div class="prose">
 <p><strong>Auteuring</strong> is the name for a mode of work that emerges when generative substrate has driven the marginal cost of execution toward zero. The auteur exerts extreme control over a project, but the control is no longer exerted through producing the artefact line by line. It is exerted through <strong>selection, direction, and refusal</strong> — through taste applied to a stream of cheap candidates produced by a responsive substrate. The model executes; the auteur picks.</p>
 <h2 id="definition">Definition</h2>
@@ -56,7 +65,7 @@
 <p>Auteuring presupposes the conditions described in <a class="wikilink" href="/wiki/aneesh/concepts/bottleneck-reversal">bottleneck-reversal</a>: ideas were the bottleneck under the <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a>, execution was the price of admission, and the structures of work assumed the producer was the bottleneck. With the substrate as a <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine">liveness-machine</a> and a <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a>, execution is no longer scarce. What is scarce is <strong>intent worth executing on</strong> — the question, the angle, the cut. That is taste.</p>
 <p>This is not an aesthetic flourish. It is a redistribution of where the cognitive load lives. Under the producer regime, taste was a finishing touch. Under auteuring, taste is the entire load-bearing wall.</p>
 <h2 id="the-sibling-one-rung-up-lever-discipline">The Sibling One Rung Up: Lever Discipline</h2>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span> (2026), Sathe names auteuring&#x27;s sibling at the next layer of <a class="wikilink" href="/wiki/aneesh/concepts/design-climbs-the-stack">design&#x27;s climb up the stack</a>: <a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">lever discipline</a>.</p>
+<p>In <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a> (2026), Sathe names auteuring&#x27;s sibling at the next layer of <a class="wikilink" href="/wiki/aneesh/concepts/design-climbs-the-stack">design&#x27;s climb up the stack</a>: <a class="wikilink" href="/wiki/aneesh/concepts/not-my-lever">lever discipline</a>.</p>
 <div class="table-wrap"><table>
 <thead><tr><th></th><th>Auteuring</th><th>Lever discipline</th></tr></thead>
 <tbody>
@@ -65,7 +74,7 @@
 <tr><td>Design lives at</td><td>The level of <em>outputs</em></td><td>The level of <em>intents</em></td></tr>
 </tbody>
 </table></div>
-<blockquote><p>&quot;The form is the sibling of auteuring one rung up. Auteuring refuses unwanted candidates: the model generates a thousand variants, the auteur picks. Lever discipline refuses unwanted intents: the substrate offers a thousand things you could care about, the lever-disciplined person picks. The picking is the work in both. Auteuring is design at the level of outputs. Lever discipline is design at the level of intents.&quot; — Sathe, <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Not My Lever — The Last Container&quot;">Not My Lever — The Last Container</span>.</p></blockquote>
+<blockquote><p>&quot;The form is the sibling of auteuring one rung up. Auteuring refuses unwanted candidates: the model generates a thousand variants, the auteur picks. Lever discipline refuses unwanted intents: the substrate offers a thousand things you could care about, the lever-disciplined person picks. The picking is the work in both. Auteuring is design at the level of outputs. Lever discipline is design at the level of intents.&quot; — Sathe, <a class="wikilink-wanted" href="/wiki/wanted/not-my-lever-the-last-container" title="No note is called &quot;Not My Lever — The Last Container&quot; yet — see who is asking for it">Not My Lever — The Last Container</a>.</p></blockquote>
 <p>The continuation: an auteur whose taste has matured tends to discover, as a structural matter, that the binding skill is no longer <em>which candidate to keep</em> but <em>which intents to act on at all</em>. The same person who became an auteur by separating from generation becomes lever-disciplined by separating from intent. Both are the same operational position — the asset-bearer at the top of the stack — at adjacent rungs.</p>
 <h2 id="connections">Connections</h2>
 <ul>
@@ -81,26 +90,57 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/designed-mindset">designed-mindset</a>: What sustains the auteur&#x27;s process across the duration of one project.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">12</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/auteuring-and-taste">Auteuring and Taste</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bottleneck-reversal">Bottleneck Reversal: Atoms, Ideas, Intents</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/intent-collisions">Intent Collisions</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/proto-liveness">Proto-Liveness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>12</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>1114</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/design-climbs-the-stack">Design Climbs the Stack</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/not-my-lever">Not My Lever (Lever Discipline)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-lightening-of-intent">The Lightening of Intent — Summary</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bottleneck-reversal">Bottleneck Reversal: Atoms, Ideas, Intents</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/designed-mindset">Designed Mindset</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/intent-collisions">Intent Collisions</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/proto-liveness">Proto-Liveness</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>4 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/auteuring-and-taste">Auteuring and Taste</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/proto-liveness-and-the-life-era">Proto-Liveness and the Life Era</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/intent-collisions-and-the-internet-of-beefs">Intent Collisions and the Internet of Beefs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/not-my-lever">Not My Lever — Summary</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness-machine">Liveness Machine</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cost-of-intent-across-machines">The Cost of Intent Across Machines</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/bottleneck-reversal">Bottleneck Reversal: Atoms, Ideas, Intents</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/crystallized-imagination">Crystallized Imagination</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/auteuring">auteuring</a><a class="tag" href="/wiki/topics/taste">taste</a><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/intent">intent</a><a class="tag" href="/wiki/topics/work">work</a><a class="tag" href="/wiki/topics/liveness-era">liveness-era</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

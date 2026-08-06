@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-24-indian-summer.md">source on GitHub</a></div>
-  <div class="note-summary">In 1898-99 Henry Adams watches John Hay&#x27;s diplomatic career vindicate a century of Adams-family effort to bind England to America, then drifts from Sicily to Chartres to a paralyzed Washington before resolving, since &quot;chaos cannot be taught,&quot; to hunt Kepler-style for a mathematical law of historical attraction.</div>
-  <div class="tags"><span class="tag">henry-adams</span><span class="tag">john-hay</span><span class="tag">spanish-american-war</span><span class="tag">boer-war</span><span class="tag">anglo-american-relations</span><span class="tag">john-la-farge</span><span class="tag">dynamic-theory-of-history</span><span class="tag">senate-dysfunction</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/psychohistory-and-world-machines">psychohistory-and-world-machines</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-24-indian-summer.md">source on GitHub</a></div>
+    <div class="note-summary">In 1898-99 Henry Adams watches John Hay&#x27;s diplomatic career vindicate a century of Adams-family effort to bind England to America, then drifts from Sicily to Chartres to a paralyzed Washington before resolving, since &quot;chaos cannot be taught,&quot; to hunt Kepler-style for a mathematical law of historical attraction.</div>
     <div class="prose">
 <p>At sixty, Henry Adams watches the Spanish-American War deliver, almost by accident, the Anglo-American rapprochement his family had angled for since the Stamp Act, engineered not by Adams doctrine but by Germany&#x27;s sudden menace and by the diplomatic tact of his friend John Hay — first as Ambassador, then as a reluctant Secretary of State ground down by a paralyzed Senate; meanwhile Adams himself drifts through Sicily, Rome, and Assisi with the Lodges, resumes his twelfth-century studies at the return of John La Farge, recoils in inherited personal outrage at the Boer War, and ends the unit setting out — half earnest, half ironic — to build a mathematical &quot;law in history&quot; modeled on Kepler and Newton.</p>
 <h2 id="themes">Themes</h2>
@@ -47,18 +55,48 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The opening paragraph sets the chapter&#x27;s elegiac register — Adams as &quot;the last survivor of the Legation of 1861,&quot; savoring a victory decades in the making. The &quot;chaos cannot be taught&quot; passage is the chapter&#x27;s epistemological hinge, distinguishing lived historical satisfaction from any transmissible method. Hay&#x27;s Senate speech, quoted at length, is the book&#x27;s clearest first-hand account of why treaty-making had become unworkable by 1899. The La Farge exchange (&quot;Adams, you reason too much!&quot;) crystallizes a recurring dialectic in the book between Bostonian argument and an aesthetic, indirect mode of knowing. The Boer War passage shows Adams&#x27;s politics as inseparable from inherited family grievance. And the closing Kepler/Newton passage — reaching for &quot;a value, even infinitesimal,&quot; for the &quot;attraction&quot; of Congress — is the germ of the dynamic theory of history that dominates the book&#x27;s final chapters.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>908</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-34-a-law-of-acceleration">A Law of Acceleration</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-editors-preface">Editor&#x27;s Preface: The Making and Withholding of The Education of Henry Adams</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-35-nunc-age">Nunc Age: The Trusts, the New Man, and the Death of John Hay</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance">The Abyss of Ignorance</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/psychohistory-and-world-machines">psychohistory-and-world-machines</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><a class="tag" href="/wiki/topics/john-hay">john-hay</a><a class="tag" href="/wiki/topics/spanish-american-war">spanish-american-war</a><span class="tag tag-lone" title="Only this note uses it">boer-war</span><a class="tag" href="/wiki/topics/anglo-american-relations">anglo-american-relations</a><span class="tag tag-lone" title="Only this note uses it">john-la-farge</span><a class="tag" href="/wiki/topics/dynamic-theory-of-history">dynamic-theory-of-history</a><span class="tag tag-lone" title="Only this note uses it">senate-dysfunction</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

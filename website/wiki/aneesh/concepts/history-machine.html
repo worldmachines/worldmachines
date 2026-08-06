@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>History Machine</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>History Machine</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/history-machine.md">source on GitHub</a></div>
-  <div class="note-summary">A history machine is Venkatesh Rao&#x27;s concept for how grand historical paradigms (modernity, postmodernity) emerge — not as sudden monoliths but as assemblages of independently developing components that eventually lock together to produce paradigm-level shock.</div>
-  <div class="tags"><span class="tag">history-machine</span><span class="tag">modernity</span><span class="tag">rao</span><span class="tag">historiography</span><span class="tag">emergence</span><span class="tag">paradigm</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/history-machine.md">source on GitHub</a></div>
+    <div class="note-summary">A history machine is Venkatesh Rao&#x27;s concept for how grand historical paradigms (modernity, postmodernity) emerge — not as sudden monoliths but as assemblages of independently developing components that eventually lock together to produce paradigm-level shock.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>From <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s Contraptions Book Club framing (paraphrased by <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span>):</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s Contraptions Book Club framing (paraphrased by <a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a>):</p>
 <blockquote><p>&quot;Grand historical paradigms like modernity and postmodernity are not suddenly emerging monoliths. Instead we might see them as &#x27;history machines&#x27; consisting of components that developed on their own for a long time, before all of a sudden, things fall into place together, causing shock and awe.&quot;</p></blockquote>
 <p>A history machine is an emergent entity: its components are distributed across geographies, centuries, and disciplines, developing without reference to each other, until threshold conditions cause them to suddenly assemble.</p>
 <h2 id="key-properties">Key Properties</h2>
@@ -65,18 +74,18 @@
 <p>Key corollary: history machines are often documented by peripheral, apparently irrelevant observers. Lohse&#x27;s figure: &quot;The future is already around, barely recognized if not for some dull notes in the margins.&quot;</p>
 <p>What this implies for the present: significant developments in the 2020s — possibly seeds of the next paradigm — will look unremarkable and niche until they don&#x27;t. The question is not what is currently legible as important, but what is proliferating in the margins.</p>
 <h2 id="relation-to-technological-tangled-banks">Relation to Technological Tangled Banks</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span> has the same logic: the technological tangled bank is a history machine in permanent operation. Protocol grammars, fiber infrastructure, regulatory regimes, old railroads — all developing on their own timescales — constitute the latent substrate of the next emergent order.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a> has the same logic: the technological tangled bank is a history machine in permanent operation. Protocol grammars, fiber infrastructure, regulatory regimes, old railroads — all developing on their own timescales — constitute the latent substrate of the next emergent order.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gramsci Gap&quot;">Gramsci Gap</span> — the moment of machine activation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Deliberate Archival Erasure&quot;">Deliberate Archival Erasure</span> — what happens when dominant forces destroy the components they cannot absorb</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Modernity as Distributed Emergence&quot;">Modernity as Distributed Emergence</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap" title="Written [[Gramsci Gap]], resolved to gramsci-gap">Gramsci Gap</a> — the moment of machine activation</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/deliberate-archival-erasure" title="Written [[Deliberate Archival Erasure]], resolved to deliberate-archival-erasure">Deliberate Archival Erasure</a> — what happens when dominant forces destroy the components they cannot absorb</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/modernity-as-distributed-emergence" title="No note is called &quot;Modernity as Distributed Emergence&quot; yet — see who is asking for it">Modernity as Distributed Emergence</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span> (primary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span> (related)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a> (primary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a> (related)</li>
 </ul>
 <h2 id="adamss-education-retroactive-legibility-dated-from-the-margins">Adams&#x27;s Education: Retroactive Legibility, Dated, From the Margins</h2>
 <p><a class="wikilink" href="/wiki/commons/summaries/adams-education">adams-education</a> supplies unusually literal instances of two of this page&#x27;s claims — the fourth key property (retroactive legibility) and the chronicler-in-the-margins corollary — because Adams occupied the marginal seat by accident and then spent forty years checking his own contemporaneous readings against the archives.</p>
@@ -87,61 +96,97 @@
 <p><strong>A machine assembling in one man&#x27;s life.</strong> <a class="wikilink" href="/wiki/commons/reading/adams-education/adams-education-ch-23-silence">adams-education-ch-23-silence</a> is the pattern at miniature scale. The medieval scholarship that became <em>Mont-Saint-Michel and Chartres</em> — and with it the whole two-book apparatus of <a class="wikilink" href="/wiki/commons/entities/adams-dynamic-theory-of-history">adams-dynamic-theory-of-history</a> — did not begin as a research program. Mrs. Cabot Lodge took Adams to Caen, Coutances and Mont-Saint-Michel in August 1895, and centuries he &quot;thought himself familiar&quot; with from the lecture-room &quot;turned into green and verdurous virgin forests merely through the medium of younger eyes.&quot; <a class="wikilink" href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">adams-education-ch-24-indian-summer</a> shows the rest assembling the same way: no teacher, no institution, Newcomb too orthodox and Gibbs unreachable, the thing built essentially alone and invisible until the last chapters of the book made it public.</p>
 <p><strong>The caveat this page needs.</strong> Adams is also evidence for a limit on the concept&#x27;s evidentiary base. What a well-placed contemporary reports while the machine is still latent is not noise but <em>design</em>: in <a class="wikilink" href="/wiki/commons/reading/adams-education/adams-education-ch-10-political-morality">adams-education-ch-10-political-morality</a>, Adams&#x27;s confident 1862 reading of Palmerston, Russell and Gladstone as a coordinated bloc turns out, on the documentary record, to have rested on &quot;the sheer chaos of human nature&quot; — independent, half-blind components that &quot;had misread one another as thoroughly as they misread him.&quot; The retroactive legibility this page describes is therefore not a transition from ignorance to knowledge. It is a transition from a confident wrong story to a machine, and it takes decades. See <a class="wikilink" href="/wiki/commons/synthesis/witness-bias-toward-design">witness-bias-toward-design</a>.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">47</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/pilgrimage-and-journey-as-place-practice">Pilgrimage and Journey as Place Practice</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/time-in-experiential-space">Time in Experiential Space</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-02-boston">Boston, 1848–1854: Trained for a World Already Closing</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry">Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-19-chaos">Chaos (1870)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-23-silence">Chapter XXIII — Silence (1894–1898)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-chaucers-dream">Chaucer&#x27;s Dream</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-15-darwinism">Darwinism, Deep Time, and the Failure of Uniformity</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04a-market-discourse-and-usury">Debating the Market: Discourse, Mercantilism, and the Decline of the Usury Taboo</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-editors-preface">Editor&#x27;s Preface: The Making and Withholding of The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-09-foes-or-friends">Foes or Friends: London Diplomacy and the Discovery of Swinburne (1862)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11a-japan-and-the-rise-of-personal-computing">Friedman, Deregulation, and the Rise of Japan and the Personal Computer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06b-banks-incorporation-and-the-1873-depression">Overtaking Britain: Technology, Finance, and the Long Depression of 1873 in Germany and the United States</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-10-political-morality">Political Morality (1862)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-17-president-grant">President Grant (1869)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements">Priming the Pump of Capitalism: The Agricultural Revolution in England and the Netherlands</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-10-14">Purgatorio X–XIV: The Terraces of Pride and Envy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance">The Abyss of Ignorance</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/agricultural-revolution">The Agricultural Revolution (Appleby&#x27;s account)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-11-the-battle-of-the-rams">The Battle of the Rams (1863)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin">The Dynamo and the Virgin (1900)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-house-of-fame">The House of Fame</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11b-internet-asian-tigers-and-walmart">The Internet, the Four Little Tigers, and Walmart&#x27;s Information Machine</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-life-of-chaucer">The Life of Geoffrey Chaucer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-monks-tale">The Monk&#x27;s Tale: The Catalogue of Fortune&#x27;s Falls</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-prioresss-tale">The Prioress&#x27;s Tale: The Boy-Martyr of the Jewery</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04b-currency-crisis-and-new-economic-thinking">The Recoinage Crisis and the Making of Economic Thought in England and France</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-07-treason">Treason: An Education in Universal Ignorance (Washington, Winter 1860-61)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/virgil">Virgil</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>52</b><span>linked from</span></div>
+      <div class="bearing"><b>17</b><span>links out</span></div>
+      <div class="bearing"><b>1210</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/arrow-of-time">Arrow of Time</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmic-evolution">Cosmic Evolution</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-05-are-you-sleeping-brother-john">RIT 05 — Are You Sleeping, Brother John? (ch. 3)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/deliberate-archival-erasure">Deliberate Archival Erasure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch08b-corporate-restructuring-and-american-industry">Bureaucracy, Cartels, and the Automobile: Remaking Industrial Capitalism, 1880s–1920s</a><span class="rail-where">Commons</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>44 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-24-indian-summer">Indian Summer: Hay&#x27;s Diplomatic Harvest and the Turn to a Dynamic Theory of History (1898–1899)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements">Priming the Pump of Capitalism: The Agricultural Revolution in England and the Netherlands</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-29-the-abyss-of-ignorance">The Abyss of Ignorance</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04b-currency-crisis-and-new-economic-thinking">The Recoinage Crisis and the Making of Economic Thought in England and France</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/concepts/time-in-experiential-space">Time in Experiential Space</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-editors-preface">Editor&#x27;s Preface: The Making and Withholding of The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/joyce-appleby">Joyce Appleby</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch06b-banks-incorporation-and-the-1873-depression">Overtaking Britain: Technology, Finance, and the Long Depression of 1873 in Germany and the United States</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin">The Dynamo and the Virgin (1900)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11b-internet-asian-tigers-and-walmart">The Internet, the Four Little Tigers, and Walmart&#x27;s Information Machine</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-02-boston">Boston, 1848–1854: Trained for a World Already Closing</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch01-puzzle-of-capitalism">Capitalism’s Puzzle: Why England, Why So Late</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-19-chaos">Chaos (1870)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-23-silence">Chapter XXIII — Silence (1894–1898)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-15-darwinism">Darwinism, Deep Time, and the Failure of Uniformity</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-09-foes-or-friends">Foes or Friends: London Diplomacy and the Discovery of Swinburne (1862)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/majapahit-empire">Majapahit Empire</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/pilgrimage-and-journey-as-place-practice">Pilgrimage and Journey as Place Practice</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-10-political-morality">Political Morality (1862)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/agricultural-revolution">The Agricultural Revolution (Appleby&#x27;s account)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-11-the-battle-of-the-rams">The Battle of the Rams (1863)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-life-of-chaucer">The Life of Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-07-treason">Treason: An Education in Universal Ignorance (Washington, Winter 1860-61)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/virgil">Virgil</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-chaucers-dream">Chaucer&#x27;s Dream</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch04a-market-discourse-and-usury">Debating the Market: Discourse, Mercantilism, and the Decline of the Usury Taboo</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11a-japan-and-the-rise-of-personal-computing">Friedman, Deregulation, and the Rise of Japan and the Personal Computer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/geoffrey-chaucer">Geoffrey Chaucer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-17-president-grant">President Grant (1869)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/chaucer-canterbury-tales">The Canterbury Tales, and Other Poems</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-house-of-fame">The House of Fame</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-monks-tale">The Monk&#x27;s Tale: The Catalogue of Fortune&#x27;s Falls</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-10-14">Purgatorio X–XIV: The Terraces of Pride and Envy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-20-24">Purgatory, Cantos XX–XXIV: Hugh Capet&#x27;s Curse, Statius&#x27;s Conversion, and the Terrace of Gluttony</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-prioresss-tale">The Prioress&#x27;s Tale: The Boy-Martyr of the Jewery</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/gramsci-gap">Gramsci Gap</a><span class="rail-where">15</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">15</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">15</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">13</span></li>
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/anxiety-of-influence">Anxiety of Influence</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/history-machine">history-machine</a><a class="tag" href="/wiki/topics/modernity">modernity</a><a class="tag" href="/wiki/topics/rao">rao</a><a class="tag" href="/wiki/topics/historiography">historiography</a><a class="tag" href="/wiki/topics/emergence">emergence</a><a class="tag" href="/wiki/topics/paradigm">paradigm</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

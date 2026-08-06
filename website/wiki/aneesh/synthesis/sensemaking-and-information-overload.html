@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Sensemaking and Information Overload</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Sensemaking and Information Overload</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/sensemaking-and-information-overload.md">source on GitHub</a></div>
-  <div class="note-summary">Klein&#x27;s data-frame theory resolves a persistent paradox: more information degrades decision quality past a threshold, because sensemaking is constrained not by data quantity but by frame quality and anchor availability.</div>
-  <div class="tags"><span class="tag">sensemaking</span><span class="tag">information-overload</span><span class="tag">decision-support</span><span class="tag">macrocognition</span><span class="tag">naturalistic-decision-making</span><span class="tag">synthesis</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/sensemaking-and-information-overload.md">source on GitHub</a></div>
+    <div class="note-summary">Klein&#x27;s data-frame theory resolves a persistent paradox: more information degrades decision quality past a threshold, because sensemaking is constrained not by data quantity but by frame quality and anchor availability.</div>
     <div class="prose">
 <h2 id="the-paradox">The Paradox</h2>
 <p>The standard remedy for poor decisions is better information. More data, faster data, cleaner data. Decision support systems are justified on this basis; intelligence spending is justified on this basis; the entire DIKW (data-information-knowledge-wisdom) pyramid is built on this assumption.</p>
@@ -72,27 +81,40 @@
 <ul>
 <li>&quot;The Information Paradox&quot;: how the drive for more data can actively worsen the decisions it&#x27;s meant to improve</li>
 <li>&quot;Frame Before Facts&quot;: the constructivist critique of evidence-based decision-making</li>
-<li>Connects to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Overload Across Eras&quot;">Information Overload Across Eras</span> synthesis on historical patterns</li>
+<li>Connects to <a class="wikilink" href="/wiki/aneesh/synthesis/information-overload-across-eras" title="Written [[Information Overload Across Eras]], resolved to information-overload-across-eras">Information Overload Across Eras</a> synthesis on historical patterns</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Data-Frame Theory of Sensemaking&quot;">Data-Frame Theory of Sensemaking</span> (summary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames and Framing&quot;">Frames and Framing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anchoring in Sensemaking&quot;">Anchoring in Sensemaking</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking Forms&quot;">Sensemaking Forms</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Macrocognition&quot;">Macrocognition</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Karl Weick&quot;">Karl Weick</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking" title="Written [[Data-Frame Theory of Sensemaking]], resolved to data-frame-theory-of-sensemaking">Data-Frame Theory of Sensemaking</a> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frames-and-framing" title="Written [[Frames and Framing]], resolved to frames-and-framing">Frames and Framing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anchoring-in-sensemaking" title="Written [[Anchoring in Sensemaking]], resolved to anchoring-in-sensemaking">Anchoring in Sensemaking</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sensemaking-forms" title="Written [[Sensemaking Forms]], resolved to sensemaking-forms">Sensemaking Forms</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/macrocognition" title="Written [[Macrocognition]], resolved to macrocognition">Macrocognition</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/karl-weick" title="Written [[Karl Weick]], resolved to karl-weick">Karl Weick</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>734</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/information-overload">information-overload</a><span class="tag tag-lone" title="Only this note uses it">decision-support</span><a class="tag" href="/wiki/topics/macrocognition">macrocognition</a><a class="tag" href="/wiki/topics/naturalistic-decision-making">naturalistic-decision-making</a><a class="tag" href="/wiki/topics/synthesis">synthesis</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

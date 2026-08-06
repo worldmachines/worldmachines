@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,23 +26,32 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Tools That Shape Thought</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Tools That Shape Thought</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/tools-that-shape-thought.md">source on GitHub</a></div>
-  <div class="note-summary">Cross-source synthesis: how the choice of tool — dictionary, documentation, philosophy, productivity system — shapes not just what you can do but what you can think.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">tools</span><span class="tag">cognition</span><span class="tag">philosophy-of-technology</span><span class="tag">Whorfian</span><span class="tag">epistemology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/tools-that-shape-thought.md">source on GitHub</a></div>
+    <div class="note-summary">Cross-source synthesis: how the choice of tool — dictionary, documentation, philosophy, productivity system — shapes not just what you can do but what you can think.</div>
     <div class="prose">
 <h2 id="the-thread-across-sources">The Thread Across Sources</h2>
 <p>Three of the four essays share a deep structure: the right tool does not just help you accomplish a goal — it <em>changes what goals become available to you</em>.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Essay</th><th>Tool</th><th>How It Shapes Thought</th></tr></thead>
 <tbody>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span></td><td>Philosophy frameworks</td><td>The philosophy you select determines which identity states and actions become thinkable</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span></td><td>Good documentation</td><td>Documentation opens options &quot;you didn&#x27;t realize you had&quot;</td></tr>
-<tr><td><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span></td><td>1913 Webster&#x27;s</td><td>Rich dictionaries let you &quot;arrive at words you didn&#x27;t know you were looking for&quot;</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a></td><td>Philosophy frameworks</td><td>The philosophy you select determines which identity states and actions become thinkable</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a></td><td>Good documentation</td><td>Documentation opens options &quot;you didn&#x27;t realize you had&quot;</td></tr>
+<tr><td><a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a></td><td>1913 Webster&#x27;s</td><td>Rich dictionaries let you &quot;arrive at words you didn&#x27;t know you were looking for&quot;</td></tr>
 </tbody>
 </table></div>
 <h2 id="the-whorfian-resonance">The Whorfian Resonance</h2>
@@ -61,22 +70,35 @@
 <p>The argument: most of our cognitive limitation is self-imposed through uncritical acceptance of default tools. The cure is not exotic — it&#x27;s just deliberate selection. This could be an essay that synthesizes the dictionary, documentation, and philosophy-selection threads into a single argument about epistemic tool hygiene.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Plato Plateau&quot;">The Plato Plateau</span> — philosophy as tool</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Divine Documentation&quot;">Divine Documentation</span> — documentation as tool</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;A Good Dictionary&quot;">A Good Dictionary</span> — dictionary as tool</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lexicographic Richness&quot;">Lexicographic Richness</span> — what tool richness looks like for dictionaries</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Documentation as Empathy&quot;">Documentation as Empathy</span> — what tool richness looks like for documentation</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Levels of Philosophical Engagement&quot;">Levels of Philosophical Engagement</span> — what tool richness looks like for philosophy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;1913 Webster&#x27;s Dictionary&quot;">1913 Webster&#x27;s Dictionary</span> — the canonical example</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-plato-plateau" title="Written [[The Plato Plateau]], resolved to the-plato-plateau">The Plato Plateau</a> — philosophy as tool</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/divine-documentation" title="Written [[Divine Documentation]], resolved to divine-documentation">Divine Documentation</a> — documentation as tool</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/a-good-dictionary" title="Written [[A Good Dictionary]], resolved to a-good-dictionary">A Good Dictionary</a> — dictionary as tool</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/lexicographic-richness" title="Written [[Lexicographic Richness]], resolved to lexicographic-richness">Lexicographic Richness</a> — what tool richness looks like for dictionaries</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/documentation-as-empathy" title="Written [[Documentation as Empathy]], resolved to documentation-as-empathy">Documentation as Empathy</a> — what tool richness looks like for documentation</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/levels-of-philosophical-engagement" title="Written [[Levels of Philosophical Engagement]], resolved to levels-of-philosophical-engagement">Levels of Philosophical Engagement</a> — what tool richness looks like for philosophy</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/1913-websters-dictionary" title="Written [[1913 Webster&#x27;s Dictionary]], resolved to 1913-websters-dictionary">1913 Webster&#x27;s Dictionary</a> — the canonical example</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>395</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/tools">tools</a><a class="tag" href="/wiki/topics/cognition">cognition</a><span class="tag tag-lone" title="Only this note uses it">philosophy-of-technology</span><span class="tag tag-lone" title="Only this note uses it">Whorfian</span><a class="tag" href="/wiki/topics/epistemology">epistemology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

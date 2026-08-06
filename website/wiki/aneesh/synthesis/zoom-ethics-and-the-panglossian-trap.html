@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,21 +26,30 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Zoom Ethics and the Panglossian Trap</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Zoom Ethics and the Panglossian Trap</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap.md">source on GitHub</a></div>
-  <div class="note-summary">Synthesis connecting Panglossian optimism, Kulturkritik&#x27;s homeopathic paradox, and the divergence machine&#x27;s zombie/ghost taxonomy as three different responses to the problem of operating ethically from within a declining or transitioning paradigm.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">panglossian-optimism</span><span class="tag">zoom-ethics</span><span class="tag">kulturkritik</span><span class="tag">divergence-machine</span><span class="tag">late-modernity</span><span class="tag">voltaire</span><span class="tag">lohse</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap.md">source on GitHub</a></div>
+    <div class="note-summary">Synthesis connecting Panglossian optimism, Kulturkritik&#x27;s homeopathic paradox, and the divergence machine&#x27;s zombie/ghost taxonomy as three different responses to the problem of operating ethically from within a declining or transitioning paradigm.</div>
     <div class="prose">
 <h2 id="the-problem">The Problem</h2>
 <p>All four texts in this cluster circle a common problem: <strong>how should one act when the macro-level trajectory is unclear or horrifying, and the micro-level demands immediate attention?</strong></p>
 <p>This is a problem of <strong>zoom ethics</strong>: at what scale do you make moral judgments?</p>
 <h2 id="three-responses">Three Responses</h2>
 <h3 id="1-panglossian-optimism-zoom-out">1. Panglossian Optimism: Zoom Out</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Horto&quot;">Horto</span>&#x27;s argument in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span>: zoom out far enough (to the species, to history, to Moore&#x27;s Law) and every local harm becomes a stepping stone. The right ethical stance is macro-consequentialism: evaluate everything by its contribution to the largest possible good.</p>
+<p><a class="wikilink-wanted" href="/wiki/wanted/horto" title="No note is called &quot;Horto&quot; yet — see who is asking for it">Horto</a>&#x27;s argument in <a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a>: zoom out far enough (to the species, to history, to Moore&#x27;s Law) and every local harm becomes a stepping stone. The right ethical stance is macro-consequentialism: evaluate everything by its contribution to the largest possible good.</p>
 <p>Problems:</p>
 <ul>
 <li>The zoom level is chosen strategically, not principled</li>
@@ -49,14 +58,14 @@
 <li>José Antunes&#x27;s life <em>looks</em> like a Panglossian trajectory but wasn&#x27;t lived that way</li>
 </ul>
 <h3 id="2-kulturkritik-zoom-to-diagnosis">2. Kulturkritik: Zoom to Diagnosis</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> (Rousseau, Schiller, Goethe) operates at an intermediate zoom level — not as large as Panglossian optimism (it does not argue for cosmic inevitability) but not as local as the thicket gardener. It asks: what does civilization do to human wholeness, and how might art/nature/the garden restore it?</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> (Rousseau, Schiller, Goethe) operates at an intermediate zoom level — not as large as Panglossian optimism (it does not argue for cosmic inevitability) but not as local as the thicket gardener. It asks: what does civilization do to human wholeness, and how might art/nature/the garden restore it?</p>
 <p>Problem: it can&#x27;t actually deliver the restoration it promises. Every cure is homeopathic. &quot;Have we ever really left the French garden?&quot; The diagnostic zoom level is productive (it generates genuine insight into self-alienation) but the therapeutic zoom level is delusional.</p>
 <h3 id="3-the-thicket-zoom-in">3. The Thicket: Zoom In</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span>&#x27;s thicket gardener in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span>: &quot;Nothing here moves like that. The walnuts fall and stay where they fall.&quot; The ethical stance is entirely local: tend what is in front of you, avoid legibility, &quot;find your own thicket first.&quot;</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a>&#x27;s thicket gardener in <a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a>: &quot;Nothing here moves like that. The walnuts fall and stay where they fall.&quot; The ethical stance is entirely local: tend what is in front of you, avoid legibility, &quot;find your own thicket first.&quot;</p>
 <p>Connection to Voltaire: &quot;<em>il faut cultiver notre jardin</em>&quot; — Candide&#x27;s final verdict is also a zoom-in. After all the philosophical debates, you just tend the garden.</p>
 <p>Problem: the thicket offers no account of how to act in the world beyond the thicket. It can&#x27;t tell you what to do about Trumpism or climate change or child labor in chip supply chains. It&#x27;s an answer to a different question.</p>
 <h2 id="the-divergence-machine-as-framework">The Divergence Machine as Framework</h2>
-<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s taxonomy in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span> offers a way of holding these zoom levels together without resolving them:</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s taxonomy in <a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a> offers a way of holding these zoom levels together without resolving them:</p>
 <ul>
 <li><strong>Late modern</strong> behavior: Panglossian optimism in its most energetic zombie form — enormous resources deployed to maintain a crumbling narrative (the best of all possible worlds; progress is real; the current suffering is temporary)</li>
 <li><strong>Postmodern</strong> analysis: Kulturkritik — the intelligent ghost critique of modernity&#x27;s wound; still running intellectual patterns that are brilliant but no longer generative</li>
@@ -75,27 +84,42 @@
 <p><strong>&quot;The Ethics of Scale&quot;</strong>: An essay on zoom level as an ethical choice — how the selection of which scale to evaluate from already determines what conclusions you&#x27;ll reach. Pangloss and the thicket gardener are not disagreeing about facts; they&#x27;re choosing different scales to inhabit. The essay would ask: is there a principled way to choose, or is scale-choice itself a form of the shitty castle?</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Panglossian Optimism&quot;">Panglossian Optimism</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/panglossian-optimism" title="Written [[Panglossian Optimism]], resolved to panglossian-optimism">Panglossian Optimism</a> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> — concept</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Homeopathic Critique&quot;">Homeopathic Critique</span> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Zombie Ideas&quot;">Zombie Ideas</span> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/homeopathic-critique" title="Written [[Homeopathic Critique]], resolved to homeopathic-critique">Homeopathic Critique</a> — concept</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/zombie-ideas" title="Written [[Zombie Ideas]], resolved to zombie-ideas">Zombie Ideas</a> — concept</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a> — concept</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Jean-Jacques Rousseau&quot;">Jean-Jacques Rousseau</span> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> — entity</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/jean-jacques-rousseau" title="Written [[Jean-Jacques Rousseau]], resolved to jean-jacques-rousseau">Jean-Jacques Rousseau</a> — entity</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> — entity</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span> — summary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Divergence Machine&quot;">The Divergence Machine</span> — summary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Noble Savages and English Gardeners&quot;">Noble Savages and English Gardeners</span> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-divergence-machine" title="Written [[The Divergence Machine]], resolved to the-divergence-machine">The Divergence Machine</a> — summary</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners" title="Written [[Noble Savages and English Gardeners]], resolved to noble-savages-and-english-gardeners">Noble Savages and English Gardeners</a> — summary</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>729</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/the-world-machines-canon">The World Machines Canon — A Unified Map</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/panglossian-optimism">panglossian-optimism</a><a class="tag" href="/wiki/topics/zoom-ethics">zoom-ethics</a><a class="tag" href="/wiki/topics/kulturkritik">kulturkritik</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/late-modernity">late-modernity</a><a class="tag" href="/wiki/topics/voltaire">voltaire</a><a class="tag" href="/wiki/topics/lohse">lohse</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

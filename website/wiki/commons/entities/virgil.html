@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Virgil</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Virgil</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Entities · updated 25 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/entities/virgil.md">source on GitHub</a></div>
-  <div class="note-summary">The Roman poet Virgil as Dante&#x27;s guide through Hell and Purgatory — emblem of unaided human reason and the classical inheritance, an ordering intelligence whose competence has an explicit terminus and who unwittingly authored a prophecy legible only to later readers.</div>
-  <div class="tags"><span class="tag">virgil</span><span class="tag">dante</span><span class="tag">reason</span><span class="tag">classical-inheritance</span><span class="tag">limbo</span><span class="tag">guide</span><span class="tag">poetic-precursor</span><span class="tag">divine-comedy</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Entities · updated 25 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/entities/virgil.md">source on GitHub</a></div>
+    <div class="note-summary">The Roman poet Virgil as Dante&#x27;s guide through Hell and Purgatory — emblem of unaided human reason and the classical inheritance, an ordering intelligence whose competence has an explicit terminus and who unwittingly authored a prophecy legible only to later readers.</div>
     <div class="prose">
 <p>The Roman poet Publius Vergilius Maro (70-19 BCE), author of the <em>Aeneid</em>, appears in Dante&#x27;s Comedy as the shade who guides the pilgrim through Hell and Purgatory. Sent at <a class="wikilink" href="/wiki/commons/entities/beatrice">beatrice</a>&#x27;s request — itself the end of a chain of heavenly intercession — he is the poem&#x27;s emblem of unaided human reason and of the classical inheritance: wisest of the virtuous pagans, yet himself confined to Limbo, living &#x27;desiring without hope,&#x27; barred from the salvation he shepherds Dante toward. He can lead only so far; at the last, &#x27;a spirit worthier than I / Must lead thee.&#x27;</p>
 <h2 id="reason-as-an-ordering-instrument">Reason as an ordering instrument</h2>
@@ -43,16 +52,36 @@
 <h2 id="the-unwitting-precursor">The unwitting precursor</h2>
 <p>Statius later reveals that Virgil&#x27;s Fourth Eclogue — its language of a renovated world and a returning Justice — planted the seed of Statius&#x27;s own Christian conversion generations after Virgil&#x27;s death, Virgil cast as &#x27;one, / Who, journeying through the darkness, hears a light / Behind, that profits not himself, but makes / His followers wise.&#x27; Virgil authored a prophecy whose meaning he could not access, legible only downstream: a compact instance both of Bloomian poetic precursion (<a class="wikilink" href="/wiki/aneesh/concepts/anxiety-of-influence">anxiety-of-influence</a>) and of the World Machines <a class="wikilink" href="/wiki/aneesh/concepts/history-machine">history-machine</a>, a cause assembling silently until it lurches into visibility for someone later. His crowning of Dante as self-governing likewise carries the register WMP calls <a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a> — striving answerable to itself once external instruction is exhausted.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/entities/beatrice">Beatrice</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>519</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/beatrice">Beatrice</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/virgil">virgil</a><a class="tag" href="/wiki/topics/dante">dante</a><span class="tag tag-lone" title="Only this note uses it">reason</span><span class="tag tag-lone" title="Only this note uses it">classical-inheritance</span><a class="tag" href="/wiki/topics/limbo">limbo</a><span class="tag tag-lone" title="Only this note uses it">guide</span><span class="tag tag-lone" title="Only this note uses it">poetic-precursor</span><a class="tag" href="/wiki/topics/divine-comedy">divine-comedy</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

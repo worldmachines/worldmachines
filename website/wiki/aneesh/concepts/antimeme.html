@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Antimeme</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Antimeme</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/antimeme.md">source on GitHub</a></div>
-  <div class="note-summary">An idea or structure with high real-world impact but low spreadability — designed or inclined to resist being remembered, attributed, or transmitted.</div>
-  <div class="tags"><span class="tag">memetics</span><span class="tag">information-theory</span><span class="tag">political-theory</span><span class="tag">bureaucracy</span><span class="tag">epistemology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/antimeme.md">source on GitHub</a></div>
+    <div class="note-summary">An idea or structure with high real-world impact but low spreadability — designed or inclined to resist being remembered, attributed, or transmitted.</div>
     <div class="prose">
 <p>An <strong>antimeme</strong> is an idea, structure, or actor with high real-world impact but low <em>memetic</em> spreadability. Unlike memes (ideas that propagate easily), antimemes resist attribution, memory, and transmission — they are powerful precisely because they cannot easily be pointed at.</p>
 <h2 id="origin-of-the-term">Origin of the Term</h2>
@@ -43,40 +52,82 @@
 <li><strong>Diffused responsibility</strong> — power distributed across many roles so no single actor is attributable</li>
 <li><strong>Deniable authority</strong> — formal titles obscure actual power (&quot;merely recorded imperial decisions&quot;)</li>
 <li><strong>Interpretive rather than legislative action</strong> — shaping outcomes through application and interpretation rather than visible decree</li>
-<li><strong>Low visibility by design</strong> — the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mughal Administration&quot;">Mughal Administration</span> matrix structure made decision loci opaque even to other officials</li>
+<li><strong>Low visibility by design</strong> — the <a class="wikilink" href="/wiki/aneesh/entities/mughal-administration" title="Written [[Mughal Administration]], resolved to mughal-administration">Mughal Administration</a> matrix structure made decision loci opaque even to other officials</li>
 </ol>
 <h2 id="why-antimemetics-are-politically-useful">Why Antimemetics Are Politically Useful</h2>
-<p>In pre-modern states, popular anger needed a target. Keeping administrators invisible ensured that discontent would be directed at the memetically visible ruler — who could be replaced — rather than at the administrative machinery, which was harder to dislodge. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Defenestration of Prague&quot;">Defenestration of Prague</span> illustrates the mechanism: royal representatives (visible) were defenestrated for mismanagement by their administrators (invisible).</p>
+<p>In pre-modern states, popular anger needed a target. Keeping administrators invisible ensured that discontent would be directed at the memetically visible ruler — who could be replaced — rather than at the administrative machinery, which was harder to dislodge. The <a class="wikilink" href="/wiki/aneesh/concepts/defenestration-of-prague" title="Written [[Defenestration of Prague]], resolved to defenestration-of-prague">Defenestration of Prague</a> illustrates the mechanism: royal representatives (visible) were defenestrated for mismanagement by their administrators (invisible).</p>
 <h2 id="modern-instances">Modern Instances</h2>
 <ul>
-<li><strong>Civil service</strong>: Sir Humphrey Appleby in <em><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Yes, Minister&quot;">Yes, Minister</span></em> — &quot;self-effacing discretion&quot; masks enormous power</li>
+<li><strong>Civil service</strong>: Sir Humphrey Appleby in <em><a class="wikilink-wanted" href="/wiki/wanted/yes-minister" title="No note is called &quot;Yes, Minister&quot; yet — see who is asking for it">Yes, Minister</a></em> — &quot;self-effacing discretion&quot; masks enormous power</li>
 <li><strong>Corporate boards</strong>: responsibility diffused between board, CEO, and management layers</li>
 <li><strong>Platform algorithms</strong>: vast social impact with no attributable decision-maker</li>
 </ul>
 <h2 id="tension-with-democratic-accountability">Tension With Democratic Accountability</h2>
-<p>The antimemetic design of bureaucracy is efficient (administrators can work without fear of mob violence) but it is structurally resistant to democratic accountability. This is a deep tension in modern governance. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bureaucratic Diffusion of Responsibility&quot;">Bureaucratic Diffusion of Responsibility</span>.</p>
+<p>The antimemetic design of bureaucracy is efficient (administrators can work without fear of mob violence) but it is structurally resistant to democratic accountability. This is a deep tension in modern governance. See <a class="wikilink" href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility" title="Written [[Bureaucratic Diffusion of Responsibility]], resolved to bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a>.</p>
 <h2 id="contrast-memetic-structures">Contrast: Memetic Structures</h2>
 <p>Royalty, architecture (Alhambra, Taj Mahal, Forbidden City), and ceremony are aggressively memetic — designed to be seen, remembered, and attributed. They absorb accountability so that the machinery behind them can operate freely.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Memetic vs Antimemetic Structures&quot;">Memetic vs Antimemetic Structures</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bureaucratic Diffusion of Responsibility&quot;">Bureaucratic Diffusion of Responsibility</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Mughal Administration&quot;">Mughal Administration</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Defenestration of Prague&quot;">Defenestration of Prague</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Yes, Minister&quot;">Yes, Minister</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/memetic-vs-antimemetic-structures" title="Written [[Memetic vs Antimemetic Structures]], resolved to memetic-vs-antimemetic-structures">Memetic vs Antimemetic Structures</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility" title="Written [[Bureaucratic Diffusion of Responsibility]], resolved to bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/mughal-administration" title="Written [[Mughal Administration]], resolved to mughal-administration">Mughal Administration</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/defenestration-of-prague" title="Written [[Defenestration of Prague]], resolved to defenestration-of-prague">Defenestration of Prague</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/yes-minister" title="No note is called &quot;Yes, Minister&quot; yet — see who is asking for it">Yes, Minister</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics">Royalty, Administration, and Antimemetics</a> (Aneesh Sathe, 2025)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>10</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>354</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics">Royalty, Administration, and Antimemetics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/memetic-vs-antimemetic-structures">Memetic vs Antimemetic Structures</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ibn-khaldun">Ibn Khaldun (1332-1406)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/mughal-administration">Mughal Administration</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/defenestration-of-prague">Defenestration of Prague</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ming-dynasty-grand-secretaries">Ming Dynasty Grand Secretaries</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/places-problems-and-the-act-of-bounding">Places, Problems, and the Act of Bounding</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>2 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/invisible-power-and-untrustworthy-data">Invisible Infrastructure: Antimemetics and the Data Generation Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/ulama">Ulama</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/bureaucratic-diffusion-of-responsibility">Bureaucratic Diffusion of Responsibility</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/summaries/royalty-administration-and-antimemetics">Royalty, Administration, and Antimemetics</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/memetic-vs-antimemetic-structures">Memetic vs Antimemetic Structures</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/entities/mughal-administration">Mughal Administration</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/ming-dynasty-grand-secretaries">Ming Dynasty Grand Secretaries</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/defenestration-of-prague">Defenestration of Prague</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/ibn-khaldun">Ibn Khaldun (1332-1406)</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/memetics">memetics</a><a class="tag" href="/wiki/topics/information-theory">information-theory</a><a class="tag" href="/wiki/topics/political-theory">political-theory</a><a class="tag" href="/wiki/topics/bureaucracy">bureaucracy</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

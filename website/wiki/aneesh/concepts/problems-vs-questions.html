@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Problems vs. Questions</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Problems vs. Questions</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/problems-vs-questions.md">source on GitHub</a></div>
-  <div class="note-summary">Agnes Callard&#x27;s distinction between problems (barriers that dissolve on solution) and questions (demands for new understanding that open into quests) — the conceptual spine of Aneesh Sathe&#x27;s series on Socratic thinking.</div>
-  <div class="tags"><span class="tag">epistemology</span><span class="tag">Agnes-Callard</span><span class="tag">problems</span><span class="tag">questions</span><span class="tag">inquiry</span><span class="tag">Socratic-method</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/problems-vs-questions.md">source on GitHub</a></div>
+    <div class="note-summary">Agnes Callard&#x27;s distinction between problems (barriers that dissolve on solution) and questions (demands for new understanding that open into quests) — the conceptual spine of Aneesh Sathe&#x27;s series on Socratic thinking.</div>
     <div class="prose">
 <h2 id="the-distinction">The Distinction</h2>
-<p>Drawn from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span>&#x27;s <em>Open Socrates</em>.</p>
+<p>Drawn from <a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a>&#x27;s <em>Open Socrates</em>.</p>
 <div class="table-wrap"><table>
 <thead><tr><th></th><th>Problems</th><th>Questions</th></tr></thead>
 <tbody>
@@ -54,14 +63,14 @@
 <li>Most people rush to <em>convert</em> questions into problems: ask Google, get recipe, done. This forecloses the quest.</li>
 </ul>
 <h2 id="alan-turings-reduction">Alan Turing&#x27;s Reduction</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alan Turing&quot;">Alan Turing</span>&#x27;s formulation of the Turing Test is an instance of converting a question (&quot;What is thinking?&quot;) into a problem (&quot;Can we detect thought?&quot;). The fact that LLMs pass the test but don&#x27;t convince us they think shows that the conversion lost something essential.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Turing Test&quot;">Turing Test</span></p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/alan-turing" title="Written [[Alan Turing]], resolved to alan-turing">Alan Turing</a>&#x27;s formulation of the Turing Test is an instance of converting a question (&quot;What is thinking?&quot;) into a problem (&quot;Can we detect thought?&quot;). The fact that LLMs pass the test but don&#x27;t convince us they think shows that the conversion lost something essential.</p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/turing-test" title="Written [[Turing Test]], resolved to turing-test">Turing Test</a></p>
 <h2 id="pre-answered-questions">Pre-Answered Questions</h2>
 <p>A special case: questions that arrive <em>already answered</em>. We hold them as settled without examination. They require Socratic pressure to reopen.</p>
 <p>Example: &quot;What is it to be a good scientist?&quot; A scientist gives rote answers (statistical rigor, publishing, experimental care) without these answering the root question.</p>
-<p>See: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">Normative Self-Blindness</span> — the mechanism that seals pre-answers shut.</p>
+<p>See: <a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">Normative Self-Blindness</a> — the mechanism that seals pre-answers shut.</p>
 <h2 id="aneesh-sathes-spatial-extension">Aneesh Sathe&#x27;s Spatial Extension</h2>
-<p>Sathe argues that the Q&amp;P distinction maps precisely onto the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place Philosophy&quot;">Space and Place Philosophy</span> framework:</p>
+<p>Sathe argues that the Q&amp;P distinction maps precisely onto the <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-philosophy" title="Written [[Space and Place Philosophy]], resolved to space-and-place-philosophy">Space and Place Philosophy</a> framework:</p>
 <ul>
 <li>Problems = <strong>places</strong>: bounded, ordered, tractable; you can stand here and say &quot;do this&quot;</li>
 <li>Questions = <strong>spaces</strong>: pure potential, defined by the places that surround them; the horizon you constantly seek</li>
@@ -70,22 +79,71 @@
 <p>See: <a class="wikilink" href="/wiki/aneesh/summaries/problems-are-places-questions-are-spaces">Problems are Places, Questions are Spaces</a> (Sathe, 2025)</p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic Thinking</span> — the method for pursuing questions</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Normative Self-Blindness&quot;">Normative Self-Blindness</span> — seals pre-answers shut</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs as Epistemic Tools&quot;">LLMs as Epistemic Tools</span> — LLMs as potentially able to hold question-space open</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place Philosophy&quot;">Space and Place Philosophy</span> — questions are open spaces; problems are places</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Agnes Callard&quot;">Agnes Callard</span> — source of the distinction</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chatbots, Bats &amp; Broken Oracles&quot;">Chatbots, Bats &amp; Broken Oracles</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic Thinking</a> — the method for pursuing questions</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/normative-self-blindness" title="Written [[Normative Self-Blindness]], resolved to normative-self-blindness">Normative Self-Blindness</a> — seals pre-answers shut</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/llms-as-epistemic-tools" title="Written [[LLMs as Epistemic Tools]], resolved to llms-as-epistemic-tools">LLMs as Epistemic Tools</a> — LLMs as potentially able to hold question-space open</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-philosophy" title="Written [[Space and Place Philosophy]], resolved to space-and-place-philosophy">Space and Place Philosophy</a> — questions are open spaces; problems are places</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/agnes-callard" title="Written [[Agnes Callard]], resolved to agnes-callard">Agnes Callard</a> — source of the distinction</li>
+<li>Source: <a class="wikilink-wanted" href="/wiki/wanted/chatbots-bats-and-broken-oracles" title="No note is called &quot;Chatbots, Bats &amp; Broken Oracles&quot; yet — see who is asking for it">Chatbots, Bats &amp; Broken Oracles</a></li>
 <li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/problems-are-places-questions-are-spaces">Problems are Places, Questions are Spaces</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>17</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>437</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/yi-fu-tuan">Yi-Fu Tuan</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-philosophy">Space and Place Philosophy</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/llms-as-epistemic-tools">LLMs as Epistemic Tools</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/thinking-with-places">Thinking with Places</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>9 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/thomas-nagel">Thomas Nagel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/failure-as-generativity">Failure as Generativity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/problems-are-places-questions-are-spaces">Problems are Places, Questions are Spaces</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/turing-test">Turing Test</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alan-turing">Alan Turing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/places-problems-and-the-act-of-bounding">Places, Problems, and the Act of Bounding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/simulation-and-the-socratic-question">Simulation and the Socratic Question: Removing the Win Condition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/audacity-and-the-long-game">Audacity and the Long Game</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/chatbots-bats-broken-oracles">Chatbots, Bats &amp; Broken Oracles</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/agnes-callard">Agnes Callard</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/llms-as-epistemic-tools">LLMs as Epistemic Tools</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/thomas-nagel">Thomas Nagel</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/normative-self-blindness">Normative Self-Blindness</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/agnes-callard">Agnes-Callard</a><span class="tag tag-lone" title="Only this note uses it">problems</span><span class="tag tag-lone" title="Only this note uses it">questions</span><a class="tag" href="/wiki/topics/inquiry">inquiry</a><a class="tag" href="/wiki/topics/socratic-method">Socratic-method</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

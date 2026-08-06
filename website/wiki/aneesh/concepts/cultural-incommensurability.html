@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Cultural Incommensurability</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Cultural Incommensurability</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/cultural-incommensurability.md">source on GitHub</a></div>
-  <div class="note-summary">Cultural incommensurability is the claim — advanced by Vico and Herder, theorized by Berlin — that different cultures embody genuinely different and non-rankable forms of human excellence: no common scale exists by which the Iliad, Roman law, and medieval Christianity can be placed in order.</div>
-  <div class="tags"><span class="tag">incommensurability</span><span class="tag">vico</span><span class="tag">herder</span><span class="tag">berlin</span><span class="tag">counter-enlightenment</span><span class="tag">cultural-pluralism</span><span class="tag">value-pluralism</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/cultural-incommensurability.md">source on GitHub</a></div>
+    <div class="note-summary">Cultural incommensurability is the claim — advanced by Vico and Herder, theorized by Berlin — that different cultures embody genuinely different and non-rankable forms of human excellence: no common scale exists by which the Iliad, Roman law, and medieval Christianity can be placed in order.</div>
     <div class="prose">
 <h2 id="the-claim">The Claim</h2>
 <p>Cultural incommensurability is the thesis that different historical cultures and civilizations embody forms of human excellence that cannot be ranked on a single scale. There is no common metric by which:</p>
@@ -43,13 +52,13 @@
 </ul>
 <p>Each is authentically itself; later does not mean better in any dimension that matters.</p>
 <h2 id="vicos-formulation">Vico&#x27;s Formulation</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> argues that each step on the ladder of human development &quot;has its own equally authentic means of expression.&quot; The Homeric poems are an unsurpassable masterpiece — &quot;but they could spring only from a brutal, stern, oligarchical, &#x27;heroic&#x27; society, and later civilisations, however superior in other respects, did not and could not produce an art necessarily superior to Homer.&quot;</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> argues that each step on the ladder of human development &quot;has its own equally authentic means of expression.&quot; The Homeric poems are an unsurpassable masterpiece — &quot;but they could spring only from a brutal, stern, oligarchical, &#x27;heroic&#x27; society, and later civilisations, however superior in other respects, did not and could not produce an art necessarily superior to Homer.&quot;</p>
 <p>This strikes &quot;a powerful blow at the notion of timeless truths and steady progress.&quot; The natural sciences deal with the &quot;relatively unaltering nature of the physical world viewed from &#x27;outside&#x27;&quot;; humane studies view &quot;social evolution from &#x27;inside&#x27; by a species of empathetic insight.&quot;</p>
 <h2 id="herders-formulation">Herder&#x27;s Formulation</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> generalizes: &quot;For Voltaire, Diderot, Helvétius, Holbach, Condorcet there is only universal civilisation, of which now one nation, now another, represents the richest flowering. For Herder there is a plurality of incommensurable cultures.&quot;</p>
-<p>Each culture has its own <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Herder&#x27;s Schwerpunkt&quot;">Schwerpunkt</span>, its own internal standard of value. &quot;No culture is a mere means towards another; every human achievement, every human society is to be judged by its own internal standards.&quot; The absolute criteria of progress fashionable in Paris are a form of provincial arrogance masquerading as universalism.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> generalizes: &quot;For Voltaire, Diderot, Helvétius, Holbach, Condorcet there is only universal civilisation, of which now one nation, now another, represents the richest flowering. For Herder there is a plurality of incommensurable cultures.&quot;</p>
+<p>Each culture has its own <a class="wikilink" href="/wiki/aneesh/concepts/herders-schwerpunkt" title="Written [[Herder&#x27;s Schwerpunkt]], resolved to herders-schwerpunkt">Schwerpunkt</a>, its own internal standard of value. &quot;No culture is a mere means towards another; every human achievement, every human society is to be judged by its own internal standards.&quot; The absolute criteria of progress fashionable in Paris are a form of provincial arrogance masquerading as universalism.</p>
 <h2 id="berlins-elaboration">Berlin&#x27;s Elaboration</h2>
-<p>Berlin uses Vico and Herder to ground his doctrine of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span>. The incommensurability of cultures is one expression of the incommensurability of values in general. If different civilizations embody genuinely different goods — civic virtue vs. Christian humility, heroic greatness vs. contemplative wisdom — and if these goods cannot be reduced to a common metric, then no utopian project can simultaneously realize all of them.</p>
+<p>Berlin uses Vico and Herder to ground his doctrine of <a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a>. The incommensurability of cultures is one expression of the incommensurability of values in general. If different civilizations embody genuinely different goods — civic virtue vs. Christian humility, heroic greatness vs. contemplative wisdom — and if these goods cannot be reduced to a common metric, then no utopian project can simultaneously realize all of them.</p>
 <p>This has immediate political consequences: utopian projects that claim to realize all values simultaneously &quot;are necessarily fraudulent or self-deceived.&quot;</p>
 <h2 id="distinction-from-relativism">Distinction from Relativism</h2>
 <p>Berlin, following Vico and Herder, insists that incommensurability is not relativism:</p>
@@ -62,28 +71,67 @@
 <p>&quot;The Homeric poems were an unsurpassable masterpiece, but they could spring only from a brutal, stern, oligarchical, &#x27;heroic&#x27; society... Each culture expresses its own collective experience, each step on the ladder of human development has its own equally authentic means of expression.&quot; (p. 6)</p>
 <p>This is not romantic primitivism — it&#x27;s a structural point about the conditions of possibility of different art forms. Mass literacy may produce certain goods (widespread education, critical thinking) while making Homer impossible. You can regret the loss without claiming the trade-off was bad overall.</p>
 <h2 id="contemporary-relevance">Contemporary Relevance</h2>
-<p>Cultural incommensurability poses a direct challenge to any universal AI alignment scheme. If different cultures embody genuinely incommensurable values, then a single utility function for AI alignment is a category error — it imposes one culture&#x27;s value ranking as universal. This connects directly to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Monism vs. Pluralism&quot;">Monism vs. Pluralism</span> in AI ethics and to the USC research discussed in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span>.</p>
+<p>Cultural incommensurability poses a direct challenge to any universal AI alignment scheme. If different cultures embody genuinely incommensurable values, then a single utility function for AI alignment is a category error — it imposes one culture&#x27;s value ranking as universal. This connects directly to <a class="wikilink" href="/wiki/aneesh/concepts/monism-vs-pluralism" title="Written [[Monism vs. Pluralism]], resolved to monism-vs-pluralism">Monism vs. Pluralism</a> in AI ethics and to the USC research discussed in <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a>.</p>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Giambattista Vico&quot;">Giambattista Vico</span> — first theorist of cultural incommensurability</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> — the systematic developer</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Value Pluralism&quot;">Value Pluralism</span> — Berlin&#x27;s doctrine</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Herder&#x27;s Schwerpunkt&quot;">Herder&#x27;s Schwerpunkt</span> — the concept cultural incommensurability rests on</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Monism vs. Pluralism&quot;">Monism vs. Pluralism</span> — the central opposition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI Homogenization and the Counter-Enlightenment&quot;">AI Homogenization and the Counter-Enlightenment</span> — contemporary echo</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaiah Berlin — Against the Current&quot;">Isaiah Berlin — Against the Current</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/giambattista-vico" title="Written [[Giambattista Vico]], resolved to giambattista-vico">Giambattista Vico</a> — first theorist of cultural incommensurability</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> — the systematic developer</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/value-pluralism" title="Written [[Value Pluralism]], resolved to value-pluralism">Value Pluralism</a> — Berlin&#x27;s doctrine</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/herders-schwerpunkt" title="Written [[Herder&#x27;s Schwerpunkt]], resolved to herders-schwerpunkt">Herder&#x27;s Schwerpunkt</a> — the concept cultural incommensurability rests on</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/monism-vs-pluralism" title="Written [[Monism vs. Pluralism]], resolved to monism-vs-pluralism">Monism vs. Pluralism</a> — the central opposition</li>
+<li><a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment" title="Written [[AI Homogenization and the Counter-Enlightenment]], resolved to ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a> — contemporary echo</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current" title="Written [[Isaiah Berlin — Against the Current]], resolved to isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/inter-world-opacity">Inter-World Opacity</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>9</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>691</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/inter-world-opacity">Inter-World Opacity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>1 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/vico-fantasia-and-ai-limits">Vico&#x27;s Fantasia and the Limits of AI Understanding</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">Isaiah Berlin — Against the Current: Essays in the History of Ideas</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/einfuhlung">Einfühlung</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/enlightenment-monism">Enlightenment Monism</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/giambattista-vico">Giambattista Vico</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/incommensurability">incommensurability</a><a class="tag" href="/wiki/topics/vico">vico</a><a class="tag" href="/wiki/topics/herder">herder</a><a class="tag" href="/wiki/topics/berlin">berlin</a><a class="tag" href="/wiki/topics/counter-enlightenment">counter-enlightenment</a><a class="tag" href="/wiki/topics/cultural-pluralism">cultural-pluralism</a><a class="tag" href="/wiki/topics/value-pluralism">value-pluralism</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

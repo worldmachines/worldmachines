@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/klein-data-frame-theory-of-sensemaking.md">source on GitHub</a></div>
-  <div class="note-summary">Klein et al&#x27;s 2007 academic paper establishing the Data-Frame Theory of Sensemaking — eight functions of sensemaking, the data-frame symbiosis, and the four sensemaking cycles, drawn from naturalistic studies of military and medical experts.</div>
-  <div class="tags"><span class="tag">sensemaking</span><span class="tag">data-frame-theory</span><span class="tag">gary-klein</span><span class="tag">cognitive-science</span><span class="tag">naturalistic-decision-making</span><span class="tag">expertise</span><span class="tag">frames</span><span class="tag">anchors</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/klein-data-frame-theory-of-sensemaking.md">source on GitHub</a></div>
+    <div class="note-summary">Klein et al&#x27;s 2007 academic paper establishing the Data-Frame Theory of Sensemaking — eight functions of sensemaking, the data-frame symbiosis, and the four sensemaking cycles, drawn from naturalistic studies of military and medical experts.</div>
     <div class="prose">
 <p><strong>Source</strong>: Proceedings of the Sixth International Conference on Naturalistic Decision Making (pp. 113–155). Funded by the US Army Research Institute for Behavioral and Social Sciences.</p>
 <h2 id="central-argument">Central Argument</h2>
@@ -66,7 +75,7 @@
 <h2 id="relationship-to-prior-concepts">Relationship to Prior Concepts</h2>
 <p>The paper explicitly situates frames as similar to:</p>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Chunks&quot;">Cognitive Chunks</span> — organized units of knowledge in long-term memory (Sweller &amp; Cooper, 1985)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/cognitive-chunks" title="No note is called &quot;Cognitive Chunks&quot; yet — see who is asking for it">Cognitive Chunks</a> — organized units of knowledge in long-term memory (Sweller &amp; Cooper, 1985)</li>
 <li>Schema acquisition in learning research</li>
 <li>Weick&#x27;s sensemaking (frames as &quot;extracted cues&quot; + retrospective narrative)</li>
 </ul>
@@ -91,29 +100,42 @@
 <h2 id="cross-references">Cross-References</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">data-frame-theory-of-sensemaking</a> — full summary (nine assertions, seven forms, six cases, applications)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Frames and Framing&quot;">Frames and Framing</span> — the frame concept in detail</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Sensemaking Forms&quot;">Sensemaking Forms</span> — all seven types expanded</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Fixation Error&quot;">Fixation Error</span> — pathological preservation cycle</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Anchoring in Sensemaking&quot;">Anchoring in Sensemaking</span> — anchor economy and timing effects</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Just-in-Time Mental Models&quot;">Just-in-Time Mental Models</span> — the JIT model assertion</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Reframing&quot;">Reframing</span> — the frame replacement process</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Recognition-Primed Decision Model&quot;">Recognition-Primed Decision Model</span> — the RPD model this extends</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Macrocognition&quot;">Macrocognition</span> — the broader cognitive science framework</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Abductive Reasoning&quot;">Abductive Reasoning</span> — dominant cognitive mode in frame construction</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Naturalistic Decision Making&quot;">Naturalistic Decision Making</span> — the parent research tradition</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gary Klein&quot;">Gary Klein</span> — principal author</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Karl Weick&quot;">Karl Weick</span> — related sensemaking theorist</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> — associated extraction methodology</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Heuristics and Biases&quot;">Heuristics and Biases</span> — contrasting research paradigm</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/frames-and-framing" title="Written [[Frames and Framing]], resolved to frames-and-framing">Frames and Framing</a> — the frame concept in detail</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/sensemaking-forms" title="Written [[Sensemaking Forms]], resolved to sensemaking-forms">Sensemaking Forms</a> — all seven types expanded</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/fixation-error" title="Written [[Fixation Error]], resolved to fixation-error">Fixation Error</a> — pathological preservation cycle</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/anchoring-in-sensemaking" title="Written [[Anchoring in Sensemaking]], resolved to anchoring-in-sensemaking">Anchoring in Sensemaking</a> — anchor economy and timing effects</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/just-in-time-mental-models" title="Written [[Just-in-Time Mental Models]], resolved to just-in-time-mental-models">Just-in-Time Mental Models</a> — the JIT model assertion</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/reframing" title="Written [[Reframing]], resolved to reframing">Reframing</a> — the frame replacement process</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/recognition-primed-decision-model" title="Written [[Recognition-Primed Decision Model]], resolved to recognition-primed-decision-model">Recognition-Primed Decision Model</a> — the RPD model this extends</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/macrocognition" title="Written [[Macrocognition]], resolved to macrocognition">Macrocognition</a> — the broader cognitive science framework</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/abductive-reasoning" title="Written [[Abductive Reasoning]], resolved to abductive-reasoning">Abductive Reasoning</a> — dominant cognitive mode in frame construction</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/naturalistic-decision-making" title="Written [[Naturalistic Decision Making]], resolved to naturalistic-decision-making">Naturalistic Decision Making</a> — the parent research tradition</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gary-klein" title="Written [[Gary Klein]], resolved to gary-klein">Gary Klein</a> — principal author</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/karl-weick" title="Written [[Karl Weick]], resolved to karl-weick">Karl Weick</a> — related sensemaking theorist</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> — associated extraction methodology</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/heuristics-and-biases" title="Written [[Heuristics and Biases]], resolved to heuristics-and-biases">Heuristics and Biases</a> — contrasting research paradigm</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>15</b><span>links out</span></div>
+      <div class="bearing"><b>654</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/data-frame-theory">data-frame-theory</a><a class="tag" href="/wiki/topics/gary-klein">gary-klein</a><a class="tag" href="/wiki/topics/cognitive-science">cognitive-science</a><a class="tag" href="/wiki/topics/naturalistic-decision-making">naturalistic-decision-making</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/frames">frames</a><span class="tag tag-lone" title="Only this note uses it">anchors</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

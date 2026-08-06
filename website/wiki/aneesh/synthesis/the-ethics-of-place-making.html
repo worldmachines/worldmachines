@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The Ethics of Place-Making</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Ethics of Place-Making</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-ethics-of-place-making.md">source on GitHub</a></div>
-  <div class="note-summary">Place-making is never neutral — every boundary drawn excludes; every name imparted leaves something unnamed; every infrastructure built distorts the field of action for those caught in its gravity. The ethics of place-making is the moral register the spatial-epistemology cluster has historically deferred and that Sathe&#x27;s &#x27;Delta Quadrant&#x27; essay, Mbembe&#x27;s necropolitics, Harvey&#x27;s uneven spatial production, Foucault&#x27;s heterotopias, and Bryant&#x27;s gravity together force into the open.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">place-making</span><span class="tag">ethics</span><span class="tag">power</span><span class="tag">infrastructure</span><span class="tag">custodianship</span><span class="tag">heterotopia</span><span class="tag">necropolitics</span><span class="tag">gravity</span><span class="tag">spatial-epistemology</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-ethics-of-place-making.md">source on GitHub</a></div>
+    <div class="note-summary">Place-making is never neutral — every boundary drawn excludes; every name imparted leaves something unnamed; every infrastructure built distorts the field of action for those caught in its gravity. The ethics of place-making is the moral register the spatial-epistemology cluster has historically deferred and that Sathe&#x27;s &#x27;Delta Quadrant&#x27; essay, Mbembe&#x27;s necropolitics, Harvey&#x27;s uneven spatial production, Foucault&#x27;s heterotopias, and Bryant&#x27;s gravity together force into the open.</div>
     <div class="prose">
 <h2 id="what-this-synthesis-closes">What This Synthesis Closes</h2>
 <p><a class="wikilink" href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">The spatial-epistemology master thread</a> has been overwhelmingly <em>epistemic</em> — knowing as place-making, frames as places, books as dwellings, the mind as a landscape of semi-solid smoke. The master thread&#x27;s evaluative criterion (&quot;does this technology orient or disorient?&quot;) is normative but undermoralized: it asks how well places work, not who pays for them.</p>
@@ -60,7 +69,7 @@
 <p>Christopher Alexander and Ron Wakkary&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/unselfconscious-design">unselfconscious-design</a> is the methodological complement: good places emerge from &quot;a slow dance between structure and improvisation.&quot; The fridge becomes a family bulletin board. The courtyard becomes a marketplace. Design enables this evolution rather than constraining it. The designer&#x27;s authority is bracketed in advance by the recognition that fit emerges through use, not specification.</p>
 <h3 id="heterotopias-as-counter-cartography">Heterotopias as Counter-Cartography</h3>
 <p>Foucault&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/heterotopias">heterotopias</a> are places that operate under a different logic than the dominant spatial order — cemeteries, prisons, libraries, autonomous zones, speculative games. Sathe deploys them in §III as proof that &quot;other maps are possible.&quot; This is the constructive complement to Mbembe&#x27;s diagnosis: necropolitics describes what happens when the dominant map governs all places; heterotopias describe how alternative maps survive within or against it.</p>
-<p>The wiki connections are extensive: <a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance">the thicket</a> is heterotopian by deliberate design; <a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> is heterotopian by repurposing; <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Digital Studiolo&quot;">The Digital Studiolo</span> is heterotopian as a private place against the platform&#x27;s public legibility. Each is a small act of counter-cartography — drawing a different map of an existing space.</p>
+<p>The wiki connections are extensive: <a class="wikilink" href="/wiki/aneesh/summaries/the-architecture-of-resistance">the thicket</a> is heterotopian by deliberate design; <a class="wikilink" href="/wiki/aneesh/concepts/nakatomi-space">Nakatomi Space</a> is heterotopian by repurposing; <a class="wikilink" href="/wiki/aneesh/synthesis/the-digital-studiolo" title="Written [[The Digital Studiolo]], resolved to the-digital-studiolo">The Digital Studiolo</a> is heterotopian as a private place against the platform&#x27;s public legibility. Each is a small act of counter-cartography — drawing a different map of an existing space.</p>
 <h3 id="building-heavy-alternatives">Building Heavy Alternatives</h3>
 <p>Bryant&#x27;s geophilosophy (cartography + deconstruction + terraformation) closes the loop. Critique alone — the &quot;deconstruction&quot; mode that has historically dominated leftist and post-structuralist thought — leaves people trapped in assemblages they correctly identify as unjust. <strong>Terraformation</strong> is the missing third: building alternative bright objects, alternative gravitational attractors, alternative infrastructures.</p>
 <p>This is the political programme <a class="wikilink" href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">the-gravity-of-infrastructure</a> sketches: federated protocols, mutual-credit networks, cooperative ownership, distributed compute, alternative energy substrates. The light-machine politics of opacity (the thicket, the cloister-web, the digital studiolo) is necessary but not sufficient. Heavy-machine alternatives — built places at infrastructural scale — are the structural answer to the structural problem of necropolitics and uneven spatial production.</p>
@@ -94,16 +103,41 @@
 <p><strong>&quot;At Whose Expense&quot;</strong> — a short essay reading the master thread&#x27;s evaluative criterion through Mbembe and Harvey: every &quot;good place&quot; the wiki has praised has a complementary &quot;non-place&quot; produced as its underside. The studiolo presupposes someone tending the garden; the thicket presupposes legibility elsewhere; the home presupposes the road. The argument is not that place-making is bad but that the moral arithmetic must be made visible.</p>
 <p><strong>&quot;Three Politics of the Frontier&quot;</strong> — custodianship, heterotopia, terraformation as three distinct political stances toward a dominant spatial order. Maps to three distinct political theories (virtue ethics / situationism / structural reform). Useful for sorting which response fits which problem — and for catching the bad faith of using one as cover for another.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>18</b><span>links out</span></div>
+      <div class="bearing"><b>1548</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-self-as-negentropic-place">The Self as Negentropic Place</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/entropy-and-assemblage-maintenance">Entropy and Assemblage Maintenance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/from-artifact-to-process">From Artifact to Process — The Death of the Finished Work</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/naming-as-anchoring">Naming as Anchoring</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/we-need-homes-in-the-delta-quadrant">We Need Homes in the Delta Quadrant</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/place-making">place-making</a><a class="tag" href="/wiki/topics/ethics">ethics</a><a class="tag" href="/wiki/topics/power">power</a><a class="tag" href="/wiki/topics/infrastructure">infrastructure</a><a class="tag" href="/wiki/topics/custodianship">custodianship</a><a class="tag" href="/wiki/topics/heterotopia">heterotopia</a><a class="tag" href="/wiki/topics/necropolitics">necropolitics</a><a class="tag" href="/wiki/topics/gravity">gravity</a><a class="tag" href="/wiki/topics/spatial-epistemology">spatial-epistemology</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

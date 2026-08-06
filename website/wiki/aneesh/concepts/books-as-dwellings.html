@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Books as Dwellings</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Books as Dwellings</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/books-as-dwellings.md">source on GitHub</a></div>
-  <div class="note-summary">Books are not information containers but inhabitable spaces — dwellings, rooms, places — and this spatial ontology explains why book-reading is categorically different from digital scrolling.</div>
-  <div class="tags"><span class="tag">books</span><span class="tag">reading</span><span class="tag">attention</span><span class="tag">phenomenology</span><span class="tag">space</span><span class="tag">dwelling</span><span class="tag">architecture</span><span class="tag">bachelard</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/books-as-dwellings.md">source on GitHub</a></div>
+    <div class="note-summary">Books are not information containers but inhabitable spaces — dwellings, rooms, places — and this spatial ontology explains why book-reading is categorically different from digital scrolling.</div>
     <div class="prose">
 <h2 id="the-core-metaphor">The Core Metaphor</h2>
-<p>From <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>&#x27;s <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Books Are Dwellings&quot;">Books Are Dwellings</span>: &quot;Books are dwellings. Books are places.&quot;</p>
+<p>From <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/summaries/books-are-dwellings" title="Written [[Books Are Dwellings]], resolved to books-are-dwellings">Books Are Dwellings</a>: &quot;Books are dwellings. Books are places.&quot;</p>
 <p>The spatial metaphor is doing real philosophical work. It inverts the usual framing of reading as a <em>temporal</em> activity (reading <em>takes</em> time, books are <em>long</em>) in favor of a <em>spatial</em> one: books are places you inhabit, rooms you walk through. The experience of reading is not consumption but residence.</p>
 <p>This has several implications:</p>
 <ol>
@@ -50,8 +59,8 @@
 <h2 id="resonances">Resonances</h2>
 <ul>
 <li><strong>Gaston Bachelard</strong>, <em>The Poetics of Space</em> (1958): &quot;The house is our first universe, a real cosmos in every sense of the word.&quot; Bachelard&#x27;s intimate spaces — nests, corners, drawers — anticipate Sathe&#x27;s dwelling-books. Neither author is cited in the other, but the structural parallel is strong.</li>
-<li><strong>The Cloister Web</strong> (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Cloister Web&quot;">The Cloister Web</span>): Sathe&#x27;s concept of semi-private creative rooms resonates with the dwelling metaphor. The Cloister Web is where ideas are housed before being carried into public.</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;RSS as Protocol Theology&quot;">RSS as Protocol Theology</span></strong>: the River of Posts is also a spatial metaphor — a stream flowing through everyone&#x27;s house at once. Both RSS and books organize information architecturally rather than algorithmically.</li>
+<li><strong>The Cloister Web</strong> (<a class="wikilink" href="/wiki/aneesh/concepts/the-cloister-web" title="Written [[The Cloister Web]], resolved to the-cloister-web">The Cloister Web</a>): Sathe&#x27;s concept of semi-private creative rooms resonates with the dwelling metaphor. The Cloister Web is where ideas are housed before being carried into public.</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/rss-as-protocol-theology" title="Written [[RSS as Protocol Theology]], resolved to rss-as-protocol-theology">RSS as Protocol Theology</a></strong>: the River of Posts is also a spatial metaphor — a stream flowing through everyone&#x27;s house at once. Both RSS and books organize information architecturally rather than algorithmically.</li>
 </ul>
 <h2 id="whats-not-a-dwelling">What&#x27;s <em>Not</em> a Dwelling</h2>
 <p>The essay implicitly condemns:</p>
@@ -63,29 +72,67 @@
 <p>What&#x27;s unaddressed: long-form digital essays, Substack, serialized fiction. Sathe himself writes long essays online — are these billboards or dwellings?</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Attention and Deep Reading&quot;">Attention and Deep Reading</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Digital Reading vs. Book Reading&quot;">Digital Reading vs. Book Reading</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Book Club as Shared Architecture&quot;">Book Club as Shared Architecture</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Cloister Web&quot;">The Cloister Web</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Devotion vs. Effort in Creative Work&quot;">Devotion vs. Effort in Creative Work</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Gloomwheel&quot;">The Gloomwheel</span> — the anti-dwelling: a place you cannot inhabit because it never ends</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dwelling vs. Scrolling — Two Modes of Inhabiting Text&quot;">Dwelling vs. Scrolling — Two Modes of Inhabiting Text</span></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/attention-and-deep-reading" title="No note is called &quot;Attention and Deep Reading&quot; yet — see who is asking for it">Attention and Deep Reading</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/digital-reading-vs-book-reading" title="No note is called &quot;Digital Reading vs. Book Reading&quot; yet — see who is asking for it">Digital Reading vs. Book Reading</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/book-club-as-shared-architecture" title="No note is called &quot;Book Club as Shared Architecture&quot; yet — see who is asking for it">Book Club as Shared Architecture</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-cloister-web" title="Written [[The Cloister Web]], resolved to the-cloister-web">The Cloister Web</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/devotion-vs-effort-in-creative-work" title="No note is called &quot;Devotion vs. Effort in Creative Work&quot; yet — see who is asking for it">Devotion vs. Effort in Creative Work</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-gloomwheel" title="Written [[The Gloomwheel]], resolved to the-gloomwheel">The Gloomwheel</a> — the anti-dwelling: a place you cannot inhabit because it never ends</li>
+<li>Synthesis: <a class="wikilink-wanted" href="/wiki/wanted/dwelling-vs-scrolling-two-modes-of-inhabiting-text" title="No note is called &quot;Dwelling vs. Scrolling — Two Modes of Inhabiting Text&quot; yet — see who is asking for it">Dwelling vs. Scrolling — Two Modes of Inhabiting Text</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">6</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/architecture-as-crystallized-awareness">Architecture as Crystallized Awareness</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/cosmogonic-architecture">Cosmogonic Architecture</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/gaston-bachelard">Gaston Bachelard (1884–1962)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>13</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>463</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/the-cloister-web">The Cloister Web</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/architecture-as-crystallized-awareness">Architecture as Crystallized Awareness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/books-are-dwellings">Books Are Dwellings</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-gloomwheel">The Gloomwheel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/intimate-place">Intimate Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfing">Unselfing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cosmogonic-architecture">Cosmogonic Architecture</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>5 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/blogrolls-and-the-personal-web">Blogrolls and the Personal Web</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/architecture-and-books-as-crystallized-awareness">Architecture and Books as Crystallized Awareness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/dwelling-vs-scrolling">Dwelling vs. Scrolling — Two Modes of Inhabiting Text</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gaston-bachelard">Gaston Bachelard (1884–1962)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/tuan-2002-space-and-place-ch10-12">Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/dwelling-as-philosophical-concept">Dwelling as Philosophical Concept</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/rss-as-protocol-theology">RSS as Protocol Theology</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/studiolo-and-self-cultivation">Studiolo and Self-Cultivation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-small-god-of-the-internet">The Small God of the Internet</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/mythical-space">Mythical Space</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/books">books</a><a class="tag" href="/wiki/topics/reading">reading</a><a class="tag" href="/wiki/topics/attention">attention</a><a class="tag" href="/wiki/topics/phenomenology">phenomenology</a><a class="tag" href="/wiki/topics/space">space</a><a class="tag" href="/wiki/topics/dwelling">dwelling</a><a class="tag" href="/wiki/topics/architecture">architecture</a><a class="tag" href="/wiki/topics/bachelard">bachelard</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Maria Popova</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Maria Popova</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/maria-popova.md">source on GitHub</a></div>
-  <div class="note-summary">Maria Popova is the founder of The Marginalian (formerly Brain Pickings) — a long-form blog synthesizing ideas from literature, science, philosophy, and art, known for deep excavations of forgotten works and an emphasis on how to live.</div>
-  <div class="tags"><span class="tag">blogger</span><span class="tag">essayist</span><span class="tag">synthesis</span><span class="tag">culture</span><span class="tag">marginalian</span><span class="tag">brain-pickings</span><span class="tag">russell</span><span class="tag">unselfing</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/maria-popova.md">source on GitHub</a></div>
+    <div class="note-summary">Maria Popova is the founder of The Marginalian (formerly Brain Pickings) — a long-form blog synthesizing ideas from literature, science, philosophy, and art, known for deep excavations of forgotten works and an emphasis on how to live.</div>
     <div class="prose">
 <h2 id="identity">Identity</h2>
 <p>Founder and sole author of <a href="https://www.themarginalian.org/">The Marginalian</a> (formerly Brain Pickings). Born in Bulgaria; based in New York. Writes long-form essays synthesizing ideas from literature, philosophy, science, and art — typically through close reading of books, letters, and archival sources. Her work is characterized by:</p>
@@ -43,30 +52,63 @@
 <li><strong>An emphasis on how to live</strong>: her favorite subjects are thinkers who thought seriously about suffering, happiness, and meaning</li>
 </ul>
 <h2 id="unselfing">&quot;Unselfing&quot;</h2>
-<p>The concept cited in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span> comes from Popova&#x27;s essay on Bertrand Russell&#x27;s <em>The Conquest of Happiness</em>. She describes happiness as requiring <strong>unselfing</strong> — &quot;some instinctive wakefulness to an aspect of the world other than myself&quot;:</p>
+<p>The concept cited in <a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a> comes from Popova&#x27;s essay on Bertrand Russell&#x27;s <em>The Conquest of Happiness</em>. She describes happiness as requiring <strong>unselfing</strong> — &quot;some instinctive wakefulness to an aspect of the world other than myself&quot;:</p>
 <blockquote><p>&quot;In my darkest hours, what has saved me again and again is some action of unselfing — some instinctive wakefulness to an aspect of the world other than myself: a helping hand extended to someone else&#x27;s struggle, the dazzling galaxy just discovered millions of lightyears away, the cardinal trembling in the tree outside my window.&quot;</p></blockquote>
-<p>This is offered as both personal testimony and philosophical claim: happiness requires dissolving the self into something beyond its own &quot;bruising boundaries.&quot; See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Curiosity as Ego Dissolution&quot;">Curiosity as Ego Dissolution</span> for the concept developed from this passage.</p>
+<p>This is offered as both personal testimony and philosophical claim: happiness requires dissolving the self into something beyond its own &quot;bruising boundaries.&quot; See <a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution" title="Written [[Curiosity as Ego Dissolution]], resolved to curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a> for the concept developed from this passage.</p>
 <h2 id="role-in-this-wiki">Role in This Wiki</h2>
 <p>Popova serves as a <strong>contemporary mediator</strong> — she brings historical thinkers (Russell, here) into dialogue with present concerns. Her voice is between the historical source and the contemporary essayist.</p>
 <h2 id="intellectual-allies-in-this-wiki">Intellectual Allies in This Wiki</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Bertrand Russell&quot;">Bertrand Russell</span> — <em>The Conquest of Happiness</em> is one of her central texts</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> — cites her in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Better Company Than Caesar&quot;">Better Company Than Caesar</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/bertrand-russell" title="Written [[Bertrand Russell]], resolved to bertrand-russell">Bertrand Russell</a> — <em>The Conquest of Happiness</em> is one of her central texts</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> — cites her in <a class="wikilink" href="/wiki/aneesh/summaries/better-company-than-caesar" title="Written [[Better Company Than Caesar]], resolved to better-company-than-caesar">Better Company Than Caesar</a></li>
 </ul>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Unselfing&quot;">Unselfing</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Curiosity as Ego Dissolution&quot;">Curiosity as Ego Dissolution</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Burnout and Intellectual Recovery&quot;">Burnout and Intellectual Recovery</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/unselfing" title="Written [[Unselfing]], resolved to unselfing">Unselfing</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution" title="Written [[Curiosity as Ego Dissolution]], resolved to curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/burnout-and-intellectual-recovery" title="No note is called &quot;Burnout and Intellectual Recovery&quot; yet — see who is asking for it">Burnout and Intellectual Recovery</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>296</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfing">Unselfing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/bertrand-russell">Bertrand Russell</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/curiosity-vs-status-as-motivation">Curiosity vs. Status as Motivation for Learning</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/bertrand-russell">Bertrand Russell</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/summaries/better-company-than-caesar">Better Company Than Caesar</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/performative-polymathism">Performative Polymathism</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/curiosity-as-ego-dissolution">Curiosity as Ego Dissolution</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfing">Unselfing</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-de-montaigne">Michel de Montaigne</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/blogger">blogger</a><span class="tag tag-lone" title="Only this note uses it">essayist</span><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/culture">culture</a><span class="tag tag-lone" title="Only this note uses it">marginalian</span><span class="tag tag-lone" title="Only this note uses it">brain-pickings</span><a class="tag" href="/wiki/topics/russell">russell</a><a class="tag" href="/wiki/topics/unselfing">unselfing</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

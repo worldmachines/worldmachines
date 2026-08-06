@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Panglossian Optimism</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Panglossian Optimism</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/panglossian-optimism.md">source on GitHub</a></div>
-  <div class="note-summary">Panglossian optimism is the view that every harm, disaster, or injustice is a necessary stepping stone on a trajectory toward a better future — named for Voltaire&#x27;s Dr. Pangloss — identified by Gould and Lewontin as a structural fallacy in evolutionary thinking and extended by Lohse to techno-optimism.</div>
-  <div class="tags"><span class="tag">panglossian-optimism</span><span class="tag">voltaire</span><span class="tag">candide</span><span class="tag">gould-lewontin</span><span class="tag">adaptationism</span><span class="tag">teleology</span><span class="tag">techno-optimism</span><span class="tag">zoom-ethics</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/panglossian-optimism.md">source on GitHub</a></div>
+    <div class="note-summary">Panglossian optimism is the view that every harm, disaster, or injustice is a necessary stepping stone on a trajectory toward a better future — named for Voltaire&#x27;s Dr. Pangloss — identified by Gould and Lewontin as a structural fallacy in evolutionary thinking and extended by Lohse to techno-optimism.</div>
     <div class="prose">
 <h2 id="origin">Origin</h2>
 <p>Named for <strong>Dr. Pangloss</strong> in Voltaire&#x27;s <em>Candide</em> (1759), the tutor who insists &quot;this is the best of all possible worlds&quot; through every catastrophe — earthquake, slavery, shipwreck, syphilis, auto-da-fé. Pangloss is Voltaire&#x27;s parody of <a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a>&#x27;s theodicy in the <em>Theodicy</em> (1710), which argued that God, being omnipotent and good, must have created the best possible world, and thus all apparent evil is ultimately justified by its role in the larger design.</p>
@@ -48,7 +57,7 @@
 <h2 id="gould-and-lewontins-critique-1979">Gould &amp; Lewontin&#x27;s Critique (1979)</h2>
 <p>In &quot;The Spandrels of San Marco and the Panglossian Paradigm: A Critique of the Adaptationist Programme&quot; (1979), Stephen Jay Gould and Richard Lewontin identified <strong>Panglossian thinking</strong> as a structural fallacy in evolutionary biology: the tendency to assume every feature of an organism is optimally adapted for a function, rather than considering it as a byproduct, a structural constraint, or a historical accident.</p>
 <p>The <strong>spandrel</strong> (the triangular space created by fitting arches into a rectangular frame in San Marco&#x27;s basilica) is decorated beautifully — but it was not designed as a decorative element; it is a structural <em>spandrel</em> that was then given a decorative function. The adaptationist would ask &quot;what is the spandrel for?&quot; The proper question is &quot;why does the spandrel exist?&quot; — i.e., what structural constraint produced it.</p>
-<p>Lohse&#x27;s implicit extension in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span>: Horto&#x27;s techno-optimism (&quot;child labor in chip supply chains is a stepping stone to humanity reaching the stars&quot;) has the same structure as adaptationist Panglossianism — assuming every feature of the historical trajectory is optimally justified by its eventual function.</p>
+<p>Lohse&#x27;s implicit extension in <a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a>: Horto&#x27;s techno-optimism (&quot;child labor in chip supply chains is a stepping stone to humanity reaching the stars&quot;) has the same structure as adaptationist Panglossianism — assuming every feature of the historical trajectory is optimally justified by its eventual function.</p>
 <h2 id="contemporary-techno-optimism">Contemporary Techno-Optimism</h2>
 <p>&quot;Horto&#x27;s&quot; argument in Lohse&#x27;s essay:</p>
 <ul>
@@ -65,28 +74,54 @@
 <p>Voltaire&#x27;s <em>Candide</em> was the definitive literary attack on Panglossian optimism — specifically on Leibniz&#x27;s theodicy. The final line, &quot;<em>il faut cultiver notre jardin</em>&quot; (we must cultivate our garden), is the direct counterpoint: instead of zoom-out speculation about optimal trajectories, zoom in to local, particular, tended things.</p>
 <p>This puts Panglossian optimism in direct tension with:</p>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> (which at least acknowledges the wound, even if its cures are illusory)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> (which at least acknowledges the wound, even if its cures are illusory)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> (Sathe&#x27;s concept of illegible local care as resistance)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The English Garden as Epistemic Object&quot;">The English Garden as Epistemic Object</span> (which tries to reconcile nature and culture but at least doesn&#x27;t claim the reconciliation is globally optimal)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object" title="Written [[The English Garden as Epistemic Object]], resolved to the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a> (which tries to reconcile nature and culture but at least doesn&#x27;t claim the reconciliation is globally optimal)</li>
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Voltaire&quot;">Voltaire</span> — entity (parodist)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/voltaire" title="Written [[Voltaire]], resolved to voltaire">Voltaire</a> — entity (parodist)</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a> — entity (target of parody)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Florian Lohse&quot;">Florian Lohse</span> — entity (extending Panglossian critique to techno-optimism)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span> — summary</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Zoom-Level Ethics&quot;">Zoom-Level Ethics</span> — related concept (the zoom problem in ethics)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/florian-lohse" title="Written [[Florian Lohse]], resolved to florian-lohse">Florian Lohse</a> — entity (extending Panglossian critique to techno-optimism)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a> — summary</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/zoom-level-ethics" title="No note is called &quot;Zoom-Level Ethics&quot; yet — see who is asking for it">Zoom-Level Ethics</a> — related concept (the zoom problem in ethics)</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/the-thicket">The Thicket</a> — the anti-Panglossian alternative</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castle Pattern&quot;">Shitty Castle Pattern</span> — interesting contrast: the shitty castle builder knows things won&#x27;t work, while the Panglossian believes they will</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/shitty-castle-pattern" title="Written [[Shitty Castle Pattern]], resolved to shitty-castle-pattern">Shitty Castle Pattern</a> — interesting contrast: the shitty castle builder knows things won&#x27;t work, while the Panglossian believes they will</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>737</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds">The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/florian-lohse">Florian Lohse</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/noble-savages-and-english-gardeners">Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-thicket">The Thicket</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/panglossian-optimism">panglossian-optimism</a><a class="tag" href="/wiki/topics/voltaire">voltaire</a><a class="tag" href="/wiki/topics/candide">candide</a><span class="tag tag-lone" title="Only this note uses it">gould-lewontin</span><span class="tag tag-lone" title="Only this note uses it">adaptationism</span><span class="tag tag-lone" title="Only this note uses it">teleology</span><a class="tag" href="/wiki/topics/techno-optimism">techno-optimism</a><a class="tag" href="/wiki/topics/zoom-ethics">zoom-ethics</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

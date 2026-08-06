@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> <b>/</b> <span>The Reeve&#x27;s Prologue and Tale: Age, Grudge, and the Miller Beguiled</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Reeve&#x27;s Prologue and Tale: Age, Grudge, and the Miller Beguiled</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-reeves-tale.md">source on GitHub</a></div>
-  <div class="note-summary">Stung by the Miller&#x27;s tale of a cuckolded carpenter, the aging Reeve Oswald delivers a bitter prologue on desire outliving the body, then tells a fabliau in which two Cambridge clerks avenge a thieving miller&#x27;s grain-fraud by sleeping with his wife and daughter in one chaotic, dark-room night, leaving him beaten, cuckolded, and still out his stolen meal.</div>
-  <div class="tags"><span class="tag">chaucer</span><span class="tag">canterbury-tales</span><span class="tag">reeves-tale</span><span class="tag">fabliau</span><span class="tag">old-age</span><span class="tag">revenge-narrative</span><span class="tag">class-satire</span><span class="tag">cuckoldry</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/summaries/the-decameron">the-decameron</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/chaucer-canterbury-tales/">The Canterbury Tales, and Other Poems</a> · updated 27 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-reeves-tale.md">source on GitHub</a></div>
+    <div class="note-summary">Stung by the Miller&#x27;s tale of a cuckolded carpenter, the aging Reeve Oswald delivers a bitter prologue on desire outliving the body, then tells a fabliau in which two Cambridge clerks avenge a thieving miller&#x27;s grain-fraud by sleeping with his wife and daughter in one chaotic, dark-room night, leaving him beaten, cuckolded, and still out his stolen meal.</div>
     <div class="prose">
 <p>This unit contains the Prologue to the Reeve&#x27;s Tale and the tale itself. Osewold the Reeve, a former carpenter, is the only pilgrim who takes offense at the Miller&#x27;s preceding story of a cuckolded carpenter; he answers first with a long, sour meditation on old age — the body&#x27;s decline paired with the persistence of appetite and grudge — and then with a fabliau expressly designed to &quot;quite&quot; (get even with) the Miller. At Trompington near Cambridge, the proud, thieving miller Simkin habitually cheats the Soler Hall college of its grain. Two headstrong young clerks, John and Alein, come to watch their own corn milled so he cannot rob them, but Simkin frees their horse, steals extra meal while they chase it, and puts them up for the night in his own chamber alongside his wife, infant, and marriageable daughter. In the dark, Alein creeps in with the daughter, and John — moving the baby&#x27;s cradle to disorient the wife — ends up in her bed. A fight breaks out when Alein boasts of his conquest to the man he mistakes for John but is actually the miller; in the darkness and confusion the miller&#x27;s own wife strikes her husband on the head with a staff meant for a clerk. The clerks escape with their grain and a cake baked from the stolen flour, and the tale closes with the flat moral that a cheat gets cheated in turn.</p>
 <h2 id="themes">Themes</h2>
@@ -46,13 +54,30 @@
 <p>The prologue&#x27;s core turn is the passage from &quot;We olde men, I dread, so fare we&quot; through &quot;Yet in our ashes cold does fire reek&quot; — the clearest statement of will surviving the body&#x27;s collapse, and the emotional key to why an old man tells a young man&#x27;s bawdy revenge story. Immediately after, the Reeve states his motive outright (&quot;This drunken miller hath y-told us here / How that beguiled was a carpentere... I shall him quite anon&quot;) through the mote-and-beam line, making the tale&#x27;s retaliatory logic explicit before it even begins.</p>
 <p>Simkin&#x27;s introduction (&quot;A miller was there dwelling many a day&quot; through &quot;His name was <em>hoten deinous Simekin</em>&quot;) establishes the armed, brawling thief whose comeuppance the tale exists to deliver — proud, well-armed, canny enough to out-argue a warden but undone by two clerks he underestimates. The night&#x27;s central mechanism turns on John quietly relocating the cradle (&quot;And up he rose, and softely he went / Unto the cradle&quot; through the wife creeping &quot;fair and well... in by the clerk&quot;), the single small action that converts a bawdy escapade into a full farce of mistaken beds. The fight scene — from the wife&#x27;s terrified &quot;Awake, Simon, the fiend is on me fall&quot; to her own blow landing &quot;on the pilled skull&quot; of her husband — delivers the physical comedy of blind, panicked misrecognition that the whole plot has been building toward. The tale&#x27;s coda (&quot;Thus is the proude miller well y-beat&quot; through &quot;A guiler shall himself beguiled be&quot;) states the fabliau&#x27;s moral flatly, closing the retaliatory loop the Reeve announced in his prologue.</p>
     </div>
+    <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 27 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/fb9394e1707f8ffe5bd1e7dc407ddabf9b0f338a">[trivial] Ingest Chaucer, Canterbury Tales and Other Poems (41 notes + 4 canon pages) (#42)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>926</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/summaries/the-decameron">the-decameron</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/chaucer">chaucer</a><a class="tag" href="/wiki/topics/canterbury-tales">canterbury-tales</a><span class="tag tag-lone" title="Only this note uses it">reeves-tale</span><a class="tag" href="/wiki/topics/fabliau">fabliau</a><span class="tag tag-lone" title="Only this note uses it">old-age</span><span class="tag tag-lone" title="Only this note uses it">revenge-narrative</span><a class="tag" href="/wiki/topics/class-satire">class-satire</a><a class="tag" href="/wiki/topics/cuckoldry">cuckoldry</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Signal-to-Orientation Ladder</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Signal-to-Orientation Ladder</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/signal-to-orientation-ladder.md">source on GitHub</a></div>
-  <div class="note-summary">A four-rung analytical framework linking raw environmental signal to biological survival need: Signal → Information → Orientation → Biology — used to explain why information hunger on social media is a primal drive, not mere preference.</div>
-  <div class="tags"><span class="tag">information</span><span class="tag">orientation</span><span class="tag">biology</span><span class="tag">social-media</span><span class="tag">framework</span><span class="tag">signal</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/signal-to-orientation-ladder.md">source on GitHub</a></div>
+    <div class="note-summary">A four-rung analytical framework linking raw environmental signal to biological survival need: Signal → Information → Orientation → Biology — used to explain why information hunger on social media is a primal drive, not mere preference.</div>
     <div class="prose">
 <h2 id="the-framework">The Framework</h2>
 <p>A four-level analytical ladder connecting raw environmental input to evolutionary need:</p>
@@ -54,7 +63,7 @@
 <li>The problem is <strong>starvation</strong>: platforms provide signal that gestures toward information but never delivers genuine orientation.</li>
 <li>Users keep scrolling not from pleasure but from unfulfilled biological need.</li>
 </ul>
-<p>This is <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hank Green&quot;">Hank Green</span>&#x27;s thesis rendered mechanistically.</p>
+<p>This is <a class="wikilink" href="/wiki/aneesh/entities/hank-green" title="Written [[Hank Green]], resolved to hank-green">Hank Green</a>&#x27;s thesis rendered mechanistically.</p>
 <h2 id="the-broken-ladder">The Broken Ladder</h2>
 <p>Social platforms optimize for engagement at the <em>signal</em> level. They provide:</p>
 <ul>
@@ -64,9 +73,9 @@
 </ul>
 <p>Result: users are trapped in an unfulfilled loop — signal fires the biological drive, information fails to deliver, orientation never arrives, hunger persists.</p>
 <h2 id="the-fix-information-shaped-diet">The Fix: Information-Shaped Diet</h2>
-<p>An &quot;information-shaped content diet&quot; — engaging with curiosity and <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Socratic Thinking&quot;">Socratic posture</span> — completes the ladder. Each exchange that delivers genuine orientation satisfies the biological need, reducing compulsive signal-seeking.</p>
+<p>An &quot;information-shaped content diet&quot; — engaging with curiosity and <a class="wikilink" href="/wiki/aneesh/concepts/socratic-thinking" title="Written [[Socratic Thinking]], resolved to socratic-thinking">Socratic posture</a> — completes the ladder. Each exchange that delivers genuine orientation satisfies the biological need, reducing compulsive signal-seeking.</p>
 <h2 id="relation-to-place-making">Relation to Place-Making</h2>
-<p>Orientation = finding one&#x27;s place. The ladder is the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> framework restated in biological terms:</p>
+<p>Orientation = finding one&#x27;s place. The ladder is the <a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> framework restated in biological terms:</p>
 <ul>
 <li>Signal = noise in space.</li>
 <li>Information = signal that plants a map-point.</li>
@@ -75,21 +84,55 @@
 </ul>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Information Hunger and Orientation&quot;">Information Hunger and Orientation</span> — the thesis the ladder supports</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Space and Place in Cognition&quot;">Space and Place in Cognition</span> — orientation as place-finding</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Navigation and Cognition&quot;">Navigation and Cognition</span> — biological grounding</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Curation as Place-Making&quot;">Algorithmic Curation as Place-Making</span> — platforms as ladder-breakers</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hank Green&quot;">Hank Green</span> — source of the starvation thesis</li>
-<li>Source: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Internet — Lost and Hungry&quot;">Social Internet — Lost and Hungry</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/information-hunger-and-orientation" title="Written [[Information Hunger and Orientation]], resolved to information-hunger-and-orientation">Information Hunger and Orientation</a> — the thesis the ladder supports</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/space-and-place-in-cognition" title="Written [[Space and Place in Cognition]], resolved to space-and-place-in-cognition">Space and Place in Cognition</a> — orientation as place-finding</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/navigation-and-cognition" title="Written [[Navigation and Cognition]], resolved to navigation-and-cognition">Navigation and Cognition</a> — biological grounding</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making" title="Written [[Algorithmic Curation as Place-Making]], resolved to algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a> — platforms as ladder-breakers</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/hank-green" title="Written [[Hank Green]], resolved to hank-green">Hank Green</a> — source of the starvation thesis</li>
+<li>Source: <a class="wikilink" href="/wiki/aneesh/summaries/social-internet-lost-and-hungry" title="Written [[Social Internet — Lost and Hungry]], resolved to social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>7</b><span>links out</span></div>
+      <div class="bearing"><b>392</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/navigation-and-cognition">Navigation and Cognition</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/technology-as-place-maker">Technology as Place-Maker</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/biology-of-meaning-making">Biology of Meaning-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/hank-green">Hank Green</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/summaries/social-internet-lost-and-hungry">Social Internet — Lost and Hungry</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/socratic-thinking">Socratic Thinking</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/information-hunger-and-orientation">Information Hunger and Orientation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/navigation-and-cognition">Navigation and Cognition</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/printing-press-and-information-overload">Printing Press and Information Overload</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/space-and-place-in-cognition">Space and Place in Cognition</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-mind-as-semi-solid-smoke">The Mind as Semi-Solid Smoke</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/information">information</a><a class="tag" href="/wiki/topics/orientation">orientation</a><a class="tag" href="/wiki/topics/biology">biology</a><a class="tag" href="/wiki/topics/social-media">social-media</a><a class="tag" href="/wiki/topics/framework">framework</a><span class="tag tag-lone" title="Only this note uses it">signal</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,20 +26,29 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>The Gloomwheel</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Gloomwheel</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/the-gloomwheel.md">source on GitHub</a></div>
-  <div class="note-summary">The &#x27;Gloomwheel&#x27; is Aneesh Sathe&#x27;s term for the infinite scroll — a platform mechanism that turns endlessly without producing anything of value, keeping users in a state of agitated, unrewarded attention.</div>
-  <div class="tags"><span class="tag">attention</span><span class="tag">platform-capitalism</span><span class="tag">infinite-scroll</span><span class="tag">rss</span><span class="tag">open-web</span><span class="tag">information-architecture</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/the-gloomwheel.md">source on GitHub</a></div>
+    <div class="note-summary">The &#x27;Gloomwheel&#x27; is Aneesh Sathe&#x27;s term for the infinite scroll — a platform mechanism that turns endlessly without producing anything of value, keeping users in a state of agitated, unrewarded attention.</div>
     <div class="prose">
 <h2 id="definition">Definition</h2>
-<p>Coined in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Small God of the Internet&quot;">The Small God of the Internet</span>. The Gloomwheel is the <strong>infinite scroll</strong> as an extractive mechanism: an &quot;endless thumb-crank that insists there is more, and worse, if you&#x27;ll just keep scrolling.&quot; Sathe explicitly contrasts it with a millwheel: the Gloomwheel &quot;turns and turns without making flour.&quot;</p>
+<p>Coined in <a class="wikilink" href="/wiki/aneesh/summaries/the-small-god-of-the-internet" title="Written [[The Small God of the Internet]], resolved to the-small-god-of-the-internet">The Small God of the Internet</a>. The Gloomwheel is the <strong>infinite scroll</strong> as an extractive mechanism: an &quot;endless thumb-crank that insists there is more, and worse, if you&#x27;ll just keep scrolling.&quot; Sathe explicitly contrasts it with a millwheel: the Gloomwheel &quot;turns and turns without making flour.&quot;</p>
 <p>The metaphor frames platform feeds not merely as distracting but as <em>architecturally wasteful</em> — they consume kinetic attention without transforming it into anything the user values.</p>
 <h2 id="contrast-with-rss">Contrast with RSS</h2>
-<p>The Gloomwheel is the antithesis of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;RSS&quot;">RSS</span> model:</p>
+<p>The Gloomwheel is the antithesis of the <a class="wikilink-wanted" href="/wiki/wanted/rss" title="No note is called &quot;RSS&quot; yet — see who is asking for it">RSS</a> model:</p>
 <div class="table-wrap"><table>
 <thead><tr><th>RSS / River of Posts</th><th>Gloomwheel</th></tr></thead>
 <tbody>
@@ -55,26 +64,63 @@
 <p>Platforms &quot;threw dams across [RSS&#x27;s] tributaries and called them platforms.&quot; Good water (open feeds) disappeared behind walls; the rest was routed into &quot;ornamental channels that loop the palace and reflect only the palace.&quot; The Gloomwheel is what happens when engagement metrics replace editorial judgment.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Platform Capitalism and Attention&quot;">Platform Capitalism and Attention</span> — the economic logic driving the Gloomwheel</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Chronological Feed vs. Algorithmic Feed&quot;">Chronological Feed vs. Algorithmic Feed</span> — structural contrast</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;RSS as Protocol Theology&quot;">RSS as Protocol Theology</span> — the theological frame within which the Gloomwheel is blasphemy</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Attention and Deep Reading&quot;">Attention and Deep Reading</span> — what the Gloomwheel corrodes</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Books as Dwellings&quot;">Books as Dwellings</span> — the opposite phenomenology: bounded, inhabitable space</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/platform-capitalism-and-attention" title="No note is called &quot;Platform Capitalism and Attention&quot; yet — see who is asking for it">Platform Capitalism and Attention</a> — the economic logic driving the Gloomwheel</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/chronological-feed-vs-algorithmic-feed" title="No note is called &quot;Chronological Feed vs. Algorithmic Feed&quot; yet — see who is asking for it">Chronological Feed vs. Algorithmic Feed</a> — structural contrast</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/rss-as-protocol-theology" title="Written [[RSS as Protocol Theology]], resolved to rss-as-protocol-theology">RSS as Protocol Theology</a> — the theological frame within which the Gloomwheel is blasphemy</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/attention-and-deep-reading" title="No note is called &quot;Attention and Deep Reading&quot; yet — see who is asking for it">Attention and Deep Reading</a> — what the Gloomwheel corrodes</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/books-as-dwellings" title="Written [[Books as Dwellings]], resolved to books-as-dwellings">Books as Dwellings</a> — the opposite phenomenology: bounded, inhabitable space</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">5</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-house-of-fame">The House of Fame</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>11</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>264</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/books-as-dwellings">Books as Dwellings</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rss-as-protocol-theology">RSS as Protocol Theology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/protocol-gods-and-platform-demons">Protocol Gods and Platform Demons</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/unselfing">Unselfing</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-gravity-of-infrastructure">The Gravity of Infrastructure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/blogrolls-and-the-personal-web">Blogrolls and the Personal Web</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/temporal-topology-and-the-viscous-frontier">Temporal Topology and the Viscous Frontier</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/visibility-touristic-place-and-algorithmic-curation">Visibility, Touristic Place, and Algorithmic Curation</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>3 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/dwelling-vs-scrolling">Dwelling vs. Scrolling — Two Modes of Inhabiting Text</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-house-of-fame">The House of Fame</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cosmic-place-making-the-pre-modern-sky">Cosmic Place-Making: The Pre-Modern Sky</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/rss-as-protocol-theology">RSS as Protocol Theology</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/blogrolls-and-the-personal-web">Blogrolls and the Personal Web</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-cloister-web">The Cloister Web</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-small-god-of-the-internet">The Small God of the Internet</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/books-as-dwellings">Books as Dwellings</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/attention">attention</a><a class="tag" href="/wiki/topics/platform-capitalism">platform-capitalism</a><span class="tag tag-lone" title="Only this note uses it">infinite-scroll</span><a class="tag" href="/wiki/topics/rss">rss</a><a class="tag" href="/wiki/topics/open-web">open-web</a><a class="tag" href="/wiki/topics/information-architecture">information-architecture</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

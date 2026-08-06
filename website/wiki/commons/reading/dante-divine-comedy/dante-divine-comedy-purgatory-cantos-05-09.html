@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>The Late-Repentant, Sordello&#x27;s Lament, and the Gate of Purgatory</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Late-Repentant, Sordello&#x27;s Lament, and the Gate of Purgatory</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-05-09.md">source on GitHub</a></div>
-  <div class="note-summary">Dante and Virgil pass through the crowd of the violently-slain-but-late-repentant (Jacopo del Cassero, Buonconte da Montefeltro, La Pia), are joined by the proud shade Sordello whose greeting of a fellow Mantuan triggers Dante&#x27;s furious apostrophe against a lawless, emperor-less Italy, then move on to the flower-carpeted Valley of the Princes at dusk, and finally, after a dream of a golden eagle that is really the saint Lucia bearing him in her arms, arrive at the three-stepped Gate of Purgatory where an angel inscribes seven P&#x27;s on Dante&#x27;s brow and admits him with two keys under the warning that none who look back after entering may return.</div>
-  <div class="tags"><span class="tag">purgatorio</span><span class="tag">late-repentance</span><span class="tag">sordello</span><span class="tag">italian-politics</span><span class="tag">gate-of-purgatory</span><span class="tag">valley-of-princes</span><span class="tag">confession-and-grace</span><span class="tag">prayer-and-judgment</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-05-09.md">source on GitHub</a></div>
+    <div class="note-summary">Dante and Virgil pass through the crowd of the violently-slain-but-late-repentant (Jacopo del Cassero, Buonconte da Montefeltro, La Pia), are joined by the proud shade Sordello whose greeting of a fellow Mantuan triggers Dante&#x27;s furious apostrophe against a lawless, emperor-less Italy, then move on to the flower-carpeted Valley of the Princes at dusk, and finally, after a dream of a golden eagle that is really the saint Lucia bearing him in her arms, arrive at the three-stepped Gate of Purgatory where an angel inscribes seven P&#x27;s on Dante&#x27;s brow and admits him with two keys under the warning that none who look back after entering may return.</div>
     <div class="prose">
 <p>This unit picks up mid-scene in Canto V among souls who died by violence but repented with their last breath, carries through Canto VI&#x27;s meeting with the haughty Mantuan shade Sordello and Dante&#x27;s set-piece invective against a leaderless Italy, follows the pilgrims into the fragrant Valley of the Princes in Canto VII-VIII (where negligent rulers sit at dusk and two angels beat back a serpent), and closes with Canto IX&#x27;s dream-borne ascent to the three-stepped, angel-guarded Gate of Purgatory, ending just as Canto X begins.</p>
 <h2 id="themes">Themes</h2>
@@ -45,15 +53,36 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>Virgil&#x27;s rebuke of Dante&#x27;s wandering attention — &quot;Be as a tower, that, firmly set, / Shakes not its top for any blast that blows!&quot; — opens the unit and states the poem&#x27;s discipline of attention against gossip and distraction. Buonconte&#x27;s death-and-contest narrative supplies the unit&#x27;s sharpest image of grace overriding legal claim. La Pia&#x27;s four-line epitaph (&quot;I once was Pia. Sienna gave me life, / Maremma took it from me&quot;) is the unit&#x27;s most compressed and famous moment, naming a whole biography in half a breath. The Italy apostrophe is the unit&#x27;s political center of gravity. The gate&#x27;s three steps and the angel&#x27;s inscription-and-warning (&quot;He forth again departs who looks behind&quot;) close the unit on the machinery of admission itself — procedure as the price of entry into the mountain&#x27;s true ascent.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>732</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/synthesis/dante-legible-cosmos">Dante&#x27;s Legible Cosmos and Its Limit</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Supports</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/gramsci-gap">gramsci-gap</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/modernity-machine">modernity-machine</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/purgatorio">purgatorio</a><span class="tag tag-lone" title="Only this note uses it">late-repentance</span><span class="tag tag-lone" title="Only this note uses it">sordello</span><span class="tag tag-lone" title="Only this note uses it">italian-politics</span><span class="tag tag-lone" title="Only this note uses it">gate-of-purgatory</span><span class="tag tag-lone" title="Only this note uses it">valley-of-princes</span><span class="tag tag-lone" title="Only this note uses it">confession-and-grace</span><span class="tag tag-lone" title="Only this note uses it">prayer-and-judgment</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

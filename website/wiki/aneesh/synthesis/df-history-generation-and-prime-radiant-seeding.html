@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>DF History Generation and Prime Radiant Seeding</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>DF History Generation and Prime Radiant Seeding</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 15 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/df-history-generation-and-prime-radiant-seeding.md">source on GitHub</a></div>
-  <div class="note-summary">Dwarf Fortress&#x27;s world/history generation is a working generative psychohistory engine, and its pipeline — substrate-first determinism, selective agent interiority, emergent-not-scripted conflict, and a hard no-retroactive-history invariant — is a concrete template for how to seed the World Machines Prime Radiant process, with one decisive disanalogy: DF has no ground truth to be corrected against.</div>
-  <div class="tags"><span class="tag">world-machines</span><span class="tag">prime-radiant</span><span class="tag">psychohistory</span><span class="tag">simulation</span><span class="tag">generativity</span><span class="tag">wm-cockpit</span><span class="tag">seeding</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 15 May 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/df-history-generation-and-prime-radiant-seeding.md">source on GitHub</a></div>
+    <div class="note-summary">Dwarf Fortress&#x27;s world/history generation is a working generative psychohistory engine, and its pipeline — substrate-first determinism, selective agent interiority, emergent-not-scripted conflict, and a hard no-retroactive-history invariant — is a concrete template for how to seed the World Machines Prime Radiant process, with one decisive disanalogy: DF has no ground truth to be corrected against.</div>
     <div class="prose">
 <p>Source: Tarn Adams (Toady One), <em>DF Talk</em> transcript, episode topic &quot;world generation and history generation&quot; (bay12games.com combined transcript). Question posed: does DF&#x27;s history-generation algorithm pertain to how the <a class="wikilink" href="/wiki/aneesh/synthesis/the-world-machines-canon">the-world-machines-canon</a> project should <em>seed the Prime Radiant process</em> (the asymptotic, formalized forward model behind the wm-cockpit Oracle)?</p>
 <p>Answer: yes, sharply — DF is a working generative psychohistory engine, and its architecture is a concrete answer to the seeding question. But it supplies only the <em>generative</em> half; the <em>assimilation/correction</em> half (the Second-Foundation loop) is the World Machines project&#x27;s own addition and is not borrowable from DF.</p>
@@ -73,13 +82,26 @@
 <h2 id="essay-seed">Essay seed</h2>
 <p><em>&quot;Ten Pairs, Not Two: How to Seed a History&quot;</em> — a piece on the generative-engine discipline (substrate-first, selective interiority, emergent-not-scripted, no retroactive fabrication) as a general method for any forward civilizational model, using DF as the worked example and the Prime Radiant as the open-world limit case where the discipline half-applies.</p>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>928</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/world-machines">world-machines</a><span class="tag tag-lone" title="Only this note uses it">prime-radiant</span><a class="tag" href="/wiki/topics/psychohistory">psychohistory</a><a class="tag" href="/wiki/topics/simulation">simulation</a><a class="tag" href="/wiki/topics/generativity">generativity</a><span class="tag tag-lone" title="Only this note uses it">wm-cockpit</span><span class="tag tag-lone" title="Only this note uses it">seeding</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

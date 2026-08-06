@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Gramsci Gap</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Gramsci Gap</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/gramsci-gap.md">source on GitHub</a></div>
-  <div class="note-summary">The Gramsci Gap names the interregnum between paradigms — the period when the old world is dying and the new has not yet been born — drawn from Gramsci&#x27;s Prison Notebooks and used by Venkatesh Rao to describe both historical transitions and the phenomenology of living through them; the quartz disruption of Swiss horology (Landes) is a fully documented case study.</div>
-  <div class="tags"><span class="tag">gramsci-gap</span><span class="tag">interregnum</span><span class="tag">transition</span><span class="tag">rao</span><span class="tag">gramsci</span><span class="tag">paradigm-shift</span><span class="tag">landes</span><span class="tag">incumbency</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 10 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/gramsci-gap.md">source on GitHub</a></div>
+    <div class="note-summary">The Gramsci Gap names the interregnum between paradigms — the period when the old world is dying and the new has not yet been born — drawn from Gramsci&#x27;s Prison Notebooks and used by Venkatesh Rao to describe both historical transitions and the phenomenology of living through them; the quartz disruption of Swiss horology (Landes) is a fully documented case study.</div>
     <div class="prose">
 <h2 id="origin">Origin</h2>
 <p>From Antonio Gramsci&#x27;s <em>Prison Notebooks</em> (1929-1935):</p>
@@ -44,11 +53,11 @@
 <ul>
 <li>The old order has lost legitimacy but has not yet collapsed</li>
 <li>The new order has not yet crystallized enough to offer clear alternatives</li>
-<li>&quot;Slightly monstrous&quot; people embody unseemly levels of <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span> that don&#x27;t fit the &quot;hushed and reverential tones&quot; appropriate to either funereal or prenatal ends of the spectrum</li>
+<li>&quot;Slightly monstrous&quot; people embody unseemly levels of <a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a> that don&#x27;t fit the &quot;hushed and reverential tones&quot; appropriate to either funereal or prenatal ends of the spectrum</li>
 <li>The social expectation is to mourn the old or nurture the new; what Rao advocates is something wilder: asserting liveness in the gap itself</li>
 </ul>
 <h2 id="gramsci-gap-and-rewilding">Gramsci Gap and Rewilding</h2>
-<p>The Gramsci Gap is where <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rewilding Technology&quot;">Rewilding Technology</span> becomes necessary. Civilization normally maintains itself by <em>never quite</em> exposing itself to wilderness. In a Gramsci Gap:</p>
+<p>The Gramsci Gap is where <a class="wikilink" href="/wiki/aneesh/concepts/rewilding-technology" title="Written [[Rewilding Technology]], resolved to rewilding-technology">Rewilding Technology</a> becomes necessary. Civilization normally maintains itself by <em>never quite</em> exposing itself to wilderness. In a Gramsci Gap:</p>
 <ul>
 <li>More wildness is required than is comfortable</li>
 <li>Death must be allowed to operate — corpses surrendered to decomposition</li>
@@ -56,7 +65,7 @@
 <li>The consolation: greater liveness</li>
 </ul>
 <h2 id="relation-to-history-machines">Relation to History Machines</h2>
-<p>In Lohse&#x27;s framework (<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span>), a Gramsci Gap is the moment when the history machine — components developing silently for centuries — suddenly lurches into motion. The morbid symptoms are the grinding of gears not yet calibrated to each other.</p>
+<p>In Lohse&#x27;s framework (<a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a>), a Gramsci Gap is the moment when the history machine — components developing silently for centuries — suddenly lurches into motion. The morbid symptoms are the grinding of gears not yet calibrated to each other.</p>
 <h2 id="case-study-the-quartz-transition-landes">Case Study: The Quartz Transition (Landes)</h2>
 <p>David Landes&#x27;s <em>Revolution in Time</em> (1983) gives the Gramsci Gap a fully documented industrial instance: the 1968–1985 quartz disruption of Swiss watchmaking. It is unusually clean because Landes dates the interregnum and names its central morbid symptom.</p>
 <p><strong>The incumbent abolishing its own legitimating institution.</strong> On <strong>26 April 1968</strong> the Swiss suspended their wristwatch chronometry competitions — never revived — once quartz entries scored two orders of magnitude better in six years and threatened to become &quot;a vehicle for their overthrow&quot; by the Japanese (<a class="wikilink" href="/wiki/commons/reading/landes-revolution-in-time/rit-23-the-quartz-revolution-i">rit-23-the-quartz-revolution-i</a>). This is a textbook interregnum move: rather than cede its legitimating institution (regleur artistry, chronometer certification) to the new order, the old order destroys it. The old is dying — the régleurs now meet &quot;once a year for dinner; also at funerals&quot; — and the new cannot yet be born <em>in Switzerland</em>: the science existed (CEH, Battelle, FASELEC), the modules existed, but a &quot;critical gap&quot; between R&amp;D and production stayed uncrossed, and the combines exported the know-how to their own future conquerors. &quot;Watch companies are like horses: you can lead them to know-how, but you can&#x27;t make them use it.&quot;</p>
@@ -68,75 +77,114 @@
 <p>Chaisson&#x27;s three eras — Radiation, Matter, Life — each involve a Gramsci Gap transition. The period when matter began dominating radiation was one such interregnum: structure had not yet emerged, the universe was &quot;uniform, symmetrical, informationless, and boring.&quot; The Life Era transition is the current Gramsci Gap at cosmic scale.</p>
 <h2 id="related-concepts">Related Concepts</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Liveness&quot;">Liveness</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;New Nature&quot;">New Nature</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Rewilding Technology&quot;">Rewilding Technology</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machine&quot;">History Machine</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/liveness" title="Written [[Liveness]], resolved to liveness">Liveness</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/new-nature" title="Written [[New Nature]], resolved to new-nature">New Nature</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/rewilding-technology" title="Written [[Rewilding Technology]], resolved to rewilding-technology">Rewilding Technology</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/history-machine" title="Written [[History Machine]], resolved to history-machine">History Machine</a></li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Engineering Liveness - Rao&quot;">Engineering Liveness - Rao</span></li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span></li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/engineering-liveness-rao" title="No note is called &quot;Engineering Liveness - Rao&quot; yet — see who is asking for it">Engineering Liveness - Rao</a></li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a></li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/david-s-landes">david-s-landes</a> — <em>Revolution in Time</em>; the quartz transition as documented case study</li>
 <li>Gramsci, <em>Prison Notebooks</em></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">48</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/giovanni-boccaccio">Giovanni Boccaccio</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/material-power-vs-discursive-power">Material Power vs. Discursive Power</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/michel-foucault">Michel Foucault (1926–1984)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/thermodynamic-politics">Thermodynamic Politics</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-02-boston">Boston, 1848–1854: Trained for a World Already Closing</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-23-silence">Chapter XXIII — Silence (1894–1898)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-miscellaneous-poems">Chaucer&#x27;s Shorter Poems: A.B.C., Ballades, Envoys, and the Complaint to His Purse</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12a-wto-and-chinas-economic-transformation">China&#x27;s Market Transformation and the WTO&#x27;s Fraying Consensus</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/decameron/dec-day-01">DEC 02 — Day the First</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-14-dilettantism">Dilettantism: The Failure of Art and Antiquarianism as Careers (1865-1866)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-08-diplomacy">Diplomacy (1861): The Cabin-Boy&#x27;s Education</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-18-free-fight">Free Fight (1869-70)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11a-japan-and-the-rise-of-personal-computing">Friedman, Deregulation, and the Rise of Japan and the Personal Computer</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-35-nunc-age">Nunc Age: The Trusts, the New Man, and the Death of John Hay</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-17-president-grant">President Grant (1869)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-20-ah-but-he-could">RIT 20 — &quot;Ah, But He Could!&quot; (ch. 18)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-23-the-quartz-revolution-i">RIT 23 — The Quartz Revolution, Part I (Ch. 21)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch10b-cold-war-science-computers-and-labor">Sputnik, the Computer State, and the Unraveling of the Postwar Boom</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13a-the-2008-financial-crisis">The 2008 Financial Crisis: Deregulation, Leverage, and the House of Cards</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33">The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin">The Dynamo and the Virgin (1900)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33">The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-05-09">The Late-Repentant, Sordello&#x27;s Lament, and the Gate of Purgatory</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-man-of-laws-tale">The Man of Law&#x27;s Prologue and Tale: Constance Adrift</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-16-the-press">The Press (1868): Return to a Machine-Made America</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11">Through Gluttony, Avarice, and Wrath to the Gates of Dis</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-07-treason">Treason: An Education in Universal Ignorance (Washington, Winter 1860-61)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-26-twilight">Twilight (1901)</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch09-war-and-depression">Two World Wars and a Global Depression, 1914–1945</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-03-washington">Washington and the Boy&#x27;s Political Education, 1850–1854</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/glossary/world-machine">World Machine</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 5 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/5c087c05af1cd6c1cd64c6290ce1d0cc65827a58">raw-notes/aneesh: full vault mirror — reading notes + refreshed canon [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>56</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>915</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/liveness">Liveness</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/new-nature">New Nature</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/psychohistory-and-world-machines">Psychohistory and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/thermodynamic-politics">Thermodynamic Politics</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>48 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/material-power-vs-discursive-power">Material Power vs. Discursive Power</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-foucault">Michel Foucault (1926–1984)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-20-ah-but-he-could">RIT 20 — &quot;Ah, But He Could!&quot; (ch. 18)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/landes-revolution-in-time/rit-23-the-quartz-revolution-i">RIT 23 — The Quartz Revolution, Part I (Ch. 21)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-decameron">The Decameron</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/entities/giovanni-boccaccio">Giovanni Boccaccio</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rewilding-technology">Rewilding Technology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-31-the-grammar-of-science">The Grammar of Science (1903)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/witness-bias-toward-design">Witness Bias Toward Design</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13b-capitalisms-legacy-poverty-and-the-green-economy">Capitalism&#x27;s Legacy: Poverty, the Green Revolution, and the Book&#x27;s Final Reckoning</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/dante-divine-comedy">Dante&#x27;s Divine Comedy</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-12-eccentricity">Eccentricity (1863)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/engineering-liveness-venkatesh-rao">Engineering Liveness — Venkatesh Rao (2026)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/new-nature-as-life-era">New Nature as Life Era — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-35-nunc-age">Nunc Age: The Trusts, the New Man, and the Death of John Hay</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch10b-cold-war-science-computers-and-labor">Sputnik, the Computer State, and the Unraveling of the Postwar Boom</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-25-the-dynamo-and-the-virgin">The Dynamo and the Virgin (1900)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-man-of-laws-tale">The Man of Law&#x27;s Prologue and Tale: Constance Adrift</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/the-relentless-revolution">The Relentless Revolution (Joyce Appleby, 2010)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-26-twilight">Twilight (1901)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-06-rome">Accidental Education: Dresden, Rome, and Garibaldi&#x27;s Palermo (1859–1860)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-02-boston">Boston, 1848–1854: Trained for a World Already Closing</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-23-silence">Chapter XXIII — Silence (1894–1898)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch12a-wto-and-chinas-economic-transformation">China&#x27;s Market Transformation and the WTO&#x27;s Fraying Consensus</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/decameron/dec-day-01">DEC 02 — Day the First</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch13a-the-2008-financial-crisis">The 2008 Financial Crisis: Deregulation, Leverage, and the House of Cards</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-brigata-as-thicket">The Brigata as Thicket</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-16-the-press">The Press (1868): Return to a Machine-Made America</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-07-treason">Treason: An Education in Universal Ignorance (Washington, Winter 1860-61)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/glossary/world-machine">World Machine</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-miscellaneous-poems">Chaucer&#x27;s Shorter Poems: A.B.C., Ballades, Envoys, and the Complaint to His Purse</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-14-dilettantism">Dilettantism: The Failure of Art and Antiquarianism as Careers (1865-1866)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-08-diplomacy">Diplomacy (1861): The Cabin-Boy&#x27;s Education</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-18-free-fight">Free Fight (1869-70)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch11a-japan-and-the-rise-of-personal-computing">Friedman, Deregulation, and the Rise of Japan and the Personal Computer</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-15-18">Paradiso XV–XVIII: Cacciaguida&#x27;s Florence, the Prophecy of Exile, and the Eagle of Justice</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-17-president-grant">President Grant (1869)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/aneesh/summaries/revolution-in-time">Revolution in Time — David S. Landes (1983; 1999)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-29-33">The Celestial Rose and the Final Vision: Paradiso XXIX–XXXIII</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-05-09">The Late-Repentant, Sordello&#x27;s Lament, and the Gate of Purgatory</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/appleby-relentless-revolution/appleby-relentless-revolution-ch09-war-and-depression">Two World Wars and a Global Depression, 1914–1945</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-03-washington">Washington and the Boy&#x27;s Political Education, 1850–1854</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-23-28">Paradiso XXIII–XXVIII: The Catechism, Peter&#x27;s Wrath, and the Point of Light</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-purgatory-cantos-29-33">The Earthly Paradise: Beatrice&#x27;s Reproof and the Pageant of the Church</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/reading/dante-divine-comedy/dante-divine-comedy-hell-cantos-06-11">Through Gluttony, Avarice, and Wrath to the Gates of Dis</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/modernity-machine">Modernity Machine</a><span class="rail-where">19</span></li>
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">16</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">15</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">8</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/gramsci-gap">gramsci-gap</a><a class="tag" href="/wiki/topics/interregnum">interregnum</a><span class="tag tag-lone" title="Only this note uses it">transition</span><a class="tag" href="/wiki/topics/rao">rao</a><a class="tag" href="/wiki/topics/gramsci">gramsci</a><span class="tag tag-lone" title="Only this note uses it">paradigm-shift</span><a class="tag" href="/wiki/topics/landes">landes</a><span class="tag tag-lone" title="Only this note uses it">incumbency</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

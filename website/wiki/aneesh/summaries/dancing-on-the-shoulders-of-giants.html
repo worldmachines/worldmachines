@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,17 +26,26 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Summaries</span> <b>/</b> <span>Dancing on the Shoulders of Giants</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Dancing on the Shoulders of Giants</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/dancing-on-the-shoulders-of-giants.md">source on GitHub</a></div>
-  <div class="note-summary">Sathe argues that combining domain experts, large language models, and knowledge graphs creates a composite material capable of accelerating fields like healthcare that have historically resisted Wright&#x27;s Law efficiency gains.</div>
-  <div class="tags"><span class="tag">knowledge-graphs</span><span class="tag">llm</span><span class="tag">expertise</span><span class="tag">wrights-law</span><span class="tag">healthcare-ai</span><span class="tag">curiosity</span><span class="tag">composite-ai</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Summaries · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/summaries/dancing-on-the-shoulders-of-giants.md">source on GitHub</a></div>
+    <div class="note-summary">Sathe argues that combining domain experts, large language models, and knowledge graphs creates a composite material capable of accelerating fields like healthcare that have historically resisted Wright&#x27;s Law efficiency gains.</div>
     <div class="prose">
 <p><strong>Source</strong>: <a href="https://aneeshsathe.com/dancing-on-the-shoulders-of-giants/">aneeshsathe.com, 2024-05-10</a><br>
-<strong>Author</strong>: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span></p>
+<strong>Author</strong>: <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a></p>
 <h2 id="central-argument">Central Argument</h2>
 <p>The frontier of expertise is not the accumulation of knowledge but the <em>structure</em> of knowledge networks and the agility to traverse them. LLMs solve the interaction problem but hallucinate; knowledge graphs are grounded and auditable but hard to query. Experts have taste and judgment but can only hold so much. The synthesis — Experts + LLMs + KGs — forms a composite material that could accelerate healthcare the way Wright&#x27;s Law has accelerated semiconductors and solar energy: compounding gains from shared, externalized, traversable expertise.</p>
 <h2 id="key-claims">Key Claims</h2>
@@ -50,18 +59,18 @@
 </ol>
 <h2 id="connections">Connections</h2>
 <ul>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Wright&#x27;s Law&quot;">Wright&#x27;s Law</span> — the efficiency-compounding framework and why healthcare resists it</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Muddling Through&quot;">Muddling Through</span> — the expert&#x27;s mode of frontier problem-solving</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Hunter vs. Dancer Curiosity&quot;">Hunter vs. Dancer Curiosity</span> — the two curiosity architectures and their implications for breakthroughs</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Knowledge Graphs&quot;">Knowledge Graphs</span> — the core technical substrate</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> — the central synthesis</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> — expertise extraction method from military training</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Paul Feyerabend&quot;">Paul Feyerabend</span> — the &quot;anything goes&quot; epistemological reference</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Isaac Newton&quot;">Isaac Newton</span> — the &quot;shoulders of giants&quot; origin</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;PrimeKG&quot;">PrimeKG</span> — multimodal clinical knowledge graph project</li>
-<li>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Explainable AI&quot;">Explainable AI</span> — KGs as the explainability layer</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Healthcare as Wright&#x27;s Law Exception&quot;">Healthcare as Wright&#x27;s Law Exception</span> — and how the composite architecture changes that</li>
-<li>Synthesis: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Taste Gap in AI Systems&quot;">The Taste Gap in AI Systems</span> — connects expertise-structure argument to Cave/Fry essay</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/wrights-law" title="Written [[Wright&#x27;s Law]], resolved to wrights-law">Wright&#x27;s Law</a> — the efficiency-compounding framework and why healthcare resists it</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/muddling-through" title="Written [[Muddling Through]], resolved to muddling-through">Muddling Through</a> — the expert&#x27;s mode of frontier problem-solving</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/hunter-vs-dancer-curiosity" title="Written [[Hunter vs. Dancer Curiosity]], resolved to hunter-vs-dancer-curiosity">Hunter vs. Dancer Curiosity</a> — the two curiosity architectures and their implications for breakthroughs</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> — the core technical substrate</li>
+<li>See <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> — the central synthesis</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> — expertise extraction method from military training</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/entities/paul-feyerabend" title="Written [[Paul Feyerabend]], resolved to paul-feyerabend">Paul Feyerabend</a> — the &quot;anything goes&quot; epistemological reference</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/entities/isaac-newton" title="Written [[Isaac Newton]], resolved to isaac-newton">Isaac Newton</a> — the &quot;shoulders of giants&quot; origin</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/entities/primekg" title="Written [[PrimeKG]], resolved to primekg">PrimeKG</a> — multimodal clinical knowledge graph project</li>
+<li>See <a class="wikilink" href="/wiki/aneesh/concepts/explainable-ai" title="Written [[Explainable AI]], resolved to explainable-ai">Explainable AI</a> — KGs as the explainability layer</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/healthcare-as-wrights-law-exception" title="Written [[Healthcare as Wright&#x27;s Law Exception]], resolved to healthcare-as-wrights-law-exception">Healthcare as Wright&#x27;s Law Exception</a> — and how the composite architecture changes that</li>
+<li>Synthesis: <a class="wikilink" href="/wiki/aneesh/synthesis/the-taste-gap-in-ai-systems" title="Written [[The Taste Gap in AI Systems]], resolved to the-taste-gap-in-ai-systems">The Taste Gap in AI Systems</a> — connects expertise-structure argument to Cave/Fry essay</li>
 </ul>
 <h2 id="whats-missing">What&#x27;s Missing</h2>
 <ul>
@@ -70,13 +79,65 @@
 <li>No discussion of dynamic KG maintenance — who updates the graph as medical knowledge evolves?</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>20</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>511</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/explainable-ai">Explainable AI (XAI)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-task-analysis">Cognitive Task Analysis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/wrights-law">Wright&#x27;s Law</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good">On Being Good vs. Knowing Good: Perspectives on AI</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>12 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/fhir-knowledge-graphs-healthcare">Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/muddling-through">Muddling Through</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/hunter-vs-dancer-curiosity">Hunter vs. Dancer Curiosity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-agents-in-healthcare">AI Agents in Healthcare</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/cyclical-information-epistemics">Cyclical Information Epistemics</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-taste-gap-in-ai-systems">The Taste Gap in AI Systems</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/mayo-clinic">Mayo Clinic</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/primekg">PrimeKG</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/healthcare-as-wrights-law-exception">Healthcare as Wright&#x27;s Law Exception</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/isaac-newton">Isaac Newton (1643–1727)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/paul-feyerabend">Paul Feyerabend (1924–1994)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/composite-ai-architecture">Composite AI Architecture (Experts + LLM + KG)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/concepts/wrights-law">Wright&#x27;s Law</a><span class="rail-where">9</span></li>
+        <li><a href="/wiki/aneesh/concepts/expertise">Expertise</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/concepts/retrieval-augmented-generation">Retrieval-Augmented Generation (RAG)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/fhir">FHIR (Fast Healthcare Interoperability Resources)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/fhir-knowledge-graphs-healthcare">Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/knowledge-graphs">knowledge-graphs</a><a class="tag" href="/wiki/topics/llm">llm</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/wrights-law">wrights-law</a><a class="tag" href="/wiki/topics/healthcare-ai">healthcare-ai</a><a class="tag" href="/wiki/topics/curiosity">curiosity</a><span class="tag tag-lone" title="Only this note uses it">composite-ai</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

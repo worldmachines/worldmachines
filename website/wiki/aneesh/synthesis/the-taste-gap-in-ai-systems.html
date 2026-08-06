@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,19 +26,28 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>The Taste Gap in AI Systems</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Taste Gap in AI Systems</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-taste-gap-in-ai-systems.md">source on GitHub</a></div>
-  <div class="note-summary">A cross-essay synthesis: both Sathe&#x27;s creativity essay (Cave/Fry) and his expertise essay (Giants) converge on the same gap — current AI lacks the experience-grounded judgment that defines genuine expertise and taste — approached from different angles.</div>
-  <div class="tags"><span class="tag">ai-limitations</span><span class="tag">taste</span><span class="tag">expertise</span><span class="tag">creativity</span><span class="tag">epistemics</span><span class="tag">synthesis</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/the-taste-gap-in-ai-systems.md">source on GitHub</a></div>
+    <div class="note-summary">A cross-essay synthesis: both Sathe&#x27;s creativity essay (Cave/Fry) and his expertise essay (Giants) converge on the same gap — current AI lacks the experience-grounded judgment that defines genuine expertise and taste — approached from different angles.</div>
     <div class="prose">
 <h2 id="the-convergence">The Convergence</h2>
 <p>Two essays by Sathe approach the same problem from different angles:</p>
-<p><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span></strong> (via <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Nick Cave&quot;">Nick Cave</span>): AI cannot create meaningful art because the process of imperfect striving is constitutive of the taste that makes great art recognizable. AI approximates outputs without having undergone the experience.</p>
-<p><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span></strong>: The gap between novice and expert is primarily a gap in the structure and density of knowledge networks. Expertise has two components: knowledge (approximatable) and taste (the judgment to navigate knowledge networks wisely — not yet approximatable).</p>
+<p><strong><a class="wikilink" href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good" title="Written [[On Being Good vs. Knowing Good]], resolved to on-being-good-vs-knowing-good">On Being Good vs. Knowing Good</a></strong> (via <a class="wikilink" href="/wiki/aneesh/entities/nick-cave" title="Written [[Nick Cave]], resolved to nick-cave">Nick Cave</a>): AI cannot create meaningful art because the process of imperfect striving is constitutive of the taste that makes great art recognizable. AI approximates outputs without having undergone the experience.</p>
+<p><strong><a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a></strong>: The gap between novice and expert is primarily a gap in the structure and density of knowledge networks. Expertise has two components: knowledge (approximatable) and taste (the judgment to navigate knowledge networks wisely — not yet approximatable).</p>
 <p>Both essays arrive at: <em>AI can hold and retrieve knowledge; it cannot yet have taste.</em></p>
 <h2 id="what-taste-is">What Taste Is</h2>
 <p>Synthesizing across both essays:</p>
@@ -46,24 +55,55 @@
 <li>Taste is the capacity to make good judgments in domains where the criteria for &quot;good&quot; are not fully explicit</li>
 <li>Taste develops through feedback loops between action and consequence — experience in the world, not processing descriptions of experience</li>
 <li>Taste is what allows an expert to say &quot;this is the right approach&quot; in genuinely ambiguous situations, and to know when the stated goal is the wrong goal</li>
-<li>Taste is why <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;AI as Tool vs. Advisor&quot;">AI as Tool vs. Advisor</span> matters: tools don&#x27;t need taste; advisors do</li>
+<li>Taste is why <a class="wikilink" href="/wiki/aneesh/concepts/ai-as-tool-vs-advisor" title="Written [[AI as Tool vs. Advisor]], resolved to ai-as-tool-vs-advisor">AI as Tool vs. Advisor</a> matters: tools don&#x27;t need taste; advisors do</li>
 </ul>
-<h2 id="the-cognitive-task-analysis-problem">The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Task Analysis&quot;">Cognitive Task Analysis</span> Problem</h2>
-<p>CTA (see <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Dancing on the Shoulders of Giants&quot;">Dancing on the Shoulders of Giants</span>) attempts to extract tacit expert knowledge. But is taste a form of tacit knowledge that CTA could surface? Or is it more fundamental — not a set of heuristics but a calibration of judgment that can only be developed, not transmitted?</p>
-<p>The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Composite AI Architecture (Experts + LLM + KG)&quot;">Composite AI Architecture (Experts + LLM + KG)</span> implicitly answers: taste stays with the human. The KG holds structured knowledge; the LLM navigates it; the human expert exercises taste over the outputs. This is the right division of labor <em>given current AI</em> — but it leaves open whether a sufficiently experience-rich AI could eventually develop something like taste.</p>
+<h2 id="the-cognitive-task-analysis-problem">The <a class="wikilink" href="/wiki/aneesh/concepts/cognitive-task-analysis" title="Written [[Cognitive Task Analysis]], resolved to cognitive-task-analysis">Cognitive Task Analysis</a> Problem</h2>
+<p>CTA (see <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>) attempts to extract tacit expert knowledge. But is taste a form of tacit knowledge that CTA could surface? Or is it more fundamental — not a set of heuristics but a calibration of judgment that can only be developed, not transmitted?</p>
+<p>The <a class="wikilink-wanted" href="/wiki/wanted/composite-ai-architecture-experts-llm-kg" title="No note is called &quot;Composite AI Architecture (Experts + LLM + KG)&quot; yet — see who is asking for it">Composite AI Architecture (Experts + LLM + KG)</a> implicitly answers: taste stays with the human. The KG holds structured knowledge; the LLM navigates it; the human expert exercises taste over the outputs. This is the right division of labor <em>given current AI</em> — but it leaves open whether a sufficiently experience-rich AI could eventually develop something like taste.</p>
 <h2 id="the-cultural-implication">The Cultural Implication</h2>
-<p>Sathe&#x27;s &quot;new culture&quot; prescription (from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;On Being Good vs. Knowing Good&quot;">On Being Good vs. Knowing Good</span>): we need to cultivate taste in AI users — the capacity to recognize when AI output is wrong. This is the epistemic version of Cave&#x27;s artistic argument: you must develop your own judgment before you can use the tool productively. The tool does not develop judgment for you.</p>
+<p>Sathe&#x27;s &quot;new culture&quot; prescription (from <a class="wikilink" href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good" title="Written [[On Being Good vs. Knowing Good]], resolved to on-being-good-vs-knowing-good">On Being Good vs. Knowing Good</a>): we need to cultivate taste in AI users — the capacity to recognize when AI output is wrong. This is the epistemic version of Cave&#x27;s artistic argument: you must develop your own judgment before you can use the tool productively. The tool does not develop judgment for you.</p>
 <p>This creates a paradox: the users who most need AI assistance (those with the least domain expertise) are least equipped to audit AI outputs. The users who could most productively use AI (experts with developed taste) need it least for the basic tasks.</p>
 <h2 id="essay-seed">Essay Seed</h2>
-<p><strong>Thesis candidate</strong>: The most important consequence of the LLM era is not the jobs that AI will or won&#x27;t eliminate, but the threat to the formation of taste. If AI handles execution before users develop judgment, we produce a generation of practitioners who know how to prompt but not how to think. The <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Lore vs. Search vs. LLM&quot;">Lore vs. Search vs. LLM</span> regression is one manifestation; stunted professional development is another.</p>
+<p><strong>Thesis candidate</strong>: The most important consequence of the LLM era is not the jobs that AI will or won&#x27;t eliminate, but the threat to the formation of taste. If AI handles execution before users develop judgment, we produce a generation of practitioners who know how to prompt but not how to think. The <a class="wikilink" href="/wiki/aneesh/concepts/lore-vs-search-vs-llm" title="Written [[Lore vs. Search vs. LLM]], resolved to lore-vs-search-vs-llm">Lore vs. Search vs. LLM</a> regression is one manifestation; stunted professional development is another.</p>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>493</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/spatial-epistemology-the-master-thread">Spatial Epistemology — The Master Thread</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-being-good-vs-knowing-good">On Being Good vs. Knowing Good: Perspectives on AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">The Explorer and the Tourist — A Recurring Figure</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/books-are-dwellings">Books Are Dwellings</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/dwelling-vs-scrolling">Dwelling vs. Scrolling — Two Modes of Inhabiting Text</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/grammar-and-its-deserters">Grammar and Its Deserters</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/bldgblog-nakatomi-space">Nakatomi Space</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-architecture-of-resistance">The Architecture of Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-digital-studiolo">The Digital Studiolo</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ai-limitations">ai-limitations</a><a class="tag" href="/wiki/topics/taste">taste</a><a class="tag" href="/wiki/topics/expertise">expertise</a><a class="tag" href="/wiki/topics/creativity">creativity</a><a class="tag" href="/wiki/topics/epistemics">epistemics</a><a class="tag" href="/wiki/topics/synthesis">synthesis</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>WEIRD Bias</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>WEIRD Bias</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/weird-bias.md">source on GitHub</a></div>
-  <div class="note-summary">WEIRD bias refers to the over-representation of Western, Educated, Industrialized, Rich, and Democratic populations in behavioral science research and AI training data — producing findings and models that claim universality but reflect a narrow demographic slice.</div>
-  <div class="tags"><span class="tag">weird-bias</span><span class="tag">psychology</span><span class="tag">ai</span><span class="tag">llm</span><span class="tag">training-data</span><span class="tag">universalism</span><span class="tag">cognitive-diversity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/weird-bias.md">source on GitHub</a></div>
+    <div class="note-summary">WEIRD bias refers to the over-representation of Western, Educated, Industrialized, Rich, and Democratic populations in behavioral science research and AI training data — producing findings and models that claim universality but reflect a narrow demographic slice.</div>
     <div class="prose">
 <h2 id="origin-of-the-term">Origin of the Term</h2>
 <p>WEIRD (Western, Educated, Industrialized, Rich, Democratic) was coined by Henrich, Heine &amp; Norenzayan (2010) in their influential paper &quot;The Weirdest People in the World?&quot; — which demonstrated that psychological research overwhelmingly samples from WEIRD populations while treating its findings as universal.</p>
@@ -46,9 +55,9 @@
 <li>Actively suppress or marginalise non-WEIRD cognitive styles when users interact with them</li>
 </ul>
 <h2 id="the-universalism-trap">The Universalism Trap</h2>
-<p>WEIRD bias is a structural enactment of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Monism vs. Pluralism&quot;">monist</span> assumption that there is one correct way to reason and express ideas. When this assumption is embedded in models used by billions, it becomes self-reinforcing: as more people use WEIRD-biased models, WEIRD-inflected expression becomes normatively dominant — even in populations the training data did not include.</p>
+<p>WEIRD bias is a structural enactment of the <a class="wikilink" href="/wiki/aneesh/concepts/monism-vs-pluralism" title="Written [[Monism vs. Pluralism]], resolved to monism-vs-pluralism">monist</a> assumption that there is one correct way to reason and express ideas. When this assumption is embedded in models used by billions, it becomes self-reinforcing: as more people use WEIRD-biased models, WEIRD-inflected expression becomes normatively dominant — even in populations the training data did not include.</p>
 <h2 id="connections-to-the-counter-enlightenment">Connections to the Counter-Enlightenment</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Gottfried Herder&quot;">Johann Gottfried Herder</span> argued that each culture embodies a distinct and valuable form of human excellence, and that the imposition of any single cultural standard — however well-intentioned — destroys irreplaceable human goods. WEIRD bias in AI is a technological enactment of exactly this kind of cultural imposition. See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span>.</p>
+<p><a class="wikilink" href="/wiki/aneesh/entities/johann-gottfried-herder" title="Written [[Johann Gottfried Herder]], resolved to johann-gottfried-herder">Johann Gottfried Herder</a> argued that each culture embodies a distinct and valuable form of human excellence, and that the imposition of any single cultural standard — however well-intentioned — destroys irreplaceable human goods. WEIRD bias in AI is a technological enactment of exactly this kind of cultural imposition. See <a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a>.</p>
 <h2 id="proposed-remedies">Proposed Remedies</h2>
 <ul>
 <li>Deliberate diversification of LLM training data to reflect actual global human diversity</li>
@@ -58,21 +67,55 @@
 </ul>
 <h2 id="cross-references">Cross-References</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLM Training Data Bias&quot;">LLM Training Data Bias</span> — the mechanism</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Cognitive Diversity&quot;">Cognitive Diversity</span> — the threatened resource</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Epistemic Monoculture&quot;">Epistemic Monoculture</span> — the outcome</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> — the philosophical tradition that anticipated this critique</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Monism vs. Pluralism&quot;">Monism vs. Pluralism</span> — the underlying philosophical issue</li>
-<li>Sources: <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;USC AI Homogenization Research&quot;">USC AI Homogenization Research</span></li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/llm-training-data-bias" title="Written [[LLM Training Data Bias]], resolved to llm-training-data-bias">LLM Training Data Bias</a> — the mechanism</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/cognitive-diversity" title="Written [[Cognitive Diversity]], resolved to cognitive-diversity">Cognitive Diversity</a> — the threatened resource</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/epistemic-monoculture" title="Written [[Epistemic Monoculture]], resolved to epistemic-monoculture">Epistemic Monoculture</a> — the outcome</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> — the philosophical tradition that anticipated this critique</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/monism-vs-pluralism" title="Written [[Monism vs. Pluralism]], resolved to monism-vs-pluralism">Monism vs. Pluralism</a> — the underlying philosophical issue</li>
+<li>Sources: <a class="wikilink-wanted" href="/wiki/wanted/usc-ai-homogenization-research" title="No note is called &quot;USC AI Homogenization Research&quot; yet — see who is asking for it">USC AI Homogenization Research</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>6</b><span>links out</span></div>
+      <div class="bearing"><b>379</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-diversity">Cognitive Diversity</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/epistemic-monoculture">Epistemic Monoculture</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/llm-training-data-bias">LLM Training Data Bias</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/usc-ai-homogenization-cognitive-diversity">AI May Be Making Us Think and Write More Alike</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-diversity">Cognitive Diversity</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/isaiah-berlin">Isaiah Berlin</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/value-pluralism">Value Pluralism</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/llm-training-data-bias">LLM Training Data Bias</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/cultural-incommensurability">Cultural Incommensurability</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/weird-bias">weird-bias</a><a class="tag" href="/wiki/topics/psychology">psychology</a><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/llm">llm</a><a class="tag" href="/wiki/topics/training-data">training-data</a><a class="tag" href="/wiki/topics/universalism">universalism</a><a class="tag" href="/wiki/topics/cognitive-diversity">cognitive-diversity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

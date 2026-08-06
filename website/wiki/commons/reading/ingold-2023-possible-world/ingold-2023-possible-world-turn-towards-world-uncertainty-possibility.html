@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> <b>/</b> <span>Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Turning Toward the World: Wisdom, Post-Truth, and Uncertainty as Possibility</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility.md">source on GitHub</a></div>
-  <div class="note-summary">Wisdom lies beyond what facts and data-extraction can capture, Ingold argues, and the uncertainty we mourn as a knowledge deficit is really — following Bergson — the very excess that makes genuine possibility, rather than mere probability, real.</div>
-  <div class="tags"><span class="tag">wisdom-vs-facts</span><span class="tag">post-truth</span><span class="tag">attention-and-correspondence</span><span class="tag">uncertainty-as-possibility</span><span class="tag">henri-bergson</span><span class="tag">data-extraction-ethics</span><span class="tag">moon</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/entities/henri-bergson">henri-bergson</a>, <a class="wikilink" href="/wiki/aneesh/concepts/probability-as-epistemology">probability-as-epistemology</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">legibility-vs-complexity-the-master-tension</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/ingold-2023-possible-world/">On Not Knowing and Paying Attention</a> · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-turn-towards-world-uncertainty-possibility.md">source on GitHub</a></div>
+    <div class="note-summary">Wisdom lies beyond what facts and data-extraction can capture, Ingold argues, and the uncertainty we mourn as a knowledge deficit is really — following Bergson — the very excess that makes genuine possibility, rather than mere probability, real.</div>
     <div class="prose">
 <p>Opening with Andrew Greig&#x27;s warning that &quot;the more you know the less you see,&quot; Ingold argues that wisdom is not assembled from facts or &quot;data&quot; but arrives when we stop holding things at arm&#x27;s length and instead attend to them, join with them, and let them guide our attention in turn; he then carries this correspondence-based epistemology into a defense of uncertainty, arguing — via Bergson — that an unpredictable future is not a deficit of knowledge to be regretted but the very excess that makes genuine, non-probabilistic possibility real, with the moon&#x27;s endless non-repetition as the closing emblem.</p>
 <h2 id="themes">Themes</h2>
@@ -46,16 +54,44 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The unit&#x27;s hinge is a three-step move: an epistemic claim (wisdom exceeds fact), an ethical one (data extraction is unethical; science must re-embed itself in wisdom), and a metaphysical one (uncertainty is excess, and excess is possibility, not deficit). The Bergson passage is the clearest theoretical anchor: it names why science&#x27;s probabilistic idiom cannot capture &quot;radical possibility,&quot; setting up the final return to the moon as a lived counter-example — an object fully law-bound and yet, in Ingold&#x27;s phenomenology of attention, never twice the same. The &quot;trials of conscience&quot; line is a compact instance of a move Ingold repeats throughout: taking a settled-sounding case (facts prove guilt) and showing that its truth still outruns any facts assembled about it.</p>
     </div>
+    <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 15 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/790cb143d9239d4a6aeb61f58c7b3925589b3fa4">raw-notes: add shared commons/ area; move ingested reading notes into it [trivial] (#21)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>690</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/not-knowing-as-capture-resistance">Not-Knowing as Capture-Resistance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/capture-resistance">Capture Resistance</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-real-problems-real-freedom-conclusion">Real Problems; Real Freedom</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom">The Man in the Moon: Knowledge, Wisdom, Self and Soul</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/entities/henri-bergson">henri-bergson</a></li><li><a class="wikilink" href="/wiki/aneesh/concepts/probability-as-epistemology">probability-as-epistemology</a></li><li><a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">legibility-vs-complexity-the-master-tension</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">wisdom-vs-facts</span><span class="tag tag-lone" title="Only this note uses it">post-truth</span><span class="tag tag-lone" title="Only this note uses it">attention-and-correspondence</span><span class="tag tag-lone" title="Only this note uses it">uncertainty-as-possibility</span><a class="tag" href="/wiki/topics/henri-bergson">henri-bergson</a><span class="tag tag-lone" title="Only this note uses it">data-extraction-ethics</span><a class="tag" href="/wiki/topics/moon">moon</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,15 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> <b>/</b> <span>Paradise, Cantos XI–XIV: Francis, Dominic, and the Ascent to Mars</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Paradise, Cantos XI–XIV: Francis, Dominic, and the Ascent to Mars</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-11-14.md">source on GitHub</a></div>
-  <div class="note-summary">In the Heaven of the Sun, Thomas Aquinas eulogizes St. Francis while lamenting the Dominican order&#x27;s decay, Bonaventura mirrors him with a eulogy of St. Dominic and a lament for the Franciscans&#x27; decline, Aquinas then explains Solomon&#x27;s kingly wisdom and warns against rash judgment, and after Beatrice questions the souls about resurrected bodies, Dante ascends to Mars where warrior-souls form a luminous cross around the gleaming figure of Christ.</div>
-  <div class="tags"><span class="tag">paradiso</span><span class="tag">dante</span><span class="tag">thomas-aquinas</span><span class="tag">francis-of-assisi</span><span class="tag">dominic</span><span class="tag">religious-orders-decline</span><span class="tag">solomon-wisdom</span><span class="tag">resurrection-of-the-body</span></div>
-  <p class="note-connects"><b>Connects:</b> <a class="wikilink" href="/wiki/aneesh/concepts/decay-sequence">decay-sequence</a></p>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/dante-divine-comedy/">The Divine Comedy</a> · updated 20 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/dante-divine-comedy/dante-divine-comedy-paradise-cantos-11-14.md">source on GitHub</a></div>
+    <div class="note-summary">In the Heaven of the Sun, Thomas Aquinas eulogizes St. Francis while lamenting the Dominican order&#x27;s decay, Bonaventura mirrors him with a eulogy of St. Dominic and a lament for the Franciscans&#x27; decline, Aquinas then explains Solomon&#x27;s kingly wisdom and warns against rash judgment, and after Beatrice questions the souls about resurrected bodies, Dante ascends to Mars where warrior-souls form a luminous cross around the gleaming figure of Christ.</div>
     <div class="prose">
 <p>This unit opens mid-speech in the Heaven of the Sun, where Thomas Aquinas, having just told Dante that the wise (Solomon) &#x27;well they thrive&#x27; and has &#x27;no second such,&#x27; now unpacks that claim by narrating the life of St. Francis of Assisi as an allegory of marriage to Lady Poverty (Canto XI), before lamenting that his own Dominican order has strayed from its founder&#x27;s path. A new spirit, Bonaventura, then answers in kind (Canto XII), narrating the life of St. Dominic and lamenting that the Franciscans have likewise degenerated, introducing a ring of twelve wise souls including Illuminato, Hugues of Saint Victor, Peter of Spain, Nathan the prophet, Chrysostom, Anselm, Donatus, Rabanus Maurus, and Joachim of Fiore. Aquinas resumes in Canto XIII to explain in what sense Solomon&#x27;s wisdom was unmatched — kingly prudence, not omniscience — using the image of divine ideas imperfectly stamped like wax under a seal, and closing with a warning against premature judgment of others&#x27; souls. In Canto XIV, Beatrice puts a further question to the circle — whether the souls&#x27; light will persist after the resurrection of the body, and how restored eyes will bear its brightness — which Solomon answers, describing an increase of glory that will not overpower the resurrected flesh. The canto ends with Dante and Beatrice translated to the sphere of Mars, where crimson lights arrange themselves into a cross bearing the gleam of Christ, and a hymn of &#x27;Arise and conquer&#x27; overwhelms Dante with an ecstasy so total that, for once, he does not turn to look into Beatrice&#x27;s eyes.</p>
 <h2 id="themes">Themes</h2>
@@ -47,13 +55,30 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The opening vanity catalogue sets the entire unit&#x27;s stakes by naming exactly what Dante has escaped. The Francis-as-bridegroom passage is the unit&#x27;s most sustained allegorical set-piece and the clearest &#x27;great man&#x27; founding narrative in the unit — worth noting against the World Machines framework&#x27;s preference for silently-assembling history machines over great-man historiography, since Dante&#x27;s poem is unapologetically hagiographic. The two decline laments (Aquinas on the Dominicans, Bonaventura on the Franciscans) are the unit&#x27;s structural hinge and its most historiographically interesting material: each order&#x27;s decay is legible only from outside, through the mouth of its rival&#x27;s champion. The wax-and-seal passage and the judgment-warning parable together form Aquinas&#x27;s epistemology of created imperfection and interpretive humility, the philosophical payload beneath the poem&#x27;s hagiography.</p>
     </div>
+    <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 25 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/f059e30e3d1ab41fd277865b6e5ebbbda875901c">[trivial] Ingest Dante, The Divine Comedy (Cary tr.) — 21 reading notes + 4 canon pages (#38)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>1040</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/aneesh/concepts/decay-sequence">decay-sequence</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/paradiso">paradiso</a><a class="tag" href="/wiki/topics/dante">dante</a><span class="tag tag-lone" title="Only this note uses it">thomas-aquinas</span><span class="tag tag-lone" title="Only this note uses it">francis-of-assisi</span><span class="tag tag-lone" title="Only this note uses it">dominic</span><a class="tag" href="/wiki/topics/religious-orders-decline">religious-orders-decline</a><span class="tag tag-lone" title="Only this note uses it">solomon-wisdom</span><span class="tag tag-lone" title="Only this note uses it">resurrection-of-the-body</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

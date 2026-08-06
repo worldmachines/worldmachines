@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Bryant&#x27;s Machine Concept</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Bryant&#x27;s Machine Concept</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/bryant-machine-concept.md">source on GitHub</a></div>
-  <div class="note-summary">Bryant&#x27;s ontological sense of &#x27;machine&#x27;: any entity — material or immaterial, designed or emergent, human or non-human — that dynamically operates on inputs and produces outputs; the universal unit of onto-cartography.</div>
-  <div class="tags"><span class="tag">Bryant</span><span class="tag">machines</span><span class="tag">ontology</span><span class="tag">OOO</span><span class="tag">pluripotency</span><span class="tag">structural-coupling</span><span class="tag">corporeal</span><span class="tag">incorporeal</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/bryant-machine-concept.md">source on GitHub</a></div>
+    <div class="note-summary">Bryant&#x27;s ontological sense of &#x27;machine&#x27;: any entity — material or immaterial, designed or emergent, human or non-human — that dynamically operates on inputs and produces outputs; the universal unit of onto-cartography.</div>
     <div class="prose">
 <p><strong>Note</strong>: This page covers Bryant&#x27;s specific ontological use of &quot;machine&quot; as introduced in <em>Onto-Cartography</em> (2014), Introduction and Ch. 1. This is distinct from the Rao-derived &quot;machine&quot; vocabulary in <a class="wikilink" href="/wiki/aneesh/concepts/world-machines">world-machines</a>, <a class="wikilink" href="/wiki/aneesh/concepts/liveness-machine">liveness-machine</a>, <a class="wikilink" href="/wiki/aneesh/concepts/divergence-machine">divergence-machine</a>, and <a class="wikilink" href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">dawn-day-dusk-machine-typology</a>, which use &quot;machine&quot; as a civilizational-historical metaphor. Both senses are active in this wiki; see the synthesis note at the bottom.</p>
 <h2 id="the-definition">The Definition</h2>
@@ -103,38 +112,69 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/discursive-materialism-critique">discursive-materialism-critique</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">24</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/body-as-spatial-axis">Body as Spatial Axis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/bryant-topology-of-worlds">Bryant&#x27;s Topology of Worlds</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/content-expression-plane">Content and Expression: The Two Planes (Bryant / Deleuze-Guattari)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/discursive-materialism-critique">Discursive Materialism (Bryant&#x27;s Critique)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/graham-harman">Graham Harman</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/growth-rings-of-place">Growth Rings of Place</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/jane-bennett">Jane Bennett</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/limits-of-experiential-geography">Limits of Experiential Geography</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/machinic-assemblage">Machinic Assemblage</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/niklas-luhmann">Niklas Luhmann</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch2-3">Onto-Cartography Ch 2–3: What Is a Machine? / Alien Phenomenology</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/operations-not-substance">Operations, Not Substance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/overdetermination-of-machines">Overdetermination of Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/post-human-media-ecology">Post-Human Media Ecology (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/renewal-of-materialism">Renewal of Materialism (Bryant)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/rigid-plastic-machines">Rigid and Plastic Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch7-gravity">Summary: *Onto-Cartography* Ch. 7 — &quot;Gravity&quot; (Bryant 2014, pp. 184–232)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch4-machinic-assemblages">Summary: Bryant, *Onto-Cartography* Ch 4 — Machinic Assemblages and Entropy (pp. 75–108)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch5-structure-of-worlds">Summary: Onto-Cartography Ch. 5 — The Structure of Worlds</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-squires-tale">The Squire&#x27;s Tale: Marvels of Sarra and the Falcon&#x27;s Lament</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>24</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>1227</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/discursive-materialism-critique">Discursive Materialism (Bryant&#x27;s Critique)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/machinic-assemblage">Machinic Assemblage</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/post-human-media-ecology">Post-Human Media Ecology (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/rigid-plastic-machines">Rigid and Plastic Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/operations-not-substance">Operations, Not Substance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/bryant-topology-of-worlds">Bryant&#x27;s Topology of Worlds</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>16 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/place-as-the-human-form-of-worlding">Place as the Human Form of Worlding</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/renewal-of-materialism">Renewal of Materialism (Bryant)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/body-as-spatial-axis">Body as Spatial Axis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/niklas-luhmann">Niklas Luhmann</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/growth-rings-of-place">Growth Rings of Place</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/graham-harman">Graham Harman</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/jane-bennett">Jane Bennett</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/overdetermination-of-machines">Overdetermination of Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/limits-of-experiential-geography">Limits of Experiential Geography</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/content-expression-plane">Content and Expression: The Two Planes (Bryant / Deleuze-Guattari)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch2-3">Onto-Cartography Ch 2–3: What Is a Machine? / Alien Phenomenology</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch7-gravity">Summary: *Onto-Cartography* Ch. 7 — &quot;Gravity&quot; (Bryant 2014, pp. 184–232)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch4-machinic-assemblages">Summary: Bryant, *Onto-Cartography* Ch 4 — Machinic Assemblages and Entropy (pp. 75–108)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch5-structure-of-worlds">Summary: Onto-Cartography Ch. 5 — The Structure of Worlds</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/reading/chaucer-canterbury-tales/chaucer-canterbury-tales-squires-tale">The Squire&#x27;s Tale: Marvels of Sarra and the Falcon&#x27;s Lament</a><span class="rail-where">Commons</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">18</span></li>
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">13</span></li>
+        <li><a href="/wiki/aneesh/concepts/correlationism">Correlationism</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/discursive-materialism-critique">Discursive Materialism (Bryant&#x27;s Critique)</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/alien-phenomenology">Alien Phenomenology</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/post-human-media-ecology">Post-Human Media Ecology (Bryant)</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/concepts/renewal-of-materialism">Renewal of Materialism (Bryant)</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/bryant">Bryant</a><a class="tag" href="/wiki/topics/machines">machines</a><a class="tag" href="/wiki/topics/ontology">ontology</a><a class="tag" href="/wiki/topics/ooo">OOO</a><span class="tag tag-lone" title="Only this note uses it">pluripotency</span><a class="tag" href="/wiki/topics/structural-coupling">structural-coupling</a><span class="tag tag-lone" title="Only this note uses it">corporeal</span><a class="tag" href="/wiki/topics/incorporeal">incorporeal</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

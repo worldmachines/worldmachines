@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,35 +26,44 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Florian Lohse</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Florian Lohse</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/florian-lohse.md">source on GitHub</a></div>
-  <div class="note-summary">Florian Lohse is a German writer and Contraptions Book Club participant whose Notefields Substack applies Venkatesh Rao&#x27;s history machine framework to personal encounters with civilizational scale — most notably through the Majapahit empire and the Singapore airport.</div>
-  <div class="tags"><span class="tag">lohse</span><span class="tag">writer</span><span class="tag">history-machine</span><span class="tag">majapahit</span><span class="tag">contraptions</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/florian-lohse.md">source on GitHub</a></div>
+    <div class="note-summary">Florian Lohse is a German writer and Contraptions Book Club participant whose Notefields Substack applies Venkatesh Rao&#x27;s history machine framework to personal encounters with civilizational scale — most notably through the Majapahit empire and the Singapore airport.</div>
     <div class="prose">
 <h2 id="overview">Overview</h2>
 <p>Florian Lohse writes the <em>Notefields</em> Substack — &quot;public record of throwing thoughts at walls.&quot; He is a German writer who participates in <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s Contraptions Book Club, reading books on history with a mechanistic, engineering eye.</p>
 <p>His writing style: personal, essayistic, beginning from concrete biographical situations (a layover in Singapore, a book club) and expanding toward civilizational-scale claims, then retreating to the personal again. Self-consciously provincial — he describes himself as a &quot;Western bumpkin&quot; in Singapore.</p>
 <h2 id="key-works-in-this-wiki">Key Works in This Wiki</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span> — the Majapahit essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span> (summary) — March 2026; the Leibniz/Chambord/OpenAI essay</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span> (summary) — January 2026; Candide and Panglossian optimism</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a> — the Majapahit essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a> (summary) — March 2026; the Leibniz/Chambord/OpenAI essay</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a> (summary) — January 2026; Candide and Panglossian optimism</li>
 </ul>
 <h2 id="intellectual-contributions">Intellectual Contributions</h2>
 <h3 id="the-notes-in-the-margins-figure">The Notes in the Margins Figure</h3>
 <p>Lohse&#x27;s distinctive contribution to the history machine concept: the future is already present, &quot;barely recognized if not for some dull notes in the margins.&quot; The court official who documented daily life in Majapahit and was ignored at publication is the model for how paradigm-level developments are documented before they are recognized as such.</p>
 <h3 id="provincial-self-positioning">Provincial Self-Positioning</h3>
 <p>Lohse consistently uses his own provincial position — German, unfamiliar with Southeast Asia, sleeping in tents in Australia — as an epistemically productive stance. The outsider&#x27;s bewilderment at a cosmopolitan hub (Singapore airport, Majapahit port) is not naivety but a form of comparative perception.</p>
-<h3 id="the-shitty-castle-pattern-from-shitty-castles-2026">The Shitty Castle Pattern (from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span>, 2026)</h3>
+<h3 id="the-shitty-castle-pattern-from-shitty-castles-2026">The Shitty Castle Pattern (from <a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a>, 2026)</h3>
 <p>Lohse&#x27;s concept for elaborate constructions built by people who know they won&#x27;t hold. Three cases: Leibniz&#x27;s Monad theory (pragmatic defense against Spinoza&#x27;s ideas), Château de Chambord (nostalgic power demonstration after gunpowder made such walls obsolete), OpenAI&#x27;s Jony Ive acquisition (strategic signal to investors). The pattern: <strong>functional → performative → ornamental → ridicule</strong>.</p>
 <p>Notable: Lohse offers a <em>more charitable</em> reading of <a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a> than <a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a>&#x27;s &quot;tragic reactionary genius&quot; framing — Leibniz as strategic pragmatist rather than deluded optimist.</p>
 <p>Self-implication: Lohse admits having written &quot;fake moats&quot; in his own essays.</p>
-<h3 id="panglossian-optimism-critique-from-the-best-of-all-possible-worlds-2026">Panglossian Optimism Critique (from <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span>, 2026)</h3>
-<p>A contribution to Rao&#x27;s 2026 Book Club reading of <em>Candide</em>. Three-scene fable dramatizing the tension between zoom-out techno-optimism (everything is a stepping stone) and local emplaced care (the thicket gardener). Explicitly credits <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span>&#x27;s essay &quot;The Kernel and the Arc&quot; for the thicket concept. References Gould &amp; Lewontin&#x27;s &quot;Spandrels of San Marco&quot; as the structural parallel to techno-optimism.</p>
+<h3 id="panglossian-optimism-critique-from-the-best-of-all-possible-worlds-2026">Panglossian Optimism Critique (from <a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a>, 2026)</h3>
+<p>A contribution to Rao&#x27;s 2026 Book Club reading of <em>Candide</em>. Three-scene fable dramatizing the tension between zoom-out techno-optimism (everything is a stepping stone) and local emplaced care (the thicket gardener). Explicitly credits <a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a>&#x27;s essay &quot;The Kernel and the Arc&quot; for the thicket concept. References Gould &amp; Lewontin&#x27;s &quot;Spandrels of San Marco&quot; as the structural parallel to techno-optimism.</p>
 <h2 id="intellectual-position">Intellectual Position</h2>
 <p>Lohse tends toward <em>charitable complexity</em> over moral clarity. His essays typically:</p>
 <ol>
@@ -63,34 +72,79 @@
 <li>Turn the complication on himself</li>
 <li>Leave the tension unresolved</li>
 </ol>
-<p>This is structurally similar to <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Kulturkritik&quot;">Kulturkritik</span> as Kempf describes it — not a cure but a regulative mode.</p>
+<p>This is structurally similar to <a class="wikilink" href="/wiki/aneesh/concepts/kulturkritik" title="Written [[Kulturkritik]], resolved to kulturkritik">Kulturkritik</a> as Kempf describes it — not a cure but a regulative mode.</p>
 <h2 id="related-entities">Related Entities</h2>
 <ul>
 <li><a class="wikilink" href="/wiki/aneesh/entities/venkatesh-rao">venkatesh-rao</a> (intellectual influence, book club organizer)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Majapahit Empire&quot;">Majapahit Empire</span> (primary case study in Majapahit essay)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/majapahit-empire" title="Written [[Majapahit Empire]], resolved to majapahit-empire">Majapahit Empire</a> (primary case study in Majapahit essay)</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">gottfried-wilhelm-leibniz</a> (subject of Shitty Castles)</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/baruch-spinoza">baruch-spinoza</a> (subject of Shitty Castles)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Voltaire&quot;">Voltaire</span> (subject of Best of All Possible Worlds)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Aneesh Sathe&quot;">Aneesh Sathe</span> (cited in Best of All Possible Worlds)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/voltaire" title="Written [[Voltaire]], resolved to voltaire">Voltaire</a> (subject of Best of All Possible Worlds)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> (cited in Best of All Possible Worlds)</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;History Machines in the Margins - Lohse&quot;">History Machines in the Margins - Lohse</span> (primary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span> (summary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/history-machines-in-the-margins-lohse" title="Written [[History Machines in the Margins - Lohse]], resolved to history-machines-in-the-margins-lohse">History Machines in the Margins - Lohse</a> (primary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">3</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>17</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>533</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/divergence-machine">Divergence Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/history-machine">History Machine</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/shitty-castles">Shitty Castles: On the Art of Digging Fake Moats</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/the-english-garden-as-epistemic-object">The English Garden as Epistemic Object</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds">The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>9 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/gardens-thickets-and-the-illegibility-problem">Gardens, Thickets, and the Illegibility Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/shitty-castle-pattern">Shitty Castle Pattern</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/zombie-ideas">Zombie Ideas</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/deliberate-archival-erasure">Deliberate Archival Erasure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/history-machines-and-distributed-complexity">History Machines and Distributed Complexity — A Synthesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/majapahit-empire">Majapahit Empire</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/panglossian-optimism">Panglossian Optimism</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/spinoza-leibniz-and-the-paradigm-transition-problem">Spinoza, Leibniz, and the Paradigm Transition Problem</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/zoom-ethics-and-the-panglossian-trap">Zoom Ethics and the Panglossian Trap</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/venkatesh-rao">Venkatesh Rao</a><span class="rail-where">11</span></li>
+        <li><a href="/wiki/aneesh/summaries/shitty-castles">Shitty Castles: On the Art of Digging Fake Moats</a><span class="rail-where">8</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-divergence-machine">The Divergence Machine: Introducing the 2026 Book Club Theme</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/kulturkritik">Kulturkritik</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds">The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/zombie-ideas">Zombie Ideas</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/entities/baruch-spinoza">Baruch Spinoza (1632–1677)</a><span class="rail-where">5</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/lohse">lohse</a><a class="tag" href="/wiki/topics/writer">writer</a><a class="tag" href="/wiki/topics/history-machine">history-machine</a><a class="tag" href="/wiki/topics/majapahit">majapahit</a><a class="tag" href="/wiki/topics/contraptions">contraptions</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

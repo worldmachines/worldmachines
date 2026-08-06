@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,35 +26,44 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Cost Disease and the Retreat from Public Life</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Cost Disease and the Retreat from Public Life</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/cost-disease-and-the-retreat-from-public-life.md">source on GitHub</a></div>
-  <div class="note-summary">Baumol&#x27;s cost disease explains why the economy systematically favors anti-social businesses — and suggests that the decline of public and communal life is not a cultural failure but a structural economic outcome that requires structural remedies.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">baumol</span><span class="tag">social-isolation</span><span class="tag">third-places</span><span class="tag">political-economy</span><span class="tag">public-life</span><span class="tag">scalability</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/cost-disease-and-the-retreat-from-public-life.md">source on GitHub</a></div>
+    <div class="note-summary">Baumol&#x27;s cost disease explains why the economy systematically favors anti-social businesses — and suggests that the decline of public and communal life is not a cultural failure but a structural economic outcome that requires structural remedies.</div>
     <div class="prose">
 <h2 id="the-argument">The Argument</h2>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Alex Mayyasi&quot;">Alex Mayyasi</span>&#x27;s essay in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol Cost Disease and Toxic Solitude&quot;">Baumol Cost Disease and Toxic Solitude</span> makes a structural economic argument for a phenomenon usually explained in cultural or technological terms: the retreat from public and communal life in America.</p>
-<p>The standard narratives — screens, suburbanization, individualism — are not wrong. But they miss the economic layer: under <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span>, the profit motive <em>systematically</em> favors businesses that keep people apart over businesses that bring them together. This is not a cultural pathology; it is a structural feature of any growing economy where productivity gains are unevenly distributed.</p>
+<p><a class="wikilink-wanted" href="/wiki/wanted/alex-mayyasi" title="No note is called &quot;Alex Mayyasi&quot; yet — see who is asking for it">Alex Mayyasi</a>&#x27;s essay in <a class="wikilink-wanted" href="/wiki/wanted/baumol-cost-disease-and-toxic-solitude" title="No note is called &quot;Baumol Cost Disease and Toxic Solitude&quot; yet — see who is asking for it">Baumol Cost Disease and Toxic Solitude</a> makes a structural economic argument for a phenomenon usually explained in cultural or technological terms: the retreat from public and communal life in America.</p>
+<p>The standard narratives — screens, suburbanization, individualism — are not wrong. But they miss the economic layer: under <a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a>, the profit motive <em>systematically</em> favors businesses that keep people apart over businesses that bring them together. This is not a cultural pathology; it is a structural feature of any growing economy where productivity gains are unevenly distributed.</p>
 <h2 id="the-mechanism-restated">The Mechanism, Restated</h2>
 <ol>
 <li>Economy-wide productivity growth raises wages</li>
 <li>Scalable digital products (streaming, delivery apps, social media) can absorb higher wages because they serve more users without proportional labor increase</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Third Places&quot;">Third Places</span> and social experiences cannot scale — they are irreducibly labor-intensive</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/third-places" title="Written [[Third Places]], resolved to third-places">Third Places</a> and social experiences cannot scale — they are irreducibly labor-intensive</li>
 <li>Result: social experiences become relatively more expensive; digital isolation becomes relatively cheaper</li>
 <li>Capital flows toward scalable products; social spaces are starved of investment</li>
 <li>The surviving social businesses achieve efficiency gains by becoming <em>less social</em> (kiosks, fast-casual, algorithmic content)</li>
 </ol>
 <h2 id="connection-to-other-wiki-themes">Connection to Other Wiki Themes</h2>
 <h3 id="the-lore-regression-sathe">The Lore Regression (Sathe)</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;My Grandfather Had Lore&quot;">My Grandfather Had Lore</span> traces a regression in information access: from expert lore → Google → LLMs → possibly back to lore. The cost disease analysis offers a parallel: from communal life → suburbanized isolation → digital isolation → possibly back to informal social networks as the only accessible remaining option.</p>
+<p><a class="wikilink" href="/wiki/aneesh/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a> traces a regression in information access: from expert lore → Google → LLMs → possibly back to lore. The cost disease analysis offers a parallel: from communal life → suburbanized isolation → digital isolation → possibly back to informal social networks as the only accessible remaining option.</p>
 <p>Both are stories of degradation in infrastructure (epistemic and social) that falls through the productivity/scalability gap.</p>
 <h3 id="algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</h3>
-<p><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Algorithmic Curation as Place-Making&quot;">Algorithmic Curation as Place-Making</span> (existing concept) explores how digital platforms simulate the functions of physical places. Cost disease provides the economic explanation for <em>why</em> this substitution occurs: physical places get expensive, digital simulations get cheap. The simulation takes over not because people prefer it but because the structural economics favor it.</p>
+<p><a class="wikilink" href="/wiki/aneesh/concepts/algorithmic-curation-as-place-making" title="Written [[Algorithmic Curation as Place-Making]], resolved to algorithmic-curation-as-place-making">Algorithmic Curation as Place-Making</a> (existing concept) explores how digital platforms simulate the functions of physical places. Cost disease provides the economic explanation for <em>why</em> this substitution occurs: physical places get expensive, digital simulations get cheap. The simulation takes over not because people prefer it but because the structural economics favor it.</p>
 <h3 id="the-universal-library-parallel">The Universal Library Parallel</h3>
-<p>In <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Universal Library in the River of Noise&quot;">The Universal Library in the River of Noise</span>, the tension between inclusivity (noise, abundance) and quality (curation, islands of meaning) mirrors the cost-disease tension: the scalable option (the internet, digital entertainment) wins by volume but degrades quality. The labor-intensive option (curated library, sit-down restaurant, theater) maintains quality but becomes unaffordable.</p>
+<p>In <a class="wikilink-wanted" href="/wiki/wanted/the-universal-library-in-the-river-of-noise" title="No note is called &quot;The Universal Library in the River of Noise&quot; yet — see who is asking for it">The Universal Library in the River of Noise</a>, the tension between inclusivity (noise, abundance) and quality (curation, islands of meaning) mirrors the cost-disease tension: the scalable option (the internet, digital entertainment) wins by volume but degrades quality. The labor-intensive option (curated library, sit-down restaurant, theater) maintains quality but becomes unaffordable.</p>
 <h2 id="the-policy-question">The Policy Question</h2>
 <p>Mayyasi asks whether social spaces should qualify for the same kind of public subsidy that already applies to performing arts organizations and public libraries. This is a genuinely difficult policy question, but the framing matters: once you see social isolation as a <em>structural economic outcome</em> rather than a <em>cultural failure</em>, the policy toolkit expands.</p>
 <p>The question is not &quot;how do we get people to value community again?&quot; — it is &quot;how do we make community economically viable in a cost-disease world?&quot;</p>
@@ -65,22 +74,37 @@
 </ol>
 <h2 id="source-links">Source Links</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol Cost Disease and Toxic Solitude&quot;">Baumol Cost Disease and Toxic Solitude</span> (summary)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Baumol&#x27;s Cost Disease&quot;">Baumol&#x27;s Cost Disease</span> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Third Places&quot;">Third Places</span> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Scalability and Social Life&quot;">Scalability and Social Life</span> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Social Infrastructure&quot;">Social Infrastructure</span> (concept)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Robert Putnam&quot;">Robert Putnam</span> (entity)</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;William Baumol&quot;">William Baumol</span> (entity)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/baumol-cost-disease-and-toxic-solitude" title="No note is called &quot;Baumol Cost Disease and Toxic Solitude&quot; yet — see who is asking for it">Baumol Cost Disease and Toxic Solitude</a> (summary)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/baumols-cost-disease" title="Written [[Baumol&#x27;s Cost Disease]], resolved to baumols-cost-disease">Baumol&#x27;s Cost Disease</a> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/third-places" title="Written [[Third Places]], resolved to third-places">Third Places</a> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/scalability-and-social-life" title="Written [[Scalability and Social Life]], resolved to scalability-and-social-life">Scalability and Social Life</a> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/social-infrastructure" title="Written [[Social Infrastructure]], resolved to social-infrastructure">Social Infrastructure</a> (concept)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/robert-putnam" title="Written [[Robert Putnam]], resolved to robert-putnam">Robert Putnam</a> (entity)</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/william-baumol" title="Written [[William Baumol]], resolved to william-baumol">William Baumol</a> (entity)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>8</b><span>links out</span></div>
+      <div class="bearing"><b>578</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/baumol-cost-disease-toxic-solitude">Why &#x27;Cost Disease&#x27; Is the Secret Force Behind America&#x27;s Toxic Solitude</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/baumol">baumol</a><a class="tag" href="/wiki/topics/social-isolation">social-isolation</a><a class="tag" href="/wiki/topics/third-places">third-places</a><a class="tag" href="/wiki/topics/political-economy">political-economy</a><span class="tag tag-lone" title="Only this note uses it">public-life</span><a class="tag" href="/wiki/topics/scalability">scalability</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

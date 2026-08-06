@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>The Jena Circle</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>The Jena Circle</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/The%20Jena%20Circle.md">source on GitHub</a></div>
-  <div class="note-summary">The intellectual circle (c. 1795-1804) that birthed German Romanticism — practicing symphilosophie through productive disagreement, publishing the Athenaeum, and ultimately disintegrating in ways that reveal the fragility of cognitive diversity under social stress.</div>
-  <div class="tags"><span class="tag">romanticism</span><span class="tag">jena</span><span class="tag">collective-intelligence</span><span class="tag">intellectual-history</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/The%20Jena%20Circle.md">source on GitHub</a></div>
+    <div class="note-summary">The intellectual circle (c. 1795-1804) that birthed German Romanticism — practicing symphilosophie through productive disagreement, publishing the Athenaeum, and ultimately disintegrating in ways that reveal the fragility of cognitive diversity under social stress.</div>
     <div class="prose">
 <p>The Jena Circle (c. 1795-1804) was the intellectual community centered in Jena, Germany, that constituted the birthplace of German Romanticism.</p>
 <h2 id="members">Members</h2>
@@ -50,8 +59,8 @@
 </ul>
 <p><strong>Adjacent:</strong></p>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Johann Wolfgang von Goethe&quot;">Johann Wolfgang von Goethe</span> — presiding literary figure in Weimar</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Friedrich Schiller&quot;">Friedrich Schiller</span> — dramatist, aesthetician</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/johann-wolfgang-von-goethe" title="Written [[Johann Wolfgang von Goethe]], resolved to johann-wolfgang-von-goethe">Johann Wolfgang von Goethe</a> — presiding literary figure in Weimar</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/friedrich-schiller" title="Written [[Friedrich Schiller]], resolved to friedrich-schiller">Friedrich Schiller</a> — dramatist, aesthetician</li>
 <li><a class="wikilink" href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a> — naturalist, explorer</li>
 </ul>
 <h2 id="the-athenaeum">The Athenaeum</h2>
@@ -83,7 +92,7 @@
 <p>Compare <a class="wikilink" href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a>&#x27;s correspondence network, which achieved collective intelligence through a different social technology — mutual respect across distance rather than intimate salon culture — and proved more durable.</p>
 <h2 id="relevance">Relevance</h2>
 <p>The Jena Circle is a historical case study in how cognitive diversity functions as a collective resource. Its flourishing demonstrates that productive disagreement generates insights no single thinker could achieve. Its collapse demonstrates that such diversity is fragile, non-scalable, and vulnerable to the very forces (personal attachment, existential anxiety, need for certainty) that make human thought diverse in the first place.</p>
-<p>See <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Romanticism and Political Danger&quot;">Romanticism and Political Danger</span>, <a class="wikilink" href="/wiki/aneesh/synthesis/cognitive-diversity-as-infrastructure">cognitive-diversity-as-infrastructure</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">ai-homogenization-and-the-counter-enlightenment</a>.</p>
+<p>See <a class="wikilink" href="/wiki/aneesh/concepts/romanticism-and-political-danger" title="Written [[Romanticism and Political Danger]], resolved to romanticism-and-political-danger">Romanticism and Political Danger</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/cognitive-diversity-as-infrastructure">cognitive-diversity-as-infrastructure</a>, <a class="wikilink" href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">ai-homogenization-and-the-counter-enlightenment</a>.</p>
 <p>The Jena experiment is a central case study in <a href="https://aneeshsathe.com/the-cosmos-and-the-model/">&quot;The Cosmos and the Model&quot;</a> (<a class="wikilink" href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">the-cosmos-and-the-model</a>), where its flourishing and collapse frame the argument for why cognitive diversity requires specific social and architectural conditions.</p>
 <h2 id="sources">Sources</h2>
 <ul>
@@ -92,22 +101,48 @@
 <li><a class="wikilink" href="/wiki/aneesh/summaries/isaiah-berlin-against-the-current">isaiah-berlin-against-the-current</a></li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">8</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/friedrich-schlegel">Friedrich Schlegel</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/herderian-ai">Herderian AI</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/naturphilosophie">Naturphilosophie</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/novalis">Novalis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>8</b><span>linked from</span></div>
+      <div class="bearing"><b>12</b><span>links out</span></div>
+      <div class="bearing"><b>556</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/the-cosmos-and-the-model">The Cosmos and the Model</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schlegel">Friedrich Schlegel</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/novalis">Novalis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/herderian-ai">Herderian AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/naturphilosophie">Naturphilosophie</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/symphilosophie">Symphilosophie</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/synthesis/ai-homogenization-and-the-counter-enlightenment">AI Homogenization and the Counter-Enlightenment</a><span class="rail-where">5</span></li>
+        <li><a href="/wiki/aneesh/entities/alexander-von-humboldt">Alexander von Humboldt</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/cognitive-diversity">Cognitive Diversity</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/friedrich-schlegel">Friedrich Schlegel</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/humboldtian-ai">Humboldtian AI</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/entities/johann-gottfried-herder">Johann Gottfried Herder</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/counter-enlightenment">Counter-Enlightenment</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/romanticism">romanticism</a><span class="tag tag-lone" title="Only this note uses it">jena</span><a class="tag" href="/wiki/topics/collective-intelligence">collective-intelligence</a><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

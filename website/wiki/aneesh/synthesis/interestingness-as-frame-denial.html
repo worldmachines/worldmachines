@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Interestingness as Frame Denial</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Interestingness as Frame Denial</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/interestingness-as-frame-denial.md">source on GitHub</a></div>
-  <div class="note-summary">Davis&#x27;s &#x27;interesting = targeted assumption-denial&#x27; and Klein&#x27;s &#x27;sensemaking = frame-data fitting&#x27; describe the same pre-theoretical structures from opposite directions — and both predict that homogenizing assumption-grounds via LLMs collapses the space of what can be found interesting.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">epistemology</span><span class="tag">interestingness</span><span class="tag">sensemaking</span><span class="tag">frames</span><span class="tag">ai</span><span class="tag">homogenization</span><span class="tag">cognitive-diversity</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/interestingness-as-frame-denial.md">source on GitHub</a></div>
+    <div class="note-summary">Davis&#x27;s &#x27;interesting = targeted assumption-denial&#x27; and Klein&#x27;s &#x27;sensemaking = frame-data fitting&#x27; describe the same pre-theoretical structures from opposite directions — and both predict that homogenizing assumption-grounds via LLMs collapses the space of what can be found interesting.</div>
     <div class="prose">
 <h2 id="the-connection">The Connection</h2>
 <p>Two sources in this wiki — <a class="wikilink" href="/wiki/aneesh/summaries/davis-thats-interesting">davis-thats-interesting</a> (1971) and <a class="wikilink" href="/wiki/aneesh/concepts/data-frame-theory-of-sensemaking">data-frame-theory-of-sensemaking</a> (2007) — describe the same pre-theoretical structures from opposite directions.</p>
@@ -57,7 +66,7 @@
 <li><strong>&quot;Interesting&quot; converges toward a single register</strong> — the denial patterns that work for the modal WEIRD assumption-ground become the dominant mode of intellectual surprise</li>
 <li><strong>Non-WEIRD interestingness becomes invisible</strong> — propositions that would be interesting <em>against a different assumption-ground</em> fail to register because the LLM has already flattened the diversity of baseline beliefs</li>
 </ul>
-<p>This is the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Counter-Enlightenment&quot;">Counter-Enlightenment</span> argument in Davis&#x27;s vocabulary: Herder would say that each culture has its own assumption-ground, and the propositions that are interesting within one culture may be obvious or absurd within another. Homogenizing the assumption-ground doesn&#x27;t make ideas universally interesting — it makes one culture&#x27;s interesting ideas the only game in town.</p>
+<p>This is the <a class="wikilink" href="/wiki/aneesh/concepts/counter-enlightenment" title="Written [[Counter-Enlightenment]], resolved to counter-enlightenment">Counter-Enlightenment</a> argument in Davis&#x27;s vocabulary: Herder would say that each culture has its own assumption-ground, and the propositions that are interesting within one culture may be obvious or absurd within another. Homogenizing the assumption-ground doesn&#x27;t make ideas universally interesting — it makes one culture&#x27;s interesting ideas the only game in town.</p>
 <h2 id="the-explorer-connection">The Explorer Connection</h2>
 <p>The self-determined user (see <a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">the-explorer-and-the-tourist</a>) maintains an idiosyncratic assumption-ground — built from personal experience, diverse reading, non-standard influences. This is what makes them capable of finding things interesting that others miss. LLM homogenization threatens this capacity not by preventing exploration but by subtly normalizing the explorer&#x27;s assumption-ground toward the mean.</p>
 <p><a class="wikilink" href="/wiki/aneesh/entities/novalis">Novalis</a>&#x27;s &quot;self-determined beings&quot; and Davis&#x27;s &quot;diverse assumption-grounds&quot; are making the same structural claim: cognitive diversity is not just a feature of the collective but a precondition for individual intellectual vitality.</p>
@@ -73,13 +82,26 @@
 <li><a class="wikilink" href="/wiki/aneesh/synthesis/the-explorer-and-the-tourist">the-explorer-and-the-tourist</a> (synthesis)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from</h2>
-    <p class="empty-state">No other note links here yet.</p>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>10</b><span>links out</span></div>
+      <div class="bearing"><b>583</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/epistemology">epistemology</a><a class="tag" href="/wiki/topics/interestingness">interestingness</a><a class="tag" href="/wiki/topics/sensemaking">sensemaking</a><a class="tag" href="/wiki/topics/frames">frames</a><a class="tag" href="/wiki/topics/ai">ai</a><a class="tag" href="/wiki/topics/homogenization">homogenization</a><a class="tag" href="/wiki/topics/cognitive-diversity">cognitive-diversity</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

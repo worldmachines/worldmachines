@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -25,12 +25,22 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/florian/">Florian</a> <b>/</b> <span>Frameworks can turn performative as they become more sophisticated</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Frameworks can turn performative as they become more sophisticated</h1>
-  <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 2 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/Frameworks%20can%20turn%20performative%20as%20they%20become%20more%20sophisticated.md">source on GitHub</a></div>
+    <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 2 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/Frameworks%20can%20turn%20performative%20as%20they%20become%20more%20sophisticated.md">source on GitHub</a></div>
     <div class="prose">
 <h2 id="claim">Claim</h2>
 <blockquote><p>Sophisticated frameworks can replicate the same passive deferral structure they are supposed to help overcome — the apodictical pattern in which any evidence confirms the thesis migrates across intellectual traditions regardless of surface sophistication</p></blockquote>
@@ -49,27 +59,47 @@
 <li><p>If the level of framework sophistication would be irrelevant for success rate of an intervention and some other factors would be more influential</p>
 <h2 id="sources">Sources</h2></li>
 </ul>
-<p>“<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;The Best of All Possible Worlds&quot;">The Best of All Possible Worlds</span>” (Notefields, January 2026); developed in “<span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Shitty Castles&quot;">Shitty Castles</span>” postscript.</p>
+<p>“<a class="wikilink" href="/wiki/aneesh/summaries/the-best-of-all-possible-worlds" title="Written [[The Best of All Possible Worlds]], resolved to the-best-of-all-possible-worlds">The Best of All Possible Worlds</a>” (Notefields, January 2026); developed in “<a class="wikilink" href="/wiki/aneesh/summaries/shitty-castles" title="Written [[Shitty Castles]], resolved to shitty-castles">Shitty Castles</a>” postscript.</p>
 <h2 id="open-questions-gaps">Open questions / gaps</h2>
 <ul>
 <li>Is there an honest way to build in the “advantageous vs. true” gap (thesis 3.2) — acknowledging the performative function without pretending to truth?</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 2 June 2026 by florianlohse — <a href="https://github.com/worldmachines/worldmachines/commit/d1dc628222e95810e7718a281b38a26106258289">extracted raw notes from florians essays</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">7</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/florian/alive-models-are-built-downstream-of-observation-not-from-first-principles-alone">Alive Models Are Built Downstream of Observation, Not From First Principles Alone</a> <span class="muted">Florian</span></li>
-      <li><a href="/wiki/florian/canonic-infrastructure-decays-in-hilarious-drainage">Canonic infrastructure decays in hilarious drainage</a> <span class="muted">Florian</span></li>
-      <li><a href="/wiki/florian/divergent-self-knowledge-requires-embedded-embodied-non-reproducible-inquiry">Divergent self knowledge requires embedded, embodied, non-reproducible inquiry</a> <span class="muted">Florian</span></li>
-      <li><a href="/wiki/florian/marking-the-gap-is-more-insightful-than-forcing-closure">Marking the gap is more insightful than forcing closure</a> <span class="muted">Florian</span></li>
-      <li><a href="/wiki/florian/the-lab-science-toolkit-of-self-knowledge-fails-once-its-preconditions-withdraw">The lab-science toolkit of self-knowledge fails once its preconditions withdraw</a> <span class="muted">Florian</span></li>
-      <li><a href="/wiki/florian/the-margin-provides-sharper-insight-on-historic-infrastructure-than-the-canonical-center">The margins provides sharper insight on historic infrastructure than the canonical center</a> <span class="muted">Florian</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 2 June 2026 by florianlohse — <a href="https://github.com/worldmachines/worldmachines/commit/d1dc628222e95810e7718a281b38a26106258289">extracted raw notes from florians essays</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>7</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>224</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/decay-sequence">Decay Sequence</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/florian/canonic-infrastructure-decays-in-hilarious-drainage">Canonic infrastructure decays in hilarious drainage</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/florian/divergent-self-knowledge-requires-embedded-embodied-non-reproducible-inquiry">Divergent self knowledge requires embedded, embodied, non-reproducible inquiry</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/florian/the-margin-provides-sharper-insight-on-historic-infrastructure-than-the-canonical-center">The margins provides sharper insight on historic infrastructure than the canonical center</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/florian/the-lab-science-toolkit-of-self-knowledge-fails-once-its-preconditions-withdraw">The lab-science toolkit of self-knowledge fails once its preconditions withdraw</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/florian/alive-models-are-built-downstream-of-observation-not-from-first-principles-alone">Alive Models Are Built Downstream of Observation, Not From First Principles Alone</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/florian/marking-the-gap-is-more-insightful-than-forcing-closure">Marking the gap is more insightful than forcing closure</a><span class="rail-where">Florian</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/florian/canonic-infrastructure-decays-in-hilarious-drainage">Canonic infrastructure decays in hilarious drainage</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/florian/divergence-grows-in-peripheral-fields-not-in-the-fortified-center">Divergence grows in peripheral fields, not in the fortified center</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/florian/divergent-self-knowledge-requires-embedded-embodied-non-reproducible-inquiry">Divergent self knowledge requires embedded, embodied, non-reproducible inquiry</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/florian/it-takes-connoisseurship-for-ornamental-baggage-to-identify-dead-frameworks">It takes connoisseurship for ornamental baggage to identify dead frameworks</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/florian/world-machines-become-more-visible-as-they-decay">World Machines become more visible as they decay</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

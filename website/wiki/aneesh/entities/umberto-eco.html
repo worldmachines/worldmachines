@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Entities</span> <b>/</b> <span>Umberto Eco</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Umberto Eco</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/umberto-eco.md">source on GitHub</a></div>
-  <div class="note-summary">Italian semiotician, novelist, and intellectual historian — key figure in the history of language theory and the author of the observation that AI may be a revival of the perfect language dream.</div>
-  <div class="tags"><span class="tag">semiotics</span><span class="tag">intellectual-history</span><span class="tag">language</span><span class="tag">AI</span><span class="tag">Italy</span><span class="tag">literature</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Entities · updated 9 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/entities/umberto-eco.md">source on GitHub</a></div>
+    <div class="note-summary">Italian semiotician, novelist, and intellectual historian — key figure in the history of language theory and the author of the observation that AI may be a revival of the perfect language dream.</div>
     <div class="prose">
 <p><strong>Umberto Eco</strong> (1932–2016) was an Italian semiotician, philosopher, literary critic, and novelist. He is one of the most important theorists of signs, meaning, and the history of ideas in the 20th century.</p>
 <h2 id="key-works-relevant-to-this-wiki">Key Works (Relevant to This Wiki)</h2>
@@ -42,37 +51,64 @@
 <li><strong><em>The Name of the Rose</strong></em> (1980) — novel set in a medieval library that engages themes of forbidden knowledge and the limits of encyclopedic accumulation</li>
 </ul>
 <h2 id="the-ai-perfect-language-observation">The AI/Perfect Language Observation</h2>
-<p>Eco&#x27;s key claim, cited in <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span>:</p>
+<p>Eco&#x27;s key claim, cited in <a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a>:</p>
 <blockquote><p>&quot;The dream of a perfect language has largely been abandoned. However, the work on artificial intelligence may represent its revival under a different name.&quot;</p></blockquote>
-<p>This is cited in the context of LLM embeddings: high-dimensional vector representations of words and concepts function as a statistical approximation of the <span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span> — one location in a continuous space per concept, proximity as semantic relatedness.</p>
+<p>This is cited in the context of LLM embeddings: high-dimensional vector representations of words and concepts function as a statistical approximation of the <a class="wikilink" href="/wiki/aneesh/concepts/perfect-language" title="Written [[Perfect Language]], resolved to perfect-language">Perfect Language</a> — one location in a continuous space per concept, proximity as semantic relatedness.</p>
 <h2 id="intellectual-position">Intellectual Position</h2>
 <p>Eco belongs to a tradition skeptical of the perfect language dream as achievable through natural or constructed human language, but attentive to why it persists. His history of the perfect language is diagnostic: it shows <em>why</em> each era re-attempts the dream and <em>why</em> each attempt fails in characteristic ways.</p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gottfried Wilhelm Leibniz&quot;">Gottfried Wilhelm Leibniz</span></strong>: Primary figure in Eco&#x27;s history of the perfect language</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library&quot;">Universal Library</span></strong>: companion myth — Eco&#x27;s analysis of one myth illuminates the other</li>
-<li><strong><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;LLMs&quot;">LLMs</span></strong>: the contemporary revival Eco&#x27;s observation prefigured</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz" title="Written [[Gottfried Wilhelm Leibniz]], resolved to gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz</a></strong>: Primary figure in Eco&#x27;s history of the perfect language</li>
+<li><strong><a class="wikilink" href="/wiki/aneesh/concepts/universal-library" title="Written [[Universal Library]], resolved to universal-library">Universal Library</a></strong>: companion myth — Eco&#x27;s analysis of one myth illuminates the other</li>
+<li><strong><a class="wikilink-wanted" href="/wiki/wanted/llms" title="No note is called &quot;LLMs&quot; yet — see who is asking for it">LLMs</a></strong>: the contemporary revival Eco&#x27;s observation prefigured</li>
 </ul>
 <h2 id="related-pages">Related Pages</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Perfect Language&quot;">Perfect Language</span> — the concept Eco diagnosed</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library&quot;">Universal Library</span> — the companion myth</li>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Gottfried Wilhelm Leibniz&quot;">Gottfried Wilhelm Leibniz</span> — primary historical figure in Eco&#x27;s account</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/perfect-language" title="Written [[Perfect Language]], resolved to perfect-language">Perfect Language</a> — the concept Eco diagnosed</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/universal-library" title="Written [[Universal Library]], resolved to universal-library">Universal Library</a> — the companion myth</li>
+<li><a class="wikilink" href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz" title="Written [[Gottfried Wilhelm Leibniz]], resolved to gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz</a> — primary historical figure in Eco&#x27;s account</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><span class="wikilink-missing" title="No note in raw-notes/ is named &quot;Universal Library in the River of Noise&quot;">Universal Library in the River of Noise</span> (summary)</li>
+<li><a class="wikilink-wanted" href="/wiki/wanted/universal-library-in-the-river-of-noise" title="No note is called &quot;Universal Library in the River of Noise&quot; yet — see who is asking for it">Universal Library in the River of Noise</a> (summary)</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>311</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/perfect-language">Perfect Language</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/ontologies-vs-embeddings">Ontologies vs. Embeddings — Two Paths to Semantic Structure</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/universal-library-river-of-noise">The Universal Library in the River of Noise</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/concepts/domain-ontologies">Domain Ontologies</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/universal-library">Universal Library</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/concepts/perfect-language">Perfect Language</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/aneesh/entities/gottfried-wilhelm-leibniz">Gottfried Wilhelm Leibniz (1646–1716)</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/semiotics">semiotics</a><a class="tag" href="/wiki/topics/intellectual-history">intellectual-history</a><a class="tag" href="/wiki/topics/language">language</a><a class="tag" href="/wiki/topics/ai">AI</a><a class="tag" href="/wiki/topics/italy">Italy</a><a class="tag" href="/wiki/topics/literature">literature</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

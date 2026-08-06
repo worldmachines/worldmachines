@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Synthesis</span> <b>/</b> <span>Not-Knowing as Capture-Resistance</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Not-Knowing as Capture-Resistance</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/not-knowing-as-capture-resistance.md">source on GitHub</a></div>
-  <div class="note-summary">Four separated moments in Ingold&#x27;s essay -- knowledge-as-citadel, data-extraction ethics, immunising methodology, and institutions that manufacture ignorance -- assemble into a description of the WMP legibility machine from the subject&#x27;s side, with not-knowing functioning as capture-resistance rather than deficit.</div>
-  <div class="tags"><span class="tag">synthesis</span><span class="tag">legibility</span><span class="tag">capture-resistance</span><span class="tag">not-knowing</span><span class="tag">production-of-ignorance</span><span class="tag">attention</span><span class="tag">world-machines</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Synthesis · updated 7 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/synthesis/not-knowing-as-capture-resistance.md">source on GitHub</a></div>
+    <div class="note-summary">Four separated moments in Ingold&#x27;s essay -- knowledge-as-citadel, data-extraction ethics, immunising methodology, and institutions that manufacture ignorance -- assemble into a description of the WMP legibility machine from the subject&#x27;s side, with not-knowing functioning as capture-resistance rather than deficit.</div>
     <div class="prose">
 <p>A cross-cutting reading of four separated moments in Ingold&#x27;s <a class="wikilink" href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">on-not-knowing-and-paying-attention</a> that, assembled, describe the World Machines <a class="wikilink" href="/wiki/aneesh/concepts/legibility-as-machine-core">legibility-as-machine-core</a> machine <em>from the inside</em> -- from the position of the subject it processes -- and name the counter-move. No single section of the essay states this; each supplies one part.</p>
 <h2 id="the-assembled-mechanism">The assembled mechanism</h2>
@@ -47,16 +56,42 @@
 <h2 id="why-not-knowing-is-capture-resistance-not-deficit">Why &quot;not-knowing&quot; is capture-resistance, not deficit</h2>
 <p>Ingold&#x27;s counter-move is not more knowledge but a <em>stance</em>: attention, correspondence, and the deliberate holding-open of &quot;not-knowing,&quot; which he insists is &quot;entirely different&quot; from ignorance. That stance is structurally the WMP property of <a class="wikilink" href="/wiki/aneesh/concepts/capture-resistance">capture-resistance</a>. The soul&#x27;s undefended openness is precisely what cannot be fixed, accounted for, and put safely away; and Ingold&#x27;s &quot;real freedom&quot; -- attunement to &quot;the ways things want to go&quot; rather than willed mastery of them -- is the Spinozist <a class="wikilink" href="/wiki/aneesh/concepts/conatus">Conatus</a> move that capture regimes try to flatten. Where the legibility machine buys predictability by immunising itself against contact, not-knowing keeps the living process responsive by staying exposed. It is the same trade the wiki tracks under <a class="wikilink" href="/wiki/aneesh/synthesis/legibility-vs-complexity-the-master-tension">legibility-vs-complexity-the-master-tension</a> -- rendered here as a phenomenology of the person rather than a sociology of the state.</p>
     </div>
+    <p class="note-history">Last changed 7 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/a3929b42bfa85a7fcb06eae4396c079ac5798b83">[trivial] ingest: Ingold 2023 &quot;possible world&quot; — 9 reading notes + 4 canon pages (#18)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">2</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 7 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/a3929b42bfa85a7fcb06eae4396c079ac5798b83">[trivial] ingest: Ingold 2023 &quot;possible world&quot; — 9 reading notes + 4 canon pages (#18)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>410</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/summaries/on-not-knowing-and-paying-attention">On Not Knowing and Paying Attention</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/tim-ingold">Tim Ingold</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-back-matter-references">Back Matter: Acknowledgements, Notes, and References</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning">Correspondence versus Interaction, Understanding versus Undercommoning</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/ingold-2023-possible-world/ingold-2023-possible-world-passage-of-generations-astonishment-surprise">Generations as a Braid, and Astonishment Without Surprise</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/henri-bergson">Henri Bergson (1859–1941)</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/concepts/legibility-as-machine-core">Legibility as Machine Core</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/synthesis/longitudinal-becoming-versus-stratigraphic-time">Longitudinal Becoming vs. Stratigraphic Time</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/aneesh/entities/michel-serres">Michel Serres</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/synthesis">synthesis</a><a class="tag" href="/wiki/topics/legibility">legibility</a><a class="tag" href="/wiki/topics/capture-resistance">capture-resistance</a><a class="tag" href="/wiki/topics/not-knowing">not-knowing</a><a class="tag" href="/wiki/topics/production-of-ignorance">production-of-ignorance</a><a class="tag" href="/wiki/topics/attention">attention</a><a class="tag" href="/wiki/topics/world-machines">world-machines</a></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

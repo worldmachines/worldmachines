@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>Washington and the Boy&#x27;s Political Education, 1850–1854</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Washington and the Boy&#x27;s Political Education, 1850–1854</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-03-washington.md">source on GitHub</a></div>
-  <div class="note-summary">Henry Adams recounts his boyhood between Boston and Washington from 1850 to 1854 — blackguard violence and antislavery ferment at home, a slave-state journey that fixes George Washington as an unresolvable moral paradox at Mount Vernon, and an early taste of corrupt machine politics electing Charles Sumner — framing his entire eighteenth-century upbringing as already obsolete by the century&#x27;s end.</div>
-  <div class="tags"><span class="tag">henry-adams</span><span class="tag">antebellum-boston</span><span class="tag">slavery</span><span class="tag">washington-dc</span><span class="tag">mount-vernon</span><span class="tag">free-soil-party</span><span class="tag">political-machines</span><span class="tag">self-education</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-03-washington.md">source on GitHub</a></div>
+    <div class="note-summary">Henry Adams recounts his boyhood between Boston and Washington from 1850 to 1854 — blackguard violence and antislavery ferment at home, a slave-state journey that fixes George Washington as an unresolvable moral paradox at Mount Vernon, and an early taste of corrupt machine politics electing Charles Sumner — framing his entire eighteenth-century upbringing as already obsolete by the century&#x27;s end.</div>
     <div class="prose">
 <p>Chapter III of <em>The Education of Henry Adams</em> follows the author&#x27;s boyhood self from Boston, where lack of a fixed social standard let blackguard violence and antislavery mob politics do the real teaching school never managed, through a formative 1850 journey to Washington and Mount Vernon that fixes George Washington as an unresolvable moral paradox, to the Free Soil coalition&#x27;s 1851 election of Charles Sumner, which drags the fourteen-year-old boy into corrupt machine politics and leaves him, by his own account, permanently morally compromised — all narrated decades later as evidence that his entire eighteenth-century-flavored upbringing was already obsolete by 1900.</p>
 <h2 id="themes">Themes</h2>
@@ -45,15 +54,28 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The Conky Daniels snowball-fight passage is the chapter&#x27;s clearest instance of the book&#x27;s retrospective irony: a boys&#x27; game read forward into the Civil War casualties it unknowingly rehearsed. The Fugitive Slave Law passage shows how Boston&#x27;s own antislavery violence, not abstract instruction, &quot;wrought frenzy&quot; in the boy. The Mount Vernon passage states the book&#x27;s central unresolved contradiction in miniature. The Sumner-election passage is the boy&#x27;s induction into &quot;practical politics&quot; and the moral compromise Adams says he never escaped. The closing passage delivers the chapter&#x27;s real thesis, reframing all of it as evidence of obsolete education.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">1</span></h2>
-    <ul>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/e2f2f5fea5ac0fbe127350c41bb3efcdd544694e">[trivial] Ingest The Education of Henry Adams (1907) — 37 reading notes + 7 canon pages (#27)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>1</b><span>links out</span></div>
+      <div class="bearing"><b>617</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><span class="tag tag-lone" title="Only this note uses it">antebellum-boston</span><a class="tag" href="/wiki/topics/slavery">slavery</a><a class="tag" href="/wiki/topics/washington-dc">washington-dc</a><span class="tag tag-lone" title="Only this note uses it">mount-vernon</span><a class="tag" href="/wiki/topics/free-soil-party">free-soil-party</a><span class="tag tag-lone" title="Only this note uses it">political-machines</span><span class="tag tag-lone" title="Only this note uses it">self-education</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

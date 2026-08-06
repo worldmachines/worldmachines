@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/aneesh/">Aneesh</a> <b>/</b> <span>Concepts</span> <b>/</b> <span>Machinic Assemblage</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Machinic Assemblage</h1>
-  <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/machinic-assemblage.md">source on GitHub</a></div>
-  <div class="note-summary">Bryant&#x27;s central ontological unit: a collection of heterogeneous machines coupled through endo-relations in a way that generates emergent powers not present in any single component machine.</div>
-  <div class="tags"><span class="tag">levi-bryant</span><span class="tag">onto-cartography</span><span class="tag">assemblage</span><span class="tag">emergence</span><span class="tag">machines</span><span class="tag">deleuze-guattari</span><span class="tag">endo-relations</span></div>
+    <div class="note-byline"><a href="/wiki/aneesh/">Aneesh</a> · Concepts · updated 27 April 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/aneesh/concepts/machinic-assemblage.md">source on GitHub</a></div>
+    <div class="note-summary">Bryant&#x27;s central ontological unit: a collection of heterogeneous machines coupled through endo-relations in a way that generates emergent powers not present in any single component machine.</div>
     <div class="prose">
 <h2 id="core-definition">Core Definition</h2>
 <p>A machinic assemblage, in <a class="wikilink" href="/wiki/aneesh/entities/levi-bryant">levi-bryant</a>&#x27;s <a class="wikilink" href="/wiki/aneesh/concepts/onto-cartography">onto-cartography</a>, is a machine composed of other machines whose internal (endo-) relations generate emergent powers or capacities that cannot be found in any of the component machines taken individually. The assemblage is not a mere heap or aggregate — it constitutes a genuinely new machine insofar as it &quot;is able to act on other entities in the world in ways that its parts cannot.&quot; (p. 77)</p>
@@ -105,27 +114,58 @@
 <li><strong>Tuan&#x27;s place ↔ assemblage</strong>: Tuan&#x27;s &quot;place&quot; is the humanist version of the assemblage — a gathering of relations that produces a qualitatively distinct experience. But Tuan lacks the thermodynamic mechanism Bryant supplies: places require ongoing energetic work to maintain their character.</li>
 </ul>
     </div>
+    <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">13</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/entities/andy-clark">Andy Clark</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/autopoiesis">Autopoiesis</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/contingent-vs-self-maintaining-assemblage">Contingent vs. Self-Maintaining Assemblage</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/endo-exo-relations">Endo-Relations and Exo-Relations</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/entropy-and-assemblage-maintenance">Entropy and Assemblage Maintenance</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/felix-guattari">Félix Guattari</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/gilles-deleuze">Gilles Deleuze</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/place-defined-by-what-it-touches">Place Defined by What It Touches</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/structural-coupling">Structural Coupling</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch4-machinic-assemblages">Summary: Bryant, *Onto-Cartography* Ch 4 — Machinic Assemblages and Entropy (pp. 75–108)</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/aneesh/concepts/territorialization">Territorialization</a> <span class="muted">Aneesh</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>13</b><span>linked from</span></div>
+      <div class="bearing"><b>9</b><span>links out</span></div>
+      <div class="bearing"><b>1117</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/entropy-and-assemblage-maintenance">Entropy and Assemblage Maintenance</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/structural-coupling">Structural Coupling</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/autopoiesis">Autopoiesis</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/synthesis/machinic-assemblage-and-world-machines">Machinic Assemblage and World Machines</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/territorialization">Territorialization</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/contingent-vs-self-maintaining-assemblage">Contingent vs. Self-Maintaining Assemblage</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/gilles-deleuze">Gilles Deleuze</a><span class="rail-where">Aneesh</span></li>
+      </ul>
+      <details class="rail-more">
+        <summary>5 more</summary>
+        <ul class="rail-list">
+        <li><a href="/wiki/aneesh/concepts/place-defined-by-what-it-touches">Place Defined by What It Touches</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/felix-guattari">Félix Guattari</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/concepts/endo-exo-relations">Endo-Relations and Exo-Relations</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/entities/andy-clark">Andy Clark</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/aneesh/summaries/onto-cartography-bryant-ch4-machinic-assemblages">Summary: Bryant, *Onto-Cartography* Ch 4 — Machinic Assemblages and Entropy (pp. 75–108)</a><span class="rail-where">Aneesh</span></li>
+        </ul>
+      </details>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/aneesh/entities/levi-bryant">Levi R. Bryant</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/aneesh/concepts/entropy-and-assemblage-maintenance">Entropy and Assemblage Maintenance</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/onto-cartography">Onto-Cartography (Bryant)</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/aneesh/concepts/structural-coupling">Structural Coupling</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/aneesh/concepts/autopoiesis">Autopoiesis</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/contingent-vs-self-maintaining-assemblage">Contingent vs. Self-Maintaining Assemblage</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/dawn-day-dusk-machine-typology">Dawn / Day / Dusk Machine Typology</a><span class="rail-where">4</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/levi-bryant">levi-bryant</a><a class="tag" href="/wiki/topics/onto-cartography">onto-cartography</a><a class="tag" href="/wiki/topics/assemblage">assemblage</a><a class="tag" href="/wiki/topics/emergence">emergence</a><a class="tag" href="/wiki/topics/machines">machines</a><a class="tag" href="/wiki/topics/deleuze-guattari">deleuze-guattari</a><span class="tag tag-lone" title="Only this note uses it">endo-relations</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>

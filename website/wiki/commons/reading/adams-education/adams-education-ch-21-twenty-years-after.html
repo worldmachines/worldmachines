@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/wiki/wiki.css">
 </head>
-<body>
+<body class="wiki-page">
   <header>
     <h1><a href="/" style="color:inherit">World Machines</a></h1>
     <a href="/submit" class="submit-link">Submit</a>
@@ -26,14 +26,23 @@
     <a href="/mcp">MCP</a>
     <a href="https://discord.gg/tqUFztN3r">Project Chat</a>
   </nav>
-  <nav class="wikinav" aria-label="Wiki"><a href="/wiki/">Wiki home</a><a href="/wiki/all">All notes</a><a href="/wiki/glossary/">Glossary</a></nav>
-  <main class="wiki">
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
   <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> <b>/</b> <span>Twenty Years After (1892): An Education Declared Finished</span></nav>
+  <div class="spread">
   <article class="note">
     <h1>Twenty Years After (1892): An Education Declared Finished</h1>
-  <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-21-twenty-years-after.md">source on GitHub</a></div>
-  <div class="note-summary">Resuming the narrative after a twenty-year gap, Henry Adams returns from a lonely London hospital stay in 1892 to a changed but strangely inert Washington, taking stock of a finished education, an accelerating industrial civilization he can no longer be taught by, and a Gilded-Age social and political order he can no longer read as meaningful, crystallized in his silent visits to the Rock Creek Cemetery memorial Saint-Gaudens made for him.</div>
-  <div class="tags"><span class="tag">henry-adams</span><span class="tag">gilded-age-politics</span><span class="tag">technological-acceleration</span><span class="tag">american-identity</span><span class="tag">washington-dc-society</span><span class="tag">rock-creek-memorial</span><span class="tag">education-and-experience</span></div>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/adams-education/">The Education of Henry Adams</a> · updated 17 July 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/adams-education/adams-education-ch-21-twenty-years-after.md">source on GitHub</a></div>
+    <div class="note-summary">Resuming the narrative after a twenty-year gap, Henry Adams returns from a lonely London hospital stay in 1892 to a changed but strangely inert Washington, taking stock of a finished education, an accelerating industrial civilization he can no longer be taught by, and a Gilded-Age social and political order he can no longer read as meaningful, crystallized in his silent visits to the Rock Creek Cemetery memorial Saint-Gaudens made for him.</div>
     <div class="prose">
 <p>Adams resumes his autobiography after a twenty-year silence in the narrative, picking up in a London hospital bed in January 1892 and following his reluctant return -- by way of the ocean liner Teutonic -- to a Washington he can no longer read as home, where he takes stock of his finished education, his tightening friendship with John Hay and Clarence King, the affectless politics of the Cleveland-Harrison election, and a private visit to the bronze memorial Augustus Saint-Gaudens made for him at Rock Creek Cemetery.</p>
 <h2 id="themes">Themes</h2>
@@ -45,18 +54,44 @@
 <h2 id="notable-passages">Notable passages</h2>
 <p>The chapter&#x27;s opening paragraph restates the book&#x27;s operating claim about education before the narrative leaps forward twenty years to test it against Adams&#x27;s own life. His account of returning to consciousness in a London hospital, refusing &quot;the idea of beginning a new education,&quot; sets the elegiac tone that governs everything after. The Teutonic crossing turns a simple ocean voyage into an early, unstated version of Adams&#x27;s acceleration thesis, while the encounter with Kipling reopens his lifelong sense of an unbridgeable American/European difference &quot;in the blood.&quot; Washington&#x27;s 1892 election is rendered as pure &quot;slack-water&quot; -- an election neither party&#x27;s own men can work up much feeling about -- and the chapter closes on Adams&#x27;s meditation at Rock Creek Cemetery, where Saint-Gaudens&#x27;s bronze figure becomes a mirror that returns to each viewer only what they already bring, laity and clergy alike having &quot;lost sight&quot; of what it once meant.</p>
     </div>
+    <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
   </article>
-  <section class="backlinks">
-    <h2>Linked from <span class="count">4</span></h2>
-    <ul>
-      <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a> <span class="muted">Aneesh</span></li>
-      <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a> <span class="muted">Commons</span></li>
-      <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a> <span class="muted">Commons</span></li>
-    </ul>
-  </section>
-  <p class="note-history">Last changed 17 July 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/37c8d36b759a39b5e30380a46bc6c4946093b3de">[trivial] Add decay-sequence canon page; restore the Adams links to it (#28)</a></p>
-  <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>4</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>683</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/aneesh/synthesis/machines-as-energy-regimes">Machines as Energy Regimes</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/adams-education">The Education of Henry Adams</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/entities/the-dynamo-and-the-virgin">The Dynamo and the Virgin</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-33-a-dynamic-theory-of-history">A Dynamic Theory of History (1904)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-30-vis-inertiae">Vis Inertiae (1903)</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/aneesh/concepts/world-machines">World Machines</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-34-a-law-of-acceleration">A Law of Acceleration</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/entities/adams-dynamic-theory-of-history">Adams&#x27;s Dynamic Theory of History</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-32-vis-nova">Chapter XXXII: Vis Nova (1903-1904)</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/commons/reading/adams-education/adams-education-ch-22-chicago">Chicago (1893): Panic, the Exposition, and the Question the Dynamo Asks</a><span class="rail-where">3</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/henry-adams">henry-adams</a><a class="tag" href="/wiki/topics/gilded-age-politics">gilded-age-politics</a><span class="tag tag-lone" title="Only this note uses it">technological-acceleration</span><span class="tag tag-lone" title="Only this note uses it">american-identity</span><a class="tag" href="/wiki/topics/washington-dc-society">washington-dc-society</a><span class="tag tag-lone" title="Only this note uses it">rock-creek-memorial</span><span class="tag tag-lone" title="Only this note uses it">education-and-experience</span></div>
+    </div>
+  </aside>
+  </div>
   </main>
+  <script src="/wiki/wiki.js" defer></script>
 </body>
 </html>
