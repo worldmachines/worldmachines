@@ -66,6 +66,10 @@
   <div class="devlog">
   <article class="devlog-entry">
     <div class="devlog-meta">27 August 2026 · aneesh</div>
+    <p>The Witness install command on <code>/mcp</code> never ran for anyone: it placed <code>--header</code> before the server name, and Claude Code's CLI declares that flag variadic, so it swallowed both the name and the URL and died with <code>error: missing required argument 'name'</code>. Name and URL now come first and the header last — the order <code>claude mcp add --help</code> itself demonstrates — verified end to end against CLI 2.1.247. The Oracle snippet was never affected; it carries no header.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">27 August 2026 · aneesh</div>
     <p>The MCP endpoints moved onto World Machines hostnames: the Oracle is now <code>oracle.worldmachines.org/mcp</code> and the gated Witness <code>witness.worldmachines.org/mcp</code>, replacing the <code>*.aneeshsathe.workers.dev</code> URLs <code>/mcp</code> had been handing out for people to paste into their own client config — a personal subdomain that, once installed, sits in someone's setup indefinitely. The old hostnames still answer and every existing token keeps working, so nothing needs re-adding; only the copy-paste snippets changed. Prime Radiant made the same move the same day and now lives at <code>primeradiant.worldmachines.org</code>, with its old address redirecting.</p>
   </article>
   <article class="devlog-entry">
@@ -170,6 +174,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-08-27T19:36:44Z -->
+  <!-- built: 2026-08-27T19:55:47Z -->
 </body>
 </html>
