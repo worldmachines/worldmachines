@@ -10,6 +10,12 @@ on:
     paths:
       - 'website/blurbs.md'
       - 'website/devlog.md'
+  # Manual trigger. The path filter above means a change to any other file
+  # under website/ — mcp.html, a function, style.css — never deploys on its
+  # own, and the only alternatives were editing devlog.md purely to trip the
+  # filter, or running `wrangler pages deploy` locally with an API token.
+  # Run this from the Actions tab, or: gh workflow run rebuild.yml
+  workflow_dispatch:
 
 jobs:
   rebuild:
