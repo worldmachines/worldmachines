@@ -27,6 +27,23 @@
     "binding": "AI"
   },
   "vars": {
+    // Deliberately still a workers.dev hostname, and not oracle.worldmachines.org.
+    //
+    // This is server-side only: functions/api/ask.js and stats.js fetch it, the
+    // browser never sees it (that is the whole point of the /api/ask proxy). So
+    // it carries none of the branding problem the 2026-08-27 move fixed on
+    // worldmachines.org/mcp, where the URL is handed to readers to paste into
+    // their own MCP config.
+    //
+    // What it would carry is the 524. A Worker on a custom domain "is treated as
+    // an origin", so the request rides the zone proxy and is killed if no
+    // response headers appear inside the Proxy Read Timeout (~125s, Enterprise-
+    // only to raise). A *.workers.dev request never enters the zone. Prime
+    // Radiant learned this on 2026-08-10 — "The trunk did not answer. 524" — and
+    // its ask.js is pinned to workers.dev for the same reason.
+    //
+    // oracle.worldmachines.org exists and works; use it for anything a human
+    // reads. Leave this one alone until Oracle answers stream.
     "ORACLE_URL": "https://wm-oracle-dev.aneeshsathe.workers.dev"
   }
 }

@@ -25,8 +25,8 @@
 import { requireMember, blockCrossOrigin, NO_STORE } from '../_lib/access.js';
 
 const TOKEN_TTL_SECONDS = 7776000; // 90 days
-const WITNESS_MCP_URL = 'https://wm-witness-dev.aneeshsathe.workers.dev/mcp';
-const ORACLE_MCP_URL = 'https://wm-oracle-dev.aneeshsathe.workers.dev/mcp';
+const WITNESS_MCP_URL = 'https://witness.worldmachines.org/mcp';
+const ORACLE_MCP_URL = 'https://oracle.worldmachines.org/mcp';
 const LIST_LIMIT = 1000;
 const LEGACY_READ_LIMIT = 50; // tokens minted before metadata existed
 

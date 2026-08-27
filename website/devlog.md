@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-08-27 · aneesh
+The MCP endpoints moved onto World Machines hostnames: the Oracle is now `oracle.worldmachines.org/mcp` and the gated Witness `witness.worldmachines.org/mcp`, replacing the `*.aneeshsathe.workers.dev` URLs `/mcp` had been handing out for people to paste into their own client config — a personal subdomain that, once installed, sits in someone's setup indefinitely. The old hostnames still answer and every existing token keeps working, so nothing needs re-adding; only the copy-paste snippets changed. Prime Radiant made the same move the same day and now lives at `primeradiant.worldmachines.org`, with its old address redirecting.
+
 ## 2026-08-06 · aneesh (3)
 Consolidated the crowded 11-link nav into five places — Theory, Library, Wiki, Ask, Club — each opening a second row on hover (desktop) or a chevron tap (touch), with zero JavaScript: pure CSS `:hover`/`:focus-within`/`:target`, keyboard- and 320px-safe. On wiki pages the wiki toolbar simply *is* the Wiki group standing open, so there's one bar and one row everywhere. `build.py` now owns the hand-written nav copies (`sync_static_navs()`) — they had quietly drifted into four different versions. Also gated `/wiki*` behind member login for now.
 
