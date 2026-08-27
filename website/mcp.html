@@ -361,9 +361,15 @@
       ].join('\n');
     }
 
+    // `--header` MUST come last. The Claude Code CLI declares it variadic
+    // (`-H, --header <header...>`), so it swallows every argument after it —
+    // with the header first, commander ate the server name and the URL as
+    // extra header values and the command died with
+    // "error: missing required argument 'name'". Name and URL first, header
+    // last, which is also the order `claude mcp add --help` demonstrates.
     function cliWitness(tok) {
-      return 'claude mcp add --transport http --header "Authorization: Bearer '
-        + tok + '" worldmachines-witness ' + WITNESS_URL;
+      return 'claude mcp add --transport http worldmachines-witness '
+        + WITNESS_URL + ' --header "Authorization: Bearer ' + tok + '"';
     }
 
     function desktopBoth(tok) {
