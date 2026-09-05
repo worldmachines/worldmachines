@@ -14,10 +14,12 @@ meaning-crisis, the escapement-as-transducer question, a four-cell
 time-coordination grid, the grammar of compelling names / spell history,
 Pluribus as Divergence Machine art, the culture of discovery, and Descola
 reading notes that extend rather than touch the already-committed
-four-ontologies note), and split the circular-errors bet-table into ten
-notes, one per structural error plus a grouped note for the five near-term
-bets. Also queued the de-dramatizing-the-digital new_writing_inbox.md link
-(two further essays to be added once Sean supplies their URLs). Day-job-adjacent material
+four-ontologies note). Also queued the de-dramatizing-the-digital
+new_writing_inbox.md link (two further essays to be added once Sean
+supplies their URLs). The circular-errors bet-table split (nine
+structural-error notes plus a grouped note for the five near-term bets) is
+held for a later batch on sean/notes-2026-09-c rather than shipped here.
+Day-job-adjacent material
 (the office-is-analogist, government contracting, the BD-team-formation
 alchemy section) stayed held per Sean's own review, and the
 prediction/forecast/prophecy vocabulary was left undefined per Venkat's
