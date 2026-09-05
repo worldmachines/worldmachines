@@ -5,6 +5,24 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-05 · sean
+Second raw-notes batch: converted three already-published Schematism essays
+(de-dramatizing-the-digital, circular-error, looking-for-duree) into notes,
+mined the vault for new-nature-adjacent material approved in review
+(Blumenberg/ELIZA, disenchantment-as-relocation, subject-exhaustion,
+meaning-crisis, the escapement-as-transducer question, a four-cell
+time-coordination grid, the grammar of compelling names / spell history,
+Pluribus as Divergence Machine art, the culture of discovery, and Descola
+reading notes that extend rather than touch the already-committed
+four-ontologies note), and split the circular-errors bet-table into ten
+notes, one per structural error plus a grouped note for the five near-term
+bets. Also queued three new_writing_inbox.md links (de-dramatizing-the-
+digital, plus two essays pending Sean's URLs). Day-job-adjacent material
+(the office-is-analogist, government contracting, the BD-team-formation
+alchemy section) stayed held per Sean's own review, and the
+prediction/forecast/prophecy vocabulary was left undefined per Venkat's
+authorship.
+
 ## 2026-08-27 · aneesh (2)
 The Witness install command on `/mcp` never ran for anyone: it placed `--header` before the server name, and Claude Code's CLI declares that flag variadic, so it swallowed both the name and the URL and died with `error: missing required argument 'name'`. Name and URL now come first and the header last — the order `claude mcp add --help` itself demonstrates — verified end to end against CLI 2.1.247. The Oracle snippet was never affected; it carries no header.
 
