@@ -29,5 +29,3 @@
 
 ---
 sean | contribution | https://seanstevenson.substack.com/p/de-dramatizing-the-digital | AI as a completing technology that makes the digital stack recede, Spinozan generative infrastructure versus Leibnizian finished platform.
-sean | contribution | <URL - Sean to add> | Cosmological Adventure: Wayfinding in the Divergence Machine - Polynesian wayfinding as the divergence-era successor to the modernity-coded monomyth of adventure.
-sean | contribution | <URL - Sean to add> | Missing Myths of Middle Age (La Selva Oscura) - Dante's dark wood and Dogen's uji read against a midlife turn.
