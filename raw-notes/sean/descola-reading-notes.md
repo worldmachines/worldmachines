@@ -1,13 +1,13 @@
 ---
-summary: "The research file behind the committed Descola note holds
-  substantially more than the grid itself - a distinct internal two-by-two
-  for each of the four ontologies, a specific L-shaped trajectory across
-  Descola's grid for the Modernity-Divergence-Liveness sequence, a
-  speculative reading of the Divergence Machine as the alchemical operator
-  fusing the other two rather than a waystation between them, and an
-  extended set of institutional and religious applications (law, trading
-  floors, software, the Trikaya) that the shorter committed note does not
-  cover."
+summary: "Each of Descola's four ontologies generates its own internal two-by-two —
+  naturalism crossing sincerity with literalness, animism crossing masking
+  with approach-or-flight, analogism crossing vertical-or-horizontal with
+  binding-or-dissolving, totemism crossing singular-or-choral identity with
+  stillness-or-motion — and the Modernity-Divergence-Liveness sequence traces
+  an L-shaped path across the grid, naturalism to analogism to animism, with a
+  further, more speculative reading treating analogism itself as the
+  alchemical operator fusing the other two rather than a waypoint between
+  them."
 tags: [descola, analogism, animism, totemism, naturalism, trikaya, alchemy, spinoza, leibniz, world-machines]
 last_updated: 2026-09-05
 ---

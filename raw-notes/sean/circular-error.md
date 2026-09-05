@@ -1,12 +1,9 @@
 ---
-summary: "A pendulum's circular error - nearly right, good enough to build
-  on, wrong enough to bound - is the general shape of every load-bearing
-  near-solution: fix it by substitution (replace the flawed part with the
-  true one) or by domain restriction (confine the flaw to where it doesn't
-  matter), and either way the difficulty does not disappear, it migrates to
-  the next bottleneck. AI's guardrails, retrieval scaffolds, and agent loops
-  are anchor escapements around a raw model, not corrections to it, and the
-  same migration is now running through them."
+summary: "A pendulum's circular error shows the general pattern of every load-bearing
+  near-solution: fixing it by substitution or by domain restriction does not
+  eliminate the difficulty, it relocates it to the next bottleneck, and AI's
+  guardrails and scaffolding are domain-restriction-style escapements around a
+  flawed core rather than corrections to it."
 tags: [circular-error, conservation-of-difficulty, escapement, ai-scaffolding, divergence-machine, dawn-day-dusk, landes]
 last_updated: 2026-09-05
 ---

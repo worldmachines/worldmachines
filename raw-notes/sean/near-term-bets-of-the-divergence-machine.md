@@ -1,12 +1,10 @@
 ---
-summary: "Five specific, near-term, falsifiable bets about how today's
-  proposed fixes for AI's limitations will themselves fail in a
-  particular, nameable way - longer context recreating the forgetting
-  problem at scale, benchmark evals going stale exactly where trust is
-  highest, synthetic training data collapsing into a degenerate
-  monoculture, agent-interoperability protocols quietly becoming the new
-  center to be captured, and human-in-the-loop oversight degrading into
-  rubber-stamp theater at volume."
+summary: "Five falsifiable near-term bets each follow the same pattern: today's
+  proposed fix for an AI limitation (longer context, benchmark evals,
+  synthetic training data, open agent protocols, human-in-the-loop review) is
+  itself a near-solution whose difficulty migrates somewhere specific and
+  identifiable (context rot, eval rot, model collapse, protocol capture,
+  rubber-stamp oversight) rather than actually resolving."
 tags: [ai, benchmarks, synthetic-data, protocols, oversight, bet-table]
 last_updated: 2026-09-05
 ---

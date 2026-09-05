@@ -1,14 +1,9 @@
 ---
-summary: "Convergent canonicity is, at bottom, a synchronization regime, and
-  mechanical timekeeping manufactured shared time by overriding the body's
-  own clock with one external tick. A two-by-two of plurality (one clock
-  versus many) and sovereignty (the clock holds you versus you hold it)
-  yields four positions - Iron Cage, Modern Competency, Fragmentation, and
-  Liveness - with involution not as a fifth cell but as a trajectory: one of
-  two ways out of Fragmentation, alongside genuine Liveness. Whether groups
-  can actually coordinate by translation between untethered tempos, rather
-  than by synchronizing to one shared tick, is the question the whole grid
-  is built to test."
+summary: "Crossing plurality (one shared clock versus many) with sovereignty (the
+  clock holds you versus you hold it) yields four coordination positions -
+  Iron Cage, Modern Competency, Fragmentation, and Liveness - with the central
+  open question being whether groups can actually coordinate by translating
+  between untethered tempos rather than synchronizing to one shared tick."
 tags: [time, synchronization, divergence-machine, coordination, interoception, covid, place, world-machines]
 last_updated: 2026-09-05
 ---

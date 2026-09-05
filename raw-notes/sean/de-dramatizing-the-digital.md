@@ -1,12 +1,10 @@
 ---
-summary: "AI is not the next platform expanding digital life but a completing
-  technology, in Christensen's sense - profit and friction migrate to the
-  still-unsolved layer, and once AI resolves it, digital tools recede the way
-  print de-dramatized the acquisition of knowledge. The wager is whether the
-  completion arrives Spinozan (natura naturans, generative infrastructure with
-  no final release) or Leibnizian (natura naturata, a finished product owned
-  by three firms) - the difference between real de-dramatization and monsters
-  in boring clothes moving downstairs into the infrastructure layer."
+summary: "AI is argued to be a completing technology in Christensen's sense - profit
+  and friction migrate to the still-unsolved digital layer, and once AI
+  resolves it, digital tools recede into the background the way print de-
+  dramatized access to knowledge - with the real stakes being whether that
+  completion arrives Spinozan (generative infrastructure, no final owner) or
+  Leibnizian (a finished platform owned by a few firms)."
 tags: [ai, completing-technology, pace-layers, spinoza, leibniz, natura-naturans, natura-naturata, conservation-of-attractive-profits, gramsci-gap]
 last_updated: 2026-09-05
 ---

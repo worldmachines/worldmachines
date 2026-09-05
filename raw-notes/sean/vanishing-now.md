@@ -1,8 +1,8 @@
 ---
-summary: "The Divergence Machine mass-produces private, asynchronous access
-  to time and starves the shared, synchronous present, so the difficulty
-  migrates from keeping time to convening it - synchrony becomes scarce,
-  and value concentrates in whoever can still summon a live public."
+summary: "Private, on-demand access to time erodes the shared, synchronous present it
+  seemed to free everyone from, so the difficulty migrates from keeping time
+  to convening it - synchrony itself becomes scarce, and value concentrates in
+  whoever can still summon a live public."
 tags: [divergence-machine, synchrony, time, coordination, bet-table]
 last_updated: 2026-09-05
 ---

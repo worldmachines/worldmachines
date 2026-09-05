@@ -1,13 +1,9 @@
 ---
-summary: "Blumenberg found in Weizenbaum's ELIZA - one of the first AI
-  systems to hold a convincing conversation - evidence that intelligence of
-  any kind is intermittent, only unreliably and periodically connected to a
-  world outside itself, which lets him compare human consciousness to a
-  computer not by anthropomorphizing the machine but by de-naturing the
-  human. ELIZA doesn't fake human meaning; it reveals that meaning was always
-  a rhetorical production, which lets AI be critiqued on the plane of
-  semiotics and rhetoric rather than staged as a contest over whether
-  machines can really think."
+summary: "Blumenberg's little-known reading of Weizenbaum's ELIZA argues that
+  intelligence, human included, is intermittent - only unreliably connected to
+  a world outside itself - which de-natures the human rather than
+  anthropomorphizing the machine, and reframes AI critique as a question of
+  rhetoric rather than whether machines really understand."
 tags: [blumenberg, eliza, weizenbaum, ai, rhetoric, intermittent-consciousness, subject-exhaustion]
 last_updated: 2026-09-05
 ---

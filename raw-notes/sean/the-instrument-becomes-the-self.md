@@ -1,9 +1,9 @@
 ---
-summary: "Past a certain threshold, a personal instrument - a feed, a
+summary: "Past a certain threshold of intimacy, a personal instrument - a feed, a
   model, a companion app - stops functioning as a tool the self uses and
-  starts functioning as identity itself, so that having an unautomated
-  interior, a self that can step outside its own instruments, becomes an
-  increasingly scarce condition rather than a default one."
+  starts functioning as identity itself, making an unautomated interior, a
+  self able to step outside its own instruments, an increasingly scarce
+  condition rather than a default one."
 tags: [identity, instruments, autonomy, ai-companions, bet-table]
 last_updated: 2026-09-05
 ---

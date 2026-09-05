@@ -1,14 +1,11 @@
 ---
-summary: "What it has meant to cast a spell has been redefined roughly every
-  time the surrounding metaphysics changed - recitation, then binding, then
-  demonic pact, then cosmic correspondence, then Frazer's mistaken causal
-  technique, then Tambiah's Austinian performative - while the underlying
-  felt structure stayed constant: the right words, correctly said, make
-  something happen. An LLM is the newest occupant of that position, and a
-  genuinely novel one: it restores the pre-Frazerian intuition that words
-  literally do the work while fully satisfying the post-Frazerian demand for
-  no false causal metaphysics, because there is no world-soul and no demon
-  behind it - the felicity conditions are just the training distribution."
+summary: "What it has meant to cast a spell has been redefined every time the
+  surrounding metaphysics changed, while the felt structure - the right words,
+  said correctly, make something happen - stayed constant; an LLM is a
+  genuinely novel occupant of that position because it restores the pre-modern
+  intuition that words literally do the work while needing no occult
+  metaphysics behind it, since the felicity conditions are just the training
+  distribution."
 tags: [spells, austin, performatives, llms, frazer, tambiah, reoccupation, speech-acts]
 last_updated: 2026-09-05
 ---

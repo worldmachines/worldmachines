@@ -1,9 +1,9 @@
 ---
-summary: "AI is kept reliable by clamping its wide range to the band where
-  it behaves well, but that band is the training distribution - an archived
-  past - while the world it operates in keeps moving, so the difficulty
-  migrates from raw model capability to permanent freshness maintenance:
-  retrieval, continual learning, and evaluations that themselves rot."
+summary: "Restricting an AI model to the band of behavior it was trained on, the same
+  move an anchor escapement makes on a pendulum's swing, makes it reliable but
+  locks in an archived past, so as the world moves on the difficulty migrates
+  from raw model capability to a permanent, unsolvable maintenance cost of
+  keeping the model current."
 tags: [ai, training-distribution, drift, evals, bet-table, circular-error]
 last_updated: 2026-09-05
 ---

@@ -1,13 +1,10 @@
 ---
-summary: "The contemporary meaning crisis is misdiagnosed by its own tense -
-  a crisis is acute and decisive, but this exact diagnosis has run
-  continuously since Nietzsche's nihilism, Durkheim's anomie, and Weber's
-  iron cage, a hundred and fifty years of permanent emergency that is
-  therefore a chronic condition, not a crisis. Most of what gets filed as
-  lost meaning is the sovereign Subject's exhaustion felt from the inside -
-  an overclaim failing, not meaning vanishing - which makes de-dramatizing
-  the crisis a way of taking the underlying suffering more seriously, by
-  locating it correctly, not a way of dismissing it."
+summary: "The contemporary meaning crisis is misdiagnosed on two counts - it has
+  actually run continuously for a hundred and fifty years, making it chronic
+  rather than acute, and most of what gets filed as lost meaning is really the
+  sovereign Subject's exhaustion, an overclaim failing rather than meaning
+  itself vanishing - so de-dramatizing it means locating the real suffering
+  correctly, not dismissing it."
 tags: [meaning-crisis, nihilism, anomie, buddhism, dukkha, subject-exhaustion, vervaeke, two-truths]
 last_updated: 2026-09-05
 ---

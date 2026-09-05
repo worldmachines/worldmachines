@@ -1,10 +1,9 @@
 ---
-summary: "The Modernity Machine's error was an over-tight canon; the
-  Divergence Machine risks over-correcting by abolishing the shared floor
-  entirely rather than merely restricting it, which is the difference
-  between substitution and domain restriction - and a world with no shared
-  floor at all cannot coordinate on anything, no matter how much freedom
-  that costs it to admit."
+summary: "The Modernity Machine's error was an over-tight canon, but the Divergence
+  Machine risks over-correcting into abolishing the shared floor entirely
+  rather than merely restricting it - the difference between substitution and
+  domain restriction - and a world with no shared floor at all cannot
+  coordinate on anything, however peacefully it coexists."
 tags: [divergence-machine, canon, incommensurability, substitution, domain-restriction, bet-table]
 last_updated: 2026-09-05
 ---

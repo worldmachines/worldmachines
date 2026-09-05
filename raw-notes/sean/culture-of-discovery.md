@@ -1,13 +1,9 @@
 ---
-summary: "Discovery is not a timeless human activity but a specific word
-  and concept with a birth date - no European language had it in the
-  modern sense before the 1480s - and before it existed, the operative
-  distinction was between what was publicly known and what was secretly
-  known, not between old knowledge and new. A culture can have discovery
-  for facts while still condemning theorizing about what those facts mean
-  (Darwin's twenty-year delay), which suggests that whatever is missing
-  from a present culture of discovery may be the license to theorize
-  rather than the capacity to find."
+summary: "Discovery is a historically specific concept, dated to the 1480s, that
+  displaced an older public-versus-secret axis of knowledge, and having the
+  license to find new facts is a separate achievement from having the license
+  to theorize about them, which is what Darwin's twenty-year publication delay
+  shows was missing even in a culture that could clearly discover facts."
 tags: [discovery, invention, wootton, sponsel, appleby, low-hanging-fruit, actors-concept]
 last_updated: 2026-09-05
 ---

@@ -1,13 +1,10 @@
 ---
-summary: "Reading each phase of a World Machine by how it handles its open
-  and occupied positions yields a clean pathology typology: Dawn grabs a
-  closed answer too early (premature commitment, counterfeit liveness as its
-  signature failure); Day mistakes its taken-for-granted reoccupations for
-  eternal givens and over-extends them (naturalization); Dusk keeps
-  occupying its positions in form while the liveness has drained out (zombie
-  tenancy). Counterfeit liveness and zombie tenancy are the two ways a
-  position can be occupied without being alive, and genuine liveness is the
-  narrow path between them."
+summary: "Each World Machine phase has a distinct pathology defined by how it relates
+  to inherited positions: Dawn grabs a closed answer too early (counterfeit
+  liveness), Day mistakes its taken-for-granted reoccupations for eternal
+  givens (naturalization), and Dusk keeps occupying positions in form after
+  the liveness has drained out (zombie tenancy), with genuine liveness the
+  narrow, unsolved path between the first and last."
 tags: [world-machines, dawn-day-dusk, counterfeit-liveness, zombie-tenancy, reoccupation, rao, blumenberg]
 last_updated: 2026-09-05
 ---

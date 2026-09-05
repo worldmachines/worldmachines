@@ -1,10 +1,9 @@
 ---
-summary: "The Divergence Machine reoccupies the Modernity Machine's own
-  infrastructure - its archive, its identifiers, its standards - and trains
-  its models on the old machine's convergent, canonical corpus, so the new
-  machine inherits the old machine's buried errors rather than starting
-  clean, and the difficulty migrates from building new institutions to
-  managing a permanent hot-swap between the two."
+summary: "The Divergence Machine has no clean ground to build on - it runs on the
+  Modernity Machine's inherited archive, identifiers, and standards, so AI
+  trained on that inheritance absorbs the old machine's buried errors along
+  with its useful content, and the difficulty shifts from building new
+  institutions to permanently managing that inheritance."
 tags: [divergence-machine, inheritance, bias, infrastructure, bet-table]
 last_updated: 2026-09-05
 ---

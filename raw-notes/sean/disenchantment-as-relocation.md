@@ -1,15 +1,10 @@
 ---
-summary: "Disenchantment is usually told as a subtraction story - the
-  enchanted cosmos was the neutral default and modernity merely removed
-  magic, exposing a meaningless mechanism underneath. Drop the subtraction
-  premise and it becomes a relocation instead: meaning didn't vanish, it
-  changed address, moving out of an external sacred cosmos and into the
-  Subject, with Romanticism as the receipt. Riskin's history supplies the
-  missing mechanism and its actors: the seventeenth-century banishment of
-  agency from nature was done by the scientists, as the condition of their
-  method, and it required a monopoly god to hold the agency they had
-  removed - so when that god later receded, the agency did not return to
-  nature; it went nowhere."
+summary: "Disenchantment is better read as a relocation than a subtraction - meaning
+  did not vanish when the enchanted cosmos was rationalized away, it moved
+  into the Subject, with Romanticism as the receipt - and Riskin supplies the
+  missing mechanism: seventeenth-century science banished agency from nature
+  as a condition of its method, requiring a monopoly god to hold that agency,
+  so when the god later receded the agency never flowed back."
 tags: [disenchantment, weber, blumenberg, taylor, subtraction-stories, romanticism, subject, riskin]
 last_updated: 2026-09-05
 ---

@@ -1,9 +1,8 @@
 ---
-summary: "The Modernity Machine's tyranny was the schedule; the Divergence
-  Machine frees a person from the fixed schedule but installs liveness
-  itself - being current, present, and always-on - as the new imperative,
-  making attention and presence the one genuinely unscalable resource and
-  therefore the new bottleneck the whole system runs on."
+summary: "The Divergence Machine trades the Modernity Machine's tyranny of the fixed
+  schedule for a new one, the demand to be constantly current, present, and
+  reachable, making attention and presence the one genuinely unscalable human
+  resource and therefore the system's real bottleneck."
 tags: [liveness, presence, attention, burnout, world-machines, bet-table]
 last_updated: 2026-09-05
 ---

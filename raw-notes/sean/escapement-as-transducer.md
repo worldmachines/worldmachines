@@ -1,10 +1,9 @@
 ---
-summary: "The escapement is the physical hinge where continuous flow becomes
-  discrete count - the pendulum swings smoothly and silently, and the tick
-  is manufactured at the gate, not present in the swing itself - which
-  raises the open question of whether flowing time and counted time are the
-  same thing under two descriptions, or whether one of them is a mistake we
-  make about the other."
+summary: "The escapement is the physical hinge where continuous swing becomes discrete
+  count - the tick is manufactured at the gate, not a property of the
+  pendulum's silent, continuous motion - which raises the open question of
+  whether flowing time and counted time are the same thing under two
+  descriptions, or whether one is a mistake made about the other."
 tags: [escapement, time, bergson, duree, continuous-discrete, quantization, horology]
 last_updated: 2026-09-05
 ---

@@ -1,10 +1,9 @@
 ---
-summary: "Coordination without a center tends to rebuild a center you
-  simply cannot see - the platform, protocol, or infrastructure layer that
-  everyone's supposedly independent instrument actually depends on - and
-  profit and power migrate down the pace layers to that invisible layer,
-  which is the one you cannot govern precisely because you cannot point at
-  it."
+summary: "Coordination designed to avoid a center tends to rebuild one anyway, at a
+  layer no one is watching - the shared platform, protocol, or infrastructure
+  everything else silently depends on - and profit and power migrate down the
+  pace layers to that invisible layer, which is hardest to govern precisely
+  because it cannot be pointed at."
 tags: [infrastructure, decentralization, pace-layers, monopoly, bet-table]
 last_updated: 2026-09-05
 ---

@@ -1,9 +1,9 @@
 ---
-summary: "Navigational frames - a feed, a map, a model's summary - begin as
-  known approximations and harden, unnoticed, into the only reality anyone
-  actually sees, which is the deepest and most recursive circular error of
-  the set, because a frame mistaken for the world is unfalsifiable: you
-  cannot correct an error you no longer recognize as an error."
+summary: "Navigational frames - a feed, a map, a model's summary - begin as known
+  approximations and harden, unnoticed, into the only reality anyone actually
+  perceives, which is the deepest and most recursive circular error of the set
+  because a frame mistaken for the world becomes unfalsifiable from the
+  inside."
 tags: [frames, maps, models, epistemology, circular-error, bet-table]
 last_updated: 2026-09-05
 ---

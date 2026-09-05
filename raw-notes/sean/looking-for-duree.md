@@ -1,12 +1,10 @@
 ---
-summary: "A month spent looking for Bergson's duree - the continuous, flowing
-  current supposedly underneath both meditation and the body - turned up no
-  current, only sequence: things arising and passing, a heartbeat that works
-  like an escapement, and an insula that synthesizes the felt present from
-  attention, safety, and interoception rather than reading it off a
-  continuous stream. Bergson loses to Einstein and to Dogen's being-time:
-  there is no common now, only causal order and the deliberate work of
-  making two trajectories intersect."
+summary: "A month spent looking for Bergson's continuous duree in the body and in
+  meditation turned up no flow, only another counter - the heartbeat behaves
+  like an escapement and the felt present is synthesized by the insula from
+  attention, safety, and interoception - leaving no common now, only causal
+  order and the deliberate, effortful work of making two trajectories
+  intersect."
 tags: [bergson, duree, kairos, chronos, interoception, dogen, buddhism, einstein, anatta, no-self]
 last_updated: 2026-09-05
 ---

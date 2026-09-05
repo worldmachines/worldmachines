@@ -1,9 +1,9 @@
 ---
-summary: "Pluribus reads as the first Divergence Machine artwork - a vision
-  of everyone joined and made happy that plays as horror rather than
-  utopia, because the joined collective optimizes for efficiency above all
-  else and the show frames pure efficiency, achieved at the cost of
-  individual perspective, as the actual nightmare."
+summary: "Pluribus reads as the first Divergence Machine artwork - its hive-mind
+  premise, joining everyone into one content collective, plays as horror
+  rather than utopia because the joined collective optimizes for pure
+  efficiency at the cost of individual perspective, and the show frames that
+  total convergence as the actual nightmare."
 tags: [pluribus, film-tv, divergence-machine, efficiency, buddhism, alienation]
 last_updated: 2026-09-05
 ---

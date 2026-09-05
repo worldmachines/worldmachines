@@ -1,12 +1,10 @@
 ---
-summary: "The Modernity Machine built rights, dignity, authorship, and
-  democracy on the sovereign Cartesian Subject as its master answer to who is
-  the legitimate source of meaning, knowledge, and agency - and the Subject
-  has been philosophically exhausted for a century, well before AI arrived.
-  AI does not cause the exhaustion; it makes it culturally undeniable, which
-  is why the drama around AI is really the Subject's last stand, and why the
-  right response is the two-truths move: there is a Sean, but there is no
-  fixed self-grounding self underneath him."
+summary: "The sovereign Cartesian Subject was the Modernity Machine's master answer
+  for rights, dignity, authorship, and democracy, and it has been
+  philosophically exhausted for a century - AI did not cause that exhaustion,
+  it just makes it culturally undeniable, calling for a two-truths response:
+  conventional continuity is real, but there is no fixed, self-grounding self
+  underneath it."
 tags: [subject, cartesian, modernity-machine, blumenberg, buddhism, two-truths, yogacara, foucault, ai]
 last_updated: 2026-09-05
 ---

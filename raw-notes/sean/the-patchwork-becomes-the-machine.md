@@ -1,9 +1,9 @@
 ---
-summary: "AI completes the technology stack one accreted patch at a time,
-  and the scaffolding meant to contain a raw model - retrieval, guardrails,
-  reviewers, monitors - becomes a vast, brittle layer that no one designed
-  and no one can safely remove, shifting the real work from the model
-  itself to the permanent upkeep of the patchwork around it."
+summary: "AI is made useful not by fixing its flaws but by accumulating a stack of
+  patches around them - retrieval, guardrails, reviewers, monitors - and that
+  patchwork itself becomes a vast, brittle layer that no one designed and no
+  one can safely remove, shifting the real ongoing work from the model to
+  permanent upkeep of the scaffolding around it."
 tags: [ai, scaffolding, technical-debt, maintainer-class, bet-table]
 last_updated: 2026-09-05
 ---

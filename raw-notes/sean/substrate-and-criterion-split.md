@@ -1,13 +1,11 @@
 ---
-summary: "Theology once fused two positions - the substrate (what ground are
-  we embedded in) and the criterion (what confers legitimacy and direction) -
-  in a single occupant, God. The Modernity Machine split them into inert
-  Nature and directional Progress; the Divergence Machine opens both without
-  refilling either; the Liveness Machine's wager is not to re-fuse them but
-  to reabsorb generativity into the substrate itself, choosing between a
-  Spinozan New Nature that is alive without going anywhere (genuine liveness)
-  and a Leibnizian one that is pre-harmonized playback impersonating
-  self-generation (counterfeit liveness)."
+summary: "Theology once fused two positions, the substrate (what ground we are
+  embedded in) and the criterion (what confers legitimacy and direction), in a
+  single occupant, God; the Modernity Machine split them into inert Nature and
+  directional Progress, and the Liveness Machine's wager is between
+  reabsorbing generativity into a Spinozan substrate that is alive without
+  going anywhere (genuine liveness) or a Leibnizian one that is pre-harmonized
+  playback impersonating self-generation (counterfeit liveness)."
 tags: [blumenberg, reoccupation, new-nature, spinoza, leibniz, world-machines, gramsci-gap, umbesetzung]
 last_updated: 2026-09-05
 ---
