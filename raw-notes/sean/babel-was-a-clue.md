@@ -1,3 +1,9 @@
+---
+summary: "Sean Stevenson reads Leo XIV's 2026 AI encyclical Magnifica Humanitas through the World Machines framework: its organizing metaphor pairs Babel (one language, one direction — the Modernity Machine's pull toward a single future) against Nehemiah's wall rebuilt section by section (plurality that coheres — the Divergence Machine), and the most convergent institution on Earth sides against convergence. The essay treats the metaphor choice, and our surprise at it, as an early signal of a large slow change."
+tags: [divergence-machine, modernity-machine, catholic-church, ai, encyclical, metamodernity, liveness, essay]
+last_updated: 2026-09-05
+---
+
 # Babel Was a Clue
 
 *Reading an AI encyclical for the small signal of a large, slow change*
@@ -57,3 +63,11 @@ A metaphor can take an institution somewhere it never meant to go. Whether this 
 [^5]: Pius XI, *Quadragesimo Anno* (1931), is where subsidiarity receives its canonical formulation; the deeper root is Leo XIII's *Rerum Novarum* (1891), the document this encyclical is consciously written in the lineage of. The dating carries weight in the argument: a roughly hundred-year-old principle surfacing now is a far more legible clue than some timeless Catholic preference for the local, which is what a looser telling would imply.
 
 [^6]: The encyclical shows you the tempo itself. Its section on slavery calls the Church's long complicity "a wound in Christian memory" and, "in the name of the Church," asks pardon (§176), noting that slavery's "full incompatibility" with the faith took eighteen centuries "to be explicitly recognized." Same slow-motion pattern: not new doctrine replacing old, but a truth formally held becoming a social reality the institution could finally see. If it can take eighteen centuries to fully see one of its own commitments, a hundred-year-old instinct surfacing in a metaphor is exactly the size and speed of clue to expect.
+
+## Connections
+
+- [[modernity-machine]] — Babel as the pull toward a single future
+- [[divergence-machine]] — Nehemiah's wall as plurality that coheres without flattening
+- [[zombie-ideas]] — the metamodern objection ("modernity that cannot mourn itself") and why the metaphor choice answers it
+- [[liveness]] — what the encyclical is defending when it defends the embodied, imaged human
+- [[gramsci-gap]] — the Church's centuries-long adjustment as one long interregnum
