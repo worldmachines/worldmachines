@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Circular Error — World Machines</title>
+  <meta name="description" content="A pendulum&#x27;s circular error shows the general pattern of every load-bearing near-solution: fixing it by substitution or by domain restriction does not eliminate the difficulty, it relocates it to the ">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/sean/">Sean</a> <b>/</b> <span>Circular Error</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>Circular Error</h1>
+    <div class="note-byline"><a href="/wiki/sean/">Sean</a> · updated 5 September 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/sean/circular-error.md">source on GitHub</a></div>
+    <div class="note-summary">A pendulum&#x27;s circular error shows the general pattern of every load-bearing near-solution: fixing it by substitution or by domain restriction does not eliminate the difficulty, it relocates it to the next bottleneck, and AI&#x27;s guardrails and scaffolding are domain-restriction-style escapements around a flawed core rather than corrections to it.</div>
+    <div class="prose">
+<h2 id="the-idea">The idea</h2>
+<p>Galileo assumed a pendulum&#x27;s swing was isochronous regardless of amplitude; it isn&#x27;t quite - a wide arc takes fractionally longer than a narrow one, a discrepancy horologists named circular error. The circle was the natural, nearly-right assumption: good enough to build a clock, not good enough for precision. History then offered two ways to handle an inherited near-miss. Substitution replaces the flawed curve with the true one (Huygens&#x27;s cycloidal cheeks, mathematically exact). Domain restriction instead narrows the conditions under which the flaw operates until it stops mattering (the anchor escapement, which restricts the pendulum&#x27;s swing to a few degrees where circle and cycloid coincide). Clockmakers chose restriction: the elegant exact solution was abandoned because it introduced problems of its own, while the crude restricted one just worked and could be reproduced.</p>
+<p>The generalizable claim is the Conservation of Difficulty: bounding an error relocates its difficulty rather than eliminating it. Once the pendulum&#x27;s geometry was tamed by restriction, the escapement itself became the new load-bearing part and the new site of difficulty - and when a stage in a chain gets solved or standardized, difficulty and value both migrate to whichever adjacent stage becomes newly decisive. This repeats across the whole history the essay traces: the marine chronometer abandoned the pendulum (which cannot survive a ship&#x27;s roll) for a balance wheel that carries its own new circular errors (temperature, friction, uneven mainspring force) which then get bounded and compensated in turn; and privatized, personal time then hands the difficulty of self-discipline to the individual, where it shows up as the low hum of guilt about how one&#x27;s hours are spent.</p>
+<p>Applied to the present: AI&#x27;s harnesses - retrieval scaffolds, guardrails, agent loops - are anchor escapements, not repairs to the underlying model. They don&#x27;t fix a model&#x27;s confident wrongness; they narrow the conditions under which that wrongness does damage, converting a headlong torrent into something countable and inspectable. The design rule the clock history offers is to keep the correction legible and beside the core rather than inside it - Harrison and Le Roy got accuracy by leaving the balance nearly free and adding control alongside it. Lose that discipline and the compensations tangle into an opaque, unremovable patchwork whose difficulty has migrated not to a useful adjacent layer but into permanent opacity.</p>
+<p>The essay reads this as a general theory of how a World Machine ages: in Dawn, almost-right inventions are optional; in Day, the winners harden into standards and institutions and the difficulty migrates into maintaining them; in Dusk, the compensations can no longer be sustained and collapse into debt service. A machine survives by borrowing against the future - keeping the almost-right core because it still works, and paying interest through the compensations required to keep it working.</p>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<p>Sean Stevenson, &quot;Circular Error,&quot; <em>The Schematism</em> (Substack), published 2026-06-25: https://seanstevenson.substack.com/p/circular-error. Draws principally on David Landes, <em>Revolution in Time</em> (the Contraptions Book Club&#x27;s May 2026 pick), plus Lewis Mumford (<em>Technics and Civilization</em>) and Sachin&#x27;s &quot;archival time&quot; framing (<em>Summer Lightning</em>).</p>
+<h2 id="how-settled-this-is">How settled this is</h2>
+<p>The horological history (Galileo, Huygens, the anchor escapement, Harrison, Le Roy) is established fact, sourced to Landes. The generalization - that every load-bearing near-solution behaves this way, and that AI harnesses are the present instance - is the essay&#x27;s own extended claim, offered as a working theory (&quot;I&#x27;m putting forward a theory&quot;) rather than a settled result. The Dawn/Day/Dusk debt-accumulation reading is explicitly speculative scaffolding for the World Machines project.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/sean/escapement-as-transducer">escapement-as-transducer</a> - the mechanical detail underneath this essay&#x27;s central metaphor: the escapement doesn&#x27;t just bound an error, it manufactures the discrete tick out of continuous swing in the first place</li>
+<li><a class="wikilink" href="/wiki/sean/de-dramatizing-the-digital">de-dramatizing-the-digital</a> - companion essay; both read AI&#x27;s current scaffolding as compensations layered onto a flawed core rather than as progress toward a flawless one</li>
+<li><a class="wikilink" href="/wiki/sean/blumenberg-reoccupation">blumenberg-reoccupation</a> - Blumenberg&#x27;s reoccupation and circular error are structurally similar: both describe an inherited, imperfect frame that persists because replacing it is harder than compensating for it</li>
+<li><a class="wikilink" href="/wiki/aneesh/concepts/new-nature">new-nature</a> - the essay&#x27;s own closing move, that the Divergence Machine is itself just the next inherited circle rather than the perfect curve everyone was waiting for, is one more application of Rao&#x27;s frame, not a rupture from it</li>
+</ul>
+<h2 id="open">Open</h2>
+<p>The essay names its own fork explicitly: whether the compensations built around a flawed core stay legible (retrieval that points to its source, guardrails that mark their own boundary) or tangle into an opaque patchwork no one can remove. Which way that goes for AI specifically is unresolved and worth tracking directly.</p>
+    </div>
+    <p class="note-history">Last changed 5 September 2026 by smsteven8 — <a href="https://github.com/worldmachines/worldmachines/commit/3be14485c88b57d8a3d3a0ec74fc919517bd96e3">sean: rewrite note summaries to state each body&#x27;s central claim</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>6</b><span>linked from</span></div>
+      <div class="bearing"><b>4</b><span>links out</span></div>
+      <div class="bearing"><b>761</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/sean/substrate-and-criterion-split">Substrate and criterion split, and how they get reabsorbed</a><span class="rail-where">Sean</span></li>
+        <li><a href="/wiki/sean/looking-for-duree">Looking for Duree</a><span class="rail-where">Sean</span></li>
+        <li><a href="/wiki/sean/de-dramatizing-the-digital">De-Dramatizing the Digital</a><span class="rail-where">Sean</span></li>
+        <li><a href="/wiki/sean/escapement-as-transducer">The escapement as transducer</a><span class="rail-where">Sean</span></li>
+        <li><a href="/wiki/sean/dawn-day-dusk-pathologies">Dawn&#x27;s counterfeit liveness, Dusk&#x27;s zombie tenancy</a><span class="rail-where">Sean</span></li>
+        <li><a href="/wiki/sean/four-cell-coordination-grid">Who keeps the time: a four-cell coordination grid</a><span class="rail-where">Sean</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/sean/blumenberg-reoccupation">Blumenberg&#x27;s reoccupation</a><span class="rail-where">4</span></li>
+        <li><a href="/wiki/sean/chimera-of-mismatched-parts">The chimera: a thing made of mismatched parts</a><span class="rail-where">3</span></li>
+        <li><a href="/wiki/sean/appeal-foreclosure">Appeal-foreclosure</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/sean/looking-for-duree">Looking for Duree</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/sean/escapement-as-transducer">The escapement as transducer</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><span class="tag tag-lone" title="Only this note uses it">circular-error</span><span class="tag tag-lone" title="Only this note uses it">conservation-of-difficulty</span><a class="tag" href="/wiki/topics/escapement">escapement</a><span class="tag tag-lone" title="Only this note uses it">ai-scaffolding</span><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/dawn-day-dusk">dawn-day-dusk</a><a class="tag" href="/wiki/topics/landes">landes</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>

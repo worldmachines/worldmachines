@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The escapement as transducer — World Machines</title>
+  <meta name="description" content="The escapement is the physical hinge where continuous swing becomes discrete count - the tick is manufactured at the gate, not a property of the pendulum&#x27;s silent, continuous motion - which raises the">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/sean/">Sean</a> <b>/</b> <span>The escapement as transducer</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>The escapement as transducer</h1>
+    <div class="note-byline"><a href="/wiki/sean/">Sean</a> · updated 5 September 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/sean/escapement-as-transducer.md">source on GitHub</a></div>
+    <div class="note-summary">The escapement is the physical hinge where continuous swing becomes discrete count - the tick is manufactured at the gate, not a property of the pendulum&#x27;s silent, continuous motion - which raises the open question of whether flowing time and counted time are the same thing under two descriptions, or whether one is a mistake made about the other.</div>
+    <div class="prose">
+<h2 id="the-idea">The idea</h2>
+<p>A pendulum&#x27;s oscillation is continuous and unbroken; the gear train it drives advances in whole, integer teeth. The escapement is the mechanism at the boundary between the two, and the essential claim is that it does not measure the swing so much as quantize it: flow goes in, count comes out. The tick that a clock produces is not a property of the pendulum, which is silent and smooth throughout its arc - the tick is manufactured at the gate. The discreteness people experience as clock-time is an artifact of the mechanism doing the counting, not a property of whatever underlying process is actually oscillating.</p>
+<p>Several threads follow from taking this literally rather than as decoration. Bergson&#x27;s complaint about clock-time - that it spatializes a lived duration which is properly continuous and interpenetrating - may describe exactly what an escapement does physically: it converts duree into a string of discrete beads. Read against digital signal processing, the escapement looks like an analog-to-digital converter avant la lettre, and the small-arc restriction that solved circular error looks like a kind of band-limiting, in which case the restriction-trick from clock history and the restriction-trick from signal processing may be doing the same operation under different names - a resemblance worth testing rather than assuming. And the old problem of how continuous motion is &quot;made of&quot; discrete positions (Zeno&#x27;s paradoxes, the mathematics of the continuum) gets an oddly practical answer from horology: the escapement sidesteps the paradox entirely by not decomposing the swing into anything - it just samples the swing once per pass and never asks what happens between samples.</p>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<p>A working seed, developed alongside the clock-time essays. Draws on the horology already worked out for <a class="wikilink" href="/wiki/sean/circular-error">circular-error</a>, Henri Bergson&#x27;s account of duree (via secondary discussion, not yet checked against the primary text), and informal analogy to signal-processing concepts (Nyquist sampling, anti-aliasing) offered as speculative rather than established.</p>
+<h2 id="how-settled-this-is">How settled this is</h2>
+<p>The mechanical claim (the escapement quantizes continuous motion into discrete counts) is a straightforward physical description, not conjecture. Everything built on top of it - the Bergson connection, the signal-processing analogy, the Zeno resolution - is explicitly held as a thread to develop rather than a settled position; the seed itself flags several of these as speculative and to be tested before trusting.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/sean/circular-error">circular-error</a> - the essay this note&#x27;s central image is drawn from; that essay treats the escapement as the site where a bounded error becomes load-bearing, this note treats it as the site where continuous becomes discrete, a related but distinct claim</li>
+<li><a class="wikilink" href="/wiki/sean/looking-for-duree">looking-for-duree</a> - the heartbeat-as-escapement claim in that essay is the direct embodied instance of the abstract mechanism described here</li>
+<li><a class="wikilink" href="/wiki/sean/blumenberg-reoccupation">blumenberg-reoccupation</a> - loosely: whether &quot;position versus occupant&quot; language usefully applies to a physical mechanism rather than a historical one is an open question, not an established connection</li>
+</ul>
+<h2 id="open">Open</h2>
+<p>Whether flowing time and counted time are the same time under two descriptions, or two different things where one is mistaken for the other, is the note&#x27;s organizing question and remains genuinely unresolved - the note is written to hold the question open rather than to answer it.</p>
+    </div>
+    <p class="note-history">Last changed 5 September 2026 by smsteven8 — <a href="https://github.com/worldmachines/worldmachines/commit/3be14485c88b57d8a3d3a0ec74fc919517bd96e3">sean: rewrite note summaries to state each body&#x27;s central claim</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>3</b><span>linked from</span></div>
+      <div class="bearing"><b>3</b><span>links out</span></div>
+      <div class="bearing"><b>532</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/sean/circular-error">Circular Error</a><span class="rail-where">Sean</span></li>
+        <li><a href="/wiki/sean/looking-for-duree">Looking for Duree</a><span class="rail-where">Sean</span></li>
+        <li><a href="/wiki/sean/four-cell-coordination-grid">Who keeps the time: a four-cell coordination grid</a><span class="rail-where">Sean</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/sean/circular-error">Circular Error</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/sean/de-dramatizing-the-digital">De-Dramatizing the Digital</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/escapement">escapement</a><a class="tag" href="/wiki/topics/time">time</a><a class="tag" href="/wiki/topics/bergson">bergson</a><a class="tag" href="/wiki/topics/duree">duree</a><span class="tag tag-lone" title="Only this note uses it">continuous-discrete</span><span class="tag tag-lone" title="Only this note uses it">quantization</span><a class="tag" href="/wiki/topics/horology">horology</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>
