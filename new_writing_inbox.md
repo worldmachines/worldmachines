@@ -28,4 +28,3 @@
 ================================================================ -->
 
 ---
-sean | contribution | https://seanstevenson.substack.com/p/de-dramatizing-the-digital | AI as a completing technology that makes the digital stack recede, Spinozan generative infrastructure versus Leibnizian finished platform.
