@@ -38,6 +38,17 @@ jobs:
           echo "Changed files:"
           echo "$CHANGED"
 
+          # raw-notes/ batches are exempt: devlog entries for these go through
+          # the website approval gate (worldmachines.org/submit), not a direct
+          # commit to website/devlog.md. Exempt only when EVERY changed file
+          # is under raw-notes/ — a PR that also touches anything else still
+          # needs a devlog entry or [trivial].
+          NON_RAW_NOTES=$(echo "$CHANGED" | grep -v '^raw-notes/' || true)
+          if [ -n "$CHANGED" ] && [ -z "$NON_RAW_NOTES" ]; then
+            echo "All changed files are under raw-notes/ — exempt from devlog check (handled via the website submission flow)."
+            exit 0
+          fi
+
           if echo "$CHANGED" | grep -q "^website/devlog\.md$"; then
             echo "Devlog updated — OK."
             exit 0
