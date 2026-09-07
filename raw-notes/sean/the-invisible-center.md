@@ -4,7 +4,7 @@ summary: "Coordination designed to avoid a center tends to rebuild one anyway, a
   everything else silently depends on - and profit and power migrate down the
   pace layers to that invisible layer, which is hardest to govern precisely
   because it cannot be pointed at."
-tags: [infrastructure, decentralization, pace-layers, monopoly, bet-table]
+tags: [infrastructure, decentralization, pace-layers, monopoly, table-of-bets]
 last_updated: 2026-09-05
 ---
 
@@ -28,7 +28,8 @@ resent as extractive.
 
 ## Where it comes from
 
-One row ("The invisible center") of the same bet-table.
+One row ("The invisible center") of a working table of bets for the World Machines project: a running list of structural errors in how today's fixes for the Divergence Machine's limitations themselves fail, each paired with a falsifiable, near-term bet about how the failure will surface.
+
 
 ## How settled this is
 

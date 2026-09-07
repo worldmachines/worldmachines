@@ -4,7 +4,7 @@ summary: "The Modernity Machine's error was an over-tight canon, but the Diverge
   rather than merely restricting it - the difference between substitution and
   domain restriction - and a world with no shared floor at all cannot
   coordinate on anything, however peacefully it coexists."
-tags: [divergence-machine, canon, incommensurability, substitution, domain-restriction, bet-table]
+tags: [divergence-machine, canon, incommensurability, substitution, domain-restriction, table-of-bets]
 last_updated: 2026-09-05
 ---
 
@@ -32,7 +32,8 @@ they coexist.
 
 ## Where it comes from
 
-One row ("The cycloid mistake") of the same bet-table.
+One row ("The cycloid mistake") of a working table of bets for the World Machines project: a running list of structural errors in how today's fixes for the Divergence Machine's limitations themselves fail, each paired with a falsifiable, near-term bet about how the failure will surface.
+
 
 ## How settled this is
 

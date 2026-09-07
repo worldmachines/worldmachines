@@ -4,7 +4,7 @@ summary: "Navigational frames - a feed, a map, a model's summary - begin as know
   perceives, which is the deepest and most recursive circular error of the set
   because a frame mistaken for the world becomes unfalsifiable from the
   inside."
-tags: [frames, maps, models, epistemology, circular-error, bet-table]
+tags: [frames, maps, models, epistemology, circular-error, table-of-bets]
 last_updated: 2026-09-05
 ---
 
@@ -30,7 +30,8 @@ how reality is.
 
 ## Where it comes from
 
-One row ("The frame hardens into canon") of the same bet-table.
+One row ("The frame hardens into canon") of a working table of bets for the World Machines project: a running list of structural errors in how today's fixes for the Divergence Machine's limitations themselves fail, each paired with a falsifiable, near-term bet about how the failure will surface.
+
 
 ## How settled this is
 

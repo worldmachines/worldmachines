@@ -5,7 +5,7 @@ summary: "Five falsifiable near-term bets each follow the same pattern: today's
   itself a near-solution whose difficulty migrates somewhere specific and
   identifiable (context rot, eval rot, model collapse, protocol capture,
   rubber-stamp oversight) rather than actually resolving."
-tags: [ai, benchmarks, synthetic-data, protocols, oversight, bet-table]
+tags: [ai, benchmarks, synthetic-data, protocols, oversight, table-of-bets]
 last_updated: 2026-09-05
 ---
 
@@ -59,9 +59,8 @@ since it looks like safety without providing it.
 
 ## Where it comes from
 
-Five rows (B1 through B5) of the same Divergence Machine bet-table, grouped
-here because each is individually thinner than the nine structural errors
-but shares their same "difficulty migrates, it does not resolve" logic.
+Five rows (B1 through B5) of a working table of bets for the World Machines project: a running list of structural errors in how today's fixes for the Divergence Machine's limitations themselves fail, each paired with a falsifiable, near-term bet about how the failure will surface. Grouped here because each is individually thinner than the other rows but shares the same "difficulty migrates, it does not resolve" logic.
+
 
 ## How settled this is
 
@@ -71,9 +70,6 @@ rather than as an established finding.
 
 ## Connections
 
-- [[escapement-set-to-a-past]] - several of these bets (context rot, eval
-  rot) are the direct near-term, concrete symptoms of that row's more
-  general claim about AI's reliable band drifting off a moving world
 - [[the-invisible-center]] - the agent-interoperability protocol bet is a
   specific, named instance of that row's general claim about coordination-
   without-a-center rebuilding an ungoverned center

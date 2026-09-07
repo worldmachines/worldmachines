@@ -3,7 +3,7 @@ summary: "Private, on-demand access to time erodes the shared, synchronous prese
   seemed to free everyone from, so the difficulty migrates from keeping time
   to convening it - synchrony itself becomes scarce, and value concentrates in
   whoever can still summon a live public."
-tags: [divergence-machine, synchrony, time, coordination, bet-table]
+tags: [divergence-machine, synchrony, time, coordination, table-of-bets]
 last_updated: 2026-09-05
 ---
 
@@ -27,13 +27,12 @@ it is needed.
 
 ## Where it comes from
 
-One row ("The vanishing now") of a working bet-table for the psychohistory
-/ World Machines project, tracking structural errors of the Divergence
-Machine and where their difficulty migrates.
+One row ("The vanishing now") of a working table of bets for the World Machines project: a running list of structural errors in how today's fixes for the Divergence Machine's limitations themselves fail, each paired with a falsifiable, near-term bet about how the failure will surface.
+
 
 ## How settled this is
 
-A working hypothesis in a bet-table explicitly designed to be falsifiable -
+A working hypothesis in a table of bets explicitly designed to be falsifiable -
 the associated bet (that live, synchronous attention keeps rising in price
 while recorded content trends toward free) is offered as a testable
 prediction, not an established finding.
@@ -43,9 +42,6 @@ prediction, not an established finding.
 - [[four-cell-coordination-grid]] - the same shared-present problem,
   developed at length there through the One Clock/Many Clocks grid and the
   synchronization/translation fork
-- [[liveness-as-the-new-tyranny]] - a related but distinct error: this one
-  is about the scarcity of shared synchrony, that one about presence
-  becoming a new, exhausting obligation
 - [[substrate-and-criterion-split]] - losing a shared present is one
   concrete cost of the criterion slot (what confers legitimate direction)
   being left vacant rather than refilled

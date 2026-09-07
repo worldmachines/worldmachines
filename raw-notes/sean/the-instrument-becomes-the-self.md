@@ -4,7 +4,7 @@ summary: "Past a certain threshold of intimacy, a personal instrument - a feed, 
   starts functioning as identity itself, making an unautomated interior, a
   self able to step outside its own instruments, an increasingly scarce
   condition rather than a default one."
-tags: [identity, instruments, autonomy, ai-companions, bet-table]
+tags: [identity, instruments, autonomy, ai-companions, table-of-bets]
 last_updated: 2026-09-05
 ---
 
@@ -32,7 +32,8 @@ shared present described elsewhere in this set.
 
 ## Where it comes from
 
-One row ("The instrument becomes the self") of the same bet-table.
+One row ("The instrument becomes the self") of a working table of bets for the World Machines project: a running list of structural errors in how today's fixes for the Divergence Machine's limitations themselves fail, each paired with a falsifiable, near-term bet about how the failure will surface.
+
 
 ## How settled this is
 
@@ -43,7 +44,7 @@ unoptimized self" enters public discourse as a named concept.
 
 ## Connections
 
-- [[vanishing-now]] - explicitly linked by the bet-table itself: a billion
+- [[vanishing-now]] - explicitly linked by the table of bets itself: a billion
   privately-tuned selves cannot share a shared present, which is the same
   erosion of collective synchrony from a different cause
 - [[four-cell-coordination-grid]] - the "instrument fast" as a deliberate

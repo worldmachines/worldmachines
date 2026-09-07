@@ -4,7 +4,7 @@ summary: "AI is made useful not by fixing its flaws but by accumulating a stack 
   patchwork itself becomes a vast, brittle layer that no one designed and no
   one can safely remove, shifting the real ongoing work from the model to
   permanent upkeep of the scaffolding around it."
-tags: [ai, scaffolding, technical-debt, maintainer-class, bet-table]
+tags: [ai, scaffolding, technical-debt, maintainer-class, table-of-bets]
 last_updated: 2026-09-05
 ---
 
@@ -28,7 +28,8 @@ infrastructure than to a single codebase.
 
 ## Where it comes from
 
-One row ("The patchwork becomes the machine") of the same bet-table.
+One row ("The patchwork becomes the machine") of a working table of bets for the World Machines project: a running list of structural errors in how today's fixes for the Divergence Machine's limitations themselves fail, each paired with a falsifiable, near-term bet about how the failure will surface.
+
 
 ## How settled this is
 
