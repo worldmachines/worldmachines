@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Near-term bets of the Divergence Machine — World Machines</title>
+  <meta name="description" content="Five falsifiable near-term bets each follow the same pattern: today&#x27;s proposed fix for an AI limitation (longer context, benchmark evals, synthetic training data, open agent protocols, human-in-the-lo">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/sean/">Sean</a> <b>/</b> <span>Near-term bets of the Divergence Machine</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>Near-term bets of the Divergence Machine</h1>
+    <div class="note-byline"><a href="/wiki/sean/">Sean</a> · updated 5 September 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/sean/near-term-bets-of-the-divergence-machine.md">source on GitHub</a></div>
+    <div class="note-summary">Five falsifiable near-term bets each follow the same pattern: today&#x27;s proposed fix for an AI limitation (longer context, benchmark evals, synthetic training data, open agent protocols, human-in-the-loop review) is itself a near-solution whose difficulty migrates somewhere specific and identifiable (context rot, eval rot, model collapse, protocol capture, rubber-stamp oversight) rather than actually resolving.</div>
+    <div class="prose">
+<h2 id="the-idea">The idea</h2>
+<p>Five specific, betable claims, each following the same shape: today&#x27;s proposed fix for a real AI limitation is itself a near-solution whose difficulty will migrate somewhere specific and identifiable, rather than a place where the difficulty actually resolves.</p>
+<p>Longer context windows and persistent memory are offered as the fix for a model&#x27;s forgetting, but the difficulty migrates to forgetting well - knowing deliberately what to drop - so that context curation, not context capacity, becomes the scarce skill; unmanaged, this shows up as context rot, stale or conflicting context degrading long-horizon performance, which the bet predicts becomes a standard benchmarked failure within a couple of years, with &quot;infinite memory&quot; claims walked back accordingly.</p>
+<p>Benchmark suites are used to certify that a model is reliable, but a benchmark is itself a frozen snapshot, so the difficulty migrates to live, dynamic evaluation - eval design becomes the scarce and valuable work, and the failure mode is eval rot or outright Goodharting, where models optimize against a fixed past distribution while the actual world keeps moving; the bet is that a flagship benchmark gets shown as saturated or gamed and retired, with &quot;eval rot&quot; becoming a standard term.</p>
+<p>Training on synthetic data, once human-generated data runs out, moves the difficulty to provenance - verified, recent, human-generated data becomes scarce and commands a price - because the failure mode is model collapse, the archive eating itself until the whole system converges on a degenerate monoculture; the irony is sharp enough to name directly, since a machine built to celebrate divergence quietly manufacturing a new convergent monoculture is exactly the failure this whole framework exists to watch for.</p>
+<p>Open protocols for agent-to-agent tool use and interoperability are proposed to enable a decentralized ecosystem, but the difficulty migrates to protocol governance, because whichever standard wins majority adoption quietly becomes the new center - the same invisible-center error named elsewhere in this set, arriving specifically through the decentralization story&#x27;s own infrastructure.</p>
+<p>A human approver in the loop is proposed as the fix for AI mistakes, but the difficulty migrates to designing meaningful, sampled, adversarial review rather than routine sign-off, because at volume the human reviewer simply rubber-stamps outputs - oversight theater, a mitigation that manufactures false assurance and is arguably worse than having no mitigation at all, since it looks like safety without providing it.</p>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<p>Five rows (B1 through B5) of a working table of bets for the World Machines project: a running list of structural errors in how today&#x27;s fixes for the Divergence Machine&#x27;s limitations themselves fail, each paired with a falsifiable, near-term bet about how the failure will surface. Grouped here because each is individually thinner than the other rows but shares the same &quot;difficulty migrates, it does not resolve&quot; logic.</p>
+<h2 id="how-settled-this-is">How settled this is</h2>
+<p>Five working hypotheses, each explicitly framed as a near-term, falsifiable bet with a stated time horizon (around two years for the memory claim) rather than as an established finding.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/sean/the-invisible-center">the-invisible-center</a> - the agent-interoperability protocol bet is a specific, named instance of that row&#x27;s general claim about coordination- without-a-center rebuilding an ungoverned center</li>
+<li><a class="wikilink" href="/wiki/sean/the-patchwork-becomes-the-machine">the-patchwork-becomes-the-machine</a> - human-in-the-loop oversight degrading into rubber-stamp theater is one more instance of scaffolding meant to contain a model instead becoming an unreliable, opaque layer of its own</li>
+</ul>
+<h2 id="open">Open</h2>
+<p>Each of the five bets carries its own falsification condition (a specific benchmark being retired, a specific regulatory action, a named term entering standard usage) and is meant to be checked against events over the next several years rather than argued from theory now.</p>
+    </div>
+    <p class="note-history">Last changed 7 September 2026 by smsteven8 — <a href="https://github.com/worldmachines/worldmachines/commit/c88b7d9c2fc69a6431129e492bf58718990f854b">sean: drop three bet-table notes, make remaining rows self-contained [trivial]</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>599</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/ai">ai</a><span class="tag tag-lone" title="Only this note uses it">benchmarks</span><span class="tag tag-lone" title="Only this note uses it">synthetic-data</span><a class="tag" href="/wiki/topics/protocols">protocols</a><span class="tag tag-lone" title="Only this note uses it">oversight</span><a class="tag" href="/wiki/topics/table-of-bets">table-of-bets</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>
