@@ -38,21 +38,24 @@ that you are not your thoughts supplies exactly the practical exit that pure
 negation doesn't: a way to notice a Frankfurt-School-style diagnosis is
 correct without being obligated to live inside the misery it describes.
 
+## Grounding
+
+Prompted by a review of Martin Jay's *The Dialectical Imagination*, a
+history of the Frankfurt School. The "secretly the same thing" observation
+is drawn from that review's account of the School's method. The
+yes-and-versus-negation framing and the Buddhist "you are not your
+thoughts" counter are original, not part of the review's argument.
+
 ## How settled this is
 
-The "secretly the same thing" observation and the yes-and/negation contrast
-are both live working opinions rather than settled conclusions — a personal
-account of why the tradition doesn't work for Sean, not a scholarly claim
-about the Frankfurt School's place in critical theory. It would weaken if a
-closer reading of the tradition's later or more constructive figures showed
-real proposals rather than pure negation.
-
-## Where it comes from
-
-A response to a review of Martin Jay's history of the Frankfurt School,
-alongside Sean's own longstanding preference for a "yes-and" posture over
-purely negative critique, with the Buddhist "you are not your thoughts" move
-supplied as the practical alternative.
+That the Frankfurt School's method reads cultural phenomena as expressions
+of a small number of underlying forces is a documented characterization,
+checkable against the review and against Jay's book directly. That this
+method is itself a Modernity Machine artifact — a totalizing move borrowed
+from the thing it critiques — is this note's own interpretive claim,
+untested against a closer reading of the tradition's more constructive or
+later figures. The yes-and/negation contrast and the Buddhist alternative
+are working opinions, not factual claims of any kind.
 
 ## Connections
 

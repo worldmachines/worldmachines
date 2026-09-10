@@ -35,22 +35,25 @@ tempos in between — ordinary time chief among them — are what that
 transfiguration looks like when it's partial, sustained, or built into a
 shared calendar rather than concentrated into a single decisive instant.
 
+## Grounding
+
+Original — not drawn from a specific book or article, though "ordinary time"
+itself is a standing feature of the liturgical calendar rather than a term
+coined here. Developed out of a list of named tempos — island time, flow,
+vacation time, quality time, theatrical presence — assembled as worked
+examples alongside the rhythmic counter-examples (a pay schedule, a weekly
+class) that motivate the note's second claim.
+
 ## How settled this is
 
-The observation that named in-between tempos exist and resist a clean
-kairos/chronos binary is fairly solid; the stronger claim — that kairos
-structurally needs rhythmic chronos as raw material, rather than simply
-coexisting with it — is a synthesis Sean finds persuasive but hasn't tested
-against cases where a decisive moment seems to arise with no evident
-underlying rhythm at all.
-
-## Where it comes from
-
-Developed out of an expansion of "kairos transfigures chronos" material that
-listed a range of named tempos — ordinary time, island time, flow, vacation
-time, quality time, and theatrical presence — as worked examples, alongside
-the rhythmic counter-examples (a pay schedule, a weekly class) that appeared
-in the same material.
+That the liturgical calendar names a stretch of time "ordinary time" between
+major feasts is a checkable fact about the calendar itself. That island
+time, flow, and the others belong in the same third category, and that
+kairos structurally needs rhythmic chronos as raw material rather than
+merely coexisting with it, are this note's own claims and are interpretive —
+offered as a synthesis that fits the examples, not tested against a case
+where a decisive moment seems to arise with no evident underlying rhythm at
+all.
 
 ## Connections
 

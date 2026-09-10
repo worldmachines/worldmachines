@@ -32,19 +32,23 @@ become the operative currency — it doesn't have an equivalent in a register
 organized around inherited frames or around patched-together coordination,
 because those registers were never claiming to be alive in the first place.
 
+## Grounding
+
+Part of a larger register-by-register failure-mode synthesis, built alongside
+the maintainable/patchable/tendable sequence. The Modernity Machine failure
+mode it's contrasted against draws on two separate accounts — Tainter's on
+over-rationalization and Scott's on legibility stripping out tacit know-how;
+the zombie-liveness diagnosis itself — false animacy as the Liveness Machine's
+characteristic failure — is original, not drawn from a named source.
+
 ## How settled this is
 
-This is one row of a larger grid that's still being drafted, offered here as a
-standalone claim because it names something Sean thinks is already visible in
-current feeds and engagement-driven platforms, not because the broader
-five-register framework it comes from has been fully worked out.
-
-## Where it comes from
-
-Part of a larger register-by-register failure-mode analysis Sean built
-alongside the reoccupation-maintenance sequence, pairing each machine with a
-diagnosis of how its native form of upkeep can itself become the cause of
-collapse.
+That Tainter and Scott each describe part of the Modernity Machine's failure
+mode this way, in their own separate books, is checkable against those books
+directly. That the Liveness Machine has a comparably structured,
+opposite-in-kind failure mode is this note's own claim, offered because it
+matches what's visible in current engagement-driven platforms, not because it's
+been checked against a wider literature on liveness or animacy.
 
 ## Connections
 

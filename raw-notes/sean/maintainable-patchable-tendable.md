@@ -38,22 +38,26 @@ re-performed. Getting the order right matters: reoccupation belongs at the
 maintainable end, because it presupposes an inherited frame to re-staff, which
 is precisely what a diverged world no longer has.
 
+## Grounding
+
+A synthesis built by generalizing Blumenberg's reoccupation across the full
+machine sequence, pairing each register with named theorists, each cited
+independently rather than as coauthors: Berger on plausibility structures,
+Eliade on ritual re-instantiation, Arendt on stewardship, Tainter's and
+Scott's separate accounts of failure modes, and Puig de la Bellacasa's and
+Hui's separate accounts of care. Each of those draws on a specific,
+checkable body of work; the three-term sequence itself — maintainable,
+patchable, tendable — and its application to the three machines is
+original.
+
 ## How settled this is
 
-The three-term sequence and its ordering are a considered synthesis rather
-than a first draft — an earlier ordering (patching, then reoccupation, then
-tending) was deliberately corrected once it became clear reoccupation requires
-the inherited frame that only the modernity end still has. The diagonal itself
-is offered as the organizing claim of a larger piece, not yet tested against
-counterexamples from outside the modernity/divergence/liveness frame.
-
-## Where it comes from
-
-Sean's own synthesis, built by generalizing Blumenberg's reoccupation across
-the full machine sequence and pairing each register with a signature theorist
-(Berger's plausibility structures, Eliade's ritual re-instantiation, Arendt's
-stewardship, Tainter and Scott's failure modes, Puig de la Bellacasa and Hui
-on care).
+That reoccupation is Blumenberg's mechanism, and that each named theorist
+argues what's attributed to them here, is checkable against their own work.
+That these are the right theorists to pair with each register, and that the
+sequence correctly describes how a world machine is kept going, is this
+note's own synthesis — an interpretive architecture, not a set of facts, and
+one not yet tested against counterexamples from outside the frame.
 
 ## Connections
 

@@ -34,20 +34,25 @@ this light, isn't a truth fixity was hiding; it's a second-order discovery
 that could only be made once the first-order platform of fixity had done its
 work.
 
+## Grounding
+
+Drawn from two works in the history of science: an account of why nature
+lacked a corresponding "art" before the scientific revolution, and an
+account of the three authorities — religious teaching, classical literature,
+Aristotelian philosophy — that converged on fixity. The alchemy-versus-species
+observation that opens the note, that people once had the mutability
+question backwards, is original, not drawn from either source.
+
 ## How settled this is
 
-This reading draws heavily on specific historians of science and is offered
-as a considered synthesis of their arguments rather than an independent
-thesis — the "art" argument and the three-authorities point both come from
-named sources rather than from Sean's own research into the primary material.
-
-## Where it comes from
-
-Built from reading in the history of science (particularly an account of why
-nature lacked a corresponding "art" before the scientific revolution, and an
-account of the three converging authorities behind fixity) alongside Sean's
-own alchemy-versus-species observation that people once had the mutability
-question backwards.
+The three-authorities claim and the "no art of nature" argument are both
+factual claims about the history of science, made by named historians and
+checkable against their books — this note is reporting them, not
+originating them. The broader reading — that fixity was a working cosmology
+rather than a failure of nerve, and that mutability had to wait on it as a
+precondition — is this note's own synthesis of those two facts, and is an
+interpretive claim rather than a factual one: it's a way of connecting what
+the historians documented, not itself something either historian asserts.
 
 ## Connections
 

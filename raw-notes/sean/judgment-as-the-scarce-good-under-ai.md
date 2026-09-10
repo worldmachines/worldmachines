@@ -34,20 +34,21 @@ that people are valuable because they've lived through things; it's that some
 people have done the further work of converting what they lived through into a
 transferable way of seeing, and that conversion is the scarce good.
 
+## Grounding
+
+Original — not drawn from a specific book or article. Developed as part of
+a broader argument that AI completes rather than expands the current
+technology stack; the point-of-view-versus-experience distinction is this
+note's own extension of that argument.
+
 ## How settled this is
 
-This is a hunch about what becomes scarce, offered without much testing
+This is a hunch about what becomes economically scarce, not a claim tested
 against how knowledge work is actually changing — it names a plausible
-mechanism rather than reporting an observed shift. It would weaken if it
-turned out that models get just as good at producing distinctive-seeming
-points of view as they are at reformatting information, which is an open
-empirical question rather than a settled one.
-
-## Where it comes from
-
-Sean's own argument, developed as part of a broader case that AI completes
-rather than expands the current technology stack; the point-of-view-versus-
-experience distinction is his own extension of that argument.
+mechanism, not an observed shift. It would weaken if models turned out to
+get just as good at producing distinctive-seeming points of view as they are
+at reformatting information, which is an open empirical question this note
+doesn't resolve.
 
 ## Connections
 

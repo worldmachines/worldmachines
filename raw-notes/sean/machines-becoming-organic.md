@@ -34,19 +34,21 @@ inner lives, and resisting that temptation — continuing to treat machines as
 objects — may be part of what it takes to stay fully human rather than
 blurring the line from the human side.
 
+## Grounding
+
+Drawn from Yuk Hui's interviews on technology and cybernetics. The framing
+of the two trends — people mechanizing, machines organicizing — and the
+caution against treating machines as people are both his, not an original
+argument of this note.
+
 ## How settled this is
 
-This is a reading of someone else's argument that Sean found genuinely
-surprising rather than a position he's independently verified — the claim
-that Kant is the right hinge point, and the details of what "organic" means
-for a philosopher of technology, are taken on the strength of the source
-rather than checked against the wider literature.
-
-## Where it comes from
-
-Drawn from Yuk Hui's interviews on technology and cybernetics, with the
-framing of the two trends (people mechanizing, machines organicizing) and the
-caution against treating machines as people both attributed to that reading.
+That Hui makes this argument, and that Kant is the hinge point he
+identifies, is relayed here as read rather than independently checked
+against the wider literature on his work — this note reports one source's
+interpretation, it doesn't verify it. Whether the two trends genuinely fail
+to meet in the middle, and what follows for how to treat increasingly
+responsive machines, is this note's own extension and is untested.
 
 ## Connections
 

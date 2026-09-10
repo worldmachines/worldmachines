@@ -41,32 +41,29 @@ determines whether the argument reads as one more diagnosis of collapse (the
 register most cultural criticism inherits) or as something with room for
 curiosity, even enjoyment, in it.
 
-## Where it comes from
+## Grounding
 
-Sean's own observation, developed across several passes at a seed file on
-reoccupation and new eras, drawing on a remark from Venkatesh Rao's
-Contraptions circle that people are not only counting time forward but also,
-in end-of-history moods, implicitly counting down toward some indefinite
-terminus. The extension — that reoccupation vocabulary is the count-up
-mirror image of that same countdown — is Sean's own.
+Reoccupation theory applied to World Machines, developed across several
+passes at a seed file on reoccupation and new eras, inspired by a remark
+from the Contraptions circle that people are not only counting time forward
+but also, in end-of-history moods, implicitly counting down toward some
+indefinite terminus. The extension — that reoccupation vocabulary is the
+count-up mirror image of that same countdown — is original to this note.
 
 ## How settled this is
 
-This is a personal diagnostic, not an empirical finding — an observed
-difference in affect that Sean has found useful for his own writing, not a
-claim that's been tested against how readers actually respond to the two
-framings. It would weaken if the count-up mood turned out to be mostly a
-function of novelty, fading once "the new era" stopped being new and started
-accumulating its own disappointments.
+This is an observed difference in affect, not an empirical finding — useful
+for writing, not a claim tested against how readers actually respond to the
+two framings. Nothing here is a checkable fact about the world; it's a
+diagnostic about mood, not a report of one. It would weaken if the count-up
+mood turned out to be mostly a function of novelty, fading once "the new
+era" stopped being new and started accumulating its own disappointments.
 
 ## Connections
 
 - [[blumenberg-reoccupation]] — extends the reoccupation mechanism, which is
   itself affectively neutral, with the felt registers a reoccupation
   argument can be told in
-- [[eras-are-measurements]] — a companion move: both notes push back against
-  the demand to know for certain whether an era has "really" ended, one by
-  reframing the question, the other by reframing the feeling
 
 ## Open
 

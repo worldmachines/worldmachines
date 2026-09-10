@@ -35,23 +35,25 @@ discipline failure to be solved with more willpower; it's what happens when a
 culture tries to manufacture, through effortful concentration, something that
 can only be received.
 
+## Grounding
+
+An interpretation of the Bhagavad-Gita's account of Krishna's counsel to
+Arjuna — act without attachment to outcome. The extension to contemporary
+attention and concentration, and the claim that forcing concentration is a
+category mistake, are original, not part of the text or of any commentary
+on it consulted here.
+
 ## How settled this is
 
-The Gita reading is a considered interpretation rather than a scholarly claim
-about the text's reception history, and the extension to contemporary
-attention and concentration is Sean's own application of the reading rather
-than something drawn from a source that makes the same move. It would weaken
-if a closer reading of the Gita showed Krishna's counsel to be less about
-non-attachment specifically and more about a different virtue (obedience to
-caste duty, say) that doesn't map as cleanly onto the kairos argument.
-
-## Where it comes from
-
-Sean's own extension of the Bhagavad-Gita's counsel to Arjuna, developed
-alongside a broader expansion of "kairos transfigures chronos" material and
-paired with his own observation that trying to force concentration doesn't
-work and that relaxation, not more effort, is what resets the capacity for a
-decisive moment.
+What the Gita says at that point in the text is checkable by reading it,
+though this note offers one reading among several available interpretive
+traditions and hasn't been checked against Gita commentary or scholarship
+specifically on that question. It would weaken if a closer reading showed
+Krishna's counsel to be less about non-attachment specifically and more
+about a different virtue, such as obedience to caste duty, that doesn't map
+as cleanly onto the kairos argument. The extension to contemporary attention
+and concentration is entirely this note's own application and is
+interpretive, not a claim that could be independently verified.
 
 ## Connections
 

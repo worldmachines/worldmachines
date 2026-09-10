@@ -42,23 +42,25 @@ all — whether there is still a live alternative to a purely calculative,
 utilitarian ordering of the world, or whether the position itself has become
 uninhabitable.
 
+## Grounding
+
+Drawn from Kenneth Clark's *Civilisation* (1969), whose closing argument is
+that Marxism's moral failure — not a defeat by superior ideas — disqualified
+it and left the position open, and from a Slavoj Žižek essay's admission
+that no serious anti-capitalist project currently mobilizes people, plus
+that essay's reading of a war as being fought over whether non-utilitarian
+ways of arranging life can still be taken seriously.
+
 ## How settled this is
 
-This is an observation about a gap, not a proposal for what should fill it —
-Sean finds the diagnosis (the slot is real, is vacant, and the current
-candidates are weak) more persuasive than any of the standing candidates for
-filling it. It would weaken if one of the dismissed candidates turned out, on
-closer inspection, to already be doing more mobilizing work than it's
-credited with here.
-
-## Where it comes from
-
-Built from a documentary's closing argument that Marxism's moral failure — not
-a defeat by superior ideas — disqualified it and left the position open,
-combined with a contemporary commentator's blunt admission that no serious
-anti-capitalist project currently mobilizes people, plus that commentator's
-reading of a war as being fought over whether non-utilitarian ways of
-arranging life can still be taken seriously.
+That Marxism has no live successor, and that Clark and Žižek each make the
+specific claims reported here — in a documentary and an essay written decades
+apart, not jointly — is checkable against those two sources directly. Whether
+the standing candidates — identity politics, revived social democracy, a
+post-liberal religious revival, a normative reading of the Divergence Machine —
+are actually as weak as this note argues is its own interpretive judgment, not
+something either source addresses, and it hasn't been tested against a
+considered defense of any one of them.
 
 ## Connections
 

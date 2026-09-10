@@ -37,23 +37,25 @@ vocabulary for agency inside change — the missing vocabulary being something
 closer to the distinction between flexibility (bending under force) and
 plasticity (giving and receiving form).
 
+## Grounding
+
+The agency definition — an intrinsic capacity to act, neither predetermined
+nor random — and the historical account of Lamarck's rejected mechanism are
+drawn from Jessica Riskin's work on the history of evolutionary theory (*The
+Power of Life*, *The Restless Clock*). The claim about what the present's
+swing toward agentless flux costs affectively, and the flexibility/plasticity
+distinction offered as the missing vocabulary, are original, not part of
+Riskin's argument.
+
 ## How settled this is
 
-The historical claim about Lamarck versus the agentless successor picture is
-fairly well grounded in the history of science Sean has been reading; the
-affective claim — that losing agency-in-change specifically explains
-present-day anxiety about flux — is a hypothesis he finds compelling rather
-than something demonstrated. It would weaken if the anxiety turned out to
-trace more plausibly to something else entirely, such as the sheer pace of
+The historical claim — that Lamarck's picture treated organisms as agents
+and that the successor picture treats change as agentless — is grounded in
+Riskin's documented history and checkable against her books. The affective
+claim — that losing this distinction explains some of the present's anxiety
+about universal flux — is original and untested; it would weaken if that
+anxiety traced more plausibly to something else, such as the sheer pace of
 change rather than its perceived agentlessness.
-
-## Where it comes from
-
-Drawn from reading on Lamarck and the history of evolutionary theory,
-including an agency definition (an intrinsic capacity to act, neither
-predetermined nor random) recovered from that reading, combined with Sean's
-own observation about the affective difference between a world where change
-singles you out and a world where change is simply background condition.
 
 ## Connections
 

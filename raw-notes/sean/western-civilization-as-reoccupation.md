@@ -39,22 +39,24 @@ question of whether a tradition organized around democratic equality can also
 sustain the deliberate, participatory civilization-building Tocqueville has in
 mind.
 
+## Grounding
+
+Drawn from a published essay arguing that the idea of Western civilization
+arose in the vacuum left by the French Revolution and the Napoleonic wars,
+reoccupying both the universalist church and the universalist Enlightenment.
+The Tocqueville extension — passive/equality versus active/participatory
+civilization — is original, not part of that essay's argument.
+
 ## How settled this is
 
-The reoccupation reading of "Western civilization" is borrowed directly from a
-specific piece of writing Sean encountered and found persuasive, not an
-independent discovery — it's included here because it's an unusually clean
-worked example of the reoccupation mechanism, not because the underlying
-historical claim has been checked against the wider literature on the
-concept's history.
-
-## Where it comes from
-
-An argument Sean read making the case that the idea of Western civilization
-arose in the vacuum left by the French Revolution and the Napoleonic wars,
-reoccupying both the universalist church and the universalist Enlightenment;
-the Tocqueville extension (passive/equality versus active/participatory
-civilization) is Sean's own addition to that argument.
+The reoccupation reading is borrowed directly from that essay and included
+here because it's an unusually clean worked example of the mechanism, not
+because the underlying historical claim has been independently checked
+against the wider literature on the concept's history — treat it as one
+citable interpretive argument, not a verified consensus. The Tocqueville
+extension is original and interpretive rather than factual: a distinction
+applied to the reoccupation reading, not itself a claim that could be
+checked against a text.
 
 ## Connections
 

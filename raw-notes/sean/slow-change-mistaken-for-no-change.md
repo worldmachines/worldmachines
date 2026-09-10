@@ -34,20 +34,21 @@ active tendency now mainly because the mental habit of assuming a stable
 baseline outlasts the recognition, at the reflective level, that the baseline
 itself is always moving.
 
+## Grounding
+
+The observation that slow change reads as no change is original, prompted
+by examples like continental drift and gradual evolutionary pressure. The
+claim that this depends on linear time as a precondition is drawn from
+David Wootton's *The Invention of Science*, which ties the concept of
+discovery to the emergence of linear rather than cyclical time.
+
 ## How settled this is
 
-The core observation (slow change reads as no change) is close to a truism;
-the specific claim that this depends on linear time as a precondition, rather
-than being a fixed feature of cognition, is a more particular argument drawn
-from a specific historical account and not independently verified against,
-say, evidence from cultures organized around cyclical time.
-
-## Where it comes from
-
-The general observation is Sean's own, prompted by examples like continental
-drift and gradual evolutionary pressure; the linear-time precondition is
-drawn from reading on the history of science that ties the concept of
-discovery to the emergence of linear, rather than cyclical, time.
+That discovery and linear time are historically linked, as Wootton argues,
+is checkable against his book. That this linkage is specifically what makes
+slow change perceptible — rather than one contributing factor among several —
+is this note's own claim, not independently verified against, say, evidence
+from cultures organized around cyclical time.
 
 ## Connections
 

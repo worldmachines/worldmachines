@@ -32,21 +32,23 @@ succeed one another; it's already a maintenance theory, describing one of the
 specific techniques (re-staffing an inherited frame) that keeps a nomos from
 collapsing into anomie when its original occupants stop being believable.
 
+## Grounding
+
+Drawn from Peter Berger's *The Sacred Canopy* — the concepts of nomos,
+plausibility structures, and anomie are his. Reading a world machine
+specifically as a nomos rather than as infrastructure, and rereading
+Blumenberg's reoccupation as one of the techniques that keeps a nomos from
+collapsing, are both original applications of Berger's vocabulary.
+
 ## How settled this is
 
-This is a framing choice — which literature to read a world machine through —
-rather than an empirical claim, and it's offered as a corrective to a specific
-mistake (reaching for repair-history) rather than as a fully worked-out theory
-of legitimation. It would weaken if the physical-infrastructure analogy turned
-out to capture something the plausibility-structure analogy misses,
-particularly around the more mechanical, non-belief-dependent parts of how
-large systems actually get kept running.
-
-## Where it comes from
-
-Sean's own correction of an initial instinct to reach for Edgerton-style
-history-of-repair, replaced with Berger's Sacred Canopy vocabulary of nomos
-and plausibility structures as the better-fitting shelf.
+Berger's account of nomos and plausibility structures is established
+sociology of knowledge, checkable directly against *The Sacred Canopy*. That
+a world machine specifically fits this model better than a
+physical-infrastructure model is this note's own framing choice — a
+corrective offered against one specific mistake, not a claim Berger makes or
+one that's been tested against the infrastructure analogy it argues
+against.
 
 ## Connections
 
