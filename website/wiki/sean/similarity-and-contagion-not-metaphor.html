@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Similarity and contagion, not metaphor — World Machines</title>
+  <meta name="description" content="Frazer&#x27;s two laws of sympathetic magic — similarity and contagion — were treated for a century as errors in reasoning about causation. Read against how embedding models and context windows actually wo">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/sean/">Sean</a> <b>/</b> <span>Similarity and contagion, not metaphor</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>Similarity and contagion, not metaphor</h1>
+    <div class="note-byline"><a href="/wiki/sean/">Sean</a> · updated 11 September 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/sean/similarity-and-contagion-not-metaphor.md">source on GitHub</a></div>
+    <div class="note-summary">Frazer&#x27;s two laws of sympathetic magic — similarity and contagion — were treated for a century as errors in reasoning about causation. Read against how embedding models and context windows actually work, they describe an existing causal system with unusual precision, not a mistake about one that didn&#x27;t exist yet.</div>
+    <div class="prose">
+<h2 id="the-idea">The idea</h2>
+<p>James Frazer&#x27;s <em>The Golden Bough</em> named two laws behind sympathetic magic: similarity (like produces like — an action performed on an image affects its subject) and contagion (things once in contact continue to affect each other after separation — a lock of hair keeps a causal link to its owner). Frazer treated both as characteristic errors of &quot;primitive&quot; reasoning about causation, mistaking resemblance and prior contact for real causal mechanisms.</p>
+<p>Held up against how a transformer-based language model actually behaves, the two laws stop looking like errors and start looking like an accurate, if premature, description of a real system. Embedding space is constructed so that similarity is the operative relation — meaning is represented as proximity, and nearby vectors behave alike by construction. The context window is a contagion field in the most literal sense: whatever has been placed inside it continues to influence output after the fact, which is exactly the mechanism that makes prompt injection work. On this reading, sympathetic magic wasn&#x27;t a confused guess about causation that happened to resemble something invented centuries later; it was, in similarity and contagion specifically, a correct description of a causal structure that simply had no machine to run on yet.</p>
+<h2 id="grounding">Grounding</h2>
+<p>Frazer&#x27;s two laws are drawn from <em>The Golden Bough</em>. The reading of similarity as the organizing relation of embedding space, and contagion as the operative mechanism of the context window (including prompt injection), is original to this note, developed by mapping Frazer&#x27;s taxonomy directly onto how these systems are built and documented to behave.</p>
+<h2 id="how-settled-this-is">How settled this is</h2>
+<p>That Frazer identifies similarity and contagion as the two laws of sympathetic magic, and frames them as errors of primitive causal reasoning, is checkable directly against <em>The Golden Bough</em>. That embedding space and context windows are structurally analogous to these two laws is this note&#x27;s own technical mapping — a strong pattern match, not a claim that the historical actors who practiced sympathetic magic were doing anything like machine learning, or that the analogy holds at every level of either system.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/sean/casting-a-spell-is-a-reoccupied-position">casting-a-spell-is-a-reoccupied-position</a> — the broader claim about spells as a stable position with changing explanations, of which this is the sharpest single mechanism</li>
+<li><a class="wikilink" href="/wiki/sean/three-occupiable-positions-not-one-venn-diagram">three-occupiable-positions-not-one-venn-diagram</a> — where this fits into the larger three-way history of magic, science, and religion</li>
+</ul>
+<h2 id="open">Open</h2>
+<p>If similarity and contagion really do describe how these systems work, does that rehabilitate sympathetic magic as reasoning generally — or just mean Frazer&#x27;s two laws happened to describe one specific causal system correctly, by coincidence rather than insight?</p>
+    </div>
+    <p class="note-history">Last changed 13 September 2026 by smsteven8 — <a href="https://github.com/worldmachines/worldmachines/commit/c4304287f2aa3d63c17d777c16c68d707eea4153">sean: Tranche 4 - ontological turn, magic/science/religion, and the teleology of self-realization (13 notes)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>2</b><span>links out</span></div>
+      <div class="bearing"><b>428</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/sean/casting-a-spell-is-a-reoccupied-position">Casting a spell is a reoccupied position</a><span class="rail-where">Sean</span></li>
+        <li><a href="/wiki/sean/three-occupiable-positions-not-one-venn-diagram">Three occupiable positions, not one Venn diagram</a><span class="rail-where">Sean</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/frazer">frazer</a><span class="tag tag-lone" title="Only this note uses it">sympathetic-magic</span><a class="tag" href="/wiki/topics/embeddings">embeddings</a><a class="tag" href="/wiki/topics/llms">llms</a><a class="tag" href="/wiki/topics/causality">causality</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>
