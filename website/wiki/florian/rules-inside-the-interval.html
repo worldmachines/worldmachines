@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rules authored in advance are the only human agency available inside machine intervals — World Machines</title>
+  <meta name="description" content="Nobody becomes fast enough to react inside a 350-microsecond market window, so human agency has to appear earlier and elsewhere — in negotiating, contesting and authorising the rule that acts inside t">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/florian/">Florian</a> <b>/</b> <span>Rules authored in advance are the only human agency available inside machine intervals</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>Rules authored in advance are the only human agency available inside machine intervals</h1>
+    <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 14 September 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/rules-inside-the-interval.md">source on GitHub</a></div>
+    <div class="note-summary">Nobody becomes fast enough to react inside a 350-microsecond market window, so human agency has to appear earlier and elsewhere — in negotiating, contesting and authorising the rule that acts inside the interval on your behalf, which is the only form of participation a machine-speed decision leaves available.</div>
+    <div class="prose">
+<h2 id="the-idea">The idea</h2>
+<p>Some intervals are too short for a human to act inside them, and no amount of training closes that gap — a physiological fact, not a discipline failure. The interesting question isn&#x27;t how to become fast enough. It&#x27;s where human agency goes once speed is ruled out.</p>
+<p>IEX&#x27;s options-market design is the clean case. Incoming messages face a 350-microsecond delay, paired with a mechanism that can update or cancel a market-maker&#x27;s quotes when a rapid move would otherwise leave them stale and exploitable. No participant becomes able to react within 350 microseconds. What changes is who acts inside that window: not a trader, but a rule, authored in advance by people who could take their time over it — designing the mechanism, contesting its terms, authorising it to operate at a speed none of them could match. The rule is the delegate. Human agency shows up earlier in the sequence and at a different layer than the decision it governs.</p>
+<p>That relocation is the content of rewiring: collectively changing the rules that operate at the point where a temporal decision gets fixed, instead of trying to occupy that point yourself. It accepts that some intervals are permanently beyond direct reach, and asks a different question of them — not <em>how do I act in time</em> but <em>who is authorized to write the rule that acts in time, and can that authorization be inspected and revised</em>.</p>
+<p>Two things follow from taking the mechanism seriously. First, rewiring only ever protects whoever the rule is written to protect: IEX&#x27;s delay directly protects participating market makers, and broader benefits to ordinary investors are an intended downstream effect, not something the mechanism itself proves. Asking <em>who</em> the rule protects does as much work as asking whether it exists. Second, the same institutional distance that makes rewiring possible is what makes it fail in familiar ways — a rule can privilege whoever was already positioned to comply, can shift the exploit elsewhere rather than close it, or can pass as protection while doing none, regulatory theater existing to have been passed rather than to act. None of this is a failure of the concept; it&#x27;s what happens when the institution writing the rule is weak, captured, or misaligned with its own stated protection.</p>
+<p>The working questions this leaves are specific enough to run on an actual system: where is the decisive interval, which rule governs it, who is authorized to alter that rule, whose possibilities does the change protect or foreclose, and how can effects be audited after the fact rather than only argued about in advance.</p>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<p>From &quot;Time Moves Down the Stack&quot; (Protocol Institute Symposium, 2026), where rewiring is the first of three proposed directions for a practice of Micro Time. The IEX case draws on the exchange&#x27;s options-market design and SEC Release No. 34-103998.</p>
+<h2 id="how-settled-this-is">How settled this is</h2>
+<p>That IEX&#x27;s mechanism exists and protects the participants it&#x27;s designed to protect is public record. That it makes the broader market fairer is not established — an intended effect, argued for, not demonstrated by regulatory approval, and I have not gone further than the talk did in trying to settle it.</p>
+<p>The general claim — authoring a rule in advance is the available agency once direct reaction is ruled out — describes what IEX and similar mechanisms actually do, and I trust it that far. Whether it generalizes into a reliable practice, rather than remaining one well-documented case plus a family resemblance to circuit breakers and grid protection, is untested here.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/florian/three-seeds-insufficient-alone">Rewiring, conversion and attunement each fail alone and only work together</a> — the note this one completes, supplying the working case for what that note describes at a level of generality</li>
+<li><a class="wikilink" href="/wiki/florian/coordination-without-uniformity">Coordination does not require temporal uniformity</a> — the sibling seed: conversion translates between temporal worlds without touching the rule, rewiring changes the rule itself, and the two fail in opposite directions alone</li>
+<li><a class="wikilink" href="/wiki/sean/appeal-foreclosure">Appeal-foreclosure</a> — Sean&#x27;s test for whether a lever still exists to petition a system; a rewired rule is a lever built on purpose, and his three questions audit whether it stayed alive or fossilized into the thing it was meant to hold accountable</li>
+<li><a class="wikilink" href="/wiki/florian/ornament-as-diagnostic">It takes connoisseurship for ornamental baggage to identify dead frameworks</a> — the check to run on a rewiring effort well after the fact: regulatory theater is exactly this diagnostic&#x27;s target</li>
+<li><a class="wikilink" href="/wiki/sean/descent-chain">The descent chain: how AI becomes New Nature</a> — Sean&#x27;s step 4 names competition sealing off every place to appeal as what completes a descent; rewiring is the attempt to hold a place open against exactly that pressure</li>
+</ul>
+<h2 id="open">Open</h2>
+<p>Whether authorization itself can decay the way the decay-sequence cluster describes — a rule passing from genuinely contested to performatively ratified to ornamental compliance nobody remembers arguing about. If it can, the diagnostic above isn&#x27;t a borrowed analogy; it&#x27;s the maintenance check a live rewiring practice needs to run on itself, and nobody has specified who runs it or how often.</p>
+    </div>
+    <p class="note-history">Last changed 14 September 2026 by Florian Lohse — <a href="https://github.com/worldmachines/worldmachines/commit/579f9433bbda86543877fb25f88839e8bc7bb859">notes(florian): 11 notes on Micro Time, the practice vacancy, and decay-versus-descent</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>1</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>838</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/florian/three-seeds-insufficient-alone">Rewiring, conversion and attunement each fail alone and only work together</a><span class="rail-where">Florian</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/infrastructure">infrastructure</a><a class="tag" href="/wiki/topics/time">time</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coordination does not require temporal uniformity — World Machines</title>
+  <meta name="description" content="Shared coordination has been assumed to require a shared tempo, but computation can translate between temporal systems instead of unifying them — one instant can be rendered into several lived tempora">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/florian/">Florian</a> <b>/</b> <span>Coordination does not require temporal uniformity</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>Coordination does not require temporal uniformity</h1>
+    <div class="note-byline"><a href="/wiki/florian/">Florian</a> · updated 14 September 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/florian/coordination-without-uniformity.md">source on GitHub</a></div>
+    <div class="note-summary">Shared coordination has been assumed to require a shared tempo, but computation can translate between temporal systems instead of unifying them — one instant can be rendered into several lived temporal positions at once, which means plurality and coordination are not actually in tension.</div>
+    <div class="prose">
+<h2 id="the-idea">The idea</h2>
+<p>Synchronization has been the default answer to coordination for so long that the two look like the same problem. They are not. Synchronization means one shared tick that everyone reconciles to; coordination means people being able to act together. The second does not require the first. What it requires is translation, and translation is something computation is unusually good at.</p>
+<p>The clearest working case is a solar-relative standard. Horizon Time, from Paragonday, organises time around local sunrise and sunset, and an application can convert between ordinary civil clock time and a person&#x27;s position in their own daylight cycle. A meeting then happens at one shared instant while occupying three different lived positions: early daylight for one participant, the middle of the day for another, darkness for a third. The machines hold interoperability; the interface renders the common event into the temporal world each person actually inhabits. Nobody had to adopt anybody else&#x27;s tempo, and the meeting still happened.</p>
+<p>The same structure already runs underneath civil time, which is where the claim stops being speculative. Coordinated Universal Time is a negotiated compromise between atomic stability and a planet that does not rotate regularly, maintained through leap seconds since 1972. Software converts among references using Earth-orientation data. Reforming UTC would not abolish the Earth&#x27;s rotation or the need for astronomical time; it would change which layer reconciles the two and how applications ask for it. Conversion is not a proposal. It is what the stack has quietly been doing all along, badly documented and mostly invisible.</p>
+<p>The reason this matters beyond convenience: if coordination required uniformity, then every diverged temporal world would be a coordination cost, and the only way to act together would be for somebody&#x27;s tempo to win. Translation breaks that trade. Plurality stops being the price of coexistence and becomes something a system can hold.</p>
+<p>Which is exactly where the honest problem sits. A converter is never neutral. It picks reference points, defines what counts as equivalent, suppresses some differences and makes others salient. Bad conversion domesticates diverse temporalities into the dominant one while presenting the result as inclusion — everyone technically accommodated, one tempo still setting the terms, and now with an interface that makes the asymmetry harder to see than an honest imposition would have been. The useful questions are therefore about the converter itself: which differences are preserved rather than normalised, where the translation happens, whether a user can inspect and contest it, and whether it enables coexistence or merely makes one system easier to impose.</p>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<p>From &quot;Time Moves Down the Stack&quot; (Protocol Institute Symposium, 2026), where conversion is one of three proposed directions for a practice of Micro Time. The leap-second and Earth-orientation material draws on the BIPM and CGPM resolutions on UTC, ITU-R time standards, and the USNO and IERS Earth-orientation services. Isabell Otto&#x27;s work on interfacing temporal plurality and the leap-second problem sits behind the framing.</p>
+<h2 id="how-settled-this-is">How settled this is</h2>
+<p>That the conversion machinery exists and works is not a claim, it is a description — the leap-second case is operational infrastructure, not a thought experiment. What is mine and unsettled is the generalisation: that translation is a viable <em>general</em> model of coordination rather than a trick that works for a handful of well-defined references like solar position and Earth rotation.</p>
+<p>Those two cases are both unusually tractable. They convert between things that are physically measurable and have agreed definitions. Whether the same approach survives contact with temporal differences that are social rather than astronomical — differing senses of urgency, of how long a decision should take, of when a matter is settled — is untested here, and I would expect it to be much harder, because there is no equivalent of Earth-orientation data for those.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><a class="wikilink" href="/wiki/sean/four-cell-coordination-grid">Who keeps the time: a four-cell coordination grid</a> — Sean poses exactly this fork, synchronization against translation, and wagers that AI makes translation cheap enough to coordinate without a canonical clock; this note supplies the worked cases his wager does not have, and the failure mode it does not name</li>
+<li><a class="wikilink" href="/wiki/florian/three-seeds-insufficient-alone">Rewiring, conversion and attunement each fail alone and only work together</a> — conversion is one of the three, and on its own it is the one most likely to make an unjust arrangement comfortable</li>
+<li><a class="wikilink" href="/wiki/florian/divergence-in-the-periphery">Divergence grows in peripheral fields, not in the fortified center</a> — the temporal version of the same claim: the interesting coordination is happening off to the side of the standard, not at it and not against it</li>
+<li><a class="wikilink" href="/wiki/sean/vanishing-now">The vanishing now</a> — Sean&#x27;s opposing pressure: private, on-demand access to time erodes the shared present, making synchrony scarce; if he is right that the answer is protecting a few high-value synchronies, then translation is at best half an answer</li>
+<li><a class="wikilink" href="/wiki/florian/embedded-self-knowledge">Divergent self knowledge requires embedded, embodied, non-reproducible inquiry</a> — adjacent on method: both refuse the move of standardising a situated thing in order to make it comparable</li>
+</ul>
+<h2 id="open">Open</h2>
+<p>Is there any temporal difference that genuinely cannot be converted — where translation would destroy the thing being translated rather than render it? Ritual time is my suspect. A feast day rendered into somebody else&#x27;s tempo as a calendar entry may have survived the conversion in exactly the sense that matters least.</p>
+    </div>
+    <p class="note-history">Last changed 14 September 2026 by Florian Lohse — <a href="https://github.com/worldmachines/worldmachines/commit/579f9433bbda86543877fb25f88839e8bc7bb859">notes(florian): 11 notes on Micro Time, the practice vacancy, and decay-versus-descent</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>881</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/florian/three-seeds-insufficient-alone">Rewiring, conversion and attunement each fail alone and only work together</a><span class="rail-where">Florian</span></li>
+        <li><a href="/wiki/florian/rules-inside-the-interval">Rules authored in advance are the only human agency available inside machine intervals</a><span class="rail-where">Florian</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/world-machines">world-machines</a><a class="tag" href="/wiki/topics/divergence-machine">divergence-machine</a><a class="tag" href="/wiki/topics/time">time</a><a class="tag" href="/wiki/topics/coordination">coordination</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>
