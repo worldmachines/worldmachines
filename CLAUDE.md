@@ -50,10 +50,10 @@ Live site: **worldmachines.org**.
 
 - Public website and deployed Cloudflare Pages app.
 - Website changes must go through pull requests.
-- Venkat must approve website PRs before merge.
+- Aneesh must approve website PRs before merge, except PRs authored by Venkat.
 - Do not push website changes directly to `main` except through approved automation.
 
-This is a small high-trust group. `.github/CODEOWNERS` documents ownership and auto-requests reviewers on PRs. The repository ruleset requires pull requests into `main`, which prevents accidental direct pushes. Raw-notes PRs can be merged without required review. Wiki changes should go through PR review and may be approved by any repo owner/admin. Website changes should go through PR review and must be approved by Venkat. The `.github/workflows/approval-policy.yml` check enforces the wiki/website approval policy once it is required by the GitHub ruleset.
+This is a small high-trust group. `.github/CODEOWNERS` documents ownership and auto-requests reviewers on PRs. The repository ruleset requires pull requests into `main`, which prevents accidental direct pushes. Raw-notes PRs can be merged without required review. Wiki changes should go through PR review and may be approved by any repo owner/admin. Website changes should go through PR review and must be approved by Aneesh, except PRs authored by Venkat. The `.github/workflows/approval-policy.yml` check enforces the wiki/website approval policy once it is required by the GitHub ruleset.
 
 ## Meeting-derived architecture summary
 

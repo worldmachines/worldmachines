@@ -21,8 +21,10 @@ jobs:
             const repo = context.repo.repo;
             const pull_number = context.payload.pull_request.number;
 
-            // Owners who can approve — or, by authoring, self-clear — each gated area.
-            const websiteApprovers = new Set(['aneeshsathe', 'vgururao'].map(s => s.toLowerCase()));
+            // Who can approve each gated area. website/: only Aneesh approves; PRs
+            // authored by Venkat (or by Aneesh — see below) need no approval.
+            const websiteApprovers = new Set(['aneeshsathe'].map(s => s.toLowerCase()));
+            const websiteExemptAuthors = new Set(['aneeshsathe', 'vgururao'].map(s => s.toLowerCase()));
             const wikiApprovers = new Set(['aneeshsathe', 'florianlohse', 'KyleAMathews', 'vgururao'].map(s => s.toLowerCase()));
 
             // GitHub blocks a PR author from approving their own PR, so without an
@@ -62,12 +64,12 @@ jobs:
             }
 
             const approvedBy = login => latestReviewByUser.get(login.toLowerCase()) === 'APPROVED';
-            const clearedBy = approvers =>
-              approvers.has(prAuthor) || [...approvers].some(login => approvedBy(login));
+            const clearedBy = (approvers, exemptAuthors = approvers) =>
+              exemptAuthors.has(prAuthor) || [...approvers].some(login => approvedBy(login));
 
             const failures = [];
-            if (touchesWebsite && !clearedBy(websiteApprovers)) {
-              failures.push('website/ changes require approval from (or authorship by) @aneeshsathe or @vgururao.');
+            if (touchesWebsite && !clearedBy(websiteApprovers, websiteExemptAuthors)) {
+              failures.push('website/ changes require approval from @aneeshsathe (PRs authored by @aneeshsathe or @vgururao are exempt).');
             }
             if (touchesWiki && !clearedBy(wikiApprovers)) {
               failures.push('wiki/ changes require approval from (or authorship by) a repo owner/admin: @aneeshsathe, @florianlohse, @KyleAMathews, or @vgururao.');

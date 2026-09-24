@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-24 · aneesh
+Website PRs now need Aneesh's approval instead of Venkat's; PRs Venkat authors are exempt and need no review. The enforced `approval-policy` check, `CODEOWNERS` (which now auto-requests Aneesh on `website/` PRs), `CLAUDE.md` and `CONTRIBUTING.md` all say the same thing, and a Venkat approval on someone else's website PR no longer clears it on its own. Wiki and raw-notes rules are unchanged.
+
 ## 2026-08-27 · aneesh (2)
 The Witness install command on `/mcp` never ran for anyone: it placed `--header` before the server name, and Claude Code's CLI declares that flag variadic, so it swallowed both the name and the URL and died with `error: missing required argument 'name'`. Name and URL now come first and the header last — the order `claude mcp add --help` itself demonstrates — verified end to end against CLI 2.1.247. The Oracle snippet was never affected; it carries no header.
 
