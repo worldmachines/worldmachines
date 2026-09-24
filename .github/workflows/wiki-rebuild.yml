@@ -54,7 +54,7 @@ jobs:
              || ! git cat-file -e "${GITHUB_EVENT_BEFORE}^{commit}" 2>/dev/null; then
             echo "No usable push base — full rebuild."
             MODE=full
-          elif ! git diff --name-only "$GITHUB_EVENT_BEFORE"..HEAD > /tmp/changed-all.txt; then
+          elif ! git diff --name-only --no-renames "$GITHUB_EVENT_BEFORE"..HEAD > /tmp/changed-all.txt; then
             echo "git diff failed — full rebuild."
             MODE=full
           elif grep -qx 'website/scripts/build_wiki\.py' /tmp/changed-all.txt; then

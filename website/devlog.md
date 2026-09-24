@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-24 · aneesh (3)
+`/wiki` had stopped updating: every Rebuild wiki run since #59 (the move of `raw-notes/aneesh/{entities,summaries}` into commons) crashed with `FileNotFoundError` on an old `aneesh/entities` path. The workflow's `git diff` reported each moved note only under its new path, so the incremental build never dropped the old one from its manifest. The diff now runs with `--no-renames`, and `build_wiki.py` also drops any manifest note whose file is gone, so a move or deletion can't wedge the build again; merging this triggers a full rebuild that clears the stale entries.
+
 ## 2026-09-24 · aneesh (2)
 The DuckLake catalogs behind the Oracle and Witness now shut down after 10 idle minutes instead of running around the clock: the container's idle-stop signal had been silently ignored (the sidecar ran as PID 1 with no SIGTERM handler), which cost ~$38 of a ~$47 monthly Cloudflare bill (wm-infra #15). The trade-off is a ~20s wake-up on the first question after a quiet spell, so `/oracle` now explains the wait if an answer takes more than 20 seconds. Separately, the Witness now summarizes private passages in parallel rather than one by one (wm-oracle #6); the sequential version took 55–84s per question and had been pushing Oracle answers past the ~100s edge timeout since Sep 21.
 
