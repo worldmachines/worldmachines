@@ -2,6 +2,7 @@
 summary: "Robert Peake, contemporary poet and participant in the Summer of Protocols, who applied the infinite game framework to poetry and creative practice."
 tags: [poetry, writing, infinite-game, summer-of-protocols, creative-practice]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Robert Peake

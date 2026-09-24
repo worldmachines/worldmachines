@@ -2,6 +2,7 @@
 summary: "The concluding installment of Rao's trilogy on the Modernity Machine, arguing it optimized for legibility rather than truth or freedom, and that its own success made internal repair impossible, necessitating the Divergence Machine."
 tags: [venkatesh-rao, modernity, divergence-machine, legibility, phase-transition, contraptions]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Modernity Machine III: Completion, Saturation, and Phase Transition (Rao, Dec 2025)

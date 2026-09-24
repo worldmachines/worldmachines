@@ -2,6 +2,7 @@
 summary: "Swiss developmental psychologist whose work on sensorimotor intelligence, object permanence, and the lag between practical competence and conceptual grasp is Tuan's primary empirical authority in Space and Place Ch. 3."
 tags: [piaget, developmental-psychology, sensorimotor, spatial-cognition, child-development, cognitive-science]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Jean Piaget (1896–1980)

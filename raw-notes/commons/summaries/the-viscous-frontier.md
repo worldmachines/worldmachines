@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe's essay 'The Viscous Frontier: How to Move When the Machine Stops Pulling' (2026), a companion piece to Rao's Divergence Machine series. Uses Purcell's 1977 scallop theorem as the physical model for why cultural motion in the Divergence Machine is viscous, why dissipative structures like the attention economy produce no net displacement, and why the architectural requirement to leave an artifact is the cultural equivalent of the flagellum."
 tags: [essay, divergence-machine, purcell, scallop-theorem, wayfinding, viscous-frontier, author-aneesh-sathe]
 last_updated: 2026-04-23
+level: canon
 ---
 
 # The Viscous Frontier — Summary

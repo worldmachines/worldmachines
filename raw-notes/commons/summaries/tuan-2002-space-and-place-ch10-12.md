@@ -2,6 +2,7 @@
 summary: "Primary-text summary of Tuan's Space and Place Chapters 10–12: intimate place, attachment to homeland, and the mechanisms by which places acquire public visibility."
 tags: [yi-fu-tuan, humanistic-geography, phenomenology, topophilia, homeland, visibility, place-making, nationalism, intimate-place, landscape]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Tuan, *Space and Place: The Perspective of Experience* — Chapters 10–12

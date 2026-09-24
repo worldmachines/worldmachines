@@ -2,6 +2,7 @@
 summary: "Argues that data science must rigorously trace both how data is measured and how comparisons are drawn, or all downstream analysis is untrustworthy."
 tags: [data-science, epistemology, measurement, causality, statistics]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Beyond the Dataset

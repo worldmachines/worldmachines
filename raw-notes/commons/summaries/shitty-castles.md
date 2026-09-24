@@ -2,6 +2,7 @@
 summary: "Florian Lohse's essay arguing that elaborate intellectual and material constructions built by people who know they won't hold — 'shitty castles' — are not necessarily hypocritical but can serve pragmatic functions of power, stability, and temporal bridging."
 tags: [leibniz, spinoza, intellectual-honesty, power, pragmatism, zombie-ideas, venkatesh-rao, late-modernity]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Shitty Castles: On the Art of Digging Fake Moats

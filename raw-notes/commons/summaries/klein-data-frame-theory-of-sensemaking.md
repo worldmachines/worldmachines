@@ -2,6 +2,7 @@
 summary: "Klein et al's 2007 academic paper establishing the Data-Frame Theory of Sensemaking — eight functions of sensemaking, the data-frame symbiosis, and the four sensemaking cycles, drawn from naturalistic studies of military and medical experts."
 tags: [sensemaking, data-frame-theory, gary-klein, cognitive-science, naturalistic-decision-making, expertise, frames, anchors]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # A Data-Frame Theory of Sensemaking (Klein, Phillips, Rall, Peluso, 2007)

@@ -2,6 +2,7 @@
 summary: "Indian independence leader who uniquely embodied both the intellectual and revolutionary roles — the exceptional case in the typology of intellectual-revolutionary dyads."
 tags: [India, independence, political-theory, intellectual-history, nonviolence, leadership]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Mahatma Gandhi

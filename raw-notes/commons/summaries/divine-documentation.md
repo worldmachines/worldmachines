@@ -2,6 +2,7 @@
 summary: "Argues that reading documentation is an act of deep empathy — with users, with the past self, and with the future — and extends this to learning prose writing."
 tags: [documentation, writing, empathy, craft, Zinsser, Strunk-and-White, learning]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Divine Documentation

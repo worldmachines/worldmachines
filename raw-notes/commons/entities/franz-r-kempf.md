@@ -2,6 +2,7 @@
 summary: "Franz R. Kempf is a literary scholar at Bard College whose 2015 essay on Kulturkritik reframes the Rousseau-Schiller-Goethe tradition as a self-reflexive rhetorical mode rather than a simple nature-vs-culture binary."
 tags: [kempf, literary-scholar, kulturkritik, enlightenment, bard-college]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Franz R. Kempf

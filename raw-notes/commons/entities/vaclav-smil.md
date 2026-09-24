@@ -2,6 +2,7 @@
 summary: "Czech-Canadian environmental scientist (b. 1943) and energy historian whose quantitative accounts of civilisational metabolism — energy, food, materials — are the principal source for the historical energy data in 'The Lightening of Intent'."
 tags: [vaclav-smil, energy-history, environmental-science, civilisational-metabolism, materials, manitoba, big-history]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Vaclav Smil

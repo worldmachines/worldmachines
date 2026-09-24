@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe recounts his conversion from frequentist to Bayesian statistics, driven by the inadequacy of p-values for small-sample biological experiments and the need for transparency about causal assumptions."
 tags: [bayesian-statistics, frequentist-statistics, causality, scientific-method, DAGs, epistemology]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # My Road to Bayesian Stats

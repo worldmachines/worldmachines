@@ -2,6 +2,7 @@
 summary: "Landes argues that demand for precise time — rooted in Western monasticism — pulled the mechanical clock into existence, and that the clock then shaped modernity; the second half traces seven centuries of industry in which simple, reproducible designs repeatedly beat virtuoso masterpieces, while incumbents, from Geneva to Waltham, failed not by bad luck but by failure of imagination."
 tags: [landes, horology, time-discipline, economic-history, industrial-history, monasticism, china, longitude, swiss-watchmaking, american-system, quartz, incumbency-failure, protestant-ethic, putting-out-system]
 last_updated: 2026-06-10
+level: canon
 sources: [rit-01-preface, rit-02-introduction, rit-03-a-magnificent-dead-end, rit-04-why-are-the-memorials-late, rit-05-are-you-sleeping-brother-john, rit-06-the-greatest-necessity, rit-07-my-time-is-my-time, rit-08-of-toys-and-ornaments, rit-09-my-time-is-your-time, rit-10-approaching-the-asymptote, rit-11-the-man-who-stayed-to-dinner, rit-12-the-french-connection, rit-13-fame-is-the-spur, rit-14-clocks-in-the-belfry, rit-15-the-good-old-days-that-never-were, rit-16-ups-and-downs-of-international-competition, rit-17-multum-in-parvo, rit-18-barrenness-of-the-soil, rit-19-nor-could-he-compete-with-us, rit-20-ah-but-he-could, rit-21-not-one-in-fifty-thousand, rit-22-who-killed-cock-robin, rit-23-the-quartz-revolution-i, rit-24-the-quartz-revolution-ii]
 ---
 

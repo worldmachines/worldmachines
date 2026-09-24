@@ -2,6 +2,7 @@
 summary: "Robert Putnam (b. 1941) is an American political scientist best known for Bowling Alone (2000), which documented the decline of social capital and civic engagement in America over the second half of the 20th century."
 tags: [putnam, social-capital, civic-engagement, bowling-alone, community, social-isolation]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Robert Putnam

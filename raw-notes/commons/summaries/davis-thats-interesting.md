@@ -2,6 +2,7 @@
 summary: "Murray S. Davis (1971) argues that great theories succeed not by being true but by being interesting — denying a specific aspect of the audience's taken-for-granted assumptions — and catalogs 12 logical categories of interesting propositions."
 tags: [sociology, epistemology, interestingness, assumptions, rhetoric, theory]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # That's Interesting! — Murray S. Davis (1971)

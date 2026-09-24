@@ -2,6 +2,7 @@
 summary: "French Marxist philosopher (1918–1990). For Massey, his critique of Hegel's 'essential section' opens a useful conceptual move — distinguishing closed totality from genuine temporality — but his own theoretical vocabulary still treats 'space' largely as the term for closure."
 tags: [althusser, marxism, structuralism, essential-section, overdetermination, space, massey]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Louis Althusser (1918–1990)

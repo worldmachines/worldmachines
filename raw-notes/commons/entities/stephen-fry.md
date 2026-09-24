@@ -2,6 +2,7 @@
 summary: "English actor, writer, and public intellectual; in this corpus, notable as the narrator of Nick Cave's AI letter — and as a figure whose own public skepticism about AI dovetails with Cave's position."
 tags: [culture, ai-critique, british-intellectual, actor, writer]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Stephen Fry

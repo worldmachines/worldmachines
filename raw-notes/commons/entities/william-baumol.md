@@ -2,6 +2,7 @@
 summary: "William Baumol (1922–2017) was an American economist best known for Baumol's cost disease — the observation that labor-intensive service sectors experience chronic relative price inflation as economy-wide productivity rises."
 tags: [economics, baumol, cost-disease, performing-arts, services, political-economy]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # William Baumol

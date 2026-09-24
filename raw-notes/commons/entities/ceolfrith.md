@@ -2,6 +2,7 @@
 summary: "Anglo-Saxon abbot of Wearmouth-Jarrow (c.642-716) who commissioned the Codex Amiatinus and died on the road to Rome attempting to deliver it; the cost-anchor for the medieval Bible in 'The Lightening of Intent'."
 tags: [ceolfrith, anglo-saxon, monasticism, codex-amiatinus, manuscript-culture, medieval, cost-of-intent]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Ceolfrith

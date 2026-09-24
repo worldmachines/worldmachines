@@ -2,6 +2,7 @@
 summary: "Johann Gottfried Herder (1744–1803) was a German philosopher, theologian, and literary critic who argued that each culture embodies a distinct and incommensurable form of human excellence — a foundational claim for both Romanticism and Berlin's value pluralism."
 tags: [herder, counter-enlightenment, pluralism, culture, hermeneutics, romanticism, berlin]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Johann Gottfried Herder

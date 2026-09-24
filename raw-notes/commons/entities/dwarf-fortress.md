@@ -2,6 +2,7 @@
 summary: "A free, open-ended colony management simulation built by Tarn and Zach Adams over 20+ years — the most complex game ever created, in MoMA's permanent collection, and a paradigm case of emergent complexity and sustained creative audacity."
 tags: [games, simulation, indie-games, complexity, culture]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Dwarf Fortress

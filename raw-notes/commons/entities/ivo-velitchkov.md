@@ -2,6 +2,7 @@
 summary: "Ivo Velitchkov — systems thinker, author of the Link & Think Substack newsletter, contributor to the World Machines Project through essays on Fugger, Wedgwood, and Voltaire as engineers of modernity."
 tags: [ivo-velitchkov, world-machines, systems-thinking, modernity-machine, link-and-think]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Ivo Velitchkov

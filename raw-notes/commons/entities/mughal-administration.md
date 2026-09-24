@@ -2,6 +2,7 @@
 summary: "The administrative apparatus of the Mughal Empire, notable for its matrix reporting structure where provincial officials reported directly to the central government rather than to the provincial governor — a designed mechanism for central control and diffused accountability."
 tags: [history, Mughal-Empire, governance, India, administration, medieval]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Mughal Administration

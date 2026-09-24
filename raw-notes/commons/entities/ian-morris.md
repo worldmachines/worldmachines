@@ -2,6 +2,7 @@
 summary: "British classical historian and archaeologist at Stanford whose Social Development Index provides a quantitative measure of civilizational capability across 15,000 years."
 tags: [morris, social-development, quantitative-history, stanford]
 last_updated: 2026-04-10
+level: canon
 ---
 
 # Ian Morris

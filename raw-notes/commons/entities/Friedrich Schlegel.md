@@ -2,6 +2,7 @@
 summary: "German philosopher and critic (1772-1829) who co-founded German Romanticism, invented romantic irony and the fragment form, and rejected Enlightenment foundationalism in favor of systematically unsystematic philosophizing."
 tags: [romanticism, jena-circle, counter-enlightenment, fragment, irony, anti-systematization]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Friedrich Schlegel

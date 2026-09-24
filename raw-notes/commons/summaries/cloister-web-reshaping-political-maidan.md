@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe's essay arguing that LLMs create a 'Cloister Web' — a new kind of intellectual-political space that enables bespoke, personalized distribution of ideas, potentially collapsing the historical distinction between intellectual and revolutionary."
 tags: [LLMs, political-discourse, intellectual-history, media-theory, cloister-web, maidan, printing-press, public-sphere]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Cloister Web: Reshaping the Political Maidan

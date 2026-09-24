@@ -2,6 +2,7 @@
 summary: "John McPhee (b. 1931), staff writer at The New Yorker and Princeton professor, whose essay Draft No. 4 demonstrates the proper use of the dictionary as a generative writing tool."
 tags: [writing, journalism, New-Yorker, non-fiction, craft, Princeton]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # John McPhee

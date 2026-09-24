@@ -2,6 +2,7 @@
 summary: "Ivo Velitchkov profiles Jakob Fugger, Josiah Wedgwood, and Voltaire as engineers of the Modernity Machine, arguing each transformed class relations and advanced legibility — while Wedgwood and Voltaire also made early commits to the Divergence Machine."
 tags: [world-machines, modernity-machine, divergence-machine, legibility, class-relations, velitchkov]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Three Engineers of Modernity

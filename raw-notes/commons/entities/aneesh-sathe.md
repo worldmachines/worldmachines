@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe, author of this wiki corpus — computational biologist, data scientist, and essayist whose writing spans biology, data engineering, intellectual history, and the philosophy of creative practice."
 tags: [author, computational-biology, data-science, essays, biotech]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Aneesh Sathe

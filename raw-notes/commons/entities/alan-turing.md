@@ -2,6 +2,7 @@
 summary: "Pioneer of theoretical computer science and AI, whose 1950 Turing Test is used by Sathe as a canonical example of converting a philosophical question ('What is thinking?') into a tractable problem ('Can we detect thought?') — at the cost of leaving the original question unanswered."
 tags: [computer-science, AI, Alan-Turing, Turing-test, philosophy-of-mind, computation]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Alan Turing

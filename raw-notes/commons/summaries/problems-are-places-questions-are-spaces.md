@@ -2,6 +2,7 @@
 summary: "Maps Callard's Socratic distinction between problems and questions onto the spatial framework of places and spaces, arguing that problems are bounded, tractable places while questions are open, exploratory spaces."
 tags: [philosophy, epistemology, Socrates, Agnes-Callard, space-place, inquiry]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Problems are Places, Questions are Spaces

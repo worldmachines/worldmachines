@@ -2,6 +2,7 @@
 summary: "British travel writer and novelist whose account of Australian Aboriginal songlines in The Songlines (1988) provided the canonical literary documentation of how song constitutes geographical place."
 tags: [chatwin, songlines, aboriginal, travel-writing, place-making, australia]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Bruce Chatwin

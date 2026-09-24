@@ -2,6 +2,7 @@
 summary: "Richard Stallman (b. 1953), founder of the Free Software Foundation and GNU Project, whose definition of hacking as 'playfully doing something difficult' anchors the Hack Hacky Hacker typology."
 tags: [hacking, free-software, GNU, technology, ethics, MIT]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Richard Stallman

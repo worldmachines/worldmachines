@@ -2,6 +2,7 @@
 summary: "French hermeneutic philosopher whose account of feeling as 'strange intentionality' — directed outward toward things while also inwardly manifesting — grounds Tuan's understanding of how place-attachment is both about the world and about the self."
 tags: [paul-ricoeur, phenomenology, hermeneutics, feeling, intentionality, philosophy-of-mind]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Paul Ricoeur (1913–2005)

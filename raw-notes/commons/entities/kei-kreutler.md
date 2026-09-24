@@ -2,6 +2,7 @@
 summary: "Writer, researcher, and theorist working at the intersection of artificial memory, decentralization, and mythopoetics — Sathe cites her on artificial memory as a 'deliberate break in the surface of infinity' that enables navigation rather than mere storage."
 tags: [kreutler, artificial-memory, memory, decentralization, mythopoetics, technology, orientation]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Kei Kreutler

@@ -2,6 +2,7 @@
 summary: "Edmund Burke (1729–1797) was the English tradition's answer to the continental counter-Enlightenment, defending the accumulated wisdom of historical institutions against the abstract rationalism of the French Revolution."
 tags: [burke, counter-enlightenment, conservatism, tradition, anti-rationalism, french-revolution, organicism]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Edmund Burke (1729–1797)

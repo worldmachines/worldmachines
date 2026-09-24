@@ -2,6 +2,7 @@
 summary: "Theoretical physicist (b. 1940) at the Santa Fe Institute whose scaling laws for biology and cities — Kleiber's law derivation and the urban superlinear/sublinear exponents — supply the amplification mechanism in 'The Lightening of Intent'."
 tags: [geoffrey-west, santa-fe-institute, scaling-laws, urban-science, complexity, kleibers-law, biology]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Geoffrey West

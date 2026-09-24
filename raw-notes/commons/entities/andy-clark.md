@@ -2,6 +2,7 @@
 summary: "British-American cognitive scientist and philosopher (b. 1957); developed the extended mind hypothesis (with David Chalmers), arguing that cognitive processes can be constitutively distributed across brain, body, and world."
 tags: [andy-clark, extended-mind, cognitive-science, embodied-cognition, philosophy-of-mind, assemblage]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Andy Clark

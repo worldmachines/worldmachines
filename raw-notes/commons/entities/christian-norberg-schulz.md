@@ -2,6 +2,7 @@
 summary: "Norwegian architect and architectural theorist; key figure in architectural phenomenology; his concept of 'genius loci' (spirit of place) and his Heideggerian account of dwelling are the theoretical parallel and closest academic neighbor to Tuan's architecture-as-crystallized-awareness."
 tags: [architecture, phenomenology, place, heidegger, genius-loci, dwelling, architectural-theory]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Christian Norberg-Schulz (1926–2000)

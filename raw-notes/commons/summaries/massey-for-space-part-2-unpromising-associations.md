@@ -2,6 +2,7 @@
 summary: "Part Two of Massey's *For Space* (2005): a four-chapter critique of philosophical traditions (Bergson, structuralism, Laclau/de Certeau, deconstruction) that imagine space as the dead, the closed, the merely-representational, and a sketch of her constructive alternative — space as a dynamic simultaneity of multiple ongoing trajectories."
 tags: [massey, for-space, space, time, bergson, derrida, laclau, structuralism, deconstruction]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Massey, *For Space* (2005) — Part Two: Unpromising Associations

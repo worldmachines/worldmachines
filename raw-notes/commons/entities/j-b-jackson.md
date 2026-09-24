@@ -2,6 +2,7 @@
 summary: "J. B. Jackson (1909–1996): American landscape writer and critic who founded Landscape magazine (1951) and pioneered the cultural reading of the American vernacular landscape — roads, mobile homes, roadside architecture, suburban form — as expressions of democratic values and temporal experience."
 tags: [entity, landscape, american-landscape, vernacular-architecture, cultural-geography, place]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # J. B. Jackson (1909–1996)

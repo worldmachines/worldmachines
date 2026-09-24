@@ -2,6 +2,7 @@
 summary: "Sathe's foundational essay on space, place, and place-making: to build a home is to interrupt space; exploration of any unmapped domain — cognitive, professional, social — requires homebuilding first."
 tags: [sathe, place-making, space-place, epistemology, power, exploration, fractal-place, delta-quadrant, tuan, lefebvre, massey, foucault, harvey, mbembe, bachelard, anderson]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # We Need Homes in the Delta Quadrant

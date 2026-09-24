@@ -2,6 +2,7 @@
 summary: "A personal essay using Montaigne's observation about great men who desire to be known outside their competence as a foil for arguing that curiosity-driven, ego-free learning — 'better company than Caesar' — is the path to genuine happiness."
 tags: [montaigne, curiosity, polymathism, happiness, burnout, ego, russell, unselfing]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Better Company Than Caesar

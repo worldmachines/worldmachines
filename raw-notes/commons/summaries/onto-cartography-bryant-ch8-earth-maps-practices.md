@@ -2,6 +2,7 @@
 summary: "Bryant's concluding chapter deploys geophilosophy's three practical dimensions — cartography, deconstruction, and terraformation — as the emancipatory program for a post-humanist left politics adequate to climate collapse."
 tags: [bryant, onto-cartography, geophilosophy, political-philosophy, ecology, leftist-politics, materialism, mapping]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Onto-Cartography Ch 8: Earth, Maps, and Practices — Summary

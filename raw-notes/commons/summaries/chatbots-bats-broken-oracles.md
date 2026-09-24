@@ -2,6 +2,7 @@
 summary: "Argues that LLMs open a new mode of using computers — not just problem-solving but genuine Socratic inquiry — because their conversational, fallible nature enables questioning pre-answered beliefs."
 tags: [AI, Socratic-method, epistemology, LLMs, inquiry, Agnes-Callard, Thomas-Nagel]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Chatbots, Bats & Broken Oracles

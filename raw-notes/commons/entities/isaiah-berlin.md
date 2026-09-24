@@ -2,6 +2,7 @@
 summary: "Sir Isaiah Berlin (1909–1997), British philosopher and intellectual historian, best known for the fox-hedgehog typology and his essays on liberty and the history of ideas."
 tags: [philosophy, intellectual-history, political-philosophy, fox-hedgehog, liberalism, 20th-century]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Isaiah Berlin

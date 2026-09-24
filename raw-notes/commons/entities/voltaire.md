@@ -2,6 +2,7 @@
 summary: "Voltaire (1694–1778) — French Enlightenment writer, playwright, and entrepreneur who transformed the intellectual's social role, pioneered celebrity, advanced political and epistemic legibility, and made early contributions to the Divergence Machine through Candide and tolerance campaigns."
 tags: [voltaire, enlightenment, modernity-machine, divergence-machine, celebrity, ferney, legibility, entrepreneur]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Voltaire

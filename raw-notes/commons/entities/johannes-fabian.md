@@ -2,6 +2,7 @@
 summary: "German-American anthropologist (b. 1937), author of *Time and the Other* (1983). His concept of the 'denial of coevalness' is central to Massey's Part Three argument against the temporal convening of spatial difference."
 tags: [fabian, anthropology, coevalness, time, anthropology-critique, massey]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Johannes Fabian (b. 1937)

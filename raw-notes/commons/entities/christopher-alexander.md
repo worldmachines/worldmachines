@@ -2,6 +2,7 @@
 summary: "Austrian-American architect and design theorist (1936–2022) whose Pattern Language and Timeless Way of Building argue that enduring architecture emerges not from professional planning but from unselfconscious, iterative fit between structure and use."
 tags: [alexander, architecture, design, pattern-language, unselfconscious-design, fit, timeless-way]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Christopher Alexander (1936–2022)

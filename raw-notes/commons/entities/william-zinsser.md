@@ -2,6 +2,7 @@
 summary: "William Zinsser (1922–2015), American writer and writing teacher, author of On Writing Well and Writing to Learn — foundational texts in the series of essays on documentation, dictionaries, and prose craft."
 tags: [writing, craft, non-fiction, pedagogy, Zinsser, journalism]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # William Zinsser

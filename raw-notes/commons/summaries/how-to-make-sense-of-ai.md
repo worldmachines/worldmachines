@@ -2,6 +2,7 @@
 summary: "Cedric Chin's practical sensemaking method for navigating AI uncertainty — filter all AI content except detailed field reports of use, then apply the four questions of uncertainty to evaluate possible outcomes, actions, values, and causal mechanisms."
 tags: [sensemaking, AI, uncertainty, attention, commoncog, field-reports, outcome-orientation]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # How to Make Sense of AI (Chin, 2026)

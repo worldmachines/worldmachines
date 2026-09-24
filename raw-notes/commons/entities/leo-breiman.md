@@ -2,6 +2,7 @@
 summary: "Statistician and machine learning researcher (1928–2005), creator of the random forest algorithm and author of the influential 'Two Cultures' paper diagnosing a split in statistical practice."
 tags: [statistician, machine-learning, data-science, statistics]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Leo Breiman

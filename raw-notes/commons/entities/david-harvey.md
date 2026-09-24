@@ -2,6 +2,7 @@
 summary: "Marxist geographer whose historical-materialist excavation of Sacré-Coeur's history demonstrates how scholarly language can subtly undermine the 'innocent eye' and transform the perceived character of a place."
 tags: [david-harvey, marxist-geography, sacre-coeur, paris, place-perception, critical-geography, language]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # David Harvey

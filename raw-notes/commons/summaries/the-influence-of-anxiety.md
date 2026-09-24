@@ -2,6 +2,7 @@
 summary: "A personal-critical essay on Harold Bloom's Anxiety of Influence — argues that Bloom is fundamentally a mystical thinker, that his theory of poetic influence-as-agon is both necessary and paralyzing, and that the only way out of the anxiety is through it, not around it."
 tags: [harold-bloom, anxiety-of-influence, literary-theory, western-canon, precursor, misreading, influence, belatednes, memory, tradition]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Influence of Anxiety (The Point, ~2022–2024)

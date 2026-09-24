@@ -2,6 +2,7 @@
 summary: "Kevin Lynch (1918–1984): American urban planner and theorist whose Image of the City (1960) established the five elements of urban cognitive maps (paths, edges, districts, nodes, landmarks) and introduced the concept of 'imageability' as a design criterion."
 tags: [entity, urban-planning, cognitive-maps, imageability, city-form, spatial-cognition]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Kevin Lynch (1918–1984)

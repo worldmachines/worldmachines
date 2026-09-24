@@ -2,6 +2,7 @@
 summary: "German sociologist (1927–1998) whose systems theory treats society as composed solely of communications, autopoietically reproducing itself through recursive operations — a position Bryant's onto-cartography explicitly criticizes for neglecting material mediators."
 tags: [Luhmann, systems-theory, sociology, autopoiesis, communication, society, Bryant-interlocutor]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Niklas Luhmann

@@ -2,6 +2,7 @@
 summary: "Italian semiotician, novelist, and intellectual historian — key figure in the history of language theory and the author of the observation that AI may be a revival of the perfect language dream."
 tags: [semiotics, intellectual-history, language, AI, Italy, literature]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Umberto Eco

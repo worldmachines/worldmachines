@@ -2,6 +2,7 @@
 summary: "Josiah Wedgwood (1730–1795), English potter who industrialized ceramics, pioneered modern marketing and branding, advanced industrial legibility, and contributed to both the Modernity Machine and (through the Lunar Society) the Divergence Machine."
 tags: [josiah-wedgwood, modernity-machine, divergence-machine, industrial-revolution, branding, legibility, lunar-society]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Josiah Wedgwood

@@ -2,6 +2,7 @@
 summary: "A meditation on Dwarf Fortress as an act of creative audacity — a hyper-complex simulation built by two brothers over 20 years without external funding, arguing the game's value lies in its stories rather than any victory condition."
 tags: [games, creativity, simulation, long-form-projects, complexity, culture]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Best Game Ever Made

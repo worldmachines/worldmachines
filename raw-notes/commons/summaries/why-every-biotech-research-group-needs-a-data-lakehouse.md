@@ -2,6 +2,7 @@
 summary: "A technical essay arguing that biotech research groups should adopt data lakehouse architecture (specifically DuckLake) to solve heterogeneous data management, reproducibility, and vendor lock-in problems."
 tags: [biotech, data-engineering, lakehouse, duckdb, ducklake, open-data, reproducibility, compliance]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Why Every Biotech Research Group Needs a Data Lakehouse

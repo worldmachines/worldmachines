@@ -2,6 +2,7 @@
 summary: "Bryant's account of worlds as real, plural, flat ecologies of machines — not correlated to any subject — structured internally by varying degrees of machine salience (bright/dim/dark/rogue objects) and partitioned by the material conditions of interaction."
 tags: [Bryant, onto-cartography, worlds, pluralism, flat-ontology, luminosity, content-expression, Deleuze-Guattari, ecology]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Summary: Onto-Cartography Ch. 5 — The Structure of Worlds

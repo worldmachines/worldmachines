@@ -2,6 +2,7 @@
 summary: "A mythopoeic essay personifying RSS as a minor deity of the open web — patient, orderly, and slowly marginalized by platform capitalism — and an argument for its revival as the proper technology of reading."
 tags: [rss, open-web, protocols, information-architecture, attention, platform-capitalism, mythology]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Small God of the Internet

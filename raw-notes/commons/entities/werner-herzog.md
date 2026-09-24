@@ -2,6 +2,7 @@
 summary: "Werner Herzog is a German filmmaker whose philosophical remarks about the jungle — 'the harmony of overwhelming and collective murder' — serve as Rao's touchstone for the authentic relationship between liveness and death that civilization suppresses and New Nature requires."
 tags: [herzog, filmmaker, nature, murder, aesthetics, rao]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Werner Herzog

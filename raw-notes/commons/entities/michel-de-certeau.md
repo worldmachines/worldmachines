@@ -2,6 +2,7 @@
 summary: "French Jesuit historian and social theorist (1925–1986), author of *The Practice of Everyday Life* (1984). For Massey, his strategy/tactic distinction maps space onto power and time onto resistance — a binary that traps both terms and fails to think space as eventful."
 tags: [de-certeau, social-theory, everyday-life, strategy-tactic, space, time, massey]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Michel de Certeau (1925–1986)

@@ -2,6 +2,7 @@
 summary: "Eric Chaisson argues that energy rate density — the rate of free energy flow per unit mass — provides a universal, empirically measurable metric for complexity across all systems, unifying physical, biological, and cultural evolution under a single thermodynamic framework."
 tags: [cosmic-evolution, complexity, thermodynamics, energy, big-history, chaisson]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Cosmic Evolution: State of the Science — Eric J. Chaisson (2009)

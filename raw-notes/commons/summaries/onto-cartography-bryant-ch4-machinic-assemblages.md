@@ -2,6 +2,7 @@
 summary: "Bryant's account of machines as assemblages of other machines, the endo/exo-relations distinction, entropy and negentropic operations, and the political stakes of machine maintenance."
 tags: [levi-bryant, onto-cartography, assemblage, entropy, machines, materialism, negentropy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Summary: Bryant, *Onto-Cartography* Ch 4 — Machinic Assemblages and Entropy (pp. 75–108)

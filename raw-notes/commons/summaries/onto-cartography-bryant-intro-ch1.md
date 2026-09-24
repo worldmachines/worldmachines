@@ -2,6 +2,7 @@
 summary: "Bryant's polemic against discursive materialism and introduction of onto-cartography — the mapping of structural couplings between machines — and post-human media ecology as an ecological framework for understanding how entities shape the field of possibility for one another."
 tags: [bryant, onto-cartography, materialism, machines, media-ecology, OOO, speculative-realism]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Onto-Cartography: Introduction & Chapter 1 — Summary

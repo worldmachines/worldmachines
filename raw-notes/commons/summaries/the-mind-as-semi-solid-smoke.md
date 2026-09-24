@@ -2,6 +2,7 @@
 summary: "Turns the space-and-place lens inward: the mind is an imperfect, self-conjured place whose navigational landmarks are semi-solid smoke — a feature enabled by normative self-blindness that makes Socratic inquiry both necessary and initially threatening."
 tags: [mind, cognition, place-making, normative-self-blindness, navigation, Agnes-Callard, neuroscience]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Mind as Semi-Solid Smoke

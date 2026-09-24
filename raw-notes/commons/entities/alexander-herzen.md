@@ -2,6 +2,7 @@
 summary: "Russian political thinker and writer — the intellectual whose writings laid the groundwork for revolutionary Russian populism, before Lenin channeled such ideas into Bolshevik action."
 tags: [Russia, intellectual-history, political-philosophy, 19th-century, populism, revolution]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Alexander Herzen

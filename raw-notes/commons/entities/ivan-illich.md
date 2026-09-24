@@ -2,6 +2,7 @@
 summary: "Austrian-born philosopher, Catholic priest, and social critic (1926-2002) who argued that institutions and technologies cross from liberating to enslaving — the 'two watersheds' thesis."
 tags: [philosopher, social-critic, technology, autonomy, entity]
 last_updated: 2026-04-10
+level: canon
 ---
 
 # Ivan Illich

@@ -2,6 +2,7 @@
 summary: "Bayo Akomolafe's Long Now talk argues that the 'untimely' is not an alternative clock but the excess produced inside time's own disciplinary machinery."
 tags: [summary, bayo-akomolafe, time, decolonization, black-studies, yoruba-cosmology]
 last_updated: 2026-05-25
+level: canon
 ---
 
 # Bayo Akomolafe — The Untimely

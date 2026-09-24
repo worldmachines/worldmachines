@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe argues that 'home' — whether literal shelter, a published paper, or a foundational thesis — is not a retreat from the unknown but an active epistemic engine that converts abstract space into navigable place."
 tags: [place-making, epistemology, configurancy, space-vs-place, exploration, knowledge-production]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Shelter as Epistemic Engine

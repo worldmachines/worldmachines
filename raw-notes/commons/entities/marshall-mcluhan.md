@@ -2,6 +2,7 @@
 summary: "Canadian media theorist (1911–1980); his 'the medium is the message' — that the material properties of media, not their content, shape social relations — is a foundational source for Bryant's post-human media ecology."
 tags: [McLuhan, media-theory, medium, communication, technology, post-human-media-ecology]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Marshall McLuhan

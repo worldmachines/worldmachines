@@ -2,6 +2,7 @@
 summary: "Cedric Chin's application of Klein et al's Data-Frame Theory to expert sensemaking — argues that expert-novice differences lie not in reasoning strategy but in richer mental models, denser frame repertoires, and faster expectancy violation detection."
 tags: [sensemaking, expertise, data-frame-theory, decision-making, cognitive-science, AI, commoncog]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # How Experts Sensemake (Chin, 2026)

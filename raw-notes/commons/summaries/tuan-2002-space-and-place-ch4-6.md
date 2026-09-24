@@ -2,6 +2,7 @@
 summary: "Summary of Chapters 4–6 of Yi-Fu Tuan's Space and Place (1977/2002): the body as origin of spatial values, spaciousness and crowding as social rather than geometric phenomena, and the spectrum from spatial ability to cognitive map-making."
 tags: [tuan, space-and-place, human-geography, phenomenology, body, spatial-cognition, crowding, cognitive-maps]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Tuan — *Space and Place*, Chapters 4–6 (1977/2002)

@@ -2,6 +2,7 @@
 summary: "Bengali polymath — poet, novelist, educator, composer, and philosopher — who shaped Indian national identity and spirituality as an intellectual rather than a revolutionary organizer."
 tags: [India, intellectual-history, literature, nationalism, philosophy, Bengal]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Rabindranath Tagore

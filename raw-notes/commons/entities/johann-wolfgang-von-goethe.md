@@ -2,6 +2,7 @@
 summary: "Johann Wolfgang von Goethe (1749–1832) is the most skeptical of the Kulturkritik thinkers, rejecting the English garden as aesthetically dishonest and proposing instead a dynamic of irreducible polar opposites (Steigerung) in which nature and culture never synthesize but perpetually intensify each other."
 tags: [goethe, kulturkritik, elective-affinities, faust, steigerung, english-garden, kunstwahrheit]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Johann Wolfgang von Goethe (1749–1832)

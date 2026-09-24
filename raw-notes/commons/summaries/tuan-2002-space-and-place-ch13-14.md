@@ -2,6 +2,7 @@
 summary: "Tuan's final two chapters argue that place and time mutually constitute each other — place is the pause in movement, and temporal depth is what elevates a locale into a place — then the epilogue reflects on what the experiential method achieves and what it cannot reach."
 tags: [tuan, place, time, temporality, experiential-geography, epilogue, humanistic-geography]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Tuan, *Space and Place* — Ch 13 (Time and Place) & Ch 14 (Epilogue)

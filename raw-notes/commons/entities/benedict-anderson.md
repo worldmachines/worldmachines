@@ -2,6 +2,7 @@
 summary: "Irish-British political scientist (1936–2015) whose Imagined Communities argued that the nation is a community held together by shared imagination rather than face-to-face acquaintance, made possible by print capitalism's creation of simultaneous mass reading."
 tags: [anderson, nationalism, imagined-communities, print-capitalism, political-science, community, ritual]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Benedict Anderson (1936–2015)

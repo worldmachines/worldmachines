@@ -2,6 +2,7 @@
 summary: "Edward T. Hall (1914–2009): American anthropologist who coined 'proxemics' — the study of how humans structure interpersonal space — and 'high-context/low-context' culture. Key influence on Tuan's account of spatial values and interpersonal distance."
 tags: [entity, anthropology, proxemics, intercultural-communication, spatial-behavior]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Edward T. Hall (1914–2009)

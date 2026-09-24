@@ -2,6 +2,7 @@
 summary: "French philosopher of science and poetic imagination (1884–1962), best known for The Poetics of Space — a phenomenological account of intimate domestic space that runs parallel to Tuan's humanistic geography."
 tags: [bachelard, phenomenology, intimate-space, imagination, poetics, philosophy, french-philosophy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Gaston Bachelard (1884–1962)

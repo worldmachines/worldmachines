@@ -2,6 +2,7 @@
 summary: "Bryant's theory of gravity as the structural power machines exert over the field of possible action for other machines — covering the six object-types, bright/dim/dark/satellite/rogue/black-hole typology, the political stakes of infrastructural over ideological power, and the framework of subjects, quasi-objects, and events."
 tags: [Bryant, onto-cartography, gravity, power, infrastructure, political-philosophy, assemblage, media, bright-objects, dim-objects, Latour, Foucault]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Summary: *Onto-Cartography* Ch. 7 — "Gravity" (Bryant 2014, pp. 184–232)

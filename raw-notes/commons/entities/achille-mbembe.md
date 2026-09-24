@@ -2,6 +2,7 @@
 summary: "Cameroonian philosopher and political theorist (b. 1957) whose concept of necropolitics — the power to determine who lives and who is made to die, biologically and spatially — extends Foucault's biopolitics into the postcolonial condition."
 tags: [mbembe, necropolitics, postcolonialism, africa, biopolitics, power, race, death, political-philosophy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Achille Mbembe (b. 1957)

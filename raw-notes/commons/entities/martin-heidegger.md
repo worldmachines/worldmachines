@@ -2,6 +2,7 @@
 summary: "German phenomenologist (1889–1976), author of Being and Time; his later work on dwelling, technology, and language is the philosophical source for applying phenomenological concepts to knowledge work and product design."
 tags: [philosophy, phenomenology, Heidegger, existentialism, German-philosophy]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Martin Heidegger

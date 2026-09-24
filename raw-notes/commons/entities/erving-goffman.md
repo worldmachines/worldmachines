@@ -2,6 +2,7 @@
 summary: "Erving Goffman (1922–1982): Canadian-American sociologist whose 'interaction order' and 'dramaturgical' framework — front/back regions, face-work, civil inattention — provides the social-structural complement to Tuan's phenomenological account of spatial behavior."
 tags: [entity, sociology, interaction-order, dramaturgy, face-work, social-space]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Erving Goffman (1922–1982)

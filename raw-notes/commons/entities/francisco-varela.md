@@ -2,6 +2,7 @@
 summary: "Chilean biologist, neuroscientist, and philosopher (1946–2001); with Maturana developed autopoiesis; later developed enactivism and neurophenomenology, integrating Husserlian phenomenology with cognitive science."
 tags: [varela, autopoiesis, enactivism, neurophenomenology, structural-coupling, embodied-cognition, chile]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Francisco Varela

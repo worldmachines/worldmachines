@@ -2,6 +2,7 @@
 summary: "Giordano Bruno (1548-1600) is reread by Rao not as an early modern martyr for science, but as a terminal medieval outlier whose fate marks the extinguishing of a freewheeling pre-modern mode, not the birth of a new worldview."
 tags: [thinker, philosopher, giordano-bruno, medieval, hermeticism, memory-art]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Giordano Bruno (1548-1600)

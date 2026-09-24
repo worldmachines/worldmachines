@@ -2,6 +2,7 @@
 summary: "Argues that thinking is fundamentally place-making — the act of interrupting undifferentiated possibility-space with knowledge-anchored landmarks — and that Socratic dialogue is cartography applied to belief."
 tags: [place-making, cognition, Socratic-method, Yi-Fu-Tuan, tools, epistemology]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Thinking with Places

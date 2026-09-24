@@ -2,6 +2,7 @@
 summary: "Chinese reformist intellectual who envisioned a modern Chinese state in the late Qing dynasty — the intellectual counterpart to the revolutionary figures Sun Yat-sen and Mao Zedong."
 tags: [China, intellectual-history, modernization, political-philosophy, Qing-dynasty, reform]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Liang Qichao

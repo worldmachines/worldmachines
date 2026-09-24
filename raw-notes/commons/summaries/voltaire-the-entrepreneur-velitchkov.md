@@ -2,6 +2,7 @@
 summary: "Ivo Velitchkov recounts how Voltaire at 76 founded a successful international watchmaking enterprise at Ferney, arguing he belongs alongside Fugger and Wedgwood as a pre-industrial entrepreneur and engineer of modernity."
 tags: [voltaire, entrepreneurship, ferney, modernity-machine, pre-industrial, velitchkov]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Voltaire, the Entrepreneur

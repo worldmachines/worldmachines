@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe uses Nick Cave's critique of AI creativity to articulate a distinction between AI that knows facts and AI that has taste — and argues that taste, rooted in imperfect experience, cannot be engineered."
 tags: [ai-taste, expertise, creativity, healthcare-ai, regulation, llm-limitations]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # On Being Good vs. Knowing Good: Perspectives on AI

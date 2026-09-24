@@ -2,6 +2,7 @@
 summary: "James Somers, programmer and writer whose blog surfaces underappreciated intellectual tools — including the 1913 Webster's dictionary — and exemplifies the small-web ethos of careful, niche long-form writing."
 tags: [writing, blogging, technology, small-web, programming, language]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # James Somers

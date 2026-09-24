@@ -2,6 +2,7 @@
 summary: "Australian cultural historian whose The Road to Botany Bay (1988) argued that European exploration of Australia was constituted by the act of naming — that place emerged through spatial history, not through material transformation."
 tags: [paul-carter, exploration, naming, colonialism, australia, spatial-history, place-making]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Paul Carter

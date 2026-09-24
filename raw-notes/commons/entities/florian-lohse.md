@@ -2,6 +2,7 @@
 summary: "Florian Lohse is a German writer and Contraptions Book Club participant whose Notefields Substack applies Venkatesh Rao's history machine framework to personal encounters with civilizational scale — most notably through the Majapahit empire and the Singapore airport."
 tags: [lohse, writer, history-machine, majapahit, contraptions]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Florian Lohse

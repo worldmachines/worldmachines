@@ -2,6 +2,7 @@
 summary: "Florentine banker and de facto ruler of the Florentine Republic (1389-1464) whose ~600,000-florin patronage programme converted Medici banking profits into the early Italian Renaissance; the cost-anchor for ideational ambition in 'The Lightening of Intent'."
 tags: [cosimo-de-medici, florence, renaissance, patronage, banking, humanism, cost-of-intent]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Cosimo de' Medici

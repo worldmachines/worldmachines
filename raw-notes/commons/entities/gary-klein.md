@@ -2,6 +2,7 @@
 summary: "Gary Klein — cognitive psychologist, founder of the Naturalistic Decision Making research tradition, principal developer of the Data-Frame Theory of Sensemaking and the Recognition-Primed Decision model."
 tags: [gary-klein, cognitive-science, decision-making, naturalistic-decision-making, sensemaking, expertise, military]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Gary Klein

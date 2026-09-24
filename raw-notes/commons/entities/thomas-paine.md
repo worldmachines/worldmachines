@@ -2,6 +2,7 @@
 summary: "English-American political pamphleteer whose writing provided key philosophical underpinnings for the American Revolution — exemplifying the intellectual role in the American independence typology."
 tags: [America, intellectual-history, political-philosophy, revolution, 18th-century, pamphlets]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Thomas Paine

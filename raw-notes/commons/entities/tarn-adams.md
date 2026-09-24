@@ -2,6 +2,7 @@
 summary: "Creator of Dwarf Fortress — built the game over 20 years while completing a PhD and living on donations, representing an extreme case of sustained individual creative audacity."
 tags: [game-design, programming, creativity, indie-games]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Tarn Adams

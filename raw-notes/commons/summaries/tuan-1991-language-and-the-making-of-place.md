@@ -2,6 +2,7 @@
 summary: "Tuan argues that language — speech, naming, narrative — is constitutive of place-making, not merely descriptive: without words, places cannot fully come into being or persist in human consciousness."
 tags: [tuan, language, place-making, narrative, geography, humanistic-geography, naming, speech]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Tuan (1991): Language and the Making of Place: A Narrative-Descriptive Approach

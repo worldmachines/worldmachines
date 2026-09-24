@@ -2,6 +2,7 @@
 summary: "Philosopher at NYU, known for 'What Is It Like to Be a Bat?' (1974) — an argument that subjective, first-person experience cannot be captured by objective physical description, used by Sathe as an exemplar of Socratic inquiry on an unsolvable question."
 tags: [philosopher, Thomas-Nagel, philosophy-of-mind, consciousness, phenomenology, Socratic-method]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Thomas Nagel

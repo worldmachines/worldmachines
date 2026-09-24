@@ -2,6 +2,7 @@
 summary: "Part Four of Massey's For Space (2005) — Chapters 11 and 12 — develops her constructive positive theory of space and place: space as a simultaneity of on-going trajectories, and place as an event-like throwntogetherness of those trajectories at a particular conjuncture."
 tags: [massey, for-space, space, place, relational-geography, trajectories, throwntogetherness, power-geometry, global-sense-of-place, deep-time]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Massey, *For Space*, Part Four: Reorientations (2005)

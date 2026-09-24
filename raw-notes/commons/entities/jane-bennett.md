@@ -2,6 +2,7 @@
 summary: "American political theorist and new materialist; author of Vibrant Matter (2010), which argues for the agency and efficacy of non-human things — a fellow traveler Bryant cites approvingly against discursive materialism."
 tags: [Bennett, new-materialism, thing-power, vitalism, political-theory, ontology]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Jane Bennett

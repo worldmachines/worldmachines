@@ -2,6 +2,7 @@
 summary: "Friedrich Schiller (1759–1805) developed Kulturkritik's aesthetic turn, proposing the play drive (Spieltrieb) and aesthetic education as the cure for modern self-alienation — while his own theory of the sublime reveals that this 'cure' generates more culture rather than reconciling nature and culture."
 tags: [schiller, kulturkritik, aesthetics, play-drive, sublime, enlightenment, aesthetic-education]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Friedrich Schiller (1759–1805)

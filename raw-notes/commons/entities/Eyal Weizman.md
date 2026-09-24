@@ -2,6 +2,7 @@
 summary: "Israeli architect and critic of Israeli territorial policy; his essay 'Lethal Theory' documenting the IDF's 'walking through walls' tactic in Nablus (2002) is the primary military-theoretical source for Nakatomi space."
 tags: [eyal-weizman, architecture, military-urbanism, nablus, israel-palestine, walking-through-walls, spatial-theory]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Eyal Weizman

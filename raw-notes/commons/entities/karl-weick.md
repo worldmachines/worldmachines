@@ -2,6 +2,7 @@
 summary: "Karl E. Weick — organizational theorist at the University of Michigan, known for sensemaking theory, loose coupling, and enactment; author of 'What Theory Is Not, Theorizing Is' (1995)."
 tags: [karl-weick, sensemaking, organizational-theory, theorizing, epistemology, mann-gulch]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Karl E. Weick

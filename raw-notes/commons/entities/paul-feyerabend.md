@@ -2,6 +2,7 @@
 summary: "Austrian philosopher of science known for epistemological anarchism — the claim that no single scientific method is universal and that 'anything goes' in productive inquiry — invoked as the epistemological correlate of dancer-style curiosity."
 tags: [philosophy-of-science, epistemology, scientific-method, anarchism, creativity]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Paul Feyerabend (1924–1994)

@@ -2,6 +2,7 @@
 summary: "British geographer (1944–2016) whose relational, constructive account of space as always-in-process and never closed is a key ally for Bryant's topological conception of worlds."
 tags: [geography, space, relational-ontology, place, massey, feminist-geography]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Doreen Massey

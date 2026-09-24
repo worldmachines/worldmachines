@@ -2,6 +2,7 @@
 summary: "Belgian political theorist (b. 1943) whose work on agonistic democracy and the relational construction of political subjectivities is Massey's primary political ally for Proposition 1 of For Space."
 tags: [mouffe, political-theory, radical-democracy, agonism, anti-essentialism, relational-identity, laclau]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Chantal Mouffe (b. 1943)

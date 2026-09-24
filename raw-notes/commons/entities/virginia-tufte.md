@@ -2,6 +2,7 @@
 summary: "Virginia Tufte (1922–2020), linguist and professor, author of Artful Sentences — a 270-page analysis of sentence mechanics placed in the anti-library, awaiting the right reader."
 tags: [writing, linguistics, sentences, craft, pedagogy, anti-library]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Virginia Tufte

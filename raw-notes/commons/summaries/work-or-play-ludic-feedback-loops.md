@@ -2,6 +2,7 @@
 summary: "A personal essay tracing career decisions through the lens of ludic (play-like) feedback loop frequencies, arguing that sustainable work requires matching task cadence to one's dopamine rhythm."
 tags: [work, play, feedback-loops, dopamine, career, biology, machine-learning, ludic]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Work or Play? Ludic Feedback Loops

@@ -2,6 +2,7 @@
 summary: "Patrick Atwater's personal essay connecting Paul Salopek's 'Out of Eden Walk' slow journalism project to the World Machines framework, with speculative extensions on pre-Axial history, numerals, domestication, and the 'cyberpaleo' approach to liveness."
 tags: [world-machines, liveness-machine, slow-journalism, cyberpaleo, numerals, domestication, atwater]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Walking the World Machines

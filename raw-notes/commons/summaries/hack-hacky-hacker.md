@@ -2,6 +2,7 @@
 summary: "Constructs a horseshoe topology across hack/hacky/hacker to argue that the 'hacky' middle position — playful, lateral, fox-like — is the optimal life posture."
 tags: [hacking, fox-hedgehog, Isaiah-Berlin, jugaad, problem-solving, play, posture]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Hack, Hacky, Hacker

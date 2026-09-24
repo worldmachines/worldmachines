@@ -2,6 +2,7 @@
 summary: "Roman emperor (121-180 CE) and Stoic philosopher whose *Meditations* — written to himself on campaign during the Marcomannic Wars while the Antonine Plague reached the army and his children died one after another — Sathe uses as the figure of the perma-container in its working form: a man for whom the Stoic logos was not a coping technique but a working description of how the universe was actually arranged."
 tags: [marcus-aurelius, stoicism, roman-empire, meditations, container, logos, second-century, philosopher-emperor, antonine-plague, marcomannic-wars]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Marcus Aurelius (121–180 CE)

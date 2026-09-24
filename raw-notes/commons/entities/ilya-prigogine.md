@@ -2,6 +2,7 @@
 summary: "Belgian-Russian physical chemist (1917–2003); Nobel Prize in Chemistry 1977; developed the theory of dissipative structures and far-from-equilibrium thermodynamics, establishing the physical basis for self-organizing complexity."
 tags: [prigogine, thermodynamics, dissipative-structures, complexity, nonequilibrium, self-organization, physics]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Ilya Prigogine
