@@ -52,9 +52,8 @@ Stewart is a popular historian writing an interpretive thesis, and his method le
 
 ## Cross-References
 
-- [[baruch-spinoza]] — the heretic
+- [[baruch-spinoza]] — the heretic; the page carries this book's biographical record of Spinoza and his political recovery
 - [[gottfried-wilhelm-leibniz]] — the courtier
-- [[baruch-spinoza-stewart]] — this book's biographical record of Spinoza and his political recovery
 - [[gottfried-wilhelm-leibniz-stewart]] — this book's biographical record of Leibniz and its single-anxiety thesis
 - [[spinoza-leibniz-and-the-paradigm-transition-problem-stewart]] — this book's record tested against the Rao and Lohse readings
 - [[spinoza-leibniz-and-the-paradigm-transition-problem]] — the synthesis this book supplies the granular record for
