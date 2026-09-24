@@ -25,3 +25,9 @@ The AI ingestion pipeline (see `wm-encyclopedia-kb/docs/INGEST-LOCAL.md` and
 `author_dir: commons`. This `index.md` is excluded from the lake by
 `config.yaml` (the `raw-notes/*/index.md` exclude rule), so it is never ingested
 as a note.
+
+`entities/` and `summaries/` also hold the pages that used to live in
+`raw-notes/aneesh/entities/` and `raw-notes/aneesh/summaries/` (people, places,
+works, and source summaries). Aneesh moved them here on 2026-09-23 so that book
+ingests can extend them. Page ids did not change, so every `[[link]]` still
+resolves.
