@@ -1,9 +1,9 @@
 ---
 summary: "The seventeenth-century shift from fallow-field farming to Dutch four-part crop rotation, adopted and extended by English freeholders and improving landlords, which Appleby treats as capitalism's causal keystone — breaking the Malthusian food ceiling, cutting England's farm workforce from 80 to 40 percent, and freeing the labour and capital that industry later used."
 tags: [agricultural-revolution, crop-rotation, enclosure, malthusian-population, capitalism-preconditions, dutch-farming, english-farming, food-scarcity]
-last_updated: 2026-07-19
+last_updated: 2026-09-23
 level: canon
-sources: [appleby-relentless-revolution-ch03a-basket-of-consumables-and-population, appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements, appleby-relentless-revolution-ch05a-slavery-labor-and-industrial-inventions, appleby-relentless-revolution-ch12b-eastern-europe-and-indias-transformation]
+sources: [appleby-relentless-revolution-ch03a-basket-of-consumables-and-population, appleby-relentless-revolution-ch03b-dutch-and-english-farming-improvements, appleby-relentless-revolution-ch05a-slavery-labor-and-industrial-inventions, appleby-relentless-revolution-ch12b-eastern-europe-and-indias-transformation, braudel-civilization-capitalism-v1-ch01-eighteenth-century-biological-watershed, braudel-civilization-capitalism-v1-ch02-maize-and-dietary-revolutions, braudel-civilization-capitalism-v1-ch02-rice, braudel-civilization-capitalism-v1-ch02-the-rest-of-the-world, braudel-civilization-capitalism-v1-ch02-wheat-cultivation-and-yields, braudel-civilization-capitalism-v1-ch02-wheat-trade-price-and-bread, braudel-civilization-capitalism-v1-ch03-luxury-and-meat]
 ---
 
 # The Agricultural Revolution (Appleby's account)
@@ -109,6 +109,22 @@ collapse and recovery, with the Black Death killing roughly half the Continent �
 than completed. The energy framing (coal substituting for depleting timber, fuel-burning machines
 substituting for human and animal muscle) connects to [[machines-as-energy-regimes]] and
 [[vaclav-smil]].
+
+## Braudel's longue-durée baseline
+
+Braudel's *Structures of Everyday Life* ([[braudel-civilization-capitalism-v1]]) supplies the long baseline the account above breaks from. It also carries two tensions with that account, which this section keeps rather than reconciles.
+
+**The ceiling.** Across early modern Europe wheat yielded about 5:1 (4:1 net of seed) for three centuries, falling to 2–4:1 in Poland for most sixteenth- and seventeenth-century harvests. On Slicher van Bath's series only the Netherlands/England/Ireland cluster eventually rose above 10:1 ([[braudel-civilization-capitalism-v1-ch02-wheat-cultivation-and-yields]]). That matches where the account above places the break. Measured in the hours of labour needed to buy a quintal of grain, Europe crossed Braudel's "always serious" 100-hour line around 1540–50 and did not recross it downward until 1880–90 ([[braudel-civilization-capitalism-v1-ch02-wheat-trade-price-and-bread]]). Under the **biological ancien régime**, birth and death rates both near 40 per 1000 held population in place by compensation until the eighteenth century, which loosened it only partly and reversibly ([[braudel-civilization-capitalism-v1-ch01-eighteenth-century-biological-watershed]]). See [[limits-of-the-possible]].
+
+**Why rotation was hard to change.** Wheat was never grown alone. It was one term in a rotation-livestock-manure complex that Ferdinand Lot called "so firmly cemented together that no fissure was possible," so changing any part meant overturning the whole. Braudel's notes date England's forage-crop rotation as taking roughly a century to spread even *after* 1750 ([[braudel-civilization-capitalism-v1-ch02-wheat-cultivation-and-yields]]). *Tension:* this places the English diffusion later than this page's seventeenth-century framing. The two may describe different stages (adoption by improvers versus general spread), but the notes do not settle it.
+
+**A revision of "backward" land.** Braudel endorses J. Mulliez's argument that the fallow of livestock regions (Brittany, the bocages) was misread as waste by eighteenth-century agronomists and by historians after them. Grain and grazing were complementary, and such land may have fed its population more efficiently than prime cereal country ([[braudel-civilization-capitalism-v1-ch02-wheat-cultivation-and-yields]]). *Tension:* this cuts against any reading of improvement as the plain replacement of backward land by efficient land.
+
+**The other side of the ledger.** As population pressed on fixed land, arable crowded out pasture. Ordinary Europeans' unusually meat-rich diet of 1350–1550 gave way to a three-century retreat of meat lasting to about 1850 ([[braudel-civilization-capitalism-v1-ch03-luxury-and-meat]]). Maize and the potato became staples of the European poor only in the eighteenth century, after two centuries of scattered local adoption. Their key economic effect was to let the peasant eat the cheap crop and sell the dear one: "The peasant ate maize and sold his wheat, for which he could get about double the price." Venetia exported 15–20% of its cereal crop as a result ([[braudel-civilization-capitalism-v1-ch02-maize-and-dietary-revolutions]]).
+
+**Not one revolution but many.** Following Ester Boserup, Braudel treats tool change as "the result and no longer the cause" of shrinking fallows under population pressure. The "agricultural revolution" did not happen once, everywhere, but spread unevenly over millennia, so grain civilizations, hoe cultivators and gatherer-hunters coexist in the same fifteenth-to-eighteenth-century cross-section ([[braudel-civilization-capitalism-v1-ch02-the-rest-of-the-world]]). China had its own slow, distributed revolution: early-ripening Champa rice, imported around the start of the eleventh century, spread province by province into a settled double-harvest system by the thirteenth. It underwrote southern China's demographic expansion ([[braudel-civilization-capitalism-v1-ch02-rice]]).
+
+**World Machines note.** The compensation arithmetic of the biological ancien régime is the substrate [[secular-cycles]] models, and the relevant note marks that page as supported ([[braudel-civilization-capitalism-v1-ch01-eighteenth-century-biological-watershed]]). The wheat-rotation complex also reads as a small-scale, material-agrarian rhyme with [[world-machines]]' deep interlocking infrastructure. It is "a regional technical shift diffusing province by province rather than a millennium-scale Dawn/Day/Dusk cycle" ([[braudel-civilization-capitalism-v1-ch02-wheat-cultivation-and-yields]]).
 
 ## See also
 
