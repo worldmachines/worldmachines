@@ -45,6 +45,6 @@ It also puts a useful correction on [[venkatesh-rao-the-divergence-machine-ii]]'
 
 - [[rasmussen-infidel-and-professor]] — the source treatment
 - [[scottish-enlightenment]] — the network the mechanism ran on
-- [[david-hume]], [[adam-smith]], and Rasmussen's record of each: [[david-hume-rasmussen]], [[adam-smith-rasmussen]]
+- [[david-hume]], [[adam-smith]], and Rasmussen's record of each: [[david-hume]], [[adam-smith-rasmussen]]
 - [[receding-containers]], [[gramsci-gap]], [[history-machine]]
 - [[print-culture-and-the-individual-author]] — attribution at scale as the specific chokepoint
