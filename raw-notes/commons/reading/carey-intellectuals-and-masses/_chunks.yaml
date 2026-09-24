@@ -1,0 +1,548 @@
+# Curated chunk sidecar for source `carey-intellectuals-and-masses`
+# (The Intellectuals and the Masses: Pride and Prejudice among the Literary Intelligentsia, 1880-1939, John Carey).
+#
+# license_class: private -> verbatim quote text is REDACTED from this committed copy
+# per CURATOR.md sec.5 / INGEST-LOCAL.md sec.14. start_quote/end_quote are deliberately absent;
+# what remains is text-free provenance: chunk id, label, heading, resolved character span into
+# source.txt, and why the passage is load-bearing. The full-verbatim sidecars live only in the
+# gated ingest bucket and the local artifacts dir -- never in this repo.
+#
+# Spans are character offsets into the extraction pinned by MANIFEST.json
+# sha256 47e10765e85bd3dc8548593794d05e3a1d19fcb75dbc24020730bb2cc4cf9fca
+# (473799 chars; 482564 bytes on disk -- offsets are character indices into the
+# UTF-8 text and are valid only against that exact extraction).
+# Per-chunk char_start/char_end were resolved by locating start_quote/end_quote (whitespace-
+# tolerant) within each unit's span; all 67 chunks resolved inside their own unit.
+# Chunk ids match each reading note's `cites:` field.
+source: carey-intellectuals-and-masses
+units:
+- nn: 1
+  unit_id: preface
+  note_id: carey-intellectuals-and-masses-preface
+  span: 609:3708
+  chunks:
+  - id: carey-intellectuals-and-masses#u01-c1
+    label: c1
+    heading: The book's central thesis
+    char_start: 618
+    char_end: 1083
+    why: 'States the book''s full argument: modernism as a deliberate strategy to exclude the newly literate
+      mass reading public.'
+  - id: carey-intellectuals-and-masses#u01-c2
+    label: c2
+    heading: '''The mass'' as a linguistic fiction'
+    char_start: 1085
+    char_end: 1343
+    why: 'Carey''s key methodological move: treating ''the mass'' not as a sociological fact but as a
+      rhetorical device that strips others of human status.'
+  - id: carey-intellectuals-and-masses#u01-c3
+    label: c3
+    heading: Augustine's massa damnata
+    char_start: 1344
+    char_end: 1656
+    why: Establishes the theological genealogy of 'mass' that underwrites the book's argument, with the
+      source's bare endnote marker preserved verbatim.
+  - id: carey-intellectuals-and-masses#u01-c4
+    label: c4
+    heading: From damnation to the death camps
+    char_start: 1801
+    char_end: 2045
+    why: The preface's most aggressive claim, linking the theological disposal of the damned 'mass' directly
+      to twentieth-century genocide.
+- nn: 2
+  unit_id: ch1-revolt-of-the-masses
+  note_id: carey-intellectuals-and-masses-ch1-revolt-of-the-masses
+  span: 3708:48328
+  chunks:
+  - id: carey-intellectuals-and-masses#u02-c1
+    label: c1
+    heading: Ortega's population explosion
+    char_start: 4230
+    char_end: 4501
+    why: States the demographic alarm (180 to 460 million, 1800-1914) that Carey treats as the originating
+      occasion for the intelligentsia's revolt against the masses.
+  - id: carey-intellectuals-and-masses#u02-c2
+    label: c2
+    heading: Nietzsche's declaration of war on the masses
+    char_start: 5589
+    char_end: 6411
+    why: Supplies the Nietzschean vocabulary of overpopulation, the state as 'cold monster', and 'declaration
+      of war on the masses' that later writers in the chapter directly inherit.
+  - id: carey-intellectuals-and-masses#u02-c3
+    label: c3
+    heading: Lawrence's lethal chamber
+    char_start: 24399
+    char_end: 24791
+    why: The chapter's most explicit and disturbing instance of exterminationist fantasy, showing the
+      logical endpoint of denying the masses' humanity or aliveness.
+  - id: carey-intellectuals-and-masses#u02-c4
+    label: c4
+    heading: Ortega on the dehumanization of art
+    char_start: 36172
+    char_end: 36549
+    why: States as explicit program the avant-garde strategy of using deliberate difficulty to segregate
+      an educated caste from the mass, the chapter's account of modernism's social function.
+  - id: carey-intellectuals-and-masses#u02-c5
+    label: c5
+    heading: The masses do not exist
+    char_start: 44564
+    char_end: 45351
+    why: 'The chapter''s thesis statement: ''the mass'' is a metaphor for the unknowable that strips individuality
+      from other people, reframing the whole preceding survey.'
+- nn: 3
+  unit_id: ch2-rewriting-the-masses
+  note_id: carey-intellectuals-and-masses-ch2-rewriting-the-masses
+  span: 48328:97952
+  chunks:
+  - id: carey-intellectuals-and-masses#u03-c1
+    label: c1
+    heading: 'Thesis: rewriting the mass as control through language'
+    char_start: 48952
+    char_end: 49757
+    why: States the chapter's explicit thesis and preserves a bare inline endnote marker ("comprising.1")
+      glued to the text.
+  - id: carey-intellectuals-and-masses#u03-c2
+    label: c2
+    heading: 'Hardy at the British Museum: fear converted to contempt'
+    char_start: 50547
+    char_end: 51063
+    why: Carey's paradigm case for how naming/fictionalizing the mass converts inarticulate dread into
+      controllable contempt.
+  - id: carey-intellectuals-and-masses#u03-c3
+    label: c3
+    heading: The bacterial metaphor's genocidal terminus
+    char_start: 55267
+    char_end: 55592
+    why: 'Shows the chapter''s darkest throughline: the mass-as-microbe metaphor tracked from Pasteur''s
+      science to literal extermination rhetoric.'
+  - id: carey-intellectuals-and-masses#u03-c4
+    label: c4
+    heading: 'Forster''s punkah-wallah: cosmetic dehumanization'
+    char_start: 75591
+    char_end: 76213
+    why: The chapter's key example of flattering mythologization performing the same erasure as hostile
+      dehumanization.
+  - id: carey-intellectuals-and-masses#u03-c5
+    label: c5
+    heading: Orwell's unresolved dirt paradox
+    char_start: 88434
+    char_end: 89391
+    why: Carey's central case study of a leftist intellectual caught inside the very mass-rewriting reflex
+      he criticizes in others.
+  - id: carey-intellectuals-and-masses#u03-c6
+    label: c6
+    heading: Woolf's beggar dissolved into pastoral eternity
+    char_start: 79493
+    char_end: 80007
+    why: 'Purest instance of the cosmetic strategy: Carey reads this lyrical transfiguration as elimination
+      of the actual destitute woman, not description of her.'
+- nn: 4
+  unit_id: ch3-suburbs-and-clerks
+  note_id: carey-intellectuals-and-masses-ch3-suburbs-and-clerks
+  span: 97952:152271
+  chunks:
+  - id: carey-intellectuals-and-masses#u04-c1
+    label: c1
+    heading: The Times on suburban sprawl, 1904
+    char_start: 99046
+    char_end: 99413
+    why: Establishes the genuine, pre-intellectual ecological alarm at suburban growth that the chapter
+      shows later curdling into class contempt.
+  - id: carey-intellectuals-and-masses#u04-c2
+    label: c2
+    heading: The mass as intellectual invention
+    char_start: 108149
+    char_end: 108588
+    why: 'States Carey''s core thesis in miniature: the philistine suburban mass is manufactured by intellectuals,
+      not simply observed.'
+  - id: carey-intellectuals-and-masses#u04-c3
+    label: c3
+    heading: George Moore's cult of injustice
+    char_start: 120229
+    char_end: 120549
+    why: The chapter's starkest example of Nietzschean anti-democratic aestheticism treating mass suffering
+      as art's necessary price.
+  - id: carey-intellectuals-and-masses#u04-c4
+    label: c4
+    heading: Shaw's eugenic proposal
+    char_start: 136509
+    char_end: 136760
+    why: Shows a mainstream literary figure's contempt for the clerkly mass escalating into literal eugenic
+      prescription.
+  - id: carey-intellectuals-and-masses#u04-c5
+    label: c5
+    heading: Kipling's satire of the scholar's gaze
+    char_start: 143319
+    char_end: 143545
+    why: Carey's key example of a writer turning the intellectual's condescension toward clerks back on
+      itself.
+  - id: carey-intellectuals-and-masses#u04-c6
+    label: c6
+    heading: Stevie Smith's suburban light
+    char_start: 148876
+    char_end: 149527
+    why: 'The chapter''s fullest counter-example: unembarrassed sensory delight in suburbia, answering
+      the consensus of intellectual disdain.'
+- nn: 5
+  unit_id: ch4-natural-aristocrats
+  note_id: carey-intellectuals-and-masses-ch4-natural-aristocrats
+  span: 152271:197371
+  chunks:
+  - id: carey-intellectuals-and-masses#u05-c1
+    label: c1
+    heading: 'Pound: artists as rulers'
+    char_start: 154079
+    char_end: 154487
+    why: The chapter's most extreme, least mediated statement of the natural-aristocrat doctrine, framing
+      artists as a suppressed ruling caste about to seize control.
+  - id: carey-intellectuals-and-masses#u05-c2
+    label: c2
+    heading: Nietzsche's hatred of Christianity
+    char_start: 155991
+    char_end: 157043
+    why: Grounds Carey's account of Nietzsche's anti-egalitarianism in Nietzsche's own vehement anti-Christian
+      rhetoric, the doctrinal source Carey treats as paradigmatic.
+  - id: carey-intellectuals-and-masses#u05-c3
+    label: c3
+    heading: Nietzsche's mountain imagery
+    char_start: 158881
+    char_end: 160014
+    why: 'Shows Carey''s key analytic move: reading Nietzschean cultural hierarchy as compensatory rhetoric/imagery
+      rather than demonstrable argument.'
+  - id: carey-intellectuals-and-masses#u05-c4
+    label: c4
+    heading: Clive Bell's civilization requires slaves
+    char_start: 174316
+    char_end: 175853
+    why: 'The doctrine''s logical endpoint made explicit: an elite supported by public funds requires
+      a slave class and police coercion to manage.'
+  - id: carey-intellectuals-and-masses#u05-c5
+    label: c5
+    heading: Huxley and Nietzsche on suffering
+    char_start: 191661
+    char_end: 192103
+    why: Directly ties Brave New World's ideology to Nietzsche, the throughline Carey traces from philosophy
+      into interwar fiction.
+  - id: carey-intellectuals-and-masses#u05-c6
+    label: c6
+    heading: God as convenient fiction
+    char_start: 196442
+    char_end: 197341
+    why: 'The chapter''s closing thesis: God functions in intellectual discourse exactly as ''the masses''
+      do, as a fiction manufactured to ratify pre-existing judgements of superiority.'
+- nn: 6
+  unit_id: ch5-gissing-ineducable-masses
+  note_id: carey-intellectuals-and-masses-ch5-gissing-ineducable-masses
+  span: 197371:252880
+  chunks:
+  - id: carey-intellectuals-and-masses#u06-c1
+    label: c1
+    heading: 'Bertz letter: the widening gulf'
+    char_start: 197542
+    char_end: 198174
+    why: 'States the chapter''s founding thesis in Gissing''s own words: an unbridgeable and widening
+      gulf between the refined and the masses.'
+  - id: carey-intellectuals-and-masses#u06-c2
+    label: c2
+    heading: Physiognomy and the bookcase
+    char_start: 199320
+    char_end: 200467
+    why: Identifies the core diagnostic method by which Gissing's fiction sorts people into fixed, ineducable
+      categories.
+  - id: carey-intellectuals-and-masses#u06-c3
+    label: c3
+    heading: Joey's mangled recitation
+    char_start: 205941
+    char_end: 206310
+    why: The chapter's most visceral illustration of Gissing's contempt for the educated poor's actual
+      efforts at culture.
+  - id: carey-intellectuals-and-masses#u06-c4
+    label: c4
+    heading: What Gissing knows
+    char_start: 248442
+    char_end: 249821
+    why: 'Carey''s counter-evidence: granular, compassionate material knowledge of poverty that sits at
+      odds with the abstract doctrine of the ineducable mass.'
+  - id: carey-intellectuals-and-masses#u06-c5
+    label: c5
+    heading: Wells on Gissing and his wives
+    char_start: 217500
+    char_end: 217864
+    why: Grounds Gissing's class doctrine in documented domestic cruelty toward the lower-class women
+      he married.
+  - id: carey-intellectuals-and-masses#u06-c6
+    label: c6
+    heading: The Rome letter's self-betrayal
+    char_start: 247237
+    char_end: 247739
+    why: Catches Gissing voicing, in his own letters, the exact snobbery his fiction assigns to a character
+      he holds up for ridicule.
+- nn: 7
+  unit_id: ch6-wells-getting-rid-of-people
+  note_id: carey-intellectuals-and-masses-ch6-wells-getting-rid-of-people
+  span: 252880:290693
+  chunks:
+  - id: carey-intellectuals-and-masses#u07-c1
+    label: c1
+    heading: Bromley as origin wound
+    char_start: 253604
+    char_end: 253723
+    why: This is the biographical seed Carey uses to explain Wells's entire population obsession as displaced
+      childhood grief.
+  - id: carey-intellectuals-and-masses#u07-c2
+    label: c2
+    heading: Coining the People of the Abyss
+    char_start: 265085
+    char_end: 265543
+    why: This is Wells's own eugenicist vocabulary from Anticipations, the founding statement of his program
+      for the human surplus.
+  - id: carey-intellectuals-and-masses#u07-c3
+    label: c3
+    heading: Killing with an opiate
+    char_start: 267819
+    char_end: 268217
+    why: Shows the New Republic's violence rationalized as merciful administration rather than cruelty,
+      the euphemistic core of Wells's eugenics.
+  - id: carey-intellectuals-and-masses#u07-c4
+    label: c4
+    heading: The racial extermination clause
+    char_start: 269551
+    char_end: 269745
+    why: The unambiguous racial-genocide statement that Carey treats as the limit case exposing the whole
+      program's stakes.
+  - id: carey-intellectuals-and-masses#u07-c5
+    label: c5
+    heading: The artilleryman's exultation
+    char_start: 283538
+    char_end: 284140
+    why: Demonstrates Carey's central claim that Wells's fiction does not just imagine mass death but
+      relishes it, echoing his non-fiction eugenics in fantasy form.
+- nn: 8
+  unit_id: ch7-wells-against-wells
+  note_id: carey-intellectuals-and-masses-ch7-wells-against-wells
+  span: 290693:328575
+  chunks:
+  - id: carey-intellectuals-and-masses#u08-c1
+    label: c1
+    heading: The Selenites and imaginative duplicity
+    char_start: 290726
+    char_end: 291722
+    why: States the chapter's governing thesis — that Wells's value lies in an imaginative duplicity that
+      refuses to resolve his own doctrines — via the Bedford/Cavor split.
+  - id: carey-intellectuals-and-masses#u08-c2
+    label: c2
+    heading: The misery of going to work
+    char_start: 304494
+    char_end: 304946
+    why: Wells's own words on the humiliation of lost opportunity, which Carey treats as the tenderness
+      that made his eugenic contempt possible only as a defense against feeling it.
+  - id: carey-intellectuals-and-masses#u08-c3
+    label: c3
+    heading: Professor Keppel's tirade
+    char_start: 300459
+    char_end: 300764
+    why: Shows Wells displacing his harshest anti-mass sentiment onto an ostensibly sympathetic character,
+      exposing how thin the line is between population politics and raw contempt.
+  - id: carey-intellectuals-and-masses#u08-c4
+    label: c4
+    heading: Kipps as pink strips of quivering stuff
+    char_start: 312710
+    char_end: 313040
+    why: The chapter's key evidence that Wells's sympathy for the lower-middle class still infantilizes
+      and objectifies them — "not the way we talk about equals."
+  - id: carey-intellectuals-and-masses#u08-c5
+    label: c5
+    heading: Trafford's shoaling mackerel
+    char_start: 324959
+    char_end: 325365
+    why: Crystallizes the system-vs-freedom, individual-vs-mass tension that Carey identifies as Wells's
+      central unsolved problem, immediately followed by the Dowd episode showing representativeness erasing
+      individuality.
+- nn: 9
+  unit_id: ch8-narrowing-the-abyss-bennett
+  note_id: carey-intellectuals-and-masses-ch8-narrowing-the-abyss-bennett
+  span: 328575:395555
+  chunks:
+  - id: carey-intellectuals-and-masses#u09-c1
+    label: c1
+    heading: Bennett named the book's hero
+    char_start: 328612
+    char_end: 329194
+    why: States Carey's governing thesis for the whole chapter and signals Bennett's role as counter-exemplar
+      to modernist snobbery.
+  - id: carey-intellectuals-and-masses#u09-c2
+    label: c2
+    heading: The intelligentsia's contempt for Bennett's origins
+    char_start: 331030
+    char_end: 332281
+    why: Compiles the class-inflected insults from Bell, Woolf, Eliot, Russell, Lawrence, and Pound that
+      the chapter exists to rebut.
+  - id: carey-intellectuals-and-masses#u09-c3
+    label: c3
+    heading: Art as a universal, not elite, faculty
+    char_start: 335258
+    char_end: 336011
+    why: Bennett's own manifesto against the intellectual monopoly on 'artistic feeling', the chapter's
+      core anti-elitist argument in his words.
+  - id: carey-intellectuals-and-masses#u09-c4
+    label: c4
+    heading: The abyss narrows
+    char_start: 337689
+    char_end: 337921
+    why: Supplies the chapter's title phrase and Bennett's education-driven theory of cultural convergence
+      between leaders and masses.
+  - id: carey-intellectuals-and-masses#u09-c5
+    label: c5
+    heading: Aked's suburban credo
+    char_start: 349515
+    char_end: 350569
+    why: 'Bennett''s founding artistic statement, later realized in his fiction: ordinary suburban lives
+      as inexhaustible tragic material.'
+  - id: carey-intellectuals-and-masses#u09-c6
+    label: c6
+    heading: Elsie undresses Miss Eva
+    char_start: 359523
+    char_end: 360154
+    why: Carey's key illustration of Bennett finding erotic and emotional seriousness in a servant, exactly
+      the dignity intellectuals denied the masses.
+- nn: 10
+  unit_id: ch9a-wyndham-lewis-feminization
+  note_id: carey-intellectuals-and-masses-ch9a-wyndham-lewis-feminization
+  span: 395555:431467
+  chunks:
+  - id: carey-intellectuals-and-masses#u10-c1
+    label: c1
+    heading: The feminization-of-the-West thesis
+    char_start: 403956
+    char_end: 405047
+    why: This is the hinge passage where Carey shows Lewis explicitly fusing his misogyny and his anti-democratic
+      politics into a single generative thesis.
+  - id: carey-intellectuals-and-masses#u10-c2
+    label: c2
+    heading: Time as feminine flux, space as masculine order
+    char_start: 406742
+    char_end: 408169
+    why: Shows how Lewis's gendered sensory metaphysics colonizes his readings of Bergson, Einstein, Proust,
+      and Joyce in Time and Western Man.
+  - id: carey-intellectuals-and-masses#u10-c3
+    label: c3
+    heading: A prescient parody of home video
+    char_start: 411662
+    char_end: 412214
+    why: Demonstrates Carey's method of letting Lewis's own class-contemptuous prose indict him, fusing
+      anti-photography philosophy with lower-middle-class mockery.
+  - id: carey-intellectuals-and-masses#u10-c4
+    label: c4
+    heading: The masses as both automata and beasts
+    char_start: 419138
+    char_end: 419781
+    why: Captures the definitional self-contradiction Carey identifies in Lewis's (and other intellectuals')
+      image of mass man as simultaneously mindless machine and dangerous animal.
+  - id: carey-intellectuals-and-masses#u10-c5
+    label: c5
+    heading: Antisemitism as extension of anti-mass logic
+    char_start: 426270
+    char_end: 427950
+    why: Shows Carey tracing Lewis's antisemitism directly from the same 'underbred, commerce-crazed masses'
+      logic used against women and the working class.
+  - id: carey-intellectuals-and-masses#u10-c6
+    label: c6
+    heading: Whitewashing the storm-troopers
+    char_start: 430145
+    char_end: 431134
+    why: The clearest textual evidence that Lewis's fascist apologetics were driven by the same masculine/classical
+      aesthetic vocabulary built up across his gender theory.
+- nn: 11
+  unit_id: ch9b-hitlers-intellectual-programme
+  note_id: carey-intellectuals-and-masses-ch9b-hitlers-intellectual-programme
+  span: 431467:456569
+  chunks:
+  - id: carey-intellectuals-and-masses#u11-c1
+    label: c1
+    heading: Contesting Trevor-Roper's dismissal
+    char_start: 431506
+    char_end: 431997
+    why: 'States the chapter''s governing thesis: that Hitler''s cultural views, far from trivial, mirror
+      intellectual orthodoxy.'
+  - id: carey-intellectuals-and-masses#u11-c2
+    label: c2
+    heading: The divine spark and Aryan supremacy
+    char_start: 435790
+    char_end: 436615
+    why: 'Shows Carey''s core analogical move: Hitler''s theological legitimation of genius is structurally
+      identical to intellectuals'' own self-justifying aesthetics.'
+  - id: carey-intellectuals-and-masses#u11-c3
+    label: c3
+    heading: The aristocratic principle against democracy
+    char_start: 436617
+    char_end: 437481
+    why: Lays out the Nietzschean genius-versus-mass cosmology that Carey traces through the intellectual
+      canon.
+  - id: carey-intellectuals-and-masses#u11-c4
+    label: c4
+    heading: Population terror rooting political brutality
+    char_start: 441858
+    char_end: 442796
+    why: Demonstrates how demographic anxiety about the mass is converted directly into a justification
+      for coming violence.
+  - id: carey-intellectuals-and-masses#u11-c5
+    label: c5
+    heading: The mass as precondition for extermination
+    char_start: 450425
+    char_end: 451201
+    why: 'The chapter''s moral crux: naming the intellectual concept of ''the mass'' as what made genocide
+      thinkable.'
+  - id: carey-intellectuals-and-masses#u11-c6
+    label: c6
+    heading: Closing indictment of intellectual orthodoxy
+    char_start: 455225
+    char_end: 456567
+    why: The chapter's summary verdict, stating outright that Mein Kampf is continuous with, not deviant
+      from, European intellectual culture.
+- nn: 12
+  unit_id: postscript
+  note_id: carey-intellectuals-and-masses-postscript
+  span: 456569:473799
+  chunks:
+  - id: carey-intellectuals-and-masses#u12-c1
+    label: c1
+    heading: Woolf's invented 'slugs' in the lavatory
+    char_start: 456609
+    char_end: 457279
+    why: The diary entry Carey builds the whole postscript around, showing intellectual mass-contempt
+      caught in the act of inventing its own object.
+  - id: carey-intellectuals-and-masses#u12-c2
+    label: c2
+    heading: Heppenstall's genocide fantasy
+    char_start: 459891
+    char_end: 460168
+    why: The clinching evidence for Carey's claim that intellectual mass-phobia could shade from rhetoric
+      into something close to derangement.
+  - id: carey-intellectuals-and-masses#u12-c3
+    label: c3
+    heading: Wells's population prediction inverted by history
+    char_start: 463327
+    char_end: 464339
+    why: Shows the early intellectuals' demographic anxieties reversed and literalized by real twentieth-century
+      population growth, the postscript's pivot from literary to statistical argument.
+  - id: carey-intellectuals-and-masses#u12-c4
+    label: c4
+    heading: Humans categorized as vermin
+    char_start: 467435
+    char_end: 467953
+    why: The book's argument about intellectuals dehumanizing the mass is shown tipping from rhetoric
+      into administrative reality via a contemporary atrocity.
+  - id: carey-intellectuals-and-masses#u12-c5
+    label: c5
+    heading: Theory as the new anti-popular mode
+    char_start: 469560
+    char_end: 470793
+    why: 'States Carey''s core postscript thesis: post-structuralist theory is modernist difficulty''s
+      successor as an intellectual barrier against a newly enfranchised mass audience.'
+  - id: carey-intellectuals-and-masses#u12-c6
+    label: c6
+    heading: Barthes on wood, plastic, and the lost craftsman
+    char_start: 473094
+    char_end: 473427
+    why: Concrete textual evidence that Barthes's aesthetics continue the book's older pattern of idealizing
+      the craftsman/peasant against the unnatural, plastic-consuming bourgeois mass.

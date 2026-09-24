@@ -1,7 +1,7 @@
 ---
 summary: "Across the Comedy Dante builds the supreme fantasy of a fully readable moral cosmos — Hell's calibrated contrapasso, Malebolge's engineered trenches, Cocytus's cadastre, Purgatory's gate-apparatus, Paradise's self-spelling eagle — and then, in the Eagle of Jupiter's rebuke and the salvation of pagans, stages that legibility's own limit."
 tags: [dante, legibility, contrapasso, divine-justice, world-machines, paradiso, inferno, cross-cutting]
-last_updated: 2026-07-25
+last_updated: 2026-09-23
 level: canon
 sources: [dante-divine-comedy-hell-cantos-01-05, dante-divine-comedy-hell-cantos-18-23, dante-divine-comedy-hell-cantos-32-34, dante-divine-comedy-purgatory-cantos-05-09, dante-divine-comedy-paradise-cantos-15-18, dante-divine-comedy-paradise-cantos-19-22, dante-divine-comedy-paradise-cantos-23-28, dante-divine-comedy-paradise-cantos-29-33]
 ---
@@ -27,3 +27,5 @@ The very same Eagle that spells out justice then refuses the pilgrim's demand th
 ## The connection
 
 Read together, these units make one claim that none makes alone: the Comedy is at once the supreme *fantasy* of a fully readable cosmos and its own *critique* of legibility's reach. The drive to total order is affirmed as divine — and then declared, by the highest authority inside the poem, to exceed any finite reading of it. This is a much older cousin of the tension WMP tracks between legibility as an optimization target and the illegible remainder it can never fully absorb, with one striking inversion: Dante locates the illegible not in resistant, low-level complexity beneath the grid but in a justice too deep *above* it.
+
+See also [[monkey-king-editable-cosmos]], a Chinese counterpart: a totally administered cosmos whose records are exact, binding, and editable by anyone who reaches the desk.
