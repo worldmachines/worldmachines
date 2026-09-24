@@ -6,7 +6,7 @@ tags:
 - 'zheng-he-voyages'
 - 'ming-dynasty'
 - 'urban-cosmopolitanism'
-- 'religious-pluralism'
+- 'religious-toleration'
 - 'sati-widow-burning'
 - 'eyewitness-ethnography'
 last_updated: 2026-08-25

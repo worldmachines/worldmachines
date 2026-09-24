@@ -3,7 +3,7 @@ summary: "Carey's material inverts the wiki's usual polarity: modernist difficul
 tags: [synthesis, legibility, illegibility, modernism, elitism, world-machines, mass-literacy, cultural-power]
 last_updated: 2026-09-23
 level: canon
-sources: [carey-intellectuals-and-masses-preface, carey-intellectuals-and-masses-ch1-revolt-of-the-masses, carey-intellectuals-and-masses-ch4-natural-aristocrats, carey-intellectuals-and-masses-ch5-gissing-ineducable-masses, carey-intellectuals-and-masses-ch7-wells-against-wells, carey-intellectuals-and-masses-postscript]
+sources: [carey-intellectuals-and-masses-preface, carey-intellectuals-and-masses-ch1-revolt-of-the-masses, carey-intellectuals-and-masses-ch4-natural-aristocrats, carey-intellectuals-and-masses-ch5-gissing-ineducable-masses, carey-intellectuals-and-masses-ch6-wells-getting-rid-of-people, carey-intellectuals-and-masses-ch7-wells-against-wells, carey-intellectuals-and-masses-postscript]
 ---
 # Illegibility as Elite Defense
 

@@ -1,6 +1,6 @@
 ---
 summary: "Herald van der Linde's Majapahit read against the existing majapahit-empire page: the chronicler Prapanca named and dated, the empire's founding in betrayal (1292–93), the manufactured Ken Arok descent, Ma Huan's 1413–15 eyewitness account, and a better-dated long fall from 1389 to 1527."
-tags: [majapahit, indonesia, bali, maritime-empire, history-machine, colonial-erasure]
+tags: [majapahit, indonesia, maritime-empire, history-machine]
 last_updated: 2026-09-23
 level: canon
 sources: [vanderlinde-majapahit-introduction, vanderlinde-majapahit-ch01, vanderlinde-majapahit-ch02, vanderlinde-majapahit-ch03, vanderlinde-majapahit-ch04, vanderlinde-majapahit-ch06, vanderlinde-majapahit-ch07, vanderlinde-majapahit-ch09, vanderlinde-majapahit-ch12, vanderlinde-majapahit-ch13, vanderlinde-majapahit-ch14, vanderlinde-majapahit-ch15]

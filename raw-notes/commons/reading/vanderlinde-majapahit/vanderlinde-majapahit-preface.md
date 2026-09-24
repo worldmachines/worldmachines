@@ -6,7 +6,7 @@ tags:
 - 'javanese-history'
 - 'kublai-khan'
 - 'historiography'
-- 'religious-pluralism'
+- 'religious-toleration'
 - 'empire-decline'
 - 'book-preface'
 last_updated: 2026-08-25

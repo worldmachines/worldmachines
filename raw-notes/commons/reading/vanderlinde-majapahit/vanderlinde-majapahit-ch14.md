@@ -6,7 +6,7 @@ tags:
 - 'javanese-history'
 - 'ming-gap'
 - 'famine-and-irrigation'
-- 'religious-pluralism'
+- 'religious-toleration'
 - 'tantric-temples'
 - 'dynastic-succession'
 last_updated: 2026-08-25
