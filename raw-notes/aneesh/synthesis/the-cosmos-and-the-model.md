@@ -18,7 +18,7 @@ The essay traces this problem through three historical episodes:
 
 2. **The Jena experiment** — [[The Jena Circle]]'s [[Symphilosophie]] was a working divergence machine for cognition: [[Friedrich Schlegel]], [[Novalis]], Schelling, and others produced knowledge through incompatible positions held in creative tension. Its collapse (Novalis's death, personal fractures, Schlegel's conversion to dogmatism) shows that cognitive diversity maintained through intimacy is fragile and non-scalable.
 
-3. **Humboldt's escape** — [[Alexander von Humboldt]] built a more durable model: correspondence networks (~50,000 letters) that achieved [[Synthesis by Composition]] rather than compression. His *Naturgemalde* composed domain-specific observations side by side, letting connections emerge through juxtaposition rather than reduction. His indigenous knowledge debts show this was method, not abstract tolerance.
+3. **Humboldt's escape** — [[alexander-von-humboldt|Alexander von Humboldt]] built a more durable model: correspondence networks (~50,000 letters) that achieved [[Synthesis by Composition]] rather than compression. His *Naturgemalde* composed domain-specific observations side by side, letting connections emerge through juxtaposition rather than reduction. His indigenous knowledge debts show this was method, not abstract tolerance.
 
 Two architectural escapes from LLM smoothening are held in tension:
 - **[[Herderian AI]]** — structural pluralism (many models, each rooted in a distinct tradition). Failure mode: balkanization.
@@ -47,6 +47,6 @@ Neither suffices without the right *conditions* for the user. The essay argues t
 
 - [[ai-homogenization-and-the-counter-enlightenment]] — the synthesis page that seeded this essay
 - [[cognitive-diversity-as-infrastructure]] — the USC finding elaborated
-- [[Friedrich Schlegel]], [[Novalis]], [[Alexander von Humboldt]], [[The Jena Circle]], [[Symphilosophie]]
+- [[Friedrich Schlegel]], [[Novalis]], [[alexander-von-humboldt|Alexander von Humboldt]], [[The Jena Circle]], [[Symphilosophie]]
 - [[isaiah-berlin-against-the-current]] — Berlin's rehabilitation of the counter-Enlightenment
 - Published: ["The Cosmos and the Model"](https://aneeshsathe.com/the-cosmos-and-the-model/), ["The Octotypic Mind"](https://aneeshsathe.com/the-octotypic-mind/), ["How the Fox with the Long Tail..."](https://aneeshsathe.com/how-the-fox-with-the-long-tail-learned-to-play-in-the-dark-forest/), ["The Architecture of Resistance"](https://aneeshsathe.com/the-architecture-of-resistance/)

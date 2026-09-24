@@ -3,7 +3,7 @@ summary: 'The Buddha commissions Guanyin to find a scripture pilgrim in the east
 tags:
 - 'journey-to-the-west'
 - 'guanyin'
-- 'sun-wukong'
+- 'monkey-king'
 - 'disciple-recruitment'
 - 'karma-and-atonement'
 - 'buddhism'

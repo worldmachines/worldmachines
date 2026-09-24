@@ -1,6 +1,6 @@
 ---
 summary: "The stone-born Monkey King of Journey to the West, a figure of near-pure capture-resistance whose every containment by Heaven converts into either escape or instrumentalized service, until a golden headband he puts on willingly succeeds where mountains, braziers and armies had failed."
-tags: [sun-wukong, monkey-king, journey-to-the-west, trickster-figure, capture-resistance, conatus, shapeshifting, golden-fillet, rebellion-against-heaven]
+tags: [monkey-king, journey-to-the-west, trickster-figure, capture-resistance, conatus, shapeshifting, golden-fillet, rebellion-against-heaven]
 last_updated: 2026-09-23
 level: canon
 sources: [wu-monkey-king-foreword-introduction, wu-monkey-king-note-translation-chapter-01, wu-monkey-king-chapter-02, wu-monkey-king-chapter-03, wu-monkey-king-chapter-04, wu-monkey-king-chapter-05, wu-monkey-king-chapter-06, wu-monkey-king-chapter-07, wu-monkey-king-chapter-14, wu-monkey-king-chapter-15, wu-monkey-king-chapter-16, wu-monkey-king-chapter-17, wu-monkey-king-chapter-19, wu-monkey-king-chapter-22, wu-monkey-king-chapter-23, wu-monkey-king-chapter-24, wu-monkey-king-chapter-26, wu-monkey-king-chapter-27, wu-monkey-king-chapter-31, wu-monkey-king-chapter-32, wu-monkey-king-chapter-34, wu-monkey-king-chapter-36]

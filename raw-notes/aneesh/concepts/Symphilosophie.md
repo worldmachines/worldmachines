@@ -42,7 +42,7 @@ The disintegration shows that the conditions for productive cognitive diversity 
 
 Symphilosophie is a direct counter-example to the assumption that intellectual progress requires convergence. The Jena circle's most generative period was characterized by radical disagreement held in tension. This is precisely what algorithmic monoculture eliminates — RLHF alignment trains models toward consensus outputs; the Romantic model suggests that [[Cognitive Diversity]] is not noise to be filtered but the generative engine of thought.
 
-Compare: [[Alexander von Humboldt]]'s correspondence network achieved similar collective intelligence through a different social technology — mutual respect across distance rather than intimate salon culture — which scales where symphilosophie does not.
+Compare: [[alexander-von-humboldt|Alexander von Humboldt]]'s correspondence network achieved similar collective intelligence through a different social technology — mutual respect across distance rather than intimate salon culture — which scales where symphilosophie does not.
 
 Key source: Kwame Anthony Appiah, "Symphilosophizing in Jena" (NYRB, 2022).
 

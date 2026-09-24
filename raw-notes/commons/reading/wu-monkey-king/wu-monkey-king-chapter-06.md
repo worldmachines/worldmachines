@@ -1,7 +1,7 @@
 ---
 summary: 'Guanyin briefs the Jade Emperor on Sun Wukong''s rampage through Heaven, then the demigod Erlang Shen out-transforms and out-fights the Great Sage in an escalating shapeshifting duel before Laozi''s magic diamond circlet brings him down for binding and a sentence of execution.'
 tags:
-- 'sun-wukong'
+- 'monkey-king'
 - 'erlang-shen'
 - 'shapeshifting'
 - 'guanyin'

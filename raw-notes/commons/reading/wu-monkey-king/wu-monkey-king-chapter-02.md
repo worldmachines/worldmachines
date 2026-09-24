@@ -1,7 +1,7 @@
 ---
 summary: 'Sun Wukong spends decades secretly training under the Patriarch Subodhi, rejecting every conventional path to enlightenment until he masters the seventy-two transformations and the cloud-somersault, is banished for showing off his powers, and returns to Flower-Fruit Mountain to annihilate the Monstrous King of Chaos and free his kidnapped monkey subjects.'
 tags:
-- 'sun-wukong'
+- 'monkey-king'
 - 'subodhi'
 - 'immortality-quest'
 - 'seventy-two-transformations'

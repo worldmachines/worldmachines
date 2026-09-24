@@ -23,7 +23,7 @@ The Jena Circle (c. 1795-1804) was the intellectual community centered in Jena, 
 **Adjacent:**
 - [[Johann Wolfgang von Goethe]] — presiding literary figure in Weimar
 - [[Friedrich Schiller]] — dramatist, aesthetician
-- [[Alexander von Humboldt]] — naturalist, explorer
+- [[alexander-von-humboldt|Alexander von Humboldt]] — naturalist, explorer
 
 ## The Athenaeum
 
@@ -57,7 +57,7 @@ The disintegration is as instructive as the flourishing. It shows that:
 - **The Romantic anti-system is unstable** — Schlegel's trajectory from ironic fragment to Catholic dogmatism suggests that sustained openness is psychologically and socially difficult to maintain
 - **Cognitive diversity under stress tends toward either convergence (dogmatism) or fragmentation (dissolution)** — the circle achieved neither synthesis nor productive pluralism in the long run
 
-Compare [[Alexander von Humboldt]]'s correspondence network, which achieved collective intelligence through a different social technology — mutual respect across distance rather than intimate salon culture — and proved more durable.
+Compare [[alexander-von-humboldt|Alexander von Humboldt]]'s correspondence network, which achieved collective intelligence through a different social technology — mutual respect across distance rather than intimate salon culture — and proved more durable.
 
 ## Relevance
 
