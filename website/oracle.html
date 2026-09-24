@@ -579,19 +579,20 @@
       chatEl.appendChild(el);
     }
 
-    // The corpus catalog behind the Oracle sleeps after ~10 idle minutes (it's
-    // a container, billed only while awake), so the first question after a
-    // quiet spell also waits ~20s for it to boot. We can't cheaply tell cold
-    // from warm up front, so once a wait runs past a typical warm answer
-    // (~20-40s: generation plus the Witness hop), say why it might be slow.
-    const COLD_HINT_MS = 20000;
+    // Measured 2026-09-24: answers from public notes take ~20s; answers that
+    // also draw on the private reading library (the Witness hop) take ~30-75s;
+    // and after ~10 idle minutes the catalog sleeps (a container, billed only
+    // while awake), adding ~20s to the next question. The page can't tell
+    // which case it's in, so past a typical plain answer, say something that's
+    // true in all of them.
+    const COLD_HINT_MS = 30000;
 
     function addThinking() {
       const el = document.createElement('div');
       el.className = 'thinking';
       el.innerHTML =
         `<div class="answer"><span class="dots"><i></i><i></i><i></i></span><span class="label">Consulting the Oracle…</span>` +
-        `<p class="cold-hint" hidden>This one is taking longer than usual. The Oracle's library goes to sleep when nobody has asked anything for a while, so the first question after a quiet spell waits for it to wake up — follow-up questions are quicker.</p></div>`;
+        `<p class="cold-hint" hidden>Some answers take up to a minute or so — especially ones that draw on the reading library, or the first question after a quiet spell, while the library wakes up.</p></div>`;
       chatEl.appendChild(el);
       el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       el.coldTimer = setTimeout(() => {
