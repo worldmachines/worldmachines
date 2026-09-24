@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-24 · aneesh (2)
+The DuckLake catalogs behind the Oracle and Witness now shut down after 10 idle minutes instead of running around the clock: the container's idle-stop signal had been silently ignored (the sidecar ran as PID 1 with no SIGTERM handler), which cost ~$38 of a ~$47 monthly Cloudflare bill (wm-infra #15). The trade-off is a ~20s wake-up on the first question after a quiet spell, so `/oracle` now explains the wait if an answer takes more than 20 seconds. Separately, the Witness now summarizes private passages in parallel rather than one by one (wm-oracle #6); the sequential version took 55–84s per question and had been pushing Oracle answers past the ~100s edge timeout since Sep 21.
+
 ## 2026-09-24 · aneesh
 Website PRs now need Aneesh's approval instead of Venkat's; PRs Venkat authors are exempt and need no review. The enforced `approval-policy` check, `CODEOWNERS` (which now auto-requests Aneesh on `website/` PRs), `CLAUDE.md` and `CONTRIBUTING.md` all say the same thing, and a Venkat approval on someone else's website PR no longer clears it on its own. Wiki and raw-notes rules are unchanged.
 
