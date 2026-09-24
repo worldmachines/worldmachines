@@ -78,6 +78,6 @@ The `.gitignore` covers `.env` and `.env.keys` by name. If you create a credenti
 |------|------|
 | `raw-notes/yourname/` | Push directly; you own your directory. |
 | `wiki/` | PR required; any repo admin may approve. |
-| `website/` | PR required; Venkat must approve. |
+| `website/` | PR required; Aneesh must approve (PRs authored by Venkat are exempt). |
 
 See `.github/CODEOWNERS` for the full ownership map.
