@@ -6,7 +6,7 @@ last_updated: 2026-04-10
 
 # Humboldtian AI
 
-Humboldtian AI is a proposed architectural response to LLM homogenization, named for [[Alexander von Humboldt]]'s method of [[Synthesis by Composition]] — composing domain-specific observations side by side rather than compressing them into a single framework.
+Humboldtian AI is a proposed architectural response to LLM homogenization, named for [[alexander-von-humboldt|Alexander von Humboldt]]'s method of [[Synthesis by Composition]] — composing domain-specific observations side by side rather than compressing them into a single framework.
 
 ## Properties
 

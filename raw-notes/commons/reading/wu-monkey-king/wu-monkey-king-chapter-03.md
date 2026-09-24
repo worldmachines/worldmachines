@@ -1,7 +1,7 @@
 ---
 summary: 'Sun Wukong drills his monkey subjects into an army, uses sorcery and nuisance to extort a shape-shifting iron staff and a suit of armor from the Dragon King of the Eastern Ocean, strikes his own name from the Underworld''s register of death, and provokes Heaven''s court into offering him a government post rather than risking a war it fears it cannot win.'
 tags:
-- 'sun-wukong'
+- 'monkey-king'
 - 'journey-to-the-west'
 - 'dragon-king-aoguang'
 - 'golden-hooped-staff'

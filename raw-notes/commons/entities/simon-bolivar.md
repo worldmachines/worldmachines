@@ -8,7 +8,7 @@ sources: [wulf-invention-of-nature-ch07-chimborazo, wulf-invention-of-nature-ch0
 
 # Simón Bolívar
 
-Simón Bolívar (1783–1830) led the wars that expelled Spain from northern South America between roughly 1807 and 1822. In Andrea Wulf's telling he is also the clearest case of [[Alexander von Humboldt]]'s ideas becoming political ammunition: a revolution fought, as the reading note puts it, as much with Humboldt's ideas as with guns ([[wulf-invention-of-nature-ch12-revolutions-and-nature]]).
+Simón Bolívar (1783–1830) led the wars that expelled Spain from northern South America between roughly 1807 and 1822. In Andrea Wulf's telling he is also the clearest case of [[alexander-von-humboldt|Alexander von Humboldt]]'s ideas becoming political ammunition: a revolution fought, as the reading note puts it, as much with Humboldt's ideas as with guns ([[wulf-invention-of-nature-ch12-revolutions-and-nature]]).
 
 ## The meeting, and Humboldt's misjudgment
 
@@ -38,4 +38,4 @@ The aftermath is where Humboldt's disillusionment lands. Bolívar's pan-American
 
 ## Related
 
-- [[Alexander von Humboldt]] · [[wulf-invention-of-nature]] · [[gramsci-gap]] · [[coevalness]] · [[cosmopolitan-time-queue]] · [[legibility-cuts-both-ways]]
+- [[alexander-von-humboldt|Alexander von Humboldt]] · [[wulf-invention-of-nature]] · [[gramsci-gap]] · [[coevalness]] · [[cosmopolitan-time-queue]] · [[legibility-cuts-both-ways]]

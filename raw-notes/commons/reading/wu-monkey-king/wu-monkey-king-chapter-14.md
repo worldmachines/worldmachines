@@ -2,7 +2,6 @@
 summary: 'Tripitaka frees Sun Wukong — the “Great Sage Equal to Heaven,” trapped for five centuries beneath the Mountain of Two Frontiers — who joins him as disciple and bodyguard, but Monkey''s casual slaughter of a tiger and then six robbers provokes the pilgrimage''s first moral rupture, after which Guanyin (disguised as an old woman) equips Tripitaka with a golden fillet and binding spell that gives him permanent, pain-based control over his volatile disciple.'
 tags:
 - 'journey-to-the-west'
-- 'sun-wukong'
 - 'monkey-king'
 - 'buddhist-nonviolence'
 - 'guanyin'

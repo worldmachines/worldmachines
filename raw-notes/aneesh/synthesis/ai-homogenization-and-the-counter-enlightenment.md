@@ -45,7 +45,7 @@ Whether this is achievable is an open question. But framing it this way makes cl
 
 *What would a Herderian AI look like? Could you build an LLM that preserved rather than homogenized cognitive diversity — or does the architecture of LLMs structurally preclude this?*
 
-**This essay seed was developed into a published essay**: [[the-cosmos-and-the-model]] — ["The Cosmos and the Model"](https://aneeshsathe.com/the-cosmos-and-the-model/). The essay extends the argument through the [[The Jena Circle]], [[Alexander von Humboldt]]'s [[Synthesis by Composition]], and the distinction between [[Herderian AI]] and [[Humboldtian AI]].
+**This essay seed was developed into a published essay**: [[the-cosmos-and-the-model]] — ["The Cosmos and the Model"](https://aneeshsathe.com/the-cosmos-and-the-model/). The essay extends the argument through the [[The Jena Circle]], [[alexander-von-humboldt|Alexander von Humboldt]]'s [[Synthesis by Composition]], and the distinction between [[Herderian AI]] and [[Humboldtian AI]].
 
 ## Source Links
 

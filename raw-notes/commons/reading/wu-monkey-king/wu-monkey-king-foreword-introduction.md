@@ -2,7 +2,7 @@
 summary: 'Gene Luen Yang''s personal foreword on inheriting the Monkey King from his immigrant mother and Julia Lovell''s scholarly introduction on the novel''s contested authorship, Ming-dynasty context, comic/allegorical duality, and five centuries of political reinvention together frame this translation of Journey to the West.'
 tags:
 - 'journey-to-the-west'
-- 'sun-wukong'
+- 'monkey-king'
 - 'wu-chengen'
 - 'ming-dynasty-fiction'
 - 'textual-authorship'

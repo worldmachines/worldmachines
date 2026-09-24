@@ -17,7 +17,7 @@ Naturphilosophie (philosophy of nature) was the German Romantic-idealist approac
 
 ## Influence
 
-**[[Alexander von Humboldt]]** praised Naturphilosophie as revolutionary for empirical sciences. He acknowledged familiarity with Schelling's system and rejected the view that philosophy "can be destructive for the advance of empirical science." However, he never adopted the full speculative apparatus — retaining empirical grounding while absorbing the holistic orientation.
+**[[alexander-von-humboldt|Alexander von Humboldt]]** praised Naturphilosophie as revolutionary for empirical sciences. He acknowledged familiarity with Schelling's system and rejected the view that philosophy "can be destructive for the advance of empirical science." However, he never adopted the full speculative apparatus — retaining empirical grounding while absorbing the holistic orientation.
 
 **Goethe's morphology** — his study of plant metamorphosis and color theory — shared Naturphilosophie's commitment to organic form and the observer's participation in phenomena, though Goethe was more empirically disciplined.
 
@@ -36,7 +36,7 @@ However, its core emphases anticipate several developments:
 ## Connections
 
 - [[The Jena Circle]] — institutional context
-- [[Alexander von Humboldt]] — selective inheritor
+- [[alexander-von-humboldt|Alexander von Humboldt]] — selective inheritor
 - [[Counter-Enlightenment]] — part of the broader challenge to Enlightenment mechanism
 - [[Johann Wolfgang von Goethe]] — parallel development in morphology
 

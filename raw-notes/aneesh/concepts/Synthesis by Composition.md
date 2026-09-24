@@ -10,7 +10,7 @@ Synthesis by composition is the method of combining knowledge from multiple doma
 
 ## The Paradigm Case: Humboldt's Naturgemälde
 
-[[Alexander von Humboldt]]'s *Naturgemälde* of Mount Chimborazo composed botanical, geological, atmospheric, and climatic data on a single enormous sheet. Each domain retained its own measurement system. Nothing was averaged. The viewer's eye moved between domains, and connections became visible through spatial proximity rather than theoretical reduction.
+[[alexander-von-humboldt|Alexander von Humboldt]]'s *Naturgemälde* of Mount Chimborazo composed botanical, geological, atmospheric, and climatic data on a single enormous sheet. Each domain retained its own measurement system. Nothing was averaged. The viewer's eye moved between domains, and connections became visible through spatial proximity rather than theoretical reduction.
 
 ## The Contrast: LLM Embedding Space
 
@@ -31,4 +31,4 @@ In the vocabulary of [[spatial-epistemology-the-master-thread]]: composition cre
 ## Source
 
 - [[the-cosmos-and-the-model]] — the essay where this distinction is developed
-- [[Alexander von Humboldt]] — the historical exemplar
+- [[alexander-von-humboldt|Alexander von Humboldt]] — the historical exemplar

@@ -8,7 +8,7 @@ sources: [wulf-invention-of-nature-prologue, wulf-invention-of-nature-ch07-chimb
 
 # Naturgemälde
 
-The *Naturgemälde* ("painting of nature") is [[Alexander von Humboldt]]'s signature representational device: a cross-section of Chimborazo, drawn after the failed 1802 ascent, showing the mountain's vegetation zones by altitude with side columns cross-referencing temperature, humidity, atmospheric pressure, and species ([[wulf-invention-of-nature-ch07-chimborazo]]). Its point is that a reader can trace one variable — height — simultaneously through botany, climate, and geology, and then carry the comparison to other mountains anywhere in the world.
+The *Naturgemälde* ("painting of nature") is [[alexander-von-humboldt|Alexander von Humboldt]]'s signature representational device: a cross-section of Chimborazo, drawn after the failed 1802 ascent, showing the mountain's vegetation zones by altitude with side columns cross-referencing temperature, humidity, atmospheric pressure, and species ([[wulf-invention-of-nature-ch07-chimborazo]]). Its point is that a reader can trace one variable — height — simultaneously through botany, climate, and geology, and then carry the comparison to other mountains anywhere in the world.
 
 Wulf's claim for it is formal rather than aesthetic: its "variety and richness, but also the simplicity" of the scientific information depicted were unprecedented, and no prior naturalist had shown nature as a global, climate-organized system rather than a catalogue. It is the visual argument for the sentence it accompanies — "Nature is a living whole," not a "dead aggregate."
 
@@ -46,4 +46,4 @@ Second, the ambition it eventually reaches — one living, updatable representat
 
 ## Related
 
-- [[Alexander von Humboldt]] · [[wulf-invention-of-nature]] · [[Synthesis by Composition]] · [[Prime Radiant]] · [[the-cosmos-and-the-model]] · [[Humboldtian AI]] · [[Naturphilosophie]]
+- [[alexander-von-humboldt|Alexander von Humboldt]] · [[wulf-invention-of-nature]] · [[Synthesis by Composition]] · [[Prime Radiant]] · [[the-cosmos-and-the-model]] · [[Humboldtian AI]] · [[Naturphilosophie]]

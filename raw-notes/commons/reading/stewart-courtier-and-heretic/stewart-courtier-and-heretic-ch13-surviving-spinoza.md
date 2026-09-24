@@ -29,7 +29,6 @@ cites:
 connects:
 - 'gottfried-wilhelm-leibniz'
 - 'baruch-spinoza'
-- 'shitty-castle-pattern'
 ---
 
 # Surviving Spinoza
