@@ -1,8 +1,8 @@
 ---
 summary: 'Manuel traces Turgot''s 1750 Sorbonne discourses and scattered fragments to show him inventing the modern secular idea of progress — grounded in sensationalist epistemology, driven by an innate human urge to innovate against institutional routine, channeled through genius and language, and confirmed by the stadial record of ethnology and four unevenly-developing ''progressions'' (technology, fine arts, morals, science).'
 tags:
+- 'progress'
 - 'turgot'
-- 'idea-of-progress'
 - 'philosophy-of-history'
 - 'genius'
 - 'sensationalism'

@@ -2,7 +2,7 @@
 summary: 'Manuel reconstructs Condorcet''s late, fragmentary blueprint (from his commentary on Bacon''s New Atlantis and the Esquisse) for a self-organizing, quantifying world republic of science, and traces how his doctrine of infinite, moral-absolute progress culminates in a technocratic vision of a state run by "social mathematics" and a quasi-religious cult of futurity.'
 tags:
 - 'condorcet'
-- 'idea-of-progress'
+- 'progress'
 - 'scientific-society'
 - 'quantification'
 - 'calculus-of-probabilities'

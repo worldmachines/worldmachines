@@ -1,6 +1,6 @@
 ---
 summary: "Frank E. Manuel's The Prophets of Paris (1962) reads Turgot, Condorcet, Saint-Simon, Fourier, and Comte as a single lineage of secular prophets who invented the modern philosophy of history, hardened it from tentative essay into closed system, and — having stripped it of Providence — spent the next century building substitute religions and measuring apparatuses to hold it up."
-tags: [frank-manuel, prophets-of-paris, philosophy-of-history, idea-of-progress, enlightenment, utopian-socialism, secular-prophecy, technocracy]
+tags: [frank-manuel, prophets-of-paris, philosophy-of-history, progress, enlightenment, utopian-socialism, secular-prophecy, technocracy]
 last_updated: 2026-09-23
 level: canon
 sources: [manuel-prophets-of-paris-preface-prolegomenon, manuel-prophets-of-paris-turgot-01, manuel-prophets-of-paris-turgot-02, manuel-prophets-of-paris-condorcet-01, manuel-prophets-of-paris-condorcet-02, manuel-prophets-of-paris-saint-simon-01, manuel-prophets-of-paris-saint-simon-02, manuel-prophets-of-paris-children-01, manuel-prophets-of-paris-children-02, manuel-prophets-of-paris-fourier-01, manuel-prophets-of-paris-fourier-02, manuel-prophets-of-paris-fourier-03, manuel-prophets-of-paris-comte-01, manuel-prophets-of-paris-comte-02, manuel-prophets-of-paris-epilogue]

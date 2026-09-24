@@ -1,8 +1,8 @@
 ---
 summary: 'Manuel reconstructs Turgot''s twin arguments for the inevitability of progress — an empirical proof from the past and a demonstration that regression is now structurally impossible — and then shows how this doctrine of progress functioned as a modern theodicy, converting the self-interested passions and crimes of history into unwitting instruments of a providential design.'
 tags:
+- 'progress'
 - 'turgot'
-- 'idea-of-progress'
 - 'theodicy'
 - 'providence'
 - 'enlightenment-historiography'

@@ -1,6 +1,6 @@
 ---
 summary: "Marquis de Condorcet (1743–1794), Turgot's disciple and the philosophe who secularized the theory of progress into a would-be predictive science of history — a project 'to tame the future' that runs from probabilistic historical law through a self-governing republic of science to a state run by social mathematics, and ends with Progress installed as a substitute god."
-tags: [condorcet, idea-of-progress, philosophy-of-history, probability-and-prediction, social-mathematics, enlightenment, technocracy, french-revolution]
+tags: [condorcet, progress, philosophy-of-history, probability-and-prediction, social-mathematics, enlightenment, technocracy, french-revolution]
 last_updated: 2026-09-23
 level: canon
 sources: [manuel-prophets-of-paris-condorcet-01, manuel-prophets-of-paris-condorcet-02, manuel-prophets-of-paris-turgot-01, manuel-prophets-of-paris-turgot-02, manuel-prophets-of-paris-preface-prolegomenon, manuel-prophets-of-paris-epilogue]

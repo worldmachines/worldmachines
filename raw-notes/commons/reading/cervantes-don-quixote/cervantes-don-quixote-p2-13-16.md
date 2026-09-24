@@ -9,6 +9,8 @@ tags:
 - 'don-diego-de-miranda'
 - 'poetry-discourse'
 - 'chivalric-parody'
+- 'don-quixote'
+- 'cervantes'
 last_updated: 2026-08-19
 level: reading
 source: 'cervantes-don-quixote'
