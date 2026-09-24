@@ -2,6 +2,7 @@
 summary: "Co-creator of Dwarf Fortress alongside his brother Tarn Adams — handles the business, community, and operational side of Bay 12 Games."
 tags: [game-design, indie-games, creativity]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Zach Adams

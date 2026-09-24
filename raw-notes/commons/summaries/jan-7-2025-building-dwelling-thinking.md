@@ -2,6 +2,7 @@
 summary: "An application of Heidegger's 'Building Dwelling Thinking' to product design and data science, arguing that good products free users to dwell — to think and explore — rather than conforming them to a tool's constraints."
 tags: [Heidegger, dwelling, product-design, knowledge-work, philosophy, UX]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Jan. 7, 2025: Building Dwelling Thinking

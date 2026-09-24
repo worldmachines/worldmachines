@@ -2,6 +2,7 @@
 summary: "Officials in the Ming dynasty who officially 'merely recorded imperial decisions' while wielding enormous de facto governing power — a paradigm case of antimemetic bureaucratic authority."
 tags: [history, Ming-dynasty, China, governance, bureaucracy, administration]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Ming Dynasty Grand Secretaries

@@ -2,6 +2,7 @@
 summary: "German-Swiss philosopher (1883-1969) who coined the 'Axial Age' concept — the thesis that simultaneous, independent breakthroughs in reflexive consciousness occurred across multiple civilizations circa 800-200 BCE."
 tags: [jaspers, axial-age, existentialism, philosophy-of-history]
 last_updated: 2026-04-10
+level: canon
 ---
 
 # Karl Jaspers

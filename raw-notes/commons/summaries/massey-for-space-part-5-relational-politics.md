@@ -2,6 +2,7 @@
 summary: "Part Five of Massey's *For Space* (2005): three chapters arguing that recognising space as a sphere of multiplicity makes politics constitutively spatial — places are events of throwntogetherness, no universal rules of space and place can be derived, and time-spaces are continually made and contested."
 tags: [massey, for-space, place, politics, throwntogetherness, no-rules, time-spaces, hamburg]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Massey, *For Space* (2005) — Part Five: A Relational Politics of the Spatial

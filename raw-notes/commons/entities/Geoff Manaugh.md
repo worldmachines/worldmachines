@@ -2,6 +2,7 @@
 summary: "American architectural writer and creator of BLDGBLOG; coined 'Nakatomi space' to describe the hidden near-infinite interior topology of buildings traversable through non-architectural means."
 tags: [geoff-manaugh, bldgblog, architecture, nakatomi-space, speculative-criticism]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Geoff Manaugh

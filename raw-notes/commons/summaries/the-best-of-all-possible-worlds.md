@@ -2,6 +2,7 @@
 summary: "Florian Lohse's essay-as-fable, structured in three scenes, that uses Voltaire's Candide and Panglossian optimism as a lens on techno-optimism, the limits of zoomed-out reasoning, and the alternative of tending a small thicket instead of optimizing for civilizational scale."
 tags: [voltaire, candide, panglossian-optimism, techno-optimism, gardening, legibility, thicket, florian-lohse]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Best of All Possible Worlds: On Gambas, Gardening and Panglossian Optimism

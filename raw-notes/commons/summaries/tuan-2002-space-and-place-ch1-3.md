@@ -2,6 +2,7 @@
 summary: "Primary-text summary of Tuan's Space and Place Chapters 1–3: the experiential approach, modes of sensory knowing, and the developmental psychology of space and place in the child."
 tags: [yi-fu-tuan, humanistic-geography, phenomenology, experiential-perspective, child-development, place, space, sensorimotor, kinesthesia]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Tuan, *Space and Place: The Perspective of Experience* — Chapters 1–3

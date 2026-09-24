@@ -2,6 +2,7 @@
 summary: "Bertrand Russell (1872–1970) — mathematician, philosopher, Nobel laureate, and prolific public intellectual whose 1930 book The Conquest of Happiness articulates a curiosity-based theory of flourishing."
 tags: [russell, philosophy, mathematics, happiness, curiosity, ethics, 20th-century]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Bertrand Russell

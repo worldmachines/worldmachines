@@ -2,6 +2,7 @@
 summary: "Argentine political theorist (1935–2014) whose radical democracy framework is a political ally of Massey's Proposition 3 on openness, but whose equation of space with ideological closure is one of Massey's named targets."
 tags: [laclau, political-theory, radical-democracy, hegemony, dislocation, space, closure, mouffe]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Ernesto Laclau (1935–2014)

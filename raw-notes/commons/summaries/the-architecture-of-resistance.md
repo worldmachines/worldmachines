@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe traces three historical moments — Spinoza's Amsterdam, Adonis's Beirut, and 2025's AI-mediated internet — to argue that resistance against the averaging power of dominant systems requires cultivating 'thickets': deliberately opaque, friction-rich habitats that protect divergence."
 tags: [resistance, legibility, spinoza, adonis, ai-homogenization, dark-forest, thicket, conatus, individualism]
 last_updated: 2026-05-05
+level: canon
 ---
 
 # The Architecture of Resistance

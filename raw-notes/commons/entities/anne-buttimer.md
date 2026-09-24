@@ -2,6 +2,7 @@
 summary: "Irish humanistic geographer (1938–2017) and collaborator of Tuan's generation — developed the concepts of lifeworld and home as analytical tools for humanistic geography."
 tags: [buttimer, humanistic-geography, lifeworld, home, phenomenology, geography]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Anne Buttimer (1938–2017)

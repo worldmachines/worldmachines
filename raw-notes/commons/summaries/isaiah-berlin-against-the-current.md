@@ -2,6 +2,7 @@
 summary: "Isaiah Berlin's Against the Current collects his essays on counter-Enlightenment thinkers — Vico, Hamann, Herder, Machiavelli, Sorel, Maistre — who challenged the monist rationalist tradition, whose pluralism Berlin finds both intellectually serious and politically urgent."
 tags: [isaiah-berlin, counter-enlightenment, pluralism, intellectual-history, monism, value-pluralism, romanticism, nationalism]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Isaiah Berlin — Against the Current: Essays in the History of Ideas

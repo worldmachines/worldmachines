@@ -2,6 +2,7 @@
 summary: "A research briefing on the state of Explainable AI (XAI), identifying a credibility gap between technical faithfulness and human usefulness, the disagreement problem between XAI methods, and the framing of XAI within Responsible AI."
 tags: [explainable-ai, responsible-ai, human-factors, decision-making, SHAP, LIME, CIU, XAI]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making

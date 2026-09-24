@@ -2,6 +2,7 @@
 summary: "Jean-Jacques Rousseau (1712–1778) is the originator of modern Kulturkritik, whose rhetoric of nature versus culture — articulated through the figures of the noble savage and the English garden — established the oxymoronic template for critiquing modernity through modernity's own tools."
 tags: [rousseau, kulturkritik, enlightenment, noble-savage, french-revolution, social-contract, self-alienation]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Jean-Jacques Rousseau (1712–1778)

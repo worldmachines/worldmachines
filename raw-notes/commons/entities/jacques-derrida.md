@@ -2,6 +2,7 @@
 summary: "French philosopher (1930–2004), founder of deconstruction. For Massey, the most charitable of the post-structuralist engagements with space — Derrida treats spacing as positive — but his textual imagination still pulls space toward two-dimensional surface."
 tags: [derrida, deconstruction, differance, spacing, post-structuralism, space, massey]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Jacques Derrida (1930–2004)

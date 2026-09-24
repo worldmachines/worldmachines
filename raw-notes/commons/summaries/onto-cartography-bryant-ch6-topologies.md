@@ -2,6 +2,7 @@
 summary: "Bryant's Ch. 6 argues that space and time are not containers but products of machine-relations, replacing Cartesian/Euclidean geometry with topological analysis across spatial fields, temporal rhythms, overdetermination, and the politics of fatigue."
 tags: [onto-cartography, topology, space, time, machines, assemblage, bryant, geophilosophy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Summary: Bryant, *Onto-Cartography* Ch. 6 — "Topologies of Space and Time" (pp. 140–183)

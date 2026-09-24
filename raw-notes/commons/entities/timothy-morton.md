@@ -2,6 +2,7 @@
 summary: "British-American literary theorist and eco-philosopher; originator of 'dark ecology' and the concept of hyperobjects; argues that 'Nature' as a concept must be abandoned for genuinely ecological thought — Bryant engages Morton as a key interlocutor, agreeing on rejecting nature-as-outside while resisting the abandonment of the concept."
 tags: [morton, ecology, hyperobjects, dark-ecology, nature-culture, OOO, environmental-philosophy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Timothy Morton (b. 1968)

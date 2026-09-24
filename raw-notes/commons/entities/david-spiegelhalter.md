@@ -2,6 +2,7 @@
 summary: "British statistician and science communicator; Emeritus Professor at Cambridge; known for work on risk communication and the philosophical status of probability."
 tags: [statistics, epistemology, probability, risk, communication, Cambridge]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # David Spiegelhalter

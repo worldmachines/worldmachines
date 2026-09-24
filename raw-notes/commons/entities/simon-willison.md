@@ -2,6 +2,7 @@
 summary: "British developer and writer; creator of Datasette; prominent practitioner and theorist of ethical link blogging as a form of intellectual curation."
 tags: [blogger, open-source, curation, link-blogging, tech]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Simon Willison

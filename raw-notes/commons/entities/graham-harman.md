@@ -2,6 +2,7 @@
 summary: "American philosopher, founder of Object-Oriented Philosophy (OOP/OOO); argues that all objects withdraw from relations and can never be fully grasped by one another; close interlocutor of Bryant in Speculative Realism."
 tags: [Harman, OOO, speculative-realism, objects, withdrawal, ontology]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Graham Harman

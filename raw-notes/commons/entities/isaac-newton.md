@@ -2,6 +2,7 @@
 summary: "English mathematician and physicist; his famous phrase 'standing on the shoulders of giants' is the foil for Sathe's 'dancing on the shoulders of giants' — Newton's humility as baseline now vs. metaphor for acceleration."
 tags: [science-history, physics, mathematics, epistemics, modesty]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Isaac Newton (1643–1727)

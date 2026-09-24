@@ -2,6 +2,7 @@
 summary: "American economic historian (LSE / American University) whose empirical work on the printing press as an information technology supplies the print-economics figures in 'The Lightening of Intent'."
 tags: [jeremiah-dittmar, economic-history, printing-press, information-technology, early-modern, gutenberg, modernity-machine]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Jeremiah Dittmar

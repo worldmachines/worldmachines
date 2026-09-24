@@ -2,6 +2,7 @@
 summary: "USC researchers argue that widespread LLM use is homogenizing human cognition — standardizing language, reasoning styles, and perspectives — and that this reduction in cognitive diversity threatens collective intelligence and adaptive capacity."
 tags: [ai, llm, cognitive-diversity, homogenization, collective-intelligence, epistemic-monoculture]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # AI May Be Making Us Think and Write More Alike

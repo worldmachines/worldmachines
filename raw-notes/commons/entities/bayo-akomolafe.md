@@ -2,6 +2,7 @@
 summary: "Nigerian-born philosopher, writer, and speaker whose work uses Yoruba cosmology, Black studies, posthumanism, and decolonial thought to theorize fugitivity, failure, and the cracks in modernity."
 tags: [entity, philosopher, black-studies, decolonization, yoruba-cosmology, posthumanism]
 last_updated: 2026-05-25
+level: canon
 ---
 
 # Bayo Akomolafe

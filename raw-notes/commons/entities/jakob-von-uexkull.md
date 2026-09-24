@@ -2,6 +2,7 @@
 summary: "Estonian-German biologist (1864–1944) who developed the concept of the Umwelt — the subjective perceptual world of any organism — a key precursor to Bryant's alien phenomenology."
 tags: [uexkull, biology, ethology, umwelt, phenomenology, non-human, animal-studies]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Jakob von Uexküll

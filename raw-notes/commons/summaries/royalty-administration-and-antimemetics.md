@@ -2,6 +2,7 @@
 summary: "Traces how royal administrations across history were deliberately antimemetic — powerful but invisible — so that public anger would always target visible rulers, not the bureaucratic machinery doing the real work."
 tags: [history, political-theory, memetics, bureaucracy, medieval-history, Islamic-empires]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Royalty, Administration, and Antimemetics

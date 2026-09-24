@@ -2,6 +2,7 @@
 summary: "French philosopher of science and communication (1930–2019) whose accounts of vortexes, noise, and topological time — especially the 'crumpled handkerchief' — are central to Bryant's spatial and temporal topology."
 tags: [serres, french-philosophy, topology, time, noise, complexity, onto-cartography]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Michel Serres

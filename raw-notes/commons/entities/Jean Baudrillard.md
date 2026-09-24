@@ -2,6 +2,7 @@
 summary: "French theorist of simulation, hyperreality, and consumer society; Sathe invokes his account of technology and consumer identity to describe how the modernity machine's subjects construct legible selves by choosing objects that signal who they are."
 tags: [baudrillard, simulation, hyperreality, consumer-identity, postmodernism, technology, modernity]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Jean Baudrillard

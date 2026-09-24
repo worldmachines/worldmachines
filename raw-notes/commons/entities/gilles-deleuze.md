@@ -2,6 +2,7 @@
 summary: "French philosopher (1925–1995); with Guattari developed assemblage theory, rhizomatics, and an immanent philosophy of difference and becoming that underpins Bryant's onto-cartography."
 tags: [deleuze, philosophy, french-philosophy, assemblage, difference, becoming, onto-cartography]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Gilles Deleuze

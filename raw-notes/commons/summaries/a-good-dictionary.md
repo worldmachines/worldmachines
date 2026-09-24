@@ -2,6 +2,7 @@
 summary: "A practical and philosophical case for richer dictionaries, tracing from Zinsser through McPhee to the superiority of the 1913 Webster's over modern abridged editions."
 tags: [language, dictionaries, writing-tools, McPhee, Somers, lexicography, internet-culture]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # A Good Dictionary

@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe's essay arguing that Dwarf Fortress, Emacs, and AI share a common soul as platforms for generative complexity — systems whose value lies not in their parts but in emergent creative possibility."
 tags: [complexity, emergence, Emacs, Dwarf-Fortress, AI, creativity, Cynefin, dev-environments]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Dwarf Fortress, Emacs, & AI: The Allure of Generative Complexity

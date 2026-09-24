@@ -2,6 +2,7 @@
 summary: "Justus Möser (1720–1794) was the first historical sociologist, arguing that each age, each locality has its own irreducible style (Zeitstil, Volksstil) that must be understood holistically — a conservative pluralism that anticipates both Herder and Burke."
 tags: [möser, counter-enlightenment, historical-sociology, localism, zeitstil, volksstil, berlin]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Justus Möser (1720–1794)

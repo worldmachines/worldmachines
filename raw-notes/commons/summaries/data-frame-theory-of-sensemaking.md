@@ -2,6 +2,7 @@
 summary: "Klein et al. (2007) present a nine-assertion theory of sensemaking as the reciprocal fitting of data into frames and frames around data, grounded in naturalistic decision-making research across military, medical, and emergency domains."
 tags: [sensemaking, naturalistic-decision-making, macrocognition, frames, cognition, expertise, gary-klein]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # A Data-Frame Theory of Sensemaking — Klein, Phillips, Rall & Peluso (2007)

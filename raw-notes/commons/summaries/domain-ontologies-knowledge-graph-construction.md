@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe's argument that domain ontologies are not merely useful but essential scaffolding for knowledge graph construction, with applications across biomedical, cultural, and AI domains."
 tags: [ontologies, knowledge-graphs, AI, FAIR-data, biomedical-informatics, semantic-web, interoperability]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Domain Ontologies: Indispensable for Knowledge Graph Construction

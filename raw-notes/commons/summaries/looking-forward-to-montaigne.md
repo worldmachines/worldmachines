@@ -2,6 +2,7 @@
 summary: "A brief personal essay contrasting Montaigne's frank, living prose with Byung-Chul Han's diagnosis of narrative commodification, arguing that personal, meandering writing may be the antidote to storyselling."
 tags: [montaigne, essays, byung-chul-han, narrative, authenticity, social-media, writing, internet]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Looking Forward to Montaigne

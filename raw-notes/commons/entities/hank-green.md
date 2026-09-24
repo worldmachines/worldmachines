@@ -2,6 +2,7 @@
 summary: "YouTube creator, co-founder of VidCon and Complexly, and science communicator whose thesis — that social media users aren't addicted to content but are starving for information — is the catalyst for Sathe's social internet essay."
 tags: [YouTuber, social-media, information, science-communication, Hank-Green]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Hank Green

@@ -2,6 +2,7 @@
 summary: "Computational biologist at the Broad Institute. Principal architect of CellProfiler (2006), the Cell Painting protocol (2016), and the JUMP Cell Painting Consortium dataset (2023–2024). A 20-year arc of image-based cellular profiling, held openly, that is now the training substrate for AI-driven drug discovery."
 tags: [computational-biology, microscopy, drug-discovery, broad-institute, image-based-profiling, wayfinding]
 last_updated: 2026-04-23
+level: canon
 ---
 
 # Anne E. Carpenter

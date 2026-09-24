@@ -2,6 +2,7 @@
 summary: "Contemporary philosopher at the University of Chicago, known for work on aspiration, agency, and Socratic inquiry — most recently 'Open Socrates,' which revives Socratic questioning as a live philosophical practice."
 tags: [philosophy, Socrates, ethics, aspiration, inquiry]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Agnes Callard

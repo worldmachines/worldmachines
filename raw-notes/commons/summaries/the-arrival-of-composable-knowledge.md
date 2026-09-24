@@ -2,6 +2,7 @@
 summary: "A historical survey of how knowledge transmission evolved from oral tradition to digital repositories, arguing that composability — the ability to combine and recombine information into new understanding — has been the throughline of intellectual progress."
 tags: [composability, knowledge, history, technology, communication]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Arrival of Composable Knowledge

@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe reads the history of philosophy through Venkatesh Rao's Divergence Machine framework to argue that AI completes the centuries-long peeling back of identity — stripping the last layer of legible selfhood and demanding genuine plasticity rather than mere flexibility."
 tags: [identity, divergence-machine, ai, plasticity, flexibility, hume, baudrillard, catherine-malabou, venkatesh-rao, modernity]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The End of Identity: AI, Plasticity, and the Divergence Machine

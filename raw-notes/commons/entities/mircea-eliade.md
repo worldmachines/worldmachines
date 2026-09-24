@@ -2,6 +2,7 @@
 summary: "Romanian historian of religion whose concept of sacred consecration — the ritual act that incorporates new territory into a divine cosmos, erasing its prior existence — provides the religious-historical dimension of place-making through language and ceremony."
 tags: [eliade, religion, sacred, profane, consecration, place-making, history-of-religion]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Mircea Eliade

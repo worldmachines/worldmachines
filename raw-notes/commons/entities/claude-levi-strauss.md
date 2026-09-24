@@ -2,6 +2,7 @@
 summary: "French anthropologist (1908–2009), founding figure of structural anthropology. For Massey, the original source of the structuralist move that translated 'synchrony' into 'space' and so left space as a-temporal closure."
 tags: [levi-strauss, structuralism, anthropology, synchrony, space, massey]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Claude Lévi-Strauss (1908–2009)

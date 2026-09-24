@@ -2,6 +2,7 @@
 summary: "A personal essay on falling off creative habits, recovering them, and the protocol of continuous self-construction through writing."
 tags: [writing, habit, protocol, identity, creative-practice, infinite-game]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # On Protocols, Wagons, and Associated Acrobatics

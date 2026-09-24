@@ -2,6 +2,7 @@
 summary: "Tim Ingold's 2023 essay argues that wisdom (turning toward an uncertain world and paying attention) is opposed to knowledge (turning away to secure prediction), that uncertainty is the excess that makes possibility real, and that not-knowing is a form of wisdom rather than ignorance."
 tags: [tim-ingold, attention, knowledge-and-wisdom, not-knowing, uncertainty, possibility, correspondence, walking, anthropology-of-perception]
 last_updated: 2026-07-07
+level: canon
 sources: [ingold-2023-possible-world-abstract-and-keywords, ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom, ingold-2023-possible-world-turn-towards-world-uncertainty-possibility, ingold-2023-possible-world-potential-fulfilment-doing-undergoing, ingold-2023-possible-world-two-sides-of-attention-falling-forwards, ingold-2023-possible-world-passage-of-generations-astonishment-surprise, ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning, ingold-2023-possible-world-real-problems-real-freedom-conclusion, ingold-2023-possible-world-back-matter-references]
 ---
 # On Not Knowing and Paying Attention

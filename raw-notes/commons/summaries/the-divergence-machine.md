@@ -2,6 +2,7 @@
 summary: "Venkatesh Rao's introductory essay for his 2026 Contraptions Book Club, laying out a grand theory of world machines — the modernity machine now declining and the divergence machine now ascending — and a taxonomy of the intellectual currents inhabiting this transition (late modernity, postmodernity, metamodernity, divergentism)."
 tags: [world-machines, modernity, divergence, venkatesh-rao, historical-theory, canonicity, gramsci-gap, postmodernity, metamodernity]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Divergence Machine: Introducing the 2026 Book Club Theme

@@ -2,6 +2,7 @@
 summary: "Karl Weick's 1995 ASQ response to Sutton and Staw argues that most theory in organizational studies is approximation, and that the five 'not theory' article elements (references, data, lists, diagrams, hypotheses) are better understood as stages in an ongoing theorizing process."
 tags: [theory, theorizing, organizational-studies, epistemology, weick, sensemaking, philosophy-of-science]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # What Theory Is Not, Theorizing Is

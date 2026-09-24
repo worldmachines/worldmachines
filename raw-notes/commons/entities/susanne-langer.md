@@ -2,6 +2,7 @@
 summary: "American philosopher of mind and symbolism whose account of experience as a construction — not a recording — of reality is the epistemological premise underlying Tuan's experiential perspective."
 tags: [susanne-langer, philosophy-of-mind, symbolism, experience, epistemology, feeling]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Susanne Langer (1895–1985)

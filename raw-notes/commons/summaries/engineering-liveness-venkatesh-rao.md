@@ -2,6 +2,7 @@
 summary: "Venkatesh Rao uses the 'useless machine' — a device whose sole function is to turn itself off — as a minimal model of liveness, arguing that capture resistance is life's foundational property and that 'New Nature' is a regime of technological ecology as murderously competitive as Darwin's tangled bank."
 tags: [liveness, technology, new-nature, gramsci-gap, darwinism, philosophy-of-life]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Engineering Liveness — Venkatesh Rao (2026)

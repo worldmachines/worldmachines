@@ -2,6 +2,7 @@
 summary: "Sathe argues that combining domain experts, large language models, and knowledge graphs creates a composite material capable of accelerating fields like healthcare that have historically resisted Wright's Law efficiency gains."
 tags: [knowledge-graphs, llm, expertise, wrights-law, healthcare-ai, curiosity, composite-ai]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Dancing on the Shoulders of Giants

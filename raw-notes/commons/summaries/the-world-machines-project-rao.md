@@ -2,6 +2,7 @@
 summary: "Venkatesh Rao's announcement of the World Machines Project — a collaborative nonfiction extended universe built around the World Machines framework, growing out of the Contraptions Book Club."
 tags: [world-machines, venkatesh-rao, framework, big-history, collaborative-writing]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The World Machines Project

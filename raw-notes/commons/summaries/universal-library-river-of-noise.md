@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe's essay tracing the myth of the universal library from Alexandria through LLMs, arguing that noise in information systems is generative rather than purely destructive."
 tags: [universal-library, knowledge-systems, LLMs, epistemology, information-theory, wikipedia, noise]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Universal Library in the River of Noise

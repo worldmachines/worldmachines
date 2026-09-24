@@ -2,6 +2,7 @@
 summary: "Chilean biologist and cognitive scientist (1928–2021); with Francisco Varela developed autopoiesis theory, the biology of cognition, and structural coupling — foundational for systems theory, embodied cognition, and Bryant's machine ontology."
 tags: [maturana, autopoiesis, structural-coupling, biology-of-cognition, systems-theory, chile]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Humberto Maturana

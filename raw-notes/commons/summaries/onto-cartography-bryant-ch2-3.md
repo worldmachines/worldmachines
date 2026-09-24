@@ -2,6 +2,7 @@
 summary: "Bryant's account of machines as operational systems (Ch 2) and the alien phenomenology of non-human structural openness (Ch 3)."
 tags: [bryant, onto-cartography, machines, ooo, phenomenology, materialism]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Onto-Cartography Ch 2–3: What Is a Machine? / Alien Phenomenology

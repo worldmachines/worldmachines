@@ -2,6 +2,7 @@
 summary: "French philosopher (1926–1984) whose analytics of power/knowledge, genealogy of disciplinary institutions, and concept of biopolitics have been foundational for critical theory; Bryant's gravity framework extends and partially critiques Foucault by adding the non-discursive, material-infrastructural dimension of power."
 tags: [Foucault, power, discourse, genealogy, biopolitics, discipline, critical-theory, institutions, post-structuralism]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Michel Foucault (1926–1984)

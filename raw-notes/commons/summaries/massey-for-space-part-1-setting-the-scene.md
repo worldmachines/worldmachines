@@ -2,6 +2,7 @@
 summary: "Part One of Massey's For Space (2005) opens the case for a relational, open, and always-in-process conception of space by diagnosing three persistent failures of spatial imagination and offering three propositions as the corrective."
 tags: [massey, for-space, space, relational-ontology, coexisting-heterogeneity, summary, geography, spatial-politics]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Massey, *For Space* — Part One: Setting the Scene

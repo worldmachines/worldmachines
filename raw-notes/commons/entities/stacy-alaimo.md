@@ -2,6 +2,7 @@
 summary: "American feminist environmental humanities scholar who developed the concept of 'trans-corporeality' — the inseparability of human bodies from their more-than-human material environment — cited by Bryant as a key concept for inter-machine material entanglement."
 tags: [alaimo, trans-corporeality, ecofeminism, environmental-humanities, materialism, bodies]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Stacy Alaimo

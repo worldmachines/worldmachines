@@ -2,6 +2,7 @@
 summary: "Venkatesh Rao is the author of the Ribbonfarm and Contraptions newsletters, known for machinic, systems-oriented frameworks applied to history, technology, and culture; key concepts in this wiki include the Divergence Machine, Configurancy, and Liveness."
 tags: [thinker, blogger, systems-thinking, contraptions, world-machines, ribbonfarm, divergence-machine, configurancy, process-philosophy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Venkatesh Rao

@@ -2,6 +2,7 @@
 summary: "Alex Mayyasi argues that Baumol's cost disease is the underappreciated structural cause of America's rising social isolation — making communal, labor-intensive experiences increasingly expensive while scalable, solitude-inducing products get cheaper."
 tags: [baumol-cost-disease, social-isolation, economics, third-places, technology, political-economy]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Why 'Cost Disease' Is the Secret Force Behind America's Toxic Solitude

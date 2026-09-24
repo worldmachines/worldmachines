@@ -2,6 +2,7 @@
 summary: "Chinese-American humanistic geographer whose phenomenological account of Space and Place — space as freedom/disorientation, place as security/rootedness — provides the geographical foundation for Sathe's epistemic theory of shelter."
 tags: [yi-fu-tuan, humanistic-geography, phenomenology, space, place, experience]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Yi-Fu Tuan

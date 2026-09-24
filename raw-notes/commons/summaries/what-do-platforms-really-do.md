@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe argues that digital platforms are the direct descendants of merchant-entrepreneurs and factory owners, resurrecting the boss function for the digital age through algorithmic management, creative risk-shifting, and rhetorical obfuscation."
 tags: [platforms, labor, algorithmic-management, political-economy, creative-economy, putting-out-system]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # What Do Platforms Really Do?

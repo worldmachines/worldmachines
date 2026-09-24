@@ -2,6 +2,7 @@
 summary: "Johann Georg Hamann (1730–1788), 'the Magus of the North,' was the founding anti-rationalist of the German counter-Enlightenment, arguing that all truth is particular, language precedes reason, and passion gives life to abstractions that reason kills."
 tags: [hamann, counter-enlightenment, anti-rationalism, language, faith, pietism, sturm-und-drang, berlin]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Johann Georg Hamann (1730–1788)

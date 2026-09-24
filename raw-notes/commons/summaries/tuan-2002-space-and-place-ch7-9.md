@@ -2,6 +2,7 @@
 summary: "Primary-text summary of Tuan's Space and Place Chapters 7–9: mythical space as cosmological matrix, architecture as crystallized awareness, and time as the animating dimension of experiential place."
 tags: [yi-fu-tuan, humanistic-geography, phenomenology, mythical-space, architecture, time, sacred-space, cosmology, place, space]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Tuan, *Space and Place: The Perspective of Experience* — Chapters 7–9

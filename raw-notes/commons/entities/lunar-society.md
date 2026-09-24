@@ -2,6 +2,7 @@
 summary: "The Lunar Society of Birmingham (c. 1765–1813) — an informal network of industrialists, scientists, and philosophers who met monthly; cited as an early institution of the Divergence Machine's pluralist, experimental ethos."
 tags: [lunar-society, josiah-wedgwood, divergence-machine, industrial-revolution, pluralism, modernity]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Lunar Society of Birmingham

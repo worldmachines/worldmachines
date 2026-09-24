@@ -2,6 +2,7 @@
 summary: "French psychoanalyst and political philosopher (1930–1992); with Deleuze developed anti-psychiatry, schizoanalysis, and assemblage theory; his ecosophical and media-ecological late work anticipates post-human media theory."
 tags: [guattari, deleuze-guattari, assemblage, schizoanalysis, ecosophy, french-philosophy, media-ecology]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Félix Guattari

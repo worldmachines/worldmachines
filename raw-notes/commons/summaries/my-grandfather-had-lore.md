@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe argues that degrading search quality and hallucinating LLMs may produce a civilizational regression toward lore — informal oral expertise — as the default mode of accessing reliable information."
 tags: [information-access, llm, search, explainable-ai, lore, hallucination]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore

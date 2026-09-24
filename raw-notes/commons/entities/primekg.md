@@ -2,6 +2,7 @@
 summary: "A multimodal precision medicine knowledge graph that integrates multiple domain-specific KGs to enable cross-domain clinical reasoning — cited as an example of the kind of shared knowledge infrastructure that could accelerate healthcare."
 tags: [knowledge-graphs, precision-medicine, drug-discovery, clinical-ai, datasets]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # PrimeKG

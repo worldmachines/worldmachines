@@ -2,6 +2,7 @@
 summary: "Ibn Khaldun (1332-1406) is reread by Rao not as a proto-sociologist ahead of his time but as a depressed Arab Petrarch — a diagnostic chronicler of civilizational exhaustion rather than an inaugurator of a new science."
 tags: [thinker, historian, ibn-khaldun, medieval, cyclical-history, islamic-civilization]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Ibn Khaldun (1332-1406)

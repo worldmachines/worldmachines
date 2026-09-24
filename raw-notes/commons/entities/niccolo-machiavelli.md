@@ -2,6 +2,7 @@
 summary: "Florentine political thinker (1469–1527); in this wiki he appears primarily not as political theorist but as exemplar of the studiolo practice — nightly ritual of intellectual communion with ancient authors."
 tags: [Renaissance, political-philosophy, Italy, humanism, studiolo]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Niccolò Machiavelli

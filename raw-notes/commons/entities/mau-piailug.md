@@ -2,6 +2,7 @@
 summary: "Satawalese master navigator (c. 1932–2010). Last practitioner of traditional Polynesian non-instrument long-distance wayfinding at the time the craft was revived. Navigated the 1976 Hōkūleʻa voyage from Hawai'i to Tahiti, reopening a practice that had been lost in native Hawaiian tradition for about six centuries, and trained Nainoa Thompson, who in 1980 became the first native Hawaiian long-distance wayfinder in that span."
 tags: [navigator, polynesia, satawal, wayfinding, hokulea]
 last_updated: 2026-04-23
+level: canon
 ---
 
 # Pius "Mau" Piailug (c. 1932–2010)

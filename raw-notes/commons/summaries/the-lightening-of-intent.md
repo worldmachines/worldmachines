@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe's essay 'The Lightening of Intent' (2026), a Contraptions Book Club piece arguing that the cost of putting an idea into the world has fallen ~5 orders of magnitude across 25 centuries while the energy rate density of the underlying system has risen monotonically — and that the next bottleneck after atoms and ideas is intent itself, contingent on whether the fossil-to-solar energy transition holds."
 tags: [essay, world-machines, energy-rate-density, intent, divergence-machine, liveness-machine, eroi, author-aneesh-sathe]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # The Lightening of Intent — Summary

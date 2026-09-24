@@ -2,6 +2,7 @@
 summary: "Levi R. Bryant is an American philosopher working in Speculative Realism and Object-Oriented Ontology; his 'machine-oriented ontology' argues that all entities — material and immaterial — are machines that operate on inputs and produce outputs, forming ecologies through structural coupling."
 tags: [Bryant, OOO, speculative-realism, ontology, materialism, machines, media]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Levi R. Bryant

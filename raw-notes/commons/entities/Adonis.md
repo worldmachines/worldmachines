@@ -2,6 +2,7 @@
 summary: "Syrian-Lebanese poet (b. 1930, Ali Ahmad Said Esber), one of the most significant voices in modern Arabic literature, whose persona Mihyar and practice of the iltifat (sudden turn away) Sathe reads as a deliberate architecture of illegibility against nationalist and religious control."
 tags: [adonis, arabic-poetry, mihyar, iltifat, resistance, identity, modernism, levant]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Adonis

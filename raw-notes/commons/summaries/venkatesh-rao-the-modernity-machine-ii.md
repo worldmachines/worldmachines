@@ -2,6 +2,7 @@
 summary: "A mid-year book club update in which Rao refines his world-machine periodization thesis, using global parallel examples (Battle of Talikota, Indian Reformation movements) to illustrate horizontal history in action."
 tags: [venkatesh-rao, modernity, horizontal-history, world-machines, contraptions, book-club]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Modernity Machine II (Rao, Jun 2025)

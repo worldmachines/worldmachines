@@ -2,6 +2,7 @@
 summary: "A leading US academic medical center cited as a flagship institution treating knowledge graphs as the path forward for clinical AI — representing the vanguard of healthcare's adoption of structured knowledge infrastructure."
 tags: [healthcare, institutions, knowledge-graphs, clinical-ai, medical-research]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Mayo Clinic

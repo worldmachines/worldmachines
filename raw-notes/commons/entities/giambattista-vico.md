@@ -2,6 +2,7 @@
 summary: "Giambattista Vico (1668–1744) was a Neapolitan philosopher who argued that each civilization must be understood from within through imaginative participation — a proto-hermeneutic challenge to Enlightenment universalism."
 tags: [vico, counter-enlightenment, hermeneutics, historical-understanding, berlin, fantasia, verum-ipsum-factum, cultural-incommensurability]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Giambattista Vico

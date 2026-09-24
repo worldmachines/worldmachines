@@ -2,6 +2,7 @@
 summary: "American video game theorist, designer, and philosopher; co-developer with Bryant of the extended media concept; his 'alien phenomenology' — how non-human entities observe and interact with the world — is adopted in Bryant's Onto-Cartography Ch. 3."
 tags: [Bogost, OOO, alien-phenomenology, video-games, media, flat-ontology]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Ian Bogost

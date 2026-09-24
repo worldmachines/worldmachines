@@ -2,6 +2,7 @@
 summary: "Joseph de Maistre (1753–1821) was the darkest voice of the counter-revolutionary counter-Enlightenment, arguing that men are naturally evil and destructive, that authority must be absolute and irrational, and that all social order ultimately rests on the executioner."
 tags: [maistre, counter-enlightenment, counter-revolution, authoritarianism, fascism-precursor, anti-rationalism, berlin]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Joseph de Maistre (1753–1821)

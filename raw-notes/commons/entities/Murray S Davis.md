@@ -2,6 +2,7 @@
 summary: "American sociologist at Northern Illinois University who proposed that theories succeed by being interesting (denying specific assumptions) rather than true, and catalogs 12 logical categories of interesting propositions."
 tags: [sociology, epistemology, theory, interestingness]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Murray S. Davis

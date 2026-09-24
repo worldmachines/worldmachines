@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe argues from product experience that AI must be 'explainable enough' — calibrated to the cognitive level of the domain expert user — rather than fully transparent or fully opaque, yielding an AI-human causal prediction machine."
 tags: [explainable-ai, human-computer-interaction, deep-learning, product-design, medical-ai, user-experience]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # AI: Explainable Enough

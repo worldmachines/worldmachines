@@ -2,6 +2,7 @@
 summary: "Argues that people select philosophical frameworks matching their current degree of identity disruption, using Kierkegaard's anxiety as the generative motor."
 tags: [philosophy, identity, anxiety, kierkegaard, GTD, productivity, epistemology]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Plato Plateau

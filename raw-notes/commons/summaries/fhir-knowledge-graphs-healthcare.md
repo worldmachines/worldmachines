@@ -2,6 +2,7 @@
 summary: "Sathe argues that standard RAG fails healthcare's complexity and proposes pairing FHIR-structured knowledge graphs with advanced RAG and AI agents to produce explainable, context-aware clinical AI."
 tags: [healthcare-ai, rag, fhir, knowledge-graphs, ai-agents, explainability]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents

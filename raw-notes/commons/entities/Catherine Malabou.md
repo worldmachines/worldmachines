@@ -2,6 +2,7 @@
 summary: "French philosopher and theorist of neuroplasticity whose distinction between flexibility and plasticity provides Sathe the vocabulary for the cognitive response required in the divergence machine era."
 tags: [catherine-malabou, plasticity, flexibility, neurophilosophy, brain, hegel, derrida]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Catherine Malabou

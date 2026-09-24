@@ -2,6 +2,7 @@
 summary: "An AI-powered search and answer engine that attempts to restore citations to LLM-generated responses — cited by Sathe as the most credible attempt to address the citation problem in LLMs, though with skepticism about whether it solves the underlying trust issue."
 tags: [search, llm, citations, ai-products, information-access]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Perplexity AI

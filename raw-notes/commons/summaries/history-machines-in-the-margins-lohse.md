@@ -2,6 +2,7 @@
 summary: "Florian Lohse uses the Majapahit empire and a Singapore airport layover to illustrate Venkatesh Rao's 'history machine' thesis: modernity emerges not from singularly great men but from distributed components assembling silently across centuries until paradigm shift suddenly arrives."
 tags: [history-machines, modernity, majapahit, historiography, periodization, rao]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # History Machines in the Margins — Florian Lohse (2025)

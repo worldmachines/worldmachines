@@ -2,6 +2,7 @@
 summary: "Andrew Gelman is a statistician at Columbia, author of the Statistical Modeling, Causal Inference, and Social Science blog, known for Bayesian methodology, critiques of p-hacking, and unusually direct engagement with the sociology of science."
 tags: [statistician, bayesian, columbia, science-sociology, collaboration, statistics, stan]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Andrew Gelman

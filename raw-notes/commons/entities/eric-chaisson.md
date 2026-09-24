@@ -2,6 +2,7 @@
 summary: "Eric Chaisson is a Harvard astrophysicist and cosmologist who developed the 'cosmic evolution' framework and the energy rate density metric as a universal, empirically grounded measure of complexity across physical, biological, and cultural systems."
 tags: [chaisson, astrophysics, complexity, big-history, cosmic-evolution]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Eric Chaisson

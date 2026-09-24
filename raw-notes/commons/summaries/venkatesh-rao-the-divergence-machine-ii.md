@@ -2,6 +2,7 @@
 summary: "Rao introduces the 'Argument of Progress' as the Divergence Machine's alternative to Fiat Progress narratives, using Spinoza vs. Leibniz and Hume vs. Smith to trace how Progress became a non-stationary, pluralist, reality-driven argument."
 tags: [venkatesh-rao, divergence-machine, progress, spinoza, leibniz, hume, adam-smith, contraptions, book-club]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Divergence Machine II: Progress as a Non-Stationary Argument (Rao, Feb 2026)

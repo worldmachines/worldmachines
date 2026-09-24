@@ -2,6 +2,7 @@
 summary: "AI researcher and educator, co-founder of Coursera and Google Brain, most recently known for the 'Data-Centric AI' framework which argues that improving data quality typically outperforms improving model architecture."
 tags: [AI, machine-learning, data-science, education]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Andrew Ng

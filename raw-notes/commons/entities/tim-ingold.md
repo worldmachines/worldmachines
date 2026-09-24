@@ -2,6 +2,7 @@
 summary: "British social anthropologist whose relational vocabulary of correspondence, wayfaring, lines, and the education of attention offers a phenomenological counter-idiom to the World Machines legibility frame."
 tags: [tim-ingold, anthropology, correspondence, wayfaring, education-of-attention, phenomenology, process-philosophy, counter-modern]
 last_updated: 2026-07-07
+level: canon
 sources: [ingold-2023-possible-world-abstract-and-keywords, ingold-2023-possible-world-man-in-the-moon-knowledge-and-wisdom, ingold-2023-possible-world-potential-fulfilment-doing-undergoing, ingold-2023-possible-world-two-sides-of-attention-falling-forwards, ingold-2023-possible-world-passage-of-generations-astonishment-surprise, ingold-2023-possible-world-correspondence-interaction-understanding-undercommoning, ingold-2023-possible-world-real-problems-real-freedom-conclusion, ingold-2023-possible-world-back-matter-references]
 ---
 # Tim Ingold

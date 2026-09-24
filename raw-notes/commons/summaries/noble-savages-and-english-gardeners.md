@@ -2,6 +2,7 @@
 summary: "Franz Kempf's scholarly argument that Kulturkritik is not a simple nature-vs-culture binary but a self-reflexive rhetorical mode that uses antithetical scenarios to 'heal from culture through culture,' tracing this paradox through Rousseau, Schiller, and Goethe via the figure of the garden."
 tags: [kulturkritik, enlightenment, nature-culture, rousseau, schiller, goethe, garden, self-alienation]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Noble Savages and English Gardeners: Kulturkritik from Rousseau to Goethe

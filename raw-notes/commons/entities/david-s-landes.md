@@ -2,6 +2,7 @@
 summary: "Harvard economic historian whose 1986 essay 'What Do Bosses Really Do?' provided the historical framework for understanding the essential coordinating function of managers and entrepreneurs — used by Aneesh Sathe as the analytical template for platform economics. His 1983 *Revolution in Time: Clocks and the Making of the Modern World* — now fully ingested across 24 reading notes — argues the clock was demand-pulled into existence by monastic time-discipline, documents the incumbency-failure chain across seven centuries of horology, and supplies the design-climbs-the-stack thesis in Sathe's Not My Lever (2026)."
 tags: [economic-history, labor, management, platforms, industrial-revolution, watchmaking, revolution-in-time, horology, time-discipline]
 last_updated: 2026-06-10
+level: canon
 sources: [rit-01-preface, rit-02-introduction, rit-03-a-magnificent-dead-end, rit-05-are-you-sleeping-brother-john, rit-06-the-greatest-necessity, rit-07-my-time-is-my-time, rit-12-the-french-connection, rit-13-fame-is-the-spur, rit-16-ups-and-downs-of-international-competition, rit-20-ah-but-he-could, rit-23-the-quartz-revolution-i]
 ---
 

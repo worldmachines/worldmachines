@@ -2,6 +2,7 @@
 summary: "Two parallel threads: a paper arguing current AI agents are insufficient (proposing 'Sims' as user-representing companions), and a meditation on the Renaissance studiolo as a model for private intellectual space and self-cultivation."
 tags: [AI-agents, studiolo, Machiavelli, Montaigne, self-cultivation, principal-agent, knowledge-work]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Jan 10, 2025 - AI Agents, Machiavelli's Study

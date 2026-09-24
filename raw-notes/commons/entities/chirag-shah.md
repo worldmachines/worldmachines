@@ -2,6 +2,7 @@
 summary: "Researcher in information retrieval and AI; co-author (with Ryen White) of 'Agents Are Not Enough' (2024), which argues for user-representing AI companions ('Sims') to address the principal-agent problem in agentic AI."
 tags: [AI, information-retrieval, agents, research, UW]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Chirag Shah

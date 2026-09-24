@@ -2,6 +2,7 @@
 summary: "Søren Kierkegaard (1813–1855), Danish philosopher and proto-existentialist, whose conception of anxiety as the dizziness of freedom is foundational to The Plato Plateau."
 tags: [philosophy, existentialism, anxiety, identity, denmark, 19th-century]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Kierkegaard

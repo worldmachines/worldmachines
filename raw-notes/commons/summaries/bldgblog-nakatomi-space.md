@@ -2,6 +2,7 @@
 summary: "Geoff Manaugh coins 'Nakatomi space' — the hidden near-infinite interior of buildings traversable through non-architectural means — drawing a direct line from Die Hard to the IDF's 2002 'walking through walls' tactic in Nablus as documented by Eyal Weizman."
 tags: [architecture, space, tactical-urbanism, military-urbanism, nakatomi-space, eyal-weizman, die-hard, parkour, infrastructure]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Nakatomi Space

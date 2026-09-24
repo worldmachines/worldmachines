@@ -2,6 +2,7 @@
 summary: "Venezuelan-American physicist and information scientist whose work reframes economic development as the growth of information embodied in products — 'crystallized imagination.'"
 tags: [economist, physicist, complexity, information, entity]
 last_updated: 2026-04-10
+level: canon
 ---
 
 # Cesar Hidalgo

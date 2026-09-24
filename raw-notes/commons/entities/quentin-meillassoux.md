@@ -2,6 +2,7 @@
 summary: "French philosopher associated with Speculative Realism; author of After Finitude (2008), which introduced the concept of correlationism and argued for the speculative necessity of contingency."
 tags: [Meillassoux, speculative-realism, correlationism, ontology, mathematics, French-philosophy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Quentin Meillassoux

@@ -2,6 +2,7 @@
 summary: "Hungarian-Australian philosopher (1934–1999) whose posthumous account of powers and dispositions provides Bryant with the five-feature framework for machine powers in onto-cartography."
 tags: [molnar, powers, dispositions, philosophy-of-science, metaphysics, causation]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # George Molnar

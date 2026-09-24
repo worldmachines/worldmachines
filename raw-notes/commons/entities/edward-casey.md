@@ -2,6 +2,7 @@
 summary: "American phenomenologist of place (b. 1939) whose sustained argument that place is the primary and irreducible condition of all experience — a generator of identity, not a container — makes him the closest philosophical ally to Sathe's spatial epistemology."
 tags: [casey, phenomenology, place, identity, embodiment, philosophy, spatial-philosophy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Edward Casey (b. 1939)

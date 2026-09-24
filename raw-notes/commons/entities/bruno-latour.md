@@ -2,6 +2,7 @@
 summary: "French philosopher and sociologist of science; originator of Actor-Network Theory (ANT); argues that modernity is premised on a false partition between nature and culture that has never actually been enacted — we have never been modern."
 tags: [latour, ant, actor-network-theory, sociology-of-science, materialism, modernity, nature-culture]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Bruno Latour (1947–2022)

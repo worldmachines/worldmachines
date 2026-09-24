@@ -2,6 +2,7 @@
 summary: "Michel de Montaigne (1533–1592), French Renaissance writer who invented the personal essay form and modeled a philosophy of frank self-examination and epistemic humility."
 tags: [montaigne, essay, renaissance, philosophy, france, self-knowledge, epistemology]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Michel de Montaigne

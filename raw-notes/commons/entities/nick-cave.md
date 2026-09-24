@@ -2,6 +2,7 @@
 summary: "Australian musician and writer whose open letter arguing that AI creativity is soulless became an unexpected entry point for Sathe's argument about taste as an irreducibly experience-dependent faculty."
 tags: [music, creativity, ai-critique, culture, letters]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Nick Cave

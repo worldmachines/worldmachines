@@ -2,6 +2,7 @@
 summary: "A short essay arguing that books are categorically different from digital reading — they are 'dwellings' rather than billboard-flashes — and that a book club transforms reading from solitary residence into shared architectural exploration."
 tags: [books, reading, attention, book-club, social-reading, digital-vs-print, dwelling]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Books Are Dwellings

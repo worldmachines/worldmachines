@@ -2,6 +2,7 @@
 summary: "Islamic legal and religious scholars who shaped law and public morality across pre-modern Islamic states through interpretive authority — an antimemetic power operating within the bureaucracy rather than above it."
 tags: [history, Islam, law, governance, religious-authority, medieval]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Ulama

@@ -2,6 +2,7 @@
 summary: "Byung-Chul Han (b. 1959), Korean-German philosopher of technology and culture, known for diagnostic essays on transparency, burnout, and the commodification of narrative."
 tags: [han, philosophy, technology, culture, narrative, burnout, capitalism, germany]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Byung-Chul Han

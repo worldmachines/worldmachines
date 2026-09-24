@@ -2,6 +2,7 @@
 summary: "Diagnoses social media's failure as a mismatch between information hunger (a biological need for orientation) and the noise-maximizing incentives of platform companies, proposing Socratic inquiry as the corrective posture."
 tags: [social-media, information, orientation, biology, Socratic-method, Hank-Green, printing-press, waldenponding]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Social Internet — Lost and Hungry

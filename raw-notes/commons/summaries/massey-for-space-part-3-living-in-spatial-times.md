@@ -2,6 +2,7 @@
 summary: "Part Three of Massey's *For Space* (2005): five chapters arguing that modernity and neoliberal globalisation both repress space by converting coexisting spatial difference into a single temporal queue — and that the dominant 'aspatial globalisation' narrative is a political weapon, not a description."
 tags: [massey, for-space, modernity, globalisation, coevalness, power-geometry, fabian]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Massey, *For Space* (2005) — Part Three: Living in Spatial Times?

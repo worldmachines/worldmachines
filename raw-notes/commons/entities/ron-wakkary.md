@@ -2,6 +2,7 @@
 summary: "Canadian design researcher (b. 1960s) whose concept of 'more-than-human design' argues that designed things exceed their designers' intentions and must be understood as participants in ongoing relationships rather than completed objects."
 tags: [wakkary, design, more-than-human, things, unselfconscious-design, design-research, technology]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Ron Wakkary

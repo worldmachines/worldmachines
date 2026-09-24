@@ -2,6 +2,7 @@
 summary: "American physicist (1912–1997). Nobel laureate (1952, NMR). Author of 'Life at Low Reynolds Number' (1977), the source of the scallop theorem and one of the clearest physics essays of the twentieth century."
 tags: [physicist, nobel-laureate, harvard, nmr, fluid-dynamics, purcell]
 last_updated: 2026-04-23
+level: canon
 ---
 
 # Edward Mills Purcell (1912–1997)

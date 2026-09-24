@@ -2,6 +2,7 @@
 summary: "French Marxist philosopher (1901–1991) whose theory of the social production of space — especially the spatial triad and the critique of abstract space — provides the structural framework for understanding modernity's spatial condition."
 tags: [lefebvre, marxism, space, urbanism, phenomenology, critical-theory, french-philosophy]
 last_updated: 2026-04-27
+level: canon
 ---
 
 # Henri Lefebvre (1901–1991)

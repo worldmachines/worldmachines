@@ -2,6 +2,7 @@
 summary: "Harold Bloom (1930–2019) — Yale literary critic, champion of the Western Canon, author of The Anxiety of Influence; best understood as a mystical thinker in the Kabbalistic-Romantic tradition rather than a conventional academic critic."
 tags: [harold-bloom, literary-criticism, western-canon, anxiety-of-influence, romanticism, shakespeare, kabbalah, yale]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Harold Bloom

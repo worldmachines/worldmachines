@@ -2,6 +2,7 @@
 summary: "Evolutionary anthropologist and statistician at the Max Planck Institute, author of 'Statistical Rethinking' — a Bayesian methods textbook that grounds causal inference in scientific epistemology and argues for honesty about model assumptions."
 tags: [bayesian-statistics, causal-inference, scientific-method, statistics, epistemology]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Richard McElreath

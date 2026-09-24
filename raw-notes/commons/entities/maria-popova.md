@@ -2,6 +2,7 @@
 summary: "Maria Popova is the founder of The Marginalian (formerly Brain Pickings) — a long-form blog synthesizing ideas from literature, science, philosophy, and art, known for deep excavations of forgotten works and an emphasis on how to live."
 tags: [blogger, essayist, synthesis, culture, marginalian, brain-pickings, russell, unselfing]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Maria Popova

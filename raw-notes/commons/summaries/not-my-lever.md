@@ -2,6 +2,7 @@
 summary: "Aneesh Sathe's essay 'Not My Lever — The Last Container' (2026), arguing that as metaphysical containers have receded across two millennia, modern individuals face a surface of concern five orders of magnitude wider than the cohort psychology was built for, and that the discipline of refusing most levers — paired with a thicket that gives the kept ones real feedback — is the working mode of the Liveness era."
 tags: [essay, world-machines, liveness-era, lever-discipline, thicket, containers, secularization, auteuring, marcus-aurelius, author-aneesh-sathe]
 last_updated: 2026-05-12
+level: canon
 ---
 
 # Not My Lever — Summary

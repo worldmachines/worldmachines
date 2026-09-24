@@ -2,6 +2,7 @@
 summary: "Vaughn Tan — academic, consultant, and author focused on organizational uncertainty and innovation; creator of the Four Questions of Uncertainty framework used by Commoncog for AI sensemaking."
 tags: [vaughn-tan, uncertainty, strategy, not-knowing, sensemaking, consulting, innovation]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Vaughn Tan

@@ -2,6 +2,7 @@
 summary: "Argues that the 'tortured artist' archetype — solitary, suffering, perfecting — is an artifact of print culture that LLMs and collaborative creative forms are rendering obsolete; what replaces it is courage, commitment, and collaborative risk-taking."
 tags: [creativity, llm, authorship, collaboration, print-culture, risk, cloister-web, venkatesh-rao, gelman]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # The Tortured Artist Is So Yesterday

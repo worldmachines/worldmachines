@@ -2,6 +2,7 @@
 summary: "German Romantic poet-philosopher (1772-1801) whose Allgemeine Brouillon proposed a 'Romantic Encyclopaedia' that synthesized knowledge through analogy while preserving domain distinctiveness — articulating the key distinction between homogenization and free interconnection."
 tags: [romanticism, jena-circle, encyclopedistics, analogy, counter-enlightenment]
 last_updated: 2026-04-09
+level: canon
 ---
 
 # Novalis
