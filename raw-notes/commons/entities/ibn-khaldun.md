@@ -1,8 +1,9 @@
 ---
 summary: "Ibn Khaldun (1332-1406) is reread by Rao not as a proto-sociologist ahead of his time but as a depressed Arab Petrarch — a diagnostic chronicler of civilizational exhaustion rather than an inaugurator of a new science."
 tags: [thinker, historian, ibn-khaldun, medieval, cyclical-history, islamic-civilization]
-last_updated: 2026-04-09
+last_updated: 2026-09-24
 level: canon
+sources: [ortega-revolt-of-the-masses-ch13-the-greatest-danger-the-state, ortega-revolt-of-the-masses-ch10-primitivism-and-history, ortega-revolt-of-the-masses-endnotes]
 ---
 
 # Ibn Khaldun (1332-1406)
@@ -40,6 +41,14 @@ This is a pointed claim: the Islamic world of the 14th century had the raw mater
 Ibn Khaldun's cyclical theory directly informs Sathe's essay on [[royalty-administration-and-antimemetics|Royalty, Administration, and Antimemetics]]. The *asabiyyah* cycle — desert cohesion → state-building → luxury → diffusion → collapse — maps onto the observation that antimemetic bureaucracies are a late-cycle phenomenon: the machinery outlasting the original driving force that built the state.
 
 Robert Irwin's *Ibn Khaldun: An Intellectual Biography* is cited as a source in Sathe's essay.
+
+## A Parallel Late-Cycle State: Ortega's Rome
+
+The observation above — antimemetic bureaucracy as a late-cycle phenomenon, “the machinery outlasting the original driving force that built the state” — has an independent statement in Ortega y Gasset's *The Revolt of the Masses* ([[ortega-revolt-of-the-masses]]).
+
+Ortega narrates Rome's end as a State-machine consuming its host: bureaucratization under the Antonines gives way to militarization under the Severi, the army must be recruited from foreigners, and those foreigners “take possession of the State.” His summary image — “The skeleton eats up the flesh around it. The scaffolding becomes the owner and tenant of the house” — is offered as the historical proof that State intervention, once it absorbs spontaneous social effort, leaves the State “bloodless, a skeleton, dead with that rusty death of machinery” ([[ortega-revolt-of-the-masses-ch13-the-greatest-danger-the-state]]). The endnotes add Septimius Severus's deathbed advice, “Remain united, pay the soldiers and take no heed of the rest,” as a specimen of naked late statecraft (n. 42), and a thirty-year generational rhythm of revolutionary and restorationist cohorts (n. 32) as Ortega's own periodizing model ([[ortega-revolt-of-the-masses-endnotes]]).
+
+The fit is partial. Ibn Khaldun's cycle is dynastic and turns on the decay of group cohesion; Ortega's is a single arc driven by the demands of a population that wants the State to do everything, and he insists Europe's crisis inverts Rome's — Rome “came to an end for lack of technique,” Europe fails because men cannot keep pace with their own civilization ([[ortega-revolt-of-the-masses-ch10-primitivism-and-history]]). What the two share is the late-cycle figure of an apparatus that persists and intensifies after the vitality that built it has gone. See [[civilization-undone-by-its-own-success]].
 
 ## Connections
 
