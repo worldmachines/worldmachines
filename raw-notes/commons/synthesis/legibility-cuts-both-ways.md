@@ -46,4 +46,4 @@ The case is also a favourable one. Humboldt was self-funded for the crucial deca
 
 ## Related
 
-- [[legibility-as-machine-core]] · [[modernity-machine]] · [[world-machines]] · [[Legibility]] · [[capture-resistance]] · [[naturgemalde]] · [[simon-bolivar]] · [[wulf-invention-of-nature]] · [[alexander-von-humboldt-wulf]] · [[maps-as-technologies-of-power]]
+- [[legibility-as-machine-core]] · [[modernity-machine]] · [[world-machines]] · [[Legibility]] · [[capture-resistance]] · [[naturgemalde]] · [[simon-bolivar]] · [[wulf-invention-of-nature]] · [[Alexander von Humboldt]] · [[maps-as-technologies-of-power]]
