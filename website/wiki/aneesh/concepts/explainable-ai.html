@@ -72,12 +72,12 @@
 <h2 id="historical-roots">Historical Roots</h2>
 <p>The XAI problem is old: <strong>MYCIN</strong> (1970s) was among the first medical expert systems and famously couldn&#x27;t explain its numerical reasoning to physicians. Despite decades of accumulated knowledge in philosophy, psychology, and cognitive science about how people form understanding, the XAI field as named emerged around 2016 and has been slow to incorporate that inheritance.</p>
 <h2 id="why-it-matters">Why It Matters</h2>
-<p>In Sathe&#x27;s framing (see <a class="wikilink" href="/wiki/aneesh/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a>), explainability is not a nice-to-have but the precondition for AI being usable in any domain where errors have consequences. The specific failure of LLMs is that they produce answers with high surface confidence but no verifiable provenance. Users &quot;instinctively accept&quot; confident outputs as truth — which is dangerous when the underlying source could be hallucinated.</p>
-<p>In <a class="wikilink" href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>, <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> are positioned as the primary mechanism delivering explainability: KGs store not just data but typed relationships and metadata, making reasoning paths auditable.</p>
+<p>In Sathe&#x27;s framing (see <a class="wikilink" href="/wiki/commons/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a>), explainability is not a nice-to-have but the precondition for AI being usable in any domain where errors have consequences. The specific failure of LLMs is that they produce answers with high surface confidence but no verifiable provenance. Users &quot;instinctively accept&quot; confident outputs as truth — which is dangerous when the underlying source could be hallucinated.</p>
+<p>In <a class="wikilink" href="/wiki/commons/summaries/dancing-on-the-shoulders-of-giants" title="Written [[Dancing on the Shoulders of Giants]], resolved to dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a>, <a class="wikilink" href="/wiki/aneesh/concepts/knowledge-graphs" title="Written [[Knowledge Graphs]], resolved to knowledge-graphs">Knowledge Graphs</a> are positioned as the primary mechanism delivering explainability: KGs store not just data but typed relationships and metadata, making reasoning paths auditable.</p>
 <h2 id="the-xai-credibility-gap">The XAI Credibility Gap</h2>
 <p>Most XAI research optimizes for <strong>technical faithfulness</strong> — does the explanation accurately represent the model&#x27;s internal mechanics? — rather than <strong>human usefulness</strong> — does the explanation improve decision quality? This is a field-level miscalibration documented in <a class="wikilink-wanted" href="/wiki/wanted/briefing-the-state-of-explainable-ai-xai" title="No note is called &quot;Briefing: The State of Explainable AI (XAI)&quot; yet — see who is asking for it">Briefing: The State of Explainable AI (XAI)</a>.</p>
 <h2 id="the-explainable-enough-standard">The &quot;Explainable Enough&quot; Standard</h2>
-<p><a class="wikilink" href="/wiki/aneesh/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> in <a class="wikilink" href="/wiki/aneesh/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a> offers a product-design corrective: pitch explanation at the <em>lowest level of detail the domain expert actually cares about</em> — neither full architecture nor bare verdict. The goal is an <a class="wikilink" href="/wiki/aneesh/concepts/ai-human-causal-prediction-machine" title="Written [[AI-Human Causal Prediction Machine]], resolved to ai-human-causal-prediction-machine">AI-Human Causal Prediction Machine</a> that surfaces intermediate features (causes) so the expert can confirm, catching AI errors before they become decisions.</p>
+<p><a class="wikilink" href="/wiki/commons/entities/aneesh-sathe" title="Written [[Aneesh Sathe]], resolved to aneesh-sathe">Aneesh Sathe</a> in <a class="wikilink" href="/wiki/commons/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a> offers a product-design corrective: pitch explanation at the <em>lowest level of detail the domain expert actually cares about</em> — neither full architecture nor bare verdict. The goal is an <a class="wikilink" href="/wiki/aneesh/concepts/ai-human-causal-prediction-machine" title="Written [[AI-Human Causal Prediction Machine]], resolved to ai-human-causal-prediction-machine">AI-Human Causal Prediction Machine</a> that surfaces intermediate features (causes) so the expert can confirm, catching AI errors before they become decisions.</p>
 <ul>
 <li>Too much: IoU scores and architecture details glaze over expert users</li>
 <li>Too little: verdict-only excludes the user from causal reasoning and raises regulatory risk</li>
@@ -99,7 +99,7 @@
 <p>XAI sits within a broader <strong><a class="wikilink-wanted" href="/wiki/wanted/responsible-ai-rai" title="No note is called &quot;Responsible AI (RAI)&quot; yet — see who is asking for it">Responsible AI (RAI)</a></strong> framework with four pillars: ethics, explainability, privacy/security, and trustworthiness as emergent property. Key distinction for human decision-makers: <strong>explanation</strong> (understanding AI internals) vs. <strong>justification</strong> (external evidence supporting output) — both required when a human must defend a choice.</p>
 <h2 id="mechanisms">Mechanisms</h2>
 <ul>
-<li><strong>Citation-backed generation</strong>: <a class="wikilink" href="/wiki/aneesh/entities/perplexity-ai" title="Written [[Perplexity AI]], resolved to perplexity-ai">Perplexity AI</a> attempts to retrofit citations onto LLM outputs; Sathe is cautiously skeptical.</li>
+<li><strong>Citation-backed generation</strong>: <a class="wikilink" href="/wiki/commons/entities/perplexity-ai" title="Written [[Perplexity AI]], resolved to perplexity-ai">Perplexity AI</a> attempts to retrofit citations onto LLM outputs; Sathe is cautiously skeptical.</li>
 <li><strong>KG-grounded retrieval</strong>: When the answer is retrieved from a knowledge graph rather than generated from latent weights, the path is traceable.</li>
 <li><strong>RAG pipelines</strong>: <a class="wikilink" href="/wiki/aneesh/concepts/retrieval-augmented-generation" title="Written [[Retrieval-Augmented Generation]], resolved to retrieval-augmented-generation">Retrieval-Augmented Generation</a> can improve explainability by grounding generation in retrieved passages, but basic RAG over flat text still obscures relational reasoning.</li>
 </ul>
@@ -121,7 +121,7 @@
 <li><a class="wikilink" href="/wiki/aneesh/concepts/seamful-design" title="Written [[Seamful Design]], resolved to seamful-design">Seamful Design</a> — strategic information design philosophy</li>
 <li><a class="wikilink-wanted" href="/wiki/wanted/responsible-ai-rai" title="No note is called &quot;Responsible AI (RAI)&quot; yet — see who is asking for it">Responsible AI (RAI)</a> — broader governance frame</li>
 <li><a class="wikilink" href="/wiki/aneesh/concepts/transparency-in-scientific-method" title="Written [[Transparency in Scientific Method]], resolved to transparency-in-scientific-method">Transparency in Scientific Method</a> — the parallel principle in statistical inference</li>
-<li>Sources: <a class="wikilink" href="/wiki/aneesh/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a>, <a class="wikilink" href="/wiki/aneesh/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a>, <a class="wikilink-wanted" href="/wiki/wanted/briefing-the-state-of-explainable-ai-xai" title="No note is called &quot;Briefing: The State of Explainable AI (XAI)&quot; yet — see who is asking for it">Briefing: The State of Explainable AI (XAI)</a></li>
+<li>Sources: <a class="wikilink" href="/wiki/commons/summaries/my-grandfather-had-lore" title="Written [[My Grandfather Had Lore]], resolved to my-grandfather-had-lore">My Grandfather Had Lore</a>, <a class="wikilink" href="/wiki/commons/summaries/ai-explainable-enough" title="Written [[AI: Explainable Enough]], resolved to ai-explainable-enough">AI: Explainable Enough</a>, <a class="wikilink-wanted" href="/wiki/wanted/briefing-the-state-of-explainable-ai-xai" title="No note is called &quot;Briefing: The State of Explainable AI (XAI)&quot; yet — see who is asking for it">Briefing: The State of Explainable AI (XAI)</a></li>
 </ul>
     </div>
     <p class="note-history">Last changed 12 May 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/8eb992efd74e1f6b8c964867b491dd8148e2386e">Seed raw-notes/aneesh/ with 742 matiswiki essays [trivial]</a></p>
@@ -136,13 +136,13 @@
     <div class="rail-block">
       <h2 class="rail-label"><span>What links here</span></h2>
       <ul class="rail-list">
-        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Aneesh</span></li>
-        <li><a href="/wiki/aneesh/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/dancing-on-the-shoulders-of-giants">Dancing on the Shoulders of Giants</a><span class="rail-where">Commons</span></li>
         <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">Aneesh</span></li>
-        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">Aneesh</span></li>
-        <li><a href="/wiki/aneesh/summaries/fhir-knowledge-graphs-healthcare">Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/summaries/fhir-knowledge-graphs-healthcare">Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents</a><span class="rail-where">Commons</span></li>
         <li><a href="/wiki/aneesh/concepts/retrieval-augmented-generation">Retrieval-Augmented Generation (RAG)</a><span class="rail-where">Aneesh</span></li>
-        <li><a href="/wiki/aneesh/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">Commons</span></li>
         <li><a href="/wiki/aneesh/concepts/calibrated-explanation">Calibrated Explanation</a><span class="rail-where">Aneesh</span></li>
       </ul>
       <details class="rail-more">
@@ -153,7 +153,7 @@
         <li><a href="/wiki/aneesh/concepts/transparency-in-scientific-method">Transparency in Scientific Method</a><span class="rail-where">Aneesh</span></li>
         <li><a href="/wiki/aneesh/concepts/unwarranted-faith-in-numbers">Unwarranted Faith in Numbers</a><span class="rail-where">Aneesh</span></li>
         <li><a href="/wiki/aneesh/concepts/ai-human-causal-prediction-machine">AI-Human Causal Prediction Machine</a><span class="rail-where">Aneesh</span></li>
-        <li><a href="/wiki/aneesh/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/entities/perplexity-ai">Perplexity AI</a><span class="rail-where">Commons</span></li>
         <li><a href="/wiki/aneesh/concepts/seamful-design">Seamful Design</a><span class="rail-where">Aneesh</span></li>
         <li><a href="/wiki/aneesh/synthesis/transparency-as-epistemic-virtue">Transparency as Epistemic Virtue</a><span class="rail-where">Aneesh</span></li>
         <li><a href="/wiki/aneesh/concepts/citation-problem-in-llms">Citation Problem in LLMs</a><span class="rail-where">Aneesh</span></li>
@@ -162,7 +162,7 @@
         <li><a href="/wiki/aneesh/concepts/degradation-of-search">Degradation of Search</a><span class="rail-where">Aneesh</span></li>
         <li><a href="/wiki/aneesh/synthesis/explainability-across-domains">Explainability Across Domains</a><span class="rail-where">Aneesh</span></li>
         <li><a href="/wiki/aneesh/concepts/ai-regulation">AI Regulation</a><span class="rail-where">Aneesh</span></li>
-        <li><a href="/wiki/aneesh/summaries/briefing-xai-human-ai-decision-making">Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making</a><span class="rail-where">Aneesh</span></li>
+        <li><a href="/wiki/commons/summaries/briefing-xai-human-ai-decision-making">Briefing: The State of Explainable AI (XAI) and Its Impact on Human-AI Decision-Making</a><span class="rail-where">Commons</span></li>
         <li><a href="/wiki/aneesh/concepts/composite-ai-architecture">Composite AI Architecture (Experts + LLM + KG)</a><span class="rail-where">Aneesh</span></li>
         <li><a href="/wiki/aneesh/concepts/responsible-ai">Responsible AI (RAI)</a><span class="rail-where">Aneesh</span></li>
         </ul>
@@ -171,13 +171,13 @@
     <div class="rail-block">
       <h2 class="rail-label"><span>Mentioned alongside</span></h2>
       <ul class="rail-list rail-scored">
-        <li><a href="/wiki/aneesh/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">10</span></li>
+        <li><a href="/wiki/commons/entities/aneesh-sathe">Aneesh Sathe</a><span class="rail-where">10</span></li>
         <li><a href="/wiki/aneesh/concepts/knowledge-graphs">Knowledge Graphs</a><span class="rail-where">9</span></li>
-        <li><a href="/wiki/aneesh/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/commons/summaries/ai-explainable-enough">AI: Explainable Enough</a><span class="rail-where">7</span></li>
         <li><a href="/wiki/aneesh/concepts/calibrated-explanation">Calibrated Explanation</a><span class="rail-where">7</span></li>
         <li><a href="/wiki/aneesh/concepts/hallucination">Hallucination</a><span class="rail-where">7</span></li>
-        <li><a href="/wiki/aneesh/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">7</span></li>
-        <li><a href="/wiki/aneesh/summaries/fhir-knowledge-graphs-healthcare">Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents</a><span class="rail-where">6</span></li>
+        <li><a href="/wiki/commons/summaries/my-grandfather-had-lore">My Grandfather Had Lore, My Father Had Google, I Have ChatGPT, My Son Will Have Lore</a><span class="rail-where">7</span></li>
+        <li><a href="/wiki/commons/summaries/fhir-knowledge-graphs-healthcare">Reimagining AI in Healthcare: Beyond Basic RAG with FHIR, Knowledge Graphs, and AI Agents</a><span class="rail-where">6</span></li>
       </ul>
       <p class="rail-hint">Notes the same pages link to.</p>
     </div>
