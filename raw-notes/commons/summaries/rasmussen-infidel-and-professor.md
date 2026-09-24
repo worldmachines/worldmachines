@@ -90,4 +90,4 @@ Smith moved to Edinburgh — the move Hume had spent twenty years urging — too
 
 - [[scottish-enlightenment]] — the institutional setting
 - [[calibrated-candor]] — heterodoxy as a publication problem, the pattern the book documents
-- [[david-hume]], [[adam-smith-rasmussen]] — Rasmussen's record of each man, extending [[david-hume]] and [[adam-smith]]
+- [[david-hume]], [[adam-smith]] — each page carries Rasmussen's record of the man
