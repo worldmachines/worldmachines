@@ -1,0 +1,670 @@
+# Curated chunk sidecar for source `rasmussen-infidel-and-professor`
+# (The Infidel and the Professor: David Hume, Adam Smith, and the Friendship that
+# Shaped Modern Thought, Dennis C. Rasmussen, Princeton University Press, 2017).
+#
+# license_class: private (in-copyright 2017 Princeton edition) -> verbatim quote text is
+# REDACTED from this committed copy per CURATOR.md sec.5 / INGEST-LOCAL.md sec.14.
+# start_quote/end_quote are deliberately absent; what remains is text-free provenance:
+# chunk id, label, heading, resolved character span into source.txt, and why the passage
+# is load-bearing. The full-verbatim sidecars live only in the gated ingest bucket and the
+# personal lake -- never in this repo.
+#
+# Spans are character offsets into the extraction pinned by MANIFEST.json
+# sha256 824c3de340355c837279be004f4ecc90c0b5043cdb0010a1bd93457a4e8b8481
+# (559980 chars). Each chunk was resolved by locating its start_quote/end_quote
+# (whitespace-tolerant) inside its own unit's span; all 82 resolve to a single span, and
+# every start_quote is also unique across the whole source. Curator fix: u16-c5's
+# start_quote was lengthened so it no longer also matches the ch12 quotation of the
+# Letter to Strahan. Chunk ids match each reading note's `cites:` field.
+source: rasmussen-infidel-and-professor
+units:
+- nn: 1
+  unit_id: preface
+  note_id: rasmussen-infidel-and-professor-preface
+  span: 10:1489
+  chunks:
+  - id: rasmussen-infidel-and-professor#u01-c1
+    label: c1
+    heading: Two giants of the Enlightenment
+    char_start: 17
+    char_end: 197
+    why: 'States the book''s founding premise: pairing the era''s most celebrated philosopher with its most famous
+      theorist of commercial society justifies treating their friendship as history.'
+  - id: rasmussen-infidel-and-professor#u01-c2
+    label: c2
+    heading: The friendship as the book's throughline
+    char_start: 198
+    char_end: 733
+    why: Lays out the concrete texture of the friendship (mutual support, counsel, the Rousseau affair) that the
+      book will track, establishing its narrative method.
+  - id: rasmussen-infidel-and-professor#u01-c3
+    label: c3
+    heading: Shared world, divergent postures on religion
+    char_start: 734
+    char_end: 1106
+    why: 'Names the preface''s central analytical claim and the book''s organizing tension: similar private views
+      but very different public faces on religion.'
+  - id: rasmussen-infidel-and-professor#u01-c4
+    label: c4
+    heading: Author's purpose and audience
+    char_start: 1108
+    char_end: 1438
+    why: Rasmussen's explicit self-positioning between scholarly and general readership frames how the whole book
+      should be read.
+- nn: 2
+  unit_id: introduction
+  note_id: rasmussen-infidel-and-professor-introduction
+  span: 1489:41594
+  chunks:
+  - id: rasmussen-infidel-and-professor#u02-c1
+    label: c1
+    heading: Hume's death and Smith's costly eulogy
+    char_start: 2231
+    char_end: 3267
+    why: Establishes the book's opening scene and the reputational risk Smith incurred defending Hume, framing the
+      friendship's public stakes.
+  - id: rasmussen-infidel-and-professor#u02-c2
+    label: c2
+    heading: Guarding their privacy and posthumous reputations
+    char_start: 3755
+    char_end: 4010
+    why: Shows both men's active resistance to exactly the kind of biographical project this book undertakes, motivating
+      the author's justification for it.
+  - id: rasmussen-infidel-and-professor#u02-c3
+    label: c3
+    heading: Hume's thought experiment on friendship
+    char_start: 13159
+    char_end: 13569
+    why: The chapter's clearest articulation of the Aristotelian stakes of friendship that frame Hume and Smith's
+      bond as the book's subject.
+  - id: rasmussen-infidel-and-professor#u02-c4
+    label: c4
+    heading: Smith's thought circling Hume's
+    char_start: 27566
+    char_end: 27835
+    why: Crystallizes the book's central intellectual thesis about the depth and asymmetry of Hume's influence on
+      Smith.
+  - id: rasmussen-infidel-and-professor#u02-c5
+    label: c5
+    heading: Smith as skeptical deist
+    char_start: 39866
+    char_end: 40481
+    why: Delivers the author's considered verdict on the religion caricature, the most consequential of the three
+      dichotomies the introduction dismantles.
+- nn: 3
+  unit_id: ch01-cheerful-skeptic
+  note_id: rasmussen-infidel-and-professor-ch01-cheerful-skeptic
+  span: 41594:83057
+  chunks:
+  - id: rasmussen-infidel-and-professor#u03-c1
+    label: c1
+    heading: 'Beloved and reviled: Hume''s paradoxical reputation'
+    char_start: 41654
+    char_end: 42944
+    why: 'Establishes the central paradox the biography works from: Hume as both the most personally beloved and
+      most philosophically disquieting figure of his age.'
+  - id: rasmussen-infidel-and-professor#u03-c2
+    label: c2
+    heading: The Treatise's experimental ambition
+    char_start: 51280
+    char_end: 52877
+    why: States the Treatise's founding methodological wager — grounding a science of human nature in experience
+      rather than pure reason — that drives everything Hume writes afterward.
+  - id: rasmussen-infidel-and-professor#u03-c3
+    label: c3
+    heading: The argument against miracles
+    char_start: 71899
+    char_end: 73716
+    why: Reconstructs Hume's most famous and most contested argument in full, the passage most responsible for his
+      reputation as 'the infidel.'
+  - id: rasmussen-infidel-and-professor#u03-c4
+    label: c4
+    heading: Against the argument from design
+    char_start: 73718
+    char_end: 75781
+    why: Shows Hume dismantling the era's default proof of God's existence by insisting inferred causes cannot exceed
+      their observed effects, a core application of his empiricism to theology.
+  - id: rasmussen-infidel-and-professor#u03-c5
+    label: c5
+    heading: Sincerity, hypocrisy, and 'the Vulgar'
+    char_start: 67379
+    char_end: 68357
+    why: Exposes the gap between Hume's private cynicism about religious sincerity and the costly consequences (loss
+      of the Edinburgh chair) of his public unwillingness to dissimulate.
+  - id: rasmussen-infidel-and-professor#u03-c6
+    label: c6
+    heading: The 'Of National Characters' footnote on race
+    char_start: 78876
+    char_end: 80075
+    why: Records the notorious racial-inferiority footnote and contrasts it directly with Smith's opposing remarks,
+      a deliberate setup for the book's later comparison of the two men's characters.
+- nn: 4
+  unit_id: ch02-encountering-hume
+  note_id: rasmussen-infidel-and-professor-ch02-encountering-hume
+  span: 83057:112142
+  chunks:
+  - id: rasmussen-infidel-and-professor#u04-c1
+    label: c1
+    heading: Smith's outsized influence
+    char_start: 84059
+    char_end: 84394
+    why: Frames the book's premise that Smith, despite lacking Hume's personal charisma, achieved a scale of real-world
+      influence to rival any thinker before or since.
+  - id: rasmussen-infidel-and-professor#u04-c2
+    label: c2
+    heading: Oxford's abandoned teaching vs. the Scottish universities
+    char_start: 87511
+    char_end: 87982
+    why: Smith's own damning verdict on Oxford's decayed teaching, set against his praise for Scotland's rapidly
+      modernizing universities, doubles as an early sketch of his later theory of institutional decline.
+  - id: rasmussen-infidel-and-professor#u04-c3
+    label: c3
+    heading: The confiscated Treatise
+    char_start: 90803
+    char_end: 91194
+    why: The anecdote of Balliol dons seizing Smith's copy of Hume's Treatise marks the first documented point of
+      contact between the two men's ideas, years before they met.
+  - id: rasmussen-infidel-and-professor#u04-c4
+    label: c4
+    heading: Science as imagination's self-soothing
+    char_start: 95628
+    char_end: 96487
+    why: States the Principles' central, deeply Humean claim that scientific order is imposed by the mind to relieve
+      discomfort rather than discovered in nature itself.
+  - id: rasmussen-infidel-and-professor#u04-c5
+    label: c5
+    heading: Religion born of terror and ignorance
+    char_start: 99163
+    char_end: 100454
+    why: Shows Smith's private, near-Humean naturalistic account of religion's origins, which he suppressed for
+      decades and which anticipates Hume's Natural History of Religion by several years.
+- nn: 5
+  unit_id: ch03-budding-friendship
+  note_id: rasmussen-infidel-and-professor-ch03-budding-friendship
+  span: 112142:158434
+  chunks:
+  - id: rasmussen-infidel-and-professor#u05-c1
+    label: c1
+    heading: Smith's letter to Cullen on preferring Hume as a colleague
+    char_start: 119349
+    char_end: 121389
+    why: The single most-cited piece of evidence for Smith's supposed prudence toward Hume, here complicated by
+      the surrounding scholarly debate over what it actually shows about the friendship.
+  - id: rasmussen-infidel-and-professor#u05-c2
+    label: c2
+    heading: Millar's praise and Smith's own verdict on his Glasgow years
+    char_start: 117002
+    char_end: 118229
+    why: Establishes how central the Glasgow professorship was to Smith's identity and self-regard, framing the
+      stakes of the parallel controversy over his teaching of natural theology.
+  - id: rasmussen-infidel-and-professor#u05-c3
+    label: c3
+    heading: Hume's defense of commercial refinement
+    char_start: 133420
+    char_end: 134311
+    why: Hume's most concentrated brief for commerce and luxury against civic-republican and Christian asceticism,
+      a foundational statement for the commercial-modernity worldview that would culminate in The Wealth of Nations.
+  - id: rasmussen-infidel-and-professor#u05-c4
+    label: c4
+    heading: Smith teaching Hume's economics and political theory to his students
+    char_start: 137475
+    char_end: 139679
+    why: Documents in granular, near-verbatim detail how directly Hume's specie-flow argument and anti-contractarian
+      political theory were transmitted into Smith's Glasgow lectures.
+  - id: rasmussen-infidel-and-professor#u05-c5
+    label: c5
+    heading: The first explicit naming of the friendship
+    char_start: 146394
+    char_end: 147528
+    why: Marked in the text as the first place the two men explicitly name their bond, and the passage's own texture
+      (banter, medical concern, an offer of library access) shows the friendship's ordinary daily infrastructure.
+- nn: 6
+  unit_id: ch04-historian-and-kirk
+  note_id: rasmussen-infidel-and-professor-ch04-historian-and-kirk
+  span: 158434:193477
+  chunks:
+  - id: rasmussen-infidel-and-professor#u06-c1
+    label: c1
+    heading: Progress as accident, not design
+    char_start: 164483
+    char_end: 166264
+    why: States the History of England's organizing thesis — civilizational progress is real but unintended, built
+      from accident rather than foresight or inevitable decline.
+  - id: rasmussen-infidel-and-professor#u06-c2
+    label: c2
+    heading: Puritan fanaticism and the spark of liberty
+    char_start: 168165
+    char_end: 169907
+    why: 'The book''s most striking irony: religious zealotry Hume detested is what unintentionally preserved English
+      liberty under absolutist rule, only exploding into civil war before a constitutional order emerged from the
+      wreckage.'
+  - id: rasmussen-infidel-and-professor#u06-c3
+    label: c3
+    heading: The Popular Party's campaign against Hume
+    char_start: 176077
+    char_end: 176476
+    why: Introduces the Kirk excommunication campaign and Hume's own mock-encomium of its leader, showing his ironic
+      rather than defensive response to institutional threat.
+  - id: rasmussen-infidel-and-professor#u06-c4
+    label: c4
+    heading: Natural History of Religion's harshest verdict
+    char_start: 183727
+    char_end: 184292
+    why: Frames and then quotes Hume's own bluntest published dismissal of religious belief, published in defiance
+      of the excommunication threat rather than in retreat from it.
+  - id: rasmussen-infidel-and-professor#u06-c5
+    label: c5
+    heading: Hume asks Blair to stop discussing religion
+    char_start: 180270
+    char_end: 181129
+    why: 'Shows the real, personal cost of the religious rift: a negotiated silence between Hume and a close Moderate
+      friend, necessary to preserve the friendship the excommunication threat had endangered.'
+- nn: 7
+  unit_id: ch05-moral-sentiments
+  note_id: rasmussen-infidel-and-professor-ch05-moral-sentiments
+  span: 193477:253912
+  chunks:
+  - id: rasmussen-infidel-and-professor#u07-c1
+    label: c1
+    heading: The impartial spectator as moral standard
+    char_start: 201809
+    char_end: 202371
+    why: States Smith's central argument in The Theory of Moral Sentiments in its own terms, showing how it parallels
+      yet extends Hume's general point of view.
+  - id: rasmussen-infidel-and-professor#u07-c2
+    label: c2
+    heading: 'Blushing for another: projection versus contagion'
+    char_start: 209837
+    char_end: 210271
+    why: Shows Smith deliberately reworking Hume's own example from the Treatise to demonstrate why his active 'projection'
+      account of sympathy succeeds where Hume's passive 'contagion' account struggles.
+  - id: rasmussen-infidel-and-professor#u07-c3
+    label: c3
+    heading: 'The chairs and the watch: confusing means for ends'
+    char_start: 215058
+    char_end: 215796
+    why: Smith's own proudest original addition to Hume's utility-beauty theory, showing how the appearance of fitness
+      or contrivance is valued above the end it actually serves.
+  - id: rasmussen-infidel-and-professor#u07-c4
+    label: c4
+    heading: Justice from resentment, not utility
+    char_start: 227226
+    char_end: 227807
+    why: Pinpoints Smith's key departure from Hume's 'artificial virtue' account of justice, rooting it instead
+      in spontaneous resentment rather than reflection on social utility.
+  - id: rasmussen-infidel-and-professor#u07-c5
+    label: c5
+    heading: Hume's mock-tragic reveal of Smith's success
+    char_start: 240291
+    char_end: 240666
+    why: Captures the playful, generous character of Hume and Smith's friendship at the moment of Smith's breakthrough
+      literary success.
+- nn: 8
+  unit_id: ch06-feted-in-france
+  note_id: rasmussen-infidel-and-professor-ch06-feted-in-france
+  span: 253912:299087
+  chunks:
+  - id: rasmussen-infidel-and-professor#u08-c1
+    label: c1
+    heading: Townshend's offer turns Smith into a traveling tutor
+    char_start: 254352
+    char_end: 255573
+    why: This is the career pivot that removes Smith from Glasgow and sets up the whole Continental tour narrated
+      in the rest of the unit.
+  - id: rasmussen-infidel-and-professor#u08-c2
+    label: c2
+    heading: Hume's private doubts about leaving Scotland
+    char_start: 271928
+    char_end: 272533
+    why: A rare admission of ambivalence beneath Hume's usual bravado, showing the emotional cost of trading independence
+      for the Hertford post.
+  - id: rasmussen-infidel-and-professor#u08-c3
+    label: c3
+    heading: Hume's astonishing reception in Paris
+    char_start: 273219
+    char_end: 274713
+    why: 'The unit''s central fact and its central irony: the same skeptic reviled in Scotland becomes Paris''s
+      most adored celebrity, paralleled explicitly with Franklin.'
+  - id: rasmussen-infidel-and-professor#u08-c4
+    label: c4
+    heading: The d'Holbach dinner and the limits of Hume's skepticism
+    char_start: 280146
+    char_end: 281355
+    why: Distinguishes Hume's mitigated skepticism from the philosophes' militant atheism via the era's most quoted
+      anecdote about the pair.
+  - id: rasmussen-infidel-and-professor#u08-c5
+    label: c5
+    heading: Smith's case against Paris and for London
+    char_start: 290561
+    char_end: 292598
+    why: Smith's fullest statement on friendship, foreignness, and dependable sociability, and his explicit (unrealized)
+      plan for the two men's shared future.
+  - id: rasmussen-infidel-and-professor#u08-c6
+    label: c6
+    heading: Hume and Franklin on wisdom, gold, and empire
+    char_start: 259399
+    char_end: 260349
+    why: Shows the correspondence network extending across the Atlantic and captures a barbed exchange about colonial
+      extraction and the market value of wisdom.
+- nn: 9
+  unit_id: ch07-wild-philosopher
+  note_id: rasmussen-infidel-and-professor-ch07-wild-philosopher
+  span: 299087:324665
+  chunks:
+  - id: rasmussen-infidel-and-professor#u09-c1
+    label: c1
+    heading: D'Holbach's Warning
+    char_start: 306901
+    char_end: 307146
+    why: The warning that Hume dismisses becomes the chapter's organizing irony once Rousseau's paranoia erupts.
+  - id: rasmussen-infidel-and-professor#u09-c2
+    label: c2
+    heading: The Embrace at Dover
+    char_start: 308030
+    char_end: 308318
+    why: Shows Rousseau's genuine emotional warmth toward Hume, complicating a simple villain reading before the
+      paranoia takes over.
+  - id: rasmussen-infidel-and-professor#u09-c3
+    label: c3
+    heading: Smith Counsels Silence
+    char_start: 314969
+    char_end: 315681
+    why: Smith's fullest statement of his anti-publicity instincts, advice Hume solicits and then overrides, foreshadowing
+      his later counsel on Hume's Dialogues.
+  - id: rasmussen-infidel-and-professor#u09-c4
+    label: c4
+    heading: Villain or Madman
+    char_start: 318888
+    char_end: 319061
+    why: Marks the endpoint of Hume's souring from charmed patron to bitter accuser, in his own words.
+  - id: rasmussen-infidel-and-professor#u09-c5
+    label: c5
+    heading: Not Hume at His Best
+    char_start: 323569
+    char_end: 324163
+    why: Rasmussen's own evenhanded verdict on the affair, the clearest authorial judgment in the unit.
+- nn: 10
+  unit_id: ch08-mortally-sick-at-sea
+  note_id: rasmussen-infidel-and-professor-ch08-mortally-sick-at-sea
+  span: 324665:355947
+  chunks:
+  - id: rasmussen-infidel-and-professor#u10-c1
+    label: c1
+    heading: The mortally-sick-at-sea letter
+    char_start: 331832
+    char_end: 333887
+    why: Gives the chapter its title and captures the mix of genuine longing and comic exaggeration structuring
+      Hume's long campaign to get Smith to visit.
+  - id: rasmussen-infidel-and-professor#u10-c2
+    label: c2
+    heading: The Ayr Bank crisis reaches The Wealth of Nations
+    char_start: 344439
+    char_end: 344946
+    why: Rare direct evidence of the friendship functioning as live intellectual collaboration, feeding real-time
+      events into Smith's book in progress.
+  - id: rasmussen-infidel-and-professor#u10-c3
+    label: c3
+    heading: Hume's refusal to keep writing
+    char_start: 341750
+    char_end: 343122
+    why: Hume's blunt renunciation of further literary labor and public approval reads as a deliberate assertion
+      of sovereignty over his own remaining time.
+  - id: rasmussen-infidel-and-professor#u10-c4
+    label: c4
+    heading: St. David Street and the mock canonization
+    char_start: 339882
+    char_end: 340197
+    why: A vivid anecdote showing Hume's good-humored ease with his reputation as the celebrated infidel.
+  - id: rasmussen-infidel-and-professor#u10-c5
+    label: c5
+    heading: I shall probably disappear altogether
+    char_start: 355133
+    char_end: 355635
+    why: The first intimation of Hume's terminal decline, closing the chapter on a note that retrospectively darkens
+      its comic register.
+- nn: 11
+  unit_id: ch09-wealth-of-nations
+  note_id: rasmussen-infidel-and-professor-ch09-wealth-of-nations
+  span: 355947:415496
+  chunks:
+  - id: rasmussen-infidel-and-professor#u11-c1
+    label: c1
+    heading: Commerce, liberty, and Smith's debt to Hume
+    char_start: 361673
+    char_end: 362687
+    why: This is the passage Rasmussen calls possibly the single most important in The Wealth of Nations, and it
+      contains Smith's own explicit acknowledgment that Hume was the only prior writer to notice commerce's role
+      in securing liberty.
+  - id: rasmussen-infidel-and-professor#u11-c2
+    label: c2
+    heading: Against mercantilism, toward free trade
+    char_start: 370974
+    char_end: 372835
+    why: Lays out the mercantilist zero-sum view Smith attacked and shows Hume making the identical cosmopolitan
+      free-trade argument in his own essay years earlier.
+  - id: rasmussen-infidel-and-professor#u11-c3
+    label: c3
+    heading: The mental cost of the division of labor
+    char_start: 384111
+    char_end: 384654
+    why: Smith's bluntest statement of commercial society's psychological costs, marking the sharpest divergence
+      from Hume's more optimistic view of commerce's effects on the mind.
+  - id: rasmussen-infidel-and-professor#u11-c4
+    label: c4
+    heading: Inequality and the corruption of moral sentiment
+    char_start: 386115
+    char_end: 387513
+    why: Shows Smith treating economic inequality as a distinct, less remediable drawback of commercial society
+      than the division of labor, distorting moral judgment itself.
+  - id: rasmussen-infidel-and-professor#u11-c5
+    label: c5
+    heading: Hume's case for a bribed clergy
+    char_start: 392834
+    char_end: 393469
+    why: Preserves Hume's own vivid rationale for religious establishment, the very passage Smith quotes at length
+      before turning it into an argument for the opposite policy.
+- nn: 12
+  unit_id: ch10-natural-religion
+  note_id: rasmussen-infidel-and-professor-ch10-natural-religion
+  span: 415496:445649
+  chunks:
+  - id: rasmussen-infidel-and-professor#u12-c1
+    label: c1
+    heading: The will's bequest and request
+    char_start: 421552
+    char_end: 422089
+    why: 'This is the founding document of the whole dispute: Hume''s will simultaneously bequeaths his manuscripts,
+      requests publication, and attaches a monetary incentive, framing everything that follows.'
+  - id: rasmussen-infidel-and-professor#u12-c2
+    label: c2
+    heading: The uniqueness of the Dialogues' argument
+    char_start: 420289
+    char_end: 421193
+    why: States Rasmussen's key claim about why the Dialogues was uniquely dangerous compared to Hume's earlier,
+      more piecemeal skeptical writings.
+  - id: rasmussen-infidel-and-professor#u12-c3
+    label: c3
+    heading: Hume's veiled pressure and Smith's careful reply
+    char_start: 425968
+    char_end: 426547
+    why: 'Captures the emotional subtext of the negotiation: Hume''s guilt-tinged rhetoric even after formally releasing
+      Smith, and Smith''s noncommittal but caring response.'
+  - id: rasmussen-infidel-and-professor#u12-c4
+    label: c4
+    heading: Smith's own stated reasons to Strahan
+    char_start: 430177
+    char_end: 430938
+    why: The clearest first-person statement of Smith's actual motive, showing it was about public clamor rather
+      than disagreement with the work's content.
+  - id: rasmussen-infidel-and-professor#u12-c5
+    label: c5
+    heading: Reversing the puzzle onto Hume
+    char_start: 444241
+    char_end: 445582
+    why: Delivers the chapter's central interpretive reversal and thesis, the payoff of the whole argument.
+- nn: 13
+  unit_id: ch11-philosophers-death
+  note_id: rasmussen-infidel-and-professor-ch11-philosophers-death
+  span: 445649:479363
+  chunks:
+  - id: rasmussen-infidel-and-professor#u13-c1
+    label: c1
+    heading: The Monthly Review on the public fixation with Hume's death
+    char_start: 446440
+    char_end: 447220
+    why: Establishes the intense public curiosity, framed in explicitly religious terms, that Hume's cheerful death
+      was staged to answer.
+  - id: rasmussen-infidel-and-professor#u13-c2
+    label: c2
+    heading: 'Rasmussen''s thesis: dying as public philosophical proof'
+    char_start: 448850
+    char_end: 449507
+    why: 'States the unit''s central interpretive claim: Hume''s serene, irreligious death was a deliberate demonstration
+      that life needs no religious justification.'
+  - id: rasmussen-infidel-and-professor#u13-c3
+    label: c3
+    heading: Boswell fails to extract a deathbed recantation
+    char_start: 462892
+    char_end: 463939
+    why: The unit's most detailed eyewitness record of Hume's composure under direct religious interrogation, and
+      its failure to shake him.
+  - id: rasmussen-infidel-and-professor#u13-c4
+    label: c4
+    heading: Hume's excuse to Charon
+    char_start: 468405
+    char_end: 469408
+    why: The unit's comic centerpiece, showing Hume facing mortality with wit rather than fear, and Smith already
+      shaping how the anecdote would read publicly.
+  - id: rasmussen-infidel-and-professor#u13-c5
+    label: c5
+    heading: Hume's death, 25 August 1776
+    char_start: 478614
+    char_end: 479289
+    why: 'The factual close of the unit''s narrative arc and the culmination of its argument that Hume died exactly
+      as he had staged: composed, untroubled, without religion.'
+- nn: 14
+  unit_id: ch12-ten-times-more-abuse
+  note_id: rasmussen-infidel-and-professor-ch12-ten-times-more-abuse
+  span: 479363:510050
+  chunks:
+  - id: rasmussen-infidel-and-professor#u14-c1
+    label: c1
+    heading: Smith's fateful sentence and the real scandal
+    char_start: 490072
+    char_end: 490931
+    why: Identifies the precise line and the precise claim that ignited the entire controversy discussed in the
+      rest of the unit.
+  - id: rasmussen-infidel-and-professor#u14-c2
+    label: c2
+    heading: Ten times more abuse than The Wealth of Nations
+    char_start: 496006
+    char_end: 496294
+    why: Smith's own verbatim assessment of the scale of backlash, and the source of the unit's central framing.
+  - id: rasmussen-infidel-and-professor#u14-c3
+    label: c3
+    heading: Horne's sarcastic opening attack
+    char_start: 499386
+    char_end: 499887
+    why: Primary example, quoted at length, of the religious counterattack led by George Horne that anchors the
+      chapter's controversy narrative.
+  - id: rasmussen-infidel-and-professor#u14-c4
+    label: c4
+    heading: Johnson's refusal to believe Hume died easy
+    char_start: 503524
+    char_end: 504091
+    why: Shows the backlash penetrating Smith and Hume's own social circle via Samuel Johnson, and Johnson's ironic
+      use of Hume's own philosophical method against him.
+  - id: rasmussen-infidel-and-professor#u14-c5
+    label: c5
+    heading: The Letter as a defense of a life without religion
+    char_start: 494513
+    char_end: 495563
+    why: 'States the chapter''s core interpretive thesis: the Letter''s deeper argument that virtue does not require
+      religious faith.'
+- nn: 15
+  unit_id: epilogue
+  note_id: rasmussen-infidel-and-professor-epilogue
+  span: 510050:530578
+  chunks:
+  - id: rasmussen-infidel-and-professor#u15-c1
+    label: c1
+    heading: The customs officer's irony
+    char_start: 510881
+    char_end: 512077
+    why: Establishes the epilogue's opening irony and shows Smith treated the tariff post as a genuine, theory-consistent
+      duty rather than a sinecure.
+  - id: rasmussen-infidel-and-professor#u15-c2
+    label: c2
+    heading: 'Pitt and his ministers: "we are all your scholars"'
+    char_start: 517536
+    char_end: 518127
+    why: The signature anecdote for how quickly Smith's free-trade doctrine moved from heresy to state orthodoxy
+      under Pitt's administration.
+  - id: rasmussen-infidel-and-professor#u15-c3
+    label: c3
+    heading: The "monkish virtues" allusion
+    char_start: 521541
+    char_end: 522116
+    why: First piece of evidence that the sixth edition's revisions directly echo Hume's arguments against religious
+      devotion as a virtue.
+  - id: rasmussen-infidel-and-professor#u15-c4
+    label: c4
+    heading: Tartarus, Elysium, and "a libation to Hume's ghost"
+    char_start: 522120
+    char_end: 523784
+    why: 'The book''s central interpretive claim: Smith''s most conspicuous late revision, replacing Christian doctrine
+      with Humean sentiment, read by contemporaries and scholars alike as a tribute to Hume.'
+  - id: rasmussen-infidel-and-professor#u15-c5
+    label: c5
+    heading: Self-command and the death of Socrates
+    char_start: 524080
+    char_end: 525690
+    why: Ties Smith's final philosophical statement on self-command directly back to his portrait of Hume's exemplary
+      death in the Letter to Strahan, via the shared Socrates comparison.
+  - id: rasmussen-infidel-and-professor#u15-c6
+    label: c6
+    heading: True friendship, unmistakably about Hume
+    char_start: 525823
+    char_end: 527033
+    why: 'The epilogue''s closing thematic payload: Smith''s last published words on friendship, read as an unmistakable
+      final tribute to Hume.'
+- nn: 16
+  unit_id: appendix
+  note_id: rasmussen-infidel-and-professor-appendix
+  span: 530578:559980
+  chunks:
+  - id: rasmussen-infidel-and-professor#u16-c1
+    label: c1
+    heading: Hume disclaims vanity while practicing it
+    char_start: 531168
+    char_end: 531591
+    why: Sets the essay's ironic self-aware register and its stated purpose of narrating a literary life rather
+      than a personal one.
+  - id: rasmussen-infidel-and-professor#u16-c2
+    label: c2
+    heading: The Treatise falls "dead-born from the press"
+    char_start: 534287
+    char_end: 534626
+    why: The essay's most famous line, exemplifying the resilient temperament Hume claims carried him through repeated
+      public failure.
+  - id: rasmussen-infidel-and-professor#u16-c3
+    label: c3
+    heading: Hume's self-composed funeral oration
+    char_start: 546653
+    char_end: 548191
+    why: Hume's own final self-assessment, the essay's direct statement of the moderate, unresentful character his
+      death would soon be tested against.
+  - id: rasmussen-infidel-and-professor#u16-c4
+    label: c4
+    heading: The Charon dialogue
+    char_start: 553321
+    char_end: 554429
+    why: The letter's centerpiece, showing Hume joking about his own death rather than seeking religious consolation,
+      central to the controversy the letter caused.
+  - id: rasmussen-infidel-and-professor#u16-c5
+    label: c5
+    heading: Smith's closing verdict on Hume's character
+    char_start: 557907
+    char_end: 559917
+    why: Smith's public claim that a skeptic approached moral perfection, the sentence that made this letter itself
+      a source of controversy.

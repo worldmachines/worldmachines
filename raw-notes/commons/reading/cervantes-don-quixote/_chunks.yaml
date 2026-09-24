@@ -1,0 +1,2613 @@
+# Curated chunk sidecar for source `cervantes-don-quixote`
+# (Don Quixote, Miguel de Cervantes Saavedra, translated by John Ormsby, 1885;
+# Project Gutenberg eBook #996).
+#
+# license_class: open -> verbatim quote text is RETAINED in this committed copy,
+# per INGEST-LOCAL.md sec.14: for open sources the per-unit sidecars are
+# concatenated as-is, full start_quote/end_quote included. The edition itself was
+# checked, not merely the underlying work -- Ormsby's translation appeared in 1885
+# and Ormsby died in 1895.
+#
+# Spans are character offsets into the extraction pinned by MANIFEST.json
+# sha256 10b0438b560877fae9d9a6729177bcfe9b5234b2e9cfb0788291fe0b3481b397
+# (2291823 chars; 2321523 bytes on disk -- offsets are character indices into the
+# UTF-8 text and are valid only against that exact extraction). At curation the
+# 366 inline Gutenberg illustration filename lines (e.g. `p005.jpg (171K)`) and the
+# 260 `Full Size` link lines were stripped from the shipped extraction, and unit and
+# chunk offsets were re-resolved from their verbatim anchors. Unit 30 c1's
+# start_quote was lengthened so it is unique across the whole source.
+# Per-chunk char_start/char_end were resolved by locating start_quote/end_quote
+# (whitespace-tolerant, as lake/chunk.py does) within each unit's span; all 255
+# chunks resolved inside their own unit, and every start_quote is unique in the
+# source. Quote strings join hard-wrapped lines with spaces where source.txt has
+# newlines. Chunk ids match each reading note's `cites:` field.
+source: cervantes-don-quixote
+units:
+- nn: 1
+  unit_id: front-introduction
+  note_id: cervantes-don-quixote-front-introduction
+  span: 17134:29566
+  chunks:
+  - id: cervantes-don-quixote#u01-c1
+    label: c1
+    heading: Shelton's contemporaneity with Cervantes
+    char_start: 17574
+    char_end: 18143
+    start_quote: Shelton had the inestimable advantage of belonging to the same generation as
+    end_quote: joined hands with a kindred genius in its pages.
+    why: States the essay's founding claim that a translator's historical proximity to the author is an
+      advantage no later skill can replicate.
+  - id: cervantes-don-quixote#u01-c2
+    label: c2
+    heading: No translation can be wholly satisfactory
+    char_start: 18899
+    char_end: 19506
+    start_quote: It is often said that we have no satisfactory translation of
+    end_quote: can at best be only distantly imitated in any other tongue.
+    why: Generalizes the essay's historical survey into a structural thesis about the limits of translation
+      itself.
+  - id: cervantes-don-quixote#u01-c3
+    label: c3
+    heading: Condemning Motteux's comic inflation
+    char_start: 21694
+    char_end: 22192
+    start_quote: To attempt to improve the humour of
+    end_quote: should have been favoured as it has been.
+    why: The essay's sharpest moral judgment, naming comic embellishment a falsification of the book's
+      spirit rather than a harmless stylistic choice.
+  - id: cervantes-don-quixote#u01-c4
+    label: c4
+    heading: Defending Jervas's gravity
+    char_start: 24504
+    char_end: 24905
+    start_quote: He was one of the few, very few, translators that have shown
+    end_quote: which is the characteristic of his translation.
+    why: Recasts Jervas's reputed dryness as the rare achievement of matching Cervantes's unsmiling comic
+      register, the essay's positive counter-example to Motteux.
+  - id: cervantes-don-quixote#u01-c5
+    label: c5
+    heading: Ormsby states his own method
+    char_start: 28028
+    char_end: 28558
+    start_quote: My purpose here is not to dogmatise on the rules of translation
+    end_quote: any temptation to use antiquated or obsolete language should be resisted.
+    why: 'The essay''s payoff: having surveyed two centuries of translations, Ormsby states the principle
+      governing the version that follows.'
+- nn: 2
+  unit_id: front-cervantes-life-1
+  note_id: cervantes-don-quixote-front-cervantes-life-1
+  span: 29566:54857
+  chunks:
+  - id: cervantes-don-quixote#u02-c1
+    label: c1
+    heading: The vanished author
+    char_start: 29578
+    char_end: 30376
+    start_quote: Four generations had laughed over “Don Quixote” before it occurred to
+    end_quote: if it has produced no Shakespeare or Cervantes.
+    why: 'Frames the entire biography''s problem: Cervantes''s personality disappeared from record before
+      anyone thought to preserve it.'
+  - id: cervantes-don-quixote#u02-c2
+    label: c2
+    heading: Pedigree as argument for the novel
+    char_start: 36831
+    char_end: 37329
+    start_quote: The pedigree of Cervantes is not without its bearing on “Don Quixote.”
+    end_quote: like a pyramid. It was the case of his own.
+    why: 'States the essay''s central interpretive claim: Cervantes''s own declined line of genuine knights-errant
+      explains his stance toward sham chivalry in the romances.'
+  - id: cervantes-don-quixote#u02-c3
+    label: c3
+    heading: Spain's transition from chivalry to absolutism
+    char_start: 38723
+    char_end: 39396
+    start_quote: The old chivalrous Spain had passed away.
+    end_quote: that of granting money at the King’s dictation.
+    why: Situates Cervantes's boyhood at the hinge between a dying feudal-chivalric order and a new absolutist
+      one, the historical soil the novel grows from.
+  - id: cervantes-don-quixote#u02-c4
+    label: c4
+    heading: Wounded at Lepanto
+    char_start: 45422
+    char_end: 45881
+    start_quote: His galley, the _Marquesa_, was in the thick of the
+    end_quote: another, apparently, the friendship of his general.
+    why: The documented physical cost of Lepanto, where Cervantes fought against orders while feverish
+      and lost the use of his left hand.
+  - id: cervantes-don-quixote#u02-c5
+    label: c5
+    heading: Taking sole blame under threat of torture
+    char_start: 49510
+    char_end: 50060
+    start_quote: When Cervantes saw what had befallen them, he charged his companions to
+    end_quote: his original statement that he and he alone was responsible.
+    why: 'Shows the pattern repeated across his captivity: Cervantes deliberately absorbing punishment
+      to shield his fellow captives.'
+  - id: cervantes-don-quixote#u02-c6
+    label: c6
+    heading: The captives' testimony
+    char_start: 54458
+    char_end: 54855
+    start_quote: There is something touching in the
+    end_quote: found father and mother.”
+    why: The essay's closing evidentiary climax, notarized testimony that supplies the human warrant for
+      treating Cervantes's captivity as a moral, not just biographical, episode.
+- nn: 3
+  unit_id: front-cervantes-life-2
+  note_id: cervantes-don-quixote-front-cervantes-life-2
+  span: 54857:80118
+  chunks:
+  - id: cervantes-don-quixote#u03-c1
+    label: c1
+    heading: The tax collector's unintended research
+    char_start: 59515
+    char_end: 61067
+    start_quote: It was as he journeyed from town to town collecting the king’s taxes,
+    end_quote: the germ, in more ways than one, of “Don Quixote.”
+    why: Establishes that the novel's inn-and-road texture, and possibly its central figure, was gathered
+      incidentally during Cervantes's tax-collecting years rather than designed as literary material.
+  - id: cervantes-don-quixote#u03-c2
+    label: c2
+    heading: Avellaneda's forged sequel arrives
+    char_start: 70196
+    char_end: 71301
+    start_quote: Nemesis was coming, however.
+    end_quote: he made no sign until eight years and a half had gone by; by which time Avellaneda’s volume
+      was no doubt written.
+    why: Marks the contingent, external shock — a rival's plagiarism and abuse — that the essay credits
+      with finally forcing Cervantes to complete the book.
+  - id: cervantes-don-quixote#u03-c3
+    label: c3
+    heading: A stepfather to his own masterpiece
+    char_start: 68207
+    char_end: 69043
+    start_quote: He shows plainly enough, too, that “Don Quixote” and the demolition of
+    end_quote: to divert the melancholy moody heart at any time or season.”
+    why: Cervantes's own reported view of Don Quixote as a minor amusement, not his true ambition, explaining
+      the book's careless composition and uncorrected errors.
+  - id: cervantes-don-quixote#u03-c4
+    label: c4
+    heading: Was it an unhappy life?
+    char_start: 75825
+    char_end: 76984
+    start_quote: Was it an unhappy life, that of Cervantes?
+    end_quote: would not make so bad a bargain, perhaps, as far as happiness in life is concerned.
+    why: 'The essay''s thesis on Cervantes''s temperament: endurance by fortitude of spirit rather than
+      naive buoyancy, reframing a hard life against the standard biographical verdict of unhappiness.'
+  - id: cervantes-don-quixote#u03-c5
+    label: c5
+    heading: No monument needed
+    char_start: 79406
+    char_end: 80113
+    start_quote: It has been also made a reproach to Spain that she has erected no
+    end_quote: The nearest bookseller’s shop will show what bathos there would be in a monument to the
+      author of “Don Quixote.”
+    why: Closes the essay's rebuttal to the neglect narrative, arguing the book's continued circulation
+      is Cervantes's true and sufficient monument.
+- nn: 4
+  unit_id: front-essay-don-quixote
+  note_id: cervantes-don-quixote-front-essay-don-quixote
+  span: 80118:109035
+  chunks:
+  - id: cervantes-don-quixote#u04-c1
+    label: c1
+    heading: The cosmopolitan-yet-national paradox
+    char_start: 81118
+    char_end: 82321
+    start_quote: Still more remarkable is the character of this wide diffusion.
+    end_quote: the grown men understand it, the old folk praise it.”
+    why: 'States the essay''s opening puzzle about Don Quixote''s reception: simultaneously the most cosmopolitan
+      and most intensely national of books.'
+  - id: cervantes-don-quixote#u04-c2
+    label: c2
+    heading: Chivalry was already dead
+    char_start: 87571
+    char_end: 87962
+    start_quote: In the first place there was no chivalry for him to smile away.
+    end_quote: What he did smile away was not chivalry but a degrading mockery of it.
+    why: 'The essay''s central historical claim: Cervantes attacked a dead institution''s ornamental afterlife,
+      not chivalry itself, directly resonant with the decay-sequence of a machine''s institutional husk.'
+  - id: cervantes-don-quixote#u04-c3
+    label: c3
+    heading: 'Pacheco''s testimony: ridicule ends the costume-culture'
+    char_start: 88297
+    char_end: 89104
+    start_quote: Before the appearance in the world of that labour of Cervantes,” he said, “it was next
+      to an impossibility
+    end_quote: so little agreeable to those nobler actions of our famous ancestors.”
+    why: Contemporary Spanish testimony that the book's mockery, not any assault on chivalry proper, killed
+      off the public performance of chivalric costume and gesture.
+  - id: cervantes-don-quixote#u04-c4
+    label: c4
+    heading: Sancho and Cid Hamete as afterthoughts
+    char_start: 90910
+    char_end: 91768
+    start_quote: It is plain, for one thing, that Sancho Panza did not enter into the original scheme
+    end_quote: first suggested it to him that his idea was capable of development.
+    why: Documents the novel's unplanned, accretive composition — Sancho and the fictive-manuscript device
+      were both grafted on mid-course rather than designed from the outset.
+  - id: cervantes-don-quixote#u04-c5
+    label: c5
+    heading: Against the pessimist reading
+    char_start: 89106
+    char_end: 89709
+    start_quote: To call “Don Quixote” a sad book, preaching a pessimist view of life
+    end_quote: is mischievous to its owner, and a very considerable nuisance to the community at large.
+    why: 'States the essay''s thesis on the book''s moral: it punishes spurious, vanity-born enthusiasm,
+      not enthusiasm as such.'
+  - id: cervantes-don-quixote#u04-c6
+    label: c6
+    heading: Doré's fountain and the point of incongruity
+    char_start: 102908
+    char_end: 103732
+    start_quote: Take, for instance, Gustave Doré’s drawing of Don Quixote watching his armour
+    end_quote: gives a significance to Don Quixote’s vigil and the ceremony that follows.
+    why: Concrete test case for Ormsby's theory that Cervantic humor depends on the mean, prosaic ordinariness
+      of the setting against which Don Quixote's ideal plays out.
+- nn: 5
+  unit_id: front-preface-commendatory-dedication
+  note_id: cervantes-don-quixote-front-preface-commendatory-dedication
+  span: 109035:132446
+  chunks:
+  - id: cervantes-don-quixote#u05-c1
+    label: c1
+    heading: 'Idle reader: the freed reader'
+    char_start: 109057
+    char_end: 110874
+    start_quote: 'Idle reader: thou mayest believe me without any oath that I would this'
+    end_quote: without fear of being abused for any ill or rewarded for any good thou mayest say of it.
+    why: Opens the whole work by inverting the author-reader contract and setting the ironic, self-aware
+      register of the Preface.
+  - id: cervantes-don-quixote#u05-c2
+    label: c2
+    heading: The friend's recipe for borrowed authority
+    char_start: 119380
+    char_end: 119809
+    start_quote: 'The remedy for this is very simple: You have only to look out for some book'
+    end_quote: made use of them all in this plain, artless story of yours.
+    why: The clearest satire of scholarly apparatus as pure performance -- erudition faked purely to look
+      authoritative, unverified by any reader.
+  - id: cervantes-don-quixote#u05-c3
+    label: c3
+    heading: 'The stated purpose: an attack on chivalric romance'
+    char_start: 120192
+    char_end: 121913
+    start_quote: for it is, from beginning to end, an attack upon the books of chivalry, of which Aristotle
+      never dreamt
+    end_quote: for if you succeed in this you will have achieved no small success.
+    why: The one place in the front matter where the book's actual programmatic aim is stated without
+      irony.
+  - id: cervantes-don-quixote#u05-c4
+    label: c4
+    heading: Urganda's warning against borrowed erudition
+    char_start: 124171
+    char_end: 124447
+    start_quote: Since Heaven it hath not pleased on thee
+    end_quote: “Why offer flowers to me, my friend?”
+    why: The commendatory verse echoes the Preface's satire of false Latin erudition, showing the joke
+      sustained into the poems themselves.
+  - id: cervantes-don-quixote#u05-c5
+    label: c5
+    heading: Dedication to the Duke of Béjar
+    char_start: 131464
+    char_end: 132418
+    start_quote: In belief of the good reception and honours that Your Excellency
+    end_quote: will not disdain the littleness of so humble a service.
+    why: The unironized specimen of patronage convention that the preceding satire has just been mocking,
+      closing the unit in unresolved tension.
+- nn: 6
+  unit_id: p1-01-05
+  note_id: cervantes-don-quixote-p1-01-05
+  span: 132446:192844
+  chunks:
+  - id: cervantes-don-quixote#u06-c1
+    label: c1
+    heading: Books of chivalry and the ruin of reason
+    char_start: 133817
+    char_end: 135688
+    start_quote: You must know, then, that the above-named gentleman whenever he was at
+    end_quote: had not greater and more absorbing thoughts prevented him.
+    why: 'States the causal mechanism of the whole novel: obsessive reading of chivalric romance as the
+      literal source of the hidalgo''s madness.'
+  - id: cervantes-don-quixote#u06-c2
+    label: c2
+    heading: The decision to become a knight-errant
+    char_start: 137767
+    char_end: 138612
+    start_quote: In short, his wits being quite gone, he hit upon the strangest notion
+    end_quote: he set himself forthwith to put his scheme into execution.
+    why: The novel's inciting premise stated in the narrator's own bluntest terms.
+  - id: cervantes-don-quixote#u06-c3
+    label: c3
+    heading: The inn transformed into a castle
+    char_start: 148435
+    char_end: 148758
+    start_quote: everything he saw or imagined seemed to him to be and to happen after the fashion of
+      what he read of, the moment he saw the inn
+    end_quote: all the belongings usually ascribed to castles of the sort.
+    why: The clearest single demonstration of how his reading-induced delusion actively overwrites ordinary
+      perception.
+  - id: cervantes-don-quixote#u06-c4
+    label: c4
+    heading: The landlord's mock dubbing ceremony
+    char_start: 167598
+    char_end: 167901
+    start_quote: Then, reading from his account-book as if he were repeating
+    end_quote: all the while muttering between his teeth as if he was saying his prayers.
+    why: Knighthood enacted as pure emptied-out ritual form, performed cynically by the host and believed
+      sincerely by the subject.
+  - id: cervantes-don-quixote#u06-c5
+    label: c5
+    heading: The Andres episode's ironic reversal
+    char_start: 175783
+    char_end: 176524
+    start_quote: The farmer followed him with his eyes, and when he saw that he had cleared
+    end_quote: he tied him up again, and gave him such a flogging that he left him for dead.
+    why: Shows chivalric justice failing to bind the real power relation it intervened in, making the
+      boy's situation worse the instant the knight is out of sight.
+  - id: cervantes-don-quixote#u06-c6
+    label: c6
+    heading: The curate's sentence on the library
+    char_start: 190645
+    char_end: 190876
+    start_quote: So say I too,” said the curate, “and by my faith to-morrow shall not
+    end_quote: lest they lead those that read to behave as my good friend seems to have behaved.”
+    why: Closes the unit by naming the books themselves as the object of judgment, setting up the auto-da-fé
+      of the next chapter.
+- nn: 7
+  unit_id: p1-06-09
+  note_id: cervantes-don-quixote-p1-06-09
+  span: 192844:247118
+  chunks:
+  - id: cervantes-don-quixote#u07-c1
+    label: c1
+    heading: Condemning the founder of the sect
+    char_start: 194386
+    char_end: 194771
+    start_quote: The first that Master Nicholas put into his hand was “The four books of
+    end_quote: as the founder of so vile a sect.”
+    why: Stages canon-formation as inquisition, judging a genre's founding text guilty for everything
+      it spawned.
+  - id: cervantes-don-quixote#u07-c2
+    label: c2
+    heading: Cervantes reviews his own book
+    char_start: 206427
+    char_end: 206955
+    start_quote: “The ‘Galatea’ of Miguel de Cervantes,” said the barber.
+    end_quote: keep it shut up in your own quarters.”
+    why: Cervantes writes himself into the fictional inquisition, reviewing and deferring judgment on
+      his own earlier work.
+  - id: cervantes-don-quixote#u07-c3
+    label: c3
+    heading: The charge on the windmills
+    char_start: 218914
+    char_end: 221167
+    start_quote: At this point they came in sight of thirty or forty windmills that
+    end_quote: who went rolling over on the plain, in a sorry condition.
+    why: The novel's defining image of a private interpretive framework colliding with an indifferent
+      reality.
+  - id: cervantes-don-quixote#u07-c4
+    label: c4
+    heading: The promised island
+    char_start: 216535
+    char_end: 218523
+    start_quote: And now said Sancho Panza to his master, “Your worship will take care,
+    end_quote: but do not undervalue thyself so much as to come to be content with anything less than
+      being governor of a province.”
+    why: Lays out the service-for-elevation bargain driving Sancho's participation, half sincere and half
+      absurd.
+  - id: cervantes-don-quixote#u07-c5
+    label: c5
+    heading: Finding the manuscript in Toledo
+    char_start: 239104
+    char_end: 240699
+    start_quote: One day, as I was in the Alcana of Toledo, a boy came up to sell some
+    end_quote: written by Cid Hamete Benengeli, an Arab historian_.”
+    why: 'Reveals the novel''s central historiographical device: history recovered as a translated, purchased,
+      uncertain found text.'
+  - id: cervantes-don-quixote#u07-c6
+    label: c6
+    heading: The cliffhanger and the second author
+    char_start: 234934
+    char_end: 235685
+    start_quote: But it spoils all, that at this point and crisis
+    end_quote: he did find in a way that shall be related in the Second Part.
+    why: Breaks the fiction at its most dramatic instant to foreground the unreliability and discontinuity
+      of the narrated history.
+- nn: 8
+  unit_id: p1-10-13
+  note_id: cervantes-don-quixote-p1-10-13
+  span: 247118:303402
+  chunks:
+  - id: cervantes-don-quixote#u08-c1
+    label: c1
+    heading: The balsam of Fierabras
+    char_start: 250874
+    char_end: 251568
+    start_quote: “It is a balsam,” answered Don Quixote, “the receipt of which I have in
+    end_quote: thou shalt see me become sounder than an apple.”
+    why: Exemplifies the parody logic of chivalric romance and the comic straight-man dynamic between
+      Don Quixote's grandiosity and Sancho's literal-minded follow-up.
+  - id: cervantes-don-quixote#u08-c2
+    label: c2
+    heading: 'Golden Age: before mine and thine'
+    char_start: 261542
+    char_end: 262029
+    start_quote: Happy the age, happy the time, to which the ancients gave the name of
+    end_quote: gather it from the sturdy oaks that stood generously inviting him with their sweet ripe
+      fruit.
+    why: The opening of Don Quixote's set-piece oration imagining a world prior to property distinctions,
+      the unit's central humanist-pastoral statement.
+  - id: cervantes-don-quixote#u08-c3
+    label: c3
+    heading: 'Golden Age: before arbitrary law'
+    char_start: 263629
+    char_end: 263904
+    start_quote: Justice held her ground, undisturbed and unassailed by the efforts of
+    end_quote: for then there was no cause to judge and no one to be judged.
+    why: Completes the Golden Age fantasy with the absence of courts and judges, a pre-legibility ideal
+      collapsing under law and cultivation.
+  - id: cervantes-don-quixote#u08-c4
+    label: c4
+    heading: Marcela's guarded liberty
+    char_start: 279623
+    char_end: 280398
+    start_quote: But you must not suppose, because Marcela chose a life of such
+    end_quote: she flings him from her like a catapult.
+    why: The load-bearing characterization of Marcela as deliberately self-possessed and unclaimable,
+      the core of the unit's second narrative thread.
+  - id: cervantes-don-quixote#u08-c5
+    label: c5
+    heading: Ambrosio's eulogy for Chrysostom
+    char_start: 300336
+    char_end: 300659
+    start_quote: He loved deeply, he was hated; he adored, he
+    end_quote: cut short by a shepherdess whom he sought to immortalise in the memory of man
+    why: The unit's rhetorical climax, cataloguing unrequited love's total asymmetry and setting up the
+      debate over Chrysostom's papers.
+- nn: 9
+  unit_id: p1-14-17
+  note_id: cervantes-don-quixote-p1-14-17
+  span: 303402:370391
+  chunks:
+  - id: cervantes-don-quixote#u09-c1
+    label: c1
+    heading: Marcela's declaration of self-possession
+    char_start: 313258
+    char_end: 313543
+    start_quote: I was born free, and that I might live in freedom I chose the solitude of the fields
+    end_quote: I am a fire afar off, a sword laid aside.
+    why: The clearest statement of Marcela's argument that beauty and being loved create no debt of reciprocation
+      — the unit's ethical center.
+  - id: cervantes-don-quixote#u09-c2
+    label: c2
+    heading: Don Quixote's superfluous chivalric decree
+    char_start: 317158
+    char_end: 317720
+    start_quote: Let no one, whatever his rank or condition, dare to follow the
+    end_quote: holds to such a virtuous resolution.
+    why: Shows chivalry inserting itself as unneeded protection after Marcela has already won the argument
+      unaided, a key comic irony.
+  - id: cervantes-don-quixote#u09-c3
+    label: c3
+    heading: The casuistry of indignity
+    char_start: 330436
+    char_end: 331143
+    start_quote: For I would have thee know, Sancho, that wounds caused by any instruments which happen
+    end_quote: carried rapier, sword, or dagger.
+    why: Demonstrates the self-sealing rationalization by which Don Quixote's honor code absorbs any contrary
+      physical evidence.
+  - id: cervantes-don-quixote#u09-c4
+    label: c4
+    heading: The castle delusion assembling itself
+    char_start: 343973
+    char_end: 344973
+    start_quote: This strange stillness, and the thoughts, always present to
+    end_quote: should present themselves before him.
+    why: Narrates in real time how silence, candlelight, and genre expectation combine to produce the
+      inn-as-castle delusion that structures the rest of the episode.
+  - id: cervantes-don-quixote#u09-c5
+    label: c5
+    heading: Chivalric privilege meets the innkeeper's bill
+    char_start: 364250
+    char_end: 365304
+    start_quote: Then this is an inn?
+    end_quote: for all I care about is to get my money.
+    why: The direct collision of two incompatible frameworks reading the same building, resolved by plain
+      economic reality.
+- nn: 10
+  unit_id: p1-18-20
+  note_id: cervantes-don-quixote-p1-18-20
+  span: 370391:437393
+  chunks:
+  - id: cervantes-don-quixote#u10-c1
+    label: c1
+    heading: Sancho names the men who tossed him
+    char_start: 371596
+    char_end: 372664
+    start_quote: I would have avenged myself too if I could,” said Sancho, “whether I
+    end_quote: give over wandering from Zeca to Mecca and from pail to bucket, as the saying is.”
+    why: Sancho's empirical rebuttal to the enchantment theory, naming real culprits and proposing they
+      simply go home, sets up the running contest between narrative and evidence.
+  - id: cervantes-don-quixote#u10-c2
+    label: c2
+    heading: Fear deranges the senses; the charge on the sheep
+    char_start: 382728
+    char_end: 383877
+    start_quote: The fear thou art in, Sancho,” said Don Quixote, “prevents thee from
+    end_quote: give him his revenge over his enemy Alifanfaron of the Trapobana.”
+    why: Don Quixote inverts perception and delusion into a theory of fear-derangement, then acts on it
+      immediately by charging the flock — the unit's clearest statement of his epistemic method.
+  - id: cervantes-don-quixote#u10-c3
+    label: c3
+    heading: The malignant sage who falsifies reality
+    char_start: 386029
+    char_end: 386751
+    start_quote: That’s how that thief of a sage, my enemy, can alter and falsify
+    end_quote: become men in all respects as I described them to thee at first.
+    why: 'The unfalsifiable enchantment hypothesis in its purest form: any disconfirming outcome is absorbed
+      as further proof, with a test of verification offered but never meant to be honored.'
+  - id: cervantes-don-quixote#u10-c4
+    label: c4
+    heading: Born in the iron age to revive the age of gold
+    char_start: 410921
+    char_end: 411559
+    start_quote: Friend Sancho, know that I by Heaven’s will have been born in
+    end_quote: such exploits, marvels, and feats of arms as shall obscure their brightest deeds.
+    why: The grandest self-mythologizing speech in the unit, delivered in the dark to an unseen noise,
+      showing Don Quixote performing chivalry's founding myth as though it were still live infrastructure.
+  - id: cervantes-don-quixote#u10-c5
+    label: c5
+    heading: The fulling hammers revealed
+    char_start: 430531
+    char_end: 430938
+    start_quote: They went it might be a hundred paces farther, when on turning a corner
+    end_quote: six fulling hammers which by their alternate strokes made all the din.
+    why: The comic anticlimax that punctures the prior night's terror and grandiosity, with the narrator's
+      own aside to the reader marking the deflation.
+- nn: 11
+  unit_id: p1-21-22
+  note_id: cervantes-don-quixote-p1-21-22
+  span: 437393:485604
+  chunks:
+  - id: cervantes-don-quixote#u11-c1
+    label: c1
+    heading: How a basin becomes a helmet
+    char_start: 440213
+    char_end: 441132
+    start_quote: The fact of the matter as regards the helmet, steed, and knight
+    end_quote: he made to fall in with his crazy chivalry and ill-errant notions;
+    why: The narrator's own explanation of the delusion mechanism, showing Quixote's chivalric frame overwriting
+      plain fact.
+  - id: cervantes-don-quixote#u11-c2
+    label: c2
+    heading: Sancho's plain sight overruled
+    char_start: 439213
+    char_end: 439808
+    start_quote: How can I be mistaken in what I say, unbelieving traitor?
+    end_quote: possess myself of the helmet I have so longed for.”
+    why: Sancho's accurate report of a man on an ass with something shining is dismissed by rank, not
+      refutation.
+  - id: cervantes-don-quixote#u11-c3
+    label: c3
+    heading: The pre-written romance plot
+    char_start: 450029
+    char_end: 450556
+    start_quote: that the boys, the instant they see him enter the gate of the city, may all follow him
+      and surround him, crying
+    end_quote: So from one to another they will go proclaiming his achievements;
+    why: Don Quixote narrates the chivalric genre's formula as a near-guaranteed causal sequence he expects
+      to live out.
+  - id: cervantes-don-quixote#u11-c4
+    label: c4
+    heading: Gines de Pasamonte, self-authored
+    char_start: 475288
+    char_end: 475673
+    start_quote: So good is it,” replied Gines, “that a fig for ‘Lazarillo de Tormes,’
+    end_quote: The ‘Life of Gines de Pasamonte,’” replied the subject of it.
+    why: A criminal who has written his own life story rivals both the crown's register and Quixote's
+      imposed narrative frame.
+  - id: cervantes-don-quixote#u11-c5
+    label: c5
+    heading: The liberation speech
+    char_start: 477337
+    char_end: 479176
+    start_quote: From all you have told me, dear brethren, I make out clearly that
+    end_quote: this lance and sword together with the might of my arm shall compel you to comply with
+      it by force.”
+    why: The unit's central ethical statement on justice and free will, made just before it collapses
+      in practice.
+  - id: cervantes-don-quixote#u11-c6
+    label: c6
+    heading: The freed men turn on their liberator
+    char_start: 483636
+    char_end: 484602
+    start_quote: Pasamonte, who was anything but meek
+    end_quote: knocking it almost to pieces.
+    why: The immediate, violent refutation of the chivalric idealism just staged, delivered by the very
+      men Quixote freed.
+- nn: 12
+  unit_id: p1-23-24
+  note_id: cervantes-don-quixote-p1-23-24
+  span: 485604:530251
+  chunks:
+  - id: cervantes-don-quixote#u12-c1
+    label: c1
+    heading: Sancho's lament for Dapple
+    char_start: 490251
+    char_end: 490507
+    start_quote: O son of my bowels, born in my very house, my children’s
+    end_quote: thou didst earn me daily I met half my charges.”
+    why: Grounds the mountain adventure in Sancho's real economic and emotional stakes, the comic counterweight
+      to the coming romance plot.
+  - id: cervantes-don-quixote#u12-c2
+    label: c2
+    heading: The sonnet in the valise
+    char_start: 493722
+    char_end: 494275
+    start_quote: Or Love is lacking in intelligence,
+    end_quote: A miracle alone a cure can give.
+    why: The unit's purest embedded text, a clue-object whose despairing love complaint anticipates Cardenio's
+      own story before he appears.
+  - id: cervantes-don-quixote#u12-c3
+    label: c3
+    heading: Don Quixote's logic of restitution
+    char_start: 500787
+    char_end: 501202
+    start_quote: “Thou art wrong there, Sancho,” said Don Quixote, “for now that we have
+    end_quote: for if we find him it will relieve mine.”
+    why: 'States his self-authorizing chivalric code in miniature: mere suspicion of ownership generates
+      binding obligation, regardless of practicality.'
+  - id: cervantes-don-quixote#u12-c4
+    label: c4
+    heading: Cardenio introduces himself and Luscinda
+    char_start: 514929
+    char_end: 515654
+    start_quote: “My name is Cardenio, my birthplace one of the best cities of this
+    end_quote: she loved me in all the innocence and sincerity of childhood.
+    why: The hinge into the embedded romance plot; establishes the two families, the childhood love, and
+      the frame for the coming betrayal.
+  - id: cervantes-don-quixote#u12-c5
+    label: c5
+    heading: 'Don Quixote''s first interruption: books of chivalry'
+    char_start: 525088
+    char_end: 525971
+    start_quote: “Had your worship told me at the beginning of your story that the Lady
+    end_quote: sung and delivered by him with such sprightliness, wit, and ease
+    why: Shows Don Quixote's fictions colonizing someone else's love story in real time, the comic dry
+      run for the violent interruption to come.
+  - id: cervantes-don-quixote#u12-c6
+    label: c6
+    heading: Madasima's honor and the eruption into violence
+    char_start: 526986
+    char_end: 528809
+    start_quote: “I cannot get rid of the idea, nor will anyone in the world
+    end_quote: he left them and quietly withdrew to his hiding-place on the mountain.
+    why: 'The unit''s climax: a dispute over a fictional queen''s honor triggers Cardenio''s madness and
+      real blows, exposing how thin the line is between Don Quixote''s fictions and harm.'
+- nn: 13
+  unit_id: p1-25-26
+  note_id: cervantes-don-quixote-p1-25-26
+  span: 530251:582601
+  chunks:
+  - id: cervantes-don-quixote#u13-c1
+    label: c1
+    heading: Amadis as chivalric exemplar
+    char_start: 536558
+    char_end: 537751
+    start_quote: I would have thee know, Sancho, that the famous Amadis of Gaul was one of the most
+    end_quote: whom all we who fight under the banner of love and chivalry are bound to imitate.
+    why: States Don Quixote's governing theory that chivalric penance is deliberate imitation of literary
+      exemplars, on the model of painters and poets, not simple delusion.
+  - id: cervantes-don-quixote#u13-c2
+    label: c2
+    heading: Madness engineered without cause
+    char_start: 540088
+    char_end: 541239
+    start_quote: There is the point,” replied Don Quixote, “and that is the beauty of
+    end_quote: feeling the evil thou bringest me.
+    why: 'Lays out the double-bind logic of the letter to Dulcinea: whatever answer comes back, the penance
+      resolves, making the madness a self-authored, no-lose performance.'
+  - id: cervantes-don-quixote#u13-c3
+    label: c3
+    heading: The enchanters and the barber's basin
+    char_start: 542510
+    char_end: 543079
+    start_quote: Is it possible that all this time thou hast been going about with me
+    end_quote: and to another it will seem something else;
+    why: Don Quixote's generalized epistemology of enchantment explains how contradictory appearances
+      (helmet vs. basin) can coexist without threatening his framework.
+  - id: cervantes-don-quixote#u13-c4
+    label: c4
+    heading: The letter to Dulcinea
+    char_start: 559258
+    char_end: 559933
+    start_quote: Sovereign and exalted Lady,—The pierced by the point of absence, the
+    end_quote: for by ending my life I shall satisfy thy cruelty and my desire.
+    why: The sincere romance-register text at the emotional center of the penance, later comically corrupted
+      in transmission.
+  - id: cervantes-don-quixote#u13-c5
+    label: c5
+    heading: Sancho's garbled recollection
+    char_start: 576837
+    char_end: 577444
+    start_quote: By God, señor licentiate, devil a thing can I recollect of the letter; but it said at
+    end_quote: and from that it went tailing off until it ended with ‘Yours till death, the Knight of
+      the Rueful Countenance.
+    why: Deflates the letter's sincerity by staging its unreliable oral transmission, turning 'sovereign'
+      into 'scrubbing' and the romance register into slapstick.
+  - id: cervantes-don-quixote#u13-c6
+    label: c6
+    heading: The curate's counter-fiction
+    char_start: 581588
+    char_end: 582594
+    start_quote: his notion, which he explained to the barber, was that he himself should assume the disguise
+      of a
+    end_quote: where they would endeavour to find out if his extraordinary madness admitted of any kind
+      of remedy.
+    why: Marks the village's shift from passive bystanders to active plotters who weaponize chivalric
+      convention itself to recapture Don Quixote.
+- nn: 14
+  unit_id: p1-27-28
+  note_id: cervantes-don-quixote-p1-27-28
+  span: 582601:650642
+  chunks:
+  - id: cervantes-don-quixote#u14-c1
+    label: c1
+    heading: The curate's crisis of decorum
+    char_start: 584681
+    char_end: 585237
+    start_quote: But hardly had he sallied forth from the inn when it struck
+    end_quote: let the devil take Don Quixote.
+    why: Shows the disguise-plot renegotiated mid-journey by clerical propriety, a comic hinge that delays
+      the rescue and reveals the curate's self-image.
+  - id: cervantes-don-quixote#u14-c2
+    label: c2
+    heading: The unseen singer's lament
+    char_start: 588961
+    char_end: 589832
+    start_quote: What makes my quest of happiness seem vain?
+    end_quote: In Change, in Madness, or in Death.
+    why: The interpolated song that leads the party to Cardenio, and his own lyric self-diagnosis before
+      he is named or seen.
+  - id: cervantes-don-quixote#u14-c3
+    label: c3
+    heading: Cardenio's address to his rescuers
+    char_start: 592309
+    char_end: 593955
+    start_quote: I see plainly, sirs, whoever you may be, that Heaven, whose care it is
+    end_quote: consolation to grief that is beyond the reach of it.
+    why: Cardenio's lucid framing of his own madness and his insistence on narrating himself rather than
+      being cured, setting up the completed confession.
+  - id: cervantes-don-quixote#u14-c4
+    label: c4
+    heading: Luscinda's forced 'I will'
+    char_start: 609795
+    char_end: 610323
+    start_quote: The priest stood waiting for the answer of Luscinda, who for a long
+    end_quote: fell fainting in her mother’s arms.
+    why: The climactic betrothal scene that is the structural mirror-event to Dorothea's own coerced pledge,
+      and the origin of Cardenio's ruin.
+  - id: cervantes-don-quixote#u14-c5
+    label: c5
+    heading: Dorothea's refusal under duress
+    char_start: 634641
+    char_end: 635505
+    start_quote: If, as I am now in your arms, señor, I were in the claws of a fierce
+    end_quote: 'your sighs or tears to soften me:'
+    why: Dorothea's own words distinguishing bodily capture from consent, the moral center of her account
+      and the device by which she extracts Don Fernando's oath.
+  - id: cervantes-don-quixote#u14-c6
+    label: c6
+    heading: Dorothea's escape into the Sierra
+    char_start: 649003
+    char_end: 649488
+    start_quote: But just Heaven, that seldom fails to watch over and aid good
+    end_quote: escaping my father and those despatched in search of me by his orders.
+    why: Dorothea's own violent, decisive escape from assault, the moment that establishes her active
+      agency and her flight into the mountain refuge.
+- nn: 15
+  unit_id: p1-29-32
+  note_id: cervantes-don-quixote-p1-29-32
+  span: 650642:733029
+  chunks:
+  - id: cervantes-don-quixote#u15-c1
+    label: c1
+    heading: Cardenio's proposal to Dorothea
+    char_start: 653863
+    char_end: 654156
+    start_quote: because seeing that Luscinda cannot marry Don Fernando, being mine, as she has herself
+      so
+    end_quote: as it is still in existence and not yet alienated or destroyed.
+    why: Shows the two wronged parties converting personal catastrophe into a shared legal-moral claim,
+      the hinge that turns the Cardenio subplot into an alliance.
+  - id: cervantes-don-quixote#u15-c2
+    label: c2
+    heading: Sancho's fantasy of selling his vassals
+    char_start: 666386
+    char_end: 667218
+    start_quote: The only thing that troubled him was the reflection that this kingdom was in the land
+      of the blacks
+    end_quote: Come, come, what a fool I am!”
+    why: Exposes the acquisitive, casually monstrous economic imagination underneath Sancho's comic dream
+      of governorship.
+  - id: cervantes-don-quixote#u15-c3
+    label: c3
+    heading: Don Quixote's code of aid without judgment
+    char_start: 676857
+    char_end: 677266
+    start_quote: Blockhead!” said Don Quixote at this, “it is no business or concern of
+    end_quote: having regard to their sufferings and not to their rascalities.
+    why: States Don Quixote's ethical code at its most coherent, setting up its ironic collapse in the
+      Andres episode later in the unit.
+  - id: cervantes-don-quixote#u15-c4
+    label: c4
+    heading: Andres's reversal and curse
+    char_start: 714347
+    char_end: 718233
+    start_quote: Not only did he not pay me,” replied the lad, “but as soon as your
+    end_quote: on whom and all the knights-errant that have ever been born God send his curse.”
+    why: 'The unit''s one real consequence: proof that the earlier ''rescue'' worsened the boy''s suffering,
+      puncturing the pattern of consequence-free heroics.'
+  - id: cervantes-don-quixote#u15-c5
+    label: c5
+    heading: The curate denies the chivalric books ever happened
+    char_start: 728182
+    char_end: 728712
+    start_quote: But consider, brother,” said the curate once more, “there never was
+    end_quote: no such exploits or nonsense ever happened anywhere.”
+    why: Stages the culture's live argument over whether chivalric romance is functional truth or licensed
+      diversion, the same fault line Don Quixote's madness dramatizes.
+  - id: cervantes-don-quixote#u15-c6
+    label: c6
+    heading: The scent of Dulcinea
+    char_start: 701211
+    char_end: 702084
+    start_quote: But one thing thou wilt not deny, Sancho; when thou camest
+    end_quote: but that’s no wonder, for one devil is like another.”
+    why: A miniature of Don Quixote's self-sealing belief system, where contrary sensory evidence is repeatedly
+      reinterpreted as further confirmation.
+- nn: 16
+  unit_id: p1-33-34
+  note_id: cervantes-don-quixote-p1-33-34
+  span: 733029:817550
+  chunks:
+  - id: cervantes-don-quixote#u16-c1
+    label: c1
+    heading: 'Anselmo''s confession: virtue must be tested to count'
+    char_start: 740843
+    char_end: 741359
+    start_quote: the desire which harasses me is that of knowing whether my wife Camilla is as good and
+      as perfect as I think her to be
+    end_quote: she alone is strong who does not yield to the promises, gifts, tears, and importunities
+      of earnest lovers
+    why: 'States the novella''s founding premise in Anselmo''s own words: virtue unproven by trial is
+      worthless to him, the desire that sets the whole tragedy in motion.'
+  - id: cervantes-don-quixote#u16-c2
+    label: c2
+    heading: Lothario's diamond argument against testing what is already trusted
+    char_start: 751751
+    char_end: 752644
+    start_quote: Tell me, Anselmo, if Heaven or good fortune had made thee master and lawful owner of
+      a diamond of the finest quality
+    end_quote: leaving its owner to be rated as a fool in the opinion of all
+    why: 'Lothario''s central rational refutation: subjecting something already known to be perfect to
+      a destructive test can only leave it unchanged or destroy it, never improve it.'
+  - id: cervantes-don-quixote#u16-c3
+    label: c3
+    heading: The glass-woman verses
+    char_start: 755653
+    char_end: 756036
+    start_quote: Woman is a thing of glass;
+    end_quote: There are golden showers too.
+    why: The era's ideology of fragile female virtue compressed into quotable verse, cited by Lothario
+      as supporting proof and undercut by the plot's own events.
+  - id: cervantes-don-quixote#u16-c4
+    label: c4
+    heading: Anselmo spies and manufactures a false certainty
+    char_start: 768206
+    char_end: 768596
+    start_quote: shut himself into a chamber and posted himself to watch and listen through the keyhole
+      to what passed between them
+    end_quote: he came to the conclusion that what his friend had told him about the replies of Camilla
+      was all invention and falsehood
+    why: Shows surveillance generating a wrong conclusion that drives the plot deeper into ruin, the novella's
+      clearest instance of legibility-seeking producing error rather than truth.
+  - id: cervantes-don-quixote#u16-c5
+    label: c5
+    heading: 'The verdict: hoodwinked, and paid with his life'
+    char_start: 816968
+    char_end: 817546
+    start_quote: And so Anselmo was left the most charmingly hoodwinked man there could be in the world.
+    end_quote: Anselmo paid with his life the penalty of his ill-advised curiosity.
+    why: The novella's closing frame, delivering its moral verdict in a single compressed, proleptic sentence
+      that names the theme outright.
+- nn: 17
+  unit_id: p1-35-37
+  note_id: cervantes-don-quixote-p1-35-37
+  span: 817550:880470
+  chunks:
+  - id: cervantes-don-quixote#u17-c1
+    label: c1
+    heading: The wineskins mistaken for a giant
+    char_start: 818980
+    char_end: 820342
+    start_quote: “May I die,” said the landlord at this, “if Don Quixote or Don Devil
+    end_quote: he had given so many sword cuts to the skins that the whole room was full of wine.
+    why: 'The comic centerpiece of the unit: chivalric perception collapses into farce as Don Quixote''s
+      imagined giant-slaying is revealed as a drunken assault on wine-skins.'
+  - id: cervantes-don-quixote#u17-c2
+    label: c2
+    heading: Anselmo's unfinished confession and the novella's close
+    char_start: 834938
+    char_end: 836288
+    start_quote: “A foolish and ill-advised desire has robbed me of life.
+    end_quote: This was the end of all three, an end that came of a thoughtless beginning.
+    why: The tragic close of the embedded novella "The Ill-Advised Curiosity," whose flat moral judgment
+      sets up the curate's immediate literary-critical deflation.
+  - id: cervantes-don-quixote#u17-c3
+    label: c3
+    heading: Dorothea's appeal to Don Fernando
+    char_start: 844452
+    char_end: 845566
+    start_quote: “If, my lord, the beams of that sun that thou holdest eclipsed in thine
+    end_quote: that now, even though thou repentest, thou canst not help being mine.
+    why: Dorothea's formal rhetorical plea is the engine that forces Don Fernando's public reckoning with
+      his broken promise.
+  - id: cervantes-don-quixote#u17-c4
+    label: c4
+    heading: Luscinda's declaration of fidelity
+    char_start: 843266
+    char_end: 844117
+    start_quote: “Leave me, Señor Don Fernando, for the sake of what you owe to yourself
+    end_quote: it may be by my death he will be convinced that I kept my faith to him to the last moment
+      of life.”
+    why: Luscinda's ivy-and-wall image and willingness to die rather than break faith is the counterpart
+      appeal that completes the double resolution.
+  - id: cervantes-don-quixote#u17-c5
+    label: c5
+    heading: Conquered, and the second embrace
+    char_start: 848572
+    char_end: 849292
+    start_quote: “Thou hast conquered, fair Dorothea, thou hast conquered, for it is
+    end_quote: and received thee before when fortune permitted me to call thee mine.”
+    why: The pivot moment where both love triangles resolve in immediate succession, rhetoric explicitly
+      credited with the outcome.
+  - id: cervantes-don-quixote#u17-c6
+    label: c6
+    heading: Don Quixote on appearance and reality
+    char_start: 874950
+    char_end: 875310
+    start_quote: Say, what being is there in this world, who entering the gate of this castle at this
+      moment
+    end_quote: trumpeted far and wide by the mouth of Fame?
+    why: Don Quixote's own meta-commentary on the gap between appearance and identity reframes the evening's
+      unveilings, delivered with an eloquence that complicates his portrait as mere madman.
+- nn: 18
+  unit_id: p1-38-40
+  note_id: cervantes-don-quixote-p1-38-40
+  span: 880470:933810
+  chunks:
+  - id: cervantes-don-quixote#u18-c1
+    label: c1
+    heading: Lament against artillery
+    char_start: 886257
+    char_end: 886905
+    start_quote: Happy the blest ages that knew not the dread
+    end_quote: cuts off the life of one who deserved to live for ages to come.
+    why: Don Quixote's clearest statement that gunpowder warfare has broken the chivalric code his whole
+      identity depends on, an era-transition made personal.
+  - id: cervantes-don-quixote#u18-c2
+    label: c2
+    heading: The father divides the patrimony
+    char_start: 890670
+    char_end: 892497
+    start_quote: My sons, to assure you that I love you, no more need be known or said
+    end_quote: if war does not bring much wealth it confers great distinction and fame.
+    why: Establishes the family logic and the vocational triad (church, trade, arms) that structures the
+      Captive's entire life story.
+  - id: cervantes-don-quixote#u18-c3
+    label: c3
+    heading: Victory and capture at Lepanto
+    char_start: 896563
+    char_end: 897361
+    start_quote: I may say, in short, that I took part in that glorious expedition
+    end_quote: I found myself with fetters on my feet and manacles on my hands.
+    why: The pivotal autobiographical hinge of the Captive's tale, collapsing Christendom's triumph and
+      the narrator's personal catastrophe into one night.
+  - id: cervantes-don-quixote#u18-c4
+    label: c4
+    heading: Zoraida's first letter
+    char_start: 921079
+    char_end: 922368
+    start_quote: When I was a child my father had a slave who taught me to pray the
+    end_quote: which I often kiss as the captive bade me, protect thee.
+    why: The letter that launches the escape plot, syncretically blending Christian and Moorish devotion
+      and setting the terms of the courtship.
+  - id: cervantes-don-quixote#u18-c5
+    label: c5
+    heading: The renegade's warning about broken promises
+    char_start: 928768
+    char_end: 929348
+    start_quote: the renegade objected, saying that he would not on any account consent to one being set
+      free before all went together
+    end_quote: efface from the memory all the obligations in the world.
+    why: Supplies the practical logic of mutual obligation that will govern the group's escape plan in
+      the chapters that follow.
+- nn: 19
+  unit_id: p1-41-42
+  note_id: cervantes-don-quixote-p1-41-42
+  span: 933810:993320
+  chunks:
+  - id: cervantes-don-quixote#u19-c1
+    label: c1
+    heading: Zoraida's whispered vow
+    char_start: 943463
+    char_end: 944013
+    start_quote: I bowed, and he went away to look for the Turks, leaving me alone with
+    end_quote: for most surely we shall go to the land of the Christians.”
+    why: The captive's coded promise and Zoraida's coded question crystallize the tale's motif of doubled,
+      overheard speech and her irrevocable commitment to leaving.
+  - id: cervantes-don-quixote#u19-c2
+    label: c2
+    heading: The father's alarm during the abduction
+    char_start: 950910
+    char_end: 952057
+    start_quote: Unfortunately her father awoke while this was going on, and hearing a noise in the garden,
+      came
+    end_quote: not knowing how willingly she had placed herself in our hands.
+    why: Shows the abduction's real violence and the gap between what the father perceives (theft) and
+      what is actually happening (his daughter's chosen flight).
+  - id: cervantes-don-quixote#u19-c3
+    label: c3
+    heading: The father's curse
+    char_start: 961614
+    char_end: 962448
+    start_quote: Why is it, think ye, Christians, that this wicked woman is rejoiced at your giving me
+      my liberty?
+    end_quote: Cursed the luxury and indulgence in which I reared thee!”
+    why: The rhetorical climax of the father-daughter rupture, staging the total breach of household,
+      faith, and blood that Zoraida's conversion causes.
+  - id: cervantes-don-quixote#u19-c4
+    label: c4
+    heading: Zoraida's answer to her father's grief
+    char_start: 963303
+    char_end: 963773
+    start_quote: Allah grant that Lela Marien, who has made me become a Christian, give thee comfort in
+      thy sorrow, my father.
+    end_quote: which I feel to be as righteous as to thee, dear father, it seems wicked.”
+    why: Zoraida's clearest self-account of her conversion as an inward compulsion she could not have
+      resisted, asserting her own conatus against paternal and religious claim on her.
+  - id: cervantes-don-quixote#u19-c5
+    label: c5
+    heading: Don Quixote's chivalric welcome of the Judge
+    char_start: 979960
+    char_end: 980735
+    start_quote: Your worship may with confidence enter and take your ease in this castle
+    end_quote: and beauty in its highest perfection.”
+    why: Exemplifies Don Quixote's chivalric register colliding, absurdly, with the ordinary social world
+      of magistrates and inns, just before the frame story's own recognition scene.
+  - id: cervantes-don-quixote#u19-c6
+    label: c6
+    heading: The curate's staged revelation
+    char_start: 989632
+    char_end: 990048
+    start_quote: Let your tears cease to flow, Señor Judge, and the wish of your heart be gratified as
+      fully as
+    end_quote: show the generosity of your kind heart.”
+    why: The engineered anagnorisis that resolves the captive's tale into the frame narrative, restoring
+      the family the opening of his story described as broken apart by their father's tripartite bequest.
+- nn: 20
+  unit_id: p1-43-45
+  note_id: cervantes-don-quixote-p1-43-45
+  span: 993320:1049877
+  chunks:
+  - id: cervantes-don-quixote#u20-c1
+    label: c1
+    heading: Clara recognizes her disguised suitor
+    char_start: 998564
+    char_end: 1000061
+    start_quote: But after we had been two days on the road, on entering the posada of a village a day’s
+      journey from this
+    end_quote: as I told you already.
+    why: Reveals the muleteer-singer's true identity and disguise, the hinge fact of the Clara/Don Luis
+      subplot.
+  - id: cervantes-don-quixote#u20-c2
+    label: c2
+    heading: The hand offered, the wrist bound
+    char_start: 1006696
+    char_end: 1007382
+    start_quote: Lady, take this hand, or rather this scourge of the evil-doers of the earth
+    end_quote: tied the other end very firmly to the bolt of the door of the straw-loft.
+    why: The comic set-piece of the Maritornes prank, juxtaposing Don Quixote's heroic rhetoric with his
+      physical humiliation.
+  - id: cervantes-don-quixote#u20-c3
+    label: c3
+    heading: The self-sealing logic of enchantment
+    char_start: 1008508
+    char_end: 1009041
+    start_quote: he began to fancy that all this was done by enchantment, as on the former occasion
+    end_quote: it is a sign that it is not reserved for them but for others, and that therefore they need
+      not try it again.
+    why: Shows the closed explanatory frame by which Don Quixote converts every failure into confirmation
+      of his chivalric worldview.
+  - id: cervantes-don-quixote#u20-c4
+    label: c4
+    heading: Truth settled by secret vote
+    char_start: 1036741
+    char_end: 1038448
+    start_quote: There can be no question,” said Don Fernando on this, “but that Señor
+    end_quote: this is a caparison and no pack-saddle, and you have stated and proved your case very badly.
+    why: 'Literalizes consensus-manufacturing: a factual dispute resolved by canvassed opinion rather
+      than evidence, then enforced as settled fact.'
+  - id: cervantes-don-quixote#u20-c5
+    label: c5
+    heading: Knight-errantry's claim to total exemption
+    char_start: 1048182
+    char_end: 1049872
+    start_quote: Come now, base, ill-born brood; call ye it highway robbery to give
+    end_quote: four hundred cudgellings to four hundred officers of the Holy Brotherhood if they come
+      in his way?
+    why: Don Quixote's culminating declaration that chivalric law stands wholly outside state jurisdiction,
+      cut off just as the era's actual policing apparatus closes in on him.
+- nn: 21
+  unit_id: p1-46-48
+  note_id: cervantes-don-quixote-p1-46-48
+  span: 1049877:1106705
+  chunks:
+  - id: cervantes-don-quixote#u21-c1
+    label: c1
+    heading: Sancho exposes the Micomicona fiction
+    char_start: 1057045
+    char_end: 1058214
+    start_quote: It is nothing of the sort, as I am a sinner before God,
+    end_quote: let every jade mind her spinning, and let us go to dinner.
+    why: Sancho's plain-sense skepticism punctures the aristocratic romance being staged around him and
+      provokes Don Quixote's rage.
+  - id: cervantes-don-quixote#u21-c2
+    label: c2
+    heading: The cage is built and Don Quixote is seized
+    char_start: 1062661
+    char_end: 1064416
+    start_quote: They constructed a kind of cage with wooden bars, large enough
+    end_quote: so firmly that they could not be easily burst open.
+    why: The moment the friends' staged 'enchantment' fiction becomes literal physical capture, the unit's
+      structural hinge.
+  - id: cervantes-don-quixote#u21-c3
+    label: c3
+    heading: The disguised barber's mock prophecy
+    char_start: 1064620
+    char_end: 1066112
+    start_quote: O Knight of the Rueful Countenance, let not this captivity in which thou art placed
+    end_quote: God be with thee; for I return to that place I wot of;
+    why: Cervantes' parody of chivalric prophetic diction, used cynically as a management tool yet genuinely
+      consoling to Don Quixote.
+  - id: cervantes-don-quixote#u21-c4
+    label: c4
+    heading: An unfalsifiable belief, demonstrated
+    char_start: 1103150
+    char_end: 1104546
+    start_quote: As to what thou sayest, that these who accompany us yonder are the curate and the barber
+    end_quote: for they are as much so as I am a Turk.
+    why: Don Quixote reclassifies Sancho's disconfirming evidence as further proof of enchantment, a compact
+      portrait of a self-sealing worldview.
+  - id: cervantes-don-quixote#u21-c5
+    label: c5
+    heading: The Canon's defense of verisimilitude
+    char_start: 1085628
+    char_end: 1086378
+    start_quote: And if, in answer to this, I am told that the authors of books of the kind write them
+      as fiction
+    end_quote: wherein lies the perfection of writing.
+    why: The Canon's core literary-theoretical claim, and Cervantes' clearest statement of realist poetics
+      against the romances.
+  - id: cervantes-don-quixote#u21-c6
+    label: c6
+    heading: The curate's parallel indictment of the stage
+    char_start: 1094627
+    char_end: 1095896
+    start_quote: For what greater nonsense can there be in connection with what we are now discussing
+    end_quote: there being years innumerable between the one and the other?
+    why: Extends the Canon's critique of improbability from romance to contemporary drama, grounding the
+      argument in a concrete historical anachronism.
+- nn: 22
+  unit_id: p1-49-51
+  note_id: cervantes-don-quixote-p1-49-51
+  span: 1106705:1147786
+  chunks:
+  - id: cervantes-don-quixote#u22-c1
+    label: c1
+    heading: Sancho's proof against enchantment
+    char_start: 1106820
+    char_end: 1107504
+    start_quote: “Aha, I have caught you,” said Sancho; “this is what in my heart and
+    end_quote: and answer every question that is asked them.”
+    why: Sancho's homespun empirical syllogism (enchanted people don't eat, drink, or answer questions)
+      sets up the whole enchantment debate that follows.
+  - id: cervantes-don-quixote#u22-c2
+    label: c2
+    heading: Enchantment as conscience-saving necessity
+    char_start: 1107893
+    char_end: 1108280
+    start_quote: I know and feel that I am enchanted, and that is enough to ease my
+    end_quote: who at this very moment may be in sore want of my aid and protection.”
+    why: Don Quixote abandons evidence for necessity, choosing the frame that lets his vocation as knight-errant
+      persist against contrary facts.
+  - id: cervantes-don-quixote#u22-c3
+    label: c3
+    heading: The canon's indictment of chivalric books
+    char_start: 1111915
+    char_end: 1113340
+    start_quote: Is it possible, gentle sir, that the nauseous and idle reading of
+    end_quote: to believe and accept as truth all the folly they contain.
+    why: States the canon's case that romances are dangerous counterfeit history, not merely bad fiction,
+      and proposes verified history as the corrective.
+  - id: cervantes-don-quixote#u22-c4
+    label: c4
+    heading: Don Quixote's evidentiary defense
+    char_start: 1116488
+    char_end: 1117224
+    start_quote: For to try to persuade anybody that Amadis, and all
+    end_quote: who still lives changed into a raven, and is unceasingly looked for in his kingdom.
+    why: Shows Don Quixote fighting the canon on his own evidentiary ground, fusing attested history and
+      pure legend into one continuous, undifferentiated record.
+  - id: cervantes-don-quixote#u22-c5
+    label: c5
+    heading: The lake of bubbling pitch
+    char_start: 1122775
+    char_end: 1123961
+    start_quote: For, come, tell me, can there be anything more delightful than to see, as it were, here
+      now displayed
+    end_quote: he finds himself among flowery meadows, with which the Elysian fields are not to be compared.
+    why: Don Quixote's rapturous set-piece performs the seductive pleasure of chivalric romance the canon
+      has just condemned, letting the reader feel its pull directly.
+  - id: cervantes-don-quixote#u22-c6
+    label: c6
+    heading: The valley turned Arcadia of grief
+    char_start: 1145043
+    char_end: 1145745
+    start_quote: At last Anselmo and I agreed to leave the village and
+    end_quote: nor is there a spot in it where the name of the fair Leandra is not heard.
+    why: Describes the spurned suitors' self-organized pastoral community, a bordered habitat sustained
+      entirely by shared, non-transferable grief.
+- nn: 23
+  unit_id: p1-52
+  note_id: cervantes-don-quixote-p1-52
+  span: 1147786:1170896
+  chunks:
+  - id: cervantes-don-quixote#u23-c1
+    label: c1
+    heading: The loaf, the chokehold, and the pile-on
+    char_start: 1149975
+    char_end: 1151210
+    start_quote: You are a great scoundrel,” said Don Quixote, “and it is you who are
+    end_quote: the poor knight’s face streamed with blood as freely as his own.
+    why: Shows Cervantes' mechanism for demoting Don Quixote's chivalric idiom through pure slapstick,
+      with the whole company watching in delight.
+  - id: cervantes-don-quixote#u23-c2
+    label: c2
+    heading: The charge on the penitents
+    char_start: 1153742
+    char_end: 1154239
+    start_quote: Now, noble company, ye shall see how
+    end_quote: set off to encounter the penitents
+    why: Don Quixote's explicit statement that the stakes are the honor of knight-errantry itself, immediately
+      undercut by the narrator noting Rocinante is, uniquely, actually galloping.
+  - id: cervantes-don-quixote#u23-c3
+    label: c3
+    heading: Sancho's warning ignored
+    char_start: 1154403
+    char_end: 1154778
+    start_quote: Where are you going, Señor Don Quixote? What devils have
+    end_quote: this time it may be safely said you don’t know what you are about.
+    why: Sancho's plain, correct description of reality cannot penetrate Don Quixote's frame, staging
+      the mutual illegibility between the two orders sharing the field.
+  - id: cervantes-don-quixote#u23-c4
+    label: c4
+    heading: Sancho's mock-heroic lament
+    char_start: 1158516
+    char_end: 1159182
+    start_quote: Oh flower of chivalry, that with one blow of a stick hast ended
+    end_quote: in short, knight-errant, which is all that can be said!”
+    why: Sancho eulogizes his master sincerely in chivalric diction he has absorbed, the clearest sign
+      of how far he has entered Don Quixote's idiom.
+  - id: cervantes-don-quixote#u23-c5
+    label: c5
+    heading: Sancho's reckoning with Teresa
+    char_start: 1163308
+    char_end: 1164093
+    start_quote: Don’t be in such a hurry to know all this, Teresa,” said Sancho; “it
+    end_quote: and devil take the maravedi to pay.”
+    why: Sancho's unsentimental cost-benefit accounting of squirehood — repeated material defeat weighed
+      against an undiminished appetite for the seeking itself.
+  - id: cervantes-don-quixote#u23-c6
+    label: c6
+    heading: The epitaph on Don Quixote
+    char_start: 1167117
+    char_end: 1167684
+    start_quote: The scatterbrain that gave La Mancha more
+    end_quote: Here, underneath this cold stone, doth he lie.
+    why: The mock-scholarly epitaph that closes Part One, instantly monumentalizing the still-living,
+      still-mad knight in parody of chivalric and elegiac convention.
+- nn: 24
+  unit_id: transition-part2-dedication-preface
+  note_id: cervantes-don-quixote-transition-part2-dedication-preface
+  span: 1170896:1181204
+  chunks:
+  - id: cervantes-don-quixote#u24-c1
+    label: c1
+    heading: The Chinese emperor's invitation
+    char_start: 1171524
+    char_end: 1172540
+    start_quote: And he who has shown the greatest longing for him has been the great Emperor of China
+    end_quote: does me more favour than I can wish for.”
+    why: Turns the dedication's patronage logic into comedy, contrasting an emperor's prestige with Lemos's
+      concrete support.
+  - id: cervantes-don-quixote#u24-c2
+    label: c2
+    heading: The Lepanto wound as honor, not diminishment
+    char_start: 1173979
+    char_end: 1174878
+    start_quote: What I cannot help taking amiss is that he charges me with being
+    end_quote: the heaven of honour and ambition of merited praise;
+    why: Cervantes's most direct personal defense against Avellaneda, reframing his maimed hand as the
+      era's highest badge of honor.
+  - id: cervantes-don-quixote#u24-c3
+    label: c3
+    heading: The reed-and-dog parable
+    char_start: 1176670
+    char_end: 1177388
+    start_quote: There was a madman in Seville who took to one of the drollest
+    end_quote: that it is an easy thing to write a book?
+    why: The preface's central comic parable, converted directly into Cervantes's rebuke to easy critics
+      of authorship.
+  - id: cervantes-don-quixote#u24-c4
+    label: c4
+    heading: The stone-and-lurcher parable
+    char_start: 1177510
+    char_end: 1178890
+    start_quote: In Cordova there was another madman, whose way it was to carry
+    end_quote: he discharged no more stones.
+    why: A second, escalating parable implying Avellaneda will not dare attempt another counterfeit sequel
+      after this rebuke.
+  - id: cervantes-don-quixote#u24-c5
+    label: c5
+    heading: The vow to kill Don Quixote for good
+    char_start: 1180343
+    char_end: 1181062
+    start_quote: Thou needst say no more to him, nor will I say anything more to thee
+    end_quote: confers a certain value.
+    why: 'States the preface''s decisive act: closing the canon by narrative death to foreclose any further
+      spurious continuations.'
+- nn: 25
+  unit_id: p2-01-04
+  note_id: cervantes-don-quixote-p2-01-04
+  span: 1181204:1242770
+  chunks:
+  - id: cervantes-don-quixote#u25-c1
+    label: c1
+    heading: The mad Jupiter's threat
+    char_start: 1193507
+    char_end: 1194397
+    start_quote: but I swear to you by Jupiter, whose majesty I represent on earth, that
+    end_quote: I will as soon think of sending rain as of hanging myself.
+    why: The barber's cautionary tale-within-a-tale stages the impossibility of cleanly diagnosing madness,
+      the parable the curate and barber use to test Don Quixote's own cure.
+  - id: cervantes-don-quixote#u25-c2
+    label: c2
+    heading: Lament for the golden age of chivalry
+    char_start: 1195846
+    char_end: 1197497
+    start_quote: But our depraved age does not deserve to enjoy such a blessing as those ages enjoyed
+    end_quote: vice over virtue, arrogance over courage, and theory over practice in arms, which flourished
+      and shone only in the golden ages and in knights-errant.
+    why: Don Quixote's fullest statement of chivalry as an idealized lost order, the emotional and ideological
+      engine behind his refusal to be cured.
+  - id: cervantes-don-quixote#u25-c3
+    label: c3
+    heading: Cast in the same mould
+    char_start: 1207455
+    char_end: 1207745
+    start_quote: God help them,” said the curate; “and let us be on the look-out to see
+    end_quote: would not be worth a farthing.”
+    why: The curate's aside names the structural interdependence of Don Quixote's madness and Sancho's
+      simplicity that the rest of the unit dramatizes.
+  - id: cervantes-don-quixote#u25-c4
+    label: c4
+    heading: The head and its members
+    char_start: 1208666
+    char_end: 1209437
+    start_quote: Thou art mistaken, Sancho,” said Don Quixote, “according to the maxim
+    end_quote: it should be obliged to feel their sufferings.”
+    why: Don Quixote's scholastic analogy of master and servant as one body, punctured by Sancho's concrete
+      counter-logic about the blanket-tossing, is the unit's clearest comic-philosophical set piece.
+  - id: cervantes-don-quixote#u25-c5
+    label: c5
+    heading: Sancho reports the village verdict
+    char_start: 1211262
+    char_end: 1211836
+    start_quote: Well then,” said he, “first of all, I have to tell you that the common
+    end_quote: who polish their own shoes and darn their black stockings with green silk.”
+    why: Sancho's undecorated relay of public opinion is the unit's demonstration of demanded truth actually
+      delivered, setting up Don Quixote's response on the price of eminence.
+  - id: cervantes-don-quixote#u25-c6
+    label: c6
+    heading: Poet versus historian
+    char_start: 1221594
+    char_end: 1221941
+    start_quote: That is true,” said Samson; “but it is one thing to write as a poet,
+    end_quote: without adding anything to the truth or taking anything from it.”
+    why: States the mock-historiographical premise underlying the whole Cide Hamete Benengeli conceit,
+      the keystone of the unit's metafictional turn.
+- nn: 26
+  unit_id: p2-05-08
+  note_id: cervantes-don-quixote-p2-05-08
+  span: 1242770:1299182
+  chunks:
+  - id: cervantes-don-quixote#u26-c1
+    label: c1
+    heading: Sancho's divided happiness
+    char_start: 1243933
+    char_end: 1244769
+    start_quote: Hark ye, Teresa,” replied Sancho, “I am glad because I have made up my
+    end_quote: I was right in saying I would be glad, if it were God’s will, not to be well pleased.”
+    why: Sancho's opening confession to Teresa states the unit's central tension between the pull of adventure/reward
+      and grief at leaving home.
+  - id: cervantes-don-quixote#u26-c2
+    label: c2
+    heading: The four kinds of lineage
+    char_start: 1263109
+    char_end: 1263933
+    start_quote: Look you, my dears, all the lineages in the world (attend to what I am saying)
+    end_quote: and so will have an end without a name, like an ordinary plebeian line.
+    why: Don Quixote's taxonomy of rising, holding, collapsing, and undistinguished lineages is his fullest
+      historical-moral schema in the unit, echoing rise-decline patterns.
+  - id: cervantes-don-quixote#u26-c3
+    label: c3
+    heading: The knight-errant versus the courtier
+    char_start: 1258332
+    char_end: 1259876
+    start_quote: Recollect, my friend,” said Don Quixote, “all knights cannot be
+    end_quote: and glowing brighter than a glass furnace, must not on any account be dismayed by them.
+    why: States Don Quixote's core claim that knight-errantry means unmediated bodily encounter with the
+      world against the courtier's map-mediated knowledge.
+  - id: cervantes-don-quixote#u26-c4
+    label: c4
+    heading: Sancho's tearful recommitment
+    char_start: 1279671
+    char_end: 1280936
+    start_quote: I do deign,” said Sancho, deeply moved and with tears in his eyes; “it
+    end_quote: as well and better than all the squires that served knights-errant in times past or present.”
+    why: The emotional turning point where wage haggling resolves into a loyalty declaration, revealing
+      Sancho's motives are not purely mercenary.
+  - id: cervantes-don-quixote#u26-c5
+    label: c5
+    heading: Departure by night
+    char_start: 1282771
+    char_end: 1283463
+    start_quote: at nightfall, unseen by anyone except the bachelor, who thought fit to
+    end_quote: and the other two took the road for the great city of El Toboso.
+    why: The spare, quiet sentence marking the formal start of the third sally, contrasting with the household
+      uproar that precedes it.
+  - id: cervantes-don-quixote#u26-c6
+    label: c6
+    heading: Sancho's proposal to become a saint
+    char_start: 1296910
+    char_end: 1297722
+    start_quote: My meaning is,” said Sancho, “let us set about becoming saints, and we
+    end_quote: be they given to giants, or monsters, or dragons.”
+    why: Sancho's deflating folk-logic contrasts chivalric fame with the Church's institutional economy
+      of relics and veneration, the unit's sharpest satire.
+- nn: 27
+  unit_id: p2-09-12
+  note_id: cervantes-don-quixote-p2-09-12
+  span: 1299182:1353197
+  chunks:
+  - id: cervantes-don-quixote#u27-c1
+    label: c1
+    heading: The palace that is the church
+    char_start: 1301278
+    char_end: 1301587
+    start_quote: Don Quixote took the lead, and having gone a matter of two hundred
+    end_quote: the chief church of the town, and said he, “It’s the church we have lit upon, Sancho.”
+    why: 'Stages the unit''s opening comic collapse of referents: a palace that must exist by the logic
+      of Don Quixote''s devotion turns out to be nothing but a church tower.'
+  - id: cervantes-don-quixote#u27-c2
+    label: c2
+    heading: Sancho plots the enchantment
+    char_start: 1313778
+    char_end: 1314688
+    start_quote: Well then, if he be mad, as he is, and with a madness that mostly
+    end_quote: has changed her form for the sake of doing him an ill turn and injuring him.”
+    why: The load-bearing passage where Sancho consciously designs the Dulcinea deception by exploiting
+      his master's known pattern of mistaking one thing for another.
+  - id: cervantes-don-quixote#u27-c3
+    label: c3
+    heading: Kneeling before a village lass
+    char_start: 1319309
+    char_end: 1319698
+    start_quote: Don Quixote had by this time placed himself on his knees beside Sancho
+    end_quote: he was perplexed and bewildered, and did not venture to open his lips.
+    why: The deception's payoff moment, where Don Quixote's senses report plain reality but cannot yet
+      override the belief Sancho has primed him for.
+  - id: cervantes-don-quixote#u27-c4
+    label: c4
+    heading: The delusion repairs itself
+    char_start: 1323076
+    char_end: 1324077
+    start_quote: How now, Sancho? thou seest how I am hated by enchanters!
+    end_quote: she gave me a whiff of raw garlic that made my head reel, and poisoned my very heart.”
+    why: Shows the self-sealing logic of Don Quixote's madness absorbing disconfirming evidence (a garlic-smelling
+      peasant) into an expanded conspiracy of hostile enchanters.
+  - id: cervantes-don-quixote#u27-c5
+    label: c5
+    heading: The theater as mirror of mortal equality
+    char_start: 1341191
+    char_end: 1342257
+    start_quote: they are all instruments of great good to the State, placing before us
+    end_quote: death strips them all of the garments that distinguish one from the other, and all are
+      equal in the grave.”
+    why: A direct authorial meditation on costume, role, and the leveling truth beneath performance, bearing
+      on Don Quixote's own chosen chivalric costume.
+  - id: cervantes-don-quixote#u27-c6
+    label: c6
+    heading: A knight blind to his own reflection
+    char_start: 1349477
+    char_end: 1349935
+    start_quote: It is not enough that I have compelled all the knights
+    end_quote: thou seest how this knight is raving, Sancho.
+    why: 'Sets up the doubling structure of the Knight of the Grove episode: Don Quixote corrects a factual
+      detail while failing to see his own madness staged back at him.'
+- nn: 28
+  unit_id: p2-13-16
+  note_id: cervantes-don-quixote-p2-13-16
+  span: 1353197:1415176
+  chunks:
+  - id: cervantes-don-quixote#u28-c1
+    label: c1
+    heading: The squires' cynical colloquy
+    char_start: 1353707
+    char_end: 1354251
+    start_quote: A hard life it is we lead and live, señor, we that are squires to knights-errant
+    end_quote: except with the wind that blows.
+    why: Establishes the comic, deflationary double of the knights' rivalry through the squires' plain-spoken
+      talk of hunger, reward, and service.
+  - id: cervantes-don-quixote#u28-c2
+    label: c2
+    heading: The labors for Casildea de Vandalia
+    char_start: 1366366
+    char_end: 1368913
+    start_quote: I call her peerless because she has no peer, whether it be in bodily stature
+    end_quote: The greater glory gilds the victor’s crown.
+    why: The Knight of the Grove's parody of courtly devotion mirrors and travesties Don Quixote's service
+      to Dulcinea, and sets up his false claim to have already vanquished Don Quixote.
+  - id: cervantes-don-quixote#u28-c3
+    label: c3
+    heading: The unmasking as Samson Carrasco
+    char_start: 1384825
+    char_end: 1386549
+    start_quote: He saw, the history says, the very countenance, the very face, the very look, the very
+      physiognomy, the very effigy, the very image of the bachelor Samson Carrasco!
+    end_quote: Isn’t it Tom Cecial, my neighbour and gossip?
+    why: The episode's structural hinge, where the rigged duel's disguise collapses and both master and
+      squire recognize their neighbors beneath the armor.
+  - id: cervantes-don-quixote#u28-c4
+    label: c4
+    heading: Enchantment as self-sealing explanation
+    char_start: 1396793
+    char_end: 1398101
+    start_quote: It is all,” said Don Quixote, “a scheme and plot of the malignant magicians that persecute
+      me
+    end_quote: I have been victorious over my enemy.”
+    why: Shows Don Quixote's delusion absorbing direct disconfirming evidence (Carrasco's own face) and
+      converting it into further proof of enchantment.
+  - id: cervantes-don-quixote#u28-c5
+    label: c5
+    heading: The discourse on poetry
+    char_start: 1409794
+    char_end: 1410764
+    start_quote: Poetry, gentle sir, is, as I take it, like a tender young maiden of supreme beauty
+    end_quote: incapable of comprehending or appreciating her hidden treasures.
+    why: A set-piece of lucid, learned eloquence delivered to Don Diego de Miranda that complicates any
+      simple reading of Don Quixote as merely mad.
+  - id: cervantes-don-quixote#u28-c6
+    label: c6
+    heading: Don Diego de Miranda's self-portrait
+    char_start: 1404837
+    char_end: 1406328
+    start_quote: I, Sir Knight of the Rueful Countenance, am a gentleman by birth, native of the village
+      where, please God, we are going to dine to-day
+    end_quote: my trust is ever in the infinite mercy of God our Lord.
+    why: Introduces the moderate, sane gentleman whose comfortable piety serves as the episode's foil
+      to Don Quixote's chivalric mania.
+- nn: 29
+  unit_id: p2-17-19
+  note_id: cervantes-don-quixote-p2-17-19
+  span: 1415176:1470596
+  chunks:
+  - id: cervantes-don-quixote#u29-c1
+    label: c1
+    heading: The lion declines to perform
+    char_start: 1428134
+    char_end: 1429233
+    start_quote: So far did his unparalleled madness go; but the noble lion, more courteous than arrogant,
+    end_quote: he who waits for him carries off the crown of victory.”
+    why: The anticlimax at the center of the lion adventure, where Don Quixote's triumph is manufactured
+      from the lion's total non-participation and formally certified as victory.
+  - id: cervantes-don-quixote#u29-c2
+    label: c2
+    heading: Valor as the mean between cowardice and temerity
+    char_start: 1435701
+    char_end: 1436392
+    start_quote: for I know well what valour is, that it is a virtue that occupies a place between two
+      vicious extremes, cowardice and temerity
+    end_quote: sounds better than ‘such a knight is timid and cowardly.’”
+    why: Don Quixote's own theoretical justification for reckless action, converting apparent madness
+      into a defensible ethical doctrine.
+  - id: cervantes-don-quixote#u29-c3
+    label: c3
+    heading: Knight-errantry as a total science
+    char_start: 1443091
+    char_end: 1444862
+    start_quote: It is a science,” said Don Quixote, “that comprehends in itself all or most of the sciences
+      in the world
+    end_quote: whether it may not compare with the very loftiest that are taught in the schools.”
+    why: The fullest statement of chivalry as a totalizing, coherent discipline persisting as pure discourse
+      after its institutional world has vanished.
+  - id: cervantes-don-quixote#u29-c4
+    label: c4
+    heading: A madman full of streaks, full of lucid intervals
+    char_start: 1445879
+    char_end: 1446394
+    start_quote: “Our guest has broken out on our hands,” said Don Lorenzo to himself at this point
+    end_quote: he is a madman full of streaks, full of lucid intervals.”
+    why: 'The household''s diagnosis of Don Quixote crystallizes the unit''s central puzzle: coherent,
+      persuasive speech paired with irrational action, observed from outside the chivalric frame.'
+  - id: cervantes-don-quixote#u29-c5
+    label: c5
+    heading: Strength overcome by skill, notarized
+    char_start: 1467278
+    char_end: 1467904
+    start_quote: The end of it was that the licentiate reckoned up for him by thrusts every one of the
+      buttons
+    end_quote: to show and establish with all certainty that strength is overcome by skill.
+    why: The fencing match's resolution substitutes external, documented proof for Don Quixote's self-certifying
+      narration, offering the unit's one clearly externally verified outcome.
+- nn: 30
+  unit_id: p2-20-22
+  note_id: cervantes-don-quixote-p2-20-22
+  span: 1470596:1519193
+  chunks:
+  - id: cervantes-don-quixote#u30-c1
+    label: c1
+    heading: The master's burden versus the servant's untroubled sleep
+    char_start: 1471052
+    char_end: 1472159
+    start_quote: Happy thou, above all the dwellers on the face of the earth
+    end_quote: in times of plenty and abundance.
+    why: Frames the episode's wealth/worth theme from the outset by contrasting Don Quixote's anxious
+      mastery with Sancho's untroubled appetite.
+  - id: cervantes-don-quixote#u30-c2
+    label: c2
+    heading: Sancho's creed of the Haves and the Haven'ts
+    char_start: 1485123
+    char_end: 1485766
+    start_quote: A fig for the accomplishments of Basilio! As much as thou hast
+    end_quote: they’ll be only rinsings.
+    why: Sancho's bluntest statement of the material calculus the whole wedding episode stages allegorically.
+  - id: cervantes-don-quixote#u30-c3
+    label: c3
+    heading: Basilio's staged death
+    char_start: 1491551
+    char_end: 1492939
+    start_quote: Well dost thou know, ungrateful Quiteria, that according to the holy
+    end_quote: the unhappy man falling to the earth bathed in his blood, and transfixed by his own weapon.
+    why: 'The central stratagem of the episode: Basilio''s speech and feigned suicide, the act around
+      which the whole marriage plot turns.'
+  - id: cervantes-don-quixote#u30-c4
+    label: c4
+    heading: Quiteria's freely given hand
+    char_start: 1495454
+    char_end: 1497470
+    start_quote: On this the fair Quiteria, to all appearance distressed, grieved, and
+    end_quote: or they carry thee from my arms to the grave.
+    why: Quiteria's own vows are what convert Basilio's trick from fraud into a jointly willed escape
+      from Camacho's claim on her.
+  - id: cervantes-don-quixote#u30-c5
+    label: c5
+    heading: 'Don Quixote''s ruling: love and war run by the same rules'
+    char_start: 1499656
+    char_end: 1500450
+    start_quote: we have no right to take vengeance for wrongs that love may do to us
+    end_quote: he who attempts it must first pass the point of this lance;
+    why: Don Quixote's armed, articulated justification of the deception is the episode's explicit theory
+      of legitimate stratagem.
+  - id: cervantes-don-quixote#u30-c6
+    label: c6
+    heading: Waking from the cave, vision withheld
+    char_start: 1517910
+    char_end: 1518391
+    start_quote: God forgive you, friends; ye have taken me
+    end_quote: who show in your waves the tears that flowed from your beauteous eyes!
+    why: 'Marks the cliffhanger close of the unit: Don Quixote names what he saw without yet explaining
+      it, deferring the revelation.'
+- nn: 31
+  unit_id: p2-23-25
+  note_id: cervantes-don-quixote-p2-23-25
+  span: 1519193:1575101
+  chunks:
+  - id: cervantes-don-quixote#u31-c1
+    label: c1
+    heading: Falling asleep, waking already certain
+    char_start: 1520615
+    char_end: 1521957
+    start_quote: suddenly and without provocation a profound sleep fell upon me, and when I least expected
+    end_quote: his bearing, his gait, his dignity and imposing presence held me spellbound and wondering.
+    why: The founding moment of the vision, where Don Quixote's self-administered proof of wakefulness
+      (touch, feeling, memory) becomes the sole and uncorroborated basis for everything that follows.
+  - id: cervantes-don-quixote#u31-c2
+    label: c2
+    heading: Great deeds, and 'patience and shuffle'
+    char_start: 1528191
+    char_end: 1528856
+    start_quote: Know that you have here before you
+    end_quote: he relapsed into his former silence without uttering another word.
+    why: Montesinos's prophecy that 'great deeds are reserved for great men' is immediately punctured
+      by Durandarte's card-player's shrug, the unit's sharpest instance of chivalric grandiosity deflated
+      from inside the vision itself.
+  - id: cervantes-don-quixote#u31-c3
+    label: c3
+    heading: Dulcinea's loan request
+    char_start: 1537831
+    char_end: 1540421
+    start_quote: one of the two companions of the hapless Dulcinea
+    end_quote: taking the four reals, instead of making me a curtsey she cut a caper, springing two full
+      yards into the air.
+    why: The knight's grandest devotion collapses into a request for six reals on a petticoat, routing
+      the fantasy back through mundane need and completing the episode's pattern of anticlimax.
+  - id: cervantes-don-quixote#u31-c4
+    label: c4
+    heading: Cide Hamete's refusal to certify
+    char_start: 1541673
+    char_end: 1542874
+    start_quote: I cannot convince or persuade myself that everything that is written
+    end_quote: thinking it matched and tallied with the adventures he had read of in his histories.
+    why: The purported original author's marginal note is the unit's most explicit statement of contested
+      authorship, declining to resolve whether the cave narrative is true, invented, or later retracted.
+  - id: cervantes-don-quixote#u31-c5
+    label: c5
+    heading: The ape's half-verdict
+    char_start: 1573154
+    char_end: 1573523
+    start_quote: The ape says that the things you saw or
+    end_quote: his virtue is at present exhausted, and will not return to him till Friday, as he has said.
+    why: The text's final, mechanically-delivered judgment on the whole episode is deliberately non-resolving
+      -- 'part of them false, part true' -- restaging the same undecidability Cide Hamete raised in his
+      marginal note.
+  - id: cervantes-don-quixote#u31-c6
+    label: c6
+    heading: A joke hardens into a war
+    char_start: 1561328
+    char_end: 1562222
+    start_quote: The whole story came to be known and spread abroad through the villages of the neighbourhood
+    end_quote: and neither king nor rook, fear nor shame, can mend matters.
+    why: Shows contested, retold narrative calcifying into a durable marker of collective identity and
+      armed conflict at communal scale, the folk-tale counterpart to the unit's epistemic concerns about
+      individual testimony.
+- nn: 32
+  unit_id: p2-26-29
+  note_id: cervantes-don-quixote-p2-26-29
+  span: 1575101:1631139
+  chunks:
+  - id: cervantes-don-quixote#u32-c1
+    label: c1
+    heading: Don Quixote destroys the puppet show
+    char_start: 1583124
+    char_end: 1583855
+    start_quote: Never, while I live, will I permit foul
+    end_quote: would have sliced off his head as easily as if it had been made of almond-paste.
+    why: The unit's central comic-violent set piece, where chivalric literalism physically annihilates
+      a staged representation.
+  - id: cervantes-don-quixote#u32-c2
+    label: c2
+    heading: Enchanters and the literal truth of illusion
+    char_start: 1587232
+    char_end: 1588292
+    start_quote: “Now am I fully convinced,” said Don Quixote, “of what I had many a
+    end_quote: for I agree to pay it at once in good and current money of Castile.
+    why: Don Quixote's own theory of why the puppets seemed real, the key move by which he deflects blame
+      onto persecuting enchanters.
+  - id: cervantes-don-quixote#u32-c3
+    label: c3
+    heading: Master Pedro unmasked as Gines de Pasamonte
+    char_start: 1593434
+    char_end: 1595005
+    start_quote: He says, then, that he who has read the First Part of this
+    end_quote: which he taught to mount upon his shoulder on his making a certain sign, and to whisper,
+      or seem to do so, in his ear.
+    why: The narrator's reveal that the puppet-showman and his divining ape are a calculated fraud by
+      the freed galley-slave Gines de Pasamonte, recasting the prior adventure.
+  - id: cervantes-don-quixote#u32-c4
+    label: c4
+    heading: Twenty years since the promise of the island
+    char_start: 1614248
+    char_end: 1614724
+    start_quote: “Well, how long is it, Sancho, since I promised it to you?” said Don Quixote.
+    end_quote: and thou sayest, Sancho, that it is twenty years since I promised thee the island.
+    why: A compressed comic beat exposing the gap between the story's real elapsed time and Sancho's self-serving
+      account of it.
+  - id: cervantes-don-quixote#u32-c5
+    label: c5
+    heading: The enchanted bark and the mill-wheels
+    char_start: 1627246
+    char_end: 1628808
+    start_quote: “Did I not tell thee, Sancho,” said Don Quixote at this, “that we had
+    end_quote: it would have been Troy town with the pair of them.
+    why: The unit's second illusion-collapses-into-machinery episode, mirroring the puppet show and ending
+      in near-drowning and a repair bill.
+- nn: 33
+  unit_id: p2-30-32
+  note_id: cervantes-don-quixote-p2-30-32
+  span: 1631139:1689461
+  chunks:
+  - id: cervantes-don-quixote#u33-c1
+    label: c1
+    heading: Don Quixote coaches Sancho on decorum
+    char_start: 1648213
+    char_end: 1649560
+    start_quote: Tell me, thou new-fledged buffoon and old booby, dost thou think it right
+    end_quote: we shall come forth mightily advanced in fame and fortune
+    why: Shows Don Quixote treating his knighthood as a performance dependent on Sancho's supporting behavior,
+      not just a private delusion.
+  - id: cervantes-don-quixote#u33-c2
+    label: c2
+    heading: The ecclesiastic's denunciation
+    char_start: 1658051
+    char_end: 1659021
+    start_quote: Señor, your excellence will have to give account to God for what this good man
+    end_quote: or all the rest of the silly things they tell about you?
+    why: The bluntest, angriest external attack on Don Quixote's sanity in the novel so far, setting up
+      his rhetorical reply.
+  - id: cervantes-don-quixote#u33-c3
+    label: c3
+    heading: Don Quixote's dignified self-defense
+    char_start: 1659566
+    char_end: 1660976
+    start_quote: The place I am in, the presence in which I stand, and the respect I
+    end_quote: to fit one to lay down the law rashly for chivalry, and pass judgment on knights-errant?
+    why: Don Quixote's most composed public defense of knight-errantry, refusing combat with a churchman
+      while contesting his critic's standing to judge.
+  - id: cervantes-don-quixote#u33-c4
+    label: c4
+    heading: The theory of Dulcinea's enchantment
+    char_start: 1679037
+    char_end: 1680526
+    start_quote: Now it is an established fact that all or most famous knights-errant have some special
+      gift
+    end_quote: revenge themselves on what I love most, and seek to rob me of life by maltreating that
+      of Dulcinea in whom I live
+    why: Demonstrates the self-sealing explanatory apparatus by which Don Quixote absorbs contrary evidence
+      into his chivalric worldview.
+  - id: cervantes-don-quixote#u33-c5
+    label: c5
+    heading: Sancho refuses the dishwater washing
+    char_start: 1684740
+    char_end: 1685467
+    start_quote: but I’d like it to be with cleaner towels, clearer lye, and not such dirty hands
+    end_quote: more like jokes than the polite attentions of one’s host
+    why: Sancho's comic assertion of dignity mirrors and grounds Don Quixote's own honor-defense, and
+      the duchess validates it as genuine grievance.
+- nn: 34
+  unit_id: p2-33-36
+  note_id: cervantes-don-quixote-p2-33-36
+  span: 1689461:1747101
+  chunks:
+  - id: cervantes-don-quixote#u34-c1
+    label: c1
+    heading: Sancho's loyalty despite knowing his master is mad
+    char_start: 1693250
+    char_end: 1693550
+    start_quote: but this was my fate, this was my bad luck; I can’t help it, I must follow him
+    end_quote: so it’s quite impossible for anything to separate us, except the pickaxe and shovel.
+    why: Shows Sancho's loyalty as a matter of habit, debt, and character rather than belief in the quest,
+      the emotional baseline for everything the duke and duchess exploit.
+  - id: cervantes-don-quixote#u34-c2
+    label: c2
+    heading: The duchess declares the enchantment literally true
+    char_start: 1697952
+    char_end: 1698744
+    start_quote: For in truth and earnest, I know from good authority that the coarse
+    end_quote: then Sancho will be disabused of the error he is under at present.
+    why: The pivot where the duchess converts Sancho's invented lie into an authoritative counter-reality,
+      the seed of the whole staged spectacle that follows.
+  - id: cervantes-don-quixote#u34-c3
+    label: c3
+    heading: Merlin's versified decree of the 3,300 lashes
+    char_start: 1723271
+    char_end: 1723955
+    start_quote: O thou, the pride and pink of all that I wear
+    end_quote: And this is, gentles, wherefore I have come.
+    why: 'The set-piece of the unit: chivalric-style verse used to hand down an absurdly precise, quantified
+      penance for Dulcinea''s disenchantment.'
+  - id: cervantes-don-quixote#u34-c4
+    label: c4
+    heading: Merlin insists the lashes require free consent
+    char_start: 1724768
+    char_end: 1725123
+    start_quote: That will not do, for the lashes worthy Sancho has to receive must be given of his own
+      free will and not by force
+    end_quote: to let them be given by the hand of another, though it may be somewhat weighty.
+    why: Even inside a fully scripted spectacle, the fiction must preserve Sancho's consent, giving him
+      real leverage to negotiate terms.
+  - id: cervantes-don-quixote#u34-c5
+    label: c5
+    heading: Sancho negotiates the penance into a countable contract
+    char_start: 1732608
+    char_end: 1733307
+    start_quote: I say I am willing to give myself the three thousand three hundred lashes
+    end_quote: let me know how many are still wanting or over the number.
+    why: Sancho converts an imposed mystical punishment into an audited, itemized transaction, the clearest
+      instance of enchantment turned into bookkeeping.
+- nn: 35
+  unit_id: p2-37-41
+  note_id: cervantes-don-quixote-p2-37-41
+  span: 1747101:1804004
+  chunks:
+  - id: cervantes-don-quixote#u35-c1
+    label: c1
+    heading: Sancho's blanket case against duennas
+    char_start: 1747329
+    char_end: 1747888
+    start_quote: I hope this señora duenna won’t be putting any difficulties in the way of the promise
+      of my government
+    end_quote: for in my country skirts or tails, tails or skirts, it’s all one.”
+    why: Sets up the duenna-antagonism, sourced comically to a hated apothecary, that structures the entire
+      episode's humor.
+  - id: cervantes-don-quixote#u35-c2
+    label: c2
+    heading: The Trifaldi on treacherous poets
+    char_start: 1760770
+    char_end: 1761923
+    start_quote: The lines seemed pearls to me and his voice sweet as syrup
+    end_quote: these troubadours richly deserve to be banished to the isles of the lizards.
+    why: The duenna's self-indicting critique of amatory verse doubles as Cervantes's own satire of Petrarchan
+      convention, the tale's closest approach to authorial commentary.
+  - id: cervantes-don-quixote#u35-c3
+    label: c3
+    heading: The unveiling of the bearded duennas
+    char_start: 1768951
+    char_end: 1770374
+    start_quote: Here the Distressed One and the other duennas raised the veils with which they were covered
+    end_quote: it was an unlucky moment when we were born and an ill-starred hour when our fathers begot
+      us!”
+    why: The tale's grotesque comic centerpiece, staged as mock-tragedy, where the punishment and its
+      rhetoric are revealed simultaneously.
+  - id: cervantes-don-quixote#u35-c4
+    label: c4
+    heading: Sancho on uncredited squires
+    char_start: 1778251
+    char_end: 1779225
+    start_quote: In the king’s name!” exclaimed Sancho, “what have squires got to do with the adventures
+      of their masters?
+    end_quote: give myself a spell of whipping without so much as a hair to cover me.”
+    why: A rare break into class grievance, protesting that squires supply the labor behind chivalric
+      fame while historians record only the knight.
+  - id: cervantes-don-quixote#u35-c5
+    label: c5
+    heading: Sancho's peephole vision of the shrinking earth
+    char_start: 1799476
+    char_end: 1800146
+    start_quote: I felt, señora, that we were flying through the region of fire, as my master told me
+    end_quote: so you may see how high we must have got to then.
+    why: Sancho's fabricated eyewitness account, delivered as sober testimony, is the episode's clearest
+      demonstration of invented experience passed off as report.
+  - id: cervantes-don-quixote#u35-c6
+    label: c6
+    heading: Montesinos traded for the goats
+    char_start: 1803849
+    char_end: 1803997
+    start_quote: Sancho, as you would have us believe what you saw in heaven, I require you to believe
+      me as to what I saw in
+    end_quote: the cave of Montesinos; I say no more.”
+    why: The closing exchange makes explicit the novel's running bargain between two mutually unverifiable
+      visions, tying this episode back to the Cave of Montesinos.
+- nn: 36
+  unit_id: p2-42-45
+  note_id: cervantes-don-quixote-p2-42-45
+  span: 1804004:1861821
+  chunks:
+  - id: cervantes-don-quixote#u36-c1
+    label: c1
+    heading: Virtue as acquisition, blood as inheritance
+    char_start: 1810822
+    char_end: 1811551
+    start_quote: Glory in thy humble birth, Sancho, and be not ashamed of saying thou
+    end_quote: virtue has in itself alone a worth that blood does not possess.
+    why: 'States the unit''s central ethical claim: dignity of office rests on acquired virtue, not inherited
+      blood, delivered by an aristocracy-obsessed knight to a peasant squire.'
+  - id: cervantes-don-quixote#u36-c2
+    label: c2
+    heading: The counsels on merciful judgment
+    char_start: 1812793
+    char_end: 1814525
+    start_quote: Let the tears of the poor man find with thee more compassion, but not
+    end_quote: mercy is brighter and loftier than that of justice.
+    why: Don Quixote's systematic theory of governance-by-equity over rigid law, which Sancho will enact
+      almost verbatim once seated as governor.
+  - id: cervantes-don-quixote#u36-c3
+    label: c3
+    heading: Rather Sancho in heaven than governor in hell
+    char_start: 1826648
+    char_end: 1827362
+    start_quote: Señor,” said Sancho, “if your worship thinks I’m not fit for this
+    end_quote: I’d rather go Sancho to heaven than governor to hell.”
+    why: Sancho's unprompted statement of his own governing ethic, which Don Quixote declares alone worthy
+      of a governorship over a thousand islands.
+  - id: cervantes-don-quixote#u36-c4
+    label: c4
+    heading: Don Quixote's proverb-tirade
+    char_start: 1823490
+    char_end: 1824090
+    start_quote: Oh, God’s curse upon thee, Sancho!” here exclaimed Don Quixote; “sixty
+    end_quote: I have to sweat and labour as if I were digging.”
+    why: The comic collapse of Don Quixote's moral gravity into petty exasperation, undercutting the counsel
+      scenes and showing his self-admitted difficulty in the very art he demands Sancho abandon.
+  - id: cervantes-don-quixote#u36-c5
+    label: c5
+    heading: The gold-crowns hidden in the cane
+    char_start: 1853076
+    char_end: 1853645
+    start_quote: Sancho took it and, handing it to the other old man, said to him, “Go,
+    end_quote: All were filled with amazement, and looked upon their governor as another Solomon.
+    why: 'The first proof-of-concept for judgment without literacy or written law: Sancho reads behavior,
+      not documents, and is vindicated as a Solomon figure.'
+  - id: cervantes-don-quixote#u36-c6
+    label: c6
+    heading: The verdict on the purse and the false accusation
+    char_start: 1858283
+    char_end: 1858909
+    start_quote: Upon this the governor said to the woman, “Let me see that purse, my
+    end_quote: be off at once, I say, you shameless, cheating shrew.”
+    why: Sancho's blunt equity-based ruling—inferring truth from the woman's ferocious grip on the purse
+      rather than from testimony—epitomizes his mercy-tempered, non-legalistic style of governance.
+- nn: 37
+  unit_id: p2-46-47
+  note_id: cervantes-don-quixote-p2-46-47
+  span: 1861821:1887808
+  chunks:
+  - id: cervantes-don-quixote#u37-c1
+    label: c1
+    heading: The cat attack and Don Quixote's unbroken frame
+    char_start: 1866900
+    char_end: 1867790
+    start_quote: They extinguished the candles that were burning in the room
+    end_quote: with the pain of which he began to shout his loudest.
+    why: Shows Don Quixote reprocessing a mundane, painful accident entirely within his chivalric-enchantment
+      frame, the core mechanism of his delusion.
+  - id: cervantes-don-quixote#u37-c2
+    label: c2
+    heading: Altisidora's coercive bedside taunt
+    char_start: 1868843
+    char_end: 1869181
+    start_quote: All these mishaps have befallen thee, hardhearted knight
+    end_quote: at least while I who adore thee am alive.”
+    why: Reveals the manipulative logic tying Don Quixote's suffering to Sancho's penance and Dulcinea's
+      enchantment, the plot engine driving the duke and duchess's cruelty.
+  - id: cervantes-don-quixote#u37-c3
+    label: c3
+    heading: Doctor Pedro Recio's doctrine of denial
+    char_start: 1871548
+    char_end: 1872449
+    start_quote: It is not to be eaten, señor governor, except as is usual and customary
+    end_quote: kills and consumes the radical moisture wherein life consists.”
+    why: The comic set-piece of institutional legibility overriding bodily need with inherited textual
+      authority, the unit's clearest satire of administrative control.
+  - id: cervantes-don-quixote#u37-c4
+    label: c4
+    heading: Sancho's revolt against the doctor
+    char_start: 1875142
+    char_end: 1875984
+    start_quote: Then let Doctor Pedro Recio de Malaguero, native of Tirteafuera
+    end_quote: a trade that does not feed its master is not worth two beans.”
+    why: Sancho's first governing principle in his own voice, a blunt assertion of embodied need against
+      bureaucratic capture.
+  - id: cervantes-don-quixote#u37-c5
+    label: c5
+    heading: The farmer's petition collapses into a bribe request
+    char_start: 1886416
+    char_end: 1887148
+    start_quote: By all that’s good, you ill-bred, boorish Don Bumpkin
+    end_quote: you want me to have six hundred ducats already!”
+    why: The payoff of the petition satire, showing Sancho's volatile plain-speaking as the comic core
+      of his brief governorship.
+- nn: 38
+  unit_id: p2-48-49
+  note_id: cervantes-don-quixote-p2-48-49
+  span: 1887808:1929098
+  chunks:
+  - id: cervantes-don-quixote#u38-c1
+    label: c1
+    heading: Don Quixote's midnight oath to Dulcinea
+    char_start: 1888685
+    char_end: 1889116
+    start_quote: the greatest beauty upon earth shall not avail to
+    end_quote: and where’er I am, must be thine.”
+    why: Establishes chivalric fidelity as a self-conjured vigilance sworn aloud before any threat has
+      even entered the room, framing the whole episode's comedy.
+  - id: cervantes-don-quixote#u38-c2
+    label: c2
+    heading: The ghost-duenna's entrance and mutual terror
+    char_start: 1889635
+    char_end: 1890863
+    start_quote: he saw coming in a most venerable duenna, in a long
+    end_quote: she measured her length with a mighty fall.
+    why: The set-piece farce of mistaken identity, where knight and duenna terrify each other symmetrically,
+      is the comic engine of the chapter.
+  - id: cervantes-don-quixote#u38-c3
+    label: c3
+    heading: Don Quixote's tirade against duennas
+    char_start: 1893108
+    char_end: 1894335
+    start_quote: Who knows but that the devil, being wily and cunning, may be trying now
+    end_quote: as if they had been real duennas.”
+    why: Shows chivalric idealism curdling into stock misogyny even as the narrative keeps deflating his
+      self-assurance.
+  - id: cervantes-don-quixote#u38-c4
+    label: c4
+    heading: The duke's inaction bought by money
+    char_start: 1901430
+    char_end: 1902479
+    start_quote: And though my lord the duke is aware of it (for I have complained to him,
+    end_quote: does not come within two leagues of her.
+    why: 'The embedded social critique: justice for a servant''s ruined daughter is unaffordable because
+      the seducer''s father lends the duke money, exposing patronage power beneath the comic frame.'
+  - id: cervantes-don-quixote#u38-c5
+    label: c5
+    heading: Sancho's restitution-based ruling
+    char_start: 1913698
+    char_end: 1914332
+    start_quote: What is to be done,” said Sancho, “is this; you, the winner, be you
+    end_quote: or I’ll make him feel my hand.”
+    why: Exemplifies Sancho's proverb-driven but shrewdly distributive justice as governor, the chapter's
+      central demonstration of his practical wisdom.
+  - id: cervantes-don-quixote#u38-c6
+    label: c6
+    heading: The youth on the limits of coercive power
+    char_start: 1917322
+    char_end: 1917827
+    start_quote: Now, señor governor,” said the young man in a sprightly manner,
+    end_quote: will your worship with all your power be able to make me sleep if I don’t choose?”
+    why: A striking early articulation of an interior will that no external coercion can reach, resonant
+      with capture-resistance and conatus.
+- nn: 39
+  unit_id: p2-50-52
+  note_id: cervantes-don-quixote-p2-50-52
+  span: 1929098:1981317
+  chunks:
+  - id: cervantes-don-quixote#u39-c1
+    label: c1
+    heading: The enchanters unmasked as jealous women
+    char_start: 1929317
+    char_end: 1930615
+    start_quote: Cide Hamete, the painstaking investigator of the minute points of this
+    end_quote: the anger of women and make them eager for revenge.
+    why: This is the novel's explicit demystification of the supposed enchanters, revealing the flogging
+      and pinching as human vanity and rage rather than magic.
+  - id: cervantes-don-quixote#u39-c2
+    label: c2
+    heading: The bridge-and-gallows riddle
+    char_start: 1949152
+    char_end: 1950841
+    start_quote: Señor, a large river separated two districts of one and
+    end_quote: this very intricate and puzzling case.”
+    why: The riddle is a liar's-paradox dressed as law, setting up the case that tests whether Sancho's
+      governorship is real wisdom or farce.
+  - id: cervantes-don-quixote#u39-c3
+    label: c3
+    heading: Sancho resolves the riddle by mercy
+    char_start: 1952196
+    char_end: 1953059
+    start_quote: “Look here, my good sir,” said Sancho; “either I’m a numskull or else
+    end_quote: justice of a case I should lean to mercy
+    why: Sancho's solution privileges equity over rigid legal codification, the clearest statement of
+      his native shrewdness and a small parable about the limits of purely legible rule.
+  - id: cervantes-don-quixote#u39-c4
+    label: c4
+    heading: Don Quixote on enforced proclamations
+    char_start: 1955865
+    char_end: 1956283
+    start_quote: not many proclamations; but those thou makest take care that they be
+    end_quote: that threaten and are not enforced come to be like the log, the king of
+    why: Don Quixote's governance advice diagnoses how unenforced law decays into contempt, a miniature
+      account of institutional legitimacy collapsing.
+  - id: cervantes-don-quixote#u39-c5
+    label: c5
+    heading: Teresa on rank and address
+    char_start: 1946398
+    char_end: 1946606
+    start_quote: “Hush, girl,” said Teresa; “you don’t know what you’re talking about;
+    end_quote: it was Sancho it was ‘Sancha;’ when it is governor it’s ‘señora;’ I
+    why: Teresa names outright the mechanism by which titles and gifts manufacture social rank independent
+      of substance.
+  - id: cervantes-don-quixote#u39-c6
+    label: c6
+    heading: Don Quixote's vow to Doña Rodriguez
+    char_start: 1969168
+    char_end: 1969791
+    start_quote: duenna, check your tears, or rather dry them, and spare your sighs, for
+    end_quote: the proud; I mean, to help the distressed and destroy the oppressors.”
+    why: Shows Don Quixote's chivalric earnestness fully intact even while his hosts are visibly still
+      amusing themselves at his expense.
+- nn: 40
+  unit_id: p2-53-56
+  note_id: cervantes-don-quixote-p2-53-56
+  span: 1981317:2036882
+  chunks:
+  - id: cervantes-don-quixote#u40-c1
+    label: c1
+    heading: The wheel of time frames Sancho's fall
+    char_start: 1981410
+    char_end: 1982356
+    start_quote: To fancy that in this life anything belonging to it will remain for
+    end_quote: vanished as it were in smoke and shadow.
+    why: Sets the philosophical frame the narrator uses to naturalize what is actually an engineered,
+      staged collapse of Sancho's authority.
+  - id: cervantes-don-quixote#u40-c2
+    label: c2
+    heading: Sancho's embrace of Dapple over office
+    char_start: 1988921
+    char_end: 1989308
+    start_quote: Come along, comrade and friend and partner of my toils and
+    end_quote: four thousand anxieties have entered into my soul
+    why: 'The emotional core of Sancho''s renunciation: real attachment to the ass contrasted with the
+      corrosive abstraction of political ambition.'
+  - id: cervantes-don-quixote#u40-c3
+    label: c3
+    heading: Sancho's creed against government
+    char_start: 1989652
+    char_end: 1990944
+    start_quote: Make way, gentlemen, and let me go back to my old freedom
+    end_quote: thanks to the enemies that have been trampling over me to-night
+    why: Sancho's most explicit renunciation speech, converting his personal experience into a general
+      ethic of refusing capture by office and wealth.
+  - id: cervantes-don-quixote#u40-c4
+    label: c4
+    heading: Ricote's account of the Morisco expulsion
+    char_start: 2001033
+    char_end: 2003350
+    start_quote: Thou knowest well, neighbour and friend Sancho Panza, how the
+    end_quote: the meaning of the saying, sweet is the love of one’s country.
+    why: First-person historical testimony on the 1609 expulsion edict, showing state legibility deployed
+      as an instrument of mass displacement.
+  - id: cervantes-don-quixote#u40-c5
+    label: c5
+    heading: Sancho underground, measured against Montesinos
+    char_start: 2012126
+    char_end: 2012984
+    start_quote: what unexpected accidents happen at every step to those who live in this miserable world
+    end_quote: There he saw fair and pleasant visions, but here I’ll see, I imagine, toads and adders.
+    why: Sancho explicitly contrasts his own disenchanted, bodily ordeal with Don Quixote's marvelous
+      cave vision, crystallizing his anti-chivalric register.
+  - id: cervantes-don-quixote#u40-c6
+    label: c6
+    heading: Sancho's final verdict to the duke and duchess
+    char_start: 2023758
+    char_end: 2024972
+    start_quote: In short, during that time I have weighed the cares and responsibilities
+    end_quote: not to say of an island, but of the whole world;
+    why: Sancho's summary judgment on governance, delivered directly to the household that engineered
+      the whole joke, closing his political arc.
+- nn: 41
+  unit_id: p2-57-59
+  note_id: cervantes-don-quixote-p2-57-59
+  span: 2036882:2085643
+  chunks:
+  - id: cervantes-don-quixote#u41-c1
+    label: c1
+    heading: Altisidora's mock reproach
+    char_start: 2039394
+    char_end: 2039659
+    start_quote: Give ear, cruel knight; Draw rein; where’s the need Of spurring the flanks
+    end_quote: As fair to behold As nymph of Diana Or Venus of old.
+    why: Opens the leave-taking with the theatrical, mock-tragic register that frames the garter joke
+      and Don Quixote's grave response to it.
+  - id: cervantes-don-quixote#u41-c2
+    label: c2
+    heading: Sancho's naked departure from office
+    char_start: 2038340
+    char_end: 2038541
+    start_quote: After all I went into the government naked, and I come
+    end_quote: small matter—‘naked I was born, naked I find myself, I neither lose nor gain.’”
+    why: Sancho's equanimous close to his governorship, a quiet counterpoint to Don Quixote's later, angrier
+      self-assertion against the false history.
+  - id: cervantes-don-quixote#u41-c3
+    label: c3
+    heading: The discourse on freedom
+    char_start: 2044369
+    char_end: 2045149
+    start_quote: Freedom, Sancho, is one of the most precious gifts that heaven
+    end_quote: is a restraint that checks the independence of the spirit.
+    why: Don Quixote's central statement that even gracious captivity is captivity, resonant with conatus
+      and capture-resistance.
+  - id: cervantes-don-quixote#u41-c4
+    label: c4
+    heading: The warrior-saints and human weapons
+    char_start: 2049248
+    char_end: 2049884
+    start_quote: I take it as a happy omen, brothers, to have seen what I have
+    end_quote: might direct my steps in a better path than I am following at present.”
+    why: Don Quixote situates himself within a fading sacral-military order, reflecting honestly on the
+      limits of his own, merely human, calling.
+  - id: cervantes-don-quixote#u41-c5
+    label: c5
+    heading: Indignation at the counterfeit history
+    char_start: 2077369
+    char_end: 2077766
+    start_quote: Whoever he may be who says that Don Quixote of La Mancha has forgotten or can forget
+      Dulcinea del Toboso
+    end_quote: his profession to maintain the same with his life and never wrong it.”
+    why: The moment Don Quixote asserts his authentic self against Avellaneda's counterfeit, naming constancy
+      as the trait that cannot be forged.
+  - id: cervantes-don-quixote#u41-c6
+    label: c6
+    heading: Rerouting to disprove the impostor
+    char_start: 2084041
+    char_end: 2084649
+    start_quote: They asked him whither he meant to direct his steps.
+    end_quote: and people will see that I am not the Don Quixote he speaks of.”
+    why: 'The metafictional turn made concrete: Don Quixote alters his actual itinerary to refute a rival
+      narrative, capture-resistance enacted as plot.'
+- nn: 42
+  unit_id: p2-60-62
+  note_id: cervantes-don-quixote-p2-60-62
+  span: 2085643:2144517
+  chunks:
+  - id: cervantes-don-quixote#u42-c1
+    label: c1
+    heading: The Gordian-knot logic for flogging Sancho
+    char_start: 2087307
+    char_end: 2087858
+    start_quote: If Alexander the Great cut the Gordian knot, saying, ‘To cut comes to the same thing
+      as to untie,’ and
+    end_quote: the essential point is that he receives them, let them come from whatever quarter they
+      may?”
+    why: Shows Don Quixote rationalizing violence against his own squire through classical allusion, revealing
+      how far his idée fixe about Dulcinea's disenchantment has bent his moral reasoning.
+  - id: cervantes-don-quixote#u42-c2
+    label: c2
+    heading: Roque Guinart's confession of compulsive vengeance
+    char_start: 2104923
+    char_end: 2105846
+    start_quote: “It must seem a strange sort of life to Señor Don Quixote, this of ours, strange adventures,
+      strange incidents,
+    end_quote: myself in this maze of entanglements, I do not lose all hope of escaping from it and reaching
+      a safe port.”
+    why: The bandit captain's self-diagnosis of a kindly nature trapped by an escalating obsession directly
+      parallels Don Quixote's own condition, and it is the passage that most impresses Don Quixote with
+      Roque's inner virtue.
+  - id: cervantes-don-quixote#u42-c3
+    label: c3
+    heading: Claudia Jeronima's death-vigil over Don Vicente
+    char_start: 2100018
+    char_end: 2101135
+    start_quote: Claudia wrung his hands, and her own heart was so wrung that she lay
+    end_quote: husband, whose unhappy fate in being mine hath borne thee from the marriage bed to the
+      grave!”
+    why: The emotional climax of the inset tragic novella, where jealousy, misinformation, and honor culture
+      converge in a death that displaces the main plot's comedy entirely.
+  - id: cervantes-don-quixote#u42-c4
+    label: c4
+    heading: Barcelona's welcome versus the false Quixote
+    char_start: 2116487
+    char_end: 2116858
+    start_quote: “Welcome to our city, mirror, beacon, star and cynosure of all knight-errantry in its
+      widest extent!
+    end_quote: but the true, the legitimate, the real one that Cide Hamete Benengeli, flower of historians,
+      has described to us!”
+    why: Stages the novel's ongoing metafictional contest with Avellaneda's apocryphal sequel directly
+      through the mouths of characters welcoming Don Quixote into the story's real world.
+  - id: cervantes-don-quixote#u42-c5
+    label: c5
+    heading: The enchanted head exposed as a speaking tube
+    char_start: 2135815
+    char_end: 2137119
+    start_quote: He says, therefore, that on the model of another head, the work of an image maker, which
+      he had seen at Madrid, Don
+    end_quote: words coming clearly and distinctly; it was impossible, thus, to detect the trick.
+    why: The narrator's full technical debunking of the 'oracle' converts what looked like enchantment
+      into an explicit, mechanically explained hoax, a key data point in the novel's running interrogation
+      of marvels and credulity.
+  - id: cervantes-don-quixote#u42-c6
+    label: c6
+    heading: Don Quixote on Avellaneda's sequel in the print shop
+    char_start: 2143556
+    char_end: 2143955
+    start_quote: “I have heard of this book already,” said Don Quixote, “and verily and
+    end_quote: and true stories, the truer they are the better they are;”
+    why: Don Quixote's own proverbial dismissal of the counterfeit continuation, delivered inside a working
+      print shop, is Cervantes' most direct authorial jab at Avellaneda within the fiction itself.
+- nn: 43
+  unit_id: p2-63-66
+  note_id: cervantes-don-quixote-p2-63-66
+  span: 2144517:2197000
+  chunks:
+  - id: cervantes-don-quixote#u43-c1
+    label: c1
+    heading: Ana Félix's claim to Christian identity
+    char_start: 2155094
+    char_end: 2155994
+    start_quote: Born of Morisco parents, I am of that nation, more unhappy than wise
+    end_quote: neither in word nor in deed did I, I think, show any sign of being a Morisco.
+    why: 'States the episode''s central conflict: a devout Christian upbringing rendered illegible by
+      the expulsion decree''s ethnic categorization.'
+  - id: cervantes-don-quixote#u43-c2
+    label: c2
+    heading: Exile to Algiers and the cross-dressing rescue
+    char_start: 2157332
+    char_end: 2159612
+    start_quote: I obeyed him, and with my uncles, as I have said, and others of our kindred and neighbours,
+      passed over to Barbary
+    end_quote: he commanded her to be placed in the house of some Moorish ladies of rank who would protect
+      and attend to her; and thither he was taken at once.
+    why: Shows survival purchased through a second layer of forced illegibility, disguising her Christian
+      lover as a woman to protect him at the Barbary court.
+  - id: cervantes-don-quixote#u43-c3
+    label: c3
+    heading: Ricote's recognition of his daughter
+    char_start: 2161555
+    char_end: 2161939
+    start_quote: an elderly pilgrim, who had come on board of the galley at the same time as the viceroy,
+      kept his eyes fixed upon her
+    end_quote: unable to live without thee, my soul that thou art!
+    why: The emotional hinge of the Morisco subplot, a father's disguised return finding the daughter
+      the expulsion nearly cost him.
+  - id: cervantes-don-quixote#u43-c4
+    label: c4
+    heading: Ricote's apologia for the expulsion
+    char_start: 2183674
+    char_end: 2184741
+    start_quote: it will not do to rely upon favour or bribes, because with the great Don Bernardino de
+      Velasco
+    end_quote: Heroic resolve of the great Philip the Third, and unparalleled wisdom to have entrusted
+      it to the said Don Bernardino de Velasco!
+    why: 'The episode''s most unresolved passage: a victim of the expulsion praising, almost without irony,
+      the official who executed his people''s collective punishment.'
+  - id: cervantes-don-quixote#u43-c5
+    label: c5
+    heading: Don Quixote's defeat speech
+    char_start: 2172560
+    char_end: 2172943
+    start_quote: Don Quixote, bruised and stupefied, without raising his visor said in a weak feeble voice
+      as if he were speaking out of a tomb
+    end_quote: drive your lance home, sir knight, and take my life, since you have taken away my honour.
+    why: The climactic moment of the whole novel's chivalric arc, Don Quixote choosing death over disavowing
+      Dulcinea, in strict fidelity to the code that has just destroyed him.
+  - id: cervantes-don-quixote#u43-c6
+    label: c6
+    heading: Carrasco's confession of the ruse
+    char_start: 2175602
+    char_end: 2177241
+    start_quote: You must know, señor, that I am called the bachelor Samson Carrasco.
+    end_quote: and that a man of excellent wits—were he only rid of the fooleries of chivalry—may get
+      them back again.
+    why: Reveals the defeat as an engineered cure staged from outside knight-errantry's world but executed
+      entirely within its rules, the mechanism that finally captures Don Quixote's madness.
+- nn: 44
+  unit_id: p2-67-70
+  note_id: cervantes-don-quixote-p2-67-70
+  span: 2197000:2244440
+  chunks:
+  - id: cervantes-don-quixote#u44-c1
+    label: c1
+    heading: The pastoral plan
+    char_start: 2200465
+    char_end: 2201634
+    start_quote: This is the meadow where we came upon those gay shepherdesses
+    end_quote: not only in this but in ages to come.
+    why: Establishes Don Quixote's redirection of his romance-making imagination into a pastoral fiction
+      immediately after his chivalric defeat.
+  - id: cervantes-don-quixote#u44-c2
+    label: c2
+    heading: Sancho's praise of sleep
+    char_start: 2210133
+    char_end: 2210760
+    start_quote: all I know is that so long as I am asleep I have neither fear nor hope
+    end_quote: there is very little difference.
+    why: A set-piece meditation on sleep as social leveler that draws unusual explicit praise from Don
+      Quixote for Sancho's eloquence.
+  - id: cervantes-don-quixote#u44-c3
+    label: c3
+    heading: The pig drove
+    char_start: 2211786
+    char_end: 2213049
+    start_quote: The fact of the matter was that some men were taking above six hundred pigs
+    end_quote: and wasps sting him and pigs trample him under foot.
+    why: Records the incident factually and shows Don Quixote reframing an accidental mishap as providential
+      chastisement for his defeat.
+  - id: cervantes-don-quixote#u44-c4
+    label: c4
+    heading: Rhadamanthus's sentence on Sancho
+    char_start: 2223053
+    char_end: 2223326
+    start_quote: Ho, officials of this house, high and low, great and small
+    end_quote: for upon this ceremony depends the restoration of Altisidora.
+    why: Specifies the exact pains to be inflicted on Sancho, converting the disenchantment fiction into
+      formal staged liturgy.
+  - id: cervantes-don-quixote#u44-c5
+    label: c5
+    heading: Cide Hamete's judgment on the duke and duchess
+    char_start: 2234457
+    char_end: 2234747
+    start_quote: And Cide Hamete says, moreover, that for his part he considers the concocters of the
+      joke as crazy as the victims of it
+    end_quote: when they took such pains to make game of a pair of fools.
+    why: The chronicler explicitly judges the aristocratic tormentors as nearly as foolish as their victims,
+      a rare authorial intervention against the hosts.
+  - id: cervantes-don-quixote#u44-c6
+    label: c6
+    heading: The devils and the spurious sequel
+    char_start: 2238241
+    char_end: 2238729
+    start_quote: ‘Look what book that is,’ said one devil to another
+    end_quote: I could not have done it.
+    why: Cervantes' clearest metafictional strike at Avellaneda's counterfeit continuation, delivered
+      inside Altisidora's invented vision of hell.
+- nn: 45
+  unit_id: p2-71-74
+  note_id: cervantes-don-quixote-p2-71-74
+  span: 2244440:2291823
+  chunks:
+  - id: cervantes-don-quixote#u45-c1
+    label: c1
+    heading: Sancho prices his own lashes
+    char_start: 2247315
+    char_end: 2247955
+    start_quote: “Of them,” said Sancho, “there are three thousand three hundred and
+    end_quote: eight hundred and twenty-five reals in all.
+    why: Shows the novel deflating the mystical disenchantment quest into a running mercantile calculation,
+      epitomizing Sancho's practical wit against Don Quixote's idealism.
+  - id: cervantes-don-quixote#u45-c2
+    label: c2
+    heading: Repudiating the rival Don Quixote
+    char_start: 2262257
+    char_end: 2262562
+    start_quote: I entreat your worship by your devoir as a
+    end_quote: Sancho Panza, my squire, the one your worship knew.”
+    why: 'The novel''s boldest metafictional move: staging in-fiction legal testimony to repudiate Avellaneda''s
+      counterfeit sequel and assert the authentic characters'' identity.'
+  - id: cervantes-don-quixote#u45-c3
+    label: c3
+    heading: The hare as ill omen
+    char_start: 2268228
+    char_end: 2268691
+    start_quote: _Malum signum, malum signum!_ a hare flies, greyhounds chase
+    end_quote: what bad sign is that, or what ill omen is there to be found here?”
+    why: Reverses the pair's usual roles, with Sancho now correcting his master's superstition, previewing
+      the larger inversion of sanity to come.
+  - id: cervantes-don-quixote#u45-c4
+    label: c4
+    heading: Renouncing the name of Don Quixote
+    char_start: 2281078
+    char_end: 2281518
+    start_quote: Good news for you, good sirs, that I am no longer Don Quixote of La Mancha
+    end_quote: now, by God’s mercy schooled into my right senses, I loathe them.”
+    why: The pivotal declaration in which the protagonist sheds his chivalric identity and becomes Alonso
+      Quixano the Good, the hinge of the entire death sequence.
+  - id: cervantes-don-quixote#u45-c5
+    label: c5
+    heading: A knight-errant's Christian death
+    char_start: 2288193
+    char_end: 2288623
+    start_quote: At last Don Quixote’s end came, after he had received all the
+    end_quote: yielded up his spirit, that is to say died.
+    why: The novel's climactic death scene, framed by an in-text notary's testimony that no knight-errant
+      ever died so calmly or so like a Christian.
+  - id: cervantes-don-quixote#u45-c6
+    label: c6
+    heading: Cide Hamete's address to his pen
+    char_start: 2290260
+    char_end: 2290635
+    start_quote: For me alone was Don Quixote born, and I for him; it was his to act
+    end_quote: 'no burden for his shoulders, nor subject for his frozen wit:'
+    why: Cervantes's signature metafictional seal, fictionalizing the author's own defense of the text
+      against further unauthorized continuations.
