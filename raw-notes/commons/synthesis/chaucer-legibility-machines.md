@@ -1,7 +1,7 @@
 ---
 summary: "Across the Canterbury Tales Chaucer repeatedly builds an intact apparatus of measurement, record, and proof — a counting-house, a single-key garden, seals and relics, a donor-ledger, astronomical instruments, a confessor's audit of the soul — and then dramatizes it certifying a fabrication, so that legibility's promise of trustworthy verification is inverted from the inside."
 tags: [chaucer, legibility, fraud, verification, decay-sequence, world-machines, canterbury-tales, cross-cutting]
-last_updated: 2026-07-27
+last_updated: 2026-09-23
 level: canon
 sources: [chaucer-canterbury-tales-canon-yeomans-tale, chaucer-canterbury-tales-shipmans-tale, chaucer-canterbury-tales-merchants-tale, chaucer-canterbury-tales-sompnours-tale, chaucer-canterbury-tales-pardoners-tale, chaucer-canterbury-tales-friars-tale, chaucer-canterbury-tales-millers-tale, chaucer-canterbury-tales-squires-tale, chaucer-canterbury-tales-man-of-laws-tale, chaucer-canterbury-tales-parsons-tale]
 ---
@@ -27,3 +27,5 @@ Two tales mark the extremes the fraud-tales sit between. The Squire's four marve
 ## The connection
 
 Read together these units make a claim none makes alone: for Chaucer the danger of a legibility apparatus is not that it can be evaded but that it can be *satisfied* by a fabrication. The goldsmith's assay, the balanced ledger, the tested key, the sealed bull, the donor-record, the astrolabe — each does exactly what it was built to do and thereby certifies a lie. This is the sharp inversion of legibility's promise of trustworthy verification, and it recurs often enough across independent tales to read as one of Chaucer's structural preoccupations rather than a local joke. Where [[dante-divine-comedy]] built a cosmos in which position perfectly encodes desert, Chaucer keeps showing the readout forged.
+
+See also [[monkey-king-editable-cosmos]], where the celestial records of *Journey to the West* are not forged but edited from inside.
