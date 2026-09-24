@@ -16,8 +16,9 @@ have never heard of," posed against the counter-example of Angkor Wat, visited b
 millions while Majapahit stays obscure outside Javanese-history specialists
 ([[vanderlinde-majapahit-preface]]).
 
-*Bibliographic note.* The wiki's existing [[majapahit-empire]] page cites this same
-book under a different edition subtitle. They are the same work; this page is the
+*Bibliographic note.* This book also circulates under the edition subtitle *Intrigue,
+Betrayal and War in Indonesia's Greatest Empire*, which is how [[history-machines-in-the-margins-lohse]]
+cites it. They are the same work; this page is the
 source summary for the eighteen reading notes listed in `sources`, and
 [[majapahit-empire]] is the empire's own entity page.
 
@@ -204,8 +205,7 @@ consistent about saying so.
 
 ## Pages from this batch
 
-- [[majapahit-empire]] — the empire itself (pre-existing)
-- [[majapahit-empire-vanderlinde]] — this book's additions to [[majapahit-empire]]
+- [[majapahit-empire]] — the empire itself, including this book's additions
 - [[gajah-mada]] — the commoner patih
 - [[prapanca]] — the chronicler, named
 - [[person-embodied-statecraft]] — synthesis: where this polity stored its capacity
