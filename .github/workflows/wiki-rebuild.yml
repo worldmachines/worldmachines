@@ -54,7 +54,10 @@ jobs:
              || ! git cat-file -e "${GITHUB_EVENT_BEFORE}^{commit}" 2>/dev/null; then
             echo "No usable push base — full rebuild."
             MODE=full
-          elif ! git diff --name-only "$GITHUB_EVENT_BEFORE"..HEAD > /tmp/changed-all.txt; then
+          # --no-renames: with rename detection a moved note shows up only under
+          # its new path, the old path never reaches build_wiki.py, and its stale
+          # manifest entry crashes every later incremental build.
+          elif ! git diff --name-only --no-renames "$GITHUB_EVENT_BEFORE"..HEAD > /tmp/changed-all.txt; then
             echo "git diff failed — full rebuild."
             MODE=full
           elif grep -qx 'website/scripts/build_wiki\.py' /tmp/changed-all.txt; then
