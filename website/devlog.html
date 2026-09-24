@@ -65,6 +65,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">24 September 2026 · aneesh</div>
+    <p>Website PRs now need Aneesh's approval instead of Venkat's; PRs Venkat authors are exempt and need no review. The enforced <code>approval-policy</code> check, <code>CODEOWNERS</code> (which now auto-requests Aneesh on <code>website/</code> PRs), <code>CLAUDE.md</code> and <code>CONTRIBUTING.md</code> all say the same thing, and a Venkat approval on someone else's website PR no longer clears it on its own. Wiki and raw-notes rules are unchanged.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">27 August 2026 · aneesh</div>
     <p>The Witness install command on <code>/mcp</code> never ran for anyone: it placed <code>--header</code> before the server name, and Claude Code's CLI declares that flag variadic, so it swallowed both the name and the URL and died with <code>error: missing required argument 'name'</code>. Name and URL now come first and the header last — the order <code>claude mcp add --help</code> itself demonstrates — verified end to end against CLI 2.1.247. The Oracle snippet was never affected; it carries no header.</p>
   </article>
@@ -174,6 +178,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-08-27T19:55:47Z -->
+  <!-- built: 2026-09-24T05:47:50Z -->
 </body>
 </html>
