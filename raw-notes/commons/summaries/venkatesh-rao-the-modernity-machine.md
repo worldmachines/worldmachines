@@ -1,7 +1,9 @@
 ---
 summary: "Rao argues that modernity began not in the 16th century but in the 13th, framing it as a global civilizational machine assembled across six shifting class relationships between 1200 and 1600."
 tags: [venkatesh-rao, modernity, historical-periodization, world-machines, contraptions]
-last_updated: 2026-04-09
+last_updated: 2026-09-23
+level: canon
+sources: [braudel-civilization-capitalism-v1-ch08-originality-of-western-towns, braudel-civilization-capitalism-v1-ch03-luxury-and-meat, braudel-civilization-capitalism-v1-ch04-costume-and-fashion, braudel-civilization-capitalism-v1-ch06-gunpowder-and-artillery, braudel-civilization-capitalism-v1-ch02-rice, braudel-civilization-capitalism-v1-ch08-self-consciousness-and-hierarchies, braudel-civilization-capitalism-v1-ch03-table-manners-and-everyday-foods]
 ---
 
 # The Modernity Machine (Rao, Jan 2025)
@@ -56,6 +58,17 @@ Rao applies the 1200-1600 European template to the contemporary American situati
 - The six-relationship framework is asserted, not derived — why exactly these six, and not others?
 - The non-European cases (India, China, Ottoman Empire) are gestured at in footnotes rather than given full treatment
 - No engagement with James Scott's *Seeing Like a State* or similar work on legibility and state modernization
+
+## Braudel's evidence on the 1200–1600 window
+
+[[fernand-braudel]]'s *Structures of Everyday Life* ([[braudel-civilization-capitalism-v1]]) does not engage this essay. But several of its reading notes test the [[modernity-machine]]'s 1200–1600 construction window against Braudel's material. The rhymes below are the notes' own unless marked as this section's, and each is partial.
+
+- **Towns built the instruments first.** Braudel dates the Western urban renaissance to the eleventh century, carried by rural revival and a returning monetary economy ("And money meant towns"). The free towns of Italy, Flanders and Germany invented public loans, bills of exchange, accountancy and trading companies, along with a calculating "time is money" mentality. The territorial state that later absorbed them inherited those institutions wholesale. The note reads this as the Modernity Machine's legibility infrastructure being "built by towns before it was ever built by states" ([[braudel-civilization-capitalism-v1-ch08-originality-of-western-towns]]). On Braudel's dating, some of those foundations predate 1200.
+- **The Black Death and labour's bargaining power.** Braudel argues that 1350–1550 was unusually favourable for ordinary living standards. Black Death labour scarcity drove up real wages, and meat eating on a large scale was "not ... reserved to the very rich." After 1550 the trend reversed for three centuries as population pressed on fixed land ([[braudel-civilization-capitalism-v1-ch03-luxury-and-meat]]). This section, not the note, observes that the first half parallels the essay's Oligarchy–Workers shift, and that the second half shows the material gain did not last.
+- **Fashion as a dated hinge.** In Braudel's words, around 1350, with the sudden shortening of men's costume, "one could say that fashion began." Fashion becomes perpetual and obligatory only around 1700 ([[braudel-civilization-capitalism-v1-ch04-costume-and-fashion]]).
+- **Crécy from the gunpowder side.** Artillery made its battlefield debut at Crécy and Calais in the 1340s, but became a major factor in European war only with Charles VIII's Italian campaign of 1494 ([[braudel-civilization-capitalism-v1-ch06-gunpowder-and-artillery]]).
+- **Parallel revivals that the state reclaimed.** Braudel finds urban revivals in classical Greece, Rome, Islam from the ninth century and Sung China. In each case the state eventually re-subordinated the city. Only in the medieval West did "the city win hands down," for causes he calls "still inadequately explained" ([[braudel-civilization-capitalism-v1-ch08-originality-of-western-towns]]). This bears on the essay's claim of regional early modernities and on the gap about non-European cases flagged above, without settling either.
+- **Precedents outside the window.** Other notes place Braudel's material before or beside the window, not inside it. The Chinese hydraulic state is "a much older, non-capitalist precedent, not the [[modernity-machine]] proper" ([[braudel-civilization-capitalism-v1-ch02-rice]]). Chequerboard grid towns "predate and run parallel to that machine's construction window" ([[braudel-civilization-capitalism-v1-ch08-self-consciousness-and-hierarchies]]). The sugar plantation's accounting apparatus assembles from the 1520s, "well before the Modernity Machine's stated 1600 'Day'" ([[braudel-civilization-capitalism-v1-ch03-table-manners-and-everyday-foods]]).
 
 ## Key Cross-References
 

@@ -1,7 +1,9 @@
 ---
 summary: "Jakob Fugger (1459–1525), German banking magnate whose wealth reached ~2% of European GDP, transformed the monarch-oligarch relationship from divine right to creditor-debtor contract, and pioneered financial legibility tools."
 tags: [jakob-fugger, modernity-machine, banking, legibility, class-relations, renaissance, oligarchy]
-last_updated: 2026-04-09
+last_updated: 2026-09-23
+level: canon
+sources: [braudel-civilization-capitalism-v1-introduction, braudel-civilization-capitalism-v1-ch05-iron-a-poor-relation, braudel-civilization-capitalism-v1-ch06-printing-and-ocean-navigation, braudel-civilization-capitalism-v1-conclusion]
 ---
 
 # Jakob Fugger
@@ -41,6 +43,16 @@ To manage his network, Fugger needed accountants, auditors, and lawyers — acce
 - Financed the bloody suppression of the German Peasants' War (1524–25): ~100,000 deaths
 - The Fuggerei (Augsburg social housing, still operational) — often cited as the first social housing project — was "Feudalism 2.0 at the dawn of capitalism"
 - Interested in money-making above all else: "everything was just a means to make more money"
+
+## Braudel: the Fuggers as capitalism's top floor
+
+In [[fernand-braudel]]'s *Structures of Everyday Life* ([[braudel-civilization-capitalism-v1]]), the Fuggers are the first example Braudel gives of **capitalism** in his three-storey sense. He means the family firm, not Jakob alone. With the Welsers and the great Indies companies, they make up a "shadowy zone" of privileged actors, monopoly and action at a distance. Braudel insists this zone is not the same thing as the market economy ([[braudel-civilization-capitalism-v1-introduction]]; see [[braudel-three-storey-house]]).
+
+- **Copper, not iron.** Precious metals "gave rise to speculative enterprises with which proletarian iron was never concerned." Copper in particular was "favoured by early capitalism": the Fuggers, Mansfeld, the Amsterdam exchange. Iron stayed dispersed in material life ([[braudel-civilization-capitalism-v1-ch05-iron-a-poor-relation]]). This bears on the copper-mining leverage described above, although the notes speak of the firm and do not discuss Jakob specifically.
+- **A byword.** Braudel calls the capital-rich financier-publishers of early printing (Koberger, Aldo Manutio, Plantin, the Giunta family) "the Fuggers on a small scale" ([[braudel-civilization-capitalism-v1-ch06-printing-and-ocean-navigation]]).
+- **Mobility as power.** Braudel locates capitalism's power in its "comparative freedom of movement." It can swing between trade, manufacture, real estate, state loans or usury because the floors beneath it are "inflexible" ([[braudel-civilization-capitalism-v1-conclusion]]). The notes do not name the Fuggers in that passage. Read beside the biography above (textiles, then mining, then spices, then banking), Fugger's career looks like an instance of that mobility, but the connection is this page's, not the notes'.
+
+**A tension with this page's framing, left open.** This page presents Fugger as an engineer of financial legibility (double-entry bookkeeping, auditors, consolidated statements). In Braudel's schema the market economy is the legible, "transparent" floor. The notes read capitalism as thriving "in a zone that stays illegible to ordinary participants and to economic science itself" ([[braudel-civilization-capitalism-v1-introduction]]). The notes do not discuss Fugger's bookkeeping, and the two readings are not reconciled here. See [[legibility-as-precondition-not-cause]].
 
 ## Sources
 
