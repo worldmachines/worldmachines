@@ -3222,6 +3222,15 @@ def collect_notes(changed: list[Path] | None) -> tuple[list[Note], dict[str, int
     skipped: dict[str, int] = defaultdict(int)
     touched: set[str] = set()
 
+    # A note the manifest remembers but whose file is gone was moved, renamed or
+    # deleted without its old path reaching `changed` (e.g. a rename that the
+    # caller's `git diff` reported only under its new path). Drop it here, or
+    # rendering anything that backlinks it tries to read a missing file.
+    for rel in [r for r in notes_by_rel if not (NOTES_ROOT / r).exists()]:
+        taken.discard(notes_by_rel[rel].url)
+        del notes_by_rel[rel]
+        touched.add(rel)
+
     for path in changed:
         rel = str(path.relative_to(NOTES_ROOT)) if path.is_absolute() else str(path)
         rel = rel[len("raw-notes/"):] if rel.startswith("raw-notes/") else rel
