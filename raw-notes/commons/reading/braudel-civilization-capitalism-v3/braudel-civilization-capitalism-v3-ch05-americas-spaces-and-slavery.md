@@ -9,7 +9,7 @@ tags:
 - 'frontier-and-open-space'
 - 'eurocentrism'
 - 'encomienda-and-mita'
-last_updated: 2026-09-25
+last_updated: 2026-09-24
 level: reading
 source: 'braudel-civilization-capitalism-v3'
 spans:

@@ -9,7 +9,7 @@ tags:
 - 'longue-duree'
 - 'historiography'
 - 'wallerstein'
-last_updated: 2026-09-25
+last_updated: 2026-09-24
 level: reading
 source: 'braudel-civilization-capitalism-v3'
 spans:

@@ -8,7 +8,7 @@ tags:
 - 'east-india-companies'
 - 'naval-power'
 - 'native-collaboration'
-last_updated: 2026-09-25
+last_updated: 2026-09-24
 level: reading
 source: 'braudel-civilization-capitalism-v3'
 spans:

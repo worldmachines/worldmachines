@@ -9,7 +9,7 @@ tags:
 - 'gdansk-danzig'
 - 'france-holland-rivalry'
 - 'dutch-east-indies'
-last_updated: 2026-09-25
+last_updated: 2026-09-24
 level: reading
 source: 'braudel-civilization-capitalism-v3'
 spans:

@@ -1,7 +1,7 @@
 ---
 summary: "Read side by side, the Volume III notes show an asymmetry that no single note states: a dominant centre's ageing is legible to contemporaries in its finances, luxury and lost outposts, while its successor's build is mostly recognized only in retrospect or through where crises first appear. This gives a lived hinge the shape of the Gramsci Gap, reached from economic rather than legitimacy evidence."
 tags: [synthesis, braudel, hegemonic-transition, gramsci-gap, history-machine, forecasting, world-economy, psychohistory]
-last_updated: 2026-09-25
+last_updated: 2026-09-24
 level: canon
 sources: [braudel-civilization-capitalism-v3-ch02-age-of-the-genoese, braudel-civilization-capitalism-v3-ch03-united-provinces-at-home, braudel-civilization-capitalism-v3-ch03-traders-to-europe-and-the-world, braudel-civilization-capitalism-v3-ch02-first-world-economy-bruges-hansa, braudel-civilization-capitalism-v3-ch02-portugal-and-antwerp, braudel-civilization-capitalism-v3-ch04-england-island-and-pound, braudel-civilization-capitalism-v3-ch03-amsterdam-entrepot-and-credit, braudel-civilization-capitalism-v3-ch01-world-economies-ground-rules, braudel-civilization-capitalism-v3-ch03-dutch-state-taxes-business, braudel-civilization-capitalism-v3-ch05-colonies-against-europe, braudel-civilization-capitalism-v3-ch03-decline-of-amsterdam, braudel-civilization-capitalism-v3-ch01-divisions-of-time, braudel-civilization-capitalism-v3-ch03-voc-asia-and-america, braudel-civilization-capitalism-v3-ch06-finance-conjuncture-living-standards, braudel-civilization-capitalism-v3-conclusion-past-and-present]
 ---

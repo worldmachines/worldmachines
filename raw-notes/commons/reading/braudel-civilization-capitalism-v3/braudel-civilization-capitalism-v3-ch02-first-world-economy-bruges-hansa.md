@@ -9,7 +9,7 @@ tags:
 - 'core-periphery'
 - 'medieval-urbanization'
 - 'venice'
-last_updated: 2026-09-25
+last_updated: 2026-09-24
 level: reading
 source: 'braudel-civilization-capitalism-v3'
 spans:

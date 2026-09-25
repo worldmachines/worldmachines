@@ -8,7 +8,7 @@ tags:
 - 'rise-of-the-industrialist'
 - 'three-sector-model'
 - 'core-periphery-reversal'
-last_updated: 2026-09-25
+last_updated: 2026-09-24
 level: reading
 source: 'braudel-civilization-capitalism-v3'
 spans:
