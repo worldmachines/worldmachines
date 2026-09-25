@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-24 · aneesh (4)
+Braudel's *Civilization and Capitalism* is now in commons in full: Vol II (*The Wheels of Commerce*, 43 reading notes) and Vol III (*The Perspective of the World*, 38) join Vol I. They add 6 new canon pages, among them `braudel-world-economy`, `braudel-succession-of-dominant-centres` and the synthesis `capitalism-keeps-the-floor-competitive`, plus append-only sections on 9 existing pages, including `fernand-braudel` and `braudel-three-storey-house`. The two volumes were ingested in parallel runs; both passed both validators with 0 quarantine. The lake chunk/embed/publish (personal only; both books are in copyright) is still pending, so the Oracle can't quote them yet.
+
 ## 2026-09-24 · aneesh (3)
 `/wiki` had stopped updating: every Rebuild wiki run since #59 (the move of `raw-notes/aneesh/{entities,summaries}` into commons) crashed with `FileNotFoundError` on an old `aneesh/entities` path. The workflow's `git diff` reported each moved note only under its new path, so the incremental build never dropped the old one from its manifest. The diff now runs with `--no-renames`, and `build_wiki.py` also drops any manifest note whose file is gone, so a move or deletion can't wedge the build again; merging this triggers a full rebuild that clears the stale entries.
 
