@@ -1,8 +1,9 @@
 ---
 summary: "Traces how royal administrations across history were deliberately antimemetic — powerful but invisible — so that public anger would always target visible rulers, not the bureaucratic machinery doing the real work."
 tags: [history, political-theory, memetics, bureaucracy, medieval-history, Islamic-empires]
-last_updated: 2026-04-09
+last_updated: 2026-09-24
 level: canon
+sources: [braudel-civilization-capitalism-v2-ch05-revolutions-workers-revolts-order, braudel-civilization-capitalism-v2-ch05-state-culture-incomplete-entity-islamic-model]
 ---
 
 # Royalty, Administration, and Antimemetics
@@ -62,3 +63,11 @@ The dialogue between Hacker and Sir Humphrey illustrates modern administrative a
 - [[Yes, Minister]]
 - [[Bureaucratic Diffusion of Responsibility]]
 - [[Ibn Khaldun]]
+
+## A Braudel parallel: the privilege that went unnamed
+
+In *The Wheels of Commerce* ([[braudel-civilization-capitalism-v2]]) Braudel describes a split between visible and invisible power that parallels this page's argument, with a different invisible party.
+
+When revolutionary ideology finally arrived with the Enlightenment, it attacked "the privileges of a leisured aristocratic class," but "the privileges conferred by capital were somehow brushed aside." The 1789 *cahiers de doléance* attack the nobility mercilessly and fall almost silent on the Crown and on capital. Braudel's explanation is not only that the revolutionaries were bourgeois. Once the myth of a society of orders was discredited, "the hierarchy of money as opposed to the hierarchy of birth" was never named as an unjust order of its own. The same pattern appears at trade scale. The Lyons printers struck against master-printers who "did not really represent capital," while the merchant publishers who financed them, sat on the town council and had municipal backing stayed out of the fight ([[braudel-civilization-capitalism-v2-ch05-revolutions-workers-revolts-order]]). Elsewhere Braudel notes that Lisbon's real capitalist business (Macao, Goa, Brazil, Russia) was invisible to the city's own townspeople, and that the "power apparatus" is always "something more than the state" ([[braudel-civilization-capitalism-v2-ch05-state-culture-incomplete-entity-islamic-model]]).
+
+*Reading, not the notes' claim:* the shape matches this page. A memetic target (the nobility, the master-printer) draws the anger, while the power that works is antimemetic. The fit is partial in two ways. Braudel's invisible party is capital, not administration. He explains its invisibility by the framing of revolutionary ideology and the myths it demolished, not by a structure designed to diffuse responsibility. See [[memetic-vs-antimemetic-structures]] and [[braudel-three-storey-house]].
