@@ -1,8 +1,9 @@
 ---
 summary: "Canadian media theorist (1911–1980); his 'the medium is the message' — that the material properties of media, not their content, shape social relations — is a foundational source for Bryant's post-human media ecology."
 tags: [McLuhan, media-theory, medium, communication, technology, post-human-media-ecology]
-last_updated: 2026-04-27
+last_updated: 2026-09-27
 level: canon
+sources: [eisenstein-printing-revolution-introduction, eisenstein-printing-revolution-ch02-defining-initial-shift-2, eisenstein-printing-revolution-ch03-s3-reorganizing-texts, eisenstein-printing-revolution-ch04-s1-reading-public, eisenstein-printing-revolution-afterword-1]
 ---
 
 # Marshall McLuhan
@@ -41,3 +42,17 @@ Bryant's extension of McLuhan into post-human territory opens the question: what
 - [[levi-bryant]]
 - [[post-human-media-ecology]]
 - [[technology-as-place-maker]]
+
+## Eisenstein: the question kept, the method refused
+
+*The Gutenberg Galaxy* (1962) is the book that set [[elizabeth-eisenstein]] on her life's work, and she treats it as a symptom rather than a diagnosis. Mischievous where Bridenbaugh was alarmed, it seemed to her a product of print-culture overload whose own incoherence testified to the problem it claimed to explain. What she credits McLuhan with is a well-posed question, what the shift from script to print actually changed, which she found no one had surveyed ([[eisenstein-printing-revolution-introduction]]).
+
+Her correction runs through [[eisenstein-printing-revolution]]:
+
+- **Plural, not uniform effects.** She credits McLuhan with making historians “more alert to the possibility that the advent of printing had social and psychological consequences”. She faults him for “glossing over multiple interactions that occurred under widely varying circumstances” and replaces his “typographical man” with group-by-group history ([[eisenstein-printing-revolution-ch04-s1-reading-public]]).
+- **Silent reading.** Using Paul Saenger, she corrects the overstatement of medieval orality. Print did not introduce silent reading, but it made “silent instructors” pervasive and institutionalized (same note).
+- **Format and thought, made concrete.** The claim that scanning printed lines reshaped thought is “at first glance somewhat mystifying”. She makes it plausible through alphabetization, indexing and title pages that no scribal system could standardize ([[eisenstein-printing-revolution-ch03-s3-reorganizing-texts]]).
+- **Against the image-to-word law.** Her case-by-case treatment of image and word, with print multiplying technical illustration, targets the same “movement from image culture to word culture” claim as a media-theoretic law ([[eisenstein-printing-revolution-ch02-defining-initial-shift-2]]).
+- **The debt, hedged.** In 2005 she rejects the charge of a “McLuhanesque view of history”. She still acknowledges that McLuhan alerted her to this dimension of change, though he “did not share my concern... for solid evidence, chronological order, or appropriate context” ([[eisenstein-printing-revolution-afterword-1]]).
+
+The contrast with Bryant's use above is worth keeping. Bryant extends McLuhan's medium theory outward to all machines, while Eisenstein historicizes it, keeping the question and demanding evidence for each effect.

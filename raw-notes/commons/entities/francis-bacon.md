@@ -1,9 +1,9 @@
 ---
 summary: "English philosopher and statesman who proposed a systematic reorganization of all the sciences — an Enlightenment precursor to the universal library aspiration."
 tags: [intellectual-history, philosophy, Enlightenment, scientific-method, knowledge-systems, England]
-last_updated: 2026-09-26
+last_updated: 2026-09-27
 level: canon
-sources: [gay-bourgeois-experience-v3-p6-empire-of-fact-bacon-science]
+sources: [gay-bourgeois-experience-v3-p6-empire-of-fact-bacon-science, eisenstein-printing-revolution-ch02-defining-initial-shift-1, eisenstein-printing-revolution-ch05-permanent-renaissance-3, eisenstein-printing-revolution-ch07-s2-copernican-revolution, eisenstein-printing-revolution-ch07-s3-galileos-trial-1, eisenstein-printing-revolution-ch07-s3-galileos-trial-2, eisenstein-printing-revolution-ch08-final-remarks]
 ---
 
 # Francis Bacon
@@ -57,3 +57,15 @@ In §I, Sathe cites Bacon specifically on memory and direction: "Francis Bacon w
 Peter Gay's *The Cultivation of Hatred* ([[gay-bourgeois-experience-v3]]) adds a third Bacon to the taxonomist and the Bacon of memory-structures: the Bacon the nineteenth century *curated* as ideology. The Victorians did not discover him. They canonized him with Spedding's critical edition (1857–74), new biographies, a statue at Trinity College, Macaulay's famous itemized ledger of Baconian benefits to humanity, and Darwin's self-professed Baconianism. That made Bacon the founding charter of their “empire of fact.” Bacon's program of exposing “idols,” obeying nature in order to command it, and “the enlarging of the bounds of Human Empire” gave engineers, statisticians, and inventors such as Babbage a philosophical genealogy for projects that were really about present-day control ([[gay-bourgeois-experience-v3-p6-empire-of-fact-bacon-science]]).
 
 Gay's own reading is psychoanalytic. The Baconian empire is aggression turned constructive, “the most concerted series of aggressions ever launched against ignorance”, with knowledge pictured as territory to conquer. He balances the tribute with irony: the empire of fact was chronically short of facts, as the racially skewed 1840 U.S. census and confidently wrong medical advice show. See [[mastery-drive]] and [[legibility-as-cultivated-aggression]].
+
+## Eisenstein's Bacon: print's first assessor
+
+[[elizabeth-eisenstein]]'s [[eisenstein-printing-revolution]] adds a fourth Bacon to the taxonomist, the theorist of memory-structures and the Victorians' charter figure. This one set her own agenda and stood downstream of print's institutions.
+
+- **The charge she answers.** Chapter Two reformulates Bacon's call to weigh the “force, effect, and consequences” of printing ([[eisenstein-printing-revolution-ch02-defining-initial-shift-1]]). She closes by noting that more of those consequences are visible now “than could be seen in Bacon's day”, while others are still unfolding ([[eisenstein-printing-revolution-ch08-final-remarks]]).
+- **Against secrecy.** Bacon's call to open “closed shops” stands against Raleigh's praise for ancient sages who withheld truths. For Eisenstein, the scribal habit of secrecy outlived the technology that had made it rational ([[eisenstein-printing-revolution-ch05-permanent-renaissance-3]]).
+- **Salomon's House had a press.** Tycho's Uraniborg, with its printing presses, paper mill and engravers, is cited, following Wightman, as a possible prototype for Salomon's House and the Royal Society ([[eisenstein-printing-revolution-ch07-s2-copernican-revolution]]).
+- **Palissy's lectures.** Eisenstein credits Bernard Palissy's public lectures with influencing Bacon, within an “everyman his own scientist” analogy she then qualifies ([[eisenstein-printing-revolution-ch07-s3-galileos-trial-1]]).
+- **Neither side of the utility debate.** Against historians who hold that Bacon contributed nothing to seventeenth-century science, she sets aside the utility-versus-curiosity dichotomy itself, since the same printed tables served both ([[eisenstein-printing-revolution-ch07-s3-galileos-trial-2]]).
+
+The Universal Library entry above names Gessner's *Bibliotheca universalis* as a sibling project. Eisenstein treats that 1545 bibliography as the first and last serious attempt at universality before specialized bibliographies multiplied; see [[printing-press-and-information-overload-eisenstein]].

@@ -1,8 +1,9 @@
 ---
 summary: "English mathematician and physicist; his famous phrase 'standing on the shoulders of giants' is the foil for Sathe's 'dancing on the shoulders of giants' — Newton's humility as baseline now vs. metaphor for acceleration."
 tags: [science-history, physics, mathematics, epistemics, modesty]
-last_updated: 2026-04-09
+last_updated: 2026-09-27
 level: canon
+sources: [eisenstein-printing-revolution-ch03-s4-data-collection, eisenstein-printing-revolution-ch03-s5-preservative-powers, eisenstein-printing-revolution-ch07-s2-copernican-revolution, eisenstein-printing-revolution-ch07-s3-galileos-trial-1, eisenstein-printing-revolution-ch07-s3-galileos-trial-2]
 ---
 
 # Isaac Newton (1643–1727)
@@ -29,3 +30,15 @@ The claim is not that Newton was wrong but that the problem has changed. Newton'
 - [[Expertise]] — what "standing" represents
 - [[Composite AI Architecture (Experts + LLM + KG)]] — what makes "dancing" possible
 - [[Wright's Law]] — the acceleration dynamic that changes the relationship to accumulated knowledge
+
+## Eisenstein: Newton at the end of a print chain
+
+In [[elizabeth-eisenstein]]'s [[eisenstein-printing-revolution]], Newton appears as the beneficiary of a print infrastructure that his predecessors built.
+
+- **Reached through pamphlets and almanacs.** Kepler's open letter on the 1631 transit of Mercury, Schickard's confirming pamphlet and competing almanac-makers such as Vincent Wing adjudicated the Rudolphine Tables in print. Wing's book was later read and annotated by Newton, and by his day the Tables were driving out competitors “at least in regions where there was a free trade in ideas” ([[eisenstein-printing-revolution-ch07-s2-copernican-revolution]]).
+- **Free to publish.** Newton's freedom is set against Borelli's timidity and Descartes's abandoned cosmological treatise after Galileo's 1633 condemnation. Censorship shaped which minds could go furthest ([[eisenstein-printing-revolution-ch07-s3-galileos-trial-2]]).
+- **Play.** Newton's image of himself as a boy diverted by “a smoother pebble or prettier shell than ordinary” is her clinching case that print-made leisure, such as logarithm tables that “doubled the life of the astronomer”, freed Homo Ludens alongside Homo Faber (same note).
+- **A new priesthood.** Once the Book of Nature was written in mathematics, Newton became “as incomprehensible to the average mechanic as Thomas Aquinas” ([[eisenstein-printing-revolution-ch07-s3-galileos-trial-1]]).
+- **A residue.** Rosicrucians and Freemasons went on claiming that Newton had merely rediscovered an ancient “magical key to nature's secrets”, a scribal habit of mind surviving print ([[eisenstein-printing-revolution-ch03-s5-preservative-powers]]).
+
+This page's reading, not Eisenstein's: her argument supplies the infrastructure beneath “standing on the shoulders of giants”. Print let each field build on predecessors' work “instead of trying to retrieve scattered fragments of it” ([[eisenstein-printing-revolution-ch03-s4-data-collection]]), which is what makes the standing posture available at all. See [[typographical-fixity-eisenstein]].

@@ -1,8 +1,9 @@
 ---
 summary: "Michel de Montaigne (1533–1592), French Renaissance writer who invented the personal essay form and modeled a philosophy of frank self-examination and epistemic humility."
 tags: [montaigne, essay, renaissance, philosophy, france, self-knowledge, epistemology]
-last_updated: 2026-04-09
+last_updated: 2026-09-27
 level: canon
+sources: [eisenstein-printing-revolution-ch03-s1-wide-dissemination, eisenstein-printing-revolution-ch03-s2-standardization]
 ---
 
 # Michel de Montaigne
@@ -69,3 +70,13 @@ The **arrière-boutique** is Montaigne's version of the [[Studiolo and Self-Cult
 - [[Studiolo and Self-Cultivation]] — the tradition his arrière-boutique participates in
 - [[Dwelling as Philosophical Concept]] — philosophical parallel
 - [[The Digital Studiolo]] — synthesis connecting studiolo to AI
+
+## Eisenstein: the tower study as a print-era library
+
+[[elizabeth-eisenstein]] uses Montaigne twice in [[eisenstein-printing-revolution]], and both uses tie the *Essais* to the press rather than to temperament alone.
+
+- **An overloaded reader.** The sixteenth-century sense of intellectual crisis is usually credited to the Reformation or the voyages of discovery. Eisenstein insists that the sheer number of texts at hand also did explanatory work. Montaigne “could see more books by spending a few months in his tower study than earlier scholars had seen after a lifetime of travel”, and the “conflict and diversity” he perceived followed partly from that intake ([[eisenstein-printing-revolution-ch03-s1-wide-dissemination]]). The arrière-boutique described above was, on this reading, also a print-era library.
+- **Standardization's negative.** “The more standardized the type, indeed, the more compelling the sense of an idiosyncratic personal self.” Against the ideal types that other printed books multiplied (princes, courtiers, merchants, husbandmen), the *Essais* exposed a “solitary singular self” ([[eisenstein-printing-revolution-ch03-s2-standardization]]).
+- **Why the essay form.** The informal essay solved a new rhetorical problem: how to address readers who were no longer an assembled crowd but scattered, solitary individuals. It chose intimacy over oratory and reassured each isolated reader that a felt singularity was “capable of being widely shared” (same note).
+
+This gives the page's claim that Montaigne invented the personal essay a material context. See [[standardization-and-individuation-eisenstein]].

@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-27 · aneesh (3)
+Elizabeth Eisenstein's *The Printing Revolution in Early Modern Europe* (2nd ed., 2005) is now in commons: 28 reading notes, 7 new canon pages — a book summary, `elizabeth-eisenstein`, concept pages `typographical-fixity-eisenstein`, `master-printer-workshop-eisenstein`, `standardization-and-individuation-eisenstein` and `printing-press-and-information-overload-eisenstein`, and the synthesis `scripture-and-nature-parting-eisenstein` — plus append-only sections on 8 existing pages, including `marshall-mcluhan`, `benedict-anderson`, `giordano-bruno` and `contested-uniformity-bayly`. The lake chunk/embed/publish is personal only (in copyright).
+
 ## 2026-09-27 · aneesh (2)
 C. A. Bayly's *The Birth of the Modern World, 1780–1914* is now in commons: 42 reading notes, 8 new canon pages — a book summary, `c-a-bayly`, concept pages such as `contested-uniformity-bayly` and `archaic-globalization-bayly`, and syntheses `converging-world-crises-bayly` and `legibility-hardens-hierarchy-bayly` — plus append-only sections on 12 existing pages, including `braudel-world-economy`, `david-s-landes` and `benedict-anderson`, which tie Bayly's global history to the Braudel, Landes and Gay material already in the corpus. Bayly-framed concepts carry a `-bayly` suffix so the bare names stay free for broader pages. The lake chunk/embed/publish is personal only (in copyright).
 
