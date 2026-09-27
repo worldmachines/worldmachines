@@ -94,7 +94,7 @@ The notes test several WMP concepts against the text and hedge each one.
   - Weber's iron cage of timetables is the same phenomenon WMP names, seen through a psychological and moral frame rather than an institutional one ([[gay-bourgeois-experience-v5-intro-b]]).
   - Munich's ticket ladders sorted the public by income. That is commercial price discrimination, not state legibility ([[gay-bourgeois-experience-v5-ch01-s2-affordable-masterpieces]]).
 - **[[modernity-machine]] and [[divergence-machine]].** Munich's single-willed, court-directed order set against Manchester's competing private societies is "a miniature machine contest," though Gay himself calls the two cities "extreme types" that interpenetrate ([[gay-bourgeois-experience-v5-ch02-s2-majestic-dispensations]]). Modernism's proliferation rhymes with the divergence machine. But the isms compete inside one contested field over a few decades, which is not a civilizational push machine ([[gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists]], [[gay-bourgeois-experience-v5-ch06-s4-against-the-need-for-probability]]).
-- **[[history-machine]].** Bourgeois cultural institutions assembled piecemeal and independently in city after city. Gay's own narration, meanwhile, leans on great men ([[gay-bourgeois-experience-v5-ch02-s1-dividends-from-commerce]], [[gay-bourgeois-experience-v5-ch02-s2-majestic-dispensations]], [[gay-bourgeois-experience-v5-ch05-s1-founders]], [[gay-bourgeois-experience-v5-ch05-s2-buttresses-for-the-establishment]]). See [[bourgeois-culture-assembled-without-a-plan]].
+- **[[history-machine]].** Bourgeois cultural institutions assembled piecemeal and independently in city after city. Gay's own narration, meanwhile, leans on great men ([[gay-bourgeois-experience-v5-ch02-s1-dividends-from-commerce]], [[gay-bourgeois-experience-v5-ch02-s2-majestic-dispensations]], [[gay-bourgeois-experience-v5-ch05-s1-founders]], [[gay-bourgeois-experience-v5-ch05-s2-buttresses-for-the-establishment]]).
 - **[[decay-sequence]].** In 1905 Gerald Cumberland attacked the Hallé's staple oratorios: "They are no longer musical works; they have become religious services." This is functional practice hollowing into ritual within two generations ([[gay-bourgeois-experience-v5-ch02-s1-dividends-from-commerce]]).
 - **[[carey-intellectuals-and-masses]] and [[the-mass-as-fiction]].** These are the most frequent comparison in the batch, and they are always drawn with explicit hedges. See [[the-philistine-bourgeois-as-fiction]].
 
@@ -109,5 +109,5 @@ The notes test several WMP concepts against the text and hedge each one.
 
 - [[peter-gay]] · [[the-bourgeois-experience]]
 - [[bourgeoisophobia]] · [[political-economy-of-art-gay]] · [[critics-as-legislators-of-taste]] · [[victorian-collectors-and-founders]]
-- [[the-philistine-bourgeois-as-fiction]] · [[bourgeois-culture-assembled-without-a-plan]]
+- [[the-philistine-bourgeois-as-fiction]]
 - [[carey-intellectuals-and-masses]] · [[the-mass-as-fiction]] · [[kulturkritik]]

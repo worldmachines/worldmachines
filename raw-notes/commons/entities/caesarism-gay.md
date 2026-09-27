@@ -6,7 +6,7 @@ level: canon
 sources: [gay-bourgeois-experience-v3-p3-modern-caesars-napoleon, gay-bourgeois-experience-v3-p3-modern-caesars-bismarck, gay-bourgeois-experience-v3-p3-redefinitions, gay-bourgeois-experience-v3-p3-long-birth-political-culture, gay-bourgeois-experience-v3-p3-human-nature-suffrage-debate, gay-bourgeois-experience-v3-p3-human-nature-britain-reform, gay-bourgeois-experience-v3-p1-tr-extremist-of-the-center]
 ---
 
-# Caesarism
+# Caesarism (Gay)
 
 **Caesarism**, in [[peter-gay]]'s *The Cultivation of Hatred* ([[gay-bourgeois-experience-v3]]), names the nineteenth century's paradox of autocratic rule that claims to derive its authority from the people and to act only in their name. Self-made strongmen (Napoleon I, Napoleon III, and more ambiguously Bismarck) rose to mastery amid the impersonal social and economic transformations they were supposedly only serving. Carlyle's hero-worship seemed vindicated, even as Tocqueville and Marx found it “hopelessly anachronistic” ([[gay-bourgeois-experience-v3-p3-modern-caesars-napoleon]]). Gay refuses to dismiss it as “merely a disease of the body politic.” Caesarism is “a logical, if problematic, element” of democratization, a way of channelling mass political aggression rather than eliminating it.
 

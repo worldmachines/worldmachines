@@ -31,7 +31,7 @@ The volume keeps finding the same structure in other domains:
 - **Nature and domesticity.** Separate-spheres naturalism and the “power of the powerless” were “two alibis for the male monopoly on aggression.” They looked like opposites and did identical work ([[gay-bourgeois-experience-v3-p4-domesticity-alibis-power-paradox]]). The appeal to “Nature” was the late century's master rhetorical resource against women's claims, escalating into Moebius's pseudo-anatomy and recruited even by the anticlerical left ([[gay-bourgeois-experience-v3-p4-time-for-tentativeness]]). A mirror set of alibis licensed women's *subordination* by making exclusion look voluntary ([[gay-bourgeois-experience-v3-p4-domesticity-education-womens-magazines]]).
 - **Sexual violence.** “Domestic frustration” was the “convenient and plausible alibi” for rape. Gay calls it the least credible, since rape delivers “a rabid display of raw power” ([[gay-bourgeois-experience-v3-p2-domestic-violence-rape-suicide]]).
 - **Humor.** “It's only a joke” shields boasting, self-punishment, and outward attack alike ([[gay-bourgeois-experience-v3-p5-varieties-of-laughter]]).
-- **Caesarism.** Love for the leader is the price of license to hate the excluded ([[gay-bourgeois-experience-v3-p3-modern-caesars-napoleon]]). See [[caesarism]].
+- **Caesarism.** Love for the leader is the price of license to hate the excluded ([[gay-bourgeois-experience-v3-p3-modern-caesars-napoleon]]). See [[caesarism-gay]].
 - **Character.** Self-control itself was marketed as “aggression disciplined and sublimated” ([[gay-bourgeois-experience-v3-p6-character-obsessional-neurosis-freud]]).
 - **Nationalism, “the alibi of alibis.”** In 1914 it proved the master alibi because it could absorb and override every other identity at once: class solidarity, cosmopolitanism, and socialist internationalism ([[gay-bourgeois-experience-v3-epilogue-august-4-1914]]).
 
@@ -43,4 +43,4 @@ The notes read alibis as loosely related to what [[world-machines]] calls an era
 
 ## See also
 
-[[the-convenient-other]] · [[caesarism]] · [[mastery-drive]] · [[channels-for-aggression-and-their-inversion]] · [[gay-bourgeois-experience-v3]]
+[[the-convenient-other]] · [[caesarism-gay]] · [[mastery-drive]] · [[channels-for-aggression-and-their-inversion]] · [[gay-bourgeois-experience-v3]]

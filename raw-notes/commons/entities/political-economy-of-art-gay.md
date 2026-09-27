@@ -67,5 +67,4 @@ Gay follows the art historian Friedrich Haack. The French Revolution's "stylisti
 
 - [[gay-bourgeois-experience-v5]]: the source
 - [[victorian-collectors-and-founders]]: who spent the money
-- [[bourgeois-culture-assembled-without-a-plan]]: how the institutions accumulated
 - [[bourgeoisophobia]]: the myth this evidence is marshalled against

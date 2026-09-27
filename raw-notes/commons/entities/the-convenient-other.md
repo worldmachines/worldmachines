@@ -38,4 +38,4 @@ In the colonies the racial alibi was portable. It licensed Eyre in Jamaica, Carl
 
 ## See also
 
-[[alibis-for-aggression]] · [[caesarism]] · [[channels-for-aggression-and-their-inversion]] · [[gay-bourgeois-experience-v3]]
+[[alibis-for-aggression]] · [[caesarism-gay]] · [[channels-for-aggression-and-their-inversion]] · [[gay-bourgeois-experience-v3]]

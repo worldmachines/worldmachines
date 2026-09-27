@@ -44,7 +44,7 @@ The Maecenas survived "in the modern manner," with roles "no longer so clear-cut
 
 - **[[Legibility]].** "Power over a selected domain" is a private, small-scale version of the impulse to render a domain orderable, "a display cabinet and a card catalogue rather than a cadastre" ([[gay-bourgeois-experience-v5-ch04-s1-a-map-of-motives]]).
 - **[[carey-intellectuals-and-masses]].** Gay's Maecenases show the despised bourgeois class as modernism's "patrons and midwives, not only its target." That complicates Carey's dichotomy rather than matching it ([[gay-bourgeois-experience-v5-ch04-s3-the-victorian-maecenas]]). The riskless taste that Fodor, Schwabe and Wagener enshrined is the culture Carey's intelligentsia would scorn. Here, though, it is the wealthy bourgeoisie itself doing the choosing ([[gay-bourgeois-experience-v5-ch05-s2-buttresses-for-the-establishment]]).
-- **[[history-machine]].** Galleries and orchestras arose independently across cities. See [[bourgeois-culture-assembled-without-a-plan]].
+- **[[history-machine]].** Galleries and orchestras arose independently across cities.
 
 ## Cross-References
 
