@@ -8,7 +8,7 @@ tags:
 - 'victorian-sexual-censorship'
 - 'privatization-of-experience'
 - 'public-opinion-as-transference'
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: reading
 source: 'gay-bourgeois-experience-v1'
 spans:

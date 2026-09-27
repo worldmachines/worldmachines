@@ -9,7 +9,7 @@ tags:
 - 'rembrandt-cult'
 - 'death-and-mortality-in-art'
 - 'political-sublimation'
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: reading
 source: 'gay-bourgeois-experience-v4'
 spans:

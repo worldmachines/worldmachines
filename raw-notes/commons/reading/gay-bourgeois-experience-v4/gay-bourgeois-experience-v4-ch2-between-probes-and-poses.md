@@ -8,7 +8,7 @@ tags:
 - 'hans-christian-andersen'
 - 'narcissism-and-special-pleading'
 - 'privacy-and-self-legibility'
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: reading
 source: 'gay-bourgeois-experience-v4'
 spans:

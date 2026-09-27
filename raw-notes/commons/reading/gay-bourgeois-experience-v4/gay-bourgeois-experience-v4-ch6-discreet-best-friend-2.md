@@ -8,7 +8,7 @@ tags:
 - 'julie-manet'
 - 'unconscious-censorship'
 - 'nineteenth-century-individualism'
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: reading
 source: 'gay-bourgeois-experience-v4'
 spans:

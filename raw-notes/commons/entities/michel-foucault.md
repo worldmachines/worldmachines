@@ -1,7 +1,7 @@
 ---
 summary: "French philosopher (1926–1984) whose analytics of power/knowledge, genealogy of disciplinary institutions, and concept of biopolitics have been foundational for critical theory; Bryant's gravity framework extends and partially critiques Foucault by adding the non-discursive, material-infrastructural dimension of power."
 tags: [Foucault, power, discourse, genealogy, biopolitics, discipline, critical-theory, institutions, post-structuralism]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v1-learned-ignorance-1-age-factitious-innocence, gay-bourgeois-experience-v1-learned-ignorance-2-profession-anxiety, gay-bourgeois-experience-v1-learned-ignorance-3-flight-knowledge, gay-bourgeois-experience-v1-communions-2-dubious-certainty-numbers, gay-bourgeois-experience-v1-communions-3-problematic-sex, gay-bourgeois-experience-v1-offensive-women-2-manhood-danger, gay-bourgeois-experience-v1-offensive-women-4-sex-mind-body, gay-bourgeois-experience-v1-pressures-2-conscience-control, gay-bourgeois-experience-v1-carnal-knowledge-2-lessons-body, gay-bourgeois-experience-v1-carnal-knowledge-3-readers-conflict, gay-bourgeois-experience-v1-fortifications-3-democratization-comfort, gay-bourgeois-experience-v1-fortifications-4-private-experience, gay-bourgeois-experience-v1-erotic-record-1-mabel-loomis, gay-bourgeois-experience-v1-erotic-record-2-mabel-loomis-todd]
 ---

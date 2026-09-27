@@ -1,7 +1,7 @@
 ---
 summary: "Nineteenth-century American diarist, poet and painter, wife of astronomer David Peck Todd and lover of Austin Dickinson, whose uncommonly candid diaries are the central evidentiary source of Peter Gay's Education of the Senses."
 tags: [mabel-loomis-todd, diaries-as-historical-source, victorian-sexuality, bourgeois-marriage, amherst, austin-dickinson, privatization-of-experience]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v1-erotic-record-1-mabel-loomis, gay-bourgeois-experience-v1-erotic-record-2-mabel-loomis-todd, gay-bourgeois-experience-v1-erotic-record-3-mabel-loomis-dickinson, gay-bourgeois-experience-v1-appendix-sexual-symbols-todd-diaries, gay-bourgeois-experience-v1-communions-1-paradise-two, gay-bourgeois-experience-v1-communions-2-dubious-certainty-numbers, gay-bourgeois-experience-v1-communions-3-problematic-sex, gay-bourgeois-experience-v1-fortifications-2-social-science-cultural-symptom, gay-bourgeois-experience-v1-fortifications-4-private-experience, gay-bourgeois-experience-v1-carnal-knowledge-2-lessons-body]
 ---

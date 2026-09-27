@@ -9,7 +9,7 @@ tags:
 - 'bourgeoisophobe-myth'
 - 'impressionism-vs-academic-art'
 - 'collectors-and-dealers'
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: reading
 source: 'gay-bourgeois-experience-v5'
 spans:

@@ -9,7 +9,7 @@ tags:
 - 'bourgeois-self-fashioning'
 - 'romantic-inheritance'
 - 'diary-publishing-industry'
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: reading
 source: 'gay-bourgeois-experience-v4'
 spans:

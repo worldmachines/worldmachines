@@ -9,7 +9,7 @@ tags:
 - 'spermatic-economy'
 - 'peter-gay-methodology'
 - 'privatization-of-experience'
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: reading
 source: 'gay-bourgeois-experience-v1'
 spans:
