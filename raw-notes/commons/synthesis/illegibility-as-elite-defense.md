@@ -1,9 +1,9 @@
 ---
 summary: "Carey's material inverts the wiki's usual polarity: modernist difficulty and post-structuralist theory are deliberate illegibility cultivated by a losing incumbent elite against a democratizing expansion of legibility, which means strategic illegibility has no inherent political sign — it belongs to whoever is being outnumbered."
 tags: [synthesis, legibility, illegibility, modernism, elitism, world-machines, mass-literacy, cultural-power]
-last_updated: 2026-09-24
+last_updated: 2026-09-26
 level: canon
-sources: [carey-intellectuals-and-masses-preface, carey-intellectuals-and-masses-ch1-revolt-of-the-masses, carey-intellectuals-and-masses-ch4-natural-aristocrats, carey-intellectuals-and-masses-ch5-gissing-ineducable-masses, carey-intellectuals-and-masses-ch6-wells-getting-rid-of-people, carey-intellectuals-and-masses-ch7-wells-against-wells, carey-intellectuals-and-masses-postscript, ortega-revolt-of-the-masses-essays-introduction, ortega-revolt-of-the-masses-ch01-the-reality-of-the-masses, ortega-revolt-of-the-masses-ch07-noble-life-and-vulgar-life, ortega-revolt-of-the-masses-ch08-why-the-masses-intervene-in-everything, ortega-revolt-of-the-masses-ch12-the-barbarism-of-specialization, ortega-revolt-of-the-masses-endnotes]
+sources: [carey-intellectuals-and-masses-preface, carey-intellectuals-and-masses-ch1-revolt-of-the-masses, carey-intellectuals-and-masses-ch4-natural-aristocrats, carey-intellectuals-and-masses-ch5-gissing-ineducable-masses, carey-intellectuals-and-masses-ch6-wells-getting-rid-of-people, carey-intellectuals-and-masses-ch7-wells-against-wells, carey-intellectuals-and-masses-postscript, ortega-revolt-of-the-masses-essays-introduction, ortega-revolt-of-the-masses-ch01-the-reality-of-the-masses, ortega-revolt-of-the-masses-ch07-noble-life-and-vulgar-life, ortega-revolt-of-the-masses-ch08-why-the-masses-intervene-in-everything, ortega-revolt-of-the-masses-ch12-the-barbarism-of-specialization, ortega-revolt-of-the-masses-endnotes, gay-bourgeois-experience-v5-ch06-s1-a-profusion-of-alternatives, gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists, gay-bourgeois-experience-v5-ch06-s4-against-the-need-for-probability]
 ---
 # Illegibility as Elite Defense
 
@@ -50,6 +50,19 @@ This page cites Ortega's *Dehumanization of Art* as an open program of sorting t
 - **The style claim (Guerrero's).** Guerrero presents Ortega's prose as transparent rather than “mystical and hermetic,” governed by the maxim “In philosophy, clarity is courtesy” ([[ortega-revolt-of-the-masses-essays-introduction]]) — translator's advocacy, but it points the same way.
 
 **Consequence.** If Carey is right about *Dehumanization*, Ortega used both strategies in different decades or registers — illegibility in aesthetics, discipline-and-standards in politics and ethics. Either way, *Revolt* is an elite defense that works by raising the cost of *self-exemption* rather than the cost of *access*, which is a third option alongside the two asymmetries this page describes; whether it escapes the caste logic or just relocates it is left open (see [[the-mass-as-fiction]], [[mass-man]]).
+
+## Gay's Pleasure Wars: Contempt as Credential, Patronage as Constraint
+
+Peter Gay's account of modernism in painting and music ([[gay-bourgeois-experience-v5]]) supports half of this page's pattern and qualifies the other half.
+
+**Supports.** Debussy and Franz Marc treated incomprehension by "ordinary consumers of culture" as proof of authenticity. To be despised by ordinary audiences became "a virtual credential of authentic modernism" ([[gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists]]). The note calls this close to Carey's thesis that difficulty served as self-defense.
+
+**Qualifies.** Two things in the notes cut against the exclusion model.
+
+- *The elite could not afford to exclude its public.* "Avant-gardes could not have made their way without massive bourgeois patronage" ([[gay-bourgeois-experience-v5-ch06-s1-a-profusion-of-alternatives]]). Middle-class collectors "rescued Picasso from indigence," and modernist buildings needed rich clients before they could exist ([[gay-bourgeois-experience-v5-ch06-s4-against-the-need-for-probability]]). Where the despised public is also the paymaster, difficulty can mark status but cannot close the gate.
+- *The public answered by domesticating difficulty.* Conservative taste "absorbed the shock of the new" by misreading it. Degas's "sweating, awkwardly posed dancers" were reproduced as prettiness, Brahms's First became "Beethoven's Tenth," and Winslow Homer was "vulgarized into calendar art" ([[gay-bourgeois-experience-v5-ch06-s1-a-profusion-of-alternatives]]). Buyers also slid along a graded *juste milieu* rather than choosing sides ([[gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists]]). This is a counter-move the page's two asymmetries do not name: the outnumbering public neither accepts exclusion nor forces transparency, but makes the difficult object legible on its own terms.
+
+The hedges: the notes show Gay's modernists feuding with each other over degrees of purity "at least as fiercely as they fought the bourgeoisie," a factionalism Carey's shared-posture account understates ([[gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists]]). Gay's material is painting, music and architecture, not Carey's literature, and Gay does not use the vocabulary of legibility.
 
 ## Cross-References
 
