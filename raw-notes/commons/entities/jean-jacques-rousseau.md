@@ -1,8 +1,9 @@
 ---
 summary: "Jean-Jacques Rousseau (1712–1778) is the originator of modern Kulturkritik, whose rhetoric of nature versus culture — articulated through the figures of the noble savage and the English garden — established the oxymoronic template for critiquing modernity through modernity's own tools."
 tags: [rousseau, kulturkritik, enlightenment, noble-savage, french-revolution, social-contract, self-alienation]
-last_updated: 2026-04-09
+last_updated: 2026-09-26
 level: canon
+sources: [gay-bourgeois-experience-v4-ch2-in-rousseaus-shadow, gay-bourgeois-experience-v4-ch2-between-probes-and-poses, gay-bourgeois-experience-v4-ch2-second-thoughts, gay-bourgeois-experience-v4-art-of-listening-1, gay-bourgeois-experience-v4-ch1-self-in-politics, gay-bourgeois-experience-v4-ch1-imagination-unleashed, gay-bourgeois-experience-v4-ch6-spirit-of-the-letter-1]
 ---
 
 # Jean-Jacques Rousseau (1712–1778)
@@ -67,3 +68,15 @@ The *bête* is explicitly admitted to be a construct: "the brute no longer exist
 - [[Johann Wolfgang von Goethe]] — entity (respondent)
 - [[Franz R. Kempf]] — entity (scholar)
 - [[Noble Savages and English Gardeners]] — summary
+
+## The Confessions as the model of nineteenth-century autobiography (Gay)
+
+In [[gay-bourgeois-experience-v4]], Peter Gay reads a different facet of Rousseau from the Kulturkritik reading above: not nature against culture, but the founder of modern confession. The *Confessions* opens "I have conceived an enterprise that has no model whatever and that... will have no imitator," replacing Augustine's "Great art Thou, O Lord" with the first person singular and divine judgment with the verdict of Posterity. Gay reads this as the decisive break that makes it "a secular document for a secularizing age," continuous with Franklin and Gibbon rather than Augustine. Victorian autobiographers could not escape its gravity even as they recoiled from its "unsavory incidents." George Sand called her own book a "history of my life (not confessions)," Shelley called Rousseau's disclosures "falsehoods" and De Quincey found them "revolting," yet each measured his or her stance against his. Rousseau "found himself immensely interesting," and, Gay notes drily, "the Victorians proved him right." In Gay's genealogy [[michel-de-montaigne]] is the rare precursor who had gone as far, with almost no successors until Rousseau ([[gay-bourgeois-experience-v4-ch2-in-rousseaus-shadow]]).
+
+## Candor as exposure, set against Goethe's craft
+
+Gay's comparison of the *Confessions* with [[johann-wolfgang-von-goethe]]'s *Dichtung und Wahrheit* sets Rousseau, who "treated discretion as the enemy" and wrote at a headlong pace from flashes of memory, against Goethe's "canny indiscretion" and checking of documents. Gay refuses a contemporary reviewer's verdict in Rousseau's favor: "Each was honest and devious in its own way; each at once constructed, and sincerely groped for, its author's past" ([[gay-bourgeois-experience-v4-ch2-between-probes-and-poses]]). An unpublished fragment of the *Confessions* also supplies the genre's founding account of "double consciousness," painting "doubly the state of my soul," at the moment of the event and the moment of writing. Gay notes that "this did not trouble him," though it troubled his Victorian successors ([[gay-bourgeois-experience-v4-ch2-second-thoughts]]).
+
+## Other appearances in The Naked Heart
+
+*La Nouvelle Héloïse* is one of the texts of the eighteenth-century "storm of sensibility" that prepared music's promotion to the century's organ of inward feeling ([[gay-bourgeois-experience-v4-art-of-listening-1]]). Gay credits Rousseau as the source of the French romantics' conviction that "everything is at bottom linked to politics" ([[gay-bourgeois-experience-v4-ch1-self-in-politics]]). Wordsworth denounced his "paradoxical reveries," while Shelley later praised his "exertions" alongside Locke and Voltaire, evidence that the romantics could not agree about the Enlightenment they rejected ([[gay-bourgeois-experience-v4-ch1-imagination-unleashed]]). Rousseau also stands, with Richardson and Goethe, in the epistolary-novel tradition that fed the romantic confessional letter ([[gay-bourgeois-experience-v4-ch6-spirit-of-the-letter-1]]).
