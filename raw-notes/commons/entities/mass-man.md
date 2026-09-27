@@ -1,9 +1,9 @@
 ---
 summary: "Ortega y Gasset's central concept: a psychological type, found in every class, defined by inert self-satisfaction, entitlement without obligation, and ingratitude toward a civilization he mistakes for nature — contested in this wiki as an instance of the mass as rhetorical fiction."
 tags: [concept, mass-man, ortega-y-gasset, mass-psychology, elite-vs-mass, self-satisfaction, civilizational-fragility, contested-category]
-last_updated: 2026-09-24
+last_updated: 2026-09-26
 level: canon
-sources: [ortega-revolt-of-the-masses-ch01-the-reality-of-the-masses, ortega-revolt-of-the-masses-ch02-the-rising-of-the-historic-level, ortega-revolt-of-the-masses-ch05-a-statistical-datum, ortega-revolt-of-the-masses-ch06-the-dissection-of-the-mass-man-begins, ortega-revolt-of-the-masses-ch07-noble-life-and-vulgar-life, ortega-revolt-of-the-masses-ch08-why-the-masses-intervene-in-everything, ortega-revolt-of-the-masses-ch09-primitivism-and-the-technical, ortega-revolt-of-the-masses-ch10-primitivism-and-history, ortega-revolt-of-the-masses-ch11-the-age-of-the-self-satisfied-dandy, ortega-revolt-of-the-masses-ch12-the-barbarism-of-specialization, ortega-revolt-of-the-masses-ch13-the-greatest-danger-the-state, ortega-revolt-of-the-masses-ch14a-who-commands-in-the-world-1-3, ortega-revolt-of-the-masses-ch15-arriving-at-the-real-issue, ortega-revolt-of-the-masses-endnotes, ortega-revolt-of-the-masses-essays-introduction]
+sources: [ortega-revolt-of-the-masses-ch01-the-reality-of-the-masses, ortega-revolt-of-the-masses-ch02-the-rising-of-the-historic-level, ortega-revolt-of-the-masses-ch05-a-statistical-datum, ortega-revolt-of-the-masses-ch06-the-dissection-of-the-mass-man-begins, ortega-revolt-of-the-masses-ch07-noble-life-and-vulgar-life, ortega-revolt-of-the-masses-ch08-why-the-masses-intervene-in-everything, ortega-revolt-of-the-masses-ch09-primitivism-and-the-technical, ortega-revolt-of-the-masses-ch10-primitivism-and-history, ortega-revolt-of-the-masses-ch11-the-age-of-the-self-satisfied-dandy, ortega-revolt-of-the-masses-ch12-the-barbarism-of-specialization, ortega-revolt-of-the-masses-ch13-the-greatest-danger-the-state, ortega-revolt-of-the-masses-ch14a-who-commands-in-the-world-1-3, ortega-revolt-of-the-masses-ch15-arriving-at-the-real-issue, ortega-revolt-of-the-masses-endnotes, ortega-revolt-of-the-masses-essays-introduction, gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines, gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists]
 ---
 
 # The Mass-Man
@@ -49,6 +49,10 @@ This wiki also holds the opposite reading: that “the mass” is an invented rh
 ## In World Machines Terms
 
 The notes read the mass-man as an inversion of [[Conatus]]: contentment in sameness where conatus is a striving to persist and distinguish oneself ([[ortega-revolt-of-the-masses-ch01-the-reality-of-the-masses]]); Ortega's own claim that “all life is the struggle, the effort to be itself” and that resistance is what makes a self felt ([[ortega-revolt-of-the-masses-ch11-the-age-of-the-self-satisfied-dandy]]); and a subject who *craves* capture by the State rather than resisting it, inverting the usual valence of [[capture-resistance]] ([[ortega-revolt-of-the-masses-ch13-the-greatest-danger-the-state]]). The hedge travels with it: Ortega's frame is moral-psychological and existentialist-vitalist, not a theory of capture regimes suppressing striving by statistical averaging.
+
+## The Bildungsphilister: A Credentialed Cousin
+
+Peter Gay's genealogy of [[bourgeoisophobia]] ([[gay-bourgeois-experience-v5]]) gives Nietzsche's coinage "Bildungsphilister" (the cultivated philistine) as the tradition's defining term. It also gives the vernacular "six-pack philistine" and Nietzsche's "herd animal" bourgeois, who "has been to the university but remains mediocre to the bone." The note says this herd-versus-genius framing "loosely rhymes" with the mass-man and with Ortega's diagnosis. The difference is that Nietzsche's target is "specifically the credentialed, tasteful bourgeois rather than the mass public as such" ([[gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines]]). By the time of modernism the herd image had become a foil artists valued: Debussy prized "the mediocrity of the herd mind" ([[gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists]]). This is a class-bound variant of the type this page defines by psychology, and it supplies a further image for the repertoire catalogued in [[the-mass-as-fiction]].
 
 ## Cross-References
 

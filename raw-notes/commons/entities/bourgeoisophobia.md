@@ -1,0 +1,58 @@
+---
+summary: "Peter Gay's name, taken from Flaubert's self-signature 'Bourgeoisophobus', for the nineteenth-century tradition of artists' and intellectuals' contempt for the bourgeois public, which Gay traces from Goethe's Werther to modernism and argues was a partisan myth: an elastic curse word, a screen for market struggles, and a defense against self-recognition, contradicted by the bourgeois money that sustained its own exponents."
+tags: [concept, bourgeoisophobia, peter-gay, philistinism, avant-garde-ideology, modernism, flaubert, anti-bourgeois-rhetoric]
+last_updated: 2026-09-26
+level: canon
+sources: [gay-bourgeois-experience-v5-intro-b, gay-bourgeois-experience-v5-bexp-s1-flaubertus, gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines, gay-bourgeois-experience-v5-bexp-s3-confusing-confrontations, gay-bourgeois-experience-v5-ch01-s3-limits-and-possibilities, gay-bourgeois-experience-v5-ch02-s1-dividends-from-commerce, gay-bourgeois-experience-v5-ch03-s1-guides-to-pleasure, gay-bourgeois-experience-v5-ch03-s3-from-zola-to-wilde, gay-bourgeois-experience-v5-ch04-s2-collecting-as-autobiography, gay-bourgeois-experience-v5-ch04-s3-the-victorian-maecenas, gay-bourgeois-experience-v5-ch05-s2-buttresses-for-the-establishment, gay-bourgeois-experience-v5-ch05-s3-the-perspiring-philistine-on-trial, gay-bourgeois-experience-v5-ch06-s1-a-profusion-of-alternatives, gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists, gay-bourgeois-experience-v5-ch06-s3-causes-and-effects, gay-bourgeois-experience-v5-ch06-s4-against-the-need-for-probability, gay-bourgeois-experience-v5-coda-a-bourgeois-experience]
+---
+
+# Bourgeoisophobia
+
+**Source**: [[gay-bourgeois-experience-v5]] (Peter Gay, *Pleasure Wars*, 1998). It is the framing theme of the volume's opening essay and of its Coda.
+
+## The Name
+
+In a private letter Flaubert signed himself "GUSTAVUS FLAUBERTUS, Bourgeoisophobus." He described a near-physical loathing: meeting bourgeois in the street "made me want to vomit and to cry at the same time" ([[gay-bourgeois-experience-v5-bexp-s1-flaubertus]]). Gay takes the coinage over as the name for a whole tradition ([[gay-bourgeois-experience-v5-coda-a-bourgeois-experience]]). The Introduction traces the word "Victorian" itself inverting from honorific to insult, and ends by naming Zola, Shaw, Strindberg and Ibsen as a cross-national front whose "antagonistic propaganda" against "the comfortable classes" "sang a single tune" ([[gay-bourgeois-experience-v5-intro-b]]).
+
+## Genealogy (Gay's)
+
+- **Sturm und Drang.** Goethe's Werther is "probably the first modern alienated soul," convinced the bourgeois can never share the artist's passions. Goethe himself kept recycling the pose of the martyred genius into old age ([[gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines]]; see [[johann-wolfgang-von-goethe]]).
+- **Romantics and Nietzsche.** The line runs through E. T. A. Hoffmann's mad musician Kreisler to Nietzsche's coinage "Bildungsphilister" (the cultivated philistine), its vernacular offshoot the "six-pack philistine," and his "herd animal" bourgeois who went to university and stayed mediocre ([[gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines]]).
+- **French escalation.** Musset, Heine, Gautier and Hugo sharpen the charge. Zola chants "Bourgeois! bourgeois!" at Barbey d'Aurevilly until the word means nothing, while also protesting elsewhere that "we are all bourgeois" ([[gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines]]).
+- **Marx split in two.** Marx the historian credits the bourgeoisie with world-building achievement. Marx the agitator supplies the durable caricature. Later generations remembered only the second ([[gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines]]).
+- **Politics.** Monarchists (Maurras), critics of capitalism (Sombart) and left agitators joined in loathing the bourgeoisie, and by century's end the mixture had absorbed anti-Semitism ([[gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines]]). Avant-garde politics drifted to the extremes, toward anarchism and Futurist stunts, and the Dreyfus affair split modernist circles along the line of prejudice ([[gay-bourgeois-experience-v5-ch06-s3-causes-and-effects]]).
+- **Modernism.** For many, being despised by ordinary audiences became "a virtual credential of authentic modernism." Debussy prized "the mediocrity of the herd mind" as a foil ([[gay-bourgeois-experience-v5-ch06-s2-modernists-vs-modernists]]). Kandinsky cast the artist as "superman against philistinism." Gauguin called his abandoned wife a "filthy bourgeoise." Picasso's father answered him with "bourgeois, bourgeois, bourgeois." Gay reads these as partly Oedipal domestic revolt rather than class war ([[gay-bourgeois-experience-v5-ch06-s4-against-the-need-for-probability]]).
+
+## Gay's Case Against It
+
+1. **A curse word, not a category.** Flaubert applied "bourgeois" to the smock as well as the frock coat, to the Communards, and by 1852 to "all humanity." Bourget said that in Flaubert's mouth it was "a synonym for the worst villainies" ([[gay-bourgeois-experience-v5-bexp-s1-flaubertus]]).
+2. **The record contradicts it.**
+   - In Rouen, the cotton magnate Depeaux collected Impressionists and gave fifty-three paintings to the city ([[gay-bourgeois-experience-v5-bexp-s1-flaubertus]]).
+   - The artist's independence was "often achieved not in the face of bourgeois but with their aid" ([[gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines]]).
+   - Morris's goods were "far too expensive" for the lower middle classes he scorned, and he "nourished the legend of an irreparable split" ([[gay-bourgeois-experience-v5-ch01-s3-limits-and-possibilities]]).
+   - Wilde's most consequential rescuers were respectable bourgeois patrons ([[gay-bourgeois-experience-v5-ch03-s3-from-zola-to-wilde]]).
+   - Middle-class collectors "rescued Picasso from indigence" ([[gay-bourgeois-experience-v5-ch06-s4-against-the-need-for-probability]]).
+3. **A screen.** Denouncing the bourgeoisie "functioned as a screen" for the real fight. Rebels needed a place among the dealers, critics and museum directors who controlled legitimacy. That was a matter of aesthetic conscience, "but of economic survival no less" ([[gay-bourgeois-experience-v5-bexp-s3-confusing-confrontations]]).
+4. **A defense mechanism.** "No one embodied the middle-class gospel of work ... more intensely than Flaubert." Gay reads his fury as projection against the fear that he had never escaped his class ([[gay-bourgeois-experience-v5-bexp-s1-flaubertus]]). The document of the bourgeois–artist relation that Gay prefers is Thomas Mann's Tonio Kröger: "a bourgeois who got lost in art, a bohemian homesick for his respectable upbringing, an artist with a bad conscience" ([[gay-bourgeois-experience-v5-bexp-s3-confusing-confrontations]]). Gay's methodological point still holds: a distorted perception remains a historical fact with consequences ([[gay-bourgeois-experience-v5-bexp-s1-flaubertus]]).
+5. **Voiced from inside the class.**
+   - Baudelaire called the epithet "impertinent" in 1845, "especially since there are so many bourgeois among artists." In 1846 he dedicated his Salon to the bourgeoisie that had "founded collections, museums, galleries" ([[gay-bourgeois-experience-v5-bexp-s3-confusing-confrontations]]).
+   - Shaw's "that great booby, the public ... the British bourgeoisie" came from a critic whose readers were mostly bourgeois ([[gay-bourgeois-experience-v5-ch03-s1-guides-to-pleasure]]).
+   - Lichtwark, a bourgeois museum director, called the bourgeoisie "the born and sworn enemy of all artistic independence." Gay comments: "No French bourgeoisophobe could have put it more strongly." Lichtwark's purpose was reform, not secession ([[gay-bourgeois-experience-v5-ch05-s3-the-perspiring-philistine-on-trial]]).
+   - Cumberland's 1905 attack on the Hallé's staples turned a fifty-year Manchester consensus into "Philistinism" ([[gay-bourgeois-experience-v5-ch02-s1-dividends-from-commerce]]).
+
+## Where the Caricature Lands
+
+Gay complicates the thesis more than he refutes it. He lays out the literary indictment at full strength: Veblen's "conspicuous consumption," Proust's Verdurins, Dickens's Veneerings, Fontane's Jenny Treibel. He grants real cases (Carnegie, the Vanderbilts, Krupp's Villa Hügel) while judging "the bourgeoisophobes' case" "distorted, one-dimensional," since "in the domain of collecting, simplicity is nearly always oversimplification" ([[gay-bourgeois-experience-v5-ch04-s2-collecting-as-autobiography]]). The founders of Amsterdam's, Hamburg's and Berlin's galleries really did make safe taste permanent ([[gay-bourgeois-experience-v5-ch05-s2-buttresses-for-the-establishment]]). His closing judgment on collectors cuts both ways: "if, as the avant-garde charged, they all too often followed the fashion, there were times when they made it" ([[gay-bourgeois-experience-v5-ch04-s3-the-victorian-maecenas]]). The bourgeoisie was "doctrinaire modernism, resolute antimodernism, unstable compromises" all at once ([[gay-bourgeois-experience-v5-ch06-s4-against-the-need-for-probability]]). It was also mostly indifferent ([[gay-bourgeois-experience-v5-ch06-s1-a-profusion-of-alternatives]]).
+
+## Resonances
+
+- **[[kulturkritik]].** The notes read the bourgeoisophobe lineage as one historical instance of self-reflexive cultural critique: intellectuals defining themselves through contempt for a public that supposedly cannot appreciate them ([[gay-bourgeois-experience-v5-coda-a-bourgeois-experience]]). The difference is that it is turned against the critics' own patron class rather than against modernity as such ([[gay-bourgeois-experience-v5-ch04-s2-collecting-as-autobiography]]).
+- **[[the-mass-as-fiction]] and [[carey-intellectuals-and-masses]].** The comparison the batch makes most often, with hedges on target, timing and dependence. See [[the-philistine-bourgeois-as-fiction]].
+- **[[mass-man]] and [[ortega-revolt-of-the-masses]].** Nietzsche's herd-versus-genius framing "loosely rhymes" with Ortega. Nietzsche's target, though, is the credentialed, tasteful bourgeois, not the mass public as such ([[gay-bourgeois-experience-v5-bexp-s2-six-pack-philistines]]).
+
+## Cross-References
+
+- [[gay-bourgeois-experience-v5]]: the source
+- [[the-philistine-bourgeois-as-fiction]]: the comparison with Carey
+- [[victorian-collectors-and-founders]] · [[political-economy-of-art-gay]]: the evidence Gay sets against the myth
+- [[peter-gay]] · [[the-bourgeois-experience]]
