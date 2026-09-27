@@ -1,8 +1,9 @@
 ---
 summary: "French philosopher (1859–1941) whose commitment to temporal duration over static representation made him, for Massey, a structural enemy of space despite his sympathy with her aims on time and becoming."
 tags: [bergson, philosophy, time, duration, space, representation, becoming, deleuze, massey]
-last_updated: 2026-05-12
+last_updated: 2026-09-26
 level: canon
+sources: [gay-bourgeois-experience-v3-p5-varieties-of-laughter, gay-bourgeois-experience-v3-p5-physicians-to-society]
 ---
 
 # Henri Bergson (1859–1941)
@@ -57,3 +58,9 @@ Massey's Bergson critique illuminates a general pattern: when thinkers build the
 - [[imaginations-of-space]] — Bergson as one source of the bad spatial imaginary
 - [[the-three-propositions]] — what Massey builds against Bergson's inadvertent limitation
 - [[the-co-implication-of-space-and-time]] — Massey's positive thesis on the Bergson question
+
+## Laughter as Social Corrective (Gay's Reading of Le Rire)
+
+A different Bergson appears in Peter Gay's *The Cultivation of Hatred* ([[gay-bourgeois-experience-v3]]). This is the author of *Laughter*, placed in Gay's survey of the century's theories of humor alongside Hobbes, Baudelaire, Meredith, Vischer, Lipps, and Freud. Gay uses three Bergsonian claims. The first is laughter's “momentary anesthesia of the heart.” The second is that “our laughter is always the laughter of a group,” which Gay uses to explain why German scatological humor did not travel to England. The third is that laughter works as a social “corrective,” through which “society avenges itself for the liberty one has taken with it.” Gay reads this as punishment dressed as amusement, part of his case that Victorian humor, however innocent it looked, was socially licensed aggression ([[gay-bourgeois-experience-v3-p5-varieties-of-laughter]]).
+
+Gay also treats Dickens's satire as anticipating Bergson's account of the comic as mechanical rigidity imposed on life. Examples are Podsnap's clockwork day (“got up at eight, shaved close at a quarter-past …”) and the Circumlocution Office's “we are nothing but forms” ([[gay-bourgeois-experience-v3-p5-physicians-to-society]]). Gay's notes do not discuss the Bergson of duration treated above.

@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-27 · aneesh
+Four of the five volumes of Peter Gay's *The Bourgeois Experience: Victoria to Freud* are now in commons: *Education of the Senses* (32 reading notes), *The Cultivation of Hatred* (42), *The Naked Heart* (29) and *Pleasure Wars* (24). They add 23 canon pages — a `peter-gay` page, a series page `the-bourgeois-experience` with one section per volume, a summary per volume, and concepts such as `alibis-for-aggression`, `bourgeoisophobia` and `bourgeois-privacy-as-conquest` — plus append-only sections on 8 existing pages, including `mass-man`, `the-mass-as-fiction` and `michel-foucault`. Vol II (*The Tender Passion*) is missing: the file labelled as it turned out to be a second scan of Vol III, so it waits for a genuine copy. Each volume passed both validators with 0 quarantine. The lake chunk/embed/publish (personal only; the books are in copyright) is still pending.
+
 ## 2026-09-24 · aneesh (4)
 Braudel's *Civilization and Capitalism* is now in commons in full: Vol II (*The Wheels of Commerce*, 43 reading notes) and Vol III (*The Perspective of the World*, 38) join Vol I. They add 6 new canon pages, among them `braudel-world-economy`, `braudel-succession-of-dominant-centres` and the synthesis `capitalism-keeps-the-floor-competitive`, plus append-only sections on 9 existing pages, including `fernand-braudel` and `braudel-three-storey-house`. The two volumes were ingested in parallel runs; both passed both validators with 0 quarantine. The lake chunk/embed/publish (personal only; both books are in copyright) is still pending, so the Oracle can't quote them yet.
 
