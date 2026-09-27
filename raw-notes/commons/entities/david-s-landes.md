@@ -1,9 +1,9 @@
 ---
 summary: "Harvard economic historian whose 1986 essay 'What Do Bosses Really Do?' provided the historical framework for understanding the essential coordinating function of managers and entrepreneurs — used by Aneesh Sathe as the analytical template for platform economics. His 1983 *Revolution in Time: Clocks and the Making of the Modern World* — now fully ingested across 24 reading notes — argues the clock was demand-pulled into existence by monastic time-discipline, documents the incumbency-failure chain across seven centuries of horology, and supplies the design-climbs-the-stack thesis in Sathe's Not My Lever (2026)."
 tags: [economic-history, labor, management, platforms, industrial-revolution, watchmaking, revolution-in-time, horology, time-discipline]
-last_updated: 2026-06-10
+last_updated: 2026-09-27
 level: canon
-sources: [rit-01-preface, rit-02-introduction, rit-03-a-magnificent-dead-end, rit-05-are-you-sleeping-brother-john, rit-06-the-greatest-necessity, rit-07-my-time-is-my-time, rit-12-the-french-connection, rit-13-fame-is-the-spur, rit-16-ups-and-downs-of-international-competition, rit-20-ah-but-he-could, rit-23-the-quartz-revolution-i]
+sources: [rit-01-preface, rit-02-introduction, rit-03-a-magnificent-dead-end, rit-05-are-you-sleeping-brother-john, rit-06-the-greatest-necessity, rit-07-my-time-is-my-time, rit-12-the-french-connection, rit-13-fame-is-the-spur, rit-16-ups-and-downs-of-international-competition, rit-20-ah-but-he-could, rit-23-the-quartz-revolution-i, bayly-birth-of-the-modern-world-intro-riddle-of-modernity-and-the-body, bayly-birth-of-the-modern-world-ch02-critical-publics-conclusion]
 ---
 
 # David S. Landes (1924–2013)
@@ -88,3 +88,12 @@ Landes positions himself against three interlocutors: **Joseph Needham** (the di
 - [[untimely]] — the remainder disciplinary time secretes: monastic anxiety dreams, Saint Monday, the GI's watch marking time that is still his
 - [[legibility-as-machine-core]] — the clock as the Modernity Machine's key device; Mumford's epigraph ("a perfection toward which other machines aspire") heads *Revolution in Time*
 - Source: [[What Do Platforms Really Do?]]
+
+## A critic: Bayly on Landes and “Asian stagnation”
+
+C. A. Bayly's [[bayly-birth-of-the-modern-world]] (2004) treats Landes as a principal interlocutor on the question of European advantage.
+
+- **A hold-out for the riddle of the modern.** Bayly sets Latour's “We were never modern” against Gellner, Macfarlane and Landes, who “resolutely insisted on the reality of … the once-and-for-all step forward of mankind”. He answers that standoff by treating modernity as partly an aspiration (“thinking you are modern”), which he then argues did correspond to real change ([[bayly-birth-of-the-modern-world-intro-riddle-of-modernity-and-the-body]]).
+- **The objection.** “The weakness of Landes's position lies in its reversion to old ideas of Asian stagnation.” Bayly instead traces Europe's lead to specific, contingent structures. Fragmented, competitive terrain forced military-fiscal innovation (“Asia's relative peace in the seventeenth century was its undoing”). Legal codes bound rulers as well as subjects. Europe had an unmatched density of print and associational life. The Chinese state, meanwhile, “guaranteed the welfare of its peasantry more effectively than western Europeans protected their proto-industrial cities” ([[bayly-birth-of-the-modern-world-ch02-critical-publics-conclusion]]).
+
+The criticism targets the civilizational thesis of Landes's later work. It does not engage *Revolution in Time* directly. Bayly's own account of time discipline covers fob watches, plantation bells that kept slaves “to the time of the master's watch”, and clock towers synchronized by telegraph. It spreads the story across the globe and credits fashion and aspiration as much as institutions ([[bayly-birth-of-the-modern-world-intro-riddle-of-modernity-and-the-body]]). That complements the demand-pull story above rather than contradicting it.

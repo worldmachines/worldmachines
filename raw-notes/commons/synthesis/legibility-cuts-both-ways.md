@@ -1,9 +1,9 @@
 ---
 summary: "The Humboldt batch's finding against the one-directional reading of legibility: instrumented surveys, statistics, and maps are portable in a way their commissioners are not, so the same artifact serves empire, republic, and revolution in turn — while the state's grip stays firm on the body that made it."
 tags: [legibility, world-machines, modernity-machine, colonialism, scientific-instruments, capture-resistance, alexander-von-humboldt]
-last_updated: 2026-09-23
+last_updated: 2026-09-27
 level: canon
-sources: [wulf-invention-of-nature-ch03-in-search-of-a-destination, wulf-invention-of-nature-ch05-the-llanos-and-the-orinoco, wulf-invention-of-nature-ch08-politics-and-nature, wulf-invention-of-nature-ch11-paris, wulf-invention-of-nature-ch12-revolutions-and-nature, wulf-invention-of-nature-ch13-london, wulf-invention-of-nature-ch14-going-in-circles, wulf-invention-of-nature-ch16-russia]
+sources: [wulf-invention-of-nature-ch03-in-search-of-a-destination, wulf-invention-of-nature-ch05-the-llanos-and-the-orinoco, wulf-invention-of-nature-ch08-politics-and-nature, wulf-invention-of-nature-ch11-paris, wulf-invention-of-nature-ch12-revolutions-and-nature, wulf-invention-of-nature-ch13-london, wulf-invention-of-nature-ch14-going-in-circles, wulf-invention-of-nature-ch16-russia, bayly-birth-of-the-modern-world-ch06a-theories-of-nationalism, bayly-birth-of-the-modern-world-ch06b-empires-to-peoples-without-states, bayly-birth-of-the-modern-world-ch06c-new-imperialism-and-internationalism, bayly-birth-of-the-modern-world-ch07b-typology-of-eurasian-states, bayly-birth-of-the-modern-world-ch07d-tools-economy-and-balance-sheet, bayly-birth-of-the-modern-world-ch11-historiography-and-gender, bayly-birth-of-the-modern-world-ch11-peasant-mobility-and-gentry-adaptation]
 ---
 
 # Legibility Cuts Both Ways
@@ -47,3 +47,18 @@ The case is also a favourable one. Humboldt was self-funded for the crucial deca
 ## Related
 
 - [[legibility-as-machine-core]] · [[modernity-machine]] · [[world-machines]] · [[Legibility]] · [[capture-resistance]] · [[naturgemalde]] · [[simon-bolivar]] · [[wulf-invention-of-nature]] · [[alexander-von-humboldt|Alexander von Humboldt]] · [[maps-as-technologies-of-power]]
+
+## Bayly: where the artifact travels and where the category stays
+
+C. A. Bayly's [[bayly-birth-of-the-modern-world]] offers a second, much wider set of cases, drawn from states rather than from one surveyor's career.
+
+**Confirming transactions.**
+
+- **Maps.** Survey-derived maps made as “the final establishment of British dominion” were used by Indian and Irish elites in court, in nationalist geography books, and in antiquarian revivals of “old Irish civilization and language” ([[bayly-birth-of-the-modern-world-ch07d-tools-economy-and-balance-sheet]]).
+- **Passports.** The passport, forged as an instrument of state surveillance, was used by Chinese and Arab merchants to evade national control by securing foreign nationality ([[bayly-birth-of-the-modern-world-ch06c-new-imperialism-and-internationalism]]).
+- **The press.** Governments captured telegraph and press, yet colonized readers turned the same channels to their own ends ([[bayly-birth-of-the-modern-world-ch06a-theories-of-nationalism]]).
+- **Techniques flowing back.** Colonial techniques travelled against the imperial current: the professional civil service and fingerprinting were pioneered in British India and imported into Britain ([[bayly-birth-of-the-modern-world-ch07b-typology-of-eurasian-states]]).
+
+**Qualifying transactions.** Colonial law's codification of “male family heads” stayed in the grip of the hand that wrote it and hardened domination. The reading note says outright that here the direction of “cuts both ways” runs the other way ([[bayly-birth-of-the-modern-world-ch11-historiography-and-gender]]). Unified, saleable land titles did change hands, but to local intermediaries: zamindars used them to extract more from both state and tenants ([[bayly-birth-of-the-modern-world-ch11-peasant-mobility-and-gentry-adaptation]]). Census and ethnology produced categories that minorities then inhabited as “mini-nations” ([[bayly-birth-of-the-modern-world-ch06b-empires-to-peoples-without-states]]).
+
+**What this adds.** The page's asymmetry, that cheap-to-copy artifacts leak while bodies do not, extends from the surveyor's body to the *classified* body. Descriptions of territory and information were portable. Statuses assigned to persons tended to stay with whoever held local power, and that was often an intermediary rather than the commissioning centre. The cross-note argument is developed in [[legibility-hardens-hierarchy-bayly]]. Bayly is a comparative historian, and the arrangement is a reader's.

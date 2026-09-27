@@ -1,8 +1,9 @@
 ---
 summary: "The administrative apparatus of the Mughal Empire, notable for its matrix reporting structure where provincial officials reported directly to the central government rather than to the provincial governor — a designed mechanism for central control and diffused accountability."
 tags: [history, Mughal-Empire, governance, India, administration, medieval]
-last_updated: 2026-04-09
+last_updated: 2026-09-27
 level: canon
+sources: [bayly-birth-of-the-modern-world-ch01-old-regime-society-and-difference, bayly-birth-of-the-modern-world-ch03-world-crisis-anatomy, bayly-birth-of-the-modern-world-ch03-climacteric-sapping-legitimacy, bayly-birth-of-the-modern-world-ch04-losers-legitimacy-and-state, bayly-birth-of-the-modern-world-ch04-asian-and-european-revolutions, bayly-birth-of-the-modern-world-ch05-cities-and-urban-culture, bayly-birth-of-the-modern-world-ch07b-typology-of-eurasian-states, bayly-birth-of-the-modern-world-ch07c-state-resources-and-obligations, bayly-birth-of-the-modern-world-ch07d-tools-economy-and-balance-sheet, bayly-birth-of-the-modern-world-ch08-liberalism-land-trade]
 ---
 
 # Mughal Administration
@@ -44,3 +45,15 @@ The Mughal system borrowed from and adapted earlier Islamic administrative tradi
 ## Sources
 - [[royalty-administration-and-antimemetics|Royalty, Administration, and Antimemetics]] (Aneesh Sathe, 2025)
 - Douglas E. Streusand, *Islamic Gunpowder Empires*
+
+## Bayly: the apparatus under strain, and its afterlife
+
+C. A. Bayly's [[bayly-birth-of-the-modern-world]] covers the far end of the story this page tells from Akbar's design. The page foregrounds centralized matrix reporting. Bayly's snapshot of 1720 shows revenue and authority already draining from the emperor to “over-mighty” regional subjects, which the reading note calls the same design fraying at its edges ([[bayly-birth-of-the-modern-world-ch01-old-regime-society-and-difference]]).
+
+- **Cultivated pluralism.** The Mughal emperor blessed Hindu ascetics from the Red Fort despite Islam's doctrinal objection to “polytheism”. For Bayly, old regimes like this one cultivated difference as strategy, not out of incapacity ([[bayly-birth-of-the-modern-world-ch01-old-regime-society-and-difference]]).
+- **Caught in the military-fiscal trap.** Aurangzeb's Deccan wars are Bayly's paradigm case of war costs outrunning revenue that could not be raised without revolt; “much the same problem faced all the other Afro-Asian regimes”. Persian and Afghan armies sacked the fragmented centre in 1739 and 1759, and the turbulence let the East India Company seize Bengal between 1757 and 1765 ([[bayly-birth-of-the-modern-world-ch03-world-crisis-anatomy]]). Even under Aurangzeb, “insurgent Jat peasant leaders regularly looted the heart of the Mughal Empire within 20 miles of the imperial throne” ([[bayly-birth-of-the-modern-world-ch07c-state-resources-and-obligations]]).
+- **Charisma lost to rivals.** The Indo-Muslim elite could not counter Sikh claims to *dharma* (righteous rule), which partly appropriated old Mughal charisma ([[bayly-birth-of-the-modern-world-ch03-climacteric-sapping-legitimacy]]).
+- **Figurehead.** Under Company rule the emperor was kept as a figurehead, preserving the appearance of an “ancient” constitutional order over a settlement the Company had imposed ([[bayly-birth-of-the-modern-world-ch04-losers-legitimacy-and-state]]). In 1857 the emperor, confined to Delhi and powerless, became the rebellion's symbolic centre ([[bayly-birth-of-the-modern-world-ch04-asian-and-european-revolutions]]). Delhi and Agra declined as the new ports took over cultural leadership ([[bayly-birth-of-the-modern-world-ch05-cities-and-urban-culture]]).
+- **What colonial rule inherited.** Cash-based land revenue and service families gave later regimes apparatus they could recruit rather than build ([[bayly-birth-of-the-modern-world-ch07b-typology-of-eurasian-states]]). Anglo-Indian fingerprinting was partly adapted from older Mughal methods of describing individuals, and was then exported to Britain ([[bayly-birth-of-the-modern-world-ch07b-typology-of-eurasian-states]]). The Indian Civil Service was built to administer taxation and judicial systems “inherited from the earlier Indo-Muslim governments”. The note stresses that Bayly's point is British adaptation, not the survival of Mughal institutions as such ([[bayly-birth-of-the-modern-world-ch07d-tools-economy-and-balance-sheet]]). The Mughal ideal of territorial self-sufficiency fed an economic nationalism that in places came before organized political nationalism ([[bayly-birth-of-the-modern-world-ch08-liberalism-land-trade]]).
+
+The antimemetic reading above is Sathe's. Bayly does not discuss the matrix structure, and his material bears on the empire's reach and legitimacy rather than on its internal reporting lines.

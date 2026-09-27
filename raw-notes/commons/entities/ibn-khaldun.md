@@ -1,9 +1,9 @@
 ---
 summary: "Ibn Khaldun (1332-1406) is reread by Rao not as a proto-sociologist ahead of his time but as a depressed Arab Petrarch — a diagnostic chronicler of civilizational exhaustion rather than an inaugurator of a new science."
 tags: [thinker, historian, ibn-khaldun, medieval, cyclical-history, islamic-civilization]
-last_updated: 2026-09-24
+last_updated: 2026-09-27
 level: canon
-sources: [ortega-revolt-of-the-masses-ch13-the-greatest-danger-the-state, ortega-revolt-of-the-masses-ch10-primitivism-and-history, ortega-revolt-of-the-masses-endnotes]
+sources: [ortega-revolt-of-the-masses-ch13-the-greatest-danger-the-state, ortega-revolt-of-the-masses-ch10-primitivism-and-history, ortega-revolt-of-the-masses-endnotes, bayly-birth-of-the-modern-world-ch01-fringes-and-archaic-globalization, bayly-birth-of-the-modern-world-ch02-old-regime-industrious-revolutions, bayly-birth-of-the-modern-world-ch12-native-peoples-context-and-hiatus, bayly-birth-of-the-modern-world-ch12-deluge-in-practice-and-marginalization]
 ---
 
 # Ibn Khaldun (1332-1406)
@@ -57,3 +57,11 @@ The fit is partial. Ibn Khaldun's cycle is dynastic and turns on the decay of gr
 - [[Horizontal History]] — the methodology that reveals the Islamic-Asian parallels to European dynamics
 - [[Antimeme]] — the antimemetic bureaucracy as a late-cycle phenomenon in Ibn Khaldun's framework
 - [[Bureaucratic Diffusion of Responsibility]] — diffusion as a symptom of declining asabiyyah
+
+## Bayly: the last round of the Khaldunian cycle
+
+C. A. Bayly's [[bayly-birth-of-the-modern-world]] gives the dynastic cycle discussed on this page a historical terminus. In the eighteenth century, nomadic and forest polities still met agrarian states on near-equal terms. Examples include Manchurian herdsmen, Arabian camel tribes underwriting Wahhabi resistance, the Zand and Qajar tribal dynasts in Persia, and forest chieftain-marauders across India, Burma and Siberia. Bayly frames this explicitly as the closing round of the process Ibn Khaldun described, in which tough frontier peoples periodically broke in to revive and purge settled governments. It was a cycle that 1780 was about to foreclose for good ([[bayly-birth-of-the-modern-world-ch01-fringes-and-archaic-globalization]]).
+
+The later chapters show how it closed. Before about 1820, states recruited the frontier peoples they distrusted as cavalry and elite corps, and warrior-nomads still became ruling dynasties: the Timurids, the Manchus, the Bedouin Saudi rulers and the Fulani founders of the Sokoto caliphate ([[bayly-birth-of-the-modern-world-ch12-native-peoples-context-and-hiatus]]). A last “great domestication” then pushed cultivation into forest and steppe ([[bayly-birth-of-the-modern-world-ch02-old-regime-industrious-revolutions]]). After 1840, land hunger, railways, steamships and firearms turned this “Age of Hiatus” into a “White Deluge” ([[bayly-birth-of-the-modern-world-ch12-native-peoples-context-and-hiatus]], [[bayly-birth-of-the-modern-world-ch12-deluge-in-practice-and-marginalization]]).
+
+This sits beside Rao's reading rather than against it. Bayly invokes Ibn Khaldun briefly, as the describer of a pattern, and does not engage the question of whether he was a proto-sociologist. What the notes add is that the cycle ended from outside. The settled side acquired technologies that frontier peoples could not match; there is no sign that frontier cohesion simply failed.

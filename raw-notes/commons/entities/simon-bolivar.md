@@ -1,9 +1,9 @@
 ---
 summary: "Liberator of northern South America (1783-1830), whose revolution Wulf presents as fought with Humboldt's statistics and Humboldt's imagery as much as with guns — and whose aftermath supplied Humboldt his sharpest disillusionment."
 tags: [simon-bolivar, south-american-independence, colonialism-critique, alexander-von-humboldt, revolution, slavery-and-abolition, degeneracy-thesis]
-last_updated: 2026-09-23
+last_updated: 2026-09-27
 level: canon
-sources: [wulf-invention-of-nature-ch07-chimborazo, wulf-invention-of-nature-ch08-politics-and-nature, wulf-invention-of-nature-ch09-europe, wulf-invention-of-nature-ch12-revolutions-and-nature, wulf-invention-of-nature-ch14-going-in-circles, wulf-invention-of-nature-ch15-return-to-berlin, wulf-invention-of-nature-ch20-greatest-man-since-the-deluge]
+sources: [wulf-invention-of-nature-ch07-chimborazo, wulf-invention-of-nature-ch08-politics-and-nature, wulf-invention-of-nature-ch09-europe, wulf-invention-of-nature-ch12-revolutions-and-nature, wulf-invention-of-nature-ch14-going-in-circles, wulf-invention-of-nature-ch15-return-to-berlin, wulf-invention-of-nature-ch20-greatest-man-since-the-deluge, bayly-birth-of-the-modern-world-ch03-world-crisis-anatomy, bayly-birth-of-the-modern-world-ch03-climacteric-sapping-legitimacy, bayly-birth-of-the-modern-world-ch04-wreck-of-nations-and-trade, bayly-birth-of-the-modern-world-ch04-losers-legitimacy-and-state, bayly-birth-of-the-modern-world-ch06a-theories-of-nationalism, bayly-birth-of-the-modern-world-ch10-emerging-nation-arts-and-outside-west]
 ---
 
 # Simón Bolívar
@@ -39,3 +39,15 @@ The aftermath is where Humboldt's disillusionment lands. Bolívar's pan-American
 ## Related
 
 - [[alexander-von-humboldt|Alexander von Humboldt]] · [[wulf-invention-of-nature]] · [[gramsci-gap]] · [[coevalness]] · [[cosmopolitan-time-queue]] · [[legibility-cuts-both-ways]]
+
+## Bayly: Bolívar inside the world crisis
+
+Wulf's portrait above is biographical. C. A. Bayly's [[bayly-birth-of-the-modern-world]] places the same revolution inside a global chain.
+
+- **One portable doctrine.** The “rights of man” formulas were received as self-evident and freestanding: “no king, no divine authority, no imperial interest, no superiority of race or creed could nullify them”. That is why Caribbean slaves, Bengali readers of Paine and the Latin American revolutionaries around Bolívar could each seize the doctrine for local emancipations. Bayly treats these as instances of one idea, not as scattered imitation of Europe ([[bayly-birth-of-the-modern-world-ch03-world-crisis-anatomy]]).
+- **A link in the chain.** The fall of Spain triggered the independence wars. These disrupted Mexican and Peruvian silver output, and the disruption rippled into West Africa and into a China that had come to depend on that silver ([[bayly-birth-of-the-modern-world-ch03-climacteric-sapping-legitimacy]]).
+- **The aftermath as a pattern.** Bolívar's constitutional vision for Spanish America collapsed into “contending pseudo-nations” ruled by caudillos. Bayly cites this as a specific instance of the broader post-1815 wreck ([[bayly-birth-of-the-modern-world-ch04-wreck-of-nations-and-trade]]). It is a structural counterpart to Humboldt's personal disillusionment recorded above.
+- **A cult as hybrid legitimacy.** The new republics invoked Aztec and Inca descent and, later, a Bolivarian cult. Bayly counts these among the patched-together legitimacies of the restoration era ([[bayly-birth-of-the-modern-world-ch04-losers-legitimacy-and-state]]). The Latin American republics are also his examples of nationalisms manufactured by newly created states ([[bayly-birth-of-the-modern-world-ch06a-theories-of-nationalism]]).
+- **The image.** The revolutionary iconography of David and Girodet travelled, and Bolívar was refigured as the Brutus or the Napoleon of Spanish American independence ([[bayly-birth-of-the-modern-world-ch10-emerging-nation-arts-and-outside-west]]).
+
+Set beside Wulf, this suggests that the [[gramsci-gap]] running through Bolívar's own biography had a continental counterpart. Neither Bayly nor the notes make that connection.
