@@ -9,7 +9,7 @@ tags:
 - 'aggression'
 - 'antebellum-south'
 - 'dueling-culture'
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: reading
 source: 'gay-bourgeois-experience-v3'
 spans:

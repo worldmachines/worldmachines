@@ -1,7 +1,7 @@
 ---
 summary: "English philosopher and statesman who proposed a systematic reorganization of all the sciences — an Enlightenment precursor to the universal library aspiration."
 tags: [intellectual-history, philosophy, Enlightenment, scientific-method, knowledge-systems, England]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v3-p6-empire-of-fact-bacon-science]
 ---

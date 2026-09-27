@@ -1,7 +1,7 @@
 ---
 summary: "Peter Gay's coinage for the respectable rationales (scientific, religious, political, moral) through which the nineteenth-century bourgeoisie licensed aggression while still seeing itself as constructive; plural, contested, and often leaky, they “cultivated hatred, in both senses of the term.”"
 tags: [alibis-for-aggression, peter-gay, aggression, social-darwinism, manliness, legitimation, victorian-bourgeoisie]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v3-front-introduction, gay-bourgeois-experience-v3-p1-apotheosis-conflict-spencer-darwin, gay-bourgeois-experience-v3-p1-apotheosis-conflict-nietzsche-sumner, gay-bourgeois-experience-v3-p1-convenient-other-colonial-violence, gay-bourgeois-experience-v3-p1-manliness-ideal-ambiguity, gay-bourgeois-experience-v3-p1-manliness-hughes-honor-code, gay-bourgeois-experience-v3-p1-tr-extremist-of-the-center, gay-bourgeois-experience-v3-front-mensur-2-politics-adolescence, gay-bourgeois-experience-v3-p2-civilized-rationales, gay-bourgeois-experience-v3-p2-pleasures-pain-flogging-sadism-masochism, gay-bourgeois-experience-v3-p2-domestic-violence-rape-suicide, gay-bourgeois-experience-v3-p4-domesticity-alibis-power-paradox, gay-bourgeois-experience-v3-p4-time-for-tentativeness, gay-bourgeois-experience-v3-p4-domesticity-education-womens-magazines, gay-bourgeois-experience-v3-p5-varieties-of-laughter, gay-bourgeois-experience-v3-p3-modern-caesars-napoleon, gay-bourgeois-experience-v3-epilogue-august-4-1914, gay-bourgeois-experience-v3-p6-character-obsessional-neurosis-freud]
 ---

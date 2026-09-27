@@ -1,7 +1,7 @@
 ---
 summary: "Read across Gay's Volume III, the century's separate devices for taming aggression (the Mensur, legitimate opposition, the referee, licensed humor, the walled-off execution) share one architecture of rules, an arbiter at the boundary, and a threshold set by the ruling order's security, and one failure mode: the channel can be captured or reversed to amplify what it was built to drain, as in Caesarism, Jahn's gymnastics, and August 1914."
 tags: [sublimation-of-aggression, institutions, legitimate-opposition, sport, humor-as-licensed-aggression, punishment, caesarism, world-war-i, capture]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v3-front-mensur-1-jerome-fraternities, gay-bourgeois-experience-v3-front-mensur-2-politics-adolescence, gay-bourgeois-experience-v3-p3-redefinitions, gay-bourgeois-experience-v3-p3-long-birth-political-culture, gay-bourgeois-experience-v3-p3-human-nature-britain-reform, gay-bourgeois-experience-v3-p6-sport-referee-olympics, gay-bourgeois-experience-v3-p6-moral-equivalents-safety-valves, gay-bourgeois-experience-v3-p5-victim-as-executioner, gay-bourgeois-experience-v3-p5-varieties-of-laughter, gay-bourgeois-experience-v3-p5-laughing-cruel-sage, gay-bourgeois-experience-v3-p5-physicians-to-society, gay-bourgeois-experience-v3-p2-spectacle-execution-victor-hugo, gay-bourgeois-experience-v3-p2-mnaghten-insanity-plea, gay-bourgeois-experience-v3-p2-prisons-pathos-reform-disillusionment, gay-bourgeois-experience-v3-p3-modern-caesars-napoleon, gay-bourgeois-experience-v3-p1-tr-extremist-of-the-center, gay-bourgeois-experience-v3-epilogue-august-4-1914]
 ---

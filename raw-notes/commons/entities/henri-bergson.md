@@ -1,7 +1,7 @@
 ---
 summary: "French philosopher (1859–1941) whose commitment to temporal duration over static representation made him, for Massey, a structural enemy of space despite his sympathy with her aims on time and becoming."
 tags: [bergson, philosophy, time, duration, space, representation, becoming, deleuze, massey]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v3-p5-varieties-of-laughter, gay-bourgeois-experience-v3-p5-physicians-to-society]
 ---

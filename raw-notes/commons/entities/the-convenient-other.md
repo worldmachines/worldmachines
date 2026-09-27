@@ -1,7 +1,7 @@
 ---
 summary: "Peter Gay's name for the collective enemy onto which a group projects its own unacceptable aggression, an ancient alibi that the nineteenth century armored with race science and that recurs in colonial atrocity, duelling fraternities, satire, punishment, and the narcissism of small differences of 1914."
 tags: [convenient-other, projection, race-theory, antisemitism, colonial-violence, alibis-for-aggression, peter-gay, narcissism-of-small-differences]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v3-p1-convenient-other-race-theory, gay-bourgeois-experience-v3-p1-convenient-other-colonial-violence, gay-bourgeois-experience-v3-front-introduction, gay-bourgeois-experience-v3-front-mensur-2-politics-adolescence, gay-bourgeois-experience-v3-p1-tr-extremist-of-the-center, gay-bourgeois-experience-v3-p3-modern-caesars-bismarck, gay-bourgeois-experience-v3-p5-laughing-cruel-sage, gay-bourgeois-experience-v3-p5-physicians-to-society, gay-bourgeois-experience-v3-p5-victim-as-executioner, gay-bourgeois-experience-v3-p2-bourgeois-conscience-capital-punishment, gay-bourgeois-experience-v3-p2-domestic-violence-rape-suicide, gay-bourgeois-experience-v3-p4-domesticity-alibis-power-paradox, gay-bourgeois-experience-v3-p6-sport-referee-olympics, gay-bourgeois-experience-v3-epilogue-august-4-1914]
 ---

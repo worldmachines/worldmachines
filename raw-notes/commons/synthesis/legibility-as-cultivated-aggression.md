@@ -1,7 +1,7 @@
 ---
 summary: "Gay's Volume III notes, read together, recast many of the Modernity Machine's legibility projects as channelled aggression and show the same measuring apparatus playing three distinct roles (outlet for the mastery drive, fence around aggression, and alibi for it), which gives WMP a motivational account of legibility-building that its institutional account lacks, with the fit repeatedly marked as partial."
 tags: [legibility, mastery, sublimation, statistics, classification, modernity-machine, peter-gay, alibis-for-aggression]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v3-front-introduction, gay-bourgeois-experience-v3-p6-empire-of-fact-bacon-science, gay-bourgeois-experience-v3-p6-brentano-booth-social-science, gay-bourgeois-experience-v3-p6-age-of-advice-self-control-thrift, gay-bourgeois-experience-v3-p6-character-obsessional-neurosis-freud, gay-bourgeois-experience-v3-p6-end-of-renaissance-man, gay-bourgeois-experience-v3-p6-sport-referee-olympics, gay-bourgeois-experience-v3-p3-human-nature-britain-reform, gay-bourgeois-experience-v3-p2-pleasures-pain-flogging-sadism-masochism, gay-bourgeois-experience-v3-p5-victim-as-executioner, gay-bourgeois-experience-v3-p2-civilized-rationales, gay-bourgeois-experience-v3-p2-domestic-violence-rape-suicide, gay-bourgeois-experience-v3-p1-convenient-other-race-theory, gay-bourgeois-experience-v3-p2-mnaghten-insanity-plea, gay-bourgeois-experience-v3-p4-domesticity-alibis-power-paradox, gay-bourgeois-experience-v3-p2-spectacle-execution-victor-hugo, gay-bourgeois-experience-v3-p3-modern-caesars-napoleon, gay-bourgeois-experience-v3-p4-competence-womanliness-redefined, gay-bourgeois-experience-v3-appendix-theories-of-aggression]
 ---

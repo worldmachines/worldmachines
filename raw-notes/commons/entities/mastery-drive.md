@@ -1,7 +1,7 @@
 ---
 summary: "The drive toward mastery (Freud's abandoned Bemächtigungstrieb) as Peter Gay rehabilitates it in The Cultivation of Hatred: aggression's constructive face, converting passivity into activity, and the psychic fuel Gay finds behind the Victorian empire of fact, the professions, social science, and the self-controlled bourgeois character."
 tags: [mastery, sublimation, constructive-aggression, freud, empire-of-fact, self-control, peter-gay, moral-equivalent-of-war]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v3-appendix-theories-of-aggression, gay-bourgeois-experience-v3-front-introduction, gay-bourgeois-experience-v3-p6-moral-equivalents-safety-valves, gay-bourgeois-experience-v3-p6-age-of-advice-self-control-thrift, gay-bourgeois-experience-v3-p6-empire-of-fact-bacon-science, gay-bourgeois-experience-v3-p6-brentano-booth-social-science, gay-bourgeois-experience-v3-p6-end-of-renaissance-man, gay-bourgeois-experience-v3-p6-character-obsessional-neurosis-freud, gay-bourgeois-experience-v3-p1-tr-extremist-of-the-center, gay-bourgeois-experience-v3-p4-competence-womanliness-redefined, gay-bourgeois-experience-v3-p4-scribbling-women-motives-reputation, gay-bourgeois-experience-v3-p3-modern-caesars-napoleon]
 ---

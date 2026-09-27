@@ -1,7 +1,7 @@
 ---
 summary: "Caesarism as Peter Gay reads it in The Cultivation of Hatred: autocracy that claims to rule for and in the name of the people, sustained by an eroticized bond between leader and followers that licenses hatred of the excluded; exemplified by Napoleon III and, more effectively, Bismarck, and set against Britain's procedural taming of mass politics."
 tags: [caesarism, bonapartism, napoleon-iii, bismarck, mass-politics, universal-suffrage, alibis-for-aggression, peter-gay]
-last_updated: 2026-09-27
+last_updated: 2026-09-26
 level: canon
 sources: [gay-bourgeois-experience-v3-p3-modern-caesars-napoleon, gay-bourgeois-experience-v3-p3-modern-caesars-bismarck, gay-bourgeois-experience-v3-p3-redefinitions, gay-bourgeois-experience-v3-p3-long-birth-political-culture, gay-bourgeois-experience-v3-p3-human-nature-suffrage-debate, gay-bourgeois-experience-v3-p3-human-nature-britain-reform, gay-bourgeois-experience-v3-p1-tr-extremist-of-the-center]
 ---
