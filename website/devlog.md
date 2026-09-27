@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-27 · aneesh (2)
+C. A. Bayly's *The Birth of the Modern World, 1780–1914* is now in commons: 42 reading notes, 8 new canon pages — a book summary, `c-a-bayly`, concept pages such as `contested-uniformity-bayly` and `archaic-globalization-bayly`, and syntheses `converging-world-crises-bayly` and `legibility-hardens-hierarchy-bayly` — plus append-only sections on 12 existing pages, including `braudel-world-economy`, `david-s-landes` and `benedict-anderson`, which tie Bayly's global history to the Braudel, Landes and Gay material already in the corpus. Bayly-framed concepts carry a `-bayly` suffix so the bare names stay free for broader pages. The lake chunk/embed/publish is personal only (in copyright).
+
 ## 2026-09-27 · aneesh
 Four of the five volumes of Peter Gay's *The Bourgeois Experience: Victoria to Freud* are now in commons: *Education of the Senses* (32 reading notes), *The Cultivation of Hatred* (42), *The Naked Heart* (29) and *Pleasure Wars* (24). They add 23 canon pages — a `peter-gay` page, a series page `the-bourgeois-experience` with one section per volume, a summary per volume, and concepts such as `alibis-for-aggression`, `bourgeoisophobia` and `bourgeois-privacy-as-conquest` — plus append-only sections on 8 existing pages, including `mass-man`, `the-mass-as-fiction` and `michel-foucault`. Vol II (*The Tender Passion*) is missing: the file labelled as it turned out to be a second scan of Vol III, so it waits for a genuine copy. Each volume passed both validators with 0 quarantine. The lake chunk/embed/publish (personal only; the books are in copyright) is still pending.
 
