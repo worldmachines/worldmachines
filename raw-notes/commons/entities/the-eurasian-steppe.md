@@ -1,9 +1,9 @@
 ---
 summary: "The 3.1-million-square-mile grassland belt from Hungary to Manchuria, read by Chaffetz as an inland sea whose forage economy set the political ceiling for every empire on its shores until Qing China and Russia closed it in the eighteenth and nineteenth centuries."
 tags: [eurasian-steppe, pastoralism, geography, horse, carrying-capacity, capture-resistance, chaffetz]
-last_updated: 2026-09-23
+last_updated: 2026-09-27
 level: canon
-sources: [chaffetz-raiders-rulers-traders-prologue, chaffetz-raiders-rulers-traders-ch01-domesticated-for-milk, chaffetz-raiders-rulers-traders-ch03-engines-of-empire, chaffetz-raiders-rulers-traders-ch07-hunting-for-supremacy, chaffetz-raiders-rulers-traders-ch08-genghis-khan-empire, chaffetz-raiders-rulers-traders-ch10-empires-strike-back, chaffetz-raiders-rulers-traders-ch11-the-great-game, chaffetz-raiders-rulers-traders-epilogue]
+sources: [chaffetz-raiders-rulers-traders-prologue, chaffetz-raiders-rulers-traders-ch01-domesticated-for-milk, chaffetz-raiders-rulers-traders-ch03-engines-of-empire, chaffetz-raiders-rulers-traders-ch07-hunting-for-supremacy, chaffetz-raiders-rulers-traders-ch08-genghis-khan-empire, chaffetz-raiders-rulers-traders-ch10-empires-strike-back, chaffetz-raiders-rulers-traders-ch11-the-great-game, chaffetz-raiders-rulers-traders-epilogue, bayly-birth-of-the-modern-world-ch01-fringes-and-archaic-globalization, bayly-birth-of-the-modern-world-ch02-old-regime-industrious-revolutions, bayly-birth-of-the-modern-world-ch12-native-peoples-context-and-hiatus, bayly-birth-of-the-modern-world-ch12-deluge-in-practice-and-marginalization, bayly-birth-of-the-modern-world-ch13-uniformity-complexity-and-the-road-to-1914]
 ---
 
 # The Eurasian Steppe
@@ -45,6 +45,16 @@ The twentieth century finished the job by other means. [[chaffetz-raiders-rulers
 ## Afterlife
 
 Afghanistan alone escaped the social engineering until 1978, and became the refuge for breeders fleeing Soviet Central Asia and Iran, who brought their bloodstock with them — the book's closing image of a habitat where an older way of life persisted after being extinguished everywhere else, in the sense [[The Thicket]] gives that idea. The book's last scene has foreign observers unable to follow the riders, who vanish "into the freedom of the limitless steppe."
+
+## Bayly: the closing as one front of a global domestication
+
+Chaffetz narrates the steppe's closing as a political sequence: extermination, borders and collectivization. C. A. Bayly's [[bayly-birth-of-the-modern-world]] sets the same closing inside a worldwide agrarian process.
+
+- **Great domestication.** From about 1650, and faster after 1770, pioneer peasants, herders turned settlers, and expanding states pushed cultivation into forest, steppe and pampas, from Siberia to Buenos Aires to New Zealand. The drivers were population recovery, new American food crops, and states' fiscal appetite for taxable, settled subjects. The herdsmen who were settled became the coolies and indentured labour of the nineteenth-century economy ([[bayly-birth-of-the-modern-world-ch02-old-regime-industrious-revolutions]]).
+- **The last generation of parity.** In the eighteenth century Manchurian herdsmen and other nomadic polities still dealt with settled states as near-equals ([[bayly-birth-of-the-modern-world-ch01-fringes-and-archaic-globalization]]). Before about 1820, states recruited mobile cavalry and elite corps from tribal and nomadic groups, and warrior-nomads such as the Manchus founded ruling dynasties. Bayly calls this the “Age of Hiatus” ([[bayly-birth-of-the-modern-world-ch12-native-peoples-context-and-hiatus]]).
+- **The deluge.** After 1840, land hunger for fenced, heritable property drove mass settlement. Russian settlement of Siberia after 1890 followed the same pattern as the Americas and Australia ([[bayly-birth-of-the-modern-world-ch12-native-peoples-context-and-hiatus]]). The fur-bearing and meat-bearing animals of the Russian steppes were driven close to extermination by the same technologies that dispossessed native peoples ([[bayly-birth-of-the-modern-world-ch12-deluge-in-practice-and-marginalization]]). The last waves of native resistance were crushed by railway-borne invaders and scientific forestry ([[bayly-birth-of-the-modern-world-ch13-uniformity-complexity-and-the-road-to-1914]]).
+
+The two accounts agree that settled states closed the steppe. Bayly's adds that the steppe was one front of a global push. The same drive for taxable settlement was closing the pampas, the prairies and the New Zealand bush at the same time. His steppe material is brief, and Chaffetz's forage-economy detail remains the fuller account.
 
 ## See also
 

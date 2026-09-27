@@ -1,9 +1,9 @@
 ---
 summary: "Adam Smith (1723-1790) is read by Rao as an intellectual descendant of Spinoza who applied the naturalist-empiricist orientation to economics — inaugurating a discipline about noisy, messy reality data rather than divine design; Dennis Rasmussen's The Infidel and the Professor (2017) shows him revising Hume at almost every point."
 tags: [thinker, economist, adam-smith, scottish-enlightenment, divergence-machine, empiricism, biography, theory-of-moral-sentiments, wealth-of-nations, impartial-spectator]
-last_updated: 2026-09-23
+last_updated: 2026-09-27
 level: canon
-sources: [rasmussen-infidel-and-professor-introduction, rasmussen-infidel-and-professor-ch02-encountering-hume, rasmussen-infidel-and-professor-ch03-budding-friendship, rasmussen-infidel-and-professor-ch05-moral-sentiments, rasmussen-infidel-and-professor-ch06-feted-in-france, rasmussen-infidel-and-professor-ch07-wild-philosopher, rasmussen-infidel-and-professor-ch08-mortally-sick-at-sea, rasmussen-infidel-and-professor-ch09-wealth-of-nations, rasmussen-infidel-and-professor-ch10-natural-religion, rasmussen-infidel-and-professor-ch12-ten-times-more-abuse, rasmussen-infidel-and-professor-epilogue]
+sources: [rasmussen-infidel-and-professor-introduction, rasmussen-infidel-and-professor-ch02-encountering-hume, rasmussen-infidel-and-professor-ch03-budding-friendship, rasmussen-infidel-and-professor-ch05-moral-sentiments, rasmussen-infidel-and-professor-ch06-feted-in-france, rasmussen-infidel-and-professor-ch07-wild-philosopher, rasmussen-infidel-and-professor-ch08-mortally-sick-at-sea, rasmussen-infidel-and-professor-ch09-wealth-of-nations, rasmussen-infidel-and-professor-ch10-natural-religion, rasmussen-infidel-and-professor-ch12-ten-times-more-abuse, rasmussen-infidel-and-professor-epilogue, bayly-birth-of-the-modern-world-ch03-ideological-origins-third-revolution, bayly-birth-of-the-modern-world-ch04-losers-legitimacy-and-state, bayly-birth-of-the-modern-world-ch05-industrialization, bayly-birth-of-the-modern-world-ch08-liberalism-land-trade, bayly-birth-of-the-modern-world-ch08-righteous-republics]
 ---
 
 # Adam Smith (1723-1790)
@@ -84,3 +84,14 @@ The essay's treatment of a paradigm's coherence as something successively constr
 - [[Scottish Enlightenment]] — institutional context
 - [[divergence-machine]] — the machine Smith helps build
 - [[Ibn Khaldun]] — explicit contrast in Rao's text: Smith's economics vs. Ibn Khaldun's economics
+
+## Bayly: Smith's afterlife in the global nineteenth century
+
+C. A. Bayly's [[bayly-birth-of-the-modern-world]] follows what happened to Smith's ideas once they left Scotland.
+
+- **A ladder of civilizations.** Administrators used Smith and William Robertson to recast “the whole map of mankind” as one scale of commercial and political development. Tribal peoples and Africans sat at the bottom, Islamic, Hindu and Chinese societies were held to be arrested at a Greco-Roman stage, and “superior races” stood at the summit. This was administrative ideology, not yet biological race science, and it licensed “improving” interventions such as Cornwallis's Permanent Settlement in Bengal ([[bayly-birth-of-the-modern-world-ch03-ideological-origins-third-revolution]]).
+- **Free trade as enforcement.** The free-trade doctrine of Smith, Condorcet and Quesnay displaced chartered monopoly companies, and after 1830 it was imposed by force on China, the Ottomans and Latin America. Friedrich List's critique, that a global free-trade regime favours whoever industrialized first, fed a worldwide economic nationalism ([[bayly-birth-of-the-modern-world-ch08-liberalism-land-trade]]). Bayly invokes Smith's vision of a virtuous global division of labour and then undercuts it: the system increased aggregate wealth while widening inequity between groups ([[bayly-birth-of-the-modern-world-ch04-losers-legitimacy-and-state]]).
+- **A colonial re-authoring.** Raja Ram Mohun Roy fused late-Mughal statecraft, a reconstructed Hindu monotheism and Smith-style free-trade economics into what Bayly calls the first Indian liberal politics ([[bayly-birth-of-the-modern-world-ch08-liberalism-land-trade]]).
+- **The historiographical frame.** Macpherson's “possessive individualism” was rooted in Smith, Locke and Hume. Bayly sets it against the civic-republican tradition recovered by Pocock and Bailyn, which treated commerce and usury as enemies of the republic ([[bayly-birth-of-the-modern-world-ch08-righteous-republics]]). He also names Smith as the source of the era's first analytic vocabulary of specialization and economies of scale ([[bayly-birth-of-the-modern-world-ch05-industrialization]]).
+
+There is a tension with the Rasmussen material above. Smith himself catalogued merchants' “mean rapacity” and the corrupting effects of inequality. In Bayly's account, his name mostly travelled as a warrant for hierarchy and for enforced free trade.

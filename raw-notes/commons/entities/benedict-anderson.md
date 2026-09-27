@@ -1,9 +1,9 @@
 ---
 summary: "Irish-British political scientist (1936–2015) whose Imagined Communities argued that the nation is a community held together by shared imagination rather than face-to-face acquaintance, made possible by print capitalism's creation of simultaneous mass reading."
 tags: [anderson, nationalism, imagined-communities, print-capitalism, political-science, community, ritual]
-last_updated: 2026-09-24
+last_updated: 2026-09-27
 level: canon
-sources: [ortega-revolt-of-the-masses-ch04-the-growth-of-life, ortega-revolt-of-the-masses-ch14b-who-commands-in-the-world-4-6, ortega-revolt-of-the-masses-ch14c-who-commands-in-the-world-7, ortega-revolt-of-the-masses-ch14d-who-commands-in-the-world-8-9, ortega-revolt-of-the-masses-endnotes]
+sources: [ortega-revolt-of-the-masses-ch04-the-growth-of-life, ortega-revolt-of-the-masses-ch14b-who-commands-in-the-world-4-6, ortega-revolt-of-the-masses-ch14c-who-commands-in-the-world-7, ortega-revolt-of-the-masses-ch14d-who-commands-in-the-world-8-9, ortega-revolt-of-the-masses-endnotes, bayly-birth-of-the-modern-world-ch02-european-competitive-advantage-activist-state, bayly-birth-of-the-modern-world-ch03-ideological-origins-third-revolution, bayly-birth-of-the-modern-world-ch04-asian-and-european-revolutions, bayly-birth-of-the-modern-world-ch06a-theories-of-nationalism, bayly-birth-of-the-modern-world-ch06c-new-imperialism-and-internationalism, bayly-birth-of-the-modern-world-ch07d-tools-economy-and-balance-sheet, bayly-birth-of-the-modern-world-ch09-new-style-religion, bayly-birth-of-the-modern-world-ch09-pilgrimage-print-nation, bayly-birth-of-the-modern-world-ch10-world-literature-and-conclusion, bayly-birth-of-the-modern-world-ch13-predicting-crisis-and-new-imperialism]
 ---
 
 # Benedict Anderson (1936–2015)
@@ -61,3 +61,17 @@ The difference worth keeping: Anderson explains *how* a nation becomes imaginabl
 - [[homeland-attachment]] — Tuan's complementary account; the emotional depth imagined communities may or may not achieve
 - [[symbolization-and-place]] — Tuan's account of how symbols constitute place-attachments at scales beyond direct experience
 - [[print-culture-and-the-individual-author]] — print capitalism as the enabling mechanism
+
+## Bayly: print capitalism as one tool among several
+
+C. A. Bayly's [[bayly-birth-of-the-modern-world]] engages Anderson more than any other theorist of the nation. He uses him as a tool rather than a law.
+
+- **What the theory explains best.** Bayly sets Anderson beside A. D. Smith and Hastings, Gellner, and Hobsbawm and Breuilly. He singles out Anderson's power to explain nationalism in places untouched by capitalism or strong states ([[bayly-birth-of-the-modern-world-ch06a-theories-of-nationalism]]).
+- **The schoolroom as a second engine.** The schools of the enlightened despots, such as the “well over 6,000 schools and 200,000 students” of Maria Theresa's Austria, standardized language and literacy before nationalist ideology caught up. The schoolroom mattered as much as the newspaper ([[bayly-birth-of-the-modern-world-ch02-european-competitive-advantage-activist-state]]).
+- **Elite news, not mass simultaneity.** Ram Mohun Roy's Calcutta circle read newspaper accounts of Irish and Genoese struggles and reasoned that “surely there must be rights for ‘Indians’ as well”. The note stresses that the mechanism here is news circulating among literate elites across borders, not a vernacular mass readership ([[bayly-birth-of-the-modern-world-ch03-ideological-origins-third-revolution]]). In 1848 Bayly's Asian comparanda lacked the press-and-club apparatus and ran on “commitment to community and homeland” without it ([[bayly-birth-of-the-modern-world-ch04-asian-and-european-revolutions]]).
+- **The press captured.** After 1860 mass-circulation newspapers realized the mechanism in practice. But governments monopolized telegraph lines, Reuters filtered what elites read, and a jingoistic press manufactured belligerence. Colonized readers turned the same channels to their own ends ([[bayly-birth-of-the-modern-world-ch06a-theories-of-nationalism]]). Around 1900 the same infrastructure let Chinese, Indian, Egyptian and Irish activists meet in London, Paris and Chicago ([[bayly-birth-of-the-modern-world-ch13-predicting-crisis-and-new-imperialism]]).
+- **The religious half.** Bayly extends Anderson's thesis from nation to scripture. Bibles, Qurans and Buddhist *jatakas* mobilized far larger readerships than national print, and print first “allowed Hinduism to be arrayed in textual form in one single bookcase” ([[bayly-birth-of-the-modern-world-ch09-new-style-religion]], [[bayly-birth-of-the-modern-world-ch09-pilgrimage-print-nation]]).
+- **Deliberate craft.** Manzoni, Bankim Chandra Chatterjee and Egyptian journalists consciously built standardized vernaculars. The emphasis falls on self-conscious literary work rather than anonymous simultaneity ([[bayly-birth-of-the-modern-world-ch10-world-literature-and-conclusion]]).
+- **State and nation, and war beneath both.** Bayly folds textbooks and novels into a two-way dialectic in which state and nation each helped construct the other ([[bayly-birth-of-the-modern-world-ch07d-tools-economy-and-balance-sheet]]). He names war, rather than the state, urbanization or print capitalism, as the deepest cause of hardened nationalism: “war was the origin of nationalisms, just as nationalisms caused wars” ([[bayly-birth-of-the-modern-world-ch06c-new-imperialism-and-internationalism]]).
+
+Bayly shares Ortega's anti-essentialism, recorded above, but his difference from Anderson runs along another axis. It is about *which* media and *which* pressures, not about whether the nation is imagined.
