@@ -1,8 +1,9 @@
 ---
 summary: "Giordano Bruno (1548-1600) is reread by Rao not as an early modern martyr for science, but as a terminal medieval outlier whose fate marks the extinguishing of a freewheeling pre-modern mode, not the birth of a new worldview."
 tags: [thinker, philosopher, giordano-bruno, medieval, hermeticism, memory-art]
-last_updated: 2026-04-09
+last_updated: 2026-09-27
 level: canon
+sources: [eisenstein-printing-revolution-ch03-s1-wide-dissemination, eisenstein-printing-revolution-ch05-permanent-renaissance-3, eisenstein-printing-revolution-ch07-s3-galileos-trial-1]
 ---
 
 # Giordano Bruno (1548-1600)
@@ -61,3 +62,13 @@ In §I, Sathe invokes Bruno in a strikingly different register from his later es
 - [[Hermeticism]] — the tradition Bruno misread
 - [[Printing Press and Information Overload]] — Sathe's use as cautionary example
 - [[Information Hunger and Orientation]] — disorientation from information overload
+
+## Eisenstein: the press behind the Hermetic misreading
+
+[[elizabeth-eisenstein]]'s [[eisenstein-printing-revolution]] does not discuss Bruno's thought. It names him once and supplies a structural context for both readings above.
+
+- **Printed under false colours.** Bruno's treatises were printed in London by the Protestant printer John Charlewood under fictitious Venice and Paris imprints. Eisenstein counts this as part of a confessional geography in which Copernican-leaning work reached print under Protestant auspices ([[eisenstein-printing-revolution-ch07-s3-galileos-trial-1]]).
+- **The misdating was print's, not only Bruno's.** Print spread the hermetic corpus in Ficino's 1463 translation, which was mistaken for a pre-Platonic Ur-text until Casaubon redated it in 1614. Print was “spreading inaccurate knowledge even while paving the way for later purification” ([[eisenstein-printing-revolution-ch03-s1-wide-dissemination]]).
+- **A century and a half without a filter.** Once scribal secrecy dissolved, occult and genuine learning went to press together. “For at least a century and a half confusion persisted” while a “natural history of nonsense” flourished ([[eisenstein-printing-revolution-ch05-permanent-renaissance-3]]).
+
+This page's reading: Eisenstein's context is compatible with both Rao's “terminal medieval outlier” and Sathe's “printing-press disorientation”. It shifts weight from Bruno's personal misjudgment to a condition every reader of his generation shared, since the dating tools that would expose the Hermetic texts arrived only after his death. See [[printing-press-and-information-overload-eisenstein]].
