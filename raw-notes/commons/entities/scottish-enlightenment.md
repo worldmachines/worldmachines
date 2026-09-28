@@ -1,9 +1,9 @@
 ---
 summary: "The mid-eighteenth-century flowering of Scottish intellectual life — Hume, Smith, Robertson, Blair, Ferguson — which Rasmussen attributes not to any great man but to a convergence of parish schools, reformed universities, clubs, publishing, the 1707 union, and reforming Moderate clergy."
 tags: [scottish-enlightenment, edinburgh, glasgow, clubs-and-societies, moderate-literati, institutions, history-machine, enlightenment]
-last_updated: 2026-09-23
+last_updated: 2026-09-28
 level: canon
-sources: [rasmussen-infidel-and-professor-introduction, rasmussen-infidel-and-professor-ch01-cheerful-skeptic, rasmussen-infidel-and-professor-ch02-encountering-hume, rasmussen-infidel-and-professor-ch03-budding-friendship, rasmussen-infidel-and-professor-ch04-historian-and-kirk, rasmussen-infidel-and-professor-ch06-feted-in-france, rasmussen-infidel-and-professor-ch08-mortally-sick-at-sea, rasmussen-infidel-and-professor-ch12-ten-times-more-abuse, rasmussen-infidel-and-professor-epilogue]
+sources: [rasmussen-infidel-and-professor-introduction, rasmussen-infidel-and-professor-ch01-cheerful-skeptic, rasmussen-infidel-and-professor-ch02-encountering-hume, rasmussen-infidel-and-professor-ch03-budding-friendship, rasmussen-infidel-and-professor-ch04-historian-and-kirk, rasmussen-infidel-and-professor-ch06-feted-in-france, rasmussen-infidel-and-professor-ch08-mortally-sick-at-sea, rasmussen-infidel-and-professor-ch12-ten-times-more-abuse, rasmussen-infidel-and-professor-epilogue, grove-green-imperialism-introduction, grove-green-imperialism-ch04-s2-climate-theories-france, grove-green-imperialism-ch06-s5-anderson-critique, grove-green-imperialism-ch07-s1-banks-professionalisation, grove-green-imperialism-ch07-s2-forsters-resolution, grove-green-imperialism-ch08-s2-roxburgh-1, grove-green-imperialism-ch08-s3-lobbying, grove-green-imperialism-ch08-s5-balfour, grove-green-imperialism-ch08-s6-dalhousie, grove-green-imperialism-conclusion]
 ---
 
 # Scottish Enlightenment
@@ -57,3 +57,15 @@ The same corpus that made Hume a candidate for excommunication in Edinburgh made
 - [[history-machine]] — distributed assembly into retrospective legibility
 - [[modernity-machine]] — the era's institutional construction phase
 - [[venkatesh-rao-the-divergence-machine-ii]] — Rao's placement of Hume and Smith in the [[argument-of-progress]]
+
+## Grove: the Scottish-trained colonial surgeons
+
+Richard Grove's *Green Imperialism* ([[grove-green-imperialism]]) follows one output of the reformed Scottish universities out of Scotland: the physicians and surgeons who carried desiccation theory into East India Company forest policy. The notes hedge the link. This is a colonial medical-botanical training network adjacent to the Edinburgh literati, not the same circle or doctrine ([[grove-green-imperialism-ch06-s5-anderson-critique]]).
+
+**The climatic current.** Grove names [[david-hume]]'s 1741 essay on climate, society and population as a Scottish parallel to Montesquieu ([[grove-green-imperialism-ch04-s2-climate-theories-france]]). Lord Kames drew on the Cook voyages to argue that a balmy climate hindered progress ([[grove-green-imperialism-ch07-s2-forsters-resolution]]).
+
+**The medical pipeline.** Roxburgh trained under John Hope at Edinburgh and so inherited Hales's and Duhamel du Monceau's plant physiology ([[grove-green-imperialism-ch08-s2-roxburgh-1]]). By the late 1830s most surgeons working in India were Scottish-trained. The *Edinburgh New Philosophical Journal*, which printed Boussingault's desiccation paper in translation, was “widely read” among them, and Scottish teaching had primed them to read disease environmentally ([[grove-green-imperialism-ch08-s3-lobbying]]). The Introduction names Gibson, Balfour and Cleghorn, trained at Edinburgh, Glasgow and Aberdeen, as the men who won a forest-conservancy system by the 1850s ([[grove-green-imperialism-introduction]]). Grove calls Alexander Anderson of St Vincent “the first in a long line of Scottish colonial experts who linked together their biological, religious and social insights” ([[grove-green-imperialism-ch06-s5-anderson-critique]]).
+
+**Why Scots.** Banks's professional network deliberately relied on Scottish and German rather than English expertise ([[grove-green-imperialism-ch07-s1-banks-professionalisation]]). Grove suggests that the Scottish and Central European origins of many company scientists, socially peripheral to the imperial establishment, reinforced their pairing of environmental and social critique ([[grove-green-imperialism-conclusion]]). Balfour, nephew of the radical MP Joseph Hume, took the same physiocratic inheritance toward statist protection where his uncle took it toward free trade ([[grove-green-imperialism-ch08-s5-balfour]]). Grove sums up the surgeons' intellectual make-up as “physiocratic, Priestleyite, Scottish Hippocratic and Humboldtian” ([[grove-green-imperialism-ch08-s6-dalhousie]]).
+
+This page explains the Enlightenment through convergent institutions rather than great men. Grove's surgeons show one of those institutions, the medical school, producing effects half a world away, where its graduates, among the more than 800 East India Company surgeons Grove counts by 1838, became a lobby inside a trading company's administration ([[grove-green-imperialism-introduction]]).
