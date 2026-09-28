@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-28 · aneesh
+Richard Grove's *Green Imperialism: Colonial Expansion, Tropical Island Edens and the Origins of Environmentalism, 1600–1860* (1995) is now in commons: 49 reading notes, 9 new canon pages — a book summary, `richard-grove`, concept pages `desiccation-theory-grove`, `tropical-island-eden-grove`, `colonial-botanical-garden-grove` and `indigenous-knowledge-in-colonial-environmentalism-grove`, and syntheses `conservation-as-control-grove`, `diagnosis-waits-for-crisis-grove` and `more-utopia-grove` — plus append-only sections on 7 existing pages, including `alexander-von-humboldt`, `johann-gottfried-herder` and the legibility syntheses. The scanned two-page-spread PDF was re-OCR'd page by page. The lake chunk/embed/publish is personal only (in copyright).
+
 ## 2026-09-27 · aneesh (3)
 Elizabeth Eisenstein's *The Printing Revolution in Early Modern Europe* (2nd ed., 2005) is now in commons: 28 reading notes, 7 new canon pages — a book summary, `elizabeth-eisenstein`, concept pages `typographical-fixity-eisenstein`, `master-printer-workshop-eisenstein`, `standardization-and-individuation-eisenstein` and `printing-press-and-information-overload-eisenstein`, and the synthesis `scripture-and-nature-parting-eisenstein` — plus append-only sections on 8 existing pages, including `marshall-mcluhan`, `benedict-anderson`, `giordano-bruno` and `contested-uniformity-bayly`. The lake chunk/embed/publish is personal only (in copyright).
 

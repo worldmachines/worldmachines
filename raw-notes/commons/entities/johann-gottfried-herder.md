@@ -1,8 +1,9 @@
 ---
 summary: "Johann Gottfried Herder (1744–1803) was a German philosopher, theologian, and literary critic who argued that each culture embodies a distinct and incommensurable form of human excellence — a foundational claim for both Romanticism and Berlin's value pluralism."
 tags: [herder, counter-enlightenment, pluralism, culture, hermeneutics, romanticism, berlin]
-last_updated: 2026-04-09
+last_updated: 2026-09-28
 level: canon
+sources: [grove-green-imperialism-introduction, grove-green-imperialism-ch07-s6-humboldtian-diffusion]
 ---
 
 # Johann Gottfried Herder
@@ -58,3 +59,11 @@ The USC research on [[LLM Training Data Bias]] and [[Cognitive Diversity]] is He
 - [[Sturm und Drang]] — the literary movement he co-inspired
 - [[WEIRD Bias]] — contemporary structural analogue to what Herder critiqued
 - Synthesis: [[AI Homogenization and the Counter-Enlightenment]]
+
+## Grove: Herder in the genealogy of environmentalism
+
+Richard Grove's *Green Imperialism* ([[grove-green-imperialism]]) reads a different facet of Herder from the pluralism above. In Grove's account of how desiccation theory became a universal law, Herder is the most important of [[alexander-von-humboldt]]'s teachers, alongside Georg Forster and Goethe. He belongs to a German Naturphilosophie hostile to the mechanistic, positivist empiricism of Hume and Lavoisier, and that hostility gave Humboldt a universalism island-bound observers lacked ([[grove-green-imperialism-ch07-s6-humboldtian-diffusion]]).
+
+Two strands of Herder travel with the science, on Grove's reading. One is moral outrage at European plunder; the note preserves his “scathing” indictment of European wealth. The other is an idealised reading of Hindu cosmology: the Vishnu passage, and India as “the gentlest branch of humanity.” Grove is explicit that the environmental critique and the anti-colonial, anti-capital humanitarianism “shared one cultural root” ([[grove-green-imperialism-ch07-s6-humboldtian-diffusion]]). The Introduction states the claim more strongly: Humboldt's ecological holism was indebted to Hindu philosophical monism transmitted through Herder, rather than being a purely European invention ([[grove-green-imperialism-introduction]]).
+
+This adds a turn to Herder's inheritance. The page above follows it into pluralism and, less happily, nationalism. Grove follows a third line into holistic ecology, carrying an Orientalism that is admiring rather than dismissive.
