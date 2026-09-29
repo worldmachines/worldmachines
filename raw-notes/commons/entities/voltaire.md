@@ -1,8 +1,9 @@
 ---
 summary: "Voltaire (1694–1778) — French Enlightenment writer, playwright, and entrepreneur who transformed the intellectual's social role, pioneered celebrity, advanced political and epistemic legibility, and made early contributions to the Divergence Machine through Candide and tolerance campaigns."
 tags: [voltaire, enlightenment, modernity-machine, divergence-machine, celebrity, ferney, legibility, entrepreneur]
-last_updated: 2026-04-09
+last_updated: 2026-09-28
 level: canon
+sources: [douglass-rousseau-and-hobbes-ch1-malebranche, douglass-rousseau-and-hobbes-ch2-natural-goodness-golden-age, douglass-rousseau-and-hobbes-intro-methodological-problems, douglass-rousseau-and-hobbes-ch3-unity-civil-religion]
 ---
 
 # Voltaire
@@ -75,3 +76,13 @@ Voltaire's principled stances were often instrumentalized:
 - [[Jakob Fugger]]
 - [[Josiah Wedgwood]]
 - [[Ivo Velitchkov]]
+
+## Voltaire in Douglass's Rousseau and Hobbes
+
+Robin Douglass's study ([[douglass-rousseau-and-hobbes]]) gives Voltaire three small but telling roles in the eighteenth-century quarrel over [[thomas-hobbes]]:
+
+- **A dissenting voice on Hobbes.** While Malebranche, Clarke and Leibniz charged Hobbes with confusing mind and matter and so destroying freedom, Voltaire praised Hobbes for anticipating Locke on thinking matter ([[douglass-rousseau-and-hobbes-ch1-malebranche]]).
+- **Luxury.** Douglass takes Melon as representative of the doux commerce theorists and cites Voltaire's praise of him as evidence of Melon's standing. This places Voltaire on the side of the luxury debate that Rousseau attacked ([[douglass-rousseau-and-hobbes-ch2-natural-goodness-golden-age]]).
+- **The 1755 letter.** In his letter to Voltaire, Rousseau criticized Hobbes's religious intolerance and called him "the Sophist Hobbes". By 1762 Rousseau praised Hobbes as the only Christian author to see that political and religious authority must be united, a shift Douglass reads as a re-evaluation during the 1750s ([[douglass-rousseau-and-hobbes-intro-methodological-problems]], [[douglass-rousseau-and-hobbes-ch3-unity-civil-religion]]).
+
+These are passing appearances. Douglass does not treat Voltaire's politics at length.
