@@ -1,8 +1,9 @@
 ---
 summary: "Florentine banker and de facto ruler of the Florentine Republic (1389-1464) whose ~600,000-florin patronage programme converted Medici banking profits into the early Italian Renaissance; the cost-anchor for ideational ambition in 'The Lightening of Intent'."
 tags: [cosimo-de-medici, florence, renaissance, patronage, banking, humanism, cost-of-intent]
-last_updated: 2026-04-27
+last_updated: 2026-09-28
 level: canon
+sources: [yates-giordano-bruno-ch01-hermes-trismegistus, yates-giordano-bruno-ch22-fludd-controversies-2]
 ---
 
 # Cosimo de' Medici
@@ -44,3 +45,9 @@ Cosimo is the early-modern data point on the cost-of-intent curve, sitting betwe
 - Raymond de Roover, *The Rise and Decline of the Medici Bank, 1397–1494* (Harvard UP, 1963).
 - Dale Kent, *Cosimo de' Medici and the Florentine Renaissance* (Yale UP, 2000).
 - Tim Parks, *Medici Money* (2005) — popular treatment of de Roover's data.
+
+## Yates: Hermes before Plato (1463)
+
+[[frances-yates]]'s [[yates-giordano-bruno]] adds a point of priority to the patronage story above. In 1463 Cosimo ordered Marsilio Ficino to set Plato aside and translate the *Corpus Hermeticum* first. Yates takes this as the strongest evidence for the authority of the misdated text: the Renaissance held that what is older is closer to divine truth, and Hermes Trismegistus was believed older than Plato and Moses. The resulting *Pimander* ran to sixteen editions by 1600 ([[yates-giordano-bruno-ch01-hermes-trismegistus]]).
+
+In Yates's account this order of priority begins the "reign" of Hermes, which runs from Ficino's translation to Casaubon's 1614 redating ([[yates-giordano-bruno-ch22-fludd-controversies-2]]). On this reading, Cosimo's patronage bought Florence Plato and also started the Hermetic misdating that shaped Renaissance magic for a century and a half. See [[casaubon-dating-yates]].

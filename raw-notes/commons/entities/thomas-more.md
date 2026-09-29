@@ -1,9 +1,9 @@
 ---
 summary: "Sir Thomas More (b. 1478) — Tudor humanist, lawyer, and royal servant; author of Utopia and, as the persona 'Mr. More', a character inside its dialogue who argues the case for engaged 'civil philosophy' against Hythloday's withdrawal."
 tags: [thomas-more, utopia, tudor-england, renaissance-humanism, counsel-to-princes, civil-philosophy, biography]
-last_updated: 2026-07-15
+last_updated: 2026-09-28
 level: canon
-sources: [more-utopia-introduction, more-utopia-book1-02-serving-princes, more-utopia-book1-05-jester-and-mock-counsel, more-utopia-book1-07-philosophy-in-courts, more-utopia-book2-08-religions-04-conclusion]
+sources: [more-utopia-introduction, more-utopia-book1-02-serving-princes, more-utopia-book1-05-jester-and-mock-counsel, more-utopia-book1-07-philosophy-in-courts, more-utopia-book2-08-religions-04-conclusion, yates-giordano-bruno-ch10-religious-hermetism, yates-giordano-bruno-ch12-hermetic-reform-3, yates-giordano-bruno-ch20-campanella-1]
 ---
 
 # Thomas More
@@ -32,3 +32,13 @@ Inside the dialogue, "Mr. More" is the strongest voice for working within power 
 ## The withheld assent
 
 [[more-utopia-book2-08-religions-04-conclusion]]: after Hythloday's full peroration, "More" the character finds much "absurd," judges Raphael too weary and too invested in his own wisdom to be safely contradicted, and closes the book by wishing "rather than hoping" to see Utopian laws followed at home. The structural irony runs the other way from the biography: the man who once opposed a king in Parliament and then served one as ambassador wrote a persona who lets the withdrawal-advocate have the last, unanswered word.
+
+## Yates: Utopia in the Hermetic stream
+
+[[frances-yates]]'s [[yates-giordano-bruno]] places More and *Utopia* at the edge of the Hermetic stream. She is clear that this is suggestion, not demonstration.
+
+- **Religion and toleration.** Yates suggests Hermetic influence in the religion of the wisest Utopians. She reads More's toleration decree as a statement of the principles that later religious Hermetism turned to, when Du Plessis Mornay and the Capuchin Rosseli looked to a Hermetic religion of the world to escape fanaticism on both sides of the wars of religion. At that point, she says, the Erasmian tradition "joins the Hermetic-Cabalist tradition" ([[yates-giordano-bruno-ch10-religious-hermetism]]).
+- **One of a family of cities.** She lines *Utopia* up with the *Picatrix*'s Adocentyn, the *Asclepius*'s prophesied city, Bruno's reformed heavens in the *Spaccio* and Campanella's City of the Sun by their shared ethic of social utility. She also notes the odd magical atmosphere of Utopian worship ([[yates-giordano-bruno-ch12-hermetic-reform-3]]).
+- **A secondary source for Campanella.** For the City of the Sun, she treats *Utopia* (the traveller who discovers a city) and Plato's *Republic* as secondary layers beneath a primary Hermetic one ([[yates-giordano-bruno-ch20-campanella-1]]).
+
+In Yates's contrast between the humanist and the Magus, More's circle belongs to the humanist side. Her claim here is only that *Utopia* anticipates a Hermetic religious toleration; she does not make More a Hermetist. See [[talismanic-city-yates]] and [[more-utopia]].
