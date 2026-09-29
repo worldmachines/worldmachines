@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-28 · aneesh (2)
+Peter Gay's *The Tender Passion* (Vol. II of *The Bourgeois Experience*, 1986) is now in commons, completing the five-volume series: 26 reading notes, 7 new canon pages — a book summary, `charles-kingsley` (scoped to Gay's reading), concept pages `two-currents-of-love-gay`, `stratagems-of-sensuality-gay`, `community-of-fantasies-gay` and `dividends-of-denial-gay`, and the synthesis `price-of-repression-gay` — plus the Volume II section of `the-bourgeois-experience` (replacing its placeholder) and append-only sections on `peter-gay`, `bourgeois-defenses-against-eros`, `bourgeoisophobia`, `bourgeois-privacy-as-conquest`, `mabel-loomis-todd` and `michel-foucault`. The lake chunk/embed/publish is personal only (in copyright).
+
 ## 2026-09-28 · aneesh
 Richard Grove's *Green Imperialism: Colonial Expansion, Tropical Island Edens and the Origins of Environmentalism, 1600–1860* (1995) is now in commons: 49 reading notes, 9 new canon pages — a book summary, `richard-grove`, concept pages `desiccation-theory-grove`, `tropical-island-eden-grove`, `colonial-botanical-garden-grove` and `indigenous-knowledge-in-colonial-environmentalism-grove`, and syntheses `conservation-as-control-grove`, `diagnosis-waits-for-crisis-grove` and `more-utopia-grove` — plus append-only sections on 7 existing pages, including `alexander-von-humboldt`, `johann-gottfried-herder` and the legibility syntheses. The scanned two-page-spread PDF was re-OCR'd page by page. The lake chunk/embed/publish is personal only (in copyright).
 
