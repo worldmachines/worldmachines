@@ -510,10 +510,19 @@
         const res = await fetch('/api/mcp-token', {
           method: 'POST',
           headers: { Accept: 'application/json' },
+          redirect: 'manual',
         });
+        if (res.type === 'opaqueredirect' || res.status === 401) {
+          genMsg.className = 'form-message error';
+          genMsg.innerHTML = 'Your sign-in has expired. <a href="/login?return=/mcp">Sign in again</a> to generate a token.';
+          genBtn.textContent = 'Generate my Witness token';
+          return;
+        }
+        if (!(res.headers.get('content-type') || '').includes('application/json')) {
+          throw new Error(`Server error (${res.status}) — please try again in a moment.`);
+        }
         const data = await res.json();
         if (!res.ok) {
-          if (data.error === 'unauthorized') throw new Error('You must sign in with an approved email.');
           if (data.error === 'not_registered') throw new Error('This account is not a registered contributor yet.');
           throw new Error(data.message || data.error || 'Could not generate a token.');
         }
