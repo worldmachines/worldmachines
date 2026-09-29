@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-28 · aneesh (6)
+Robin Douglass's *Rousseau and Hobbes: Nature, Free Will, and the Passions* (2015) is now in commons (taken over from Florian's list): 33 reading notes, 8 new canon pages — a book summary, `robin-douglass`, the vault's first `thomas-hobbes` page, concept pages `hobbism-douglass`, `amour-propre-douglass`, `sovereignty-inverted-douglass` and `love-and-fear-douglass`, and the synthesis `making-a-people-one-douglass` — plus append-only sections on `jean-jacques-rousseau`, `adam-smith`, `voltaire` and `the-legible-commonwealth`. The lake chunk/embed/publish is personal only (in copyright).
+
 ## 2026-09-28 · aneesh (5)
 Charles C. Mann's *1493: Uncovering the New World Columbus Created* (2011) is now in commons (taken over from Florian's list): 41 reading notes, 9 new canon pages — a book summary, `charles-c-mann`, concept pages `columbian-exchange-mann`, `homogenocene-mann`, `silk-for-silver-trade-mann`, `disease-regimes-and-extractive-states-mann`, `agro-industrial-complex-mann` and `maroon-societies-mann`, and the synthesis `control-breeds-its-own-counterflows-mann` — plus append-only sections on 10 existing pages, including `braudel-world-economy`, `archaic-globalization-bayly`, `colonial-botanical-garden-grove`, `adam-smith` and `david-s-landes`. The lake chunk/embed/publish is personal only (in copyright).
 
