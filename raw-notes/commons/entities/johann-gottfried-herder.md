@@ -3,7 +3,7 @@ summary: "Johann Gottfried Herder (1744–1803) was a German philosopher, theolo
 tags: [herder, counter-enlightenment, pluralism, culture, hermeneutics, romanticism, berlin]
 last_updated: 2026-09-28
 level: canon
-sources: [grove-green-imperialism-introduction, grove-green-imperialism-ch07-s6-humboldtian-diffusion]
+sources: [grove-green-imperialism-introduction, grove-green-imperialism-ch07-s6-humboldtian-diffusion, wulf-magnificent-rebels-ch02-priest-of-truth-2, wulf-magnificent-rebels-ch03-finest-minds-1, wulf-magnificent-rebels-ch03-finest-minds-2, wulf-magnificent-rebels-ch12-atheism-dispute, wulf-magnificent-rebels-ch18-starving-rats-2, wulf-magnificent-rebels-epilogue-after-jena-2]
 ---
 
 # Johann Gottfried Herder
@@ -67,3 +67,13 @@ Richard Grove's *Green Imperialism* ([[grove-green-imperialism]]) reads a differ
 Two strands of Herder travel with the science, on Grove's reading. One is moral outrage at European plunder; the note preserves his “scathing” indictment of European wealth. The other is an idealised reading of Hindu cosmology: the Vishnu passage, and India as “the gentlest branch of humanity.” Grove is explicit that the environmental critique and the anti-colonial, anti-capital humanitarianism “shared one cultural root” ([[grove-green-imperialism-ch07-s6-humboldtian-diffusion]]). The Introduction states the claim more strongly: Humboldt's ecological holism was indebted to Hindu philosophical monism transmitted through Herder, rather than being a purely European invention ([[grove-green-imperialism-introduction]]).
 
 This adds a turn to Herder's inheritance. The page above follows it into pluralism and, less happily, nationalism. Grove follows a third line into holistic ecology, carrying an Orientalism that is admiring rather than dismissive.
+
+## Herder in Wulf's Jena (Magnificent Rebels)
+
+Andrea Wulf's [[wulf-magnificent-rebels]] shows Herder from two sides, as an idea-source and as a hostile elder.
+
+**Source of the Kulturnation.** Wulf places Herder behind Schiller's *Horen*, which she presents as an organ of the German Kulturnation, 'a cultural nation independent of state lines but bound by a shared language'. Herder's view, as she gives it, is that language embodies a worldview and a people is whoever was raised in the language ([[wulf-magnificent-rebels-ch03-finest-minds-1]]). The note reads this as an early, non-political form of the national idea; Wulf does not draw the line to nationalism at that point. It is a concrete instance of the pluralism-to-nationalism path this page warns about above; see [[inwardness-without-a-state-wulf]].
+
+**Hostile elder.** In Weimar Herder punned 'Huren' against Goethe's *Roman Elegies* ([[wulf-magnificent-rebels-ch03-finest-minds-1]]), attacked Fichte with a pun of his own ([[wulf-magnificent-rebels-ch02-priest-of-truth-2]]), and was the churchly official behind the ban on Fichte's Sunday lectures ([[wulf-magnificent-rebels-ch03-finest-minds-2]]). In the atheism dispute Fichte compared Herder's essay on God (and Spinoza) to his own case and judged the resemblance to atheism greater in Herder's ([[wulf-magnificent-rebels-ch12-atheism-dispute]]). As president of the Weimar consortium deciding the Schlegel divorce, he was hostile to the Schlegels ([[wulf-magnificent-rebels-ch18-starving-rats-2]]).
+
+**Afterlife through Humboldt.** Wilhelm von Humboldt, in retirement, developed ideas from Herder and Fichte about language and nationhood: 'each nation is a mental whole' ([[wulf-magnificent-rebels-epilogue-after-jena-2]]).

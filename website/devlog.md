@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-28 · aneesh (8)
+Andrea Wulf's *Magnificent Rebels: The First Romantics and the Invention of the Self* (2022) is now in commons (taken over from Florian's list): 36 reading notes, 15 new canon pages — a book summary, `andrea-wulf`, entity pages for Fichte, Schelling, Caroline Schelling and August Wilhelm Schlegel, concept pages such as `jena-set-wulf`, `symphilosophie-wulf`, `invention-of-the-self-wulf` and `art-of-being-selfish-wulf`, and syntheses `poeticising-the-mechanical-world-wulf` and `inwardness-without-a-state-wulf` — plus append-only sections on 7 existing pages, including `johann-wolfgang-von-goethe`, `alexander-von-humboldt` and `infrastructure-of-bourgeois-inwardness`. The lake chunk/embed/publish is personal only (in copyright).
+
 ## 2026-09-28 · aneesh (7)
 Robert Irwin's *Ibn Khaldun: An Intellectual Biography* (2018) is now in commons (taken over from Florian's list): 23 reading notes, 6 new canon pages — a book summary, `robert-irwin`, `asabiyya-irwin`, and syntheses `terminal-medievals-vs-early-moderns-irwin`, `muqaddima-enchanted-frame-irwin` and `psychohistory-and-world-machines-irwin` — plus append-only sections on `ibn-khaldun`, `civilization-undone-by-its-own-success`, `giambattista-vico`, `niccolo-machiavelli` and `bruce-chatwin`. Irwin's reading of Ibn Khaldun as a man of his own Maghribi, Sufi and Mamluk world, not a proto-modern sociologist, tempers the psychohistory genealogy. The lake chunk/embed/publish is personal only (in copyright).
 
