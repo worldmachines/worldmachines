@@ -1,9 +1,9 @@
 ---
 summary: "Harvard economic historian whose 1986 essay 'What Do Bosses Really Do?' provided the historical framework for understanding the essential coordinating function of managers and entrepreneurs — used by Aneesh Sathe as the analytical template for platform economics. His 1983 *Revolution in Time: Clocks and the Making of the Modern World* — now fully ingested across 24 reading notes — argues the clock was demand-pulled into existence by monastic time-discipline, documents the incumbency-failure chain across seven centuries of horology, and supplies the design-climbs-the-stack thesis in Sathe's Not My Lever (2026)."
 tags: [economic-history, labor, management, platforms, industrial-revolution, watchmaking, revolution-in-time, horology, time-discipline]
-last_updated: 2026-09-27
+last_updated: 2026-09-28
 level: canon
-sources: [rit-01-preface, rit-02-introduction, rit-03-a-magnificent-dead-end, rit-05-are-you-sleeping-brother-john, rit-06-the-greatest-necessity, rit-07-my-time-is-my-time, rit-12-the-french-connection, rit-13-fame-is-the-spur, rit-16-ups-and-downs-of-international-competition, rit-20-ah-but-he-could, rit-23-the-quartz-revolution-i, bayly-birth-of-the-modern-world-intro-riddle-of-modernity-and-the-body, bayly-birth-of-the-modern-world-ch02-critical-publics-conclusion]
+sources: [rit-01-preface, rit-02-introduction, rit-03-a-magnificent-dead-end, rit-05-are-you-sleeping-brother-john, rit-06-the-greatest-necessity, rit-07-my-time-is-my-time, rit-12-the-french-connection, rit-13-fame-is-the-spur, rit-16-ups-and-downs-of-international-competition, rit-20-ah-but-he-could, rit-23-the-quartz-revolution-i, bayly-birth-of-the-modern-world-intro-riddle-of-modernity-and-the-body, bayly-birth-of-the-modern-world-ch02-critical-publics-conclusion, mann-1493-ch04-extra-effort-merchants-pirates, mann-1493-ch02-risk-pool]
 ---
 
 # David S. Landes (1924–2013)
@@ -97,3 +97,12 @@ C. A. Bayly's [[bayly-birth-of-the-modern-world]] (2004) treats Landes as a prin
 - **The objection.** “The weakness of Landes's position lies in its reversion to old ideas of Asian stagnation.” Bayly instead traces Europe's lead to specific, contingent structures. Fragmented, competitive terrain forced military-fiscal innovation (“Asia's relative peace in the seventeenth century was its undoing”). Legal codes bound rulers as well as subjects. Europe had an unmatched density of print and associational life. The Chinese state, meanwhile, “guaranteed the welfare of its peasantry more effectively than western Europeans protected their proto-industrial cities” ([[bayly-birth-of-the-modern-world-ch02-critical-publics-conclusion]]).
 
 The criticism targets the civilizational thesis of Landes's later work. It does not engage *Revolution in Time* directly. Bayly's own account of time discipline covers fob watches, plantation bells that kept slaves “to the time of the master's watch”, and clock towers synchronized by telegraph. It spreads the story across the globe and credits fashion and aspiration as much as institutions ([[bayly-birth-of-the-modern-world-intro-riddle-of-modernity-and-the-body]]). That complements the demand-pull story above rather than contradicting it.
+
+## Another critic: Mann on Landes and the 'extra effort'
+
+Charles C. Mann's [[mann-1493]] (2011) cites Landes twice, in both places as a view he reports without adopting.
+
+- **Zheng He.** Landes, with Eric Jones and John A. Hall, is Mann's example of the view that Confucian complacency explains why China did not make 'that extra little effort' to round Africa. Mann sets against it Jack Goldstone and other scholars, for whom China had no economic reason to go, and treats China's retreat from the sea as economics and politics rather than cultural deficiency ([[mann-1493-ch04-extra-effort-merchants-pirates]]).
+- **Europe's rise.** Mann summarizes Douglass North (property rights, open markets, democratic checks) and Landes (virtues fostered by European organization) as the institutional explanation of Europe's rise, presented without endorsement. His narrative of the Virginia Company, which saw eight of ten of the seven thousand people shipped to Virginia between 1607 and 1624 die, sits uneasily beside it ([[mann-1493-ch02-risk-pool]]).
+
+This complements Bayly's objection above. Bayly faults Landes for reverting to 'Asian stagnation'. Mann does not argue with Landes directly; he builds explanations from ecology, money and state policy that do not need the cultural thesis.

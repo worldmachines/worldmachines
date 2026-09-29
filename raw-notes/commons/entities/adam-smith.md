@@ -1,9 +1,9 @@
 ---
 summary: "Adam Smith (1723-1790) is read by Rao as an intellectual descendant of Spinoza who applied the naturalist-empiricist orientation to economics — inaugurating a discipline about noisy, messy reality data rather than divine design; Dennis Rasmussen's The Infidel and the Professor (2017) shows him revising Hume at almost every point."
 tags: [thinker, economist, adam-smith, scottish-enlightenment, divergence-machine, empiricism, biography, theory-of-moral-sentiments, wealth-of-nations, impartial-spectator]
-last_updated: 2026-09-27
+last_updated: 2026-09-28
 level: canon
-sources: [rasmussen-infidel-and-professor-introduction, rasmussen-infidel-and-professor-ch02-encountering-hume, rasmussen-infidel-and-professor-ch03-budding-friendship, rasmussen-infidel-and-professor-ch05-moral-sentiments, rasmussen-infidel-and-professor-ch06-feted-in-france, rasmussen-infidel-and-professor-ch07-wild-philosopher, rasmussen-infidel-and-professor-ch08-mortally-sick-at-sea, rasmussen-infidel-and-professor-ch09-wealth-of-nations, rasmussen-infidel-and-professor-ch10-natural-religion, rasmussen-infidel-and-professor-ch12-ten-times-more-abuse, rasmussen-infidel-and-professor-epilogue, bayly-birth-of-the-modern-world-ch03-ideological-origins-third-revolution, bayly-birth-of-the-modern-world-ch04-losers-legitimacy-and-state, bayly-birth-of-the-modern-world-ch05-industrialization, bayly-birth-of-the-modern-world-ch08-liberalism-land-trade, bayly-birth-of-the-modern-world-ch08-righteous-republics]
+sources: [rasmussen-infidel-and-professor-introduction, rasmussen-infidel-and-professor-ch02-encountering-hume, rasmussen-infidel-and-professor-ch03-budding-friendship, rasmussen-infidel-and-professor-ch05-moral-sentiments, rasmussen-infidel-and-professor-ch06-feted-in-france, rasmussen-infidel-and-professor-ch07-wild-philosopher, rasmussen-infidel-and-professor-ch08-mortally-sick-at-sea, rasmussen-infidel-and-professor-ch09-wealth-of-nations, rasmussen-infidel-and-professor-ch10-natural-religion, rasmussen-infidel-and-professor-ch12-ten-times-more-abuse, rasmussen-infidel-and-professor-epilogue, bayly-birth-of-the-modern-world-ch03-ideological-origins-third-revolution, bayly-birth-of-the-modern-world-ch04-losers-legitimacy-and-state, bayly-birth-of-the-modern-world-ch05-industrialization, bayly-birth-of-the-modern-world-ch08-liberalism-land-trade, bayly-birth-of-the-modern-world-ch08-righteous-republics, mann-1493-ch03-about-face, mann-1493-ch08-new-world-born, mann-1493-ch08-bad-beginnings, mann-1493-ch06-potato-wars-sea-of-genes]
 ---
 
 # Adam Smith (1723-1790)
@@ -95,3 +95,14 @@ C. A. Bayly's [[bayly-birth-of-the-modern-world]] follows what happened to Smith
 - **The historiographical frame.** Macpherson's “possessive individualism” was rooted in Smith, Locke and Hume. Bayly sets it against the civic-republican tradition recovered by Pocock and Bailyn, which treated commerce and usury as enemies of the republic ([[bayly-birth-of-the-modern-world-ch08-righteous-republics]]). He also names Smith as the source of the era's first analytic vocabulary of specialization and economies of scale ([[bayly-birth-of-the-modern-world-ch05-industrialization]]).
 
 There is a tension with the Rasmussen material above. Smith himself catalogued merchants' “mean rapacity” and the corrupting effects of inequality. In Bayly's account, his name mostly travelled as a warrant for hierarchy and for enforced free trade.
+
+## Mann: Smith's case against slave labour as a historical puzzle
+
+Charles C. Mann's [[mann-1493]] uses *The Wealth of Nations* as the benchmark that the history of American slavery violates.
+
+- **The argument Mann reports.** Free labour 'comes cheaper in the end', because slaves are culturally unfamiliar, have every reason to sabotage or flee, and lack incentives. Smith's caveat is that masters historically offered slaves paths to liberty or satisfying tasks; Mann adds that American chattel slavery removed all such workarounds. The view of slavery as the product of a 'love to domineer' is Smith's, reported by Mann ([[mann-1493-ch03-about-face]]).
+- **The puzzle it creates.** A prime-age African slave cost about 25 pounds against about 10 for a servant's contract, yet Virginia turned to slaves between 1680 and 1700. Smith's observation that workers would leave to become landlords, later developed by other economists into the claim that employers wanted to restrict movement, fails to explain New England against Barbados. Mann's missing piece is the disease environment ([[mann-1493-ch03-about-face]]); see [[disease-regimes-and-extractive-states-mann]].
+- **Institutions read against Smith.** Mann frames the Spanish encomienda as 'an attempt to answer the objections to slavery raised by Adam Smith' ([[mann-1493-ch08-new-world-born]]), and invokes Smith's problems as what the escape hatches of older Iberian slavery avoided ([[mann-1493-ch08-bad-beginnings]]).
+- **The potato.** Smith anticipated that potatoes would raise population, and his remarks on the Irish appear in Mann's account of Europe's escape from famine ([[mann-1493-ch06-potato-wars-sea-of-genes]]).
+
+In Mann's hands Smith supplies a clean economic prediction that ecology bent, rather than the warrant for hierarchy of Bayly's account above. Both uses are kept.
