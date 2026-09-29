@@ -70,7 +70,15 @@
   </article>
   <article class="devlog-entry">
     <div class="devlog-meta">28 September 2026 · aneesh</div>
+    <p>Christopher Clark's *Revolutionary Spring: Fighting for a New World, 1848–1849* (2023) is now in commons (taken over from Florian's list): 49 reading notes, 8 new canon pages — a book summary, <code>christopher-clark</code>, <code>robert-blum</code>, and concept pages <code>revolutionary-cascade-clark</code>, <code>politics-of-description-clark</code>, <code>entropy-of-revolution-clark</code>, <code>post-revolutionary-synthesis-clark</code> and <code>four-emancipations-clark</code> — plus append-only sections on 6 existing pages, including <code>caesarism-gay</code>, <code>converging-world-crises-bayly</code>, <code>the-mass-as-fiction</code> and <code>alexander-herzen</code>. The lake chunk/embed/publish is personal only (in copyright).</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">28 September 2026 · aneesh</div>
     <p>Link submission was failing with Safari's "The string did not match the expected pattern." <code>/submit</code> and <code>/api/submit</code> share one Cloudflare Access app, while <code>/wiki</code> is a separate one, and there is only one <code>CF_Authorization</code> cookie per hostname. So after someone opened the wiki, or their session expired, Access answered the form's POST with a login redirect, and the page tried to parse the HTML as JSON. The form now detects that redirect, keeps the draft, sends the member through <code>/login</code> to refresh their session, and restores the fields so they can press Submit again. <code>/profile</code>, <code>/mcp</code> and the Resources team-library list get the same handling, with a sign-in link or prompt instead of a broken JSON parse.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">28 September 2026 · aneesh</div>
+    <p>Frances Yates's *Giordano Bruno and the Hermetic Tradition* (1964) is now in commons, the first of Florian's assigned books taken over by aneesh: 35 reading notes, 6 new canon pages — a book summary, <code>frances-yates</code>, concept pages <code>casaubon-dating-yates</code>, <code>hermetic-magus-yates</code> and <code>will-to-operate-yates</code>, and the synthesis <code>talismanic-city-yates</code> — plus append-only sections on <code>giordano-bruno</code>, <code>cosimo-de-medici</code> and <code>thomas-more</code>. The lake chunk/embed/publish is personal only (in copyright).</p>
   </article>
   <article class="devlog-entry">
     <div class="devlog-meta">28 September 2026 · aneesh</div>
@@ -218,6 +226,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-09-29T01:51:55Z -->
+  <!-- built: 2026-09-29T02:11:40Z -->
 </body>
 </html>
