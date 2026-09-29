@@ -1,9 +1,9 @@
 ---
 summary: "Claude Henri de Saint-Simon (1760–1825), the picaresque speculator turned prophet whose late doctrine — aggression rerouted from men onto nature, government dissolved into administration, and Christianity recast as labor for 'the poorest and most numerous class' — founded both the technocratic tradition and the Saint-Simonian church that carried it into the nineteenth century."
 tags: [saint-simon, saint-simonianism, technocracy, organicism, new-christianity, industrial-society, spiritual-power, enfantin]
-last_updated: 2026-09-23
+last_updated: 2026-09-28
 level: canon
-sources: [manuel-prophets-of-paris-saint-simon-01, manuel-prophets-of-paris-saint-simon-02, manuel-prophets-of-paris-children-01, manuel-prophets-of-paris-children-02, manuel-prophets-of-paris-comte-01, manuel-prophets-of-paris-comte-02, manuel-prophets-of-paris-epilogue, manuel-prophets-of-paris-preface-prolegomenon]
+sources: [manuel-prophets-of-paris-saint-simon-01, manuel-prophets-of-paris-saint-simon-02, manuel-prophets-of-paris-children-01, manuel-prophets-of-paris-children-02, manuel-prophets-of-paris-comte-01, manuel-prophets-of-paris-comte-02, manuel-prophets-of-paris-epilogue, manuel-prophets-of-paris-preface-prolegomenon, clark-revolutionary-spring-ch01-politics-of-description, clark-revolutionary-spring-ch01-weavers, clark-revolutionary-spring-ch02-its-a-mans-world, clark-revolutionary-spring-ch02-conservatives-religion, clark-revolutionary-spring-ch02-partisans-of-liberty-radicals, clark-revolutionary-spring-ch03-unfinished-business-social-revolutionaries, clark-revolutionary-spring-ch07-revolution-shuts-itself-down, clark-revolutionary-spring-ch09-constellations-circulation, clark-revolutionary-spring-conclusion]
 ---
 
 # Henri de Saint-Simon
@@ -56,6 +56,20 @@ Manuel takes pains to distinguish this hierarchy from later totalitarianism — 
 ## Legacy and quarrels
 
 Comte, his secretary, broke with him in 1824 over whose name would appear on the *Système de politique positive*, and was still calling him a "depraved juggler" decades later; Comte's own retrospective diagnosis was that Saint-Simon suffered the "physiological" fault of expecting a permanent pupil even after his protégé's "beard had begun to grow" ([[manuel-prophets-of-paris-comte-01]]). Manuel's Prolegomenon frames the rupture as a Judas-like betrayal within a lineage otherwise held together by discipleship ([[manuel-prophets-of-paris-preface-prolegomenon]]). And the epilogue traces the abolition of inheritance and the doctrines of property and labor forward into the phrases Marx recombines in the *Critique of the Gotha Programme* ([[manuel-prophets-of-paris-epilogue]]).
+
+## Saint-Simonians in the revolutions of 1848 (Clark, Revolutionary Spring)
+
+Manuel follows the children of Saint-Simon into biography. Christopher Clark's [[clark-revolutionary-spring]] shows how far the school's vocabulary had diffused into European politics by 1848. It rarely appears as a party. It turns up as a recurring idiom across camps.
+
+- **Social statistics.** The Nantes doctor Ange Guépin wanted to reach the future without a new Jacquerie or '93, through association and a Saint-Simonian 'physiology' of society run by an industrial class of hygienists and planners. Louis Blanc then used his life-expectancy data against competition ([[clark-revolutionary-spring-ch01-politics-of-description]]).
+- **Workers' self-description.** The Lyons weavers' journal *L'Écho de la Fabrique* drew its lexicon partly from Saint-Simonianism ([[clark-revolutionary-spring-ch01-weavers]]).
+- **Women's secession.** Clark presents the movement as an unstable religious-reformist sect whose men would not grant women equal rank. Women seceded from Enfantin's 'church', and Claire Démar's attack on the power of the father came out of that milieu ([[clark-revolutionary-spring-ch02-its-a-mans-world]]).
+- **The religious left.** Saint-Simon's New Christianity stands with Considerant, Cabet and Blanc among the French radicals who separated 'true' Christianity from the institutional Church ([[clark-revolutionary-spring-ch02-conservatives-religion]]).
+- **Rule by engineers.** Among the radical currents before 1848, Saint-Simonians imagined rule by engineers and industrialists, with 'industrials' set against 'idlers' ([[clark-revolutionary-spring-ch02-partisans-of-liberty-radicals]]). The republican conspirator Martin Bernard passed from the Saint-Simonians through Fourier to Robespierre ([[clark-revolutionary-spring-ch03-unfinished-business-social-revolutionaries]]).
+- **1848 policy.** Lamartine's railway-investment plan to escape the National Workshops dilemma resembled Saint-Simonian technocratic visions ([[clark-revolutionary-spring-ch07-revolution-shuts-itself-down]]).
+- **The Second Empire.** Louis-Napoleon, 'a Saint-Simon on horseback', cast government as the motor of progress, and Clark links this to Saint-Simon's industrialism through the Pereires and Michel Chevalier. He hedges that it is 'unclear whether the emperor himself had ever read the sage's works', and stresses that similar growth-oriented turns happened across Europe ([[clark-revolutionary-spring-ch09-constellations-circulation]]).
+
+In his Conclusion Clark compares the Saint-Simonian 'idlers' and 'industrials' to Douthat's Virtuals and Practicals; the comparison is his, not a World Machines finding ([[clark-revolutionary-spring-conclusion]]). The throughline supports this page's claim that the doctrine founded the technocratic tradition, with one addition: after 1848 counter-revolutionary states took up the technocratic idiom as a source of legitimacy (see [[post-revolutionary-synthesis-clark]]).
 
 ## See also
 

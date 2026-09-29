@@ -160,7 +160,19 @@
             url:  document.getElementById('p-url').value.trim(),
             bio:  document.getElementById('p-bio').value.trim(),
           }),
+          redirect: 'manual',
         });
+        // Session expired, or the hostname's CF_Authorization cookie now belongs
+        // to another Access app (opening /wiki reissues it): Access answers with
+        // a login redirect fetch() can't follow. Refresh it with a top-level visit.
+        if (res.type === 'opaqueredirect' || res.status === 401) {
+          msg.className = 'form-message error';
+          msg.innerHTML = 'Your sign-in has expired. <a href="/login?return=/profile">Sign in again</a> and save once more.';
+          return;
+        }
+        if (!(res.headers.get('content-type') || '').includes('application/json')) {
+          throw new Error(`Server error (${res.status}) — please try again in a moment.`);
+        }
         const data = await res.json();
         if (res.ok) {
           msg.className = 'form-message success';
@@ -169,9 +181,9 @@
           msg.className = 'form-message error';
           msg.textContent = data.message || data.error || 'Save failed.';
         }
-      } catch {
+      } catch (err) {
         msg.className = 'form-message error';
-        msg.textContent = 'Network error.';
+        msg.textContent = err.message.startsWith('Server error') ? err.message : 'Network error.';
       } finally {
         btn.disabled = false;
         btn.textContent = 'Save';

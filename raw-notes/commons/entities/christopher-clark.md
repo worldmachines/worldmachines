@@ -1,0 +1,36 @@
+---
+summary: "Christopher Clark as the historian of 1848 in Revolutionary Spring: a Europe-wide, simultaneity-first narrator who rejects the verdict of failure, treats the 'politics of description' as history, distrusts his own metaphors, and offers hedged analogies to the present."
+tags: [historian, historiography, revolutions-of-1848, method, christopher-clark]
+last_updated: 2026-09-28
+level: canon
+sources: [clark-revolutionary-spring-introduction, clark-revolutionary-spring-ch07-national-questions-1, clark-revolutionary-spring-conclusion, clark-revolutionary-spring-ch01-politics-of-description, clark-revolutionary-spring-ch01-galicia-1846-conclusions, clark-revolutionary-spring-ch06-waving-from-windows, clark-revolutionary-spring-ch04-dogs-that-didnt-bark-end-of-beginning, clark-revolutionary-spring-ch03-political-ferment-in-germany, clark-revolutionary-spring-ch05-establish-a-government, clark-revolutionary-spring-ch04-nouvelles-diverses-february, clark-revolutionary-spring-ch07-revolution-shuts-itself-down, clark-revolutionary-spring-ch09-global-1848, clark-revolutionary-spring-ch02-patriots-and-nations, clark-revolutionary-spring-ch09-material-progress-city, clark-revolutionary-spring-ch03-glorious-days-liberal-revolution, clark-revolutionary-spring-ch02-free-and-unfree-places-in-history, clark-revolutionary-spring-ch09-constellations-circulation, clark-revolutionary-spring-ch07-vagabond-sovereignty]
+---
+
+# Christopher Clark
+
+**Christopher Clark** is the author of *Revolutionary Spring: Fighting for a New World, 1848–1849* ([[clark-revolutionary-spring]]). This page covers only what the reading notes show of him as the historian of 1848: his scale, his method and his framings.
+
+## Scale: Europe, and simultaneity
+
+Clark's starting point is that 1848 was 'experienced as European upheavals' but 'nationalized in retrospect'. The verdict of failure, in his reading, shows 'the immense power of the nation-state as a way of framing the historical record' ([[clark-revolutionary-spring-introduction]]). He therefore writes the revolutions as one continental event and treats their simultaneity as a real puzzle. He also warns against uncritical adoption of the nationalist perspective and against overcorrection, and tries to recover a world in which national feeling was intense but 'mutable and localized, as one feeling among many' ([[clark-revolutionary-spring-ch07-national-questions-1]]).
+
+## Method
+
+- **Against the verdict of failure.** Revolutions are sums of dissonant intentions, so Clark measures effects rather than success. He counts the apprenticeship of every camp in modern politics and the 'revolution in government' among those effects ([[clark-revolutionary-spring-conclusion]], [[clark-revolutionary-spring-introduction]]).
+- **The politics of description.** He treats how contemporaries saw, counted and narrated social distress as part of the history, not a window onto it. The same Nantes data could feed Engels's class war or Guépin's technocratic reform ([[clark-revolutionary-spring-ch01-politics-of-description]]). He applies the same scrutiny to his own sources: the Galician record is polarized ([[clark-revolutionary-spring-ch01-galicia-1846-conclusions]]), and the archive of women's participation is male-authored ([[clark-revolutionary-spring-ch06-waving-from-windows]]). See [[politics-of-description-clark]].
+- **Contingency and persons, without great men.** He dwells on individuals (Blum in Leipzig, the Dutch king moved by news from Weimar) and says of the Dutch case that it is impossible to know what would have happened without those 'highly contingent events' ([[clark-revolutionary-spring-ch04-dogs-that-didnt-bark-end-of-beginning]], [[clark-revolutionary-spring-ch03-political-ferment-in-germany]]). Yet he insists the revolutionaries were inheritors, not authors, of revolution ([[clark-revolutionary-spring-ch05-establish-a-government]]).
+- **Scepticism about his own metaphors.** He unpacks the physics of the 'wave' before replacing it with two axes, propagation in space and accumulation over time ([[clark-revolutionary-spring-ch04-nouvelles-diverses-february]]). He borrows entropy from Carnot and Clausius while warning that it 'would be vulgar' to treat thermodynamics as a mirror of politics ([[clark-revolutionary-spring-ch07-revolution-shuts-itself-down]]). He says that 'impact' becomes the wrong metaphor at a distance from Europe ([[clark-revolutionary-spring-ch09-global-1848]]).
+- **Refusing forced binaries.** He declines to choose between primordialist and constructivist accounts of the nation ([[clark-revolutionary-spring-ch02-patriots-and-nations]]), and between reading the post-1848 absorption of the social question as co-option or as victory ([[clark-revolutionary-spring-ch09-material-progress-city]]). He handles counterfactuals warily ('fun but futile', after Ginsborg) and uses them to expose design flaws ([[clark-revolutionary-spring-conclusion]]).
+- **An intermediate plane of causation.** Between remote causes (economic cycles, ideas) and proximate triggers (an accidental shot) he places a 'time of politics' of hardening language and tripwire issues, operating over months and weeks ([[clark-revolutionary-spring-ch04-nouvelles-diverses-february]]).
+- **Eyewitnesses and attribution.** Much of the narrative runs through diaries and memoirs (Olivier, Baudry, d'Agoult, Hübner, Fuller, Belgioioso), and the notes repeatedly separate contemporaries' readings, such as Tocqueville's or Marx's, from Clark's own ([[clark-revolutionary-spring-ch03-glorious-days-liberal-revolution]], [[clark-revolutionary-spring-ch06-waving-from-windows]]).
+
+## Framings
+
+- **Periods of flux.** He contrasts periods of stabilization with periods of flux, reads the 1830s–40s as one, and says 'Our own age is one' ([[clark-revolutionary-spring-ch02-free-and-unfree-places-in-history]]).
+- **Counter-revolution as executor.** The line between revolution and counter-revolution was blurred, and the 1850s state reinvented itself using the revolution's own tools ([[clark-revolutionary-spring-introduction]], [[clark-revolutionary-spring-ch09-constellations-circulation]]). See [[post-revolutionary-synthesis-clark]].
+- **Entropy.** The downward arc of the revolutions was a loss of cohesion and also a contest of 'new and competing forms of order-making' ([[clark-revolutionary-spring-ch07-revolution-shuts-itself-down]]). See [[entropy-of-revolution-clark]].
+- **Hedged present-day analogies.** He compares 1848 with the Arab Spring and Tahrir Square, a forged manifesto with a 'deepfake', and the rumour-fed picture of 1830 with 'an image buffering fitfully over third-rate wifi'. He closes with Occupy, the Capitol storming and the Ottawa convoy, and limits each comparison explicitly ([[clark-revolutionary-spring-introduction]], [[clark-revolutionary-spring-ch07-vagabond-sovereignty]], [[clark-revolutionary-spring-ch03-glorious-days-liberal-revolution]], [[clark-revolutionary-spring-conclusion]]).
+
+## World Machines note (hedged)
+
+Clark offers no machine theory. His Europe-wide synchrony, his hiatus-and-reassembly narrative and his 'age of administration' give World Machines readers material, but the rhymes with [[gramsci-gap]], [[legibility-as-machine-core]] and [[history-machine]] are the notes' readings, not his claims.

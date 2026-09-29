@@ -146,6 +146,33 @@
     const btn  = document.getElementById('submit-btn');
     const msg  = document.getElementById('form-message');
 
+    // /api/submit sits behind Cloudflare Access. When the hostname's one
+    // CF_Authorization cookie belongs to another Access app (opening /wiki
+    // reissues it) or has expired, Access answers the POST with a redirect to
+    // its login page — which fetch() cannot follow usefully. Keep the draft,
+    // re-establish the session with a top-level visit to /login, come back.
+    const DRAFT_KEY = 'wm-submit-draft';
+    const FIELDS = ['url', 'type', 'format', 'description'];
+
+    function reauthenticate() {
+      try {
+        const draft = {};
+        FIELDS.forEach(f => { draft[f] = form[f].value; });
+        sessionStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+      } catch {}
+      location.href = '/login?return=' + encodeURIComponent('/submit');
+    }
+
+    try {
+      const saved = JSON.parse(sessionStorage.getItem(DRAFT_KEY) || 'null');
+      sessionStorage.removeItem(DRAFT_KEY);
+      if (saved) {
+        FIELDS.forEach(f => { if (saved[f]) form[f].value = saved[f]; });
+        msg.className = 'form-message';
+        msg.textContent = 'Your sign-in was refreshed — press Submit to send it.';
+      }
+    } catch {}
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       msg.className = 'form-message';
@@ -171,7 +198,14 @@
 
       try {
         const body = new FormData(form);
-        const res  = await fetch('/api/submit', { method: 'POST', body });
+        const res  = await fetch('/api/submit', { method: 'POST', body, redirect: 'manual' });
+        if (res.type === 'opaqueredirect' || res.status === 401) {
+          reauthenticate();
+          return;
+        }
+        if (!(res.headers.get('content-type') || '').includes('application/json')) {
+          throw new Error(`Server error (${res.status}) — please try again in a moment.`);
+        }
         const data = await res.json();
         if (res.ok) {
           msg.className = 'form-message success';
