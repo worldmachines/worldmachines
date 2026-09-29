@@ -1,9 +1,9 @@
 ---
 summary: "Nineteenth-century American diarist, poet and painter, wife of astronomer David Peck Todd and lover of Austin Dickinson, whose uncommonly candid diaries are the central evidentiary source of Peter Gay's Education of the Senses."
 tags: [mabel-loomis-todd, diaries-as-historical-source, victorian-sexuality, bourgeois-marriage, amherst, austin-dickinson, privatization-of-experience]
-last_updated: 2026-09-26
+last_updated: 2026-09-28
 level: canon
-sources: [gay-bourgeois-experience-v1-erotic-record-1-mabel-loomis, gay-bourgeois-experience-v1-erotic-record-2-mabel-loomis-todd, gay-bourgeois-experience-v1-erotic-record-3-mabel-loomis-dickinson, gay-bourgeois-experience-v1-appendix-sexual-symbols-todd-diaries, gay-bourgeois-experience-v1-communions-1-paradise-two, gay-bourgeois-experience-v1-communions-2-dubious-certainty-numbers, gay-bourgeois-experience-v1-communions-3-problematic-sex, gay-bourgeois-experience-v1-fortifications-2-social-science-cultural-symptom, gay-bourgeois-experience-v1-fortifications-4-private-experience, gay-bourgeois-experience-v1-carnal-knowledge-2-lessons-body]
+sources: [gay-bourgeois-experience-v1-erotic-record-1-mabel-loomis, gay-bourgeois-experience-v1-erotic-record-2-mabel-loomis-todd, gay-bourgeois-experience-v1-erotic-record-3-mabel-loomis-dickinson, gay-bourgeois-experience-v1-appendix-sexual-symbols-todd-diaries, gay-bourgeois-experience-v1-communions-1-paradise-two, gay-bourgeois-experience-v1-communions-2-dubious-certainty-numbers, gay-bourgeois-experience-v1-communions-3-problematic-sex, gay-bourgeois-experience-v1-fortifications-2-social-science-cultural-symptom, gay-bourgeois-experience-v1-fortifications-4-private-experience, gay-bourgeois-experience-v1-carnal-knowledge-2-lessons-body, gay-bourgeois-experience-v2-ch2-2-desire-holy-pure, gay-bourgeois-experience-v2-ch3-1-community-fantasies, gay-bourgeois-experience-v2-ch5-3-glandular-christianity-part-1, gay-bourgeois-experience-v2-ch6-2-hysteria-remorse-part-3, gay-bourgeois-experience-v2-ch5-2-budget-displacements]
 ---
 
 # Mabel Loomis Todd
@@ -33,3 +33,9 @@ After the move to Amherst in 1881 she began a decade-plus affair with Austin Dic
 ## In World Machines terms
 
 The notes read the Todds' dated tallies as a private, “near-actuarial” legibility regime applied to eros — a cousin of the [[modernity-machine]]'s record-keeping impulse but turned inward and kept secret from any authority, a partial fit only ([[gay-bourgeois-experience-v1-erotic-record-2-mabel-loomis-todd]], [[gay-bourgeois-experience-v1-appendix-sexual-symbols-todd-diaries]]).
+
+## In The Tender Passion (Vol. II)
+
+In [[gay-bourgeois-experience-v2]], [[peter-gay]] returns to Todd as a witness in several chapters rather than as the volume's portrait. She is his sharpest case of someone who "would not have known how to segregate affection from passion," set against the idea that love ends at the altar ([[gay-bourgeois-experience-v2-ch2-2-desire-holy-pure]]; see [[two-currents-of-love-gay]]). Her youthful reading list appears in his discussion of middle-class taste in fiction ([[gay-bourgeois-experience-v2-ch3-1-community-fantasies]]). Her view of marriage as a sacrament is cited, "in a more radical key," alongside the rhetoric of matrimonial sanctity ([[gay-bourgeois-experience-v2-ch5-3-glandular-christianity-part-1]]). She appears briefly moved to tears at a Chicago refuge for prostitutes ([[gay-bourgeois-experience-v2-ch6-2-hysteria-remorse-part-3]]).
+
+Her fullest role is in the chapter on sensuality's stratagems ([[stratagems-of-sensuality-gay]]). Her journals show sensuality flowing across school, church, boys, music, romance, nature, painting and the sea, which Gay reads as a "menu of pleasures" and a transferable emotional capacity. He cautions that she was writing in a self-conscious formula. He reads her steam-from-a-pipe association as an unconscious phallic fantasy. After marriage nature gains memory. In the affair with Austin Dickinson, landscape becomes a code of stolen pleasure, and during his dying a medium of "undoing," in which sensuality "will persist in its stratagems" ([[gay-bourgeois-experience-v2-ch5-2-budget-displacements]]).
