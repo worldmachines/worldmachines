@@ -8,6 +8,9 @@
 ## 2026-09-28 · aneesh (4)
 The production Pages project had no `GITHUB_TOKEN` or `GITHUB_REPO`, so `/api/submit` and `/api/join` could not reach GitHub. They were likely lost in the account cutover. `GITHUB_REPO` is now declared in `wrangler.jsonc`, and both endpoints return a clear 503 instead of calling `repos/undefined`. The token still has to be set as a Pages secret.
 
+## 2026-09-28 · aneesh (4)
+Christopher Clark's *Revolutionary Spring: Fighting for a New World, 1848–1849* (2023) is now in commons (taken over from Florian's list): 49 reading notes, 8 new canon pages — a book summary, `christopher-clark`, `robert-blum`, and concept pages `revolutionary-cascade-clark`, `politics-of-description-clark`, `entropy-of-revolution-clark`, `post-revolutionary-synthesis-clark` and `four-emancipations-clark` — plus append-only sections on 6 existing pages, including `caesarism-gay`, `converging-world-crises-bayly`, `the-mass-as-fiction` and `alexander-herzen`. The lake chunk/embed/publish is personal only (in copyright).
+
 ## 2026-09-28 · aneesh (3)
 Link submission was failing with Safari's "The string did not match the expected pattern." `/submit` and `/api/submit` share one Cloudflare Access app, while `/wiki` is a separate one, and there is only one `CF_Authorization` cookie per hostname. So after someone opened the wiki, or their session expired, Access answered the form's POST with a login redirect, and the page tried to parse the HTML as JSON. The form now detects that redirect, keeps the draft, sends the member through `/login` to refresh their session, and restores the fields so they can press Submit again. `/profile`, `/mcp` and the Resources team-library list get the same handling, with a sign-in link or prompt instead of a broken JSON parse.
 
