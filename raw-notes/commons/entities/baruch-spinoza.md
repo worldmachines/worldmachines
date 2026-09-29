@@ -1,9 +1,9 @@
 ---
 summary: "17th-century Dutch philosopher of radical immanence — lens grinder, heretic, first divergentist — whose substance monism, conatus theory, and critique of theological authority underpin both Rao's divergence machine narrative and Sathe's architecture of resistance, and whom Matthew Stewart's The Courtier and the Heretic (2006) recovers as a political revolutionary."
 tags: [thinker, philosopher, divergence-machine, spinoza, early-modern, lens-grinder, ethics, conatus, immanence, pantheism, resistance, legibility, 17th-century-philosophy, biography, amsterdam, excommunication, tractatus-theologico-politicus, stewart]
-last_updated: 2026-09-23
+last_updated: 2026-09-28
 level: canon
-sources: [stewart-courtier-and-heretic-ch01-the-hague-1676, stewart-courtier-and-heretic-ch02-bento, stewart-courtier-and-heretic-ch04-life-of-the-mind, stewart-courtier-and-heretic-ch06-hero-of-the-people, stewart-courtier-and-heretic-ch08-friends-of-friends, stewart-courtier-and-heretic-ch10-secret-philosophy, stewart-courtier-and-heretic-ch12-point-of-contact, stewart-courtier-and-heretic-ch13-surviving-spinoza, stewart-courtier-and-heretic-ch18-aftermath]
+sources: [stewart-courtier-and-heretic-ch01-the-hague-1676, stewart-courtier-and-heretic-ch02-bento, stewart-courtier-and-heretic-ch04-life-of-the-mind, stewart-courtier-and-heretic-ch06-hero-of-the-people, stewart-courtier-and-heretic-ch08-friends-of-friends, stewart-courtier-and-heretic-ch10-secret-philosophy, stewart-courtier-and-heretic-ch12-point-of-contact, stewart-courtier-and-heretic-ch13-surviving-spinoza, stewart-courtier-and-heretic-ch18-aftermath, wulf-magnificent-rebels-ch12-atheism-dispute, wulf-magnificent-rebels-ch15-new-confederation, wulf-magnificent-rebels-ch18-starving-rats-1]
 ---
 
 # Baruch Spinoza (1632–1677)
@@ -115,3 +115,13 @@ The *Major Works* entry above records the *Tractatus* as "foundational for moder
 - [[divergence-machine]] — the machine whose logic Spinoza's work prefigures
 - [[the-architecture-of-resistance]] — primary source (Sathe)
 - [[Adonis]] — parallel case of deliberate illegibility
+
+## Spinoza in the Jena Set's reception (Magnificent Rebels)
+
+The Stewart section above ends on the Romantic domestication of Spinoza, including Novalis's 'God-intoxicated man'. Andrea Wulf's [[wulf-magnificent-rebels]] shows Spinoza at work inside Jena philosophy around 1799-1801, in three places.
+
+- **The atheism dispute.** Defending his article that equated God with the moral order, Fichte compared Herder's essay on God, and Spinoza, to his own case, calling the resemblance to atheism greater in Herder ([[wulf-magnificent-rebels-ch12-atheism-dispute]]).
+- **Religion as contemplation of the universe.** Schleiermacher's *On Religion*, which Wulf makes the model for the friends' turn to a religion of feeling, drew on Schelling's unity and on Spinoza's God-is-nature ([[wulf-magnificent-rebels-ch15-new-confederation]]).
+- **Schelling's Absolute.** In breaking with Fichte, Schelling drew on Spinoza to posit an Absolute preceding subject and object, an 'Idealism of Nature' against Fichte's 'Idealism of the Ich' ([[wulf-magnificent-rebels-ch18-starving-rats-1]]).
+
+In all three the Spinoza in play is the monist of God and nature. The notes on Wulf's book record nothing of the political revolutionary Stewart recovers, which fits his account of which Spinoza the German reception kept.
