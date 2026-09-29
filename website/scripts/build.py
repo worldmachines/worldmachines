@@ -427,9 +427,12 @@ PRIVATE_LIBRARY_SCRIPT = '''\
           + '\n    </li>';
       }
       document.addEventListener('DOMContentLoaded', function () {
-        fetch('/api/library/private')
+        // redirect:'manual' — if Access intercepts (session expired, or the
+        // CF_Authorization cookie belongs to another Access app), the login
+        // redirect comes back opaque instead of as HTML that breaks r.json().
+        fetch('/api/library/private', { redirect: 'manual' })
           .then(function (r) {
-            if (r.status === 401) {
+            if (r.status === 401 || r.type === 'opaqueredirect') {
               document.getElementById('private-library-signin').style.display = '';
               return null;
             }

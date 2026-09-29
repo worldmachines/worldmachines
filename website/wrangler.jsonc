@@ -27,6 +27,11 @@
     "binding": "AI"
   },
   "vars": {
+    // Target of /api/submit's repository_dispatch and /api/join's issues. The
+    // matching GITHUB_TOKEN is a secret: `wrangler pages secret put GITHUB_TOKEN
+    // --project-name worldmachines` (fine-grained PAT on this repo: Contents +
+    // Issues read/write).
+    "GITHUB_REPO": "worldmachines/worldmachines",
     // Deliberately still a workers.dev hostname, and not oracle.worldmachines.org.
     //
     // This is server-side only: functions/api/ask.js and stats.js fetch it, the

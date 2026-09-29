@@ -93,6 +93,8 @@ This is a small high-trust group. `.github/CODEOWNERS` documents ownership and a
 | `LIBRARY` | R2 | `worldmachines-library` bucket — full PDFs and private article manifest |
 | `AI` | Workers AI | Oracle embedding + chat models |
 
+Plain vars also live in `wrangler.jsonc` (`vars`: `GITHUB_REPO`, `ORACLE_URL`). Secrets are set with `wrangler pages secret put <NAME> --project-name worldmachines`. `/api/submit` and `/api/join` need `GITHUB_TOKEN`, a fine-grained PAT on `worldmachines/worldmachines` with Contents + Issues read/write.
+
 **Deploying:** Pages does not auto-deploy on git push. Always deploy manually after structural changes:
 
 ```bash
