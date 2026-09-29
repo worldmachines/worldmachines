@@ -65,6 +65,42 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">28 September 2026 · aneesh</div>
+    <p>The production Pages project had no <code>GITHUB<em>TOKEN</code> or <code>GITHUB</em>REPO</code>, so <code>/api/submit</code> and <code>/api/join</code> could not reach GitHub. They were likely lost in the account cutover. <code>GITHUB_REPO</code> is now declared in <code>wrangler.jsonc</code>, and both endpoints return a clear 503 instead of calling <code>repos/undefined</code>. The token still has to be set as a Pages secret.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">28 September 2026 · aneesh</div>
+    <p>Link submission was failing with Safari's "The string did not match the expected pattern." <code>/submit</code> and <code>/api/submit</code> share one Cloudflare Access app, while <code>/wiki</code> is a separate one, and there is only one <code>CF_Authorization</code> cookie per hostname. So after someone opened the wiki, or their session expired, Access answered the form's POST with a login redirect, and the page tried to parse the HTML as JSON. The form now detects that redirect, keeps the draft, sends the member through <code>/login</code> to refresh their session, and restores the fields so they can press Submit again. <code>/profile</code>, <code>/mcp</code> and the Resources team-library list get the same handling, with a sign-in link or prompt instead of a broken JSON parse.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">28 September 2026 · aneesh</div>
+    <p>Peter Gay's *The Tender Passion* (Vol. II of *The Bourgeois Experience*, 1986) is now in commons, completing the five-volume series: 26 reading notes, 7 new canon pages — a book summary, <code>charles-kingsley</code> (scoped to Gay's reading), concept pages <code>two-currents-of-love-gay</code>, <code>stratagems-of-sensuality-gay</code>, <code>community-of-fantasies-gay</code> and <code>dividends-of-denial-gay</code>, and the synthesis <code>price-of-repression-gay</code> — plus the Volume II section of <code>the-bourgeois-experience</code> (replacing its placeholder) and append-only sections on <code>peter-gay</code>, <code>bourgeois-defenses-against-eros</code>, <code>bourgeoisophobia</code>, <code>bourgeois-privacy-as-conquest</code>, <code>mabel-loomis-todd</code> and <code>michel-foucault</code>. The lake chunk/embed/publish is personal only (in copyright).</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">28 September 2026 · aneesh</div>
+    <p>Richard Grove's *Green Imperialism: Colonial Expansion, Tropical Island Edens and the Origins of Environmentalism, 1600–1860* (1995) is now in commons: 49 reading notes, 9 new canon pages — a book summary, <code>richard-grove</code>, concept pages <code>desiccation-theory-grove</code>, <code>tropical-island-eden-grove</code>, <code>colonial-botanical-garden-grove</code> and <code>indigenous-knowledge-in-colonial-environmentalism-grove</code>, and syntheses <code>conservation-as-control-grove</code>, <code>diagnosis-waits-for-crisis-grove</code> and <code>more-utopia-grove</code> — plus append-only sections on 7 existing pages, including <code>alexander-von-humboldt</code>, <code>johann-gottfried-herder</code> and the legibility syntheses. The scanned two-page-spread PDF was re-OCR'd page by page. The lake chunk/embed/publish is personal only (in copyright).</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">27 September 2026 · aneesh</div>
+    <p>Elizabeth Eisenstein's *The Printing Revolution in Early Modern Europe* (2nd ed., 2005) is now in commons: 28 reading notes, 7 new canon pages — a book summary, <code>elizabeth-eisenstein</code>, concept pages <code>typographical-fixity-eisenstein</code>, <code>master-printer-workshop-eisenstein</code>, <code>standardization-and-individuation-eisenstein</code> and <code>printing-press-and-information-overload-eisenstein</code>, and the synthesis <code>scripture-and-nature-parting-eisenstein</code> — plus append-only sections on 8 existing pages, including <code>marshall-mcluhan</code>, <code>benedict-anderson</code>, <code>giordano-bruno</code> and <code>contested-uniformity-bayly</code>. The lake chunk/embed/publish is personal only (in copyright).</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">27 September 2026 · aneesh</div>
+    <p>C. A. Bayly's *The Birth of the Modern World, 1780–1914* is now in commons: 42 reading notes, 8 new canon pages — a book summary, <code>c-a-bayly</code>, concept pages such as <code>contested-uniformity-bayly</code> and <code>archaic-globalization-bayly</code>, and syntheses <code>converging-world-crises-bayly</code> and <code>legibility-hardens-hierarchy-bayly</code> — plus append-only sections on 12 existing pages, including <code>braudel-world-economy</code>, <code>david-s-landes</code> and <code>benedict-anderson</code>, which tie Bayly's global history to the Braudel, Landes and Gay material already in the corpus. Bayly-framed concepts carry a <code>-bayly</code> suffix so the bare names stay free for broader pages. The lake chunk/embed/publish is personal only (in copyright).</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">27 September 2026 · aneesh</div>
+    <p>Four of the five volumes of Peter Gay's *The Bourgeois Experience: Victoria to Freud* are now in commons: *Education of the Senses* (32 reading notes), *The Cultivation of Hatred* (42), *The Naked Heart* (29) and *Pleasure Wars* (24). They add 23 canon pages — a <code>peter-gay</code> page, a series page <code>the-bourgeois-experience</code> with one section per volume, a summary per volume, and concepts such as <code>alibis-for-aggression</code>, <code>bourgeoisophobia</code> and <code>bourgeois-privacy-as-conquest</code> — plus append-only sections on 8 existing pages, including <code>mass-man</code>, <code>the-mass-as-fiction</code> and <code>michel-foucault</code>. Vol II (*The Tender Passion*) is missing: the file labelled as it turned out to be a second scan of Vol III, so it waits for a genuine copy. Each volume passed both validators with 0 quarantine. The lake chunk/embed/publish (personal only; the books are in copyright) is still pending.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">24 September 2026 · aneesh</div>
+    <p>Braudel's *Civilization and Capitalism* is now in commons in full: Vol II (*The Wheels of Commerce*, 43 reading notes) and Vol III (*The Perspective of the World*, 38) join Vol I. They add 6 new canon pages, among them <code>braudel-world-economy</code>, <code>braudel-succession-of-dominant-centres</code> and the synthesis <code>capitalism-keeps-the-floor-competitive</code>, plus append-only sections on 9 existing pages, including <code>fernand-braudel</code> and <code>braudel-three-storey-house</code>. The two volumes were ingested in parallel runs; both passed both validators with 0 quarantine. The lake chunk/embed/publish (personal only; both books are in copyright) is still pending, so the Oracle can't quote them yet.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">24 September 2026 · aneesh</div>
+    <p><code>/wiki</code> had stopped updating: every Rebuild wiki run since #59 (the move of <code>raw-notes/aneesh/{entities,summaries}</code> into commons) crashed with <code>FileNotFoundError</code> on an old <code>aneesh/entities</code> path. The workflow's <code>git diff</code> reported each moved note only under its new path, so the incremental build never dropped the old one from its manifest. The diff now runs with <code>--no-renames</code>, and <code>build_wiki.py</code> also drops any manifest note whose file is gone, so a move or deletion can't wedge the build again; merging this triggers a full rebuild that clears the stale entries.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">24 September 2026 · aneesh</div>
     <p>The DuckLake catalogs behind the Oracle and Witness now shut down after 10 idle minutes instead of running around the clock: the container's idle-stop signal had been silently ignored (the sidecar ran as PID 1 with no SIGTERM handler), which cost ~$38 of a ~$47 monthly Cloudflare bill (wm-infra #15). The trade-off is a ~20s wake-up on the first question after a quiet spell, so <code>/oracle</code> now explains the wait if an answer takes more than 20 seconds. Separately, the Witness now summarizes private passages in parallel rather than one by one (wm-oracle #6); the sequential version took 55–84s per question and had been pushing Oracle answers past the ~100s edge timeout since Sep 21.</p>
   </article>
@@ -182,6 +218,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-09-24T06:17:33Z -->
+  <!-- built: 2026-09-29T01:51:55Z -->
 </body>
 </html>
