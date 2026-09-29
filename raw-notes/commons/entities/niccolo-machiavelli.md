@@ -1,8 +1,9 @@
 ---
 summary: "Florentine political thinker (1469–1527); in this wiki he appears primarily not as political theorist but as exemplar of the studiolo practice — nightly ritual of intellectual communion with ancient authors."
 tags: [Renaissance, political-philosophy, Italy, humanism, studiolo]
-last_updated: 2026-04-09
+last_updated: 2026-09-28
 level: canon
+sources: [irwin-ibn-khaldun-preface, irwin-ibn-khaldun-ch02-ibn-al-khatib-spain-return, irwin-ibn-khaldun-ch10-afterlife-french-germans, irwin-ibn-khaldun-ch10-colonialist-mahdi-gellner, irwin-ibn-khaldun-ch10-arab-american-novels-orientalism]
 ---
 
 # Niccolò Machiavelli
@@ -52,3 +53,11 @@ This makes Machiavelli, for Berlin, the first thinker to crack open the monist a
 - [[Personal Media vs Platform Media]] — the study as personal intellectual infrastructure
 - [[Value Pluralism]] — Berlin's doctrine that Machiavelli unwittingly pioneered
 - [[Counter-Enlightenment]] — the tradition Berlin places Machiavelli within
+
+## Irwin: the Machiavelli–Ibn Khaldun comparison tested
+
+Machiavelli is one of the most frequent partners in modern comparisons with [[ibn-khaldun]], and Robert Irwin's biography ([[irwin-ibn-khaldun]]) examines that pairing directly. The studiolo scene this page centres on has a counterpart in Irwin's material. Muhsin Mahdi and Patricia Crone suggested that Ibn Khaldun wrote the Muqaddima to understand his own political failure, and Irwin, who allows “there may be something in this”, compares Machiavelli and Clarendon, who wrote their histories after their careers were eclipsed ([[irwin-ibn-khaldun-ch02-ibn-al-khatib-spain-return]]).
+
+The comparison is common. Enan and Cheddadi draw it ([[irwin-ibn-khaldun-ch10-arab-american-novels-orientalism]]), Gellner set Ibn Khaldun beside Machiavelli, Keynes and Weber ([[irwin-ibn-khaldun-ch10-colonialist-mahdi-gellner]]), and even the anti-colonial translator Monteil made him Machiavelli's precursor ([[irwin-ibn-khaldun-ch10-afterlife-french-germans]]). Irwin lists it among the Westernizing precursor claims he means to resist ([[irwin-ibn-khaldun-preface]]).
+
+Irwin finds the differences “more striking” than the likenesses. Machiavelli stresses fortuna, virtù, the psychology of rulers, war and rhetoric, and would keep religion out of politics. Ibn Khaldun seeks underlying laws, writes no guide to statecraft, is moralistic and religious, and has a concept, ‘asabiyya, that Machiavelli has nothing to match ([[irwin-ibn-khaldun-ch10-arab-american-novels-orientalism]]). The shared trajectory of political operator turned gloomy generalizer holds up, while the shared theory does not. Berlin's claim, above, that Machiavelli separated civic from Christian morality is the sharpest point of contrast: in Irwin's reading Ibn Khaldun made no such split.

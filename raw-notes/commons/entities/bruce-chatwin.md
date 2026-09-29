@@ -1,8 +1,9 @@
 ---
 summary: "British travel writer and novelist whose account of Australian Aboriginal songlines in The Songlines (1988) provided the canonical literary documentation of how song constitutes geographical place."
 tags: [chatwin, songlines, aboriginal, travel-writing, place-making, australia]
-last_updated: 2026-04-27
+last_updated: 2026-09-28
 level: canon
+sources: [irwin-ibn-khaldun-preface, irwin-ibn-khaldun-ch03-nomads-asabiyya]
 ---
 
 # Bruce Chatwin
@@ -29,3 +30,9 @@ Chatwin's central intuition (disputed by some anthropologists as romanticized) i
 - [[language-as-world-making]] — the general principle the songline exemplifies
 - [[tuan-1991-language-and-the-making-of-place]] — Tuan's use of Chatwin
 - [[naming-as-place-making]] — written-culture cognate of the songline
+
+## Irwin: Chatwin as an inheritor of Ibn Khaldun's nomad
+
+This page notes that Chatwin's intuition that humans are constitutionally nomadic has been disputed as romanticized. Robert Irwin's *Ibn Khaldun: An Intellectual Biography* ([[irwin-ibn-khaldun]]) supplies a premodern source for that romance. Irwin names Chatwin, with Frank Herbert and Naguib Mahfouz, among modern writers who drew on [[ibn-khaldun]] ([[irwin-ibn-khaldun-preface]]). He places Chatwin as a later romanticizer of the Muqaddima's thesis that scarcity makes desert people healthier and better in character than plentifully fed hill people ([[irwin-ibn-khaldun-ch03-nomads-asabiyya]]).
+
+Irwin is quietly sceptical of this primitivism, in its medieval and modern forms alike. He notes that later observers (Lawrence, Dickson, Thesiger, Cole) report disease and malnutrition among desert peoples, and calls Ibn Khaldun's denial that hunger kills “somewhat eccentric” ([[irwin-ibn-khaldun-ch03-nomads-asabiyya]]). The link matters for how this page's songline material is read. Chatwin's nomadism has a long literary pedigree that runs back through the Muqaddima's moral valuation of desert life, and Irwin treats that valuation as a moralizing trope rather than an observation.

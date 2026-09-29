@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-09-28 · aneesh (7)
+Robert Irwin's *Ibn Khaldun: An Intellectual Biography* (2018) is now in commons (taken over from Florian's list): 23 reading notes, 6 new canon pages — a book summary, `robert-irwin`, `asabiyya-irwin`, and syntheses `terminal-medievals-vs-early-moderns-irwin`, `muqaddima-enchanted-frame-irwin` and `psychohistory-and-world-machines-irwin` — plus append-only sections on `ibn-khaldun`, `civilization-undone-by-its-own-success`, `giambattista-vico`, `niccolo-machiavelli` and `bruce-chatwin`. Irwin's reading of Ibn Khaldun as a man of his own Maghribi, Sufi and Mamluk world, not a proto-modern sociologist, tempers the psychohistory genealogy. The lake chunk/embed/publish is personal only (in copyright).
+
 ## 2026-09-28 · aneesh (6)
 Robin Douglass's *Rousseau and Hobbes: Nature, Free Will, and the Passions* (2015) is now in commons (taken over from Florian's list): 33 reading notes, 8 new canon pages — a book summary, `robin-douglass`, the vault's first `thomas-hobbes` page, concept pages `hobbism-douglass`, `amour-propre-douglass`, `sovereignty-inverted-douglass` and `love-and-fear-douglass`, and the synthesis `making-a-people-one-douglass` — plus append-only sections on `jean-jacques-rousseau`, `adam-smith`, `voltaire` and `the-legible-commonwealth`. The lake chunk/embed/publish is personal only (in copyright).
 

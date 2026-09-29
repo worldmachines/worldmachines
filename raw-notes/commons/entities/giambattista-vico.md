@@ -1,8 +1,9 @@
 ---
 summary: "Giambattista Vico (1668–1744) was a Neapolitan philosopher who argued that each civilization must be understood from within through imaginative participation — a proto-hermeneutic challenge to Enlightenment universalism."
 tags: [vico, counter-enlightenment, hermeneutics, historical-understanding, berlin, fantasia, verum-ipsum-factum, cultural-incommensurability]
-last_updated: 2026-04-09
+last_updated: 2026-09-28
 level: canon
+sources: [irwin-ibn-khaldun-preface, irwin-ibn-khaldun-ch03-bedouin-berbers-genealogy, irwin-ibn-khaldun-ch04-philosophy-cyclical-history, irwin-ibn-khaldun-ch10-toynbee-rosenthal]
 ---
 
 # Giambattista Vico
@@ -56,3 +57,11 @@ This is not a faithful application of Vico — Bloom reads him as a precursor fo
 - [[Western Canon]] — structured by Vico's historical ages
 - Source: [[Isaiah Berlin — Against the Current]]
 - Source: [[The Influence of Anxiety]]
+
+## Irwin: Vico beside Ibn Khaldun
+
+Robert Irwin's *Ibn Khaldun: An Intellectual Biography* ([[irwin-ibn-khaldun]]) gives the fullest comparison of Vico with a non-Western cyclical thinker in this wiki. Irwin lists Vico among the Western figures whom [[ibn-khaldun]] has been made to foreshadow, which he treats as a warning sign ([[irwin-ibn-khaldun-preface]]). He nonetheless draws up his own list of similarities: corsi and ricorsi, three ages, luxury destroying empires, a religious impetus behind the historical project, a method rooted in law, and a similar neglect by contemporaries ([[irwin-ibn-khaldun-ch04-philosophy-cyclical-history]]). He sets the pair within a larger family of pessimistic cyclical histories (Polybius, Spengler, Mann's *Buddenbrooks*, Mahfouz, Valéry) and frames these as parallels, not as a lineage.
+
+Two further notes place Vico on the reception side. Toynbee's search for thinkers willing to generalize about history included Vico among his explicit debts ([[irwin-ibn-khaldun-ch10-toynbee-rosenthal]]). Jim Penman's *Biohistory* (2015) quotes Vico's sequence of crude, severe, benign, delicate and dissolute as a present-day version of the luxury-ruins-empires view, which Irwin reports without endorsing ([[irwin-ibn-khaldun-ch03-bedouin-berbers-genealogy]]).
+
+This sits alongside the Berlin reading above rather than against it. Irwin's Vico is a comparandum for Ibn Khaldun's cycle, not the pluralist hermeneut.
