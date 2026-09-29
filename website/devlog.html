@@ -66,6 +66,10 @@
   <div class="devlog">
   <article class="devlog-entry">
     <div class="devlog-meta">28 September 2026 · aneesh</div>
+    <p>The production Pages project had no <code>GITHUB<em>TOKEN</code> or <code>GITHUB</em>REPO</code>, so <code>/api/submit</code> and <code>/api/join</code> could not reach GitHub. They were likely lost in the account cutover. <code>GITHUB_REPO</code> is now declared in <code>wrangler.jsonc</code>, and both endpoints return a clear 503 instead of calling <code>repos/undefined</code>. The token still has to be set as a Pages secret.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">28 September 2026 · aneesh</div>
     <p>Link submission was failing with Safari's "The string did not match the expected pattern." <code>/submit</code> and <code>/api/submit</code> share one Cloudflare Access app, while <code>/wiki</code> is a separate one, and there is only one <code>CF_Authorization</code> cookie per hostname. So after someone opened the wiki, or their session expired, Access answered the form's POST with a login redirect, and the page tried to parse the HTML as JSON. The form now detects that redirect, keeps the draft, sends the member through <code>/login</code> to refresh their session, and restores the fields so they can press Submit again. <code>/profile</code>, <code>/mcp</code> and the Resources team-library list get the same handling, with a sign-in link or prompt instead of a broken JSON parse.</p>
   </article>
   <article class="devlog-entry">
@@ -214,6 +218,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-09-29T01:48:58Z -->
+  <!-- built: 2026-09-29T01:51:55Z -->
 </body>
 </html>
