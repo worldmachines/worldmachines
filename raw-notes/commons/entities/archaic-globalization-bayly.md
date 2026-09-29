@@ -1,9 +1,9 @@
 ---
 summary: "Bayly's “archaic globalization”: a pre-nation-state world of universal kingship, cosmic religion and humoral bodily practice that consumed diversity, which proto-capitalist trade began to cannibalize and which nineteenth-century nation-states captured and renationalized rather than erased."
 tags: [archaic-globalization, globalization, universal-kingship, pilgrimage, caste, renationalization, c-a-bayly]
-last_updated: 2026-09-27
+last_updated: 2026-09-28
 level: canon
-sources: [bayly-birth-of-the-modern-world-ch01-fringes-and-archaic-globalization, bayly-birth-of-the-modern-world-ch01-old-regime-society-and-difference, bayly-birth-of-the-modern-world-intro-thematic-problems-of-history, bayly-birth-of-the-modern-world-ch06c-new-imperialism-and-internationalism, bayly-birth-of-the-modern-world-ch09-pilgrimage-print-nation]
+sources: [bayly-birth-of-the-modern-world-ch01-fringes-and-archaic-globalization, bayly-birth-of-the-modern-world-ch01-old-regime-society-and-difference, bayly-birth-of-the-modern-world-intro-thematic-problems-of-history, bayly-birth-of-the-modern-world-ch06c-new-imperialism-and-internationalism, bayly-birth-of-the-modern-world-ch09-pilgrimage-print-nation, mann-1493-appendix-b-globalization-in-beta, mann-1493-ch01-seams-of-pangaea, mann-1493-ch01-shiploads-of-silver]
 ---
 
 # Archaic Globalization (Bayly)
@@ -48,6 +48,18 @@ Archaic religious travel was retooled in the same way. Steamships, railways and 
 
 - **[[history-machine]].** A new order assembling itself out of redirected, pre-existing components is a loose but genuine rhyme. Bayly's builders, however, are chartered companies and slavers, not a silent historiographic process, and the parts being cannibalized are moral and religious ([[bayly-birth-of-the-modern-world-ch01-fringes-and-archaic-globalization]]).
 - **[[legibility-as-machine-core]].** Caste reads as a rough forerunner in miniature of classificatory ambition, but it worked through honour, blood and purity rather than census and statistics ([[bayly-birth-of-the-modern-world-ch01-fringes-and-archaic-globalization]]). The later renationalization is a standardizing dynamic, but here uniformity comes from rivalry between states rather than from a single administrative apparatus ([[bayly-birth-of-the-modern-world-ch06c-new-imperialism-and-internationalism]]).
+
+## Mann: a first pass at globalization in Fujian
+
+Charles C. Mann's [[mann-1493]] offers a neighbouring periodization in two passes, without citing Bayly.
+
+- **The first pass.** Mann calls the medieval Eurasian system, overland and by sea, 'a first pass at globalization' that 'reached its apogee in the fourteenth century'. Its eastern terminus was Zaytun (Quanzhou), which Ibn Battuta called the biggest port in the world ([[mann-1493-appendix-b-globalization-in-beta]]).
+- **Bulk, not boutique.** Against Marco Polo's luxury-focused picture, Fujianese traders 'made most of their money from items that Polo would have found mundane', such as bulk copper and iron for Southeast Asian temples ([[mann-1493-appendix-b-globalization-in-beta]]). This sits in some tension with the honorific goods this page places at the centre of archaic exchange, though the two accounts may describe different layers of trade. The tension is this section's reading.
+- **'Foreign' as a legal category.** Chinese converted to Islam to register as foreigners with privileges, so foreignness was a fiscal and legal status as much as an ethnic one ([[mann-1493-appendix-b-globalization-in-beta]]).
+- **Continuity of people.** After the Ming let Zaytun silt up, its trading families resurfaced in the Yuegang silver trade, so the sixteenth-century 'birth of globalization' inherited personnel and know-how from the first pass ([[mann-1493-appendix-b-globalization-in-beta]]).
+- **What was new after 1492.** In the body of the book Mann concedes the Silk Road and Indian Ocean networks but claims nothing before joined both hemispheres at a scale able to disrupt societies on opposite sides of the planet. The notes read this as sitting in tension with this page's stress on older integration, while noting that Mann does concede the earlier networks ([[mann-1493-ch01-seams-of-pangaea]], [[mann-1493-ch01-shiploads-of-silver]]).
+
+The hedge the notes carry: Mann offers a narrative, not a theory, and his two passes are not a model of how one globalization cannibalizes another.
 
 ## See also
 
