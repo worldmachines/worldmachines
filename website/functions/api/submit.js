@@ -39,6 +39,11 @@ export async function onRequestPost(ctx) {
     submitted_at: new Date().toISOString(),
   };
 
+  if (!env.GITHUB_TOKEN || !env.GITHUB_REPO) {
+    console.error('submit: GITHUB_TOKEN / GITHUB_REPO not configured on the Pages project');
+    return Response.json({ error: 'Submissions are temporarily unavailable — please tell the project admin.' }, { status: 503 });
+  }
+
   const ghRes = await fetch(
     `https://api.github.com/repos/${env.GITHUB_REPO}/dispatches`,
     {

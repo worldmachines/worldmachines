@@ -41,6 +41,11 @@ export async function onRequestPost({ request, env }) {
     'Also ensure their email is allowed through Cloudflare Access (Zero Trust → Access → Applications → worldmachines).',
   ].filter(l => l !== null).join('\n');
 
+  if (!env.GITHUB_TOKEN || !env.GITHUB_REPO) {
+    console.error('join: GITHUB_TOKEN / GITHUB_REPO not configured on the Pages project');
+    return Response.json({ error: 'Join requests are temporarily unavailable — please tell the project admin.' }, { status: 503 });
+  }
+
   const res = await fetch(
     `https://api.github.com/repos/${env.GITHUB_REPO}/issues`,
     {
