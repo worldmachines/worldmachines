@@ -1,0 +1,1483 @@
+# Curated chunk sidecar for source `morley-diderot-v1`
+# (Diderot and the Encyclopaedists, Vol. I, John Morley; Macmillan, first ed. 1878, New Edition
+# 1886 as reprinted 1905; Project Gutenberg eBook #15098).
+#
+# license_class: open -> verbatim quote text is RETAINED in this committed copy, per
+# INGEST-LOCAL.md sec.14: for open sources the per-unit sidecars are concatenated as-is,
+# full start_quote/end_quote included. The EDITION was checked, not merely the work:
+# Morley died in 1923; the text is his own (no translator, no modern editorial layer), and
+# Project Gutenberg hosts it as public domain in the US. Same basis as the adams-education,
+# chaucer-canterbury-tales and dante-divine-comedy sidecars.
+#
+# Spans are character offsets into the extraction pinned by MANIFEST.json
+# sha256 11819dd8acd222610e7e3ecddde4407d704814bfa2186bd487334abb44192be3
+# (533276 chars -- offsets are character indices into the UTF-8 text and are valid
+# only against that exact extraction). The Project Gutenberg header and licence footer
+# were cut from the extraction BEFORE offsets were resolved (source.txt contains no PG
+# boilerplate; the first unit starts at char 216, after the 1905 title
+# page), as were the Contents list, Morley's 299 endnotes and their inline [N] markers,
+# and PG _italic_ underscores. Per-chunk char_start/char_end were resolved by locating
+# start_quote/end_quote within each unit's span; all 150 curated chunks resolved to a
+# single unambiguous span. Of the 300 quote strings, 145 match the extraction
+# byte-for-byte and 155 match only after newline-to-space folding (the
+# whitespace-tolerant search lake/chunk.py performs).
+#
+# CURATED ONLY: these are the reader-selected chunks; the lake's mechanically derived
+# `#uNN-fKKK` fallback chunks are regenerable from plan.json + source.txt.
+# Chunk ids match each reading note's `cites:` field.
+source: morley-diderot-v1
+units:
+- nn: 1
+  unit_id: preface-ch1-preliminary
+  note_id: morley-diderot-v1-preface-ch1-preliminary
+  span: 216:16476
+  chunks:
+  - id: morley-diderot-v1#u01-c1
+    label: c1
+    heading: The Church's false dawn at mid-century
+    char_start: 2668
+    char_end: 4280
+    start_quote: There was a moment in the last century when the Gallican church hoped
+    end_quote: most triumphant days that they had known since the Reformation.
+    why: 'Sets up the retrospective irony: the Church at its apparent zenith just before the assault.'
+  - id: morley-diderot-v1#u01-c2
+    label: c2
+    heading: Scientific idea without the social idea
+    char_start: 6310
+    char_end: 7397
+    start_quote: They had the scientific idea, but they lacked the social
+    end_quote: was the decisive expression of that rejection.
+    why: Morley's diagnosis of why earlier heretics failed and why the Church's directing role held for
+      centuries.
+  - id: morley-diderot-v1#u01-c3
+    label: c3
+    heading: The new phase and the Encyclopædia as symbol
+    char_start: 7399
+    char_end: 8775
+    start_quote: After the middle of the last century the insurrection against the pretensions of the
+      Church
+    end_quote: The great symbol of this new comprehensiveness in the insurrection was the Encyclopædia.
+    why: States Morley's thesis that the movement joined scientific and social ideas, with the Encyclopædia
+      as its symbol.
+  - id: morley-diderot-v1#u01-c4
+    label: c4
+    heading: The cheerful doctrine of human plasticity
+    char_start: 8777
+    char_end: 10495
+    start_quote: The Encyclopædia was virtually a protest against the old organisation,
+    end_quote: what intense interest it lent to every detail of economics and legislation and government.
+    why: Morley's account of the core moral of the Encyclopædia and why it drove every later social improvement.
+  - id: morley-diderot-v1#u01-c5
+    label: c5
+    heading: Churchly chagrin and the new spiritual power
+    char_start: 10497
+    char_end: 11653
+    start_quote: The deadly chagrin with which churchmen saw the encyclopedic fabric
+    end_quote: for the means of satisfying them.
+    why: Explains the structural clash between secular knowledge and the Church, and frames the Encyclopædia
+      as a provisional new spiritual power.
+  - id: morley-diderot-v1#u01-c6
+    label: c6
+    heading: Diderot as the one real thinker
+    char_start: 14771
+    char_end: 16471
+    start_quote: Whether we accept or question Comte's strong description of Diderot as
+    end_quote: apart from the important place that he holds in the history of literature and opinion.
+    why: Morley's case for Diderot's distinctive place among Voltaire, Rousseau and himself.
+- nn: 2
+  unit_id: ch2-youth-1
+  note_id: morley-diderot-v1-ch2-youth-1
+  span: 16476:33799
+  chunks:
+  - id: morley-diderot-v1#u02-c1
+    label: c1
+    heading: The man of Langres as weathercock
+    char_start: 17349
+    char_end: 17777
+    start_quote: Thus they learn from earliest infancy to turn to every wind.
+    end_quote: For myself, I belong to my country side.
+    why: Diderot's own account of the Langres temperament, which Morley adopts to explain his versatility
+      and clumsy expression.
+  - id: morley-diderot-v1#u02-c2
+    label: c2
+    heading: The father and the school prizes
+    char_start: 18385
+    char_end: 18919
+    start_quote: One of the sweetest moments of my life," he once said
+    end_quote: a grave and sterling man melted to tears.
+    why: Diderot's memory of his father's tears, the book's key evidence for the affection behind his
+      family portrait.
+  - id: morley-diderot-v1#u02-c3
+    label: c3
+    heading: Men of letters as successors of the Jesuits
+    char_start: 24255
+    char_end: 25759
+    start_quote: The all-important fact about the men of letters in France was
+    end_quote: which made the world and its daily interests so real to them.
+    why: Morley's thesis that the men of letters were a new order inheriting spiritual power from the
+      Jesuits, with his hedged credit to the Order.
+  - id: morley-diderot-v1#u02-c4
+    label: c4
+    heading: What the man of letters is
+    char_start: 26684
+    char_end: 27443
+    start_quote: He is borne on the wings neither of a broad philosophic conception
+    end_quote: each case of conduct, of policy, or of new opinion as it arises.
+    why: Morley's definition of the man of letters as dispersive, popularising and empirical, in contrast
+      to Jesuit and systematic thinker.
+  - id: morley-diderot-v1#u02-c5
+    label: c5
+    heading: Shrove Tuesday and the vow
+    char_start: 31248
+    char_end: 31508
+    start_quote: That day," Diderot used to tell his children in later years
+    end_quote: to the misery of such a day as that.
+    why: The central anecdote of Diderot's penury and the vow Morley says he faithfully kept.
+  - id: morley-diderot-v1#u02-c6
+    label: c6
+    heading: Judging people by what they were
+    char_start: 32708
+    char_end: 33797
+    start_quote: He was absolutely uncramped by any of the formal mannerisms of the spirit.
+    end_quote: but wholly to what they were.
+    why: Morley's own verdict on Diderot's temperament, set against Goethean self-cultivation.
+- nn: 3
+  unit_id: ch2-youth-2
+  note_id: morley-diderot-v1-ch2-youth-2
+  span: 33799:50866
+  chunks:
+  - id: morley-diderot-v1#u03-c1
+    label: c1
+    heading: Divine gift of pity and the snuff-box
+    char_start: 35477
+    char_end: 37133
+    start_quote: Throughout his life Diderot was blessed with that divine gift of pity,
+    end_quote: nor more careless of his own ease.
+    why: Morley's core claim that Diderot's sympathy was practical, delicate and acted on, with Diderot's
+      own snuff-box anecdote.
+  - id: morley-diderot-v1#u03-c2
+    label: c2
+    heading: 'The Formica leo: generosity abused'
+    char_start: 39742
+    char_end: 41122
+    start_quote: It is needless to say that such a temper was constantly abused.
+    end_quote: '''M. Diderot, I have the honour to wish you good day.'''
+    why: Shows how Diderot's generosity was exploited and that he did not mind, via the family's testimony
+      and the ant-lion anecdote.
+  - id: morley-diderot-v1#u03-c3
+    label: c3
+    heading: Against public prosecutors for the universe
+    char_start: 41125
+    char_end: 42968
+    start_quote: Yet insolence and ingratitude made no difference to Diderot.
+    end_quote: that is all I remember; the rest is as good as forgotten."
+    why: Diderot's reasoned leniency toward reprobates and his focus on the good, with Morley's hedged
+      evaluation of it.
+  - id: morley-diderot-v1#u03-c4
+    label: c4
+    heading: 'Not a man of books: truth in the service of doing good'
+    char_start: 45199
+    char_end: 46308
+    start_quote: Yet Diderot was not essentially a man of books.
+    end_quote: in the midst of incessant theorising.
+    why: Morley's statement that Diderot subordinated knowledge to practical life, anticipating the social-practical
+      emphasis of the Encyclopædia.
+  - id: morley-diderot-v1#u03-c5
+    label: c5
+    heading: Courtship and marriage to Antoinette Champion (1743)
+    char_start: 46352
+    char_end: 48022
+    start_quote: At the moment when he had most difficulty in procuring a little bread
+    end_quote: In Diderot's case destiny was hostile.
+    why: Narrates how the penniless Diderot won his marriage against his father's refusal.
+  - id: morley-diderot-v1#u03-c6
+    label: c6
+    heading: Domestic disorder and Morley's refusal to judge
+    char_start: 48024
+    char_end: 50861
+    start_quote: His wife was over thirty.
+    end_quote: or the Cardinal de Rohan to the old opinions.
+    why: Morley's account of the mismatch, the Puisieux and Voland liaisons, and his argument that irregular
+      manners are not an effect of new religious opinions.
+- nn: 4
+  unit_id: ch3-early-writings-1
+  note_id: morley-diderot-v1-ch3-early-writings-1
+  span: 50866:72044
+  chunks:
+  - id: morley-diderot-v1#u04-c1
+    label: c1
+    heading: Splendid talents, no masterpiece
+    char_start: 51990
+    char_end: 52380
+    start_quote: In Diderot were splendid talents. It was the art of prudent stewardship
+    end_quote: but no one fine work.
+    why: 'Morley''s central verdict on Diderot as a writer: talent without economy, eminent yet never
+      producing a masterpiece.'
+  - id: morley-diderot-v1#u04-c2
+    label: c2
+    heading: The munificent prodigal
+    char_start: 55314
+    char_end: 56356
+    start_quote: He is the munificent prodigal of letters, always believing his substance inexhaustible
+    end_quote: did not take himself seriously enough.
+    why: Diderot's own defence of giving his time to others, and Morley's judgement on it.
+  - id: morley-diderot-v1#u04-c3
+    label: c3
+    heading: The talker rather than the writer
+    char_start: 56358
+    char_end: 57723
+    start_quote: Apart from his moral inaptitude for the monumental achievements of authorship,
+    end_quote: from the mere perusal of his writings.
+    why: Morley's argument that Diderot's power lay in conversation, with the Johnson and Coleridge comparison.
+  - id: morley-diderot-v1#u04-c4
+    label: c4
+    heading: A book is only a symbol
+    char_start: 65198
+    char_end: 66403
+    start_quote: The historians of literature too often write as if a book were the cause
+    end_quote: multiplied unbelievers and indifferents."
+    why: 'Morley''s method: ideas follow practical circumstance and living movements, not only other books.'
+  - id: morley-diderot-v1#u04-c5
+    label: c5
+    heading: Why Shaftesbury, why common sense
+    char_start: 66803
+    char_end: 68627
+    start_quote: Nor was it accident that drew Diderot's attention to Shaftesbury, rather
+    end_quote: the great points which the universal church claims to have decided.
+    why: Explains, via Jansenist convulsions and Unigenitus, the social conditions that shaped Diderot's
+      first scepticism.
+  - id: morley-diderot-v1#u04-c6
+    label: c6
+    heading: Physics, not metaphysics, and the world as machine
+    char_start: 70455
+    char_end: 72042
+    start_quote: Diderot did indeed perceive even so early as this that the controversy
+    end_quote: and proceeded to the discussion, as we shall presently see, from another side.
+    why: Diderot's early claim that experimental physics drives the theological debate, with the world-as-machine
+      image and Morley's assessment of its inadequacy.
+- nn: 5
+  unit_id: ch3-early-writings-2
+  note_id: morley-diderot-v1-ch3-early-writings-2
+  span: 72044:91500
+  chunks:
+  - id: morley-diderot-v1#u05-c1
+    label: c1
+    heading: The apology for strong passions
+    char_start: 72317
+    char_end: 73449
+    start_quote: People are for ever declaiming against the passions;
+    end_quote: and he would end by becoming a true monster, if he were to succeed!"
+    why: The Thoughts' opening, which Morley calls the key-note of Diderot's character and which sets
+      his hostility to Christian asceticism.
+  - id: morley-diderot-v1#u05-c2
+    label: c2
+    heading: Demi-scepticism and the weighing of reasons
+    char_start: 75338
+    char_end: 76632
+    start_quote: A demi-scepticism is the mark of a feeble understanding.
+    end_quote: how come we to decide with such rapidity? (§ 24.)
+    why: Diderot's statement of sceptical method, including its own demand for impartial weighing.
+  - id: morley-diderot-v1#u05-c3
+    label: c3
+    heading: Morley on the method of eighteenth-century controversy
+    char_start: 82603
+    char_end: 83658
+    start_quote: In all this we notice one constant characteristic of the eighteenth
+    end_quote: weighing one revealed system against another in an equal balance.
+    why: Morley's own analytical verdict on why the assailant-versus-apologist method ended in negation.
+  - id: morley-diderot-v1#u05-c4
+    label: c4
+    heading: The dice argument and the atheist's reply
+    char_start: 83861
+    char_end: 86089
+    start_quote: I open," says Diderot, "the pages of a celebrated professor, and I
+    end_quote: more astonished at the hypothetical duration of chaos.
+    why: 'A striking concession in a theistic work: the probabilistic argument for a chance-generated
+      universe.'
+  - id: morley-diderot-v1#u05-c5
+    label: c5
+    heading: On the Sufficiency of Natural Religion
+    char_start: 86514
+    char_end: 87253
+    start_quote: The revealed law contains no moral precept which I do not find recommended
+    end_quote: escape me entirely."
+    why: The core claim of the 1747 supplement that revelation adds nothing to morality or intelligible
+      truth.
+  - id: morley-diderot-v1#u05-c6
+    label: c6
+    heading: Shaftesbury's permanent influence
+    char_start: 87731
+    char_end: 88813
+    start_quote: Shaftesbury's influence on Diderot was permanent.
+    end_quote: like the dawn after the foulness of night.
+    why: Morley's explanation of why naturalistic religion was liberating to Diderot and how it shaped
+      his later ethics and aesthetics.
+- nn: 6
+  unit_id: ch3-early-writings-3
+  note_id: morley-diderot-v1-ch3-early-writings-3
+  span: 91500:113628
+  chunks:
+  - id: morley-diderot-v1#u06-c1
+    label: c1
+    heading: Glenat the copyist and the police at the hearth
+    char_start: 95029
+    char_end: 97572
+    start_quote: The history of one of these ragged clients is to our point.
+    end_quote: the man of letters in France was worse off than his brother in England.
+    why: Diderot's own account of a spy sent to his door, with Morley's verdict on the French author's
+      position relative to the English.
+  - id: morley-diderot-v1#u06-c2
+    label: c2
+    heading: The atheist on the unknown machine
+    char_start: 99381
+    char_end: 99828
+    start_quote: That is all imagination," rejoins the atheist.
+    end_quote: they label the work with the name of it's author.
+    why: The sceptical atheist's attack on the design argument, using the image of an unknown machine
+      of which we know only a tooth or two of one wheel.
+  - id: morley-diderot-v1#u06-c3
+    label: c3
+    heading: Morley on the limits of the sceptical argument
+    char_start: 100936
+    char_end: 101936
+    start_quote: In this rudimentary form the chief speaker presses some of the
+    end_quote: he could not complain on his own principles.
+    why: Morley's reading of the argument as relativity of knowledge rather than dogmatic denial, with
+      his hedge on Diderot's own position.
+  - id: morley-diderot-v1#u06-c4
+    label: c4
+    heading: Rationalistic negation and eternal matter
+    char_start: 102613
+    char_end: 103095
+    start_quote: In truth, Diderot's mind was at this time floating in an atmosphere of
+    end_quote: by virtue of its inherent quality of motion.
+    why: Morley's summary of Diderot's early intellectual position and the first lean toward self-moving
+      matter.
+  - id: morley-diderot-v1#u06-c5
+    label: c5
+    heading: Diderot on the character of women
+    char_start: 109344
+    char_end: 111435
+    start_quote: Diderot has left some curious and striking reflections upon the fate and
+    end_quote: All this was said in no bitterness, but in the spirit of the strong observer.
+    why: Contains Diderot's quoted remarks on women and Morley's framing of them as unbitter observation
+      without social programme.
+  - id: morley-diderot-v1#u06-c6
+    label: c6
+    heading: Pity for women and Morley's credit
+    char_start: 113040
+    char_end: 113623
+    start_quote: The thought went no further, in Diderot's mind, than this pathetic
+    end_quote: that screen a broad and dolorous gulf.
+    why: Morley's verdict that Diderot offered realism and pity but left practical emancipation to Condorcet
+      and the next generation.
+- nn: 7
+  unit_id: ch4-new-philosophy-1
+  note_id: morley-diderot-v1-ch4-new-philosophy-1
+  span: 113628:127817
+  chunks:
+  - id: morley-diderot-v1#u07-c1
+    label: c1
+    heading: Diderot introduces Relativity into France
+    char_start: 117016
+    char_end: 118301
+    start_quote: It was the first effective introduction into France of these great and fundamental principles;
+    end_quote: at the moment when circumstances were ripe for it.
+    why: 'Morley''s own verdict on the Letter''s significance: relativity as a weapon against the absolutist
+      standing organisation.'
+  - id: morley-diderot-v1#u07-c2
+    label: c2
+    heading: Condillac, Rousseau and Diderot
+    char_start: 118303
+    char_end: 120047
+    start_quote: Condillac, as we have said, had published his first work, the Essay on
+    end_quote: the share of Condillac in providing a text for Diderot's first considerable performance,
+      is equally evident.
+    why: Sets out Condillac's step beyond Locke and Morley's reconstruction of the mutual influence between
+      Condillac and Diderot.
+  - id: morley-diderot-v1#u07-c3
+    label: c3
+    heading: Why the Cheselden-type experiment could not be conclusive
+    char_start: 115736
+    char_end: 116643
+    start_quote: In a vigorous passage he shows the difficulties in the way of
+    end_quote: and probably never will be.
+    why: Diderot's methodological scepticism about the blind-given-sight experiment, endorsed by Morley.
+  - id: morley-diderot-v1#u07-c4
+    label: c4
+    heading: The blind man of Puisaux on eyes and mirrors
+    char_start: 120541
+    char_end: 121489
+    start_quote: They asked him in what way he thought of the eyes.
+    end_quote: have employed less subtlety to reach notions just as untrue?
+    why: The Letter's concrete illustration of how a sensory limitation shapes concepts, with Diderot's
+      barb at philosophers.
+  - id: morley-diderot-v1#u07-c5
+    label: c5
+    heading: Morley's rebuke of Diderot on senses and morality
+    char_start: 124621
+    char_end: 125482
+    start_quote: But the artificiality of a moral acquisition is obviously no test of
+    end_quote: that moral ideas are relative.
+    why: Morley corrects Diderot's relativity of ethics, locating it in mental constitution and social
+      conditions.
+  - id: morley-diderot-v1#u07-c6
+    label: c6
+    heading: Saunderson and the God question
+    char_start: 126423
+    char_end: 127815
+    start_quote: Here, as in the other part of his essay, Diderot followed the method of
+    end_quote: he makes Saunderson discourse with much eloquence and some pathos.
+    why: Introduces Saunderson, the blind Cambridge mathematician, as the vehicle for Diderot's argument
+      on God and final causes.
+- nn: 8
+  unit_id: ch4-new-philosophy-2
+  note_id: morley-diderot-v1-ch4-new-philosophy-2
+  span: 127817:147784
+  chunks:
+  - id: morley-diderot-v1#u08-c1
+    label: c1
+    heading: 'Saunderson: ''make me touch him'', and the elephant and tortoise'
+    char_start: 128371
+    char_end: 130911
+    start_quote: The reasoning which Diderot puts into the professor's mouth is at first
+    end_quote: Mr. Holmes, my good friend, confess your ignorance, and spare me elephant and tortoise."
+    why: Diderot's sceptical argument against inferring God from nature's wonders, as Morley quotes it,
+      including the regress image.
+  - id: morley-diderot-v1#u08-c2
+    label: c2
+    heading: Matter in motion, shapeless creatures, and survival
+    char_start: 131271
+    char_end: 132828
+    start_quote: And then he foreshadows in a really singular and remarkable way
+    end_quote: had the power of supporting and perpetuating themselves.
+    why: The passage Morley reads as an anticipation of the variation-and-survival hypothesis, in Saunderson's
+      own words.
+  - id: morley-diderot-v1#u08-c3
+    label: c3
+    heading: 'Morley''s gloss: variability, adaptation, and final causes'
+    char_start: 133597
+    char_end: 134275
+    start_quote: We have here a distinct enough conception, though in an exceedingly
+    end_quote: the reduction of these phenomena to terms of matter and motion.
+    why: Morley's explicit statement of what he thinks the passage anticipates and why it damages the
+      doctrine of final causes.
+  - id: morley-diderot-v1#u08-c4
+    label: c4
+    heading: Voltaire's objection and the argument from mis-adaptation
+    char_start: 136274
+    char_end: 138407
+    start_quote: Diderot sent a copy of his work to Voltaire.
+    end_quote: the appalling law of merciless and incessant destruction.
+    why: Reports Voltaire's criticism and gives Morley's own rebuttal that design-from-adaptation ignores
+      mis-adaptation and destruction.
+  - id: morley-diderot-v1#u08-c5
+    label: c5
+    heading: Catholicism as a conviction; absolute versus relative
+    char_start: 140904
+    char_end: 142093
+    start_quote: Hobbes's witty definition of the papacy as the ghost of the old Roman
+    end_quote: the effectual breaking up of the great Catholic construction.
+    why: Morley's thesis that the shift from an absolute to a relative point of view was the decisive
+      preliminary to dissolving the Catholic system.
+  - id: morley-diderot-v1#u08-c6
+    label: c6
+    heading: The worm and the ant, and Micromegas
+    char_start: 142859
+    char_end: 143836
+    start_quote: This marvellous order and these wondrous adaptations, what am I to
+    end_quote: is the type of the philosophy on which Catholicism is based.
+    why: Diderot's own parable of the insects among the ruins, linked by Morley to Voltaire's Micromegas,
+      illustrating the relativity argument.
+- nn: 9
+  unit_id: ch4-new-philosophy-3
+  note_id: morley-diderot-v1-ch4-new-philosophy-3
+  span: 147784:164299
+  chunks:
+  - id: morley-diderot-v1#u09-c1
+    label: c1
+    heading: Diderot's metaphysical anatomy of the senses
+    char_start: 149044
+    char_end: 149663
+    start_quote: '"My idea would be to decompose a man, so to speak,'
+    end_quote: they would all treat one another as out of their wits."
+    why: Diderot's own image of separating the senses, the seed of the Condillac comparison.
+  - id: morley-diderot-v1#u09-c2
+    label: c2
+    heading: Condillac's Statue and the priority question
+    char_start: 149871
+    char_end: 150370
+    start_quote: Condillac imagined a statue organised like a man, but each sense unfolding itself
+    end_quote: until at length the mental equipment is complete.
+    why: Morley's summary of the Statue, linked to Diderot's idea.
+  - id: morley-diderot-v1#u09-c3
+    label: c3
+    heading: Experiential method for language
+    char_start: 152377
+    char_end: 152673
+    start_quote: Diderot was acute enough to see that the questions of language could only be solved
+    end_quote: he broke away and hastened to æsthetics.
+    why: Morley's verdict on the Letter's method and its dated crudeness.
+  - id: morley-diderot-v1#u09-c4
+    label: c4
+    heading: English penalties versus the French lettre de cachet
+    char_start: 152682
+    char_end: 153432
+    start_quote: Penalties on the publication of heretical opinion did not cease
+    end_quote: state of things which prepared a revolution in France.
+    why: Frames French arbitrary repression as the soil of revolution, by contrast with English legalism.
+  - id: morley-diderot-v1#u09-c5
+    label: c5
+    heading: The Berryer interrogation
+    char_start: 155127
+    char_end: 156026
+    start_quote: The lieutenant of police (Berryer) treated the miserable author
+    end_quote: '"after oath taken by the respondent to speak and answer the truth."'
+    why: Morley's account of police severity and the oath-bound interrogation of Diderot.
+  - id: morley-diderot-v1#u09-c6
+    label: c6
+    heading: Rousseau's visits and the essay against civilisation
+    char_start: 160541
+    char_end: 162456
+    start_quote: After this Rousseau used to walk over to see him two or three times a week.
+    end_quote: to cover them with glory in men's eyes.
+    why: Morley's weighing of Diderot's role in Rousseau's first Discourse.
+- nn: 10
+  unit_id: ch5-encyclopaedia-history-1
+  note_id: morley-diderot-v1-ch5-encyclopaedia-history-1
+  span: 164299:186280
+  chunks:
+  - id: morley-diderot-v1#u10-c1
+    label: c1
+    heading: Francis Bacon as the true parent, Chambers as the occasion
+    char_start: 168618
+    char_end: 169570
+    start_quote: For the true parentage, however, of the Encyclopædia of Diderot and D'Alembert
+    end_quote: so did the occasion rise in England also.
+    why: Morley's statement of the Encyclopædia's intellectual ancestry, including Diderot's own acknowledgement
+      of Bacon in the Prospectus.
+  - id: morley-diderot-v1#u10-c2
+    label: c2
+    heading: Alsted's Encyclopædia and the verbal principle of division
+    char_start: 167820
+    char_end: 168616
+    start_quote: Alsted's Encyclopædia is of course written in Latin
+    end_quote: rather than a scientific regard for its objective relations.
+    why: Shows Morley's criterion for a true encyclopædia (objective relations of knowledge versus a merely
+      verbal arrangement) applied to the leading precedent.
+  - id: morley-diderot-v1#u10-c3
+    label: c3
+    heading: The translation project passes to Diderot, who transforms it
+    char_start: 171382
+    char_end: 171933
+    start_quote: The embarrassed bookseller next applied to Diderot, who was then much in need of work
+    end_quote: a mere starting-point for a new enterprise of far wider scope.
+    why: Morley's account of the origin of the French Encyclopædia and of what Diderot saw in the encyclopædic
+      form.
+  - id: morley-diderot-v1#u10-c4
+    label: c4
+    heading: Diderot and D'Alembert and the independence of men of letters
+    char_start: 180739
+    char_end: 181953
+    start_quote: They were in strong and singular agreement in their idea of the proper place
+    end_quote: the noblest portion and gift in human reach."
+    why: Presents the editors' break with patronage and D'Alembert's own manifesto for a self-respecting
+      literary order.
+  - id: morley-diderot-v1#u10-c5
+    label: c5
+    heading: The new teaching order and the transformation of Catholicism
+    char_start: 181955
+    char_end: 184148
+    start_quote: This consciousness of the power and exaltation of their calling
+    end_quote: are the most interesting process in the history of truth.
+    why: Morley's central argument in the unit that philosophy displaced the clergy as moral teacher and
+      ultimately reformed the church.
+  - id: morley-diderot-v1#u10-c6
+    label: c6
+    heading: The encyclopædic band as a collective body
+    char_start: 185087
+    char_end: 186278
+    start_quote: But the popular impression that the Encyclopædists constituted a single body
+    end_quote: on the whole there was steadfast and generous fraternity.
+    why: Morley's defence of the Encyclopædists as a practically unified party, with Comte's praise of
+      the encyclopædic workshop.
+- nn: 11
+  unit_id: ch5-encyclopaedia-history-2
+  note_id: morley-diderot-v1-ch5-encyclopaedia-history-2
+  span: 186280:206260
+  chunks:
+  - id: morley-diderot-v1#u11-c1
+    label: c1
+    heading: Jaucourt, the slave of the Encyclopædia
+    char_start: 192802
+    char_end: 194621
+    start_quote: The name of one faithful worker in the building of this new Jerusalem
+    end_quote: Never has sacrifice of repose, of health, of interest been more absolute and more entire."
+    why: The clearest picture of the unglamorous editorial labour that held the work together, with Diderot's
+      own tribute.
+  - id: morley-diderot-v1#u11-c2
+    label: c2
+    heading: The unsought volunteers
+    char_start: 194753
+    char_end: 196099
+    start_quote: Besides those who were known to the conductors of the Encyclopædia, was
+    end_quote: hierarchic succession of duchess, solitary, musketeer, crescent, firmament, tenth heaven,
+      and mouse.
+    why: Shows the open, distributed contribution flood that the editors had to filter, including covert
+      unbelievers in orders.
+  - id: morley-diderot-v1#u11-c3
+    label: c3
+    heading: 'Voltaire''s share: enthusiasm and method'
+    char_start: 196859
+    char_end: 199495
+    start_quote: No one will ask whether the keen eye, and stimulating word, and helpful
+    end_quote: it is evident that Moses did not know it. 'Tis this world that is
+    why: Voltaire as active ally and quality critic, with his demand for firm method in contributors.
+  - id: morley-diderot-v1#u11-c4
+    label: c4
+    heading: Compliance with prejudice and the cross-reference veil
+    char_start: 199504
+    char_end: 201879
+    start_quote: D'Alembert in reply always admitted the blemishes for which the
+    end_quote: they are sorely puzzled to tell from which side they come."
+    why: Core account of how censorship was managed through covert cross-references, with Morley's and
+      Condorcet's moral judgement of it.
+  - id: morley-diderot-v1#u11-c5
+    label: c5
+    heading: 'Not a siege-engine only: practice, not literature but life'
+    char_start: 201881
+    char_end: 203562
+    start_quote: It is one of the most deplorable things in the history of literature
+    end_quote: Their aim was not theory but practice, not literature but life.
+    why: Morley's thesis statement against the purely polemical reading of the Encyclopædia.
+  - id: morley-diderot-v1#u11-c6
+    label: c6
+    heading: Man as the common centre of the work
+    char_start: 203671
+    char_end: 205289
+    start_quote: But Diderot at least had constantly in mind the great work which
+    end_quote: of what concern to me is all the rest of nature."
+    why: Diderot's humanist organising principle for the Encyclopædia, quoted at length by Morley.
+- nn: 12
+  unit_id: ch5-encyclopaedia-history-3
+  note_id: morley-diderot-v1-ch5-encyclopaedia-history-3
+  span: 206260:230367
+  chunks:
+  - id: morley-diderot-v1#u12-c1
+    label: c1
+    heading: Diderot's reply on the declamations against reason
+    char_start: 210304
+    char_end: 211153
+    start_quote: '"I know nothing so indecent," says Diderot, "and nothing so injurious to religion'
+    end_quote: and all their life is passed in crying out either miracle or impiety."
+    why: Diderot's own vindication of De Prades, as quoted by Morley, states the philosophers' charge
+      that theologians' fear of reason harms religion.
+  - id: morley-diderot-v1#u12-c2
+    label: c2
+    heading: The church's social incompetence opens the way for philosophy
+    char_start: 213474
+    char_end: 213901
+    start_quote: As we cannot too clearly realise, it was the flagrant social incompetence of the church
+    end_quote: which opened the way for the thinkers.
+    why: Morley's causal claim that clerical weakness, not philosophic force, brought Liberalism into
+      vogue.
+  - id: morley-diderot-v1#u12-c3
+    label: c3
+    heading: D'Alembert's Geneva article and its intended target
+    char_start: 218966
+    char_end: 221459
+    start_quote: In the seventh volume an article appeared which made the ferment angrier
+    end_quote: as its writer could have designed.
+    why: Explains the volume-seven crisis and Morley's reading of the Geneva article as a veiled reproach
+      to French churchmen.
+  - id: morley-diderot-v1#u12-c4
+    label: c4
+    heading: What the Encyclopædists actually fought
+    char_start: 221461
+    char_end: 222877
+    start_quote: The church had not yet, we must remember, borrowed the principles of humanity
+    end_quote: were priests of the church.
+    why: Morley's historical framing of the opponent as an armed corporation, with the Calas and La Barre
+      cases as evidence.
+  - id: morley-diderot-v1#u12-c5
+    label: c5
+    heading: Government alternates favour and suspicion; printing never stops
+    char_start: 226243
+    char_end: 227717
+    start_quote: The government, however, had no intention of finally exterminating an
+    end_quote: just as regularly as before.
+    why: 'Shows the 1759 decree''s incoherence in practice: a prohibited work kept being printed with
+      official connivance.'
+  - id: morley-diderot-v1#u12-c6
+    label: c6
+    heading: The collision of two conceptions of authority
+    char_start: 228773
+    char_end: 230365
+    start_quote: The true interest of all these details about a mere book lies in the
+    end_quote: whenever the turn of intrigue gave them the chance.
+    why: Morley's closing thesis that the decree marks a clash over whether government may direct opinion.
+- nn: 13
+  unit_id: ch5-encyclopaedia-history-4
+  note_id: morley-diderot-v1-ch5-encyclopaedia-history-4
+  span: 230367:251786
+  chunks:
+  - id: morley-diderot-v1#u13-c1
+    label: c1
+    heading: Rousseau's letter and the reaction within the illumination
+    char_start: 230833
+    char_end: 233078
+    start_quote: Rousseau from his solitary cottage at Montmorency (1758) fulminated the celebrated letter
+    end_quote: so disastrously deep in the national character.
+    why: Morley's central claim that Rousseau's break marked a reaction inside the school of illumination,
+      and why that reaction prospered in France.
+  - id: morley-diderot-v1#u13-c2
+    label: c2
+    heading: Diderot refuses to abandon the work
+    char_start: 236614
+    char_end: 238417
+    start_quote: '"No," said Diderot in a reply of pathetic energy;'
+    end_quote: and back I go to the Encyclopædia."
+    why: Diderot's own words on duty, doubt and persistence after D'Alembert's desertion, as Morley quotes
+      them.
+  - id: morley-diderot-v1#u13-c3
+    label: c3
+    heading: Why Diderot could not take the work abroad
+    char_start: 239105
+    char_end: 239611
+    start_quote: But how could he transport to the banks of the Neva or the Spree
+    end_quote: a standing marvel to the world of letters for all time.
+    why: Morley's explanation that the Encyclopædia depended on a French industrial and craft base that
+      could not be moved.
+  - id: morley-diderot-v1#u13-c4
+    label: c4
+    heading: Le Breton's mutilation of the proofs
+    char_start: 239613
+    char_end: 240896
+    start_quote: As his toil was drawing to a close, he suddenly received the most
+    end_quote: they committed all the original manuscripts and proof-sheets to the flames.
+    why: The publisher's secret censorship and destruction of manuscripts, the deepest injury of Diderot's
+      editorship.
+  - id: morley-diderot-v1#u13-c5
+    label: c5
+    heading: The Count de C---- on the Encyclopædia at Versailles
+    char_start: 246663
+    char_end: 247269
+    start_quote: '"Sire, how happy you are, that under your reign men should be found capable'
+    end_quote: Take all my property if you will, but give me back my Encyclopædia."
+    why: Voltaire's anecdote of the book as a compendium of all the arts, the clearest statement here
+      of its practical utility.
+  - id: morley-diderot-v1#u13-c6
+    label: c6
+    heading: What Diderot was paid
+    char_start: 250897
+    char_end: 251784
+    start_quote: The payment received by Diderot is a little doubtful, and the terms were
+    end_quote: not far short of ten thousand pounds a year of our present money.
+    why: Concrete figures on Diderot's salary against Voltaire's army-contract profits, giving Morley's
+      economic verdict.
+- nn: 14
+  unit_id: ch5-encyclopaedia-contents-1
+  note_id: morley-diderot-v1-ch5-encyclopaedia-contents-1
+  span: 251786:275171
+  chunks:
+  - id: morley-diderot-v1#u14-c1
+    label: c1
+    heading: Why metaphysics bears on politics
+    char_start: 251792
+    char_end: 252912
+    start_quote: All writers on the movement of illumination in France in the eighteenth
+    end_quote: guided by a right instinct of self-preservation
+    why: States the problem of how speculative questions became political and Morley's answer that the
+      persecutors were right to see the link.
+  - id: morley-diderot-v1#u14-c2
+    label: c2
+    heading: Why the attack bit harder in France than England
+    char_start: 253523
+    char_end: 254827
+    start_quote: From various circumstances the attack acquired a significance and a weight in France
+      which it had never
+    end_quote: incorporated in a strong and inexpansible social structure.
+    why: Morley's comparative explanation of deism's English impotence and French social force, resting
+      on rigid absolutist and clerical structures.
+  - id: morley-diderot-v1#u14-c3
+    label: c3
+    heading: Empiricism expels Magic and turns men to society
+    char_start: 257251
+    char_end: 258570
+    start_quote: That tendency clearly is to expel Magic as the decisive influence among us
+    end_quote: human society the field of his interests and his exertions.
+    why: Core philosophical argument linking Baconian-Lockian empiricism to a practical, social, improving
+      spirit.
+  - id: morley-diderot-v1#u14-c4
+    label: c4
+    heading: 'Politics in the widest sense: what the Encyclopædists attacked'
+    char_start: 261071
+    char_end: 262862
+    start_quote: The economic conditions of a country, and the administration of
+    end_quote: passionate against the brazen glories of war.
+    why: Morley's summary of the Encyclopædists' social programme, from fiscal system and venal justice
+      to the honour of productive industry.
+  - id: morley-diderot-v1#u14-c5
+    label: c5
+    heading: Privilege, taille and the roots of civil equality
+    char_start: 266826
+    char_end: 268787
+    start_quote: It is no innate factiousness, as flighty critics of French affairs
+    end_quote: maintenance of every one of their most odious and iniquitous rights.
+    why: Shows the Privilegé article's indictment of fiscal exemption and Morley's link to the 1789 cahiers.
+  - id: morley-diderot-v1#u14-c6
+    label: c6
+    heading: 'Corvée and militia: the Encyclopædia as a forum for practical men'
+    char_start: 269096
+    char_end: 272201
+    start_quote: Let us turn to two other of the most oppressive institutions that then
+    end_quote: just as little heeded now as they were when they were made.
+    why: Concrete example of an article by a working road engineer and of Morley's judgement on how unheeded
+      humane reasoning stays.
+- nn: 15
+  unit_id: ch5-encyclopaedia-contents-2
+  note_id: morley-diderot-v1-ch5-encyclopaedia-contents-2
+  span: 275171:297792
+  chunks:
+  - id: morley-diderot-v1#u15-c1
+    label: c1
+    heading: 'Diderot at the looms: a storehouse of the arts'
+    char_start: 277417
+    char_end: 278170
+    start_quote: It has often been told how Diderot himself used to visit the workshops
+    end_quote: save a single copy of the Encyclopædia.
+    why: Shows the encyclopaedic project as a practical, reconstructible inventory of the arts and trades,
+      with Diderot's apprenticeship-style method.
+  - id: morley-diderot-v1#u15-c2
+    label: c2
+    heading: Honour for labour and the turn from words to things
+    char_start: 278733
+    char_end: 280293
+    start_quote: The importance given to physical science and the practical arts, in the
+    end_quote: perishing in misery" (Homme).
+    why: Morley's thesis that the Encyclopædia's practical emphasis signals a new social basis, with the
+      Journalier and Homme quotations as evidence.
+  - id: morley-diderot-v1#u15-c3
+    label: c3
+    heading: 'Religion: sacerdotalism, miracle and loss of interest'
+    char_start: 282523
+    char_end: 286192
+    start_quote: The attitude of the Encyclopædia to religion is almost universally
+    end_quote: Nobody now cares to disprove Jupiter and Juno, Satyrs and Hamadryads.
+    why: Morley's corrective to the atheism charge and his account of how the work dissolved theological
+      interest through scientific exposition.
+  - id: morley-diderot-v1#u15-c4
+    label: c4
+    heading: 'The Preliminary Discourse: progress, authority and system'
+    char_start: 290047
+    char_end: 292967
+    start_quote: Even more important than the exposition of human knowledge was the
+    end_quote: would assuredly never have been the first of his disciples.
+    why: Sets out the Discourse's narrative of ordered progress and its two conditions of truth (no deference
+      to authority, no premature system).
+  - id: morley-diderot-v1#u15-c5
+    label: c5
+    heading: 'Many-sided discussion: Fermes Générales and Régie'
+    char_start: 293743
+    char_end: 295328
+    start_quote: We are constantly struck in the Encyclopædia by a genuine desire
+    end_quote: the aim and spirit of the original scheme.
+    why: A concrete example of the editors' commitment to open, balanced debate, and of how far the realised
+      work fell short.
+  - id: morley-diderot-v1#u15-c6
+    label: c6
+    heading: Toleration as the Encyclopædia's constant plea
+    char_start: 295330
+    char_end: 297789
+    start_quote: Of the line of argument taken in the Encyclopædia as to Toleration we
+    end_quote: all opinions that were not official.
+    why: Morley's account of toleration's practical stakes in France, the Tolérance and Intolérance articles,
+      and why churchmen resented it.
+- nn: 16
+  unit_id: ch5-diderot-contributions-1
+  note_id: morley-diderot-v1-ch5-diderot-contributions-1
+  span: 297792:317111
+  chunks:
+  - id: morley-diderot-v1#u16-c1
+    label: c1
+    heading: 'The confusion is immense: Diderot''s articles as disproportionate and uneven'
+    char_start: 298399
+    char_end: 299698
+    start_quote: The confusion is immense. The spirit is sometimes historical, sometimes controversial;
+    end_quote: of charlatanry and generous aim, of which these semi-mystic, semi-scientific characters
+      were composed.
+    why: Morley's own summary verdict on the lack of rigorous measure in Diderot's contributions, with
+      the pregnant-women and Theosophs examples.
+  - id: morley-diderot-v1#u16-c2
+    label: c2
+    heading: Insinuating tolerance through Aius-Locutius
+    char_start: 303080
+    char_end: 304525
+    start_quote: We are constantly being puzzled and diverted by Diderot's ingenuity in wandering away
+    end_quote: reverentia quæ debetur pueris?
+    why: Worked example of how Diderot used a trivial entry to slip in doctrines of tolerance and a proposal
+      on learned-language versus vernacular publication.
+  - id: morley-diderot-v1#u16-c3
+    label: c3
+    heading: 'Scientific spirit over barren erudition: Germans and Celibacy'
+    char_start: 307337
+    char_end: 309016
+    start_quote: We have spoken in the previous section of the contempt expressed by D'Alembert
+    end_quote: should receive a sum of money for every dispensation so granted.
+    why: Shows the positive, useful-knowledge preference over antiquarianism that Morley prizes, and his
+      hedged reading of Diderot's own tone.
+  - id: morley-diderot-v1#u16-c4
+    label: c4
+    heading: Montaigne, Bayle and the limits of Diderot's doubt
+    char_start: 311137
+    char_end: 311974
+    start_quote: We cannot wonder at Diderot's admiration for Montaigne and for Bayle,
+    end_quote: by his vehement and positive demand for emotional certainties.
+    why: Places Diderot among the sceptics (with Hume) and states Morley's claim that he could not stay
+      in suspended doubt.
+  - id: morley-diderot-v1#u16-c5
+    label: c5
+    heading: Diderot's private letter on Christianity versus the printed articles
+    char_start: 314019
+    char_end: 315604
+    start_quote: It is hardly worth while to measure the more or the less of his
+    end_quote: the simplest and most harmless will be the best fetish."
+    why: Contrasts the incoherent public theological articles with Diderot's own private view as Morley
+      reproduces it.
+  - id: morley-diderot-v1#u16-c6
+    label: c6
+    heading: Veiled sarcasm and the blame on the Church
+    char_start: 315841
+    char_end: 317109
+    start_quote: This formal respect is not incompatible with many veiled and secret
+    end_quote: which were the only weapons possible in France a century ago.
+    why: Morley's moral judgment on the coarseness of the anti-theological attack and his comparison with
+      English churchmanship.
+- nn: 17
+  unit_id: ch5-diderot-contributions-2
+  note_id: morley-diderot-v1-ch5-diderot-contributions-2
+  span: 317111:334717
+  chunks:
+  - id: morley-diderot-v1#u17-c1
+    label: c1
+    heading: Agriculture and second-hand practical knowledge
+    char_start: 317579
+    char_end: 318841
+    start_quote: Much of Diderot's work, even on great practical subjects, was, no doubt, the reproduction
+      of mere book-knowledge acquired at second-hand.
+    end_quote: after Diderot had thought them worth compiling into an article.
+    why: Morley's concrete example of the arts-and-trades articles resting on Tull via Duhamel, with his
+      measured verdict on Diderot's merit.
+  - id: morley-diderot-v1#u17-c2
+    label: c2
+    heading: 'Philosopher versus Philosophy: the Wolffian incongruity'
+    char_start: 320834
+    char_end: 324931
+    start_quote: Of the confusion and inequalities in which Diderot was landed by this method
+    end_quote: as they were from the mystic spirit of Jacobi.
+    why: Shows Morley applying his positive-spirit thesis to expose the inconsistency produced by unassimilated
+      borrowing, and quotes Diderot's portrait of the philosopher.
+  - id: morley-diderot-v1#u17-c3
+    label: c3
+    heading: Diderot on the sobriety of reason (Pyrrhonienne)
+    char_start: 325823
+    char_end: 327335
+    start_quote: I shall venture to quote a hardy passage from another article
+    end_quote: But then why have written on metaphysics at all?
+    why: Diderot's own statement of the unity-of-nature argument against absolute knowledge, with Morley's
+      ambivalent judgement.
+  - id: morley-diderot-v1#u17-c4
+    label: c4
+    heading: 'The Spinosa article: borrowed and original'
+    char_start: 327337
+    char_end: 329064
+    start_quote: We have mentioned the article on Spinosa.
+    end_quote: that the definitions were inexact, defective, and bizarre.
+    why: Morley's assessment of the article's sources and depth, and Diderot's scornful objection to Spinosa's
+      geometrical method.
+  - id: morley-diderot-v1#u17-c5
+    label: c5
+    heading: Common sense against Spinosa, and Morley's reconstruction
+    char_start: 332110
+    char_end: 333048
+    start_quote: The passage sounds unpleasantly like an appeal to the crowd in a matter
+    end_quote: the utmost breadth of which they were capable.
+    why: Morley's critical verdict on Diderot's common-sense refutation and what he thinks Diderot should
+      have argued.
+  - id: morley-diderot-v1#u17-c6
+    label: c6
+    heading: The Leibnitz article and the four marvellous insects
+    char_start: 333050
+    char_end: 334715
+    start_quote: The article on Leibnitz has less original matter in it than that on Spinosa.
+    end_quote: admiringly from without.
+    why: Records Diderot's admiration for Leibnitz, his ranking of great men, and Morley's judgement that
+      the article is uncritical.
+- nn: 18
+  unit_id: ch5-diderot-contributions-3
+  note_id: morley-diderot-v1-ch5-diderot-contributions-3
+  span: 334717:356145
+  chunks:
+  - id: morley-diderot-v1#u18-c1
+    label: c1
+    heading: The Liberty article judged insincere
+    char_start: 334717
+    char_end: 336989
+    start_quote: The article on Liberty would be extremely remarkable, appearing where it does
+    end_quote: Diderot had for the moment clearly lost himself.
+    why: Morley's diagnosis that the social test of truth led Diderot into the same error as the Jesuits,
+      quoting the article's call for magistrates to punish deniers of liberty.
+  - id: morley-diderot-v1#u18-c2
+    label: c2
+    heading: The Landois letter and the forced contradiction
+    char_start: 340521
+    char_end: 342497
+    start_quote: The most extraordinary thing about this extraordinary article still remains to be told.
+    end_quote: into a false and illusive part.
+    why: Contrasts the published Liberty article with Diderot's private 1756 repudiation of liberty and
+      gives Morley's explanation of censorship-driven mystification.
+  - id: morley-diderot-v1#u18-c3
+    label: c3
+    heading: 'Multitude and Misery: distrust of the crowd, blame of sovereigns'
+    char_start: 344793
+    char_end: 346764
+    start_quote: The little article on Multitude seems merely inserted for the sake of buffeting
+    end_quote: for the crimes that misery has committed."
+    why: Shows the combination of contempt for the crowd's judgement and compassion for its misery that
+      Morley highlights as Diderot's non-Jacobin outlook.
+  - id: morley-diderot-v1#u18-c4
+    label: c4
+    heading: 'Représentants: property, class representation and the democratic difficulty'
+    char_start: 346766
+    char_end: 348497
+    start_quote: So far as the mechanism of government is concerned, Diderot writes much as Montesquieu
+      had done.
+    end_quote: the ignorance and the temper imputed in Diderot's own description of them.
+    why: Gives Morley's account of Diderot's mechanism of government, property-based citizenship, and
+      the logical tension with representing the poorest classes.
+  - id: morley-diderot-v1#u18-c5
+    label: c5
+    heading: 'Anticipation of Cobden: commerce, internationalism, and their costs'
+    char_start: 351090
+    char_end: 353112
+    start_quote: What is really interesting in this long article is its anticipation of
+    end_quote: the generosity, the nobleness of manners."
+    why: The unit's most forward-looking passage, on commerce as a bond among nations, declining patriotism,
+      and the moral cost of commerce, framed by Morley as Cobdenic.
+  - id: morley-diderot-v1#u18-c6
+    label: c6
+    heading: What the Encyclopædia lacked, and the monumental ruin
+    char_start: 353454
+    char_end: 356140
+    start_quote: And so our sketch of the great book must at length end.
+    end_quote: to strike a blow for humanity and truth.
+    why: 'Morley''s concluding judgement of the Encyclopædia: its missing unifying idea of the unity of
+      intellectual history and its elegiac assessment of the work''s achievement.'
+- nn: 19
+  unit_id: ch6-social-life-1
+  note_id: morley-diderot-v1-ch6-social-life-1
+  span: 356145:382225
+  chunks:
+  - id: morley-diderot-v1#u19-c1
+    label: c1
+    heading: Authenticity and provenance of the Voland letters
+    char_start: 358423
+    char_end: 359928
+    start_quote: One of the most interesting of all the documentary memorials of the century is to be
+      found in the letters
+    end_quote: than even his letters to Mademoiselle Voland.
+    why: Morley's own account of what the Voland letters are, how they reached print, and why their transmission
+      remains uncertain.
+  - id: morley-diderot-v1#u19-c2
+    label: c2
+    heading: Regrets on My Old Dressing-gown
+    char_start: 362530
+    char_end: 366604
+    start_quote: What induced me to part with it? It was made for me; I was made for it.
+    end_quote: Thus I too am insulting the national misery.
+    why: The best-known domestic text in the unit, in which one piece of luxury forces the philosopher's
+      whole room into a new and compromised order.
+  - id: morley-diderot-v1#u19-c3
+    label: c3
+    heading: The divided house
+    char_start: 367230
+    char_end: 368610
+    start_quote: Yet the interior of Socrates-Diderot was as little blessed by domestic
+    end_quote: But the pity of it, O the pity of it!
+    why: Morley's picture of Diderot's unhappy marriage, mixing Diderot's letter-reported scenes with
+      Morley's own pathos and blame-weighing.
+  - id: morley-diderot-v1#u19-c4
+    label: c4
+    heading: Indomitable industry and the burnt papers
+    char_start: 371712
+    char_end: 373136
+    start_quote: In the midst of distractions great and small, was an indomitable
+    end_quote: would have robbed my wife of sleep for the rest of her life."
+    why: 'Gives the concrete labour behind the Encyclopædia: ten-hour proof-reading, eye strain, and the
+      fire that Diderot concealed.'
+  - id: morley-diderot-v1#u19-c5
+    label: c5
+    heading: A day at Grandval
+    char_start: 373138
+    char_end: 376140
+    start_quote: His favourite form of holiday was a visit to Holbach's country house at
+    end_quote: among the fields and woods of Grandval.
+    why: 'The fullest portrait in the unit of the circle''s sociable life: schedule, guests, topics of
+      talk, and Morley''s affectionate verdict.'
+  - id: morley-diderot-v1#u19-c6
+    label: c6
+    heading: The paradox of equal conditions
+    char_start: 379782
+    char_end: 380364
+    start_quote: This paradox comes of the equality that I discover among various conditions of life
+    end_quote: the rest is nothing.
+    why: Diderot's own reflective claim that moral worth and knowledge, not rank or wealth, distinguish
+      men, as Morley quotes it from the Grandval letters.
+- nn: 20
+  unit_id: ch6-social-life-2
+  note_id: morley-diderot-v1-ch6-social-life-2
+  span: 382225:406812
+  chunks:
+  - id: morley-diderot-v1#u20-c1
+    label: c1
+    heading: The comedy of the world seen from afar
+    char_start: 382353
+    char_end: 383248
+    start_quote: '"Ah, what a fine comedy this world would be, if only one had not to play'
+    end_quote: How our senses affect our morality. There is a fine text for philosophising!"
+    why: Diderot's own sombre meditation on scale and moral outrage, which Morley sets up as an unrepresentative
+      reaction.
+  - id: morley-diderot-v1#u20-c2
+    label: c2
+    heading: Morley on Diderot the sentimentalist
+    char_start: 383986
+    char_end: 385914
+    start_quote: These sombre meditations hardly represent Diderot's habitual vein; they
+    end_quote: natural tenderness of life as it comes and passes.
+    why: Morley's central verdict on Diderot's temperament and his casuistry of feeling, set against Balzac,
+      Goethe and Rousseau.
+  - id: morley-diderot-v1#u20-c3
+    label: c3
+    heading: Holbach's impressions of England
+    char_start: 391788
+    char_end: 394500
+    start_quote: '"The Baron has returned from England. He started with the pleasantest anticipations'
+    end_quote: I think it would have done still better if it had been brandy.'"
+    why: A French philosophe's catalogue of English faults, with Hume's story of the Huron convert, as
+      relayed by Diderot.
+  - id: morley-diderot-v1#u20-c4
+    label: c4
+    heading: Two cases of conscience
+    char_start: 394528
+    char_end: 398194
+    start_quote: '"The curé said that unhappy lovers always'
+    end_quote: and Grimm insisted on having his portrait taken."
+    why: Worked examples of feeling and pity set against rigid rule, the casuistry Morley says Diderot
+      loved.
+  - id: morley-diderot-v1#u20-c5
+    label: c5
+    heading: A prosecution over a prohibited book
+    char_start: 399226
+    char_end: 401639
+    start_quote: '"A little adventure has just happened here that proves that all our fine'
+    end_quote: worse than the capital punishment that takes away his life."
+    why: Diderot's eyewitness account of censorship's human cost and its link to the authorities' anger
+      at Voltaire.
+  - id: morley-diderot-v1#u20-c6
+    label: c6
+    heading: 'Method and genius: the Nightingale, Cuckoo and Ass'
+    char_start: 401675
+    char_end: 406457
+    start_quote: There was a question between Grimm and M. Le Roy of creative genius and co-ordinating
+      method.
+    end_quote: and I am the ass, who decide in your favour. Good-night.
+    why: Galiani's fable, relayed by Diderot, dramatises the quarrel between spontaneous genius and ordering
+      method.
+- nn: 21
+  unit_id: ch6-social-life-3
+  note_id: morley-diderot-v1-ch6-social-life-3
+  span: 406812:424820
+  chunks:
+  - id: morley-diderot-v1#u21-c1
+    label: c1
+    heading: The dilemma of evil and why optimism fails
+    char_start: 410043
+    char_end: 411065
+    start_quote: Among these difficulties is one that has been proposed ever since the world has been
+      a world
+    end_quote: by way of answer to a clear, precise, and definite fact.
+    why: Diderot's reported statement of the problem of evil and his sweeping dismissal of the doctrines
+      built to answer it.
+  - id: morley-diderot-v1#u21-c2
+    label: c2
+    heading: The pyramid of possible worlds
+    char_start: 411638
+    char_end: 412199
+    start_quote: Leibnitz, the founder of optimism, tells somewhere how there was in the
+    end_quote: was Tarquin outraging Lucretia
+    why: A compact comic refutation of Leibnitzian optimism, showing Diderot's wit as argument.
+  - id: morley-diderot-v1#u21-c3
+    label: c3
+    heading: The disputing, rationalistic century
+    char_start: 412203
+    char_end: 413755
+    start_quote: Almost every letter reminds us that we are in the very height of the
+    end_quote: right and necessary to be honest and good with all the world without distinction.
+    why: Morley's verdict that Diderot typifies the age's passion for moral argument, with vignettes of
+      salon ethics.
+  - id: morley-diderot-v1#u21-c4
+    label: c4
+    heading: Lespinasse's judgement and Morley's qualification
+    char_start: 415854
+    char_end: 416991
+    start_quote: Alas, all these endless debates and dialogues lacked the inspiration and
+    end_quote: an honest anxiety to serve.
+    why: Morley weighs the airlessness of the discussions against the society's unsurpassed kindliness.
+  - id: morley-diderot-v1#u21-c5
+    label: c5
+    heading: Diderot's idea of friendship
+    char_start: 417412
+    char_end: 418523
+    start_quote: Diderot was content to take friendship as the right, the duty, or the
+    end_quote: Ah, God would never have given such an order to his mother!
+    why: States what friendship meant to Diderot (service without return) with Morley's first illustrations.
+  - id: morley-diderot-v1#u21-c6
+    label: c6
+    heading: Landois and the philosophy of commiseration
+    char_start: 423163
+    char_end: 423934
+    start_quote: He insists that man, with all his high-flying freedom of will, is but a little link
+    end_quote: this is the philosophy that reconciles us with the human race and with life.
+    why: Diderot's determinist ethics of pity, in Morley's summary, drawn from a quarrel over a dangerous
+      manuscript.
+- nn: 22
+  unit_id: ch6-social-life-4
+  note_id: morley-diderot-v1-ch6-social-life-4
+  span: 424820:452410
+  chunks:
+  - id: morley-diderot-v1#u22-c1
+    label: c1
+    heading: Rousseau's rupture with Diderot
+    char_start: 424820
+    char_end: 428695
+    start_quote: There was one man, and only one man, for whose perverse and intractable
+    end_quote: Too many honest people would be in the wrong, he most truly said, if Jean Jacques were
+      in the right.
+    why: Morley's account of the Rousseau quarrel through Diderot's letters, with his verdict on sentimentalism
+      and on who was at fault.
+  - id: morley-diderot-v1#u22-c2
+    label: c2
+    heading: Grimm and the literary correspondence
+    char_start: 431055
+    char_end: 432103
+    start_quote: While Grimm was amusing himself at Madame d'Epinay's country house,
+    end_quote: exists of any other remarkable literary epoch.
+    why: Contrasts Grimm's pension-hunting with Diderot's drudgery and claims the circular letters diffused
+      Paris's intelligence abroad.
+  - id: morley-diderot-v1#u22-c3
+    label: c3
+    heading: Catherine of Russia buys the library
+    char_start: 435113
+    char_end: 436725
+    start_quote: When it became his duty to provide for his daughter, between 1763 and 1765,
+    end_quote: declined to tax the king's strained finances.
+    why: Morley's detailed account of royal patronage and his defence of Diderot against the charge of
+      lost independence by comparison with Voltaire, D'Alembert and Rousseau.
+  - id: morley-diderot-v1#u22-c4
+    label: c4
+    heading: Hawkers, contraband and the printing of Bayle
+    char_start: 438961
+    char_end: 442042
+    start_quote: Contraband was here, as always, the natural substitute for free trade.
+    end_quote: much to the contentment of the French printers, binders, and booksellers.
+    why: Shows how prohibition fuelled the clandestine book trade and how the state adapted by printing
+      Bayle at home.
+  - id: morley-diderot-v1#u22-c5
+    label: c5
+    heading: Diderot on copyright and books as wares
+    char_start: 443184
+    char_end: 444468
+    start_quote: M. de Sartine invited Diderot to write him a memorandum on the subject,
+    end_quote: as those who deal in any other wares.
+    why: Morley's account of Diderot's 1767 defence of literary property and his commercial realism about
+      books.
+  - id: morley-diderot-v1#u22-c6
+    label: c6
+    heading: Diderot rebukes D'Alembert over the booksellers
+    char_start: 444470
+    char_end: 447491
+    start_quote: There is a vivid illustration of this unexpected business-like quality
+    end_quote: After all this show of pride, confess now that you are cutting a very sorry figure?
+    why: A reported dialogue showing Diderot's business integrity and his bluntness with D'Alembert in
+      1759.
+- nn: 23
+  unit_id: ch7-the-stage-1
+  note_id: morley-diderot-v1-ch7-the-stage-1
+  span: 452410:480233
+  chunks:
+  - id: morley-diderot-v1#u23-c1
+    label: c1
+    heading: Diderot's drama theory as glorification of domestic virtue
+    char_start: 453133
+    char_end: 454691
+    start_quote: Diderot is in a thousand respects one of the most unsatisfactory of men
+    end_quote: passed for nearly half a century to the country of Lessing and Goethe.
+    why: Morley's own framing of Diderot's dramatic theory as one side of the same movement that raised
+      civil justice and industry over feudal privilege.
+  - id: morley-diderot-v1#u23-c2
+    label: c2
+    heading: Lessing and the invention of German criticism
+    char_start: 455610
+    char_end: 456712
+    start_quote: Since Aristotle, said Lessing, no more philosophical mind than Diderot's
+    end_quote: Still more true is it that Diderot invented German criticism.
+    why: Records Lessing's debt to Diderot and Morley's distinction between Diderot as philosophic critic
+      and as failed dramatist.
+  - id: morley-diderot-v1#u23-c3
+    label: c3
+    heading: Writing out the pantomime
+    char_start: 463501
+    char_end: 465216
+    start_quote: What adds to the flatness of the play is a device which Diderot
+    end_quote: he will soon see what follies he commits.
+    why: Presents Diderot's reasoning for gesture and stage business on the principle of consulting nature,
+      and Morley's reaction.
+  - id: morley-diderot-v1#u23-c4
+    label: c4
+    heading: Stopped ears and the poverty of language
+    char_start: 466435
+    char_end: 468258
+    start_quote: We have already seen that even when he wrote the Letter on the Deaf
+    end_quote: if only we did not employ words in making them.
+    why: Diderot's playgoing experiment and the deep conviction, in Morley's words, that language is an
+      inadequate instrument.
+  - id: morley-diderot-v1#u23-c5
+    label: c5
+    heading: Sympathy, not homily
+    char_start: 476667
+    char_end: 478880
+    start_quote: In other words, you must win us by kindling our sympathy
+    end_quote: tearful dummy labelled the Father of the Family.
+    why: Morley's central objection to Diderot's moralising stage and his own account of how virtue is
+      made attractive.
+  - id: morley-diderot-v1#u23-c6
+    label: c6
+    heading: Serious comedy without a smile
+    char_start: 472167
+    char_end: 473347
+    start_quote: Again, though he may be right in contending that there is a serious kind
+    end_quote: the very end that Diderot most anxiously sought.
+    why: Morley's critique of the genre sérieux's monotony, with laughter as a moral agency Diderot overlooked.
+- nn: 24
+  unit_id: ch7-the-stage-2
+  note_id: morley-diderot-v1-ch7-the-stage-2
+  span: 480233:506165
+  chunks:
+  - id: morley-diderot-v1#u24-c1
+    label: c1
+    heading: Shakespeare as Saint Christopher
+    char_start: 483345
+    char_end: 483993
+    start_quote: It was not to be expected that Diderot should indulge in those
+    end_quote: better than Voltaire's drunken savage.
+    why: Shows Diderot's measured but admiring reception of Shakespeare and Morley's jab at Voltaire.
+  - id: morley-diderot-v1#u24-c2
+    label: c2
+    heading: The Paradox on the Player stated
+    char_start: 486382
+    char_end: 488043
+    start_quote: What is the Paradox? That a player of the first rank must have much
+    end_quote: the absolute want of sensibility that prepares actors who shall be sublime.
+    why: Morley's concise statement of Diderot's central claim that great acting rests on judgment and
+      not on feeling.
+  - id: morley-diderot-v1#u24-c3
+    label: c3
+    heading: Garrick and the folding doors
+    char_start: 488313
+    char_end: 489233
+    start_quote: He says that he saw Garrick pass his head between two folding doors,
+    end_quote: to follow the path of the dagger in the air."
+    why: The vivid illustration of the Paradox, with Diderot's own words on Garrick.
+  - id: morley-diderot-v1#u24-c4
+    label: c4
+    heading: Against the French classic stage
+    char_start: 491388
+    char_end: 492803
+    start_quote: Diderot had perceived very early that the complacency with which his
+    end_quote: Of all kinds of literature it is the most imperfect.
+    why: Diderot's attack on the declamatory national theatre in favour of truth and nature, as Morley
+      reports it.
+  - id: morley-diderot-v1#u24-c5
+    label: c5
+    heading: The genre sérieux defined
+    char_start: 498385
+    char_end: 499550
+    start_quote: What Diderot conceived himself really to have done, was to have sketched
+    end_quote: is the truly ridiculous thing in men and in life.
+    why: Morley's account of Diderot's proposed third dramatic kind, the core of his bourgeois drama theory.
+  - id: morley-diderot-v1#u24-c6
+    label: c6
+    heading: Morley's verdict on illusion and Duty
+    char_start: 501798
+    char_end: 503044
+    start_quote: 'No, we answer: reproduction of reality does not move us as a powerful work'
+    end_quote: repel the faculties of dramatic genius.
+    why: Morley's own critique of the genre sérieux, with Burke's argument against copying nature.
+- nn: 25
+  unit_id: ch8-rameaus-nephew
+  note_id: morley-diderot-v1-ch8-rameaus-nephew
+  span: 506165:533276
+  chunks:
+  - id: morley-diderot-v1#u25-c1
+    label: c1
+    heading: The adventures of the manuscript
+    char_start: 508755
+    char_end: 511879
+    start_quote: In the year 1804 Schiller handed to Goethe the manuscript of a piece by Diderot
+    end_quote: rested on a single manuscript, and that a manuscript of disputed authenticity.
+    why: Morley's account of the text's transmission, forgery and doubtful authentication via Goethe and
+      Brière.
+  - id: morley-diderot-v1#u25-c2
+    label: c2
+    heading: Critics' readings and Morley's answer
+    char_start: 511881
+    char_end: 512977
+    start_quote: Critics differ extremely in their answers to the question of the subject
+    end_quote: society with a free unblinking vision, and to meditate upon them deeply and searchingly.
+    why: States Morley's thesis that the dialogue is a portrait of an original and not any single-purpose
+      satire.
+  - id: morley-diderot-v1#u25-c3
+    label: c3
+    heading: Juvenal's Trebius and Diderot's Rameau
+    char_start: 514855
+    char_end: 516469
+    start_quote: But the distance is immeasurable between Juvenal's scorching truculence
+    end_quote: one of the countless moulds of the huge social foundry.
+    why: Contrasts the denunciatory ancient satirist with Diderot's anatomising curiosity and the claim
+      that Rameau is a brother to us all.
+  - id: morley-diderot-v1#u25-c4
+    label: c4
+    heading: The scientific attitude and Lucian
+    char_start: 516471
+    char_end: 518656
+    start_quote: Such is the scientific attitude of mind towards character
+    end_quote: which a hunter has for the object of his chase.
+    why: Morley names the shift from execration to scrutiny as a mark of the modern spirit and compares
+      Lucian's parasite.
+  - id: morley-diderot-v1#u25-c5
+    label: c5
+    heading: Social significance of the dialogue
+    char_start: 526390
+    char_end: 527996
+    start_quote: As I have already said, it must be judged as something more than a literary diversion.
+    end_quote: indispensable for the transformation of the Roman Empire.
+    why: Morley's central historical judgement tying Rameau to the depravity that prepared the Revolution.
+  - id: morley-diderot-v1#u25-c6
+    label: c6
+    heading: The French and Italian music quarrel
+    char_start: 530263
+    char_end: 532135
+    start_quote: Another subject is handled in Rameau's Nephew, which is interesting in
+    end_quote: Pamphlets, broadsheets, sarcasms flew over Paris from every side.
+    why: Explains the musical controversy in which the dialogue was composed and its place in Parisian
+      intellectual life.
