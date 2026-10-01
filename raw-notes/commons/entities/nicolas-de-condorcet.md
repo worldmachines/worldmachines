@@ -1,9 +1,9 @@
 ---
 summary: "Marquis de Condorcet (1743–1794), Turgot's disciple and the philosophe who secularized the theory of progress into a would-be predictive science of history — a project 'to tame the future' that runs from probabilistic historical law through a self-governing republic of science to a state run by social mathematics, and ends with Progress installed as a substitute god."
 tags: [condorcet, progress, philosophy-of-history, probability-and-prediction, social-mathematics, enlightenment, technocracy, french-revolution]
-last_updated: 2026-09-23
+last_updated: 2026-10-01
 level: canon
-sources: [manuel-prophets-of-paris-condorcet-01, manuel-prophets-of-paris-condorcet-02, manuel-prophets-of-paris-turgot-01, manuel-prophets-of-paris-turgot-02, manuel-prophets-of-paris-preface-prolegomenon, manuel-prophets-of-paris-epilogue]
+sources: [manuel-prophets-of-paris-condorcet-01, manuel-prophets-of-paris-condorcet-02, manuel-prophets-of-paris-turgot-01, manuel-prophets-of-paris-turgot-02, manuel-prophets-of-paris-preface-prolegomenon, manuel-prophets-of-paris-epilogue, morley-diderot-v2-ch06-holbach-system-of-nature-3, morley-diderot-v2-ch07-raynal-history-indies-2, morley-diderot-v2-ch08-closing-years-2]
 ---
 
 # Nicolas de Condorcet
@@ -47,6 +47,10 @@ Uniform method, quantified observation, and a supreme coordinating body substitu
 The *Esquisse* ends in something close to devotion. Sympathy is stretched from present humanity to all future generations, and contemplation of that future bliss becomes an "asylum" from present persecution — Progress as "the new god of the age," borrowing the old religion's dream of future beatitude while discarding its apocalypse. This is progress functioning as a world-organizing *pull* attractor of the kind [[fiat-progress]] names, at the moment it is being consciously installed as a substitute for the theological guarantee Condorcet himself had removed.
 
 One detail is worth flagging on its own: his anxiety about historical catastrophe — an echo of Boulanger's deluge theory, and the hope that hieroglyph-like steles might shelter the sciences "even from general revolution of the globe" — is an early version of the impulse behind a [[Prime Radiant]]: an archive built to outlast the civilization that made it.
+
+## Volume II of Morley's Diderot: Condorcet among the Encyclopædists
+
+This section draws on Volume II of John Morley's Diderot and the Encyclopædists ([[morley-diderot-v2]]), where Condorcet appears briefly in three roles. He tended D'Alembert at his death, among the losses Morley lists in Diderot's last years ([[morley-diderot-v2-ch08-closing-years-2]]). Against Raynal, who recoiled from the Revolution in 1791, Morley sets Condorcet as one who kept faith with the movement ([[morley-diderot-v2-ch07-raynal-history-indies-2]]). And Morley cites the suicides of Condorcet, Roland, Valazé and others as proof that Holbach's doctrine of death as a resource for oppressed virtue “had entered their souls”; the notes mark this as Morley's historical inference, not Holbach's claim ([[morley-diderot-v2-ch06-holbach-system-of-nature-3]]).
 
 ## See also
 
