@@ -1,9 +1,9 @@
 ---
 summary: "German polymath and philosopher — inventor of calculus, dreamer of a universal formal language, and Rao's exemplar of 'the first great modernist error': resolving ontological dread into optimism rather than accepting it, making him a tragic reactionary genius, and whom Matthew Stewart's The Courtier and the Heretic (2006) portrays as a courtier governed by one anxiety about Spinoza."
 tags: [philosophy, intellectual-history, logic, language, mathematics, Enlightenment, Germany, thinker, philosopher, leibniz, divergence-machine, optimism, reactionary-genius, biography, courtier, monadology, seventeenth-century-philosophy, stewart]
-last_updated: 2026-09-23
+last_updated: 2026-10-01
 level: canon
-sources: [stewart-courtier-and-heretic-ch01-the-hague-1676, stewart-courtier-and-heretic-ch03-gottfried, stewart-courtier-and-heretic-ch05-gods-attorney, stewart-courtier-and-heretic-ch07-many-faces-of-leibniz, stewart-courtier-and-heretic-ch09-leibniz-in-love, stewart-courtier-and-heretic-ch11-approaching-spinoza, stewart-courtier-and-heretic-ch12-point-of-contact, stewart-courtier-and-heretic-ch13-surviving-spinoza, stewart-courtier-and-heretic-ch14-antidote-to-spinozism, stewart-courtier-and-heretic-ch15-the-haunting, stewart-courtier-and-heretic-ch16-return-of-the-repressed, stewart-courtier-and-heretic-ch17-leibniz-end]
+sources: [stewart-courtier-and-heretic-ch01-the-hague-1676, stewart-courtier-and-heretic-ch03-gottfried, stewart-courtier-and-heretic-ch05-gods-attorney, stewart-courtier-and-heretic-ch07-many-faces-of-leibniz, stewart-courtier-and-heretic-ch09-leibniz-in-love, stewart-courtier-and-heretic-ch11-approaching-spinoza, stewart-courtier-and-heretic-ch12-point-of-contact, stewart-courtier-and-heretic-ch13-surviving-spinoza, stewart-courtier-and-heretic-ch14-antidote-to-spinozism, stewart-courtier-and-heretic-ch15-the-haunting, stewart-courtier-and-heretic-ch16-return-of-the-repressed, stewart-courtier-and-heretic-ch17-leibniz-end, morley-diderot-v1-ch3-early-writings-2, morley-diderot-v1-ch4-new-philosophy-1, morley-diderot-v1-ch5-encyclopaedia-history-1, morley-diderot-v1-ch5-encyclopaedia-contents-2, morley-diderot-v1-ch5-diderot-contributions-2, morley-diderot-v1-ch6-social-life-3]
 ---
 
 # Gottfried Wilhelm Leibniz (1646–1716)
@@ -131,3 +131,13 @@ This record cuts across both the Rao and the Lohse readings above. It supports L
 - [[venkatesh-rao-the-divergence-machine-ii]] (summary)
 - [[shitty-castles]] (summary)
 - [[stewart-courtier-and-heretic]] (summary)
+
+## Leibnitz in Morley's Diderot (Vol. I)
+
+John Morley's [[morley-diderot-v1]] (he spells the name Leibnitz) shows the Encyclopædists admiring Leibniz from a distance and laughing at his optimism.
+
+**Diderot's article.** Diderot's Encyclopædia article on Leibnitz is mostly a table of propositions plus Fontenelle's éloge, reproduced in admiration for a genius like Diderot's own in range but superior in concentration and construction. Diderot offers a fanciful list of candidates for head of the human race and names “four marvellous insects”: Bayle, Descartes, Leibnitz and Newton. Morley concludes that Diderot only viewed the façade admiringly ([[morley-diderot-v1-ch5-diderot-contributions-2]]). In the same survey Morley measures Diderot's articles against Baconian rather than Leibnizian ideals, calling the Wolffian definition of philosophy as “the science of possibles quâ possibles” alien to the Encyclopædia's positive spirit (ibid.).
+
+**Optimism mocked.** At Holbach's table, in a conversation Diderot reported, the problem of evil was put as a dilemma “a child would understand” and optimism dismissed with original sin and metempsychosis as “hollow vision of a dream”; the sharpest stroke was the story of Leibnitz's pyramid of possible worlds with Tarquin and Lucretia at the summit ([[morley-diderot-v1-ch6-social-life-3]]). Morley also places Shaftesbury's optimistic harmony, which shaped Diderot's early ethics, as coming after Leibniz ([[morley-diderot-v1-ch3-early-writings-2]]).
+
+**In the canon of progress.** Leibnitz appears in the Preliminary Discourse's lineage of progress with Bacon, Descartes, Newton and Locke ([[morley-diderot-v1-ch5-encyclopaedia-contents-2]]); he endorsed improving Alsted's encyclopædia a century after it appeared ([[morley-diderot-v1-ch5-encyclopaedia-history-1]]); and Diderot thought the experiment of giving sight to the born-blind would need a subject prepared like Newton, Descartes, Locke and Leibniz together ([[morley-diderot-v1-ch4-new-philosophy-1]]).

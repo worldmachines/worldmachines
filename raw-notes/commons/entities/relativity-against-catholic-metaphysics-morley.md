@@ -1,0 +1,41 @@
+---
+summary: "John Morley's reading of Diderot's Letter on the Blind (1749) as the first effective introduction into France of the relativity of knowledge, with Saunderson's attack on final causes, as the philosophical first step in dissolving Catholicism's absolute, man-centred theory of the universe."
+tags: [relativity-of-knowledge, letter-on-the-blind, final-causes, catholicism, design-argument, sensationalism, proto-evolution]
+last_updated: 2026-10-01
+level: canon
+sources: [morley-diderot-v1-ch3-early-writings-1, morley-diderot-v1-ch3-early-writings-2, morley-diderot-v1-ch3-early-writings-3, morley-diderot-v1-ch4-new-philosophy-1, morley-diderot-v1-ch4-new-philosophy-2, morley-diderot-v1-ch4-new-philosophy-3]
+---
+
+# Relativity against Catholic metaphysics (Morley)
+
+This page draws on Volume I (Preface, Chapters I–VIII) of [[john-morley]]'s study [[diderot-and-the-encyclopaedists]]; Volume II material is added in later sections. The thesis is Morley's; Diderot's and Saunderson's arguments are given as Morley quotes and summarises them.
+
+## Background: vision as inference
+
+[[voltaire]], whom Morley rehabilitates as a serious popularizer of [[isaac-newton]], expounded Berkeley's theory that figures, magnitudes and distances are “not sensations but inferences”, so that a man born blind and given sight would not at once discern them; Cheselden's 1728 operation seemed to confirm Locke and Berkeley, and Condillac took up the problem in 1746. Réaumur's 1748 operation, which Diderot was refused leave to attend, prompted the Letter on the Blind (1749). Diderot doubted the experiment could be made conclusive, since the patient would need philosophical preparation worthy of Newton, Descartes, Locke and Leibniz together, and Morley endorses him: “In this he was undoubtedly right” ([[morley-diderot-v1-ch4-new-philosophy-1]]).
+
+## The doctrine introduced
+
+Morley's central claim is that the Letter was the first effective introduction into France of the principles that knowledge is relative to intelligence, that thought is not the measure of existence, and that experience does not limit what is possible. He hedges that Diderot did not discover or establish the doctrine but introduced it “at the moment when circumstances were ripe for it”, and that it was used as a weapon against a standing organisation resting on anthropomorphism and the absolute ([[morley-diderot-v1-ch4-new-philosophy-1]]). The blind man of Puisaux, who defined eyes by analogy with his stick and a mirror as a machine that sets things in relief away from themselves, shows how a sense limits concepts (ibid.). Diderot's next step, in the Letter on the Deaf and Dumb (1751), was to “decompose” a man and examine what each sense contributes ([[morley-diderot-v1-ch4-new-philosophy-3]]).
+
+## Saunderson against final causes
+
+In the invented deathbed dialogue of the blind Cambridge mathematician Saunderson, the wonders of nature are evidence only for the sighted; astonishment is the habit of treating what exceeds our strength as a prodigy; and invoking a Being only creates “a new knot” harder than the first, as in the regress of the elephant and the tortoise. Saunderson then asks to be left free to doubt that the present order always held, conjecturing that early matter in motion produced faulty creatures and that “all the faulty (vicieuses) combinations of matter disappeared” while only self-supporting ones persisted ([[morley-diderot-v1-ch4-new-philosophy-2]]).
+
+Morley reads this as “a distinct enough conception, though in an exceedingly undigested shape” of incessant variability and of adaptation as the condition of survival, and even as “a bald and unsustained guess” a blow at final causes. He adds, in his own voice, that inferring a deity from adaptation ignores the “marvels of mis-adaptation” and the “appalling law of merciless and incessant destruction”. Against Voltaire's quip that Saunderson denied God because he happened to be born blind, Morley concedes that making touch the arbiter of all ideas is “absurd” but says the case against final causes would have come as fitly from a sighted man ([[morley-diderot-v1-ch4-new-philosophy-2]]). The notes read Morley's gloss as a period reading of a pre-Darwinian passage; it rhymes with the treatment of selection without a designer in [[dennett-darwins-dangerous-idea]], though Saunderson's version is a conjectural thought-experiment on chance combinations, not a mechanism of descent.
+
+## Catholicism as a systematised theory of the universe
+
+This is the core of Morley's thesis. Catholicism was not only an institution and a faith but “a systematised theory of the universe” that made man the final cause of the cosmos and every judgement absolute. Rationalistic attacks on scripture or miracles could only partly destroy it; the attack “must begin in philosophy”, by pressing “the relativity of our ideas” and freeing thought from anthropomorphism. The Church, unlike the Empire, was a social organisation “made vital by a conviction”, and the greatest fact of eighteenth-century intellectual history was the overthrow of that conviction. Morley notes that the Catholic reaction's sharpest philosophical champion, Joseph de Maistre, first attacked the principle of relativity ([[morley-diderot-v1-ch4-new-philosophy-2]]; see [[joseph-de-maistre]]). Diderot's own image of the worm and the ant admiring the “architecture” of the ruins they shelter in is, for Morley, the type of the philosophy on which Catholicism rests (ibid.).
+
+## Earlier stages
+
+The Letter caps a sequence the notes trace through the early writings. The Philosophical Thoughts quote physics against atheism, the world being “a machine with its cords, its pulleys, its springs, its weights”, which Morley treats as a halting-place, not yet materialism ([[morley-diderot-v1-ch3-early-writings-1]]); they also concede, through the dice argument, that infinite throws of eternal matter could compensate the improbability of an ordered world ([[morley-diderot-v1-ch3-early-writings-2]]). In the Sceptic's Walk an atheist says the observer knows only a tooth or two of one wheel of an “unknown machine” and that the watch analogy fails because a watch's origin is known and the universe's is not; Morley reads this as an argument from the relativity of human knowledge, not dogmatic denial ([[morley-diderot-v1-ch3-early-writings-3]]). In all three the machine image is a theological or epistemic argument, not a theory of historical infrastructure.
+
+## Morley's correction: relativity misapplied to ethics
+
+Morley does not accept every use Diderot made of relativity. Diderot's claim that a being with an extra sense would find our morality imperfect is, for Morley, a “crude and erroneous” illustration of ethical relativity, because moral ideas are relative to mental constitution and social conditions, not to the number of the senses, and the artificiality of a convention is no test of its worth ([[morley-diderot-v1-ch4-new-philosophy-1]]).
+
+## World Machines resonances, with the notes' hedges
+
+The notes read Morley's Church “made vital by a conviction” as echoing, only loosely, the WM idea of a [[world-machines]] era resting on shared assumptions, since Morley makes a narrower claim about one intellectual system ([[morley-diderot-v1-ch4-new-philosophy-2]]). His partisan defence of relativity of faculties stands in tension with, rather than inside, the universalism the [[counter-enlightenment]] attacked as [[enlightenment-monism]]; the notes flag Morley's position as that of a positivist partisan (ibid.). The earlier demand that a creed be reduced to clear, testable propositions echoes the [[modernity-machine]] drive toward legibility, and Morley's complaint that it ignores how creeds are historically produced is a complaint about what such reasoning leaves out; the notes call this a half-fit ([[morley-diderot-v1-ch3-early-writings-2]]).
