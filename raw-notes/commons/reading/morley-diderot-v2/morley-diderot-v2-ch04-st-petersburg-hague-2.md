@@ -23,7 +23,6 @@ cites:
 - 'morley-diderot-v2#u09-c6'
 connects:
 - 'counter-enlightenment'
-supports:
 - 'enlightenment-monism'
 ---
 
