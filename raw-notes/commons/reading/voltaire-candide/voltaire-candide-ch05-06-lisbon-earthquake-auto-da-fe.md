@@ -24,7 +24,6 @@ cites:
 connects:
 - 'panglossian-optimism'
 - 'gottfried-wilhelm-leibniz'
-contradicts:
 - 'the-best-of-all-possible-worlds'
 ---
 
