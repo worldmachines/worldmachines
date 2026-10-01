@@ -3,7 +3,7 @@ summary: "John Morley's reading of Diderot's Letter on the Blind (1749) as the f
 tags: [relativity-of-knowledge, letter-on-the-blind, final-causes, catholicism, design-argument, sensationalism, proto-evolution]
 last_updated: 2026-10-01
 level: canon
-sources: [morley-diderot-v1-ch3-early-writings-1, morley-diderot-v1-ch3-early-writings-2, morley-diderot-v1-ch3-early-writings-3, morley-diderot-v1-ch4-new-philosophy-1, morley-diderot-v1-ch4-new-philosophy-2, morley-diderot-v1-ch4-new-philosophy-3]
+sources: [morley-diderot-v1-ch3-early-writings-1, morley-diderot-v1-ch3-early-writings-2, morley-diderot-v1-ch3-early-writings-3, morley-diderot-v1-ch4-new-philosophy-1, morley-diderot-v1-ch4-new-philosophy-2, morley-diderot-v1-ch4-new-philosophy-3, morley-diderot-v2-ch09-conclusion-1, morley-diderot-v2-ch06-holbach-system-of-nature-3]
 ---
 
 # Relativity against Catholic metaphysics (Morley)
@@ -39,3 +39,7 @@ Morley does not accept every use Diderot made of relativity. Diderot's claim tha
 ## World Machines resonances, with the notes' hedges
 
 The notes read Morley's Church “made vital by a conviction” as echoing, only loosely, the WM idea of a [[world-machines]] era resting on shared assumptions, since Morley makes a narrower claim about one intellectual system ([[morley-diderot-v1-ch4-new-philosophy-2]]). His partisan defence of relativity of faculties stands in tension with, rather than inside, the universalism the [[counter-enlightenment]] attacked as [[enlightenment-monism]]; the notes flag Morley's position as that of a positivist partisan (ibid.). The earlier demand that a creed be reduced to clear, testable propositions echoes the [[modernity-machine]] drive toward legibility, and Morley's complaint that it ignores how creeds are historically produced is a complaint about what such reasoning leaves out; the notes call this a half-fit ([[morley-diderot-v1-ch3-early-writings-2]]).
+
+## Volume II: final causes and the limits of knowledge, after the Letter
+
+This section draws on Volume II ([[morley-diderot-v2]]), which carries the attack on final causes forward. In the Thoughts on the Interpretation of Nature (1754), Diderot says the physicist abandons the Why for the How, mocks the hymns of the defenders of final causes, and argues that physiology advanced from Galen to Haller by dropping such conjecture; Morley says the passage penetrates “the hollowness of every system dealing with Final Causes”. The notes add a hedge: Diderot still speaks of the Creator with deference, so the argument is methodological, not atheist. The same work states the relativity of knowledge as humility: the phenomena of nature so outrun human understanding that even a complete divine book of nature would not be comprehensible, and “it is utility that circumscribes all” ([[morley-diderot-v2-ch09-conclusion-1]]). Holbach later rejected the *a priori* proofs of Descartes, Clarke, Malebranche and Newton outright; Morley's comment is that the two sides argued “on two different planes of thought” with no common criterion, the force of the attack lying in the gap between the seventeenth-century and eighteenth-century notions of demonstration ([[morley-diderot-v2-ch06-holbach-system-of-nature-3]]).

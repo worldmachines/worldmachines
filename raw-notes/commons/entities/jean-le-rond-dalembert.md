@@ -3,7 +3,7 @@ summary: "D'Alembert, the mathematician co-editor of the Encyclopædia and chief
 tags: [dalembert, encyclopedie, french-enlightenment, men-of-letters, preliminary-discourse, censorship]
 last_updated: 2026-10-01
 level: canon
-sources: [morley-diderot-v1-ch5-encyclopaedia-history-1, morley-diderot-v1-ch5-encyclopaedia-history-2, morley-diderot-v1-ch5-encyclopaedia-history-3, morley-diderot-v1-ch5-encyclopaedia-history-4, morley-diderot-v1-ch5-encyclopaedia-contents-2, morley-diderot-v1-ch5-diderot-contributions-1, morley-diderot-v1-ch6-social-life-4]
+sources: [morley-diderot-v1-ch5-encyclopaedia-history-1, morley-diderot-v1-ch5-encyclopaedia-history-2, morley-diderot-v1-ch5-encyclopaedia-history-3, morley-diderot-v1-ch5-encyclopaedia-history-4, morley-diderot-v1-ch5-encyclopaedia-contents-2, morley-diderot-v1-ch5-diderot-contributions-1, morley-diderot-v1-ch6-social-life-4, morley-diderot-v2-ch06-holbach-system-of-nature-1, morley-diderot-v2-ch04-st-petersburg-hague-2, morley-diderot-v2-ch08-closing-years-2, morley-diderot-v2-ch09-conclusion-2, morley-diderot-v2-appendix-rameaus-nephew-3]
 ---
 
 # D'Alembert
@@ -29,3 +29,7 @@ D'Alembert conceded that the Encyclopædia's theology and metaphysics articles w
 ## Withdrawal
 
 D'Alembert's letters to Voltaire, as Morley quotes them, give his reasons for retiring: affronts, satires protected or even commanded by those in power, sermons at Versailles and new censors. Morley adds dissatisfaction with the booksellers' finances. Diderot carried the work on alone ([[morley-diderot-v1-ch5-encyclopaedia-history-4]]). In a 1759 dialogue that Diderot reported, he scolded D'Alembert for dealing unfairly with the booksellers; Morley notes that the telling is Diderot's and favours him ([[morley-diderot-v1-ch6-social-life-4]]).
+
+## Volume II: sceptic, interlocutor and witness
+
+This section draws on Volume II ([[morley-diderot-v2]]). When Holbach's System of Nature appeared in 1770, D'Alembert is reported as a sceptic who nonetheless thought experience proved a material soul and a limited material deity ([[morley-diderot-v2-ch06-holbach-system-of-nature-1]]). Frederick's distaste for Diderot's “self-sufficiency” and “arrogance” reaches Morley through D'Alembert ([[morley-diderot-v2-ch04-st-petersburg-hague-2]]). He is a speaker in Diderot's 1769 dialogues, the conversation with D'Alembert and D'Alembert's Dream, in which Diderot figures definitely as a materialist ([[morley-diderot-v2-ch09-conclusion-2]]). In Romilly's account of a 1781 visit, D'Alembert, more cautious than Diderot, observes that the people who were “drunk with joy” at a Dauphin's birth in 1729 now regard the birth of “another master” with indifference, which Morley reads as proof that the change the philosophers had worked for was at hand. He is among the dead Morley lists in Diderot's last years, tended by [[nicolas-de-condorcet]] ([[morley-diderot-v2-ch08-closing-years-2]]). In Rameau's Nephew, He imagines mocking D'Alembert among other great names if he were rich ([[morley-diderot-v2-appendix-rameaus-nephew-3]]).

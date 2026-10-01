@@ -3,7 +3,7 @@ summary: "Diderot's theory of the drama as John Morley presents and judges it: a
 tags: [drama-theory, bourgeois-drama, genre-serieux, paradox-on-the-player, lessing, pantomime, french-classic-stage]
 last_updated: 2026-10-01
 level: canon
-sources: [morley-diderot-v1-preface-ch1-preliminary, morley-diderot-v1-ch3-early-writings-2, morley-diderot-v1-ch4-new-philosophy-3, morley-diderot-v1-ch7-the-stage-1, morley-diderot-v1-ch7-the-stage-2, morley-diderot-v1-ch8-rameaus-nephew]
+sources: [morley-diderot-v1-preface-ch1-preliminary, morley-diderot-v1-ch3-early-writings-2, morley-diderot-v1-ch4-new-philosophy-3, morley-diderot-v1-ch7-the-stage-1, morley-diderot-v1-ch7-the-stage-2, morley-diderot-v1-ch8-rameaus-nephew, morley-diderot-v2-ch03-art-2, morley-diderot-v2-ch03-art-3, morley-diderot-v2-ch02-romance-2]
 ---
 
 # Diderot's theory of the drama (Morley)
@@ -37,3 +37,7 @@ Diderot refused to compare French classic tragedy with the Greeks: its dialogue 
 ## The genre sérieux and its failure
 
 Diderot's third dramatic kind treats the duties of men as comic matter and puts class types in place of individual characters. Morley observes that it formed no school, since Beaumarchais and later French bourgeois comedy went elsewhere. His objections are that mere reproduction of reality does not move us (he cites Burke), that a drama steeped in Duty leaves too little room for imaginative genius, and that exchanging the typical king for the generalised shopkeeper brings back pseudo-classic abstraction. He dissents from the Romantics' placing of Diderot among the Flamboyant, arguing that an Encyclopædist who disdained the Dark Ages could not mount a real antagonism to the classic school; in the eighteenth century, he suggests, classicism meant making man the centre of the universe, and only Nathan the Wise speaks the century's own mind in dramatic form ([[morley-diderot-v1-ch7-the-stage-2]]). The notes find little genuine WM resonance in this material beyond its place in the Enlightenment's social turn.
+
+## Volume II: the moral picture and the actor's sensibility
+
+This section draws on Volume II ([[morley-diderot-v2]]), where the dramatic theory reappears in Diderot's art criticism and fiction. Diderot asked painting to join dramatic poetry in “instructing us, correcting us, inviting us to virtue”, and urged Greuze to “*fais de la morale en peinture*”; Morley's gloss is that Diderot would improve men by warming the domestic affections rather than by Hogarthian horror, and he calls even Diderot's best invented subject “commonplace sentimentalism” ([[morley-diderot-v2-ch03-art-2]]). In the debate over the Essay on Painting, Morley observes that the drift of Goethe's rebuttal, that art has its own laws distinct from nature, is in fact the thesis of Diderot's own Paradox on the Comedian ([[morley-diderot-v2-ch03-art-3]]). And in judging Jacques le Fataliste Morley turns the Paradox back on its author: echoing Diderot's contention that excess of sensibility makes a mediocre actor, he holds that Diderot had too much conscience to be a free buffoon ([[morley-diderot-v2-ch02-romance-2]]).
