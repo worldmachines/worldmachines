@@ -1,9 +1,9 @@
 ---
 summary: "English philosopher and statesman who proposed a systematic reorganization of all the sciences — an Enlightenment precursor to the universal library aspiration."
 tags: [intellectual-history, philosophy, Enlightenment, scientific-method, knowledge-systems, England]
-last_updated: 2026-09-27
+last_updated: 2026-10-01
 level: canon
-sources: [gay-bourgeois-experience-v3-p6-empire-of-fact-bacon-science, eisenstein-printing-revolution-ch02-defining-initial-shift-1, eisenstein-printing-revolution-ch05-permanent-renaissance-3, eisenstein-printing-revolution-ch07-s2-copernican-revolution, eisenstein-printing-revolution-ch07-s3-galileos-trial-1, eisenstein-printing-revolution-ch07-s3-galileos-trial-2, eisenstein-printing-revolution-ch08-final-remarks]
+sources: [gay-bourgeois-experience-v3-p6-empire-of-fact-bacon-science, eisenstein-printing-revolution-ch02-defining-initial-shift-1, eisenstein-printing-revolution-ch05-permanent-renaissance-3, eisenstein-printing-revolution-ch07-s2-copernican-revolution, eisenstein-printing-revolution-ch07-s3-galileos-trial-1, eisenstein-printing-revolution-ch07-s3-galileos-trial-2, eisenstein-printing-revolution-ch08-final-remarks, morley-diderot-v1-ch2-youth-2, morley-diderot-v1-ch3-early-writings-1, morley-diderot-v1-ch5-encyclopaedia-history-1, morley-diderot-v1-ch5-encyclopaedia-contents-1, morley-diderot-v1-ch5-encyclopaedia-contents-2, morley-diderot-v1-ch5-diderot-contributions-2]
 ---
 
 # Francis Bacon
@@ -69,3 +69,13 @@ Gay's own reading is psychoanalytic. The Baconian empire is aggression turned co
 - **Neither side of the utility debate.** Against historians who hold that Bacon contributed nothing to seventeenth-century science, she sets aside the utility-versus-curiosity dichotomy itself, since the same printed tables served both ([[eisenstein-printing-revolution-ch07-s3-galileos-trial-2]]).
 
 The Universal Library entry above names Gessner's *Bibliotheca universalis* as a sibling project. Eisenstein treats that 1545 bibliography as the first and last serious attempt at universality before specialized bibliographies multiplied; see [[printing-press-and-information-overload-eisenstein]].
+
+## Morley's Bacon: true parent of the Encyclopaedia
+
+The universal-library entry above names the French Encyclopédie as one of Bacon's successors. John Morley's [[morley-diderot-v1]] makes the lineage specific and, writing as an Englishman, insists on it.
+
+**Parent and occasion.** Morley surveys earlier encyclopædic attempts by the test of whether they present knowledge as an organically connected whole, and dismisses most of them. Bacon's idea of systematic classification is what “inspired Diderot, and guided his hand throughout”; Chambers's Cyclopædia (1727) was merely the occasion. Diderot's Prospectus acknowledges the chancellor who sketched a universal dictionary of sciences and arts when there were “not, so to say, either arts or sciences”, and D'Alembert's Preliminary Discourse does the same ([[morley-diderot-v1-ch5-encyclopaedia-history-1]]). Earlier in the book Morley already calls Bacon's ideas “the direct source of the great undertaking of Diderot's life” ([[morley-diderot-v1-ch2-youth-2]]). He also cautions that free-thinkers were not made merely by reading Bacon, Hobbes and Locke; ideas gain force by practical opportuneness ([[morley-diderot-v1-ch3-early-writings-1]]).
+
+**A faulty tree.** Morley finds the genealogical tree of knowledge borrowed from Bacon faulty, because it follows the faculties of the understanding rather than objective relations, so that printing lands under Logic and architecture is scattered. He still judges that the vastness of the assembled secular knowledge and its “guiding thread” survive the objection ([[morley-diderot-v1-ch5-encyclopaedia-contents-2]]).
+
+**Words to things.** For Morley the Encyclopædia's emphasis on the practical arts completes the movement of Bacon and Descartes: “the substitution of interest in things for interest in words” ([[morley-diderot-v1-ch5-encyclopaedia-contents-2]]). He uses Baconian rather than Leibnizian ideals as his test of Diderot's articles, finding the Wolffian definition of philosophy alien to the work's positive spirit ([[morley-diderot-v1-ch5-diderot-contributions-2]]). And he notes that Joseph de Maistre's later assault on Bacon was, like the theologians' persecution of the Encyclopædists, “guided by a right instinct of self-preservation”, since Bacon's empiricism tends toward a social, positive spirit ([[morley-diderot-v1-ch5-encyclopaedia-contents-1]]).

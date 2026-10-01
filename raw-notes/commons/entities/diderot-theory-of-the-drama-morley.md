@@ -1,0 +1,39 @@
+---
+summary: "Diderot's theory of the drama as John Morley presents and judges it: a bourgeois, domestic 'serious genre' and a demand for natural acting, pantomime and truth to nature against the French classic stage, capped by the Paradox on the Player; fertile for Lessing and German criticism, mistaken, Morley holds, in its moralising homily and its theory of types."
+tags: [drama-theory, bourgeois-drama, genre-serieux, paradox-on-the-player, lessing, pantomime, french-classic-stage]
+last_updated: 2026-10-01
+level: canon
+sources: [morley-diderot-v1-preface-ch1-preliminary, morley-diderot-v1-ch3-early-writings-2, morley-diderot-v1-ch4-new-philosophy-3, morley-diderot-v1-ch7-the-stage-1, morley-diderot-v1-ch7-the-stage-2, morley-diderot-v1-ch8-rameaus-nephew]
+---
+
+# Diderot's theory of the drama (Morley)
+
+This page draws on Volume I (Preface, Chapters I–VIII) of [[john-morley]]'s study [[diderot-and-the-encyclopaedists]]; Volume II material is added in later sections. Diderot's views are given as Morley reports or quotes them; the verdicts are Morley's, in a Victorian liberal critic's voice.
+
+## The domestic counterpart of the Encyclopædia
+
+Morley frames the theory as part of the movement of the age. As the [[encyclopedie]] glorified pacific industry and civil justice over feudal privilege, Diderot's theory of the drama glorified private virtue and domestic life over patriotic devotion: “two great sides of a single movement”. He hedges that Diderot need not have consciously surveyed the whole movement, only thought sincerely “in the spirit of reality”, and adds that the French had only a glimpse of the promised land in art before moral energy went into social action ([[morley-diderot-v1-ch7-the-stage-1]]; see [[speculative-to-social-attack-morley]]). In the Preface Morley already credits Diderot with a breadth of artistic principle beyond Voltaire and Rousseau: a realistic, sympathetic criticism and an appeal from classic convention to common life ([[morley-diderot-v1-preface-ch1-preliminary]]). Its ethical colouring he traces to Shaftesbury's tie between beauty and morality ([[morley-diderot-v1-ch3-early-writings-2]]).
+
+## Critic, not creator
+
+Lessing judged that since Aristotle no more philosophical mind than Diderot's had treated the theatre, translated his plays and essay, and owed him an impulse. Morley's own judgement is that Diderot lacked Lessing's dramatic fire but had “the eye of the philosophic critic”, and that he “invented German criticism”; the torch of dramatic art then passed to Lessing and Goethe ([[morley-diderot-v1-ch7-the-stage-1]]). The plays themselves failed. The Natural Son, borrowed in structure from Goldoni's The True Friend, written in 1757 and staged once in 1771, is to Morley “one of the most vapid performances in dramatic history”, its fourteen years of success in print owed to “unflinching partisanship”. The Father of the Family (written 1758, acted 1761) is better, popular in Germany and Italy, but “never struck root” in France. Madame de Staël's line is quoted: Diderot put “the affectation of nature in the place of the affectation of convention” (ibid.).
+
+## Pantomime and the poverty of language
+
+Diderot argued that since pantomime does so much in life it should do much on the stage, and that the dramatist should write out the stage business. Morley thinks writing the action into the text makes the plays read like bald romances, but endorses the principle for the highest drama. Behind it lies Diderot's conviction, shown in the stopped-ears playgoing experiment of the Letter on the Deaf and Dumb, that language is a “poor, misleading, and utterly inadequate instrument”; his letter to Voltaire praising Clairon's silent pathos in Tancred is the illustration ([[morley-diderot-v1-ch7-the-stage-1]], [[morley-diderot-v1-ch4-new-philosophy-3]]).
+
+## Against the stage as pulpit
+
+Morley's central objection is to Diderot's view that artists should always have virtue in view and that the arts should unite with the laws to make us love virtue and hate vice. Virtue wins us, Morley answers, through sympathy kindled by interesting character and action, not by homilies; the Father of the Family's speeches on marriage are his example, and exhortation is the feeblest bulwark against passion. He also faults five acts of serious comedy without humour, since laughter rightly stirred is itself a means to the moral end Diderot sought ([[morley-diderot-v1-ch7-the-stage-1]]).
+
+## The Paradox on the Player
+
+Morley holds that no one can be a great critic of the drama without studying acting, and contrasts Goethe and Lessing with Hazlitt, who could not bear to see King Lear acted. In his summary of the Paradox, which he calls unusually well finished, the first-rank player has judgment, self-possession and penetration but no sensibility: extreme sensibility makes mediocre actors, and its absolute want prepares sublime ones. Coolness, not fury, produces the characteristic stroke, in actor, poet, painter and musician alike. Garrick running through a ladder of passions between two folding doors without feeling them is the illustration. Subsidiary points: stage truth is conformity to an ideal model, not to nature as it is; the denouement should be an action, not a narrative; fewer gestures, more silence, less emphasis ([[morley-diderot-v1-ch7-the-stage-2]]).
+
+## Against the French classic stage
+
+Diderot refused to compare French classic tragedy with the Greeks: its dialogue is emphasis, wit and glitter, far from nature, and the same demand for truth extends to scenery and costume (no gilding, no panier). He admired Terence's moderation, the English comic writers' verve, Moore's The Gamester and Lillo's George Barnwell as bourgeois tragedy, and Shakespeare as a Saint Christopher colossus rather than a Belvedere Apollo, an unsatisfactory recognition in Morley's view but better than Voltaire's “drunken savage”. Morley places all this in the quarrel of Ancients and Moderns, condemns the “Serbonian bog” of dramatic rules as a “grotesque monument of sterility”, and credits Diderot with conceding that no general principle cannot be infringed by a man of genius ([[morley-diderot-v1-ch7-the-stage-2]]). The same preference for the natural over the artificial, Morley says, put Diderot against Lulli and Rameau in the music quarrel ([[morley-diderot-v1-ch8-rameaus-nephew]]).
+
+## The genre sérieux and its failure
+
+Diderot's third dramatic kind treats the duties of men as comic matter and puts class types in place of individual characters. Morley observes that it formed no school, since Beaumarchais and later French bourgeois comedy went elsewhere. His objections are that mere reproduction of reality does not move us (he cites Burke), that a drama steeped in Duty leaves too little room for imaginative genius, and that exchanging the typical king for the generalised shopkeeper brings back pseudo-classic abstraction. He dissents from the Romantics' placing of Diderot among the Flamboyant, arguing that an Encyclopædist who disdained the Dark Ages could not mount a real antagonism to the classic school; in the eighteenth century, he suggests, classicism meant making man the centre of the universe, and only Nathan the Wise speaks the century's own mind in dramatic form ([[morley-diderot-v1-ch7-the-stage-2]]). The notes find little genuine WM resonance in this material beyond its place in the Enlightenment's social turn.

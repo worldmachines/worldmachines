@@ -1,9 +1,9 @@
 ---
 summary: "Voltaire (1694–1778) — French Enlightenment writer, playwright, and entrepreneur who transformed the intellectual's social role, pioneered celebrity, advanced political and epistemic legibility, and made early contributions to the Divergence Machine through Candide and tolerance campaigns."
 tags: [voltaire, enlightenment, modernity-machine, divergence-machine, celebrity, ferney, legibility, entrepreneur]
-last_updated: 2026-09-28
+last_updated: 2026-10-01
 level: canon
-sources: [douglass-rousseau-and-hobbes-ch1-malebranche, douglass-rousseau-and-hobbes-ch2-natural-goodness-golden-age, douglass-rousseau-and-hobbes-intro-methodological-problems, douglass-rousseau-and-hobbes-ch3-unity-civil-religion]
+sources: [douglass-rousseau-and-hobbes-ch1-malebranche, douglass-rousseau-and-hobbes-ch2-natural-goodness-golden-age, douglass-rousseau-and-hobbes-intro-methodological-problems, douglass-rousseau-and-hobbes-ch3-unity-civil-religion, morley-diderot-v1-preface-ch1-preliminary, morley-diderot-v1-ch4-new-philosophy-1, morley-diderot-v1-ch4-new-philosophy-2, morley-diderot-v1-ch4-new-philosophy-3, morley-diderot-v1-ch5-encyclopaedia-history-2, morley-diderot-v1-ch5-encyclopaedia-history-4, morley-diderot-v1-ch6-social-life-2, morley-diderot-v1-ch6-social-life-4, morley-diderot-v1-ch7-the-stage-2]
 ---
 
 # Voltaire
@@ -86,3 +86,15 @@ Robin Douglass's study ([[douglass-rousseau-and-hobbes]]) gives Voltaire three s
 - **The 1755 letter.** In his letter to Voltaire, Rousseau criticized Hobbes's religious intolerance and called him "the Sophist Hobbes". By 1762 Rousseau praised Hobbes as the only Christian author to see that political and religious authority must be united, a shift Douglass reads as a re-evaluation during the 1750s ([[douglass-rousseau-and-hobbes-intro-methodological-problems]], [[douglass-rousseau-and-hobbes-ch3-unity-civil-religion]]).
 
 These are passing appearances. Douglass does not treat Voltaire's politics at length.
+
+## Morley's Diderot and the Encyclopaedists (Vol. I)
+
+John Morley, who had already written a volume on Voltaire, treats him in [[morley-diderot-v1]] as the Encyclopædia's candid ally and as Diderot's foil.
+
+**Popularizer of Newton.** Morley rehabilitates Voltaire as a serious popularizer of Newton, whose exposition of Berkeley's theory of vision and of Cheselden's operation set the problem that Condillac and then Diderot's Letter on the Blind took up ([[morley-diderot-v1-ch4-new-philosophy-1]]). Voltaire's polite dissent from that Letter, that Saunderson “denied God, because he happened to have been born blind”, is answered by Morley: the case against final causes would have come as fitly from a sighted man ([[morley-diderot-v1-ch4-new-philosophy-2]]).
+
+**Patron and ally.** When Diderot was imprisoned at Vincennes in 1749, Voltaire set Madame du Châtelet, a kinswoman of the governor, to write, and Diderot was moved from the dungeon to the château ([[morley-diderot-v1-ch4-new-philosophy-3]]). He greeted the first volumes of the Encyclopædia from Potsdam as the glory of France and the shame of its persecutors, sent small contributions, and pressed the editors for method: etymologies, definitions, examples, clearness, brevity. Morley praises his good faith in complaining to the editors rather than of them ([[morley-diderot-v1-ch5-encyclopaedia-history-2]]). After D'Alembert's retirement he first urged resistance, then urged Diderot to finish the work abroad, which Diderot refused; his anecdote of the book at the king's supper, which Morley corrects in detail but accepts in substance, presents it as a compendium of the arts from the pin to the gun ([[morley-diderot-v1-ch5-encyclopaedia-history-4]]).
+
+**Money and position.** Morley sets Diderot's encyclopædic pay against Voltaire's army-contract profits, and Voltaire's own pensions from Frederick against Diderot's dependence on Catherine ([[morley-diderot-v1-ch5-encyclopaedia-history-4]], [[morley-diderot-v1-ch6-social-life-4]]). His article Tyrant, in Diderot's account, provoked the anger behind a provincial prosecution in which a colporteur was branded and sent to the galleys ([[morley-diderot-v1-ch6-social-life-2]]).
+
+**Morley's ranking.** In the Preface Morley ranks Diderot above Voltaire and Rousseau as a thinker, with scientific method and constructive conceptions, while conceding Voltaire's superiority in literary expression ([[morley-diderot-v1-preface-ch1-preliminary]]). On the drama he notes that Voltaire's tragedies restored the conventional stage Diderot attacked, that Voltaire found the Greeks too colloquial, and that his “drunken savage” was a worse verdict on Shakespeare than Diderot's ([[morley-diderot-v1-ch7-the-stage-2]]).

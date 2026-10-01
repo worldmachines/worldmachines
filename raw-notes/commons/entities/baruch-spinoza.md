@@ -1,9 +1,9 @@
 ---
 summary: "17th-century Dutch philosopher of radical immanence — lens grinder, heretic, first divergentist — whose substance monism, conatus theory, and critique of theological authority underpin both Rao's divergence machine narrative and Sathe's architecture of resistance, and whom Matthew Stewart's The Courtier and the Heretic (2006) recovers as a political revolutionary."
 tags: [thinker, philosopher, divergence-machine, spinoza, early-modern, lens-grinder, ethics, conatus, immanence, pantheism, resistance, legibility, 17th-century-philosophy, biography, amsterdam, excommunication, tractatus-theologico-politicus, stewart]
-last_updated: 2026-09-28
+last_updated: 2026-10-01
 level: canon
-sources: [stewart-courtier-and-heretic-ch01-the-hague-1676, stewart-courtier-and-heretic-ch02-bento, stewart-courtier-and-heretic-ch04-life-of-the-mind, stewart-courtier-and-heretic-ch06-hero-of-the-people, stewart-courtier-and-heretic-ch08-friends-of-friends, stewart-courtier-and-heretic-ch10-secret-philosophy, stewart-courtier-and-heretic-ch12-point-of-contact, stewart-courtier-and-heretic-ch13-surviving-spinoza, stewart-courtier-and-heretic-ch18-aftermath, wulf-magnificent-rebels-ch12-atheism-dispute, wulf-magnificent-rebels-ch15-new-confederation, wulf-magnificent-rebels-ch18-starving-rats-1]
+sources: [stewart-courtier-and-heretic-ch01-the-hague-1676, stewart-courtier-and-heretic-ch02-bento, stewart-courtier-and-heretic-ch04-life-of-the-mind, stewart-courtier-and-heretic-ch06-hero-of-the-people, stewart-courtier-and-heretic-ch08-friends-of-friends, stewart-courtier-and-heretic-ch10-secret-philosophy, stewart-courtier-and-heretic-ch12-point-of-contact, stewart-courtier-and-heretic-ch13-surviving-spinoza, stewart-courtier-and-heretic-ch18-aftermath, wulf-magnificent-rebels-ch12-atheism-dispute, wulf-magnificent-rebels-ch15-new-confederation, wulf-magnificent-rebels-ch18-starving-rats-1, morley-diderot-v1-ch5-diderot-contributions-2]
 ---
 
 # Baruch Spinoza (1632–1677)
@@ -125,3 +125,7 @@ The Stewart section above ends on the Romantic domestication of Spinoza, includi
 - **Schelling's Absolute.** In breaking with Fichte, Schelling drew on Spinoza to posit an Absolute preceding subject and object, an 'Idealism of Nature' against Fichte's 'Idealism of the Ich' ([[wulf-magnificent-rebels-ch18-starving-rats-1]]).
 
 In all three the Spinoza in play is the monist of God and nature. The notes on Wulf's book record nothing of the political revolutionary Stewart recovers, which fits his account of which Spinoza the German reception kept.
+
+## Diderot's Spinosa article, as Morley judges it
+
+John Morley's [[morley-diderot-v1]] gives one reception of Spinoza by the Encyclopædists: Diderot's Encyclopædia article on “Spinosa”. Morley's verdict is that half of it is Bayle and half is Diderot's own vigorous objections, with no sign that Diderot read beyond the first book of the Ethics. Diderot attacks the geometrical method and individual propositions and finally appeals to common sense (there are several substances), which Morley finds “unpleasantly like an appeal to the crowd” in a scientific question. Morley offers a charitable reconstruction, that Diderot may have meant Spinoza's conception of substance has no relation to objective experience, and regrets he did not push his objections further; he also concedes that such treatment falls short of a modern literary conscience that has “turned specialist” ([[morley-diderot-v1-ch5-diderot-contributions-2]]). None of the concepts this page foregrounds, such as conatus, appears in Morley's account.
