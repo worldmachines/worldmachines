@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gozi, Torpig and MPACK: why takedowns do not end the hacker service economy — World Machines</title>
+  <meta name="description" content="Berinato follows the 2007 cat-and-mouse between researchers and the Gozi/76service malware-as-a-service operation (and its successors Torpig, MPACK, Prg), arguing that criminals&#x27; distributed pain and ">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <a href="/wiki/commons/reading/gilman-deviant-globalization/">Deviant Globalization: Black Market Economy in the 21st Century</a> <b>/</b> <span>Gozi, Torpig and MPACK: why takedowns do not end the hacker service economy</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>Gozi, Torpig and MPACK: why takedowns do not end the hacker service economy</h1>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · <a href="/wiki/commons/reading/gilman-deviant-globalization/">Deviant Globalization: Black Market Economy in the 21st Century</a> · updated 1 October 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/reading/gilman-deviant-globalization/gilman-deviant-globalization-ch13-berinato-hacker-economy-2.md">source on GitHub</a></div>
+    <div class="note-summary">Berinato follows the 2007 cat-and-mouse between researchers and the Gozi/76service malware-as-a-service operation (and its successors Torpig, MPACK, Prg), arguing that criminals&#x27; distributed pain and distributed risk, together with banks&#x27; transferred risk, make the market resilient to takedowns.</div>
+    <div class="prose">
+<p><em>Chapter by Scott Berinato (first published in CSO Security and Risk, 2007), reprinted in Gilman, Goldhammer &amp; Weber (eds.), Deviant Globalization (2011).</em></p>
+<p>This is the second half of Berinato&#x27;s month-by-month account of the Gozi Trojan and the 76service.com subscription service that sold access to infected machines and the data they grabbed. Working largely from SecureWorks researcher Don Jackson&#x27;s undercover access, Berinato reports a March containment effort (FBI, ISPs, antivirus vendors) that appears to shut the service down around March 12, then a rapid resurgence: a fire sale of stolen data, a more targeted form-grabber (Torpig), a &#x27;spring edition&#x27; of Gozi on a Hong Kong server, an April focus on the iFrame distribution mechanism, a May re-emergence and collapse of the 76/Exoric partnership, and a June in which MPACK, an exploit-kit package, and a new Prg variant suggest the market is maturing. In between, Berinato offers two analytic frames, &#x27;distributed pain with concentrated gain&#x27; plus distributed risk on the criminal side, and &#x27;transferred risk&#x27; on the bank side. Much of the evidence is Jackson&#x27;s and other security professionals&#x27; own account; Berinato notes that the FBI and Secret Service declined to comment or would not discuss the case specifically, and several claims (RBN links, who is 57 or sash) are the researchers&#x27; inferences.</p>
+<h2 id="themes">Themes</h2>
+<p><strong>Distributed pain, concentrated gain.</strong> Berinato presents (via Jim Maloney, a former Amazon CSO) the economic logic of the trade: skimming small sums from thousands of victims yields a large gain that no single victim or bank cares enough to chase, and law enforcement cannot justify resources unless it can aggregate many victims into one big case. The point is the author&#x27;s synthesis of security-industry voices, not a measured statistic.</p>
+<p><strong>Distributed risk as a supply chain.</strong> 76 barely handles stolen data, contracts out distribution, and sells to buyers who resell to still others who cash out. Berinato argues this stratified structure mirrors the drug-cartel model, so that disrupting middlemen does not solve the problem because others arise to fill the void (his example: Smash founding the IAACA after ShadowCrew was taken down). The business is modular and outsourced, with iFramebiz-style distribution services, MPACK sold on a customer-service model, and development kits that let buyers adapt code to evade antivirus.</p>
+<p><strong>Transferred risk on the defender side.</strong> Banks, in Berinato&#x27;s account, meet regulation well enough to pass audits, then write the fraud off as acceptable loss and, in Jackson&#x27;s prediction, will shift more of the burden to customers through lower fraud limits and terms of use. Bank-side voices (FS-ISAC&#x27;s Bill Nelson, Hoff) push back that customers demand online banking and value convenience over security; Berinato says it is hard to tell who is right since most banks decline to talk. This is an argument about incentives, with the banks&#x27; own view only thinly represented.</p>
+<p><strong>Resilience through adaptation; the &#x27;infected endpoint&#x27; conclusion.</strong> Each takedown produces a new variant, server, or ISP, &#x27;two sides entwined in an endless, uneasy foxtrot.&#x27; 76service, Jackson says, failed for lack of manpower (it could not scale), not because the service model was flawed. Chris Rouland of IBM ISS draws the radical conclusion that security strategy must assume &#x27;infected end points&#x27; and work out how to secure a transaction on an infected machine. Berinato closes with the expectation that criminals are becoming architects rather than engineers, operating with &#x27;de facto immunity&#x27;.</p>
+<p><strong>Fit with the volume and with World Machines.</strong> The chapter fits the editors&#x27; picture of deviant networks running on mainstream infrastructure (browsers, banks, ISPs, iFrames) and exploiting the gap between what is cheap to attack and costly to police. It also resonates, only partly, with <a class="wikilink" href="/wiki/commons/summaries/farrell-underground-empire">farrell-underground-empire</a> and <a class="wikilink" href="/wiki/commons/entities/weaponized-interdependence">weaponized-interdependence</a>, which read the same network chokepoints from the state side: here the chokepoints are mostly not seized by any state, and Berinato is a trade journalist, not a theorist. The criminals&#x27; modular supply chains and the difficulty of aggregating distributed harm into something legible to enforcement loosely echo <a class="wikilink" href="/wiki/aneesh/concepts/legibility">Legibility</a>, though Berinato does not use that frame.</p>
+<h2 id="notable-passages">Notable passages</h2>
+<p><strong>Distributed pain/concentrated gain (c1).</strong> Maloney&#x27;s arithmetic of skimming $10 from 10,000 cards, with each bank writing off its share, and the law-enforcement aggregation problem.</p>
+<p><strong>Distributed risk and the cartel analogy (c2).</strong> The supply-chain structure of credential dealing, the Goodfellas aside about newbies who &#x27;concentrate the pain&#x27;, and the claim that removing middlemen only invites replacements.</p>
+<p><strong>Transferred risk (c3).</strong> Regulation, audits, acceptable-loss budgets and insurance, set against banks pushing online banking while pushing problems away; consumers&#x27; apathy and the banks&#x27; silence.</p>
+<p><strong>Banks will shift more risk to customers; Rouland&#x27;s &#x27;give up&#x27; (c4).</strong> Jackson&#x27;s prediction on fraud limits and terms of use, Rouland&#x27;s disagreement, and the &#x27;infected end points&#x27; strategy.</p>
+<p><strong>Why 76service failed and will return (c5).</strong> Jackson&#x27;s view that the failure was one of manpower and scale, not the service model, with Torpig seen as the next step.</p>
+<p><strong>MPACK as solution, not product (c6).</strong> James&#x27;s &#x27;architects instead of engineers&#x27; remark, the packaging of exploits, iFrames and malware with customer service, and the Briz example of defenders&#x27; countermeasures being absorbed as market conditions.</p>
+<p>The unit also reports (briefly and without need for detail) Torpig&#x27;s targeting of bank URLs and mimicry of normal transactions, the March 12 fire sale in which accounts made transfers up to $49,000 to stay under fraud limits, Exoric&#x27;s own project and GucciService storefront, the May Gozi variant with anti-researcher features, and mid-June reports of Brazilian and Prg Trojans that alter transactions or ship with development kits.</p>
+    </div>
+    <p class="note-history">Last changed 1 October 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/410fca61e6549ab2a1d72e79e56951debc1f6f4d">[trivial] Ingest Gilman et al., Deviant Globalization: 30 L1 notes + 6 canon pages (#89)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>2</b><span>linked from</span></div>
+      <div class="bearing"><b>5</b><span>links out</span></div>
+      <div class="bearing"><b>899</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <ul class="rail-list">
+        <li><a href="/wiki/commons/summaries/gilman-deviant-globalization">Deviant Globalization (Gilman, Goldhammer &amp; Weber, eds., 2011)</a><span class="rail-where">Commons</span></li>
+        <li><a href="/wiki/commons/synthesis/prohibition-and-price-gradients-make-the-market">Prohibition and price gradients make the market</a><span class="rail-where">Commons</span></li>
+      </ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Mentioned alongside</span></h2>
+      <ul class="rail-list rail-scored">
+        <li><a href="/wiki/commons/reading/gilman-deviant-globalization/gilman-deviant-globalization-conclusion-2">Challenging liberal views of globalization, and what is to be done</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/gilman-deviant-globalization/gilman-deviant-globalization-intro-2-deviant-globalization">Defining deviant globalization: concept, lenses and plan of the book</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/synthesis/deviant-entrepreneurs-and-the-hollowed-state">Deviant entrepreneurs and the hollowed-out state</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/entities/deviant-globalization">Deviant globalization</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/gilman-deviant-globalization/gilman-deviant-globalization-intro-1-globalization">Introduction (part 1): deviant globalization and what globalization is</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/gilman-deviant-globalization/gilman-deviant-globalization-ch08-reding-inland-empire">Lori Arnold and the Making of the Midwest Meth Economy</a><span class="rail-where">2</span></li>
+        <li><a href="/wiki/commons/reading/gilman-deviant-globalization/gilman-deviant-globalization-ch06-guevara-paraguay-tobacco">Paraguay&#x27;s contraband cigarette industry: a smuggling hub built on tax arbitrage and weak regulation</a><span class="rail-where">2</span></li>
+      </ul>
+      <p class="rail-hint">Notes the same pages link to.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Connects</span></h2>
+      <ul class="rail-edges"><li><a class="wikilink" href="/wiki/commons/reading/gilman-deviant-globalization/gilman-deviant-globalization-ch13-berinato-hacker-economy-1">gilman-deviant-globalization-ch13-berinato-hacker-economy-1</a></li><li><a class="wikilink" href="/wiki/commons/synthesis/decentralization-produces-chokepoints">decentralization-produces-chokepoints</a></li></ul>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/scott-berinato">scott-berinato</a><a class="tag" href="/wiki/topics/cybercrime">cybercrime</a><a class="tag" href="/wiki/topics/malware-as-a-service">malware-as-a-service</a><span class="tag tag-lone" title="Only this note uses it">76service-gozi</span><span class="tag tag-lone" title="Only this note uses it">distributed-risk</span><span class="tag tag-lone" title="Only this note uses it">transferred-risk</span><span class="tag tag-lone" title="Only this note uses it">banks-and-fraud</span><a class="tag" href="/wiki/topics/russian-business-network">russian-business-network</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>
