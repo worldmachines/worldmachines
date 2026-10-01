@@ -1,9 +1,9 @@
 ---
 summary: "Florentine political thinker (1469–1527); in this wiki he appears primarily not as political theorist but as exemplar of the studiolo practice — nightly ritual of intellectual communion with ancient authors."
 tags: [Renaissance, political-philosophy, Italy, humanism, studiolo]
-last_updated: 2026-09-28
+last_updated: 2026-10-01
 level: canon
-sources: [irwin-ibn-khaldun-preface, irwin-ibn-khaldun-ch02-ibn-al-khatib-spain-return, irwin-ibn-khaldun-ch10-afterlife-french-germans, irwin-ibn-khaldun-ch10-colonialist-mahdi-gellner, irwin-ibn-khaldun-ch10-arab-american-novels-orientalism]
+sources: [irwin-ibn-khaldun-preface, irwin-ibn-khaldun-ch02-ibn-al-khatib-spain-return, irwin-ibn-khaldun-ch10-afterlife-french-germans, irwin-ibn-khaldun-ch10-colonialist-mahdi-gellner, irwin-ibn-khaldun-ch10-arab-american-novels-orientalism, montaigne-complete-essays-b2-ch17-presumption-3, montaigne-complete-essays-b3-ch01-profit-honesty]
 ---
 
 # Niccolò Machiavelli
@@ -61,3 +61,7 @@ Machiavelli is one of the most frequent partners in modern comparisons with [[ib
 The comparison is common. Enan and Cheddadi draw it ([[irwin-ibn-khaldun-ch10-arab-american-novels-orientalism]]), Gellner set Ibn Khaldun beside Machiavelli, Keynes and Weber ([[irwin-ibn-khaldun-ch10-colonialist-mahdi-gellner]]), and even the anti-colonial translator Monteil made him Machiavelli's precursor ([[irwin-ibn-khaldun-ch10-afterlife-french-germans]]). Irwin lists it among the Westernizing precursor claims he means to resist ([[irwin-ibn-khaldun-preface]]).
 
 Irwin finds the differences “more striking” than the likenesses. Machiavelli stresses fortuna, virtù, the psychology of rulers, war and rhetoric, and would keep religion out of politics. Ibn Khaldun seeks underlying laws, writes no guide to statecraft, is moralistic and religious, and has a concept, ‘asabiyya, that Machiavelli has nothing to match ([[irwin-ibn-khaldun-ch10-arab-american-novels-orientalism]]). The shared trajectory of political operator turned gloomy generalizer holds up, while the shared theory does not. Berlin's claim, above, that Machiavelli separated civic from Christian morality is the sharpest point of contrast: in Irwin's reading Ibn Khaldun made no such split.
+
+## Montaigne's Essays: a writer easy to contradict, and necessity without virtue
+
+This section draws on the ingest of Montaigne's *Essays* in Cotton's translation as edited by Hazlitt ([[montaigne-complete-essays]]). The page lists [[michel-de-montaigne]] as a parallel figure in the studiolo tradition; the *Essays* also bear on Machiavelli's politics, once by name and once, on the reading notes' interpretation, by implication. In Of Presumption Montaigne says political debates are endless because their arguments rest only on experience and the variety of events. He cites Machiavelli as an example of a writer whose arguments are easy to contradict, and gives his own preference, “in my conceit”, for any ancient and constant government over change ([[montaigne-complete-essays-b2-ch17-presumption-3]]). In Of Profit and Honesty he grants that governments need vicious offices, and that a prince may be forced to break his word. He calls that breach a misfortune and “a lash of the divine rod”, not a virtue, and says that a prince who does it without regret has a conscience in a sorry condition. He leaves such commissions to men “more obedient and more supple” and ends by denying that utility proves an action honourable. The reading note treats this as a counterposition to Machiavelli, granting necessity and refusing to call it virtue, and records that this essay never names Machiavelli ([[montaigne-complete-essays-b3-ch01-profit-honesty]]).

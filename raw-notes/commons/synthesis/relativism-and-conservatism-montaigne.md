@@ -1,0 +1,47 @@
+---
+summary: "Across the Essays, one unmasking of custom yields two political verdicts that look opposite, deference to received law and religion at home and condemnation of the conquest of the Americas abroad; read together, the notes show a common root: neither private reason nor one's own custom has a foundation strong enough to overturn another settled order by force."
+tags: [custom, cultural-relativism, political-conservatism, wars-of-religion, conquest-of-the-americas, montaigne]
+last_updated: 2026-10-01
+level: canon
+sources: [montaigne-complete-essays-b1-ch22-custom-should-not-easily-1, montaigne-complete-essays-b1-ch22-custom-should-not-easily-2, montaigne-complete-essays-b1-ch30-cannibals, montaigne-complete-essays-b3-ch06-coaches-2, montaigne-complete-essays-b2-ch12-apology-raimond-sebond-1, montaigne-complete-essays-b2-ch12-apology-raimond-sebond-5, montaigne-complete-essays-b2-ch12-apology-raimond-sebond-6, montaigne-complete-essays-b2-ch12-apology-raimond-sebond-11, montaigne-complete-essays-b2-ch12-apology-raimond-sebond-12, montaigne-complete-essays-b2-ch12-apology-raimond-sebond-13, montaigne-complete-essays-b2-ch12-apology-raimond-sebond-14, montaigne-complete-essays-b3-ch13-experience-1, montaigne-complete-essays-b3-ch09-vanity-2, montaigne-complete-essays-b3-ch09-vanity-5, montaigne-complete-essays-b2-ch17-presumption-3, montaigne-complete-essays-b3-ch12-physiognomy-1, montaigne-complete-essays-b3-ch10-managing-will-1, montaigne-complete-essays-b2-ch18-20-giving-lie, montaigne-complete-essays-b1-ch27-28-friendship]
+---
+
+Montaigne's relativism about custom ([[custom-as-second-nature-montaigne]]) seems to point in two directions. At home it ends in a firm conservatism about law and religion during the Wars of Religion. Abroad it ends in a sharp indictment of the conquest of the Americas. Each reading note handles its own essay; none puts the two verdicts side by side. Read together, they share a premise and a target.
+
+## The two verdicts
+
+**At home: conform and do not innovate.** The essay on custom finds the foundations of received usages “so weak” that Montaigne nearly loses his own conviction. It then concludes that the wise man judges freely within but lends his actions to common opinion. The state is a structure in which moving one brick is felt by the whole body, and it is presumption and “strange self-love” to overthrow public peace for one's own opinions ([[montaigne-complete-essays-b1-ch22-custom-should-not-easily-2]]). The best government for a nation is the one under which it is maintained; innovation “gives form to injustice and tyranny”; the reformer must fill the wound with better flesh, not just cut ([[montaigne-complete-essays-b3-ch09-vanity-2]]). An ancient and constant government is better than change, and he would “put something under to stop the wheel” ([[montaigne-complete-essays-b2-ch17-presumption-3]]). Even tyranny does not justify a remedy that costs citizens' blood ([[montaigne-complete-essays-b3-ch12-physiognomy-1]]).
+
+**Abroad: the conquerors are the barbarians.** “Barbarism” is whatever is not in use in one's own country, and Europeans who torture the living “under colour of piety and religion” outdo the cannibals ([[montaigne-complete-essays-b1-ch30-cannibals]]). The Americans equalled the Spaniards in understanding and industry and surpassed them in virtue. The conquest was won by technological surprise and treachery, for pearl and pepper, and Montaigne's own judgment is that faith spreads by gaining men, not territory ([[montaigne-complete-essays-b3-ch06-coaches-2]]).
+
+## The shared premise: no custom has a better foundation than its rival
+
+The notes supply the premise piece by piece:
+
+- The laws of conscience “proceed from custom” ([[montaigne-complete-essays-b1-ch22-custom-should-not-easily-1]]).
+- Laws derive their authority “from possession and custom” ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-14]]).
+- Every candidate natural law is disowned by some nation ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-13]]).
+- Laws are obeyed “because they are laws”, which is “the mystic foundation of their authority” ([[montaigne-complete-essays-b3-ch13-experience-1]]).
+- Belief itself arrives by birthplace: “We are Christians by the same title that we are Perigordians or Germans” ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-1]]).
+
+The Apology adds the epistemic half. Present conviction always feels certain however often it has been overturned, and every new doctrine displaced an old one that was equally well received and may itself be displaced. Montaigne concludes that such frailty should make us moderate about innovation ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-12]]).
+
+## The connection
+
+If no custom stands on a firmer foundation than another, then nobody's custom or reasoning has standing to override a settled order by force. That one conclusion produces both verdicts. The reformer at home imposes his private reason on his own country's order. The conquistador abroad imposes his country's custom, and its religion, on another people's. The essay on custom names the first error: the reformer “usurps the authority of judging”, and the trouble lies in private reason's “private jurisdiction” ([[montaigne-complete-essays-b1-ch22-custom-should-not-easily-2]]). Of Coaches shows the second error: the Spaniards' formula of the Pope's donation is answered by natives who note that a man who gives away what is not his own must love dissension ([[montaigne-complete-essays-b3-ch06-coaches-2]]). The same reading explains why the Apology's emptied sceptic should simply live by “the constitution of laws and customs” ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-6]]). It also explains why Montaigne argues that the worst law is better than none and that most minds need the bridle of custom ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-11]]). On this reading his conservatism is not a belief that the old order is just; he admits that French law is full of absurdities. It is a refusal to grant any rival a better title than the order already in place.
+
+## What keeps it from closing
+
+The notes stress that Montaigne does not settle into a doctrine:
+
+- **Necessity.** The essay on custom ends by allowing that urgent necessity may require the laws to “yield and give way”, and praises Philopoemen for overruling them ([[montaigne-complete-essays-b1-ch22-custom-should-not-easily-2]]).
+- **Inner freedom.** The split between inner judgment and outer conduct leaves thought free. As mayor, “the Mayor of Bordeaux and Montaigne have ever been two”, and he claims to see faults in his own side and good in his adversaries ([[montaigne-complete-essays-b3-ch10-managing-will-1]]).
+- **Virtue by time and place.** “Civil innocence is measured according to times and places”: he will serve while the image of the old laws shines and withdraw if they split ([[montaigne-complete-essays-b3-ch09-vanity-5]]).
+- **Toleration both ways.** On liberty of conscience he states both sides without choosing. The same device of toleration is used by Julian to inflame division and by the French kings to extinguish it ([[montaigne-complete-essays-b2-ch18-20-giving-lie]]).
+- **Exempting faith.** He shields Christian revelation from his own relativizing argument, thanking God for seating it “upon the eternal foundation of his holy word” ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-13]]). The notes call this a piece of fideist insulation that sits beside the corrosive argument without dissolving it.
+- **A personal preference.** The conservatism is offered as personal (“simplicity such as mine”) rather than as a rule for all ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-12]]).
+- **La Boétie.** He opens Of Friendship by praising La Boétie's tract on voluntary servitude and closes by withholding it because it had been misused by those seeking to change the government. The notes read this as protective framing rather than a neutral account ([[montaigne-complete-essays-b1-ch27-28-friendship]]).
+
+## World Machines resonances, hedged
+
+The notes compare the brick-and-body image with the infrastructural view of a [[world-machines]] era, though Montaigne's frame is a single monarchy rather than an era. They read his conservatism as matching a temperament like [[edmund-burke]]'s, grounded in the Wars of Religion he lived through ([[montaigne-complete-essays-b1-ch22-custom-should-not-easily-2]]). His “everything that totters does not fall”, on the long survival of sick states such as Rome, rhymes loosely with institutional machinery that persists past its foundations (compare [[history-machine]]), though he reasons from Roman example and astrology, not from any cyclical theory ([[montaigne-complete-essays-b3-ch09-vanity-2]]). His account of the civil war as a self-poisoning disease, in which generals obey their soldiers, is read as loosely rhyming with a [[gramsci-gap]] or decay-sequence reading of a collapsing order. He offers moral and medical diagnosis, not a theory ([[montaigne-complete-essays-b3-ch12-physiognomy-1]]). The Apology's suspicion of private reason recalls the [[counter-enlightenment]], in a sceptical-devotional register rather than as a political programme ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-5]]).
