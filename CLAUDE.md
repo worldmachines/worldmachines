@@ -127,7 +127,7 @@ website/
     ingest-relay.js           ← token-gated fetch relay for the ingest bot (runner IPs get challenged) + serves pasted text from LIBRARY _ingest/pasted/
     pdf/[[key]].js            ← serves files from LIBRARY R2; public/ unrestricted, private/ requires CF Access JWT
     library/private.js        ← returns team-only article manifest after checking both JWT and HANDLES KV
-  scripts/                    ← ingest/build/backfill scripts (article_fetch.py: Substack API → Google Doc export → page → feed, relay fallback; reextract.py: retry link-only contributions)
+  scripts/                    ← ingest/build/backfill scripts (article_fetch.py: Substack API → Google Doc export → page → feed, relay fallback; reextract.py: retry link-only contributions; export_contributions.py: mirror contribution essays into raw-notes/commons/contributions/ so the Oracle's lake indexes them)
   content/articles/           ← one JSON file per submitted article (license:team_only articles excluded from static HTML)
 new_writing_inbox.md          ← direct-push submission inbox (repo root, not in website/)
 .github/workflows/ingest.yml  ← article submission workflow (web form → repository_dispatch)
@@ -187,7 +187,8 @@ Full PDFs are stored in the `worldmachines-library` R2 bucket:
 2. Form POSTs to `/api/submit`.
 3. Function looks up submitter's handle+name from KV, fires `repository_dispatch` to GitHub. Optional pasted article text (contributions only) goes to R2 `LIBRARY/_ingest/pasted/<uuid>.txt`, and the payload carries `pasted_key`. Dispatch payloads cap at about 64 KB.
 4. `ingest.yml` runs `scripts/ingest.py` then `scripts/build.py` from `website/`. Fetches that the runner can't make directly go through `/api/ingest-relay`, and pasted text, when present, wins over extraction.
-5. Commits article JSON + rebuilt HTML, deploys to Cloudflare Pages.
+5. `scripts/export_contributions.py` mirrors contribution text into `raw-notes/commons/contributions/` (split into parts of 5,000 characters or less) for the Oracle. The bot's commit doesn't trigger other workflows, so the kb repo's nightly `lake-publish` picks it up.
+6. Commits article JSON + rebuilt HTML + contribution notes, deploys to Cloudflare Pages.
 
 **Writing inbox (direct push, no login needed):**
 1. Collaborator adds lines to `new_writing_inbox.md` (repo root) and pushes to `main`.

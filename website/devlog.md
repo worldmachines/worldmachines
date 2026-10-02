@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-10-02 · aneesh (2)
+The Oracle can now draw on members' submitted essays. Until now it indexed only `raw-notes/`, so a question about falling insect numbers missed Sean's "The Art of Nature". Every contribution is now mirrored into `raw-notes/commons/contributions/` as sections of 5,000 characters or less, credited to the member who wrote it. That's 142 sections from 34 essays, and each new submission is added at ingest. The lake files them under a new `contribution` category.
+
 ## 2026-10-02 · aneesh
 Link submission works again: the `GITHUB_TOKEN` Pages secret is back. Ingest also stops storing contributions as link-only. GitHub's runners get a Cloudflare 403 challenge from Substack and from many blogs, so the bot now falls back to a token-gated relay, `/api/ingest-relay`, that fetches from Cloudflare's network. It reads Substack posts through Substack's API, Google Docs through their plain-text export, and identifies itself as `worldmachines-ingest`. `/submit` has an optional "Article text" box for paywalled or blocked contributions. `scripts/reextract.py` recovered the full text of all 8 link-only contributions.
 
