@@ -18,7 +18,7 @@ The same slice also carries a seed of what follows. Montaigne already reports, h
 
 ## Strand one fails a test of experience
 
-- **Death has no apprenticeship.** Use Makes Perfect concedes “we are all apprentices when we come to it”. Only death's approaches can be practised, and imagination “enhances near one-half” of what it fears ([[montaigne-complete-essays-b2-ch06-use-makes-perfect]]).
+- **Death has no apprenticeship.** Use Makes Perfect concedes that we “are all apprentices when we come to it”. Only death's approaches can be practised, and imagination “enhances near one-half” of what it fears ([[montaigne-complete-essays-b2-ch06-use-makes-perfect]]).
 - **Pain is not opinion.** The senses judge pain, so it is not mere opinion ([[montaigne-complete-essays-b1-ch40-relish-good-evil-depends-1]]).
 - **The sage is frail.** “The most regular and most perfect soul in the world has but too much to do to keep itself upright”, and heroic Stoic defiance of pain reads as a courage “broken loose from its place” ([[montaigne-complete-essays-b2-ch02-drunkenness]]).
 - **Composure is ceremony.** The rule of a composed face under pain is itself “ceremonial”, since philosophy should form us “to be, not to seem” ([[montaigne-complete-essays-b2-ch37-resemblance-children-fathers-1]]). Here strand three is turned against the Stoicism of strand one.
@@ -27,7 +27,7 @@ The same slice also carries a seed of what follows. Montaigne already reports, h
 
 ## Strands two and three survive and grow
 
-Nature's order returns as Montaigne's own view, no longer ventriloquized. Nature “will teach us to die” when the time comes ([[montaigne-complete-essays-b3-ch12-physiognomy-2]]). Diseases have their own lives and limits, and one should let nature “take her own way” ([[montaigne-complete-essays-b3-ch13-experience-3]]). Death “mixes and confounds itself throughout with life”, and a natural, gradual death is a mercy ([[montaigne-complete-essays-b3-ch13-experience-4]]). The ceremony strand returns in the plague: death there is short and “without ceremony” ([[montaigne-complete-essays-b3-ch12-physiognomy-2]]). It returns again in his wish for a private death without theatre, untroubled by friends' mourning ([[montaigne-complete-essays-b3-ch09-vanity-4]]). The peasants whom Book I offered as evidence against ceremony become, in Book III, the main witnesses against philosophy.
+Nature's order returns as Montaigne's own view, no longer ventriloquized. Nature “will, at the time, fully and sufficiently instruct you” in how to die ([[montaigne-complete-essays-b3-ch12-physiognomy-2]]). Diseases have their own lives and limits, and one should let nature “take her own way” ([[montaigne-complete-essays-b3-ch13-experience-3]]). Death “mixes and confounds itself throughout with life”, and a natural, gradual death is a mercy ([[montaigne-complete-essays-b3-ch13-experience-4]]). The ceremony strand returns in the plague: death there is short and “without ceremony” ([[montaigne-complete-essays-b3-ch12-physiognomy-2]]). It returns again in his wish for a private death without theatre, untroubled by friends' mourning ([[montaigne-complete-essays-b3-ch09-vanity-4]]). The peasants whom Book I offered as evidence against ceremony become, in Book III, the main witnesses against philosophy.
 
 ## The connection: habituation changes hands
 

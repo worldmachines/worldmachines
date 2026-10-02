@@ -39,7 +39,7 @@ The notes stress that Montaigne does not settle into a doctrine:
 - **Virtue by time and place.** “Civil innocence is measured according to times and places”: he will serve while the image of the old laws shines and withdraw if they split ([[montaigne-complete-essays-b3-ch09-vanity-5]]).
 - **Toleration both ways.** On liberty of conscience he states both sides without choosing. The same device of toleration is used by Julian to inflame division and by the French kings to extinguish it ([[montaigne-complete-essays-b2-ch18-20-giving-lie]]).
 - **Exempting faith.** He shields Christian revelation from his own relativizing argument, thanking God for seating it “upon the eternal foundation of his holy word” ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-13]]). The notes call this a piece of fideist insulation that sits beside the corrosive argument without dissolving it.
-- **A personal preference.** The conservatism is offered as personal (“simplicity such as mine”) rather than as a rule for all ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-12]]).
+- **A personal preference.** The conservatism is offered as personal (“such simplicity as mine”) rather than as a rule for all ([[montaigne-complete-essays-b2-ch12-apology-raimond-sebond-12]]).
 - **La Boétie.** He opens Of Friendship by praising La Boétie's tract on voluntary servitude and closes by withholding it because it had been misused by those seeking to change the government. The notes read this as protective framing rather than a neutral account ([[montaigne-complete-essays-b1-ch27-28-friendship]]).
 
 ## World Machines resonances, hedged
