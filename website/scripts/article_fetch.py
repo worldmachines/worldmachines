@@ -106,7 +106,7 @@ def substack_api_url(url):
     if host == 'open.substack.com' and m:
         return f'https://{m.group(1)}.substack.com/api/v1/posts/{m.group(2)}'
 
-    m = re.fullmatch(r'/inbox/post/(\d+)', path)
+    m = re.fullmatch(r'/inbox/post/(\d+)', path) or re.fullmatch(r'/@[\w-]+/p-(\d+)', path)
     if host in ('substack.com', 'www.substack.com') and m:
         return f'https://substack.com/api/v1/posts/by-id/{m.group(1)}'
 

@@ -15,6 +15,12 @@ from urllib.parse import urlparse
 from article_fetch import fetch_and_extract, fetch_pasted  # noqa: F401
 
 
+def clean_pasted(text):
+    """Browser textareas send CRLF; copying from Substack brings zero-width spaces."""
+    text = text.replace('\r\n', '\n').replace('\r', '\n').replace('\u200b', '')
+    return re.sub(r'\n{3,}', '\n\n', text).strip()
+
+
 def title_from_url(url):
     path = urlparse(url).path.rstrip('/')
     last = path.split('/')[-1] if path else ''
@@ -69,7 +75,7 @@ def main():
     # the page is paywalled or blocked, where extraction gets a teaser at best.
     pasted_key = payload.get('pasted_key')
     if pasted_key and type_ != 'resource':
-        pasted = (fetch_pasted(pasted_key) or '').strip()
+        pasted = clean_pasted(fetch_pasted(pasted_key) or '')
         if pasted:
             text, success = pasted, True
             print(f"  Using pasted text ({len(pasted)} chars)")
