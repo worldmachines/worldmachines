@@ -8,7 +8,8 @@ page fetch often comes back empty. Instead of disguising the bot, this uses
 the routes sites offer machines, in order:
 
   1. Substack's public post API, for any URL shaped like a Substack post
-     (including custom domains, which serve the same API).
+     (including custom domains, which serve the same API); for a Google Doc,
+     its plain-text export.
   2. The article page itself, extracted with trafilatura.
   3. The site's RSS/Atom feed, when it carries the post's full text.
 
@@ -139,6 +140,24 @@ def fetch_substack(url):
     return title, date, text
 
 
+# ── 1b. Google Docs ─────────────────────────────────────────────────
+# The editor page is a JavaScript shell ("JavaScript isn't enabled…"), so
+# extraction from it yields UI chrome. A publicly shared doc has a plain-text
+# export instead.
+
+def fetch_google_doc(url):
+    p = urlparse(url)
+    m = re.match(r'/document/d/([\w-]+)', p.path)
+    if p.netloc != 'docs.google.com' or not m:
+        return None
+    text = _get(f'https://docs.google.com/document/d/{m.group(1)}/export?format=txt')
+    if not text or text.lstrip().startswith('<'):  # private docs answer with a sign-in page
+        return None
+    text = text.lstrip('\ufeff').strip()
+    title = text.splitlines()[0].strip() if text else None
+    return title or None, None, text or None
+
+
 # ── 2. The page itself ──────────────────────────────────────────────
 
 def fetch_page(url):
@@ -225,7 +244,8 @@ def fetch_feed(url):
 def fetch_and_extract(url):
     """(title, published_at, text, success) — same contract as before."""
     title = date = None
-    for method, fetch in (('substack-api', fetch_substack), ('page', fetch_page), ('feed', fetch_feed)):
+    for method, fetch in (('substack-api', fetch_substack), ('google-doc', fetch_google_doc),
+                          ('page', fetch_page), ('feed', fetch_feed)):
         try:
             got = fetch(url)
         except Exception as err:  # one route failing must not sink the others
