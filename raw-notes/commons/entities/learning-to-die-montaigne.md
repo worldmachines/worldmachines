@@ -10,7 +10,7 @@ Death is the subject Montaigne returns to most often in the *Essays* ([[montaign
 
 ## The Book I programme
 
-“That to Study Philosophy Is to Learn to Die” starts from Cicero and recasts the matter. All sects aim at pleasure, virtue is the finest pleasure, and fear of death spoils every other pleasure. Not thinking of death is a brutish remedy. Instead, death should be disarmed of “his novelty and strangeness” by constant imagination. “The premeditation of death is the premeditation of liberty; he who has learned to die has unlearned to serve”, with the hedge that nature must help art. Montaigne, then thirty-nine, reports that he keeps himself ready ([[montaigne-complete-essays-b1-ch19-study-philosophy-learn-die-1]]). The second half adds three strands. Death should find him “planting my cabbages”. A long speech, given by Nature and not in Montaigne's own voice, argues that death belongs to the order of things and that a short life and a long one are equal. And the terror of dying belongs to the deathbed's “terrible ceremonies”, a visor to be lifted ([[montaigne-complete-essays-b1-ch19-study-philosophy-learn-die-2]]).
+*That to Study Philosophy Is to Learn to Die* starts from Cicero and recasts the matter. All sects aim at pleasure, virtue is the finest pleasure, and fear of death spoils every other pleasure. Not thinking of death is a brutish remedy. Instead, death should be disarmed of “his novelty and strangeness” by constant imagination. “The premeditation of death is the premeditation of liberty; he who has learned to die has unlearned to serve”, with the hedge that nature must help art. Montaigne, then thirty-nine, reports that he keeps himself ready ([[montaigne-complete-essays-b1-ch19-study-philosophy-learn-die-1]]). The second half adds three strands. Death should find him “planting my cabbages”. A long speech, given by Nature and not in Montaigne's own voice, argues that death belongs to the order of things and that a short life and a long one are equal. And the terror of dying belongs to the deathbed's “terrible ceremonies”, a visor to be lifted ([[montaigne-complete-essays-b1-ch19-study-philosophy-learn-die-2]]).
 
 ## Opinion and pain
 
@@ -18,7 +18,7 @@ Of the Relish of Good and Evil tests the Greek saying that men are tormented by 
 
 ## Death cannot be rehearsed, only approached
 
-Use Makes Perfect concedes that “we are all apprentices when we come to it”. Sleep and swoons show its approaches. In a fall from his horse during the civil wars he lay senseless, and from inside the state felt sweet, languid and painless. From this he infers that the apparently agonised dying are not much to be pitied. He adds that imagination “enhances near one-half of the essence and reality of the thing” ([[montaigne-complete-essays-b2-ch06-use-makes-perfect]]).
+Use Makes Perfect concedes that we “are all apprentices when we come to it”. Sleep and swoons show its approaches. In a fall from his horse during the civil wars he lay senseless, and from inside the state felt sweet, languid and painless. From this he infers that the apparently agonised dying are not much to be pitied. He adds that imagination “enhances near one-half of the essence and reality of the thing” ([[montaigne-complete-essays-b2-ch06-use-makes-perfect]]).
 
 ## Faced sideways
 
@@ -34,7 +34,7 @@ Of Physiognomy reverses the early programme. During the plague his peasant neigh
 
 ## Dying by degrees, and privately
 
-In old age, decay is death already mixed into life. A tooth falls out without pain; he “melts and steals away” from himself; “God is favourable to those whom He makes to die by degrees” ([[montaigne-complete-essays-b3-ch13-experience-4]]). He wants a private death that shares “in the ease and conveniences of my life”, without theatre and without laying his whole weight on others ([[montaigne-complete-essays-b3-ch09-vanity-4]]).
+In old age, decay is death already mixed into life. A tooth falls out without pain; “'tis so I melt and steal away from myself”; “God is favourable to those whom He makes to die by degrees” ([[montaigne-complete-essays-b3-ch13-experience-4]]). He wants a private death that shares “in the ease and conveniences of my life”, without theatre and without laying his whole weight on others ([[montaigne-complete-essays-b3-ch09-vanity-4]]).
 
 ## Hedges
 
