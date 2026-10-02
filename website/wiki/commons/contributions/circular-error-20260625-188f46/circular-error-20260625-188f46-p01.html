@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Circular Error (part 1 of 5) — World Machines</title>
+  <meta name="description" content="David Landes describes in Revolution in Time the problem called Circular Error where the circle and therefore the pendulum introduced slight errors in timekeeping that increased with the square of the">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <span>Contributions</span> <b>/</b> <span>Circular Error (part 1 of 5)</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>Circular Error (part 1 of 5)</h1>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Contributions · updated 25 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/contributions/circular-error-20260625-188f46/circular-error-20260625-188f46-p01.md">source on GitHub</a></div>
+    <div class="note-summary">David Landes describes in Revolution in Time the problem called Circular Error where the circle and therefore the pendulum introduced slight errors in timekeeping that increased with the square of the angle travelled. Clockmakers, instead of choosing the cycloid that was correct but introduced other problems, accepted and limited the circle&#x27;s error by creating the anchor escapement. The essay generalizes this solution to other problems and to the broader world machines project.</div>
+    <div class="prose">
+<p>The Contraptions book club pick for May, David Landes’s Revolution in Time, is about clocks. But one of its larger implications is how societies come to rely on imperfect instruments — and how those instruments, once trusted, become the frame for everything else.</p>
+<p>Boredom in church is famously good for human progress. In 1583 a young Galileo sat in the cathedral of Pisa, ignoring the service to watch a lamp swing on its chain and time the arcs against his pulse.1 Wide swing or narrow, each pass seemed to take the same time. He called it isochronism and proposed the pendulum as a misuratore del tempo, a measurer of time.</p>
+<p>Galileo himself never built a working clock; the first pendulum clock that actually ran was Christiaan Huygens’s, in 1656. When pendulums went into working clocks, a flaw surfaced: the rate at which a clock ran depended on how wide its pendulum swung. A wide arc and a narrow one did not keep the same time, so whenever the swing changed, the clock’s rate changed with it. Galileo had assumed that a pendulum’s oscillation is “independent of the amplitude of swing,” that only its length mattered. When that proved false, in Landes’s telling, he “attributed the variance to air resistance. He was right about that: air resistance does make a difference. But it is a very small difference.”</p>
+<p>The real problem lay in geometry. A bob hanging from a fixed point traces a circle, which is not quite isochronous: a wide swing takes fractionally longer than a narrow one. Horologists gave the discrepancy a name — circular error. The circle was the natural assumption, and nearly right: good enough to make a clock work, bad enough to ruin precision. As Maxwell Smart would say: “Missed it by that much.”</p>
+<p>I want to argue that circular error is not just a fact about pendulums. A solution that is obviously wrong gets replaced early, while the stakes are low. A solution that is almost right often becomes load-bearing — trusted, built upon, embedded in instruments and the built environment. Over time it stops being a chosen solution and hardens into the frame that structures the systems built on top of it. When its error is revealed, a portion of all the progress becomes technical debt. But many errors are never eliminated; they are bounded, contained, and mitigated. The clock’s history is full of them: small errors no one could fix in the moment, made load-bearing, and managed as best they could be. And this doesn’t just go for clocks. Like the Tao, when you see it broadly you see it in all things.</p>
+<p>Choose Wisely: Substitution or Domain Restriction</p>
+<p>Here the history offers a fork; choose wisely.</p>
+<p>The first resolution is substitution: replace the inherited curve with the exact one. The cycloid — the path traced by a point on a rolling wheel — is a tautochrone, a “same-time” curve along which a bob released from any height reaches the bottom at the same instant.</p>
+<p>Different starting heights, same arrival time.</p>
+<p>Huygens, in a stroke of genius, flanked his pendulum’s cord with two curved cheeks, themselves cycloids, so that the swinging cord peeled along them and bent the bob onto a cycloidal path.</p>
+<p>This cycloid curve is a bit alien-looking and completely correct.2</p>
+<p>His substitution solved the problem, and history did not choose it. Landes gave us the above story and throughout Revolution in Time excels at describing exquisite, true solutions that did not win out. Often, they were beaten out by cheaper, good-enough solutions that were, critically, easier to reproduce.3</p>
+<p>The second resolution is domain restriction: don’t replace the flawed solution — confine it to the region where it behaves. The anchor escapement, arriving around 1670, restricted the pendulum to a swing of just a few degrees — instead of the verge’s wild twenty or more — where the circle and the cycloid happen to coincide.4 Clockmakers immediately saw the advantage of this good-enough solution. Huygens’s elegant cheeks were abandoned — at so small a swing the circular error was already negligible, while the cheeks added problems of their own, the suspension cord wearing where it pressed against them, so they did more harm than good. The clockmakers kept the circle.</p>
+<p>I find the second resolution more instructive precisely because it is less beautiful. Substitution is admirable, but perfection is fragile. The working solution was to re-engineer the conditions, so the crisis was mitigated. The difficulty had not vanished. It had moved.</p>
+<p>Let’s fast forward to today for a moment. We are told (and I believe) that AI is a paradigm-shattering revolution — a completely new kind of clock. But as I argued in De-Dramatizing the Digital, technologies rarely start over. We build flawed systems, drag their imperfections forward, and grow new subsystems to contain them. The clockmakers did not choose the cycloid; they built the anchor escapement, narrowing the pendulum’s swing to a very small angle. We are doing the same thing now with AI.</p>
+    </div>
+    <p class="note-history">Last changed 2 October 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/2636405a9be241d7e77c6b874ae45b25b2098006">Mirror contribution essays into raw-notes so the Oracle can retrieve them (#96)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>834</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/contribution">contribution</a><a class="tag" href="/wiki/topics/essay">essay</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>

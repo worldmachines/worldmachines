@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Circular Error (part 4 of 5) — World Machines</title>
+  <meta name="description" content="David Landes describes in Revolution in Time the problem called Circular Error where the circle and therefore the pendulum introduced slight errors in timekeeping that increased with the square of the">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/wiki/wiki.css">
+</head>
+<body class="wiki-page">
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <a href="/submit" class="submit-link">Submit</a>
+  </header>
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item is-current"><a class="nav-label" href="/wiki/">Wiki</a></li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <nav class="wikinav" aria-label="Wiki sections">
+    <div class="wikinav-links"><a href="/wiki/">Index</a><a href="/wiki/all">A–Z</a><a href="/wiki/glossary/">Glossary</a><a href="/wiki/topics/">Topics</a><a href="/wiki/hubs">Most linked</a><a href="/wiki/wanted/">Wanted</a><a href="/wiki/special">Special</a></div>
+    <form class="wikisearch" action="/wiki/search" method="get" role="search">
+      <label class="visually-hidden" for="wiki-q">Search the wiki</label>
+      <input id="wiki-q" name="q" type="search" placeholder="Search the wiki" autocomplete="off"
+             spellcheck="false" aria-describedby="wiki-q-hint">
+      <span id="wiki-q-hint" class="visually-hidden">Press slash to jump here</span>
+      <div id="wiki-q-results" class="wikisearch-results" hidden></div>
+    </form>
+  </nav>
+  <main class="wiki wiki-wide">
+  <nav class="breadcrumb"><a href="/wiki/">Wiki</a> <b>/</b> <a href="/wiki/commons/">Commons</a> <b>/</b> <span>Contributions</span> <b>/</b> <span>Circular Error (part 4 of 5)</span></nav>
+  <div class="spread">
+  <article class="note">
+    <h1>Circular Error (part 4 of 5)</h1>
+    <div class="note-byline"><a href="/wiki/commons/">Commons</a> · Contributions · updated 25 June 2026 · <a href="https://github.com/worldmachines/worldmachines/blob/main/raw-notes/commons/contributions/circular-error-20260625-188f46/circular-error-20260625-188f46-p04.md">source on GitHub</a></div>
+    <div class="note-summary">David Landes describes in Revolution in Time the problem called Circular Error where the circle and therefore the pendulum introduced slight errors in timekeeping that increased with the square of the angle travelled. Clockmakers, instead of choosing the cycloid that was correct but introduced other problems, accepted and limited the circle&#x27;s error by creating the anchor escapement. The essay generalizes this solution to other problems and to the broader world machines project.</div>
+    <div class="prose">
+<p>Here the clock history gives a design rule. A delicate oscillator is made useful by disturbing it as little as possible; the correction belongs beside the core, not inside it. Harrison and Le Roy got accuracy by leaving the balance nearly free and adding control alongside it. Inherited errors should be handled the same way: identify the flaw, bound it with a legible adjacent layer, and do not dull the thing that made the core worth keeping.</p>
+<p>Drop that discipline, and the same approach becomes the failure mode. Back to AI. The harder we make a model behave, the more easily we bury what made it useful under the machinery meant to control it: a guardrail here, a retrieval step there, a human review, a second model checking the first. Each patch is reasonable, and each stays legible when its job is clear and inspectable — the retrieval layer points to the source it pulled from, the guardrail marks the boundary it enforces, the human review flags the call only a person should make. Lose that clarity, and the patches become a tangle no one designed, no one fully understands, and no one can remove without making the whole thing wobble. Then difficulty no longer migrates into a useful adjacent layer; it migrates into opacity and endless upkeep. The fork is simple: whether the compensations stay legible.</p>
+<p>The World Machines project asks, among its open questions, what the characteristic pathologies of each phase are — how a machine deteriorates, not just how it lives. I’m putting forward a theory: a World Machine accumulates technical debt. In Dawn, almost-right inventions are useful but not yet obligatory; the difficulty still lives in invention, choice, and experiment. In Day, the winners harden into standards, institutions, protocols, and habits; difficulty migrates to the adjacent systems needed to maintain them. In Dusk, those compensations can no longer be sustained, collapsing into bottlenecks and debt service. A machine advances by borrowing against the future: keeping the almost-right core because it works, then paying interest through the compensations required to keep it working. It can carry that debt so long as it is still solving the problems it exists for.</p>
+<p>World Machines can sound, rightly, like weather systems with names: Modernity, Divergence, Liveness. The clock metaphor brings them down to earth. A machine is not only an age with a mood; it is a pile of tolerances, kludges, and almost-true assumptions that proved too serviceable to throw away. No machine is without its errors; we learn over centuries which ones are load-bearing, which ones can be bounded, and which ones can be made to work. The chronometer’s chosen error was seaworthy enough to cross an ocean, provided someone wound and watched it the whole way.</p>
+<p>While some systems may correct themselves, the real labor of maintenance belongs to people. This does not mean we are trapped within the machinery of history. There is still as much freedom as there ever was. There are many new things to be made, and both maintenance and solving difficult problems demand their own kind of creativity. It is tempting to picture great historical systems as cold powers that determine our lives, but we evolve with the things we make. The clock altered how we live and work, yet we did not simply bow to its mechanics. When early pendulums drifted too far, human judgment answered with the anchor escapement. The deep infrastructures of the world shape us, and we, in turn, shape them right back.</p>
+<p>The anecdote is almost certainly embellished — the famous lamp was hung in the cathedral after 1583, so it cannot be the one he watched.</p>
+<p>The same cycloid is also the brachistochrone, the curve of fastest descent between two points. Galileo had taken up the question in 1638 and guessed the answer was an arc of a circle — right that some curve beats the straight line, wrong about which curve. It was settled only in 1696, when Johann Bernoulli posed it as an open challenge to the sharpest mathematicians in the world, baited (with Leibniz&#x27;s help) to catch Newton in the calculus war. Newton, handed it after a long day at the Mint, refused to sleep until it fell at four in the morning, then answered anonymously; Bernoulli knew him at once — one knows the lion by its claw. The fitting irony: the curve that commanded the age&#x27;s greatest minds was the one working clockmakers abandoned as too much trouble.</p>
+<p>The clearest case is in this very story. Harrison&#x27;s prize-winning chronometers were marvels, but too intricate to copy; the marine chronometer that actually spread was the simpler, reproducible kind that Pierre Le Roy pointed toward and Thomas Earnshaw and John Arnold made cheap. The propagable solution beats the perfect one.</p>
+    </div>
+    <p class="note-history">Last changed 2 October 2026 by Aneesh Sathe — <a href="https://github.com/worldmachines/worldmachines/commit/2636405a9be241d7e77c6b874ae45b25b2098006">Mirror contribution essays into raw-notes so the Oracle can retrieve them (#96)</a></p>
+    <p class="note-foot">Working note from <code>raw-notes/</code> — rough by design, not a settled club position.</p>
+  </article>
+  <aside class="rail" aria-label="Connections">
+    <div class="rail-block rail-bearings">
+      <div class="bearing"><b>0</b><span>linked from</span></div>
+      <div class="bearing"><b>0</b><span>links out</span></div>
+      <div class="bearing"><b>796</b><span>words</span></div>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>What links here</span></h2>
+      <p class="rail-empty">Nothing links here yet. It is an <a href="/wiki/orphans">orphan</a>.</p>
+    </div>
+    <div class="rail-block">
+      <h2 class="rail-label"><span>Topics</span></h2>
+      <div class="tags"><a class="tag" href="/wiki/topics/contribution">contribution</a><a class="tag" href="/wiki/topics/essay">essay</a></div>
+    </div>
+  </aside>
+  </div>
+  </main>
+  <script src="/wiki/wiki.js" defer></script>
+</body>
+</html>
