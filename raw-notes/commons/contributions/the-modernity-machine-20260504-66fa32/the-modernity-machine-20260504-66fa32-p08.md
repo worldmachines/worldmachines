@@ -1,0 +1,25 @@
+---
+author: "vgr"
+type: contribution
+resource: "https://contraptions.venkateshrao.com/p/the-modernity-machine"
+source: "the-modernity-machine-20260504-66fa32"
+summary: "Contribution essay by vgr, submitted to World Machines."
+tags:
+- contribution
+- "essay"
+last_updated: 2025-01-26
+part: 8
+parts: 10
+---
+
+# The Modernity Machine (part 8 of 10)
+
+The much debated ongoing Fall of Woke feels uncannily like the corruption-driven collapse of the 13th century technocracy, with its economy of priestly indulgences and unaccountable patterns of warfare (arbitrary knightly warfare then, social justice warfare today). The parallels are uncanny. The self-appointed religious authorities of today similarly went from catalyzing reasonable and popular shifts in consciousness to capturing institutions and political careerism within a generation. The mission of protecting the weak and vulnerable (in the case of the Templars, protecting pilgrims to the Holy Land) got derailed and transformed into a program to capture the assets of weakened incumbent powers. The Fourth Crusade getting diverted to sack Constantinople (1202-1204) is a good motif for what happened to Woke. The story of the Templars took 200 years to unfold (1118-1307). The story of Woke unfolded in 35 years (counting from Crenshaw’s 1989 intersectionality paper). As in the case of 1202 Constantinople — an obsolete city in thrall to a regressive monarchy desperately in need of a refresh — the institutions that were targeted for capture and extraction by a derailed moral mission mostly deserved it. But that doesn’t alter the fact that the moral mission derailed in ways that are hard to condone.
+
+Reactionary tendencies are at a peak now, as they were through much of the birth of modernity, 1200-1600. Many events during that period could be interpreted as attempts by incumbent powers to restore patterns of societal organization from early medieval era or antiquity. Then as now, these tendencies scored several notable victories and temporary reversals, to the point that the traditionally recounted history reads like a glorious record of temporary reversals of “decline.” But the overall direction is unmistakeable: Modernity continued to win. The six core relationships continued to shift in the same general direction. Absolute monarchies enjoying the presumption of divine authority steadily lost ground to contracted relationships with other classes. Oligarchies lost ground to technocracies and working classes. Technocracies lost ground to working classes.
+
+In the specific case of the West, an interesting analogy can be made between Islam in 1200-1600 and China today. Then, as now, the entire story can be told from the “Other” perspective. There is an Islamic story of the birth of modernity to be told that would closely parallel the one I’ve told about Europe in rough outline here. But in the Western story, that parallel story of modernity being born appears in a very different light — as the story of a demonic force taking shape beyond threatened borders. There are uncanny parallels between how America talks of China today, and how Europe talked about Islam in the wake of the Crusades. In both cases, there is reluctant acknowledgement that the demonized other (really, a parallel evolutionary story) had things to offer and teach. It is only recently that Western understanding of the Islamic legacy is beginning to recognize the original elements, beyond merely conveying Greek classics through time from the West to itself. I think we’ll see something similar in how we narrativize China’s role in shaping the birth of post-modernity. It will be tempting to reduce it to low-cost, uncreative “execution” of genius visions from an era of Western ascendancy, but this comforting narrative is already showing signs of severe strain (go catch up on the Deepseek discourse for a sampling).
+
+Though the arc is new, the secular trends look like they’re pointed in the same direction — towards continued devolution and decentralization of power. Despite apparent (and mostly unsupported by empirical data) swings back towards hierarchy and centralization, we can expect that in the longer term, the secular trends will reassert themselves, leading to increased leverage of a further evolved technocracy over the oligarchic and monarchic layers, and of a postmodern working class over what remains of the technocracy.
+
+In the 1300s, the seeds of what would become the Reformation took root (you can look around and try to spot the John Wycliffe of Wokism — so far I see no candidates). On the military technocracy side, knightly codes of chivalrous conduct, and the ideal of courtly love arising to mitigate what was effectively medieval rape culture (courtly love was a kind of #MeToo mechanism of its time) both gathered momentum in the 13th century. The Arthurian legends grew popular. Women and religious minorities steadily gained security and political agency over the 700 years, despite periods of backsliding and retreat. Secular increase in technocratic power was the biggest driver of this, and can be expected to remain so.

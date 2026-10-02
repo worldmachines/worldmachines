@@ -28,6 +28,10 @@ jobs:
           INGEST_RELAY_TOKEN: ${{ secrets.INGEST_RELAY_TOKEN }}
         run: python scripts/ingest_inbox.py
 
+      - name: Mirror contributions into raw-notes for the Oracle
+        working-directory: website
+        run: python scripts/export_contributions.py
+
       - name: Build site
         working-directory: website
         run: python scripts/build.py
@@ -37,7 +41,7 @@ jobs:
         run: |
           git config user.name  "worldmachines-bot"
           git config user.email "bot@worldmachines.org"
-          git add new_writing_inbox.md website/content/articles/ website/*.html
+          git add new_writing_inbox.md website/content/articles/ website/*.html raw-notes/commons/contributions/
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else

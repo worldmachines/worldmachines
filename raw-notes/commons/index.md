@@ -8,6 +8,10 @@ to the pseudo-author `commons` (the folder name), instead of an individual.
 ## Layout
 
 - `reading/<source-slug>/` — L1 reading notes, one file per section (lake level: `reading`)
+- `contributions/<slug>/<slug>-pNN.md` — members' own submitted essays, mirrored
+  from `website/content/articles/` by `website/scripts/export_contributions.py`
+  (never edit by hand — regenerated on every ingest). Split into ≤5000-char parts;
+  `author:` frontmatter credits the writer rather than `commons` (lake category `contribution`)
 - `concepts/ · entities/ · summaries/ · synthesis/` — L2 canon derived from these
   sources, when a run builds it (lake level: `canon`)
 

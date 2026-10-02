@@ -9,6 +9,8 @@ are challenged), or with INGEST_RELAY_TOKEN set to go through the relay:
     python scripts/reextract.py            # dry run: report what would change
     python scripts/reextract.py --write    # update the article JSONs
 
+After `--write`, run scripts/export_contributions.py so the Oracle sees the new text.
+
 Only `type: contribution` entries with an http(s) URL are retried. Resources
 stay link-only on purpose (third-party text is not stored), and team-only or
 PDF-backed entries are left alone. Slugs never change, so links stay stable.
