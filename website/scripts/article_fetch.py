@@ -12,14 +12,24 @@ the routes sites offer machines, in order:
   2. The article page itself, extracted with trafilatura.
   3. The site's RSS/Atom feed, when it carries the post's full text.
 
+Each route fetches directly first. GitHub's runners sit on Azure IPs that
+Substack and Cloudflare-protected blogs answer with a 403 challenge (whatever
+the User-Agent), so when INGEST_RELAY_TOKEN is set a failed direct fetch is
+retried through /api/ingest-relay, which makes the same request from
+Cloudflare's network.
+
 Every request identifies itself honestly as USER_AGENT, so a site owner can
 allowlist (or block) the bot with one rule.
 """
 import json
+import os
 import re
+import time
+import urllib.error
+import urllib.request
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
-from urllib.parse import urljoin, urlparse
+from urllib.parse import quote, urljoin, urlparse
 
 import trafilatura
 from trafilatura.settings import use_config
@@ -35,9 +45,45 @@ _config = use_config()
 _config.set('DEFAULT', 'USER_AGENTS', USER_AGENT)
 
 
+RELAY_URL = os.environ.get('INGEST_RELAY_URL', 'https://worldmachines.org/api/ingest-relay')
+RELAY_TOKEN = os.environ.get('INGEST_RELAY_TOKEN', '')
+
+
+def relay_get(query):
+    """GET /api/ingest-relay?<query>. Returns the decoded body on a 200, else None."""
+    if not RELAY_TOKEN:
+        return None
+    req = urllib.request.Request(
+        f'{RELAY_URL}?{query}',
+        headers={'Authorization': f'Bearer {RELAY_TOKEN}', 'User-Agent': USER_AGENT},
+    )
+    for attempt in range(2):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as res:
+                charset = res.headers.get_content_charset() or 'utf-8'
+                return res.read().decode(charset, errors='replace')
+        except urllib.error.HTTPError as err:
+            if err.code != 429 or attempt:
+                return None
+            time.sleep(5)
+        except (urllib.error.URLError, TimeoutError):
+            return None
+    return None
+
+
 def _get(url):
-    """GET url as the ingest bot. Returns the decoded body, or None."""
-    return trafilatura.fetch_url(url, config=_config)
+    """GET url as the ingest bot: directly, then via the relay. Body or None."""
+    body = trafilatura.fetch_url(url, config=_config)
+    if body is None:
+        body = relay_get(f'url={quote(url, safe="")}')
+        if body is not None:
+            print(f"    (via relay: {url})")
+    return body
+
+
+def fetch_pasted(key):
+    """Text a member pasted on /submit, stored in R2 by functions/api/submit.js."""
+    return relay_get(f'pasted={quote(key, safe="")}')
 
 
 def _html_to_text(fragment):

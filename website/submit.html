@@ -117,6 +117,11 @@
         <textarea id="description" name="description" placeholder="Brief note on why this is relevant…"></textarea>
       </div>
 
+      <div class="field" id="text-field" hidden>
+        <label for="text">Article text <span class="optional">(optional)</span></label>
+        <textarea id="text" name="text" rows="8" placeholder="Paste the full text here if the page is paywalled or blocks bots. Plain text is fine."></textarea>
+      </div>
+
       <button type="submit" id="submit-btn">Submit</button>
       <div class="form-message" id="form-message"></div>
     </form>
@@ -152,7 +157,7 @@
     // its login page — which fetch() cannot follow usefully. Keep the draft,
     // re-establish the session with a top-level visit to /login, come back.
     const DRAFT_KEY = 'wm-submit-draft';
-    const FIELDS = ['url', 'type', 'format', 'description'];
+    const FIELDS = ['url', 'type', 'format', 'description', 'text'];
 
     function reauthenticate() {
       try {
@@ -172,6 +177,16 @@
         msg.textContent = 'Your sign-in was refreshed — press Submit to send it.';
       }
     } catch {}
+
+    // Resources stay link-only (third-party text is never stored), so the
+    // paste box only applies to contributions.
+    const textField = document.getElementById('text-field');
+    function syncTextField() {
+      textField.hidden = form.type.value !== 'contribution';
+    }
+    form.type.addEventListener('change', syncTextField);
+    form.addEventListener('reset', () => setTimeout(syncTextField));
+    syncTextField();
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -198,6 +213,7 @@
 
       try {
         const body = new FormData(form);
+        if (form.type.value !== 'contribution') body.delete('text');
         const res  = await fetch('/api/submit', { method: 'POST', body, redirect: 'manual' });
         if (res.type === 'opaqueredirect' || res.status === 401) {
           reauthenticate();

@@ -24,6 +24,8 @@ jobs:
 
       - name: Ingest inbox entries
         working-directory: website
+        env:
+          INGEST_RELAY_TOKEN: ${{ secrets.INGEST_RELAY_TOKEN }}
         run: python scripts/ingest_inbox.py
 
       - name: Build site

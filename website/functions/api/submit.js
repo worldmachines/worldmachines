@@ -1,4 +1,9 @@
 import { requireMember, blockCrossOrigin } from '../_lib/access.js';
+import { PASTED_PREFIX } from './ingest-relay.js';
+
+// Pasted article text can exceed repository_dispatch's ~64 KB client_payload
+// limit, so it goes to R2 and the ingest job reads it back via /api/ingest-relay.
+const MAX_PASTED_CHARS = 2_000_000;
 
 export async function onRequestPost(ctx) {
   const { request, env } = ctx;
@@ -30,6 +35,11 @@ export async function onRequestPost(ctx) {
     return Response.json({ error: 'Invalid URL' }, { status: 400 });
   }
 
+  const pastedText = formData.get('text')?.trim() || '';
+  if (pastedText.length > MAX_PASTED_CHARS) {
+    return Response.json({ error: 'Pasted text is too long (2 million characters max).' }, { status: 413 });
+  }
+
   const payload = {
     url,
     handle,
@@ -38,6 +48,15 @@ export async function onRequestPost(ctx) {
     description,
     submitted_at: new Date().toISOString(),
   };
+
+  if (pastedText) {
+    const key = `${crypto.randomUUID()}.txt`;
+    await env.LIBRARY.put(PASTED_PREFIX + key, pastedText, {
+      httpMetadata: { contentType: 'text/plain; charset=utf-8' },
+      customMetadata: { url, handle },
+    });
+    payload.pasted_key = key;
+  }
 
   if (!env.GITHUB_TOKEN || !env.GITHUB_REPO) {
     console.error('submit: GITHUB_TOKEN / GITHUB_REPO not configured on the Pages project');

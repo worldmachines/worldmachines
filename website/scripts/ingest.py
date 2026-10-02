@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 
 # Substack API → page → RSS feed, with an honest User-Agent. Re-exported so
 # ingest_inbox.py keeps importing it from here.
-from article_fetch import fetch_and_extract  # noqa: F401
+from article_fetch import fetch_and_extract, fetch_pasted  # noqa: F401
 
 
 def title_from_url(url):
@@ -64,6 +64,17 @@ def main():
         if pub_date:
             print(f"  Published: {pub_date}")
         print(f"  Extraction: {'success' if success else 'failed (link-only)'}")
+
+    # Text the member pasted on /submit wins over extraction: they paste when
+    # the page is paywalled or blocked, where extraction gets a teaser at best.
+    pasted_key = payload.get('pasted_key')
+    if pasted_key and type_ != 'resource':
+        pasted = (fetch_pasted(pasted_key) or '').strip()
+        if pasted:
+            text, success = pasted, True
+            print(f"  Using pasted text ({len(pasted)} chars)")
+        else:
+            print(f"  WARNING: pasted text {pasted_key} could not be read")
 
     slug = slugify(title, url, submitted_at)
     article = {
