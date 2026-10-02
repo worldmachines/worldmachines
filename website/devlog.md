@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-10-02 · aneesh
+Link submission works again: the `GITHUB_TOKEN` Pages secret is back. Ingest also stops storing contributions as link-only. GitHub's runners get a Cloudflare 403 challenge from Substack and from many blogs, so the bot now falls back to a token-gated relay, `/api/ingest-relay`, that fetches from Cloudflare's network. It reads Substack posts through Substack's API, Google Docs through their plain-text export, and identifies itself as `worldmachines-ingest`. `/submit` has an optional "Article text" box for paywalled or blocked contributions. `scripts/reextract.py` recovered the full text of all 8 link-only contributions.
+
 ## 2026-09-28 · aneesh (8)
 Andrea Wulf's *Magnificent Rebels: The First Romantics and the Invention of the Self* (2022) is now in commons (taken over from Florian's list): 36 reading notes, 15 new canon pages — a book summary, `andrea-wulf`, entity pages for Fichte, Schelling, Caroline Schelling and August Wilhelm Schlegel, concept pages such as `jena-set-wulf`, `symphilosophie-wulf`, `invention-of-the-self-wulf` and `art-of-being-selfish-wulf`, and syntheses `poeticising-the-mechanical-world-wulf` and `inwardness-without-a-state-wulf` — plus append-only sections on 7 existing pages, including `johann-wolfgang-von-goethe`, `alexander-von-humboldt` and `infrastructure-of-bourgeois-inwardness`. The lake chunk/embed/publish is personal only (in copyright).
 

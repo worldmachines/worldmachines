@@ -93,7 +93,7 @@ This is a small high-trust group. `.github/CODEOWNERS` documents ownership and a
 | `LIBRARY` | R2 | `worldmachines-library` bucket — full PDFs and private article manifest |
 | `AI` | Workers AI | Oracle embedding + chat models |
 
-Plain vars also live in `wrangler.jsonc` (`vars`: `GITHUB_REPO`, `ORACLE_URL`). Secrets are set with `wrangler pages secret put <NAME> --project-name worldmachines`. `/api/submit` and `/api/join` need `GITHUB_TOKEN`, a fine-grained PAT on `worldmachines/worldmachines` with Contents + Issues read/write.
+Plain vars also live in `wrangler.jsonc` (`vars`: `GITHUB_REPO`, `ORACLE_URL`). Secrets are set with `wrangler pages secret put <NAME> --project-name worldmachines`. `/api/submit` and `/api/join` need `GITHUB_TOKEN`, a fine-grained PAT on `worldmachines/worldmachines` with Contents + Issues read/write. `/api/ingest-relay` needs `INGEST_RELAY_TOKEN` (production and preview), and the same value must also be a GitHub Actions secret of the same name.
 
 **Deploying:** Pages does not auto-deploy on git push. Always deploy manually after structural changes:
 
@@ -124,9 +124,10 @@ website/
   functions/api/              ← Cloudflare Pages Functions
     me.js                     ← auth state: 200+profile if registered, 403+email if not, 401 if unauthenticated
     join.js                   ← POST join request → creates GitHub issue with wrangler KV approval command
+    ingest-relay.js           ← token-gated fetch relay for the ingest bot (runner IPs get challenged) + serves pasted text from LIBRARY _ingest/pasted/
     pdf/[[key]].js            ← serves files from LIBRARY R2; public/ unrestricted, private/ requires CF Access JWT
     library/private.js        ← returns team-only article manifest after checking both JWT and HANDLES KV
-  scripts/                    ← ingest/build/backfill scripts
+  scripts/                    ← ingest/build/backfill scripts (article_fetch.py: Substack API → Google Doc export → page → feed, relay fallback; reextract.py: retry link-only contributions)
   content/articles/           ← one JSON file per submitted article (license:team_only articles excluded from static HTML)
 new_writing_inbox.md          ← direct-push submission inbox (repo root, not in website/)
 .github/workflows/ingest.yml  ← article submission workflow (web form → repository_dispatch)
@@ -184,8 +185,8 @@ Full PDFs are stored in the `worldmachines-library` R2 bucket:
 **Web form (Access-gated):**
 1. Collaborator visits `worldmachines.org/submit` → Cloudflare Access email OTP gate.
 2. Form POSTs to `/api/submit`.
-3. Function looks up submitter's handle+name from KV, fires `repository_dispatch` to GitHub.
-4. `ingest.yml` runs `scripts/ingest.py` then `scripts/build.py` from `website/`.
+3. Function looks up submitter's handle+name from KV, fires `repository_dispatch` to GitHub. Optional pasted article text (contributions only) goes to R2 `LIBRARY/_ingest/pasted/<uuid>.txt`, and the payload carries `pasted_key`. Dispatch payloads cap at about 64 KB.
+4. `ingest.yml` runs `scripts/ingest.py` then `scripts/build.py` from `website/`. Fetches that the runner can't make directly go through `/api/ingest-relay`, and pasted text, when present, wins over extraction.
 5. Commits article JSON + rebuilt HTML, deploys to Cloudflare Pages.
 
 **Writing inbox (direct push, no login needed):**

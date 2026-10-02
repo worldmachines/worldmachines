@@ -24,6 +24,7 @@ jobs:
         working-directory: website
         env:
           SUBMISSION_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+          INGEST_RELAY_TOKEN: ${{ secrets.INGEST_RELAY_TOKEN }}
         run: python scripts/ingest.py
 
       - name: Build site
