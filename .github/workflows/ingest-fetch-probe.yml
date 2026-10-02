@@ -17,6 +17,18 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+      - name: Raw HTTP status from the runner
+        run: |
+          UA='worldmachines-ingest/1.0 (+https://worldmachines.org)'
+          for u in https://aneeshsathe.com/nakatomi-drift/ https://aneeshsathe.com/index.xml \
+                   https://seanstevenson.substack.com/api/v1/posts/circular-error https://seanstevenson.substack.com/feed \
+                   https://notefields.substack.com/p/wrestling-with-eels https://mynamelowercase.com/blog/robert-hookes-cyberpunk-letter-to-got \
+                   https://www.hopefulmons.com/p/a-song-of-proto-industrialization https://bricolage.io/steering-is-harder-than-it-looks/; do
+            for ua in "$UA" "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"; do
+              curl -s -o /tmp/b -D /tmp/h -m 20 -A "$ua" -w "%{http_code} %{size_download}B " "$u"
+              echo "server=$(grep -i '^server:' /tmp/h | tr -d '\r' | cut -d' ' -f2-) cf-mitigated=$(grep -i '^cf-mitigated:' /tmp/h | tr -d '\r' | cut -d' ' -f2-) title=$(grep -o '<title>[^<]*' /tmp/b | head -1 | cut -c8-60) ua=${ua:0:20} $u"
+            done
+          done
       - name: Probe
         run: |
           python - <<'PY'
