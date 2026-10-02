@@ -10,18 +10,9 @@ import re
 import sys
 from urllib.parse import urlparse
 
-import trafilatura
-
-
-def fetch_and_extract(url):
-    downloaded = trafilatura.fetch_url(url)
-    if downloaded is None:
-        return None, None, None, False
-    metadata = trafilatura.extract_metadata(downloaded)
-    text  = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
-    title = (metadata.title or '').strip() or None
-    date  = (metadata.date  or '').strip() or None
-    return title, date, text, text is not None
+# Substack API → page → RSS feed, with an honest User-Agent. Re-exported so
+# ingest_inbox.py keeps importing it from here.
+from article_fetch import fetch_and_extract  # noqa: F401
 
 
 def title_from_url(url):

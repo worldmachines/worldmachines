@@ -1,0 +1,48 @@
+# TEMPORARY — compares old vs new article fetching from a GitHub runner.
+# Remove before merging the ingest-fetch-fallbacks PR.
+name: Ingest fetch probe (temporary)
+on:
+  push:
+    branches: [ingest-fetch-fallbacks]
+    paths: ['.github/workflows/ingest-fetch-probe.yml', 'website/scripts/article_fetch.py']
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Probe
+        run: |
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'scripts')
+          import trafilatura, article_fetch
+          URLS = [
+              'https://aneeshsathe.com/nakatomi-drift/',
+              'https://aneeshsathe.com/not-my-lever/',
+              'https://open.substack.com/pub/seanstevenson/p/circular-error?r=yrsx',
+              'https://open.substack.com/pub/seanstevenson/p/la-selva-oscura',
+              'https://substack.com/inbox/post/201072921',
+              'https://www.hopefulmons.com/p/a-song-of-proto-industrialization',
+              'https://notefields.substack.com/p/wrestling-with-eels',
+              'https://mynamelowercase.com/blog/robert-hookes-cyberpunk-letter-to-got',
+              'https://seanstevenson.substack.com/p/the-art-of-nature',
+          ]
+          for u in URLS:
+              old = trafilatura.fetch_url(u)
+              old_text = trafilatura.extract(old) if old else None
+              print(f'\n{u}\n  OLD: fetched={old is not None} chars={len(old_text or "")}')
+              t, d, text, ok = article_fetch.fetch_and_extract(u)
+              print(f'  NEW: ok={ok} title={t!r} date={d!r} chars={len(text or "")}')
+              for name, fn in (('substack-api', article_fetch.fetch_substack), ('page', article_fetch.fetch_page), ('feed', article_fetch.fetch_feed)):
+                  try:
+                      r = fn(u)
+                  except Exception as e:
+                      r = f'error {e!r}'
+                  print(f'    {name:12} {"-" if not r else (r if isinstance(r, str) else len(r[2] or ""))}')
+          PY
