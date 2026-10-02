@@ -65,6 +65,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">2 October 2026 · aneesh</div>
+    <p>Link submission works again: the <code>GITHUB_TOKEN</code> Pages secret is back. Ingest also stops storing contributions as link-only. GitHub's runners get a Cloudflare 403 challenge from Substack and from many blogs, so the bot now falls back to a token-gated relay, <code>/api/ingest-relay</code>, that fetches from Cloudflare's network. It reads Substack posts through Substack's API, Google Docs through their plain-text export, and identifies itself as <code>worldmachines-ingest</code>. <code>/submit</code> has an optional "Article text" box for paywalled or blocked contributions. <code>scripts/reextract.py</code> recovered the full text of all 8 link-only contributions.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">28 September 2026 · aneesh</div>
     <p>Andrea Wulf's *Magnificent Rebels: The First Romantics and the Invention of the Self* (2022) is now in commons (taken over from Florian's list): 36 reading notes, 15 new canon pages — a book summary, <code>andrea-wulf</code>, entity pages for Fichte, Schelling, Caroline Schelling and August Wilhelm Schlegel, concept pages such as <code>jena-set-wulf</code>, <code>symphilosophie-wulf</code>, <code>invention-of-the-self-wulf</code> and <code>art-of-being-selfish-wulf</code>, and syntheses <code>poeticising-the-mechanical-world-wulf</code> and <code>inwardness-without-a-state-wulf</code> — plus append-only sections on 7 existing pages, including <code>johann-wolfgang-von-goethe</code>, <code>alexander-von-humboldt</code> and <code>infrastructure-of-bourgeois-inwardness</code>. The lake chunk/embed/publish is personal only (in copyright).</p>
   </article>
@@ -242,6 +246,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-10-02T06:24:11Z -->
+  <!-- built: 2026-10-02T07:01:05Z -->
 </body>
 </html>
