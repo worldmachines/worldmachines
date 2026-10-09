@@ -141,6 +141,8 @@ NAV_GROUPS = [
         ("/join", "Join"),
         ("https://discord.gg/tqUFztN3r", "Project chat ↗"),
     ]),
+    # Sister project, off-site: a plain link with no row.
+    ("primeradiant", "Prime Radiant ↗", "https://primeradiant.worldmachines.org", []),
 ]
 
 

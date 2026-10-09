@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-10-09 · aneesh (2)
+The site nav now links to [Prime Radiant](https://primeradiant.worldmachines.org), our sister project, from every page including the wiki.
+
 ## 2026-10-09 · aneesh
 Links added to `new_writing_inbox.md` as `resource` now get read too, the same way as resources submitted on the web form. If one is 1,500–60,000 characters, wm-feeder writes reading notes for it in `raw-notes/commons/reading/`. The web form and the inbox share one ingest function and one reusable feed workflow.
 

@@ -17,8 +17,8 @@ DEVLOG_FILE  = Path('devlog.md')
 
 # ─── Site navigation ─────────────────────────────────────────────────────────
 #
-# Five places, not eleven links. Each group whose contents run to more than one
-# page carries a second row, drawn in a single slot under the bar: hover or
+# Five places, not eleven links, plus one link out to a sister project. Each
+# group whose contents run to more than one page carries a second row, drawn in a single slot under the bar: hover or
 # keyboard focus on a pointer that can hover, an explicit chevron on one that
 # cannot. Styling lives in website/style.css.
 #
@@ -54,6 +54,8 @@ NAV_GROUPS = [
         ('/join', 'Join'),
         ('https://discord.gg/tqUFztN3r', 'Project chat ↗'),
     ]),
+    # Sister project, off-site: a plain link with no row.
+    ('primeradiant', 'Prime Radiant ↗', 'https://primeradiant.worldmachines.org', []),
 ]
 
 
