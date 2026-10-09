@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-10-09 · aneesh
+Links added to `new_writing_inbox.md` as `resource` now get read too, the same way as resources submitted on the web form. If one is 1,500–60,000 characters, wm-feeder writes reading notes for it in `raw-notes/commons/reading/`. The web form and the inbox share one ingest function and one reusable feed workflow.
+
 ## 2026-10-08 · aneesh
 Members can submit a third-party essay or paper as a resource, and it is now read rather than stored as a bare link. Ingest extracts the text. If the text is 1,500–60,000 characters, it goes to the feeder's private R2 bucket, and wm-feeder (Gemma on Workers AI) writes reading notes into `raw-notes/commons/reading/<slug>/` for the Oracle. The essay's own text never enters git or the public site. Its verbatim chunks are loaded into the personal catalog only, with `wmlake load-feeder`. Books and anything longer stay link-only, marked with why.
 

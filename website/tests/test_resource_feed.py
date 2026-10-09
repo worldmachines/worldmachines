@@ -208,6 +208,50 @@ class FeederHelperTests(unittest.TestCase):
             self.assertEqual(feed_resource.poll_run('r', attempts=3, sleep=lambda s: None)['status'], 'complete')
 
 
+class InboxFeedTest(unittest.TestCase):
+    """The writing inbox queues in-cap resources for wm-feeder like the web form."""
+
+    def run_inbox(self, lines, fetched):
+        import ingest_inbox
+        with tempfile.TemporaryDirectory() as work, tempfile.TemporaryDirectory() as textdir:
+            inbox = Path(work, 'new_writing_inbox.md')
+            inbox.write_text('# Inbox\n\n---\n' + '\n'.join(lines) + '\n')
+            articles = Path(work, 'articles')
+            out_file = os.path.join(work, 'gh_output')
+            with mock.patch.dict(os.environ, {'GITHUB_OUTPUT': out_file, 'FEED_TEXT_DIR': textdir}), \
+                    mock.patch.object(ingest_inbox, 'INBOX', inbox), \
+                    mock.patch.object(ingest_inbox, 'ARTICLES_DIR', articles), \
+                    mock.patch.object(ingest, 'fetch_and_extract', side_effect=fetched):
+                ingest_inbox.main()
+            arts = {a['url']: a for a in (json.loads(f.read_text()) for f in articles.iterdir())}
+            outputs = dict(line.split('=', 1) for line in Path(out_file).read_text().splitlines())
+            texts = sorted(os.listdir(textdir))
+            cleared = inbox.read_text()
+        return arts, json.loads(outputs['feed_slugs']), texts, cleared
+
+    def test_resources_queued_contributions_unchanged(self):
+        def fetched(url):
+            return {'https://a.com/essay': ('An Essay', '2025-01-01', body(5000), True),
+                    'https://b.com/short': ('Short', None, body(100), True),
+                    'https://c.com/mine': ('Mine', None, body(5000), True)}[url]
+        arts, slugs, texts, cleared = self.run_inbox([
+            'vgr | resource | https://a.com/essay',
+            'vgr | resource | https://b.com/short',
+            'aneesh | contribution | https://c.com/mine',
+        ], fetched)
+        essay = arts['https://a.com/essay']
+        self.assertEqual(essay['ingest_status'], 'queued')
+        self.assertIsNone(essay['extracted_text'])
+        self.assertEqual(essay['title'], 'An Essay')
+        self.assertEqual(arts['https://b.com/short']['ingest_skipped'], 'too_short')
+        mine = arts['https://c.com/mine']
+        self.assertTrue(mine['extracted_text'])
+        self.assertNotIn('ingest_status', mine)
+        self.assertEqual(slugs, [essay['slug']])
+        self.assertEqual(texts, [essay['slug'] + '.txt'])
+        self.assertTrue(cleared.rstrip().endswith('---'))
+
+
 class UnquoteWikilinksTest(unittest.TestCase):
     def test_strips_backticks_around_wikilinks_only(self):
         from feed_resource import unquote_wikilinks

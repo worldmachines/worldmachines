@@ -8,7 +8,7 @@ import json
 import sys
 from pathlib import Path
 
-from ingest import fetch_and_extract, title_from_url, slugify
+from ingest import build_article, write_feed_text, write_outputs
 
 INBOX = Path(__file__).parent.parent.parent / 'new_writing_inbox.md'
 ARTICLES_DIR = Path(__file__).parent.parent / 'content' / 'articles'
@@ -63,53 +63,27 @@ def main():
 
     submitted_at = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 
+    feed = []
     for entry in entries:
-        url = entry['url']
-        handle = entry['handle']
-        type_ = entry['type']
-        description = entry['description']
+        # Inbox lines carry no format; resources are treated as essays, so
+        # wm-feeder reads any third-party link within the length cap.
+        article, feed_text = build_article(
+            entry['url'], entry['handle'], entry['type'], 'essay',
+            entry['description'], submitted_at)
 
-        if type_ == 'resource':
-            title = title_from_url(url)
-            pub_date = None
-            extracted_text = None
-            success = False
-            print(f"  Resource (link-only): {url}")
-            print(f"    Title fallback: {title}")
-        else:
-            print(f"  Ingesting: {url}")
-            title, pub_date, extracted_text, success = fetch_and_extract(url)
-            if not title:
-                title = title_from_url(url)
-                print(f"    Title fallback: {title}")
-            else:
-                print(f"    Title: {title}")
-            if pub_date:
-                print(f"    Published: {pub_date}")
-            print(f"    Extraction: {'success' if success else 'failed (link-only)'}")
-
-        slug = slugify(title, url, submitted_at)
-        article = {
-            'slug': slug,
-            'url': url,
-            'title': title,
-            'handle': handle,
-            'submitted_at': submitted_at,
-            'type': type_,
-            'format': 'essay',
-            'published_at': pub_date,
-            'description': description,
-            'extraction_success': success,
-            'extracted_text': extracted_text,
-        }
-
-        out = ARTICLES_DIR / f'{slug}.json'
+        out = ARTICLES_DIR / f"{article['slug']}.json"
         with open(out, 'w', encoding='utf-8') as f:
             json.dump(article, f, indent=2, ensure_ascii=False)
         print(f"    Saved: {out.name}")
 
+        if feed_text is not None:
+            write_feed_text(article['slug'], feed_text)
+            feed.append(article['slug'])
+
     INBOX.write_text(cleared_inbox(text), encoding='utf-8')
     print("Inbox cleared.")
+    # JSON list for the workflow's per-slug feed matrix.
+    write_outputs({'feed_slugs': json.dumps(feed)})
 
 
 if __name__ == '__main__':

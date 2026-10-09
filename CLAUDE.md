@@ -132,6 +132,7 @@ website/
 new_writing_inbox.md          ← direct-push submission inbox (repo root, not in website/)
 .github/workflows/ingest.yml  ← article submission workflow (web form → repository_dispatch)
 .github/workflows/inbox.yml   ← inbox workflow (push to new_writing_inbox.md → ingest + deploy)
+.github/workflows/feed-resource.yml ← reusable: one resource slug → wm-feeder → reading notes (called by ingest.yml + inbox.yml)
 ```
 
 ## Article JSON schema
@@ -195,13 +196,16 @@ Full PDFs are stored in the `worldmachines-library` R2 bucket:
    `raw-notes/commons/reading/<slug>/` and writes a manifest to `resource-runs/<slug>.json`. Verbatim sidecars stay in R2.
    Private L0 chunks are loaded by hand on the laptop with `uv run wmlake load-feeder` (wm-encyclopedia-kb), personal catalog only.
    Out-of-range or failed extractions get `ingest_skipped`. Needs secret `FEEDER_TOKEN` and repo vars `FEEDER_URL`, `FEEDER_BUCKET`.
+   The feed job is the reusable `.github/workflows/feed-resource.yml` (input `slug`), shared with the inbox path.
 
 **Writing inbox (direct push, no login needed):**
 1. Collaborator adds lines to `new_writing_inbox.md` (repo root) and pushes to `main`.
 2. Format: `handle | type | url` or `handle | type | url | description`
 3. `inbox.yml` runs `scripts/ingest_inbox.py` then `scripts/build.py`.
 4. Commits article JSONs + rebuilt HTML + cleared inbox, deploys to Cloudflare Pages.
-5. Bot commits are guarded (`github.actor != 'github-actions[bot]'`) to prevent loops.
+5. `resource` lines go through the same wm-feeder path as the web form (step 7 above). Inbox lines have no format, so every
+   resource is treated as an essay, and the 1,500–60,000-char cap decides. `feed-resource.yml` runs once per queued slug, one at a time.
+6. Bot commits are guarded (`github.actor != 'github-actions[bot]'`) to prevent loops.
 
 **HANDLES KV:** maps contributor email → `{handle, name, url, bio}`. Managed via
 `worldmachines.org/admin/handles` (Access-gated) or `wrangler kv key put --binding HANDLES --remote`.
