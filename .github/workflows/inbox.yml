@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      feed_slugs: ${{ steps.inbox.outputs.feed_slugs || '[]' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -23,9 +25,13 @@ jobs:
       - run: pip install -r website/requirements.txt
 
       - name: Ingest inbox entries
+        id: inbox
         working-directory: website
         env:
           INGEST_RELAY_TOKEN: ${{ secrets.INGEST_RELAY_TOKEN }}
+          # Resource text is written here (outside the checkout), never into
+          # git; it goes straight to the feeder's R2 bucket below.
+          FEED_TEXT_DIR: ${{ runner.temp }}/feed
         run: python scripts/ingest_inbox.py
 
       - name: Mirror contributions into raw-notes for the Oracle
@@ -61,3 +67,37 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # After deploy, so the feeder never delays or blocks publication.
+      - name: Upload resource text to feeder R2
+        if: steps.commit.outputs.changed == 'true' && steps.inbox.outputs.feed_slugs != '' && steps.inbox.outputs.feed_slugs != '[]'
+        working-directory: website
+        env:
+          FEEDER_BUCKET: ${{ vars.FEEDER_BUCKET }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_R2_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          FEED_TEXT_DIR: ${{ runner.temp }}/feed
+          FEED_SLUGS: ${{ steps.inbox.outputs.feed_slugs }}
+        run: |
+          set -euo pipefail
+          for SLUG in $(echo "$FEED_SLUGS" | jq -r '.[]'); do
+            python scripts/feed_resource.py upload-text "$SLUG" "$FEED_TEXT_DIR/$SLUG.txt"
+            rm -f "$FEED_TEXT_DIR/$SLUG.txt"
+          done
+
+  # Resources in the inbox: run wm-feeder for L1 reading notes, one at a time
+  # so the notes commits don't race each other (see feed-resource.yml).
+  feed:
+    needs: ingest
+    if: needs.ingest.outputs.feed_slugs != '[]'
+    permissions:
+      contents: write
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        slug: ${{ fromJSON(needs.ingest.outputs.feed_slugs) }}
+    uses: ./.github/workflows/feed-resource.yml
+    with:
+      slug: ${{ matrix.slug }}
+    secrets: inherit

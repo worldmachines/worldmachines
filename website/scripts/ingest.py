@@ -39,20 +39,10 @@ def slugify(title, url, submitted_at):
     return f"{base}-{date}-{uid}"
 
 
-def main():
-    raw = os.environ.get('SUBMISSION_PAYLOAD')
-    if not raw:
-        print('ERROR: SUBMISSION_PAYLOAD not set', file=sys.stderr)
-        sys.exit(1)
-
-    payload = json.loads(raw)
-    url = payload['url']
-    handle = payload['handle']
-    type_ = payload['type']
-    format_ = payload.get('format') or 'essay'
-    description = payload.get('description') or None
-    submitted_at = payload['submitted_at']
-
+def build_article(url, handle, type_, format_, description, submitted_at, pasted_key=None):
+    """Fetch and gate one submission. Returns (article, feed_text): feed_text
+    is the resource text queued for wm-feeder, or None. Shared by the web form
+    (main) and the writing inbox (ingest_inbox.py)."""
     feed_text = None
     skipped = None
     if type_ == 'resource' and not feed_in_scope(type_, format_):
@@ -88,7 +78,6 @@ def main():
 
     # Text the member pasted on /submit wins over extraction: they paste when
     # the page is paywalled or blocked, where extraction gets a teaser at best.
-    pasted_key = payload.get('pasted_key')
     if pasted_key and type_ != 'resource':
         pasted = clean_pasted(fetch_pasted(pasted_key) or '')
         if pasted:
@@ -115,6 +104,33 @@ def main():
         article['ingest_status'] = 'queued'
     elif skipped:
         article['ingest_skipped'] = skipped
+    return article, feed_text
+
+
+def write_feed_text(slug, text):
+    """Write queued resource text outside the repo (RUNNER_TEMP in CI) so no
+    `git add` can pick it up. Returns the path."""
+    text_dir = os.environ.get('FEED_TEXT_DIR') or os.environ.get('RUNNER_TEMP') or tempfile.gettempdir()
+    os.makedirs(text_dir, exist_ok=True)
+    text_path = os.path.join(text_dir, f'{slug}.txt')
+    with open(text_path, 'w', encoding='utf-8') as f:
+        f.write(text)
+    print(f"  Feeder text: {text_path}")
+    return text_path
+
+
+def main():
+    raw = os.environ.get('SUBMISSION_PAYLOAD')
+    if not raw:
+        print('ERROR: SUBMISSION_PAYLOAD not set', file=sys.stderr)
+        sys.exit(1)
+
+    payload = json.loads(raw)
+    article, feed_text = build_article(
+        payload['url'], payload['handle'], payload['type'],
+        payload.get('format') or 'essay', payload.get('description') or None,
+        payload['submitted_at'], payload.get('pasted_key'))
+    slug = article['slug']
 
     os.makedirs('content/articles', exist_ok=True)
     out = f'content/articles/{slug}.json'
@@ -123,21 +139,12 @@ def main():
 
     print(f"  Saved: {out}")
 
-    if feed_text is not None:
-        # Outside the repo (RUNNER_TEMP in CI) so no `git add` can pick it up.
-        text_dir = os.environ.get('FEED_TEXT_DIR') or os.environ.get('RUNNER_TEMP') or tempfile.gettempdir()
-        os.makedirs(text_dir, exist_ok=True)
-        text_path = os.path.join(text_dir, f'{slug}.txt')
-        with open(text_path, 'w', encoding='utf-8') as f:
-            f.write(feed_text)
-        print(f"  Feeder text: {text_path}")
-    else:
-        text_path = ''
+    text_path = write_feed_text(slug, feed_text) if feed_text is not None else ''
     write_outputs({
         'feed_queued': 'true' if feed_text is not None else 'false',
         'slug': slug,
-        'title': ' '.join(title.split()),
-        'kind': format_ if feed_text is not None else '',
+        'title': ' '.join(article['title'].split()),
+        'kind': article['format'] if feed_text is not None else '',
         'feed_text': text_path,
     })
 
