@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-10-08 · aneesh
+Members can submit a third-party essay or paper as a resource, and it is now read rather than stored as a bare link. Ingest extracts the text. If the text is 1,500–60,000 characters, it goes to the feeder's private R2 bucket, and wm-feeder (Gemma on Workers AI) writes reading notes into `raw-notes/commons/reading/<slug>/` for the Oracle. The essay's own text never enters git or the public site. Its verbatim chunks are loaded into the personal catalog only, with `wmlake load-feeder`. Books and anything longer stay link-only, marked with why.
+
 ## 2026-10-02 · aneesh (2)
 The Oracle can now draw on members' submitted essays. Until now it indexed only `raw-notes/`, so a question about falling insect numbers missed Sean's "The Art of Nature". Every contribution is now mirrored into `raw-notes/commons/contributions/` as sections of 5,000 characters or less, credited to the member who wrote it. That's 142 sections from 34 essays, and each new submission is added at ingest. The lake files them under a new `contribution` category.
 

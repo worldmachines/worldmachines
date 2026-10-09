@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      feed_queued: ${{ steps.ingest.outputs.feed_queued }}
+      slug: ${{ steps.ingest.outputs.slug }}
+      kind: ${{ steps.ingest.outputs.kind }}
 
     steps:
       - uses: actions/checkout@v4
@@ -21,10 +25,14 @@ jobs:
       - run: pip install -r website/requirements.txt
 
       - name: Ingest article
+        id: ingest
         working-directory: website
         env:
           SUBMISSION_PAYLOAD: ${{ toJson(github.event.client_payload) }}
           INGEST_RELAY_TOKEN: ${{ secrets.INGEST_RELAY_TOKEN }}
+          # Essay/paper resource text is written here (outside the checkout),
+          # never into git; it goes straight to the feeder's R2 bucket below.
+          FEED_TEXT_DIR: ${{ runner.temp }}/feed
         run: python scripts/ingest.py
 
       - name: Mirror contributions into raw-notes for the Oracle
@@ -53,3 +61,79 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # After deploy, so the feeder never delays or blocks publication.
+      - name: Upload resource text to feeder R2
+        if: steps.ingest.outputs.feed_queued == 'true'
+        working-directory: website
+        env:
+          FEEDER_BUCKET: ${{ vars.FEEDER_BUCKET }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_R2_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          FEED_TEXT: ${{ steps.ingest.outputs.feed_text }}
+          SLUG: ${{ steps.ingest.outputs.slug }}
+        run: |
+          python scripts/feed_resource.py upload-text "$SLUG" "$FEED_TEXT"
+          rm -f "$FEED_TEXT"
+
+  # Essay/paper resources: run wm-feeder (Gemma on Workers AI) for L1 reading
+  # notes. Only notes/*.md are committed (raw-notes/commons/reading/<slug>/);
+  # sidecars/ (verbatim quotes, plan.json) and diagnostics stay in R2, listed
+  # by the manifest at resource-runs/<slug>.json. On failure the article JSON
+  # simply stays ingest_status: queued; re-run with scripts/feed_resource.py.
+  feed:
+    needs: ingest
+    if: needs.ingest.outputs.feed_queued == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    env:
+      FEEDER_URL: ${{ vars.FEEDER_URL }}
+      FEEDER_BUCKET: ${{ vars.FEEDER_BUCKET }}
+      FEEDER_TOKEN: ${{ secrets.FEEDER_TOKEN }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CF_R2_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      SLUG: ${{ needs.ingest.outputs.slug }}
+
+    steps:
+      # main, not the dispatch SHA: the ingest job pushed the article JSON.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run feeder and fetch notes
+        working-directory: website
+        run: |
+          python scripts/feed_resource.py "content/articles/$SLUG.json" \
+            --skip-upload --defer-manifest "$RUNNER_TEMP/manifest.json"
+
+      - name: Commit notes to main
+        run: |
+          set -euo pipefail
+          git config user.name  "worldmachines-bot"
+          git config user.email "bot@worldmachines.org"
+          git add "raw-notes/commons/reading/$SLUG/" "website/content/articles/$SLUG.json"
+          if git diff --staged --quiet; then
+            echo "::error::no reading notes to commit for $SLUG"
+            exit 1
+          fi
+          git commit -m "Reading notes: $SLUG (wm-feeder) [trivial]"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "push attempt $i failed; retrying"
+            sleep $((i * 5))
+          done
+          echo "::error::could not push reading notes for $SLUG"
+          exit 1
+
+      - name: Upload run manifest
+        working-directory: website
+        run: python scripts/feed_resource.py put-manifest "$RUNNER_TEMP/manifest.json"

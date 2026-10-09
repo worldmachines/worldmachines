@@ -8,11 +8,13 @@ import json
 import os
 import re
 import sys
+import tempfile
 from urllib.parse import urlparse
 
 # Substack API → page → RSS feed, with an honest User-Agent. Re-exported so
 # ingest_inbox.py keeps importing it from here.
 from article_fetch import fetch_and_extract, fetch_pasted  # noqa: F401
+from feed_resource import gate as feed_gate, in_scope as feed_in_scope, normalize
 
 
 def clean_pasted(text):
@@ -51,8 +53,10 @@ def main():
     description = payload.get('description') or None
     submitted_at = payload['submitted_at']
 
-    if type_ == 'resource':
-        # Resources are third-party — store the link without fetching
+    feed_text = None
+    skipped = None
+    if type_ == 'resource' and not feed_in_scope(type_, format_):
+        # Books and other long third-party works: store the link without fetching
         title = title_from_url(url)
         pub_date = None
         text = None
@@ -70,6 +74,17 @@ def main():
         if pub_date:
             print(f"  Published: {pub_date}")
         print(f"  Extraction: {'success' if success else 'failed (link-only)'}")
+        if type_ == 'resource':
+            # Third-party text never enters git. In-cap essays/papers go to the
+            # feeder (via R2) for reading notes; the article JSON stays link-only.
+            text = normalize(text) if text else text
+            skipped = feed_gate(text, success)
+            if skipped:
+                print(f"  Feeder: skipped ({skipped}, {len(text or '')} chars)")
+            else:
+                feed_text = text
+                print(f"  Feeder: queued ({len(text)} chars)")
+            text = None
 
     # Text the member pasted on /submit wins over extraction: they paste when
     # the page is paywalled or blocked, where extraction gets a teaser at best.
@@ -96,6 +111,10 @@ def main():
         'extraction_success': success,
         'extracted_text': text,
     }
+    if feed_text is not None:
+        article['ingest_status'] = 'queued'
+    elif skipped:
+        article['ingest_skipped'] = skipped
 
     os.makedirs('content/articles', exist_ok=True)
     out = f'content/articles/{slug}.json'
@@ -103,6 +122,34 @@ def main():
         json.dump(article, f, indent=2, ensure_ascii=False)
 
     print(f"  Saved: {out}")
+
+    if feed_text is not None:
+        # Outside the repo (RUNNER_TEMP in CI) so no `git add` can pick it up.
+        text_dir = os.environ.get('FEED_TEXT_DIR') or os.environ.get('RUNNER_TEMP') or tempfile.gettempdir()
+        os.makedirs(text_dir, exist_ok=True)
+        text_path = os.path.join(text_dir, f'{slug}.txt')
+        with open(text_path, 'w', encoding='utf-8') as f:
+            f.write(feed_text)
+        print(f"  Feeder text: {text_path}")
+    else:
+        text_path = ''
+    write_outputs({
+        'feed_queued': 'true' if feed_text is not None else 'false',
+        'slug': slug,
+        'title': ' '.join(title.split()),
+        'kind': format_ if feed_text is not None else '',
+        'feed_text': text_path,
+    })
+
+
+def write_outputs(outputs):
+    """Expose step outputs to GitHub Actions (no-op locally)."""
+    path = os.environ.get('GITHUB_OUTPUT')
+    if not path:
+        return
+    with open(path, 'a', encoding='utf-8') as f:
+        for k, v in outputs.items():
+            f.write(f"{k}={v}\n")
 
 
 if __name__ == '__main__':
