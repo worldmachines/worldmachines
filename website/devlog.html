@@ -65,6 +65,14 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">8 October 2026 · aneesh</div>
+    <p>Members can submit a third-party essay or paper as a resource, and it is now read rather than stored as a bare link. Ingest extracts the text. If the text is 1,500–60,000 characters, it goes to the feeder's private R2 bucket, and wm-feeder (Gemma on Workers AI) writes reading notes into <code>raw-notes/commons/reading/<slug>/</code> for the Oracle. The essay's own text never enters git or the public site. Its verbatim chunks are loaded into the personal catalog only, with <code>wmlake load-feeder</code>. Books and anything longer stay link-only, marked with why.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">2 October 2026 · aneesh</div>
+    <p>The Oracle can now draw on members' submitted essays. Until now it indexed only <code>raw-notes/</code>, so a question about falling insect numbers missed Sean's "The Art of Nature". Every contribution is now mirrored into <code>raw-notes/commons/contributions/</code> as sections of 5,000 characters or less, credited to the member who wrote it. That's 142 sections from 34 essays, and each new submission is added at ingest. The lake files them under a new <code>contribution</code> category.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">2 October 2026 · aneesh</div>
     <p>Link submission works again: the <code>GITHUB_TOKEN</code> Pages secret is back. Ingest also stops storing contributions as link-only. GitHub's runners get a Cloudflare 403 challenge from Substack and from many blogs, so the bot now falls back to a token-gated relay, <code>/api/ingest-relay</code>, that fetches from Cloudflare's network. It reads Substack posts through Substack's API, Google Docs through their plain-text export, and identifies itself as <code>worldmachines-ingest</code>. <code>/submit</code> has an optional "Article text" box for paywalled or blocked contributions. <code>scripts/reextract.py</code> recovered the full text of all 8 link-only contributions.</p>
   </article>
@@ -246,6 +254,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-10-02T07:09:13Z -->
+  <!-- built: 2026-10-09T03:50:09Z -->
 </body>
 </html>

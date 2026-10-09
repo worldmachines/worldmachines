@@ -208,5 +208,13 @@ class FeederHelperTests(unittest.TestCase):
             self.assertEqual(feed_resource.poll_run('r', attempts=3, sleep=lambda s: None)['status'], 'complete')
 
 
+class UnquoteWikilinksTest(unittest.TestCase):
+    def test_strips_backticks_around_wikilinks_only(self):
+        from feed_resource import unquote_wikilinks
+        self.assertEqual(
+            unquote_wikilinks('a `[[decay-sequence]]` b `code` [[x]]'),
+            'a [[decay-sequence]] b `code` [[x]]')
+
+
 if __name__ == '__main__':
     unittest.main()

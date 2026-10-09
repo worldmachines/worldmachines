@@ -30,6 +30,7 @@ Stdlib only (trafilatura is imported lazily, for backfill re-extraction).
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -189,6 +190,12 @@ def note_keys(result):
     return out
 
 
+def unquote_wikilinks(text):
+    """Gemma sometimes wraps wiki-links in backticks (`[[x]]`), which makes
+    them inline code that the lake won't resolve as links."""
+    return re.sub(r'`(\[\[[^\]`]+\]\])`', r'\1', text)
+
+
 def download_notes(run_id, result, slug):
     keys = note_keys(result)
     if not keys:
@@ -196,7 +203,9 @@ def download_notes(run_id, result, slug):
     dest = READING / slug
     dest.mkdir(parents=True, exist_ok=True)
     for k in keys:
-        r2_get(f'runs/{run_id}/{k}', dest / k[len('notes/'):])
+        path = dest / k[len('notes/'):]
+        r2_get(f'runs/{run_id}/{k}', path)
+        path.write_text(unquote_wikilinks(path.read_text(encoding='utf-8')), encoding='utf-8')
     print(f'  Wrote {len(keys)} note(s) to {dest.relative_to(REPO)}/')
     return keys
 
