@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hopper Submissions — World Machines</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-family: system-ui, sans-serif; font-size: 0.85rem; }
+    th { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; }
+    td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    td.muted { color: var(--muted); font-style: italic; }
+    .del-btn { background: none; border: 1px solid var(--border); color: var(--muted); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 3px; cursor: pointer; }
+    .del-btn:hover { border-color: #991b1b; color: #991b1b; }
+    .pill { font-size: 0.72rem; padding: 0.1rem 0.45rem; border-radius: 99px; background: var(--border); }
+    .pill.approved { background: #d1fae5; color: #065f46; }
+    .pill.rejected { background: #fee2e2; color: #991b1b; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
+    .grid .field { margin-bottom: 0.9rem; }
+    .status { font-family: system-ui, sans-serif; font-size: 0.82rem; margin-top: 0.75rem; }
+    .status.ok  { color: #065f46; }
+    .status.err { color: #991b1b; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+    <p class="tagline">Admin — hopper submissions</p>
+  </header>
+
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-wiki">
+        <a class="nav-label" href="/wiki/">Wiki</a>
+        <a class="nav-open" href="#nav-wiki" aria-label="Show Wiki links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Wiki links"><i></i></a>
+        <div class="nav-row">
+          <a href="/wiki/">Index</a>
+          <a href="/wiki/all">A–Z</a>
+          <a href="/wiki/glossary/">Glossary</a>
+          <a href="/wiki/topics/">Topics</a>
+          <a href="/wiki/hubs">Most linked</a>
+          <a href="/wiki/wanted/">Wanted</a>
+          <a href="/wiki/special">Special</a>
+          <a href="/wiki/search">Search</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="/hoppers">Hoppers</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-label" href="https://primeradiant.worldmachines.org">Prime Radiant ↗</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-wrap" style="max-width:1100px">
+    <h2>Hopper submissions</h2>
+    <p class="form-intro">Public hoppers proposed via <a href="/hoppers">/hoppers</a>. Approving lists the hopper publicly. It is not yet followed by blyg.worldmachines.org; that waits for hopper feeds in blygger. Rejecting blocks the submitter's whole blyg <em>and</em> email from submitting again.</p>
+    <div class="status" id="status"></div>
+
+    <table>
+      <thead><tr><th>Submitted</th><th>Hopper</th><th>Who</th><th>Note</th><th>Status</th><th></th></tr></thead>
+      <tbody id="subs-body"><tr><td colspan="6" style="color:var(--muted);font-style:italic">Loading…</td></tr></tbody>
+    </table>
+  </div>
+
+  <script>
+    const tbody = document.getElementById('subs-body');
+    const status = document.getElementById('status');
+
+    function setStatus(msg, ok) {
+      status.textContent = msg;
+      status.className = 'status ' + (ok ? 'ok' : 'err');
+    }
+
+    function esc(s) {
+      return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    async function load() {
+      const res = await fetch('/api/admin/hoppers');
+      const { submissions, error } = await res.json();
+      if (error) { setStatus(error, false); return; }
+      if (!submissions.length) {
+        tbody.innerHTML = '<tr><td colspan="6" style="color:var(--muted);font-style:italic">No submissions yet.</td></tr>';
+        return;
+      }
+      tbody.innerHTML = submissions.map(s => `
+        <tr>
+          <td style="white-space:nowrap">${esc(s.submitted_at.slice(0, 10))}</td>
+          <td><a href="${esc(s.url)}" target="_blank">${esc(s.title || s.slug)}</a><br><span style="font-size:0.75rem;color:var(--muted)">${esc(s.url)}</span></td>
+          <td>${esc(s.name)}${s.handle ? ` <strong>@${esc(s.handle)}</strong>` : ''}<br>
+              <span style="font-size:0.75rem">${esc(s.email)}${s.email_verified ? ' ✓' : ' <span style="color:var(--muted)">(unverified)</span>'}</span></td>
+          <td>${esc(s.note) || '<span class="muted">—</span>'}</td>
+          <td><span class="pill ${esc(s.status)}">${esc(s.status)}</span>${s.decided_at ? `<br><span style="font-size:0.7rem;color:var(--muted)">${esc(s.decided_at.slice(0, 10))}</span>` : ''}</td>
+          <td style="white-space:nowrap">${s.status === 'pending'
+            ? `<button class="del-btn" data-id="${esc(s.id)}" data-action="approve">Approve</button>
+               <button class="del-btn" data-id="${esc(s.id)}" data-action="reject">Reject</button>`
+            : ''}</td>
+        </tr>`).join('');
+    }
+
+    tbody.addEventListener('click', async (e) => {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      const { id, action } = btn.dataset;
+      if (action === 'reject' && !confirm('Reject? This blocks their blyg and email from submitting again.')) return;
+      btn.disabled = true;
+      const res = await fetch('/api/admin/hoppers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, action }),
+      });
+      const data = await res.json();
+      if (res.ok) { setStatus(`${action === 'approve' ? 'Approved' : 'Rejected'}.`, true); load(); }
+      else { setStatus(data.error || 'Failed', false); btn.disabled = false; }
+    });
+
+    load();
+  </script>
+</body>
+</html>

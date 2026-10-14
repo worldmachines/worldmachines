@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hoppers — World Machines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="color:inherit">World Machines</a></h1>
+  </header>
+
+  <nav class="sitenav" aria-label="Main">
+    <ul class="nav-bar">
+      <li class="nav-item"><a class="nav-label" href="/theory">Theory</a></li>
+      <li class="nav-item has-row" id="nav-library">
+        <a class="nav-label" href="/contributions">Library</a>
+        <a class="nav-open" href="#nav-library" aria-label="Show Library links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Library links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributions">Contributions</a>
+          <a href="/resources">Resources</a>
+          <a href="/evolution/">Evolution field guide</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-wiki">
+        <a class="nav-label" href="/wiki/">Wiki</a>
+        <a class="nav-open" href="#nav-wiki" aria-label="Show Wiki links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Wiki links"><i></i></a>
+        <div class="nav-row">
+          <a href="/wiki/">Index</a>
+          <a href="/wiki/all">A–Z</a>
+          <a href="/wiki/glossary/">Glossary</a>
+          <a href="/wiki/topics/">Topics</a>
+          <a href="/wiki/hubs">Most linked</a>
+          <a href="/wiki/wanted/">Wanted</a>
+          <a href="/wiki/special">Special</a>
+          <a href="/wiki/search">Search</a>
+        </div>
+      </li>
+      <li class="nav-item has-row" id="nav-ask">
+        <a class="nav-label" href="/oracle">Ask</a>
+        <a class="nav-open" href="#nav-ask" aria-label="Show Ask links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Ask links"><i></i></a>
+        <div class="nav-row">
+          <a href="/oracle">Oracle</a>
+          <a href="/mcp">MCP access</a>
+        </div>
+      </li>
+      <li class="nav-item has-row is-current" id="nav-club">
+        <a class="nav-label" href="/contributors">Club</a>
+        <a class="nav-open" href="#nav-club" aria-label="Show Club links"><i></i></a>
+        <a class="nav-shut" href="#" aria-label="Hide Club links"><i></i></a>
+        <div class="nav-row">
+          <a href="/contributors">Contributors</a>
+          <a href="/devlog">Devlog</a>
+          <a href="/join">Join</a>
+          <a href="/hoppers">Hoppers</a>
+          <a href="https://discord.gg/tqUFztN3r">Project chat ↗</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-label" href="https://primeradiant.worldmachines.org">Prime Radiant ↗</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-wrap">
+    <h2>Member hoppers</h2>
+    <p class="form-intro">Keep a <a href="https://github.com/blygger/blygger-studio">blyg</a>? Make a public hopper of the World Machines–relevant things you read, and submit it here. Once approved, it is listed below and will be followed by the World Machines blyg at <a href="https://blyg.worldmachines.org">blyg.worldmachines.org</a>. You don't need to be a registered contributor.</p>
+
+    <div id="hopper-list-wrap" style="display:none">
+      <h3 style="font-size:1rem;font-weight:normal;margin:1.5rem 0 0.5rem">Approved hoppers</h3>
+      <ul id="hopper-list"></ul>
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:normal;margin:1.5rem 0 1rem">Submit a hopper</h3>
+
+    <div id="success-panel" style="display:none">
+      <p class="form-message success" style="display:block">
+        Submitted. Your hopper will be listed here once the project admin approves it.
+      </p>
+    </div>
+
+    <form id="hopper-form" novalidate>
+      <div class="field">
+        <label for="h-url">Public hopper URL <span class="required">*</span></label>
+        <input type="url" id="h-url" name="url" placeholder="https://your.blyg/h/world-machines" required>
+        <p class="field-hint">The public page of one hopper on your blyg; it ends in <code>/h/&lt;hopper-name&gt;</code>. Make the hopper public in Studio first.</p>
+      </div>
+      <div class="field">
+        <label for="h-name">Your name <span class="required">*</span></label>
+        <input type="text" id="h-name" name="name" placeholder="First Last" required>
+      </div>
+      <div class="field">
+        <label for="h-email">Email <span class="required">*</span></label>
+        <input type="email" id="h-email" name="email" placeholder="you@example.com" required>
+        <p class="field-hint">Only the admin sees this.</p>
+      </div>
+      <div class="field">
+        <label for="h-handle">World Machines handle <span class="optional">(if you have one)</span></label>
+        <input type="text" id="h-handle" name="handle" placeholder="e.g. vgr">
+      </div>
+      <div class="field">
+        <label for="h-note">Note <span class="optional">(optional)</span></label>
+        <input type="text" id="h-note" name="note" maxlength="500" placeholder="What goes in this hopper?">
+      </div>
+      <div class="field" style="position:absolute;left:-9999px" aria-hidden="true">
+        <label for="h-website">Leave this empty</label>
+        <input type="text" id="h-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <button type="submit" id="hopper-btn">Submit hopper</button>
+      <div class="form-message" id="hopper-message"></div>
+    </form>
+  </div>
+
+  <script>
+    function esc(s) {
+      return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    fetch('/api/hoppers')
+      .then(r => r.json())
+      .then(({ hoppers }) => {
+        if (!hoppers || !hoppers.length) return;
+        document.getElementById('hopper-list').innerHTML = hoppers.map(h =>
+          `<li><a href="${esc(h.url)}">${esc(h.title || h.url)}</a> — ${esc(h.name)}${h.handle ? ` (@${esc(h.handle)})` : ''}</li>`
+        ).join('');
+        document.getElementById('hopper-list-wrap').style.display = '';
+      })
+      .catch(() => {});
+
+    // Signed-in contributors: prefill and lock name/email/handle.
+    fetch('/api/me')
+      .then(r => r.json())
+      .then(data => {
+        if (data.email) {
+          const e = document.getElementById('h-email');
+          e.value = data.email; e.readOnly = true;
+        }
+        if (data.name) document.getElementById('h-name').value = data.name;
+        if (data.handle) document.getElementById('h-handle').value = data.handle;
+      })
+      .catch(() => {});
+
+    document.getElementById('hopper-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('hopper-btn');
+      const msg = document.getElementById('hopper-message');
+      msg.className = 'form-message';
+      msg.textContent = '';
+
+      const val = (id) => document.getElementById(id).value.trim();
+      const payload = {
+        url: val('h-url'), name: val('h-name'), email: val('h-email'),
+        handle: val('h-handle'), note: val('h-note'), website: val('h-website'),
+      };
+      if (!payload.url || !payload.name || !payload.email) {
+        msg.className = 'form-message error';
+        msg.textContent = 'Please fill in all required fields.';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Checking hopper…';
+      try {
+        const res = await fetch('/api/hoppers', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (res.ok) {
+          document.getElementById('hopper-form').style.display = 'none';
+          document.getElementById('success-panel').style.display = '';
+        } else {
+          msg.className = 'form-message error';
+          msg.textContent = data.error || 'Submission failed. Please try again.';
+        }
+      } catch {
+        msg.className = 'form-message error';
+        msg.textContent = 'Network error. Please try again.';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit hopper';
+      }
+    });
+  </script>
+</body>
+</html>

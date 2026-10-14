@@ -89,6 +89,7 @@ This is a small high-trust group. `.github/CODEOWNERS` documents ownership and a
 | `env` variable | Type | Resource |
 |----------------|------|----------|
 | `HANDLES` | KV | `handles` namespace — contributor email → handle/profile registry |
+| `HOPPERS` | KV | `worldmachines-hoppers` namespace — blyg hopper submission queue + rejection blocklist (`functions/_lib/hoppers.js`) |
 | `NOTES` | R2 | `worldmachines-notes` bucket — notes Parquet for Oracle |
 | `LIBRARY` | R2 | `worldmachines-library` bucket — full PDFs and private article manifest |
 | `AI` | Workers AI | Oracle embedding + chat models |
@@ -118,6 +119,8 @@ website/
   style.css                   ← shared styles
   blurbs.md                   ← front-page prose
   admin/handles.html          ← handle registry admin UI
+  admin/hoppers.html          ← approve/reject blyg hopper submissions (rejection blocks the blyg + email)
+  hoppers.html                ← public: propose a public blyg hopper (`…/h/<slug>`) for blyg.worldmachines.org; lists approved ones
   join.html                   ← public join-request form → GitHub issue; pre-fills email from session
   supplements/                ← rendered HTML versions of supplement documents (generated one-off, committed as static)
   evolution/                  ← unlisted, browser-only evolutionary theory learning course and interactives
