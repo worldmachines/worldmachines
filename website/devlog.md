@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-10-13 · aneesh
+Anyone who keeps a [blyg](https://github.com/blygger/blygger-studio) can now propose one of their public hoppers for World Machines at [/hoppers](/hoppers). Aneesh approves or rejects them at `/admin/hoppers`. Approved hoppers are listed on that page, and a rejection blocks that blyg and email from submitting again. The World Machines blyg at `blyg.worldmachines.org` will start following approved hoppers once blygger ships hopper feeds.
+
 ## 2026-10-09 · aneesh (2)
 The site nav now links to [Prime Radiant](https://primeradiant.worldmachines.org), our sister project, from every page including the wiki.
 
