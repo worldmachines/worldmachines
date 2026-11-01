@@ -66,26 +66,27 @@
 
   <div class="form-wrap">
     <h2>Member hoppers</h2>
-    <p class="form-intro">Keep a <a href="https://github.com/blygger/blygger-studio">blyg</a>? Make a public hopper of the World Machines–relevant things you read, and submit it here. Once approved, it is listed below and will be followed by the World Machines blyg at <a href="https://blyg.worldmachines.org">blyg.worldmachines.org</a>. You don't need to be a registered contributor.</p>
+    <p class="form-intro">Keep a <a href="https://github.com/blygger/blygger-studio">blyg</a>? Make a public hopper of the World Machines–relevant things you read, and submit it here. We check that the URL is a real, public hopper on a blyg; if it is, it is listed below straight away and will be followed by the World Machines blyg at <a href="https://blyg.worldmachines.org">blyg.worldmachines.org</a>. You don't need to be a registered contributor.</p>
 
     <div id="hopper-list-wrap" style="display:none">
-      <h3 style="font-size:1rem;font-weight:normal;margin:1.5rem 0 0.5rem">Approved hoppers</h3>
+      <h3 style="font-size:1rem;font-weight:normal;margin:1.5rem 0 0.5rem">Listed hoppers</h3>
       <ul id="hopper-list"></ul>
     </div>
 
     <h3 style="font-size:1rem;font-weight:normal;margin:1.5rem 0 1rem">Submit a hopper</h3>
 
     <div id="success-panel" style="display:none">
-      <p class="form-message success" style="display:block">
-        Submitted. Your hopper will be listed here once the project admin approves it.
+      <p class="form-message success" style="display:block" id="success-text">
+        Accepted. Your hopper is now listed above.
       </p>
+      <p class="field-hint"><a href="#" id="submit-another">Submit another hopper</a></p>
     </div>
 
     <form id="hopper-form" novalidate>
       <div class="field">
         <label for="h-url">Public hopper URL <span class="required">*</span></label>
-        <input type="url" id="h-url" name="url" placeholder="https://your.blyg/h/world-machines" required>
-        <p class="field-hint">The public page of one hopper on your blyg; it ends in <code>/h/&lt;hopper-name&gt;</code>. Make the hopper public in Studio first.</p>
+        <input type="url" id="h-url" name="url" placeholder="https://your.blyg/h/world-machines/" required>
+        <p class="field-hint">The public page of one hopper on your blyg (https); it ends in <code>/h/&lt;hopper-name&gt;/</code>. Make the hopper public in Studio first. We fetch it and its blyg manifest to check it, which can take a few seconds.</p>
       </div>
       <div class="field">
         <label for="h-name">Your name <span class="required">*</span></label>
@@ -119,16 +120,35 @@
       return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
+    let listed = [];
+
+    function renderList() {
+      if (!listed.length) return;
+      document.getElementById('hopper-list').innerHTML = listed.map(h => {
+        const href = h.canonical || h.url;
+        const who = h.name ? ` — ${esc(h.name)}${h.handle ? ` (@${esc(h.handle)})` : ''}` : '';
+        return `<li><a href="${esc(href)}">${esc(h.title || href)}</a>${who}</li>`;
+      }).join('');
+      document.getElementById('hopper-list-wrap').style.display = '';
+    }
+
     fetch('/api/hoppers')
       .then(r => r.json())
       .then(({ hoppers }) => {
-        if (!hoppers || !hoppers.length) return;
-        document.getElementById('hopper-list').innerHTML = hoppers.map(h =>
-          `<li><a href="${esc(h.url)}">${esc(h.title || h.url)}</a> — ${esc(h.name)}${h.handle ? ` (@${esc(h.handle)})` : ''}</li>`
-        ).join('');
-        document.getElementById('hopper-list-wrap').style.display = '';
+        // Keep anything accepted in this visit that a cached list doesn't have yet.
+        const seen = new Set((hoppers || []).map(h => h.canonical || h.url));
+        listed = (hoppers || []).concat(listed.filter(h => !seen.has(h.canonical)));
+        renderList();
       })
       .catch(() => {});
+
+    document.getElementById('submit-another').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('h-url').value = '';
+      document.getElementById('h-note').value = '';
+      document.getElementById('success-panel').style.display = 'none';
+      document.getElementById('hopper-form').style.display = '';
+    });
 
     // Signed-in contributors: prefill and lock name/email/handle.
     fetch('/api/me')
@@ -171,6 +191,12 @@
         });
         const data = await res.json();
         if (res.ok) {
+          if (data.hopper) {
+            listed = listed.filter(h => (h.canonical || h.url) !== data.hopper.canonical).concat([data.hopper]);
+            renderList();
+            document.getElementById('success-text').textContent =
+              `Accepted. “${data.hopper.title || data.hopper.canonical}” is now listed above.`;
+          }
           document.getElementById('hopper-form').style.display = 'none';
           document.getElementById('success-panel').style.display = '';
         } else {

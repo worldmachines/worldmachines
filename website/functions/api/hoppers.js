@@ -1,19 +1,25 @@
 // GET  /api/hoppers — approved member hoppers (public; no emails)
-// POST /api/hoppers — propose a public blyg hopper for the World Machines blyg
+// POST /api/hoppers — submit a public blyg hopper for the World Machines blyg
+//
+// A submission that validates as a real public blyg hopper is accepted at once
+// (status `approved`) and returned as `hopper`; anything else gets a 4xx with a
+// readable `error`. The GET shape (publicHopper) is consumed elsewhere — keep
+// `canonical`, `base`, `slug`, `title`, `submitted_at`, `name` stable.
 //
 // Public on purpose, like /api/join: the members Access app only admits emails
 // already in HANDLES, and hopper submissions are meant to bring NEW people in.
 // A signed-in caller's verified email wins over the form's. Queue + blocking
-// rules live in functions/_lib/hoppers.js.
+// rules and the validator live in functions/_lib/hoppers.js.
 
 import { getIdentity, blockCrossOrigin, NO_STORE } from '../_lib/access.js';
 import {
-  parseHopperUrl,
-  probeHopper,
+  normalizeHopperUrl,
+  validateHopper,
   isBlocked,
   liveSubmissionFor,
   createSubmission,
   listSubmissions,
+  publicHopper,
 } from '../_lib/hoppers.js';
 
 const MAX_NOTE = 500;
@@ -21,9 +27,10 @@ const MAX_NOTE = 500;
 export async function onRequestGet({ env }) {
   const approved = (await listSubmissions(env))
     .filter((s) => s.status === 'approved')
-    .map(({ url, name, handle, title, decided_at }) => ({ url, name, handle, title, approved_at: decided_at }))
-    .sort((a, b) => a.name.localeCompare(b.name));
-  return Response.json({ hoppers: approved }, { headers: { 'Cache-Control': 'public, max-age=300' } });
+    .map(publicHopper)
+    .sort((a, b) => (a.name || '').localeCompare(b.name || '') || a.canonical.localeCompare(b.canonical));
+  // Short cache: accepted hoppers should show up within a minute.
+  return Response.json({ hoppers: approved }, { headers: { 'Cache-Control': 'public, max-age=60' } });
 }
 
 export async function onRequestPost(ctx) {
@@ -53,31 +60,27 @@ export async function onRequestPost(ctx) {
     return Response.json({ error: 'Please enter a valid email address.' }, { status: 400, headers: NO_STORE });
   }
 
-  const parsed = parseHopperUrl(body.url);
+  const parsed = normalizeHopperUrl(body.url);
   if (parsed.error) return Response.json({ error: parsed.error }, { status: 400, headers: NO_STORE });
 
-  if (await isBlocked(env, { base: parsed.base, email })) {
-    return Response.json(
-      { error: 'A submission from this blyg or email was declined, so it cannot be submitted again.' },
-      { status: 403, headers: NO_STORE }
-    );
-  }
+  const blocked = () => Response.json(
+    { error: 'A submission from this blyg or email was declined, so it cannot be submitted again.' },
+    { status: 403, headers: NO_STORE }
+  );
+  // Cheap pre-check on the submitted mount; the identity origin is checked after validation.
+  if (await isBlocked(env, { base: parsed.mount, email })) return blocked();
 
   const existing = await liveSubmissionFor(env, parsed.canonical);
   if (existing) {
-    const what = existing.status === 'approved' ? 'already listed' : 'already waiting for review';
+    const what = existing.status === 'approved' ? 'already listed' : 'already submitted';
     return Response.json({ error: `That hopper is ${what}.` }, { status: 409, headers: NO_STORE });
   }
 
-  const probe = await probeHopper(parsed.canonical);
-  if (probe.error) return Response.json({ error: probe.error }, { status: 422, headers: NO_STORE });
+  const v = await validateHopper(parsed.canonical);
+  if (v.error) return Response.json({ error: v.error }, { status: 422, headers: NO_STORE });
+  if (await isBlocked(env, { base: v.base })) return blocked();
 
-  await createSubmission(env, {
-    url: parsed.canonical,
-    canonical: parsed.canonical,
-    base: parsed.base,
-    slug: parsed.slug,
-    title: probe.title,
+  const record = await createSubmission(env, v, {
     name,
     email,
     email_verified: Boolean(identity && identity.verified),
@@ -85,5 +88,5 @@ export async function onRequestPost(ctx) {
     note,
   });
 
-  return Response.json({ ok: true }, { status: 201, headers: NO_STORE });
+  return Response.json({ ok: true, hopper: publicHopper(record) }, { status: 201, headers: NO_STORE });
 }
