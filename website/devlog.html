@@ -66,6 +66,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">1 November 2026 · aneesh</div>
+    <p>The World Machines blyg had grown to about 2,578 posts, too many to browse as one stream, so it now opens on a Wikipedia-style front page. The page has a featured note, a "Did you know…" list, the latest from member blygs, and links into the most-linked notes, the glossary and every book read. The full stream moves to <code>/posts/</code>. Each morning Gemma 4 picks the featured note and hooks from a shortlist built on the notes' link graph, and nothing repeats within 90 days. The blurb and hooks are marked as AI-written on the page. The blyg also now uses this site's colours. The 2,577 imported notes were backdated to 15 September so they don't flood the feed.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">31 October 2026 · aneesh</div>
     <p>Hopper submissions at <a href="/hoppers">/hoppers</a> no longer wait for approval. A submission is listed at once if it checks out as a real public blyg hopper: the page is public, the blyg's manifest is found, and the URL sits at <code>h/<slug>/</code> under that blyg. Anything else is refused with the reason. Twice a day (06:00 and 18:00 UTC), <code>blyg-sync.yml</code> subscribes the World Machines blyg to members' blygs, files the posts in their listed hoppers into its public "From World Machines members" hopper, and publishes an AI-written [TK] digest of the new posts. <code>tools/blyg-import/</code> can publish the whole notes corpus (about 2,577 items) onto the blyg, with 97% of wikilinks becoming blyg links and personal notes credited to their author by name and blyg link.</p>
   </article>
@@ -271,6 +275,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-11-01T07:29:58Z -->
+  <!-- built: 2026-11-01T17:11:28Z -->
 </body>
 </html>
