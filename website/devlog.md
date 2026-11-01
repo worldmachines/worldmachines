@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-11-01 · aneesh (3)
+The World Machines blyg now carries this site's navigation bar, so moving between worldmachines.org and blyg.worldmachines.org feels like one site. The bar has a new **Blyg** item. On blyg pages it opens a row: Front page, All posts, From members, Archive, Submit a hopper, RSS. A small shell Worker (`blyg-shell/`) sits in front of Blygger Studio and adds the bar to public blyg pages, so Studio itself is unmodified. The bar's markup and CSS come from this site's build (`partials/sitenav-blyg.html`, `nav.css`), so the two can't drift apart.
+
 ## 2026-11-01 · aneesh (2)
 When World Machines accepts a member's hopper, their blyg is now added straight to the World Machines blyg's blogroll. Accepting the hopper triggers a short sync that subscribes to the blyg and lists it. The twice-daily sync also adds any accepted blyg that's missing. Nobody is ever removed automatically. Blygs whose posts only appear inside someone else's hopper are followed but not listed.
 

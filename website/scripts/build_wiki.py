@@ -135,6 +135,17 @@ NAV_GROUPS = [
         ("/oracle", "Oracle"),
         ("/mcp", "MCP access"),
     ]),
+    # The club's blyg: its own Worker on its own subdomain, carrying this same
+    # bar (see blyg-shell/). Here a plain link; on the blyg itself, where it is
+    # the current group, its row stands pinned open under the bar.
+    ("blyg", "Blyg", "https://blyg.worldmachines.org/", [
+        ("https://blyg.worldmachines.org/", "Front page"),
+        ("https://blyg.worldmachines.org/posts/", "All posts"),
+        ("https://blyg.worldmachines.org/h/members/", "From members"),
+        ("https://blyg.worldmachines.org/archive/", "Archive"),
+        ("/hoppers", "Submit a hopper"),
+        ("https://blyg.worldmachines.org/feed.xml", "RSS"),
+    ]),
     ("club", "Club", "/contributors", [
         ("/contributors", "Contributors"),
         ("/devlog", "Devlog"),
@@ -146,15 +157,33 @@ NAV_GROUPS = [
 ]
 
 
-def sitenav(current: str = "", suppress_current_row: bool = False) -> str:
+# Groups whose row is drawn only where you stand in them. Everywhere else they
+# are a plain link; when current, the row is pinned open below the bar.
+PINNED_ROW_GROUPS = {"blyg"}
+
+
+def sitenav(current: str = "", suppress_current_row: bool = False, origin: str = "") -> str:
     """The site bar. `current` marks the group you are standing in.
 
     `suppress_current_row` is for pages that already print that group's row
     themselves — the wiki does — so the group stands open below the bar
     instead of hiding behind a hover.
+
+    `origin` (e.g. "https://worldmachines.org") makes the site's own
+    root-relative links absolute, for a copy of the bar served on another
+    host: the blyg.
     """
+    def url(h: str) -> str:
+        return origin + h if origin and h.startswith("/") else h
+
     items = []
+    pinned = ""
     for gid, label, href, row in NAV_GROUPS:
+        if gid in PINNED_ROW_GROUPS:
+            if row and gid == current and not suppress_current_row:
+                links = "\n".join(f'      <a href="{url(h)}">{text}</a>' for h, text in row)
+                pinned = f'\n    <div class="nav-pinned">\n{links}\n    </div>'
+            row = []
         show_row = bool(row) and not (suppress_current_row and gid == current)
         classes = "nav-item"
         if show_row:
@@ -163,12 +192,12 @@ def sitenav(current: str = "", suppress_current_row: bool = False) -> str:
             classes += " is-current"
         if not show_row:
             items.append(f'      <li class="{classes}">'
-                         f'<a class="nav-label" href="{href}">{label}</a></li>')
+                         f'<a class="nav-label" href="{url(href)}">{label}</a></li>')
             continue
-        links = "\n".join(f'          <a href="{h}">{text}</a>' for h, text in row)
+        links = "\n".join(f'          <a href="{url(h)}">{text}</a>' for h, text in row)
         items.append(
             f'      <li class="{classes}" id="nav-{gid}">\n'
-            f'        <a class="nav-label" href="{href}">{label}</a>\n'
+            f'        <a class="nav-label" href="{url(href)}">{label}</a>\n'
             f'        <a class="nav-open" href="#nav-{gid}" aria-label="Show {label} links"><i></i></a>\n'
             f'        <a class="nav-shut" href="#" aria-label="Hide {label} links"><i></i></a>\n'
             f'        <div class="nav-row">\n{links}\n        </div>\n'
@@ -176,7 +205,7 @@ def sitenav(current: str = "", suppress_current_row: bool = False) -> str:
         )
     body = "\n".join(items)
     return ('  <nav class="sitenav" aria-label="Main">\n'
-            f'    <ul class="nav-bar">\n{body}\n    </ul>\n'
+            f'    <ul class="nav-bar">\n{body}\n    </ul>{pinned}\n'
             '  </nav>')
 
 

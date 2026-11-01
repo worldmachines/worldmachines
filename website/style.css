@@ -72,6 +72,12 @@ header h1 {
 }
 .submit-link:hover { background: #333; color: var(--bg); text-decoration: none; }
 
+/* @nav-css:begin ─────────────────────────────────────────────
+   Everything from here to @nav-css:end is also published, scoped, as
+   /nav.css for the blyg (blyg.worldmachines.org), which carries this same bar.
+   build.py generates nav.css from this block: keep every nav rule inside it,
+   and keep the block's selectors on nav classes (no bare element selectors). */
+
 /* Nav sits immediately below the header title row, shares the same
    max-width box, and carries the border that separates chrome from content.
 
@@ -224,9 +230,25 @@ header h1 {
   .nav-row { transition: none; }
 }
 
+/* ─── A row pinned open ──────────────────────────────────────
+   A group whose row exists only where you stand in it (the Blyg) prints that
+   row below the bar instead of behind a hover: bar, row, one hairline — the
+   same shape the wiki toolbar takes. Other groups' rows still drop over it. */
+.nav-pinned {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.4rem;
+  padding: 0.1rem 0 0.6rem;
+  font-size: 0.75rem;
+}
+.nav-pinned a { color: #5f5a51; }
+.nav-pinned a:hover { color: var(--text); }
+.nav-pinned a[aria-current="page"] { color: var(--text); font-weight: 600; }
+
 @media print {
   .nav-row, .nav-open, .nav-shut { display: none; }
 }
+/* @nav-css:end */
 
 /* ─── Content containers ─────────────────────────────────────── */
 
