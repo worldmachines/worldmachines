@@ -17,7 +17,8 @@ DEVLOG_FILE  = Path('devlog.md')
 
 # ─── Site navigation ─────────────────────────────────────────────────────────
 #
-# Five places, not eleven links, plus one link out to a sister project. Each
+# Five places, not eleven links, plus the club's blyg and one link out to a
+# sister project. Each
 # group whose contents run to more than one page carries a second row, drawn in a single slot under the bar: hover or
 # keyboard focus on a pointer that can hover, an explicit chevron on one that
 # cannot. Styling lives in website/style.css.
@@ -48,6 +49,17 @@ NAV_GROUPS = [
         ('/oracle', 'Oracle'),
         ('/mcp', 'MCP access'),
     ]),
+    # The club's blyg: its own Worker on its own subdomain, carrying this same
+    # bar (see blyg-shell/). Here a plain link; on the blyg itself, where it is
+    # the current group, its row stands pinned open under the bar.
+    ('blyg', 'Blyg', 'https://blyg.worldmachines.org/', [
+        ('https://blyg.worldmachines.org/', 'Front page'),
+        ('https://blyg.worldmachines.org/posts/', 'All posts'),
+        ('https://blyg.worldmachines.org/h/members/', 'From members'),
+        ('https://blyg.worldmachines.org/archive/', 'Archive'),
+        ('/hoppers', 'Submit a hopper'),
+        ('https://blyg.worldmachines.org/feed.xml', 'RSS'),
+    ]),
     ('club', 'Club', '/contributors', [
         ('/contributors', 'Contributors'),
         ('/devlog', 'Devlog'),
@@ -59,15 +71,33 @@ NAV_GROUPS = [
 ]
 
 
-def sitenav(current='', suppress_current_row=False):
+# Groups whose row is drawn only where you stand in them. Everywhere else they
+# are a plain link; when current, the row is pinned open below the bar.
+PINNED_ROW_GROUPS = {'blyg'}
+
+
+def sitenav(current='', suppress_current_row=False, origin=''):
     """The site bar. `current` marks the group you are standing in.
 
     `suppress_current_row` is for pages that already print that group's row
     themselves — the wiki does — so the group stands open below the bar
     instead of hiding behind a hover.
+
+    `origin` (e.g. 'https://worldmachines.org') makes the site's own
+    root-relative links absolute, for a copy of the bar served on another
+    host: the blyg.
     """
+    def url(h):
+        return origin + h if origin and h.startswith('/') else h
+
     items = []
+    pinned = ''
     for gid, label, href, row in NAV_GROUPS:
+        if gid in PINNED_ROW_GROUPS:
+            if row and gid == current and not suppress_current_row:
+                links = '\n'.join(f'      <a href="{url(h)}">{text}</a>' for h, text in row)
+                pinned = f'\n    <div class="nav-pinned">\n{links}\n    </div>'
+            row = []
         show_row = bool(row) and not (suppress_current_row and gid == current)
         classes = 'nav-item'
         if show_row:
@@ -76,12 +106,12 @@ def sitenav(current='', suppress_current_row=False):
             classes += ' is-current'
         if not show_row:
             items.append(f'      <li class="{classes}">'
-                         f'<a class="nav-label" href="{href}">{label}</a></li>')
+                         f'<a class="nav-label" href="{url(href)}">{label}</a></li>')
             continue
-        links = '\n'.join(f'          <a href="{h}">{text}</a>' for h, text in row)
+        links = '\n'.join(f'          <a href="{url(h)}">{text}</a>' for h, text in row)
         items.append(
             f'      <li class="{classes}" id="nav-{gid}">\n'
-            f'        <a class="nav-label" href="{href}">{label}</a>\n'
+            f'        <a class="nav-label" href="{url(href)}">{label}</a>\n'
             f'        <a class="nav-open" href="#nav-{gid}" aria-label="Show {label} links"><i></i></a>\n'
             f'        <a class="nav-shut" href="#" aria-label="Hide {label} links"><i></i></a>\n'
             f'        <div class="nav-row">\n{links}\n        </div>\n'
@@ -89,7 +119,7 @@ def sitenav(current='', suppress_current_row=False):
         )
     body = '\n'.join(items)
     return ('  <nav class="sitenav" aria-label="Main">\n'
-            f'    <ul class="nav-bar">\n{body}\n    </ul>\n'
+            f'    <ul class="nav-bar">\n{body}\n    </ul>{pinned}\n'
             '  </nav>')
 
 
@@ -97,7 +127,9 @@ def sitenav(current='', suppress_current_row=False):
 # `build.py` rewrites the block in place so a copy can never drift again.
 STATIC_NAV_PAGES = {
     'admin/handles.html': '',
+    'admin/hoppers.html': '',
     'contributors.html': 'club',
+    'hoppers.html': 'club',
     'join.html': 'club',
     'mcp.html': 'ask',
     'oracle.html': 'ask',
@@ -563,6 +595,123 @@ def sync_static_navs():
           + (': ' + ', '.join(changed) if changed else ''))
 
 
+# ─── The bar, exported for the blyg ──────────────────────────────────────────
+#
+# blyg.worldmachines.org is Blygger Studio, a separate Worker whose public
+# pages we cannot template. A shell Worker in front of it (blyg-shell/ at the
+# repo root) splices this bar into each public page. It reads two files that
+# deploy with this site:
+#
+#   partials/sitenav-blyg.html  the bar with the Blyg group current and its row
+#                               pinned open, every site link made absolute
+#   nav.css                     the nav rules from style.css, each scoped under
+#                               the partial's root so none can restyle Studio
+#
+# Neither is edited by hand: the bar comes from sitenav(), the CSS from the
+# block between @nav-css:begin and @nav-css:end in style.css.
+
+SITE_ORIGIN = 'https://worldmachines.org'
+BLYG_ROOT = 'wm-sitechrome'
+BLYG_PARTIAL = Path('partials/sitenav-blyg.html')
+NAV_CSS = Path('nav.css')
+STYLE_CSS = Path('style.css')
+NAV_CSS_BLOCK = re.compile(r'/\* @nav-css:begin.*?\*/(.*?)/\* @nav-css:end \*/', re.DOTALL)
+
+
+def _scope_css(css, root):
+    """Prefix every selector in `css` with `.root `, descending into @media.
+
+    Every rule gains exactly one class of specificity, so the rules keep their
+    order of precedence among themselves while outranking Studio's own
+    element and single-class rules. Only plain rules and @media are handled:
+    the nav block holds nothing else, and anything else is an error.
+    """
+    out, i = [], 0
+    while True:
+        j = css.find('{', i)
+        if j < 0:
+            if css[i:].strip():
+                raise ValueError(f'nav css: trailing text {css[i:].strip()[:40]!r}')
+            return '\n'.join(out)
+        head = css[i:j].strip()
+        depth, k = 1, j + 1
+        while depth:
+            if css[k] == '{':
+                depth += 1
+            elif css[k] == '}':
+                depth -= 1
+            k += 1
+        inner = css[j + 1:k - 1]
+        if head.startswith('@media'):
+            body = _scope_css(inner, root)
+            out.append(f'{head} {{\n' + '\n'.join('  ' + ln for ln in body.splitlines()) + '\n}')
+        elif head.startswith('@'):
+            raise ValueError(f'nav css: unsupported at-rule {head!r}')
+        else:
+            sels = ',\n'.join(f'.{root} {sel.strip()}' for sel in head.split(','))
+            decls = ' '.join(d.strip() + ';' for d in inner.split(';') if d.strip())
+            out.append(f'{sels} {{ {decls} }}')
+        i = k
+
+
+def build_nav_css():
+    """nav.css: the nav block of style.css, scoped, with the tokens it reads."""
+    style = STYLE_CSS.read_text(encoding='utf-8')
+    m = NAV_CSS_BLOCK.search(style)
+    if not m:
+        raise SystemExit('style.css has no @nav-css:begin … @nav-css:end block')
+    block = re.sub(r'/\*.*?\*/', '', m.group(1), flags=re.DOTALL)
+    root_decls = re.search(r':root\s*\{(.*?)\}', re.sub(r'/\*.*?\*/', '', style, flags=re.DOTALL),
+                           re.DOTALL).group(1)
+    tokens = dict(re.findall(r'(--[\w-]+)\s*:\s*([^;]+);', root_decls))
+    used = sorted(set(re.findall(r'var\((--[\w-]+)\)', block)) | {'--text', '--link'})
+    missing = [t for t in used if t not in tokens]
+    if missing:
+        raise SystemExit(f'nav block reads tokens not on :root: {missing}')
+    token_css = '\n'.join(f'  {t}: {tokens[t].strip()};' for t in used)
+    r = BLYG_ROOT
+    css = f'''\
+/* GENERATED by website/scripts/build.py from the @nav-css block of
+   style.css. Do not edit: change style.css and rebuild.
+
+   The worldmachines.org bar for pages served on other hosts (the blyg).
+   Every rule is scoped under .{r}, the partial's root, so nothing here can
+   reach the host page; the root resets what a host's own body and element
+   rules could otherwise pass down to it. */
+.{r} {{
+{token_css}
+  all: initial;
+  display: block;
+  position: relative;
+  z-index: 100;
+  margin: 0 0 2rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.65;
+  color: var(--text);
+  text-align: left;
+}}
+.{r} *,
+.{r} *::before,
+.{r} *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
+.{r} a {{ color: var(--link); text-decoration: none; background: none; border-radius: 0; }}
+.{r} ul {{ list-style: none; }}
+{_scope_css(block, r)}
+'''
+    NAV_CSS.write_text(css, encoding='utf-8')
+    print(f'Built nav.css — {len(used)} token(s), scoped under .{r}')
+
+
+def build_blyg_partial():
+    BLYG_PARTIAL.parent.mkdir(exist_ok=True)
+    html = (f'<div class="{BLYG_ROOT}">\n'
+            f'{sitenav("blyg", origin=SITE_ORIGIN)}\n'
+            '</div>\n')
+    BLYG_PARTIAL.write_text(html, encoding='utf-8')
+    print(f'Built {BLYG_PARTIAL}')
+
+
 def build():
     articles = load_articles()
     build_index(articles)
@@ -570,6 +719,8 @@ def build():
     build_resources(articles)
     build_devlog()
     sync_static_navs()
+    build_nav_css()
+    build_blyg_partial()
 
 
 if __name__ == '__main__':
