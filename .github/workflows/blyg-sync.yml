@@ -39,7 +39,11 @@ on:
         default: false
 
 concurrency:
-  group: blyg-sync
+  # Blogroll-only runs (hopper-accepted) get their own group, so one can never
+  # replace a queued scheduled sync+digest. Overlap is harmless: they only
+  # subscribe and set in_blogroll, both idempotent. A newer pending
+  # blogroll-only run may replace an older one; each covers every hopper.
+  group: blyg-sync-${{ (github.event_name == 'repository_dispatch' || inputs.blogroll_only) && 'blogroll' || 'full' }}
   cancel-in-progress: false
 
 permissions:
