@@ -111,11 +111,16 @@ class FakeStudio:
             if origin not in self.catalog:
                 return 422, {'error': 'could not resolve this URL to a blyg or a feed'}
             sub = {'id': self._id(), 'kind': 'blyg', 'origin': origin, 'feed_url': origin + 'feed.xml',
-                   'title': f'Blyg at {origin}', 'status': 'active'}
+                   'title': f'Blyg at {origin}', 'status': 'active', 'in_blogroll': False}
             self.subs[sub['id']] = sub
             if body.get('backfill', True):
                 self._import(sub)
             return 201, sub
+        if parts[0] == 'subscriptions' and len(parts) == 2 and method == 'PATCH' and parts[1] != 'poll':
+            assert set(body) <= {'in_blogroll', 'title', 'paused'}, 'strict schema'
+            sub = self.subs[parts[1]]
+            sub.update(body)
+            return 200, sub
         if path == '/subscriptions/poll':
             for s in self.subs.values():
                 self._import(s)
@@ -442,6 +447,105 @@ class EndToEnd(unittest.TestCase):
         self.assertIn('[TK]', result['digest'])
         self.assertIn('----- digest draft -----', h.out.getvalue())
         self.assertTrue(any(p.startswith('create the digest draft') for p in sync.plan))
+
+
+class Blogroll(unittest.TestCase):
+    """Approved hoppers' own blygs go in the WM blogroll; merely-linked ones do not."""
+
+    def blogroll_patches(self, studio):
+        return [c for c in studio.calls if c[0] == 'PATCH' and c[1].startswith('/subscriptions/')]
+
+    def by_origin(self, studio):
+        return {s['origin']: s for s in studio.subs.values()}
+
+    def test_accepted_hopper_base_is_blogrolled_linked_blygs_are_not(self):
+        h = history_harness()  # Venkat's hopper links Patrick's and Aneesh's posts
+        _, result = h.run()
+        subs = self.by_origin(h.studio)
+        self.assertTrue(subs[VENKAT]['in_blogroll'])
+        self.assertFalse(subs[PATRICK]['in_blogroll'])
+        self.assertFalse(subs[ANEESH]['in_blogroll'])
+        self.assertEqual(result['blogroll_added'], [VENKAT])
+        (patch,) = self.blogroll_patches(h.studio)
+        self.assertEqual(patch[2], {'in_blogroll': True})
+
+    def test_idempotent_no_patch_when_already_true(self):
+        h = history_harness()
+        h.run()
+        before = len(h.studio.calls)
+        _, again = h.run()
+        self.assertEqual(self.blogroll_patches(h.studio)[1:], [])
+        self.assertEqual([c for c in h.studio.calls[before:] if c[0] != 'GET'], [])
+        self.assertEqual(again['blogroll_added'], [])
+
+    def test_existing_subscription_matched_by_normalized_base(self):
+        h = Harness({VENKAT: []}, {HISTORY: hopper_page([])},
+                    [{'canonical': HISTORY, 'base': 'HTTPS://VenkateshRao.COM/blyg', 'name': 'V'}])
+        h.studio.subs['s1'] = {'id': 's1', 'kind': 'blyg', 'origin': VENKAT, 'title': 'V',
+                               'status': 'active', 'in_blogroll': False}
+        h.run(blogroll_only=True)
+        self.assertNotIn('POST', [c[0] for c in h.studio.calls], 'no second subscription')
+        self.assertEqual(self.blogroll_patches(h.studio), [('PATCH', '/subscriptions/s1', {'in_blogroll': True})])
+
+    def test_already_true_is_left_alone_and_nothing_is_removed(self):
+        h = Harness({VENKAT: []}, {HISTORY: hopper_page([])}, [{'url': HISTORY, 'name': 'V'}])
+        h.studio.subs['s1'] = {'id': 's1', 'kind': 'blyg', 'origin': VENKAT, 'title': 'V',
+                               'status': 'active', 'in_blogroll': True}
+        h.studio.subs['s2'] = {'id': 's2', 'kind': 'blyg', 'origin': PATRICK, 'title': 'P',
+                               'status': 'active', 'in_blogroll': True}  # no longer an approved hopper
+        h.run()
+        self.assertEqual(self.blogroll_patches(h.studio), [])
+        self.assertTrue(h.studio.subs['s2']['in_blogroll'])
+
+    def test_empty_hopper_still_subscribes_and_blogrolls_its_blyg(self):
+        h = Harness({VENKAT: []}, {HISTORY: hopper_page([])}, [{'url': HISTORY, 'name': 'V'}])
+        h.run()
+        self.assertTrue(self.by_origin(h.studio)[VENKAT]['in_blogroll'])
+
+    def test_own_blyg_is_never_blogrolled(self):
+        site = 'https://blyg.worldmachines.org/'
+        h = Harness({}, {site + 'h/x/': hopper_page([])}, [{'url': site + 'h/x/', 'name': 'WM'}])
+        h.run(blogroll_only=True)
+        self.assertEqual(h.studio.writes(), [])
+
+    def test_dry_run_makes_no_writes(self):
+        for preexisting in (False, True):
+            h = history_harness()
+            if preexisting:
+                h.studio.subs['s1'] = {'id': 's1', 'kind': 'blyg', 'origin': VENKAT, 'title': 'V',
+                                       'status': 'active', 'in_blogroll': False}
+            for kw in ({}, {'blogroll_only': True}):
+                sync, result = h.run(dry_run=True, **kw)
+                self.assertEqual(h.studio.writes(), [])
+                self.assertTrue(any(p.startswith(f'add {VENKAT} to the blogroll') for p in sync.plan), sync.plan)
+                self.assertEqual(result['blogroll_added'], [VENKAT])
+
+    def test_blogroll_only_does_no_scraping_filing_or_digest(self):
+        h = history_harness()
+        fetched = []
+        orig = h.fetch
+        h.fetch = lambda url: fetched.append(url) or orig(url)
+        _, result = h.run(blogroll_only=True)
+        self.assertEqual(fetched, [HOPPERS_URL], 'only /api/hoppers is read')
+        st = h.studio
+        self.assertEqual(set(self.by_origin(st)), {VENKAT})
+        self.assertTrue(self.by_origin(st)[VENKAT]['in_blogroll'])
+        self.assertEqual(st.hoppers, {}, 'no WM hopper created')
+        self.assertEqual(st.filed(), [])
+        self.assertEqual(st.items, {})
+        self.assertNotIn(('POST', '/subscriptions/poll', None), st.calls)
+        self.assertFalse(any(c[1].startswith(('/hoppers', '/items', '/reading')) for c in st.calls))
+        self.assertEqual((result['filed'], result['digest']), ([], None))
+
+    def test_main_blogroll_only_flag(self):
+        h = history_harness()
+        with mock.patch.dict(os.environ, {'BLYG_TOKEN': 'tok', 'BLYG_API_BASE': API, 'WM_HOPPERS_URL': HOPPERS_URL}), \
+                contextlib.redirect_stdout(io.StringIO()) as out:
+            blyg_sync.main(['--blogroll-only'], transport=h.studio.transport, fetch=h.fetch, sleep=lambda s: None)
+        self.assertTrue(self.by_origin(h.studio)[VENKAT]['in_blogroll'])
+        self.assertEqual(h.studio.items, {})
+        self.assertEqual(h.studio.hoppers, {})
+        self.assertIn('--blogroll-only', out.getvalue())
 
 
 class Auth(unittest.TestCase):

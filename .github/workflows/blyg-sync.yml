@@ -3,6 +3,12 @@
 # its /h/members/ collection, and publish an AI-written [TK] digest of them.
 # See website/scripts/blyg_sync.py. Commits nothing to git.
 #
+# Every run also puts each approved hopper's own blyg in the WM blyg's public
+# blogroll. When worldmachines.org/api/hoppers accepts a submission it fires a
+# `hopper-accepted` repository_dispatch, which runs only that step
+# (--blogroll-only: subscribe + blogroll, no filing, no digest). The shared
+# concurrency group queues it behind a running sync instead of overlapping.
+#
 # Setup:
 #   secret BLYG_TOKEN       Studio REST token (Studio → More → Client access →
 #                           REST API) with owner:read owner:manage owner:draft
@@ -15,6 +21,8 @@ name: Blyg sync digest
 on:
   schedule:
     - cron: '0 6,18 * * *'
+  repository_dispatch:
+    types: [hopper-accepted]
   workflow_dispatch:
     inputs:
       dry_run:
@@ -23,6 +31,10 @@ on:
         default: true
       no_digest:
         description: 'Subscribe and file, but write no digest'
+        type: boolean
+        default: false
+      blogroll_only:
+        description: "Only subscribe to approved hoppers' blygs and blogroll them"
         type: boolean
         default: false
 
@@ -55,9 +67,13 @@ jobs:
         env:
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
           NO_DIGEST: ${{ github.event_name == 'workflow_dispatch' && inputs.no_digest }}
+          BLOGROLL_ONLY: ${{ github.event_name == 'repository_dispatch' || (github.event_name == 'workflow_dispatch' && inputs.blogroll_only) }}
+          ACCEPTED: ${{ github.event.client_payload.canonical }}
         run: |
           set -euo pipefail
           args=()
           if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
           if [ "$NO_DIGEST" = "true" ]; then args+=(--no-digest); fi
+          if [ "$BLOGROLL_ONLY" = "true" ]; then args+=(--blogroll-only); fi
+          if [ -n "${ACCEPTED:-}" ]; then echo "Triggered by an accepted hopper: $ACCEPTED"; fi
           python scripts/blyg_sync.py "${args[@]}"

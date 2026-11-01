@@ -14,6 +14,7 @@ import {
   isBlocked,
   decide,
 } from '../functions/_lib/hoppers.js';
+import { onRequestPost, dispatchHopperAccepted } from '../functions/api/hoppers.js';
 
 const MANIFEST = {
   blyg: '0.4',
@@ -319,4 +320,124 @@ test('reject blocks the blyg under either slash spelling', async () => {
   assert.equal(await isBlocked(env, { base: 'https://venkateshrao.com/blyg' }), true);
   assert.equal(await isBlocked(env, { email: 'v@example.com' }), true);
   assert.equal(await isBlocked(env, { base: 'https://other.example/', email: 'x@example.com' }), false);
+});
+
+// ── POST /api/hoppers → hopper-accepted repository_dispatch ─────────────────
+
+const GITHUB_DISPATCH = 'https://api.github.com/repos/worldmachines/worldmachines/dispatches';
+
+/**
+ * Swap globalThis.fetch for a router: the validator's hopper + manifest URLs,
+ * and GitHub's dispatch endpoint answered by `github` (a status, or 'throw').
+ */
+async function withGlobalFetch(github, fn) {
+  const real = globalThis.fetch;
+  const realError = console.error;
+  const dispatches = [];
+  const errors = [];
+  globalThis.fetch = async (url, init = {}) => {
+    url = String(url);
+    if (url === GITHUB_DISPATCH) {
+      dispatches.push({ headers: init.headers, body: JSON.parse(init.body) });
+      if (github === 'throw') throw new TypeError('fetch failed');
+      return new Response(github === 204 ? null : '{"message":"Bad credentials"}', { status: github });
+    }
+    if (url === 'https://venkateshrao.com/blyg/h/history/') {
+      return new Response(html('History'), { status: 200, headers: { 'content-type': 'text/html' } });
+    }
+    if (url === 'https://venkateshrao.com/blyg/blyg.json') {
+      return new Response(JSON.stringify(MANIFEST), { status: 200, headers: { 'content-type': 'application/json' } });
+    }
+    return new Response('not found', { status: 404, headers: { 'content-type': 'text/html' } });
+  };
+  console.error = (...args) => errors.push(args.join(' '));
+  try {
+    return await fn({ dispatches, errors });
+  } finally {
+    globalThis.fetch = real;
+    console.error = realError;
+  }
+}
+
+function postCtx(body, envExtra = {}) {
+  const env = { ...memoryEnv(), GITHUB_TOKEN: 'ghp_test', GITHUB_REPO: 'worldmachines/worldmachines', ...envExtra };
+  const waits = [];
+  const request = new Request('https://worldmachines.org/api/hoppers', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  return { ctx: { request, env, waitUntil: (p) => waits.push(p) }, waits, env };
+}
+
+const goodSubmission = { url: 'https://venkateshrao.com/blyg/h/history', name: 'Venkat', email: 'v@example.com' };
+
+test('POST 201 fires a hopper-accepted dispatch in waitUntil', async () => {
+  await withGlobalFetch(204, async ({ dispatches }) => {
+    const { ctx, waits } = postCtx(goodSubmission);
+    const res = await onRequestPost(ctx);
+    assert.equal(res.status, 201);
+    assert.equal(waits.length, 1, 'dispatch is handed to waitUntil');
+    assert.equal(await waits[0], true);
+    assert.equal(dispatches.length, 1);
+    const [d] = dispatches;
+    assert.equal(d.body.event_type, 'hopper-accepted');
+    assert.deepEqual(d.body.client_payload, {
+      canonical: 'https://venkateshrao.com/blyg/h/history/',
+      base: 'https://venkateshrao.com/blyg/',
+    });
+    assert.equal(d.headers.Authorization, 'Bearer ghp_test');
+  });
+});
+
+test('POST 4xx fires no dispatch', async () => {
+  await withGlobalFetch(204, async ({ dispatches }) => {
+    for (const body of [
+      { name: 'x', email: 'v@example.com' },                                         // 400: no url
+      { ...goodSubmission, url: 'https://venkateshrao.com/blyg/h/no-such-hopper/' }, // 422: not a hopper
+    ]) {
+      const { ctx, waits } = postCtx(body);
+      const res = await onRequestPost(ctx);
+      assert.ok(res.status >= 400 && res.status < 500, `got ${res.status}`);
+      assert.equal(waits.length, 0);
+    }
+    // 409: the same hopper submitted twice; only the first dispatches.
+    const first = postCtx(goodSubmission);
+    assert.equal((await onRequestPost(first.ctx)).status, 201);
+    const again = postCtx(goodSubmission);
+    again.ctx.env = first.env;
+    assert.equal((await onRequestPost(again.ctx)).status, 409);
+    assert.equal(again.waits.length, 0);
+    assert.equal(dispatches.length, 1);
+  });
+});
+
+test('dispatch failure (HTTP error, network error, no token) never fails the submission', async () => {
+  for (const github of [401, 'throw']) {
+    await withGlobalFetch(github, async ({ dispatches, errors }) => {
+      const { ctx, waits } = postCtx(goodSubmission);
+      const res = await onRequestPost(ctx);
+      assert.equal(res.status, 201);
+      assert.equal(await waits[0], false, 'the waitUntil promise resolves, never rejects');
+      assert.equal(dispatches.length, 1);
+      assert.ok(errors.some((e) => /hopper-accepted dispatch failed/.test(e)));
+    });
+  }
+  await withGlobalFetch(204, async ({ dispatches }) => {
+    const { ctx, waits } = postCtx(goodSubmission, { GITHUB_TOKEN: undefined });
+    assert.equal((await onRequestPost(ctx)).status, 201);
+    assert.equal(await waits[0], false);
+    assert.equal(dispatches.length, 0);
+  });
+});
+
+test('dispatchHopperAccepted posts the hopper base directly', async () => {
+  await withGlobalFetch(204, async ({ dispatches }) => {
+    const ok = await dispatchHopperAccepted(
+      { GITHUB_TOKEN: 't', GITHUB_REPO: 'worldmachines/worldmachines' },
+      { canonical: 'https://a.example/h/x/', base: 'https://a.example/' },
+    );
+    assert.equal(ok, true);
+    assert.equal(dispatches[0].body.client_payload.base, 'https://a.example/');
+  });
 });

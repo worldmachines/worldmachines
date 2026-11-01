@@ -12,6 +12,10 @@ hopper has no feed (it is an HTML page), so this script:
      blyg; the hopper page decides which of its posts we keep);
   3. matches each wanted item to the WM blyg's imported copy
      (GET /reading/imported) — items not imported yet wait for the next run;
+  3a. puts every approved hopper's own blyg (its `base`) in the WM blyg's
+     public blogroll (in_blogroll: true). Only those: a blyg merely linked
+     from inside a hopper is subscribed but not blogrolled. Nothing is ever
+     removed from the blogroll here;
   4. files the matched items into the WM hopper (default slug `members`). This
      is curation only: they show on blyg.worldmachines.org/h/members/;
   5. writes a [TK] digest thread over the newly filed posts, has the Studio's
@@ -27,6 +31,9 @@ Usage (from website/):
   python scripts/blyg_sync.py --dry-run          # read-only; print the plan
   python scripts/blyg_sync.py                    # sync, file, digest
   python scripts/blyg_sync.py --no-digest        # sync and file only
+  python scripts/blyg_sync.py --blogroll-only    # read /api/hoppers, subscribe to each
+                                                 # approved hopper's blyg, blogroll it; no
+                                                 # page scraping, filing or digest
 
 Environment:
   BLYG_TOKEN        Studio REST token (Studio → More → Client access → REST API)
@@ -222,6 +229,9 @@ class BlygApi:
                 return
 
     # -- writes
+    def set_in_blogroll(self, sub_id, value=True):
+        return self.request('PATCH', f'/subscriptions/{q(sub_id)}', {'in_blogroll': value})[1]
+
     def subscribe(self, url):
         """(status, body). 201 created; 200 proposal needing owner confirmation; 409 already subscribed."""
         return self.request('POST', '/subscriptions', {'url': url, 'confirm': True, 'backfill': True},
@@ -515,8 +525,9 @@ def drop_source(content_md, source_id):
 
 class Sync:
     def __init__(self, api, *, fetch=fetch_text, site=None, slug=DEFAULT_SLUG, hopper_name=DEFAULT_HOPPER_NAME,
-                 hoppers_url=DEFAULT_HOPPERS_URL, dry_run=False, digest=True, max_sources=MAX_SOURCES,
-                 max_scopes=MAX_SCOPES, poll_wait=POLL_WAIT, sleep=time.sleep, now=None):
+                 hoppers_url=DEFAULT_HOPPERS_URL, dry_run=False, digest=True, blogroll_only=False,
+                 max_sources=MAX_SOURCES, max_scopes=MAX_SCOPES, poll_wait=POLL_WAIT, sleep=time.sleep,
+                 now=None):
         self.api = api
         self.fetch = fetch
         self.site = norm_base(site or site_from_api_base(api.base))
@@ -525,6 +536,7 @@ class Sync:
         self.hoppers_url = hoppers_url
         self.dry_run = dry_run
         self.digest = digest
+        self.blogroll_only = blogroll_only
         self.max_sources = max_sources
         self.max_scopes = max_scopes
         self.poll_wait = poll_wait
@@ -532,6 +544,7 @@ class Sync:
         self.now = now or datetime.now(timezone.utc)
         self.plan = []  # what a dry run would have done
         self._imported = None
+        self._subs = None  # {normalized origin: subscription} after ensure_subscriptions
 
     def act(self, description):
         """True when the action should happen; in a dry run, record it instead."""
@@ -543,10 +556,17 @@ class Sync:
         return True
 
     # 1–2: wanted items from the member hoppers
-    def wanted_items(self):
+    def approved_hoppers(self):
         log(f'Reading approved hoppers from {self.hoppers_url}')
         hoppers = parse_wm_hoppers(json.loads(self.fetch(self.hoppers_url)))
         log(f'  {len(hoppers)} approved hopper(s)')
+        return hoppers
+
+    def hopper_bases(self, hoppers):
+        """The approved hoppers' own blygs, minus ours."""
+        return {h['base'] for h in hoppers} - {self.site}
+
+    def wanted_items(self, hoppers):
         wanted, seen = [], set()
         for h in hoppers:
             try:
@@ -565,8 +585,10 @@ class Sync:
         return wanted
 
     # 3: subscriptions
-    def ensure_subscriptions(self, bases):
-        have = {norm_base(s['origin']) for s in self.api.subscriptions()}
+    def ensure_subscriptions(self, bases, poll=True):
+        subs = {norm_base(s['origin']): s for s in self.api.subscriptions()}
+        self._subs = subs
+        have = set(subs)
         new = 0
         for base in sorted(bases):
             if base in have:
@@ -576,6 +598,9 @@ class Sync:
             status, body = self.api.subscribe(base)
             if status == 201:
                 log(f"    subscribed: {body.get('title')} ({body.get('id')})")
+                subs[base] = body
+                if body.get('origin'):
+                    subs.setdefault(norm_base(body['origin']), body)
                 new += 1
             elif status == 200:
                 log(f'    the blyg proposed a subscription but did not create it; confirm it in Studio: {body}')
@@ -583,10 +608,43 @@ class Sync:
                 log(f"    already subscribed ({body.get('error')})")
             else:
                 log(f"    ! could not subscribe ({status}): {body.get('error') if isinstance(body, dict) else body}")
-        if new and self.act('force a poll of all subscriptions'):
+        if new and poll and self.act('force a poll of all subscriptions'):
             log(f"    polling {self.api.poll().get('polling')} subscription(s); waiting {self.poll_wait}s")
             self.sleep(self.poll_wait)
         return new
+
+    # 3a: blogroll
+    def ensure_blogroll(self, bases):
+        """Set in_blogroll on the subscription for each base. Never clears it.
+
+        `bases` are the approved hoppers' own blygs. Runs after
+        ensure_subscriptions, whose subscription list (plus anything it just
+        created) is what we match against. Returns the bases added (or, in a
+        dry run, that would be added).
+        """
+        subs = self._subs if self._subs is not None else {
+            norm_base(s['origin']): s for s in self.api.subscriptions()}
+        added = []
+        for base in sorted(bases):
+            sub = subs.get(base)
+            if not sub:
+                if self.dry_run:
+                    self.act(f'add {base} to the blogroll (once subscribed)')
+                    added.append(base)
+                else:
+                    log(f'  ! {base} has no subscription with that origin, so it cannot be blogrolled '
+                        '(subscribed under another origin, or subscribing failed). Check Studio → Reading.')
+                continue
+            if sub.get('in_blogroll'):
+                log(f'  already in the blogroll: {base}')
+                continue
+            if sub.get('status') == 'paused':
+                log(f'  note: {base} is paused; the public blogroll omits paused subscriptions')
+            if self.act(f"add {base} to the blogroll (subscription {sub.get('id')})"):
+                updated = self.api.set_in_blogroll(sub['id'], True)
+                sub['in_blogroll'] = bool((updated or {}).get('in_blogroll', True))
+            added.append(base)
+        return added
 
     # 4: imported rows
     def imported_index(self, want_ids=None):
@@ -722,12 +780,27 @@ class Sync:
         return True
 
     def run(self):
-        log(f'World Machines blyg: {self.site} (API {self.api.base})' + (' — DRY RUN' if self.dry_run else ''))
-        wanted = self.wanted_items()
+        log(f'World Machines blyg: {self.site} (API {self.api.base})' + (' — DRY RUN' if self.dry_run else '')
+            + (' — blogroll only' if self.blogroll_only else ''))
+        hoppers = self.approved_hoppers()
+        own = self.hopper_bases(hoppers)
+
+        if self.blogroll_only:
+            log('Subscriptions')
+            self.ensure_subscriptions(own, poll=False)  # backfill already starts each import
+            log('Blogroll')
+            added = self.ensure_blogroll(own)
+            log(f'--blogroll-only: {len(added)} blyg(s) added to the blogroll; no filing, no digest.')
+            return {'filed': [], 'digest': None, 'missing': [], 'blogroll_added': added}
+
+        wanted = self.wanted_items(hoppers)
         log(f'{len(wanted)} wanted item(s) on other blygs')
 
         log('Subscriptions')
-        self.ensure_subscriptions({w['base'] for w in wanted})
+        self.ensure_subscriptions({w['base'] for w in wanted} | own)
+
+        log('Blogroll')
+        added = self.ensure_blogroll(own)
 
         log(f'WM hopper /h/{self.slug}/')
         hopper = self.ensure_hopper()
@@ -754,10 +827,10 @@ class Sync:
 
         if not filed:
             log('Nothing new; no digest.')
-            return {'filed': [], 'digest': None, 'missing': missing}
+            return {'filed': [], 'digest': None, 'missing': missing, 'blogroll_added': added}
         if not self.digest:
             log('--no-digest: skipping the digest.')
-            return {'filed': filed, 'digest': None, 'missing': missing}
+            return {'filed': filed, 'digest': None, 'missing': missing, 'blogroll_added': added}
 
         hopper_url = f'{self.site}h/{(hopper or {}).get("slug") or self.slug}/'
         content = build_digest(filed, self.now, hopper_url, self.max_sources, self.hopper_name)
@@ -766,17 +839,20 @@ class Sync:
             log('----- digest draft -----')
             log(content)
             log('------------------------')
-            return {'filed': filed, 'digest': content, 'missing': missing}
+            return {'filed': filed, 'digest': content, 'missing': missing, 'blogroll_added': added}
         item = self.api.create_thread(content)
         log(f"    draft {item['id']}")
         self.generate_and_publish(item)
-        return {'filed': filed, 'digest': content, 'missing': missing, 'item': item['id']}
+        return {'filed': filed, 'digest': content, 'missing': missing, 'blogroll_added': added, 'item': item['id']}
 
 
 def main(argv=None, transport=urllib_transport, fetch=fetch_text, sleep=time.sleep):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('--dry-run', action='store_true', help='read-only calls only; print the planned actions')
     p.add_argument('--no-digest', action='store_true', help='subscribe and file, but write no digest')
+    p.add_argument('--blogroll-only', action='store_true',
+                   help="only subscribe to approved hoppers' blygs and put them in the blogroll; "
+                        'no page scraping, filing or digest')
     p.add_argument('--max-sources', type=int, default=MAX_SOURCES, help=f'sources per TK scope (default {MAX_SOURCES})')
     p.add_argument('--max-scopes', type=int, default=MAX_SCOPES, help=f'TK scopes per digest (default {MAX_SCOPES})')
     p.add_argument('--poll-wait', type=int, default=POLL_WAIT, help='seconds to wait after a forced poll')
@@ -799,7 +875,8 @@ def main(argv=None, transport=urllib_transport, fetch=fetch_text, sleep=time.sle
         hopper_name=os.environ.get('BLYG_HOPPER_NAME') or DEFAULT_HOPPER_NAME,
         hoppers_url=os.environ.get('WM_HOPPERS_URL') or DEFAULT_HOPPERS_URL,
         dry_run=a.dry_run,
-        digest=not a.no_digest,
+        digest=not a.no_digest and not a.blogroll_only,
+        blogroll_only=a.blogroll_only,
         max_sources=a.max_sources,
         max_scopes=a.max_scopes,
         poll_wait=a.poll_wait,

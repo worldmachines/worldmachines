@@ -10,6 +10,12 @@
 // already in HANDLES, and hopper submissions are meant to bring NEW people in.
 // A signed-in caller's verified email wins over the form's. Queue + blocking
 // rules and the validator live in functions/_lib/hoppers.js.
+//
+// An accepted submission also fires a GitHub repository_dispatch
+// (`hopper-accepted`), which runs .github/workflows/blyg-sync.yml in its
+// blogroll-only mode: the new hopper's blyg is subscribed and added to the WM
+// blyg's blogroll within minutes instead of at the next twice-daily sync. It
+// runs in ctx.waitUntil, so it never delays or fails the submission.
 
 import { getIdentity, blockCrossOrigin, NO_STORE } from '../_lib/access.js';
 import {
@@ -88,5 +94,44 @@ export async function onRequestPost(ctx) {
     note,
   });
 
-  return Response.json({ ok: true, hopper: publicHopper(record) }, { status: 201, headers: NO_STORE });
+  const hopper = publicHopper(record);
+  const dispatch = dispatchHopperAccepted(env, hopper);
+  if (typeof ctx.waitUntil === 'function') ctx.waitUntil(dispatch);
+  return Response.json({ ok: true, hopper }, { status: 201, headers: NO_STORE });
+}
+
+/**
+ * Ask GitHub to run the blyg sync's blogroll step for a just-accepted hopper.
+ * Same call as /api/submit's article dispatch. Never throws: a failure is
+ * logged, and the twice-daily sync picks the hopper up anyway.
+ */
+export async function dispatchHopperAccepted(env, hopper) {
+  if (!env.GITHUB_TOKEN || !env.GITHUB_REPO) {
+    console.error('hoppers: GITHUB_TOKEN / GITHUB_REPO not configured; no hopper-accepted dispatch');
+    return false;
+  }
+  try {
+    const res = await fetch(`https://api.github.com/repos/${env.GITHUB_REPO}/dispatches`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+        Accept: 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+        'X-GitHub-Api-Version': '2022-11-28',
+        'User-Agent': 'worldmachines-worker',
+      },
+      body: JSON.stringify({
+        event_type: 'hopper-accepted',
+        client_payload: { canonical: hopper.canonical, base: hopper.base },
+      }),
+    });
+    if (!res.ok) {
+      console.error('hoppers: hopper-accepted dispatch failed:', res.status, await res.text().catch(() => ''));
+      return false;
+    }
+    return true;
+  } catch (err) {
+    console.error('hoppers: hopper-accepted dispatch failed:', err);
+    return false;
+  }
 }
