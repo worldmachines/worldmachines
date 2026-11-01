@@ -119,8 +119,8 @@ website/
   style.css                   ← shared styles
   blurbs.md                   ← front-page prose
   admin/handles.html          ← handle registry admin UI
-  admin/hoppers.html          ← approve/reject blyg hopper submissions (rejection blocks the blyg + email)
-  hoppers.html                ← public: propose a public blyg hopper (`…/h/<slug>`) for blyg.worldmachines.org; lists approved ones
+  admin/hoppers.html          ← review blyg hopper submissions: re-validate, reject (rejection blocks the blyg + email)
+  hoppers.html                ← public: submit a public blyg hopper (`…/h/<slug>/`); auto-accepted when it validates as a blyg hopper (`functions/_lib/hoppers.js` validateHopper)
   join.html                   ← public join-request form → GitHub issue; pre-fills email from session
   supplements/                ← rendered HTML versions of supplement documents (generated one-off, committed as static)
   evolution/                  ← unlisted, browser-only evolutionary theory learning course and interactives
@@ -136,6 +136,8 @@ new_writing_inbox.md          ← direct-push submission inbox (repo root, not i
 .github/workflows/ingest.yml  ← article submission workflow (web form → repository_dispatch)
 .github/workflows/inbox.yml   ← inbox workflow (push to new_writing_inbox.md → ingest + deploy)
 .github/workflows/feed-resource.yml ← reusable: one resource slug → wm-feeder → reading notes (called by ingest.yml + inbox.yml)
+.github/workflows/blyg-sync.yml ← 06:00/18:00 UTC: WM blyg subscribes to member blygs, files their hopper posts into its `members` hopper, publishes a [TK] digest (`website/scripts/blyg_sync.py`; secret BLYG_TOKEN)
+tools/blyg-import/            ← re-runnable notes → WM blyg importer (wikilinks → `[[id]]`, bylines from authors.json; dry-run by default)
 ```
 
 ## Article JSON schema
