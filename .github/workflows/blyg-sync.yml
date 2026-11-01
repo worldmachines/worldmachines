@@ -1,0 +1,63 @@
+# Twice a day: make the World Machines blyg (blyg.worldmachines.org) collect
+# what members file into their approved WM hoppers, file the new posts into
+# its /h/members/ collection, and publish an AI-written [TK] digest of them.
+# See website/scripts/blyg_sync.py. Commits nothing to git.
+#
+# Setup:
+#   secret BLYG_TOKEN       Studio REST token (Studio → More → Client access →
+#                           REST API) with owner:read owner:manage owner:draft
+#                           owner:publish. Expires after at most 30 days; a 401
+#                           or 403 fails this job with renewal instructions.
+#   var BLYG_API_BASE       optional, default https://blyg.worldmachines.org/api
+#   var BLYG_HOPPER_SLUG    optional, default members
+name: Blyg sync digest
+
+on:
+  schedule:
+    - cron: '0 6,18 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Read-only: print the plan, write nothing'
+        type: boolean
+        default: true
+      no_digest:
+        description: 'Subscribe and file, but write no digest'
+        type: boolean
+        default: false
+
+concurrency:
+  group: blyg-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BLYG_TOKEN: ${{ secrets.BLYG_TOKEN }}
+      BLYG_API_BASE: ${{ vars.BLYG_API_BASE || 'https://blyg.worldmachines.org/api' }}
+      BLYG_HOPPER_SLUG: ${{ vars.BLYG_HOPPER_SLUG || 'members' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: website/scripts
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync member hoppers and publish the digest
+        working-directory: website
+        env:
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          NO_DIGEST: ${{ github.event_name == 'workflow_dispatch' && inputs.no_digest }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          if [ "$NO_DIGEST" = "true" ]; then args+=(--no-digest); fi
+          python scripts/blyg_sync.py "${args[@]}"
