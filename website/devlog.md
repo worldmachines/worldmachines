@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-10-31 · aneesh
+Hopper submissions at [/hoppers](/hoppers) no longer wait for approval. A submission is listed at once if it checks out as a real public blyg hopper: the page is public, the blyg's manifest is found, and the URL sits at `h/<slug>/` under that blyg. Anything else is refused with the reason. Twice a day (06:00 and 18:00 UTC), `blyg-sync.yml` subscribes the World Machines blyg to members' blygs, files the posts in their listed hoppers into its public "From World Machines members" hopper, and publishes an AI-written [TK] digest of the new posts. `tools/blyg-import/` can publish the whole notes corpus (about 2,577 items) onto the blyg, with 97% of wikilinks becoming blyg links and personal notes credited to their author by name and blyg link.
+
 ## 2026-10-13 · aneesh
 Anyone who keeps a [blyg](https://github.com/blygger/blygger-studio) can now propose one of their public hoppers for World Machines at [/hoppers](/hoppers). Aneesh approves or rejects them at `/admin/hoppers`. Approved hoppers are listed on that page, and a rejection blocks that blyg and email from submitting again. The World Machines blyg at `blyg.worldmachines.org` will start following approved hoppers once blygger ships hopper feeds.
 
