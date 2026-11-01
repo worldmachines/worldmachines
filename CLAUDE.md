@@ -137,6 +137,7 @@ new_writing_inbox.md          ← direct-push submission inbox (repo root, not i
 .github/workflows/inbox.yml   ← inbox workflow (push to new_writing_inbox.md → ingest + deploy)
 .github/workflows/feed-resource.yml ← reusable: one resource slug → wm-feeder → reading notes (called by ingest.yml + inbox.yml)
 .github/workflows/blyg-sync.yml ← 06:00/18:00 UTC: WM blyg subscribes to member blygs, files their hopper posts into its `members` hopper, publishes a [TK] digest (`website/scripts/blyg_sync.py`; secret BLYG_TOKEN)
+.github/workflows/blyg-front.yml ← 06:30 UTC: AI-picked featured note + "Did you know" on the WM blyg's static front page (`website/scripts/blyg_front.py`; repo var BLYG_FRONT_ID; 18:30 refreshes members only; history in tools/blyg-front/history.json)
 tools/blyg-import/            ← re-runnable notes → WM blyg importer (wikilinks → `[[id]]`, bylines from authors.json; dry-run by default)
 ```
 
