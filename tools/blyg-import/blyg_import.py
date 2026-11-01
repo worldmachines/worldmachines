@@ -10,6 +10,8 @@ Dry run by default. See README.md in this directory.
 from __future__ import annotations
 
 import argparse
+import copy
+import datetime
 import fnmatch
 import json
 import os
@@ -198,12 +200,64 @@ class Importer:
                 if self._write(u, content):
                     self._publish(u, content)
 
+    def plan_writes(self, selected: list[C.Unit], publish: bool, republish_published: bool = False) -> dict:
+        """Exact write plan: replays sync() against a throwaway copy of the state
+        with a client that only counts. Creates, patches and publishes, including
+        the second-round republishes. Nothing is written, to the blyg or to disk."""
+        planner = Importer(self.units, self.renderer.index, self.authors, _ScratchState(self.state),
+                           _CountingClient(), kind=self.kind, publish_note=self.publish_note,
+                           republish_note=self.republish_note, log=lambda *a: None)
+        planner.renderer = self.renderer
+        planner.sync(selected, publish=publish, republish_published=republish_published)
+        c = planner.counts
+        return {"create": c["create"], "patch": c["patch"], "publish": c["publish"],
+                "total": c["create"] + c["patch"] + c["publish"]}
+
     def pending(self, selected: list[C.Unit]) -> dict:
         """What an --execute run would do first (creates are exact; edits are a floor)."""
         creates = sum(1 for u in selected if u.key not in self.state.items)
         changed = sum(1 for u in selected if u.key in self.state.items and
                       self.state.items[u.key].get("content_sha") != C.sha(self.render(u, self.state.id)))
         return {"create": creates, "changed": changed}
+
+
+class _ScratchState(State):
+    """An in-memory copy of a State; save() is a no-op."""
+
+    def __init__(self, src: State):
+        self.path = src.path
+        self.data = copy.deepcopy(src.data)
+
+    def save(self) -> None:
+        pass
+
+
+class _CountingClient:
+    """Stands in for BlygClient when planning: every call succeeds, nothing is sent."""
+
+    def __init__(self):
+        self.n = 0
+
+    def create_item(self, content, kind):
+        self.n += 1
+        return C.fake_id(f"plan-{self.n}")
+
+    def update_item(self, item_id, content):
+        pass
+
+    def publish_item(self, item_id, note=None):
+        return 1
+
+
+MIN_WRITE_INTERVAL = 1.1  # the 60/min delegated write budget, with margin
+
+
+def pace_for(target_hours: float, planned_writes: int) -> float:
+    """Seconds between writes so that planned_writes take about target_hours, never
+    faster than the write budget allows."""
+    if planned_writes <= 0:
+        return MIN_WRITE_INTERVAL
+    return max(MIN_WRITE_INTERVAL, target_hours * 3600.0 / planned_writes)
 
 
 # ─── Stats and reporting ─────────────────────────────────────────────────────
@@ -300,7 +354,10 @@ def main(argv=None) -> int:
     ap.add_argument("--authors", type=Path, default=HERE / "authors.json")
     ap.add_argument("--root", type=Path, default=REPO_ROOT, help="repo root")
     ap.add_argument("--api-base", help="overrides BLYG_API_BASE and config")
-    ap.add_argument("--interval", type=float, help="seconds between writes (default from config)")
+    ap.add_argument("--interval", "--write-interval", dest="interval", type=float,
+                    help="seconds between writes (default from config); overrides --target-hours")
+    ap.add_argument("--target-hours", type=float, metavar="H",
+                    help="stretch the run to about H hours: interval = max(1.1, H*3600 / planned writes)")
     ap.add_argument("--sample", type=int, default=2, help="dry run: how many transformed notes to print")
     ap.add_argument("--report", type=Path, help="write full stats (unresolved, collisions) as JSON")
     ap.add_argument("--quiet-stats", action="store_true", help="skip the corpus statistics")
@@ -343,6 +400,19 @@ def main(argv=None) -> int:
           "publish: " + ("yes" if args.publish else
                             "republish items already published" if args.update_attribution else "no (drafts)"))
 
+    writes = imp.plan_writes(selected, publish=args.publish, republish_published=args.update_attribution)
+    if args.interval is not None:
+        interval, why = args.interval, "--write-interval"
+    elif args.target_hours is not None:
+        interval, why = pace_for(args.target_hours, writes["total"]), f"--target-hours {args.target_hours:g}"
+    else:
+        interval, why = float(cfg.get("write_interval_seconds", MIN_WRITE_INTERVAL)), "config"
+    secs = writes["total"] * interval
+    eta = datetime.datetime.now() + datetime.timedelta(seconds=secs)
+    print(f"planned writes: {writes['total']} (create {writes['create']}, patch {writes['patch']}, "
+          f"publish {writes['publish']})   interval: {interval:.2f}s ({why})   "
+          f"duration ~{secs / 3600:.2f}h   ETA ~{eta:%Y-%m-%d %H:%M} local", flush=True)
+
     if not args.execute:
         sample = sorted(selected, key=lambda u: -u.body.count("[["))[: args.sample]
         for u in sample:
@@ -356,7 +426,6 @@ def main(argv=None) -> int:
     if not token:
         print("BLYG_TOKEN is not set.", file=sys.stderr)
         return 2
-    interval = args.interval if args.interval is not None else float(cfg.get("write_interval_seconds", 1.1))
     imp.client = BlygClient(api_base, token, write_interval=interval)
     imp.sync(selected, publish=args.publish, republish_published=args.update_attribution)
     c = imp.counts

@@ -50,7 +50,8 @@ python3 -m unittest discover -s tools/blyg-import/tests
 | `--update-attribution` | Only items whose byline changed since the last write; republishes those already published |
 | `--state PATH` | State file (default `tools/blyg-import/state.json`). A state file is bound to one API base and refuses another |
 | `--api-base URL` | Overrides `BLYG_API_BASE` and `config.json` (default `https://blyg.worldmachines.org/api`; an open Studio PR moves `/api` under the mount) |
-| `--interval S` | Seconds between writes (default 1.1) |
+| `--interval S` / `--write-interval S` | Seconds between writes (default 1.1); overrides `--target-hours` |
+| `--target-hours H` | Stretch the run to about H hours: interval = max(1.1, H×3600 / planned writes). The plan (creates, patches, publishes, second-round republishes) is replayed in memory; dry run and execute both print it with the interval and ETA |
 | `--report PATH` | Full statistics as JSON |
 
 ## What a note becomes

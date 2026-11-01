@@ -11,7 +11,7 @@ sys.path.insert(0, str(HERE.parent))
 
 import corpus as C  # noqa: E402
 from blyg_client import ApiError  # noqa: E402
-from blyg_import import Importer, State  # noqa: E402
+from blyg_import import Importer, State, pace_for  # noqa: E402
 
 AUTHORS = C.Authors(
     authors={"aneesh": {"name": "Aneesh Sathe", "blyg": "https://blyg.aneeshsathe.com/"},
@@ -306,6 +306,26 @@ class StateTest(unittest.TestCase):
         self.assertEqual([c[0] for c in client.calls[before:]], ["patch", "publish"])
         did = state["raw-notes/kyle/d.md"]["id"]
         self.assertIn("*By [Kyle Mathews](https://k.example/blyg/)*", client.items[did]["published"])
+
+    def test_plan_writes_matches_real_run_and_writes_nothing(self):
+        imp = self.importer(None)
+        plan = imp.plan_writes(self.units, publish=True)
+        self.assertFalse(self.state_path.exists())  # planning never touches the state file
+        self.assertEqual(imp.state.items, {})
+        client = FakeClient()
+        real = self.importer(client)
+        real.sync(self.units, publish=True)
+        self.assertEqual(plan["create"], real.counts["create"])
+        self.assertEqual(plan["patch"], real.counts["patch"])
+        self.assertEqual(plan["publish"], real.counts["publish"])
+        self.assertEqual(plan["total"], len(client.calls))
+        # After the run, the plan is empty: a resumed run makes no writes.
+        self.assertEqual(self.importer(client).plan_writes(self.units, publish=True)["total"], 0)
+
+    def test_pace_for_target_hours(self):
+        self.assertAlmostEqual(pace_for(8, 6000), 4.8)
+        self.assertEqual(pace_for(1, 6000), 1.1)  # never faster than the write budget
+        self.assertEqual(pace_for(8, 0), 1.1)
 
     def test_state_bound_to_api_base(self):
         State(self.state_path, "http://x/api").save()
