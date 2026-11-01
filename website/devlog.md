@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-11-01 · aneesh (2)
+When World Machines accepts a member's hopper, their blyg is now added straight to the World Machines blyg's blogroll. Accepting the hopper triggers a short sync that subscribes to the blyg and lists it. The twice-daily sync also adds any accepted blyg that's missing. Nobody is ever removed automatically. Blygs whose posts only appear inside someone else's hopper are followed but not listed.
+
 ## 2026-11-01 · aneesh
 The World Machines blyg had grown to about 2,578 posts, too many to browse as one stream, so it now opens on a Wikipedia-style front page. The page has a featured note, a "Did you know…" list, the latest from member blygs, and links into the most-linked notes, the glossary and every book read. The full stream moves to `/posts/`. Each morning Gemma 4 picks the featured note and hooks from a shortlist built on the notes' link graph, and nothing repeats within 90 days. The blurb and hooks are marked as AI-written on the page. The blyg also now uses this site's colours. The 2,577 imported notes were backdated to 15 September so they don't flood the feed.
 
