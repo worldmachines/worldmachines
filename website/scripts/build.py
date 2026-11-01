@@ -129,7 +129,7 @@ STATIC_NAV_PAGES = {
     'admin/handles.html': '',
     'admin/hoppers.html': '',
     'contributors.html': 'club',
-    'hoppers.html': 'club',
+    'hoppers.html': 'blyg',
     'join.html': 'club',
     'mcp.html': 'ask',
     'oracle.html': 'ask',
