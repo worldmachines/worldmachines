@@ -1,0 +1,106 @@
+# The World Machines blyg's front page (blyg.worldmachines.org): one published
+# thread that Studio shows at the root once Settings → front_page names it.
+# See website/scripts/blyg_front.py.
+#
+#   06:30 UTC  daily run, after the 06:00 blyg-sync digest: an AI picks the
+#              featured note and the "Did you know" hooks (at most once a UTC
+#              day), and the page is republished.
+#   18:30 UTC  members-only run, after the 18:00 digest: keeps the featured
+#              block, refreshes "From the members"; republishes only if the
+#              text changed.
+#
+# Commits only tools/blyg-front/history.json (what was featured when, so a note
+# is not reused for 90 days).
+#
+# Setup:
+#   var BLYG_FRONT_ID          the thread id printed by the one-time
+#                              `python scripts/blyg_front.py --create`
+#   secret BLYG_FRONT_TOKEN    optional: a Studio REST token of its own (owner:read
+#                              owner:draft owner:publish). Its own grant, so its one
+#                              daily AI call is not counted against the digest
+#                              token's per-grant AI limit. Falls back to BLYG_TOKEN.
+#   secret CF_AI_TOKEN, CLOUDFLARE_ACCOUNT_ID   Workers AI REST (already set)
+#   var BLYG_API_BASE          optional, default https://blyg.worldmachines.org/api
+#   var BLYG_HOPPER_SLUG       optional, default members
+#   var BLYG_FRONT_BLURB       optional: tk (default) or impyrt
+name: Blyg front page
+
+on:
+  schedule:
+    - cron: '30 6 * * *'
+    - cron: '30 18 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Print the page and the picks; write nothing to the blyg'
+        type: boolean
+        default: true
+      members_only:
+        description: 'Keep the featured block; refresh the members section only'
+        type: boolean
+        default: false
+
+concurrency:
+  group: blyg-front
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  front:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      BLYG_TOKEN: ${{ secrets.BLYG_FRONT_TOKEN || secrets.BLYG_TOKEN }}
+      BLYG_API_BASE: ${{ vars.BLYG_API_BASE || 'https://blyg.worldmachines.org/api' }}
+      BLYG_HOPPER_SLUG: ${{ vars.BLYG_HOPPER_SLUG || 'members' }}
+      BLYG_FRONT_ID: ${{ vars.BLYG_FRONT_ID }}
+      BLYG_FRONT_BLURB: ${{ vars.BLYG_FRONT_BLURB || 'tk' }}
+      CF_AI_TOKEN: ${{ secrets.CF_AI_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Update the front page
+        working-directory: website
+        env:
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          MEMBERS_ONLY: ${{ (github.event_name == 'schedule' && github.event.schedule == '30 18 * * *') || (github.event_name == 'workflow_dispatch' && inputs.members_only) }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          if [ "$MEMBERS_ONLY" = "true" ]; then args+=(--members-only); fi
+          if [ -z "$BLYG_FRONT_ID" ] && [ "$DRY_RUN" != "true" ]; then
+            echo "::error::repo variable BLYG_FRONT_ID is not set; run blyg_front.py --create once and set it"
+            exit 1
+          fi
+          python scripts/blyg_front.py "${args[@]}"
+
+      - name: Commit the history
+        run: |
+          set -euo pipefail
+          git config user.name  "worldmachines-bot"
+          git config user.email "bot@worldmachines.org"
+          git add tools/blyg-front/history.json
+          if git diff --staged --quiet; then
+            echo "History unchanged."
+            exit 0
+          fi
+          git commit -m "[trivial] blyg front page: featured note for $(date -u +%F)"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "push attempt $i failed; retrying"
+            sleep $((i * 5))
+          done
+          echo "::error::could not push the front-page history"
+          exit 1
