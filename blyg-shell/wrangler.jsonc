@@ -1,0 +1,52 @@
+{
+  // wm-blyg-shell: owns blyg.worldmachines.org, forwards everything to Blygger
+  // Studio over a service binding, and adds the worldmachines.org site bar to
+  // public HTML pages. See README.md before the first deploy: the custom
+  // domain below is currently held by the Studio worker.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wm-blyg-shell",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+  // Same account as wm-blyg/wrangler.private.jsonc.
+  "account_id": "ebef79305d4b32a611e2946cc08f7bd6",
+
+  // Reachable only on the blyg's own domain.
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "blyg.worldmachines.org", "custom_domain": true }
+  ],
+
+  // Studio's default entrypoint: its router, edge-cached public HTML and all.
+  "services": [
+    { "binding": "STUDIO", "service": "blyg-blyg-worldmachines-org" }
+  ],
+
+  "vars": {
+    // Built by website/scripts/build.py, deployed with worldmachines.org.
+    // Set NAV_PARTIAL_URL to "" to pass every page through untouched.
+    "NAV_PARTIAL_URL": "https://worldmachines.org/partials/sitenav-blyg.html",
+    "NAV_CSS_URL": "https://worldmachines.org/nav.css",
+    "NAV_CACHE_TTL": "300"
+  },
+
+  "observability": { "enabled": true },
+
+  "env": {
+    // A dry run on workers.dev before the cut-over: `npx wrangler deploy --env preview`.
+    // Same Studio behind it; no custom domain.
+    "preview": {
+      "name": "wm-blyg-shell-preview",
+      "workers_dev": true,
+      "routes": [],
+      "services": [
+        { "binding": "STUDIO", "service": "blyg-blyg-worldmachines-org" }
+      ],
+      "vars": {
+        "NAV_PARTIAL_URL": "https://worldmachines.org/partials/sitenav-blyg.html",
+        "NAV_CSS_URL": "https://worldmachines.org/nav.css",
+        "NAV_CACHE_TTL": "300"
+      }
+    }
+  }
+}

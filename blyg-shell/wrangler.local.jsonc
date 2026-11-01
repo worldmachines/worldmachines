@@ -1,0 +1,16 @@
+{
+  // Local end-to-end only (see README "Local end-to-end"). The shell against a
+  // stock Studio checkout running `wrangler dev` (its default worker name is
+  // "blyg"), and the site served from website/ on port 8788.
+  "name": "wm-blyg-shell-local",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+  "services": [
+    { "binding": "STUDIO", "service": "blyg" }
+  ],
+  "vars": {
+    "NAV_PARTIAL_URL": "http://127.0.0.1:8788/partials/sitenav-blyg.html",
+    "NAV_CSS_URL": "http://127.0.0.1:8788/nav.css",
+    "NAV_CACHE_TTL": "0"
+  }
+}
