@@ -66,6 +66,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">31 October 2026 · aneesh</div>
+    <p>Hopper submissions at <a href="/hoppers">/hoppers</a> no longer wait for approval. A submission is listed at once if it checks out as a real public blyg hopper: the page is public, the blyg's manifest is found, and the URL sits at <code>h/<slug>/</code> under that blyg. Anything else is refused with the reason. Twice a day (06:00 and 18:00 UTC), <code>blyg-sync.yml</code> subscribes the World Machines blyg to members' blygs, files the posts in their listed hoppers into its public "From World Machines members" hopper, and publishes an AI-written [TK] digest of the new posts. <code>tools/blyg-import/</code> can publish the whole notes corpus (about 2,577 items) onto the blyg, with 97% of wikilinks becoming blyg links and personal notes credited to their author by name and blyg link.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">13 October 2026 · aneesh</div>
     <p>Anyone who keeps a <a href="https://github.com/blygger/blygger-studio">blyg</a> can now propose one of their public hoppers for World Machines at <a href="/hoppers">/hoppers</a>. Aneesh approves or rejects them at <code>/admin/hoppers</code>. Approved hoppers are listed on that page, and a rejection blocks that blyg and email from submitting again. The World Machines blyg at <code>blyg.worldmachines.org</code> will start following approved hoppers once blygger ships hopper feeds.</p>
   </article>
@@ -267,6 +271,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-10-14T05:31:46Z -->
+  <!-- built: 2026-11-01T07:29:58Z -->
 </body>
 </html>
