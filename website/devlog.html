@@ -68,6 +68,10 @@
   <div class="devlog">
   <article class="devlog-entry">
     <div class="devlog-meta">1 November 2026 · aneesh</div>
+    <p>The World Machines blyg now carries this site's navigation bar, so moving between worldmachines.org and blyg.worldmachines.org feels like one site. The bar has a new **Blyg** item. On blyg pages it opens a row: Front page, All posts, From members, Archive, Submit a hopper, RSS. A small shell Worker (<code>blyg-shell/</code>) sits in front of Blygger Studio and adds the bar to public blyg pages, so Studio itself is unmodified. The bar's markup and CSS come from this site's build (<code>partials/sitenav-blyg.html</code>, <code>nav.css</code>), so the two can't drift apart.</p>
+  </article>
+  <article class="devlog-entry">
+    <div class="devlog-meta">1 November 2026 · aneesh</div>
     <p>When World Machines accepts a member's hopper, their blyg is now added straight to the World Machines blyg's blogroll. Accepting the hopper triggers a short sync that subscribes to the blyg and lists it. The twice-daily sync also adds any accepted blyg that's missing. Nobody is ever removed automatically. Blygs whose posts only appear inside someone else's hopper are followed but not listed.</p>
   </article>
   <article class="devlog-entry">
@@ -280,6 +284,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-11-01T17:46:36Z -->
+  <!-- built: 2026-11-01T17:46:49Z -->
 </body>
 </html>
