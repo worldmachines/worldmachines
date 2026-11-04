@@ -67,6 +67,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">4 November 2026 · aneesh</div>
+    <p>Florian's hopper was stuck. He had submitted it before submissions were auto-accepted, so it sat in the old approval queue. Submitting it again said "already submitted", and the public list shows only accepted hoppers. Submitting a hopper that is still waiting now re-checks it and accepts it if it passes. The check also follows the final hopper-feeds spec: a blyg that lists its public hoppers in its manifest is taken at its word, whatever paths it uses. The <code>/h/<name>/</code> shape is only required of blygs that don't list them.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">1 November 2026 · aneesh</div>
     <p>The World Machines blyg now carries this site's navigation bar, so moving between worldmachines.org and blyg.worldmachines.org feels like one site. The bar has a new **Blyg** item. On blyg pages it opens a row: Front page, All posts, From members, Archive, Submit a hopper, RSS. A small shell Worker (<code>blyg-shell/</code>) sits in front of Blygger Studio and adds the bar to public blyg pages, so Studio itself is unmodified. The bar's markup and CSS come from this site's build (<code>partials/sitenav-blyg.html</code>, <code>nav.css</code>), so the two can't drift apart.</p>
   </article>
@@ -284,6 +288,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-11-01T17:47:56Z -->
+  <!-- built: 2026-11-04T05:07:54Z -->
 </body>
 </html>
