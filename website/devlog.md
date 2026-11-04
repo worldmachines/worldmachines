@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-11-04 · aneesh
+Florian's hopper was stuck. He had submitted it before submissions were auto-accepted, so it sat in the old approval queue. Submitting it again said "already submitted", and the public list shows only accepted hoppers. Submitting a hopper that is still waiting now re-checks it and accepts it if it passes. The check also follows the final hopper-feeds spec: a blyg that lists its public hoppers in its manifest is taken at its word, whatever paths it uses. The `/h/<name>/` shape is only required of blygs that don't list them.
+
 ## 2026-11-01 · aneesh (3)
 The World Machines blyg now carries this site's navigation bar, so moving between worldmachines.org and blyg.worldmachines.org feels like one site. The bar has a new **Blyg** item. On blyg pages it opens a row: Front page, All posts, From members, Archive, Submit a hopper, RSS. A small shell Worker (`blyg-shell/`) sits in front of Blygger Studio and adds the bar to public blyg pages, so Studio itself is unmodified. The bar's markup and CSS come from this site's build (`partials/sitenav-blyg.html`, `nav.css`), so the two can't drift apart.
 
