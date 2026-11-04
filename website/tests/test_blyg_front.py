@@ -81,14 +81,21 @@ def make_corpus():
 
 # ---------------------------------------------------------------- fakes
 
+def err(code, message, **details):
+    out = {'code': code, 'message': message}
+    if details:
+        out['details'] = details
+    return out
+
+
 class FakeStudio:
-    """Enough of Blygger Studio v0.49.1's owner API for the front page."""
+    """Enough of Blygger Studio 0.51's owner API (private contract 5.2.0) for the front page."""
 
     def __init__(self):
         self.items = {}
         self.calls = []
         self.hoppers = []
-        self.hopper_detail = {}
+        self.memberships = {}   # hopper id → [membership rows with `item`], newest first
         self.subs = []
         self.generate_status = 200
         self.seq = 0
@@ -105,52 +112,83 @@ class FakeStudio:
     def writes(self, kind=None):
         return [c for c in self.calls if c[0] != 'GET' and (kind is None or c[1].endswith(kind))]
 
+    @staticmethod
+    def page(rows, query):
+        if 'offset' in query:
+            return 400, err('invalid-input', 'offset paging was removed')
+        start, lim = int(query.get('cursor') or 0), int(query.get('limit', 100))
+        nxt = start + lim
+        return 200, {'items': rows[start:nxt], 'page': {'limit': lim, 'nextCursor': str(nxt) if nxt < len(rows) else None}}
+
+    @staticmethod
+    def conflict(item, body):
+        if body is None or 'expectedRevision' not in body:
+            return 400, err('invalid-input', 'expectedRevision required')
+        if body['expectedRevision'] != item['revision']:
+            return 409, err('revision-conflict', 'stale', itemId=item['id'], expectedRevision=body['expectedRevision'])
+        return None
+
     def route(self, method, path, query, body):
         parts = path.strip('/').split('/')
         if path == '/settings':
-            return 200, {'posts_path': 'posts', 'front_page': ''}
+            assert method == 'GET', 'the front page never changes settings'
+            return 200, {'postsPath': 'posts', 'frontPage': None, 'hopperFeeds': False}
         if path == '/items' and method == 'GET':
-            rows = sorted(self.items.values(), key=lambda i: i['updated'], reverse=True)
-            off, lim = int(query.get('offset', 0)), int(query.get('limit', 100))
-            return 200, {'items': rows[off:off + lim], 'total': len(rows), 'offset': off, 'limit': lim}
+            rows = sorted((i for i in self.items.values() if query.get('status') in (None, i['status'])),
+                          key=lambda i: i['updated'], reverse=True)
+            return self.page(rows, query)
         if path == '/items' and method == 'POST':
+            assert set(body) <= {'kind', 'contentMd', 'mode'}, 'strict schema'
             self.seq += 1
-            item = {'id': rid(self.seq, 'f'), 'kind': 'thread', 'status': 'draft', 'version': 0,
-                    'content_md': body['content_md'], 'dirty': True, 'updated': f'2026-11-02T00:00:{self.seq:02d}Z'}
+            item = {'id': rid(self.seq, 'f'), 'revision': 1, 'kind': 'thread', 'status': 'draft', 'version': 0,
+                    'contentMd': body['contentMd'], 'dirty': True, 'updated': f'2026-11-02T00:00:{self.seq:02d}Z'}
             self.items[item['id']] = item
             return 201, item
         if parts[0] == 'items' and len(parts) == 2:
             item = self.items.get(parts[1])
             if not item:
-                return 404, {'error': 'not found'}
+                return 404, err('not-found', 'not found')
             if method == 'PATCH':
-                item['content_md'] = body['content_md']
+                bad = self.conflict(item, body)
+                if bad:
+                    return bad
+                item['contentMd'] = body['contentMd']
                 item['dirty'] = True
+                item['revision'] += 1
             return 200, item
         if parts[0] == 'items' and parts[2] == 'generate':
-            if self.generate_status != 200:
-                return self.generate_status, {'error': 'daily AI call budget exceeded'}
             item = self.items[parts[1]]
-            md = item['content_md']
+            bad = self.conflict(item, body)
+            if bad:
+                return bad
+            if self.generate_status != 200:
+                return self.generate_status, err('rate-limit', 'daily AI call budget exceeded')
+            md = item['contentMd']
             m = next(x for x in re.finditer(r'\[TK\](.*?)\[/TK\]', md, re.S) if not x.group(1).startswith('impyrt'))
             text = 'A generated blurb about the note.'
-            item['content_md'] = md[:m.start()] + f'[TK]{m.group(1)}[=]{text}[/TK]' + md[m.end():]
-            return 200, {'text': text, 'model': '@cf/google/gemma-4-26b-a4b-it', 'content_md': item['content_md']}
+            item['contentMd'] = md[:m.start()] + f'[TK]{m.group(1)}[=]{text}[/TK]' + md[m.end():]
+            item['revision'] += 1
+            return 200, {'text': text, 'model': '@cf/google/gemma-4-26b-a4b-it', 'contentMd': item['contentMd'],
+                         'revision': item['revision']}
         if parts[0] == 'items' and parts[2] == 'publish':
             item = self.items[parts[1]]
-            unfilled = [x for x in re.finditer(r'\[TK\](.*?)\[/TK\]', item['content_md'], re.S)
+            assert set(body) <= {'expectedRevision', 'note', 'noteGenerated', 'changeCategory'}, 'strict schema'
+            bad = self.conflict(item, body)
+            if bad:
+                return bad
+            unfilled = [x for x in re.finditer(r'\[TK\](.*?)\[/TK\]', item['contentMd'], re.S)
                         if '[=]' not in x.group(1) and not x.group(1).startswith('impyrt')]
             if unfilled:
-                return 400, {'error': 'one or more TK scopes are not publish-ready'}
-            item.update(status='public', dirty=False, version=item['version'] + 1)
-            return 200, {'ok': True, 'version': item['version']}
+                return 400, err('invalid-input', 'one or more TK scopes are not publish-ready')
+            item.update(status='public', dirty=False, version=item['version'] + 1, revision=item['revision'] + 1)
+            return 200, {'ok': True, 'version': item['version'], 'revision': item['revision']}
         if path == '/hoppers':
-            return 200, {'items': self.hoppers, 'total': len(self.hoppers), 'offset': 0, 'limit': 100}
-        if parts[0] == 'hoppers' and len(parts) == 2:
-            return 200, self.hopper_detail
+            return self.page(self.hoppers, query)
+        if parts[0] == 'hoppers' and len(parts) == 3 and parts[2] == 'memberships':
+            return self.page(self.memberships.get(parts[1], []), query)
         if path == '/subscriptions':
-            return 200, {'items': self.subs, 'total': len(self.subs), 'offset': 0, 'limit': 100}
-        return 404, {'error': f'no route {method} {path}'}
+            return self.page(self.subs, query)
+        return 404, err('not-found', f'no route {method} {path}')
 
 
 class FakeAI:
@@ -285,7 +323,7 @@ class SelectionTest(unittest.TestCase):
         self.assertEqual(r['chosen_by'], 'fallback')
         self.assertIn('using the deterministic order', r['log'])
         self.assertTrue(r['published'])
-        md = next(iter(studio.items.values()))['content_md']
+        md = next(iter(studio.items.values()))['contentMd']
         self.assertIn(F.DYK_FALLBACK_HEADING, md)
         self.assertIn(self.c.item_id(self.cands[0].path), md.split(F.DYK_FALLBACK_HEADING)[0])
 
@@ -311,7 +349,7 @@ class PageTest(unittest.TestCase):
         self.assertEqual((r['chosen_by'], r['blurb'], r['ai_calls']), ('ai', 'tk', 1))
         self.assertEqual(len(studio.writes('/generate')), 1)
         self.assertFalse([c for c in studio.calls if c[1] == '/settings' and c[0] != 'GET'], 'must not set front_page')
-        md = next(iter(studio.items.values()))['content_md']
+        md = next(iter(studio.items.values()))['contentMd']
         for m in tk_scopes(md):
             self.assertNotRegex(m.group(0)[4:-5].split('[=]')[-1], r'\[\[', 'a link inside generated text')
         dyk = md.split(F.DYK_HEADING)[1].split(F.MEMBERS_HEADING)[0]
@@ -332,7 +370,7 @@ class PageTest(unittest.TestCase):
         r = run(self.c, studio, FakeAI(selection=good_selection), {'days': {}}, create=True)
         self.assertEqual(r['blurb'], 'impyrt')
         self.assertEqual(r['ai_calls'], 2)
-        md = next(iter(studio.items.values()))['content_md']
+        md = next(iter(studio.items.values()))['contentMd']
         self.assertIn('[TK]impyrt @cf/google/gemma-4-26b-a4b-it=A blurb.', md)
         self.assertTrue(r['published'])
 
@@ -340,7 +378,7 @@ class PageTest(unittest.TestCase):
         studio.generate_status = 502
         r = run(self.c, studio, FakeAI(selection=good_selection, blurb='Too short.'), {'days': {}}, create=True)
         self.assertEqual(r['blurb'], 'excerpt')
-        md = next(iter(studio.items.values()))['content_md']
+        md = next(iter(studio.items.values()))['contentMd']
         featured = md.split(F.FEATURED_HEADING)[1].split(F.DYK_HEADING)[0]
         self.assertNotIn('[TK]', featured)
         self.assertIn('*From the note itself', featured)
@@ -365,23 +403,59 @@ class PageTest(unittest.TestCase):
         studio, history = FakeStudio(), {'days': {}}
         run(self.c, studio, FakeAI(selection=good_selection), history, create=True)
         front_id = next(iter(studio.items))
-        before = F.featured_block_of(studio.items[front_id]['content_md'])
+        before = F.featured_block_of(studio.items[front_id]['contentMd'])
         studio.hoppers = [{'id': 'h1', 'slug': 'members', 'public': True}]
         studio.subs = [{'id': 's1', 'origin': 'https://venkateshrao.com/blyg/', 'title': 'Venkat'}]
-        studio.hopper_detail = {
-            'memberships': [{'subscription_id': 's1', 'remote_id': rid(1, 'r')}],
-            'items': [{'subscription_id': 's1', 'remote_id': rid(1, 'r'), 'kind': 'thread', 'state': 'current',
-                       'content_md': '# Machines [and] men\n\nBody', 'author_json': '{"name": "Venkatesh Rao"}',
-                       'page': None}]}
+        studio.memberships = {'h1': [
+            {'hopperId': 'h1', 'subscriptionId': 's1', 'remoteId': rid(1, 'r'), 'addedAt': '2026-11-02T00:00:00Z',
+             'item': {'subscriptionId': 's1', 'remoteId': rid(1, 'r'), 'kind': 'thread', 'state': 'current',
+                      'contentMd': '# Machines [and] men\n\nBody', 'author': {'name': 'Venkatesh Rao'},
+                      'page': None, 'l0': False}},
+            {'hopperId': 'h1', 'subscriptionId': 's1', 'remoteId': rid(2, 'r'), 'addedAt': '2026-11-01T00:00:00Z',
+             'item': None}]}
         studio.calls.clear()
         r = run(self.c, studio, None, history, front_id=front_id, members_only=True)
         self.assertTrue(r['published'])
         self.assertEqual(len(studio.writes('/publish')), 1)
-        self.assertEqual(studio.writes('/publish')[0][2]['change_category'], 'minor')
+        self.assertEqual(studio.writes('/publish')[0][2]['changeCategory'], 'minor')
+        self.assertIsInstance(studio.writes('/publish')[0][2]['expectedRevision'], int)
         self.assertEqual(studio.writes('/generate'), [])
-        md = studio.items[front_id]['content_md']
+        md = studio.items[front_id]['contentMd']
         self.assertEqual(F.featured_block_of(md), before)
         self.assertIn(f'- [Machines and men](https://venkateshrao.com/blyg/t/{rid(1, "r")}/) — Venkatesh Rao', md)
+
+    def test_concurrent_edit_rereads_revision_and_retries(self):
+        studio, history = FakeStudio(), {'days': {}}
+        run(self.c, studio, FakeAI(selection=good_selection), history, create=True)
+        front_id = next(iter(studio.items))
+        route = studio.route
+        bumped = []
+
+        def edit_first(method, path, query, body):
+            if method == 'PATCH' and not bumped:  # the owner saves in Studio between our read and our write
+                bumped.append(1)
+                studio.items[front_id]['revision'] += 1
+            return route(method, path, query, body)
+
+        studio.route = edit_first
+        studio.calls.clear()
+        r = run(self.c, studio, FakeAI(selection=good_selection), history, front_id=front_id,
+                now=datetime(2026, 11, 3, 6, 30, tzinfo=timezone.utc))
+        self.assertTrue(r['published'])
+        patches = studio.writes()[:2]
+        self.assertEqual([c[0] for c in patches], ['PATCH', 'PATCH'])
+        self.assertEqual(patches[1][2]['expectedRevision'], patches[0][2]['expectedRevision'] + 1)
+        self.assertIn('re-reading and retrying once', r['log'])
+
+    def test_own_member_post_read_from_items(self):
+        studio = FakeStudio()
+        studio.items['o' * 26] = {'id': 'o' * 26, 'revision': 2, 'kind': 'fragment', 'status': 'public',
+                                  'updated': '2026-11-01T00:00:00Z', 'contentMd': 'An own note\n\nbody'}
+        studio.hoppers = [{'id': 'h1', 'slug': 'members', 'public': True}]
+        studio.memberships = {'h1': [{'hopperId': 'h1', 'subscriptionId': '~own', 'remoteId': 'o' * 26,
+                                      'addedAt': '2026-11-01T00:00:00Z', 'item': None}]}
+        posts = F.member_posts(F.BlygApi(API, 'tok', transport=studio.transport, write_interval=0), SITE, 'members')
+        self.assertEqual(posts, [{'title': 'An own note', 'author': '', 'url': f'{SITE}f/{"o" * 26}/'}])
 
     def test_next_day_chooses_again_and_excludes_yesterday(self):
         studio, history = FakeStudio(), {'days': {}}
@@ -402,17 +476,16 @@ class PageTest(unittest.TestCase):
         self.assertIn('https://worldmachines.org/hoppers', md)
         studio = FakeStudio()
         studio.hoppers = [{'id': 'h1', 'slug': 'members', 'public': True}]
-        studio.hopper_detail = {'memberships': [], 'items': []}
         r = run(self.c, studio, None, {'days': {}}, create=True)
         self.assertTrue(r['published'])
-        self.assertIn('Nothing from member blygs yet', next(iter(studio.items.values()))['content_md'])
+        self.assertIn('Nothing from member blygs yet', next(iter(studio.items.values()))['contentMd'])
 
     def test_latest_digest_linked(self):
         studio = FakeStudio()
-        studio.items['d' * 26] = {'id': 'd' * 26, 'status': 'public', 'updated': '2026-11-02T06:00:00Z',
-                                  'content_md': '# World Machines digest — 2026-11-02 (morning)\n\n…'}
+        studio.items['d' * 26] = {'id': 'd' * 26, 'revision': 3, 'status': 'public', 'updated': '2026-11-02T06:00:00Z',
+                                  'contentMd': '# World Machines digest — 2026-11-02 (morning)\n\n…'}
         run(self.c, studio, None, {'days': {}}, create=True)
-        md = [i for i in studio.items.values() if i['id'] != 'd' * 26][0]['content_md']
+        md = [i for i in studio.items.values() if i['id'] != 'd' * 26][0]['contentMd']
         self.assertIn(f'Latest digest: [[{"d" * 26} | World Machines digest — 2026-11-02 (morning)]]', md)
 
     def test_dry_run_writes_nothing(self):
@@ -425,8 +498,8 @@ class PageTest(unittest.TestCase):
     def test_unresolvable_link_is_unlinked_and_retried(self):
         content = 'See [[aaaaaaaaaaaaaaaaaaaaaaaaaa | A note]] and [[bbbbbbbbbbbbbbbbbbbbbbbbbb | B]].'
         err = F.BlygError(400, 'POST', '/items/x/publish', {
-            'error': 'one or more references do not resolve',
-            'errors': [{'directive': '[[aaaaaaaaaaaaaaaaaaaaaaaaaa | A note]]', 'reason': 'item is withdrawn'}]})
+            'code': 'invalid-input', 'message': 'one or more references do not resolve',
+            'details': {'errors': [{'directive': '[[aaaaaaaaaaaaaaaaaaaaaaaaaa | A note]]', 'reason': 'item is withdrawn'}]}})
         ids = F.unresolved_link_ids(err)
         self.assertEqual(ids, {'a' * 26})
         self.assertEqual(F.unlink(content, ids), 'See A note and [[bbbbbbbbbbbbbbbbbbbbbbbbbb | B]].')

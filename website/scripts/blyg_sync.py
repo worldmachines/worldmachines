@@ -3,17 +3,33 @@
 Collect member hopper posts into the World Machines blyg and publish a digest.
 
 Members propose their WM-related blyg hoppers at worldmachines.org/hoppers;
-approved ones are listed by GET https://worldmachines.org/api/hoppers. A remote
-hopper has no feed (it is an HTML page), so this script:
+approved ones are listed by GET https://worldmachines.org/api/hoppers. This
+script:
 
-  1. reads each approved hopper's public page and picks out its items'
-     permalinks ({blyg base}t/{id}/ or f/{id}/);
+  1. finds out which items each approved hopper holds, one of two ways, and
+     logs which one it used per hopper:
+       * hopper feed (Studio 0.50+, spec 0.4 §16.12): when the member's
+         manifest ({base}blyg.json) lists the hopper with a feed, the WM blyg
+         keeps a *hopper subscription* to it (POST /subscriptions with the
+         hopper page URL; proposal kind "hopper", then confirm). Its entries
+         are L0 rows (an excerpt and a link to the member's item page), and
+         the links are the wanted items. Needs Settings → Network → hopper
+         feeds on the WM node too: with it off the WM node resolves the
+         hopper page as the whole blyg, and this script says so and falls
+         back;
+       * page scrape (fallback): the hopper's public HTML page, its items'
+         permalinks ({blyg base}t/{id}/ or f/{id}/). Used when the member's
+         node does not offer the hopper as a feed (Studio before 0.50, or
+         hopper feeds off there), when the WM node will not subscribe to it,
+         and on the run that creates the hopper subscription (its entries
+         arrive with the backfill);
   2. makes the WM blyg subscribe to every blyg those items live on (the whole
-     blyg; the hopper page decides which of its posts we keep);
+     blyg). Hopper-feed entries are excerpts that can never be a [TK] source,
+     a quote or a [[link]], so filing and the digest use the whole-blyg copy;
   3. matches each wanted item to the WM blyg's imported copy
      (GET /reading/imported) — items not imported yet wait for the next run;
   3a. puts every approved hopper's own blyg (its `base`) in the WM blyg's
-     public blogroll (in_blogroll: true). Only those: a blyg merely linked
+     public blogroll (inBlogroll: true). Only those: a blyg merely linked
      from inside a hopper is subscribed but not blogrolled. Nothing is ever
      removed from the blogroll here;
   4. files the matched items into the WM hopper (default slug `members`). This
@@ -22,7 +38,8 @@ hopper has no feed (it is an HTML page), so this script:
      model (Gemma on Workers AI) generate each scope, and publishes it.
 
 Stateless: the WM hopper's membership is the watermark. A run that finds
-nothing new files nothing and posts nothing. When generation fails (the shared
+nothing new files nothing and posts nothing; an item that leaves a member's
+hopper is never unfiled here. When generation fails (the shared
 AI budget is 20 calls a day), the digest stays a draft and the next run finds
 it by its title, files anything it names that is not filed yet, and retries the
 missing scopes instead of starting a duplicate.
@@ -32,14 +49,20 @@ Usage (from website/):
   python scripts/blyg_sync.py                    # sync, file, digest
   python scripts/blyg_sync.py --no-digest        # sync and file only
   python scripts/blyg_sync.py --blogroll-only    # read /api/hoppers, subscribe to each
-                                                 # approved hopper's blyg, blogroll it; no
-                                                 # page scraping, filing or digest
+                                                 # approved hopper's blyg and hopper feed,
+                                                 # blogroll the blyg; no page scraping,
+                                                 # filing or digest
+
+Speaks Blygger Studio's private API contract 5.2.0 (Studio 0.51): camelCase
+fields, opaque cursor pages, item commands conditional on `expectedRevision`
+(a 409 revision-conflict re-reads the item once and retries), errors as
+{code, message, details}.
 
 Environment:
   BLYG_TOKEN        Studio REST token (Studio → More → Client access → REST API)
                     with scopes owner:read owner:manage owner:draft owner:publish.
                     Expires after at most 30 days.
-  BLYG_API_BASE     default https://blyg.worldmachines.org/api
+  BLYG_API_BASE     default https://blyg.worldmachines.org/api ({mount}/api)
   BLYG_SITE         the WM blyg's public base; default: BLYG_API_BASE minus /api
   BLYG_HOPPER_SLUG  default members
   BLYG_HOPPER_NAME  default "From World Machines members"
@@ -76,6 +99,11 @@ WRITE_INTERVAL = 1.1  # delegated tokens share 60 writes/min across grants
 ID_CHARS = '0123456789abcdefghjkmnpqrstvwxyz'
 ID_RE = f'[{ID_CHARS}]{{26}}'
 PERMALINK = re.compile(rf'^(https?://[^?#]*?/)(t|f)/({ID_RE})/?$')
+ITEM_DOC = re.compile(rf'^(https?://[^?#]*?/)items/({ID_RE})\.json$')
+
+HOPPER_FEEDS_OFF = ('the WM node will not subscribe to hopper feeds: turn on Settings → Network → hopper feeds '
+                    'on the WM node (it gates subscribing as well as publishing on Studio 0.51). '
+                    'Falling back to reading the hopper page.')
 
 
 def log(msg=''):
@@ -84,18 +112,41 @@ def log(msg=''):
 
 # ---------------------------------------------------------------- errors
 
+def error_text(body):
+    """The readable part of a private-API error body ({code, message, details?})."""
+    if isinstance(body, dict):
+        message = body.get('message') or body.get('error')
+        code = body.get('code')
+        if code and message:
+            return f'{code}: {message}'
+        return message or code or json.dumps(body)[:300]
+    return body
+
+
 class BlygError(Exception):
     def __init__(self, status, method, path, body):
         self.status, self.method, self.path, self.body = status, method, path, body
-        detail = body.get('error') if isinstance(body, dict) else body
-        super().__init__(f'{method} {path} → HTTP {status}: {detail}')
+        super().__init__(f'{method} {path} → HTTP {status}: {error_text(body)}')
+
+    @property
+    def code(self):
+        return self.body.get('code') if isinstance(self.body, dict) else None
+
+    @property
+    def message(self):
+        return (self.body.get('message') or '') if isinstance(self.body, dict) else str(self.body or '')
+
+    @property
+    def details(self):
+        d = self.body.get('details') if isinstance(self.body, dict) else None
+        return d if isinstance(d, dict) else {}
 
 
 class AuthError(BlygError):
     studio = 'https://blyg.worldmachines.org/studio'
 
     def __str__(self):
-        detail = self.body.get('error') if isinstance(self.body, dict) else self.body
+        detail = error_text(self.body)
         return (
             f'\n{"=" * 72}\n'
             f'BLYG_TOKEN was refused: {self.method} {self.path} → HTTP {self.status} ({detail}).\n'
@@ -136,9 +187,10 @@ def fetch_text(url, transport=urllib_transport):
 class BlygApi:
     """Every call to the Studio owner API goes through request().
 
-    The API base is configuration (BLYG_API_BASE) because blygger-studio #97
-    moves it under the mount; when #98 lands (observed revisions on
-    mutations), request() is the one place to add the header.
+    Contract 5.2.0 (Studio 0.51). The base is `{mount}/api` (BLYG_API_BASE).
+    Collections are cursor-paged (`paged`); item commands carry the item's
+    `revision` as `expectedRevision` (`item_command`), which this class
+    remembers from every item it reads, creates or changes.
     """
 
     def __init__(self, base, token, transport=urllib_transport, dry_run=False,
@@ -150,6 +202,7 @@ class BlygApi:
         self.write_interval = write_interval
         self.sleep = sleep
         self._last_write = 0.0
+        self._revisions = {}  # item id → last revision seen
 
     def request(self, method, path, body=None, query=None, ok=(200, 201), retry_429=True):
         """JSON request. Returns (status, json). Raises AuthError / BlygError."""
@@ -157,7 +210,9 @@ class BlygApi:
             raise RuntimeError(f'dry run: refusing to send {method} {path}')
         url = self.base + path
         if query:
-            url += '?' + urllib.parse.urlencode({k: v for k, v in query.items() if v is not None})
+            query = {k: v for k, v in query.items() if v is not None}
+        if query:
+            url += '?' + urllib.parse.urlencode(query)
         headers = {
             'Authorization': f'Bearer {self.token}',
             'Accept': 'application/json',
@@ -177,7 +232,7 @@ class BlygApi:
             try:
                 payload = json.loads(raw.decode() or 'null') if raw else None
             except ValueError:
-                payload = {'error': raw[:300].decode(errors='replace')}
+                payload = {'code': 'internal', 'message': raw[:300].decode(errors='replace')}
             if status in (401, 403):
                 err = AuthError(status, method, path, payload)
                 err.studio = site_from_api_base(self.base) + 'studio'
@@ -195,47 +250,84 @@ class BlygApi:
     def get(self, path, **query):
         return self.request('GET', path, query=query or None)[1]
 
-    # -- reads
-    def subscriptions(self):
-        return list(self._offset_paged('/subscriptions'))
+    def paged(self, path, limit=100, **filters):
+        """Yield every row of a cursor-paged collection ({items, page: {nextCursor}}).
 
-    def hoppers(self):
-        return list(self._offset_paged('/hoppers'))
-
-    def hopper(self, hopper_id):
-        return self.get(f'/hoppers/{q(hopper_id)}')
-
-    def items(self):
-        return list(self._offset_paged('/items'))
-
-    def imported(self, limit=100):
-        """Yield /reading/imported rows, newest observed first (cursor-paged)."""
-        cursor = None
-        for _ in range(1000):
-            page = self.get('/reading/imported', limit=limit, cursor=cursor)
-            yield from page.get('items') or []
-            cursor = page.get('next')
+        A relevant change on the server expires the cursor (409
+        cursor-expired); the walk then restarts from the first page, skipping
+        rows it has already yielded, at most twice.
+        """
+        seen, cursor, restarts = set(), None, 0
+        for _ in range(10000):
+            try:
+                page = self.get(path, limit=limit, cursor=cursor, **filters)
+            except BlygError as e:
+                if e.status == 409 and e.code == 'cursor-expired' and cursor and restarts < 2:
+                    restarts += 1
+                    log(f'  {path}: the list changed while it was being read; starting it again')
+                    cursor = None
+                    continue
+                raise
+            for row in page.get('items') or []:
+                key = _row_key(row)
+                if key in seen:
+                    continue
+                seen.add(key)
+                yield row
+            cursor = (page.get('page') or {}).get('nextCursor')
             if not cursor:
                 return
 
-    def _offset_paged(self, path, limit=100):
-        offset = 0
-        while True:
-            page = self.get(path, offset=offset, limit=limit)
-            rows = page.get('items') or []
-            yield from rows
-            offset += len(rows)
-            if not rows or offset >= (page.get('total') or 0):
-                return
+    # -- reads
+    def subscriptions(self):
+        return list(self.paged('/subscriptions'))
+
+    def hoppers(self):
+        return list(self.paged('/hoppers'))
+
+    def hopper(self, hopper_id):
+        """{hopper, total, sourceCount}; members come from memberships()."""
+        return self.get(f'/hoppers/{q(hopper_id)}')
+
+    def memberships(self, hopper_id):
+        """Yield hopper memberships, newest added first, each with its held imported `item` (or null)."""
+        return self.paged(f'/hoppers/{q(hopper_id)}/memberships')
+
+    def items(self, status=None):
+        """Yield items, most recently updated first; `status` is draft, public or withdrawn."""
+        return self.paged('/items', status=status)
+
+    def item(self, item_id):
+        item = self.get(f'/items/{q(item_id)}')
+        self._note_revision(item_id, item)
+        return item
+
+    def settings(self):
+        return self.get('/settings')
+
+    def imported(self, limit=100):
+        """Yield /reading/imported rows, newest observed first."""
+        return self.paged('/reading/imported', limit=limit)
+
+    def reading(self, sub=None, limit=50):
+        """Yield the imported entries of /reading (optionally one subscription's), flattened."""
+        for row in self.paged('/reading', limit=limit, sub=sub):
+            entry = row.get('imported') if isinstance(row.get('imported'), dict) else None
+            if entry:
+                yield entry
 
     # -- writes
     def set_in_blogroll(self, sub_id, value=True):
-        return self.request('PATCH', f'/subscriptions/{q(sub_id)}', {'in_blogroll': value})[1]
+        return self.request('PATCH', f'/subscriptions/{q(sub_id)}', {'inBlogroll': value})[1]
 
-    def subscribe(self, url):
-        """(status, body). 201 created; 200 proposal needing owner confirmation; 409 already subscribed."""
-        return self.request('POST', '/subscriptions', {'url': url, 'confirm': True, 'backfill': True},
-                            ok=(200, 201, 409, 422))
+    def subscribe(self, url, confirm=True, backfill=True, whole_blyg=None):
+        """(status, body). 201 created; 200 a proposal (always without confirm); 409 already subscribed."""
+        body = {'url': url, 'confirm': confirm}
+        if confirm:
+            body['backfill'] = backfill
+        if whole_blyg is not None:
+            body['wholeBlyg'] = whole_blyg
+        return self.request('POST', '/subscriptions', body, ok=(200, 201, 409, 422))
 
     def poll(self):
         return self.request('POST', '/subscriptions/poll')[1]
@@ -250,18 +342,58 @@ class BlygApi:
         return self.request('PUT', f'/hoppers/{q(hopper_id)}/items/{q(sub_id)}/{q(remote_id)}')[1]
 
     def create_thread(self, content_md):
-        return self.request('POST', '/items', {'kind': 'thread', 'content_md': content_md})[1]
+        item = self.request('POST', '/items', {'kind': 'thread', 'contentMd': content_md})[1]
+        self._note_revision(item.get('id'), item)
+        return item
 
     def patch_item(self, item_id, content_md):
-        return self.request('PATCH', f'/items/{q(item_id)}', {'content_md': content_md})[1]
+        return self.item_command('PATCH', item_id, f'/items/{q(item_id)}', {'contentMd': content_md})
 
     def generate(self, item_id, scope):
         # 429 here is the daily AI budget, not a rate limit: never retry it.
-        return self.request('POST', f'/items/{q(item_id)}/generate', {'scope': scope},
-                            ok=(200,), retry_429=False)[1]
+        return self.item_command('POST', item_id, f'/items/{q(item_id)}/generate', {'scope': scope},
+                                 ok=(200,), retry_429=False)
 
-    def publish(self, item_id):
-        return self.request('POST', f'/items/{q(item_id)}/publish', {})[1]
+    def publish(self, item_id, note=None, change_category=None):
+        body = {}
+        if note is not None:
+            body['note'] = note
+        if change_category is not None:
+            body['changeCategory'] = change_category
+        return self.item_command('POST', item_id, f'/items/{q(item_id)}/publish', body)
+
+    def item_command(self, method, item_id, path, body, **kw):
+        """An item write with `expectedRevision`. A stale revision (409
+        revision-conflict: the item changed since we read it) re-reads the item
+        once and retries; a second conflict raises."""
+        for attempt in (0, 1):
+            rev = self._revisions.get(item_id)
+            if rev is None:
+                rev = self.item(item_id).get('revision')
+            try:
+                _, out = self.request(method, path, dict(body, expectedRevision=rev), **kw)
+            except BlygError as e:
+                if attempt == 0 and e.status == 409 and e.code == 'revision-conflict':
+                    log(f'  {method} {path}: item {item_id} changed since revision {rev}; re-reading and retrying once')
+                    self._revisions.pop(item_id, None)
+                    continue
+                raise
+            self._note_revision(item_id, out)
+            return out
+
+    def _note_revision(self, item_id, payload):
+        if item_id and isinstance(payload, dict) and isinstance(payload.get('revision'), int):
+            self._revisions[item_id] = payload['revision']
+
+
+def _row_key(row):
+    if not isinstance(row, dict):
+        return json.dumps(row, sort_keys=True)
+    if row.get('key'):
+        return ('key', row['key'])
+    if row.get('remoteId') is not None:
+        return ('imported', row.get('hopperId'), row.get('subscriptionId'), row['remoteId'])
+    return ('id', row.get('id'))
 
 
 def q(segment):
@@ -294,6 +426,29 @@ def parse_permalink(url):
     if not m:
         return None
     return norm_base(m.group(1)), m.group(2), m.group(3)
+
+
+def parse_item_link(url):
+    """(base, kind, id) for a hopper-feed entry's link, else None.
+
+    A hopper feed links each entry to the item's declared `page` (Studio:
+    {base}t/{id}/ or f/{id}/), else to its item document {base}items/{id}.json,
+    whose kind is unknown (None).
+    """
+    if not url:
+        return None
+    hit = parse_permalink(url)
+    if hit:
+        return hit
+    p = urllib.parse.urlsplit(url)
+    m = ITEM_DOC.match(urllib.parse.urlunsplit((p.scheme, p.netloc, p.path, '', '')))
+    if not m:
+        return None
+    return norm_base(m.group(1)), None, m.group(2)
+
+
+def item_ref(base, kind, item_id):
+    return f'{base}{kind}/{item_id}/' if kind else f'{base}items/{item_id}.json'
 
 
 def site_from_api_base(api_base):
@@ -544,7 +699,10 @@ class Sync:
         self.now = now or datetime.now(timezone.utc)
         self.plan = []  # what a dry run would have done
         self._imported = None
-        self._subs = None  # {normalized origin: subscription} after ensure_subscriptions
+        self._all_subs = None  # every subscription, hopper subscriptions included
+        self._subs = None  # {normalized origin: whole-blyg subscription} after ensure_subscriptions
+        self._hopper_feeds_setting = None
+        self._warned_setting = False
 
     def act(self, description):
         """True when the action should happen; in a dry run, record it instead."""
@@ -555,7 +713,7 @@ class Sync:
         log(f'  {description}')
         return True
 
-    # 1–2: wanted items from the member hoppers
+    # 1: the member hoppers
     def approved_hoppers(self):
         log(f'Reading approved hoppers from {self.hoppers_url}')
         hoppers = parse_wm_hoppers(json.loads(self.fetch(self.hoppers_url)))
@@ -566,27 +724,194 @@ class Sync:
         """The approved hoppers' own blygs, minus ours."""
         return {h['base'] for h in hoppers} - {self.site}
 
-    def wanted_items(self, hoppers):
+    def all_subscriptions(self):
+        if self._all_subs is None:
+            self._all_subs = self.api.subscriptions()
+        return self._all_subs
+
+    def whole_blyg_subscriptions(self):
+        """{normalized origin: subscription}, hopper subscriptions excluded: one shares its blyg's origin."""
+        return {norm_base(s['origin']): s for s in self.all_subscriptions() if not s.get('hopperFeedUrl')}
+
+    def hopper_subscriptions(self):
+        return {s['hopperFeedUrl']: s for s in self.all_subscriptions() if s.get('hopperFeedUrl')}
+
+    # 1a: hopper feeds
+    def offered_feed(self, h):
+        """(feed URL, None) when the member's manifest lists this hopper with a feed, else (None, why)."""
+        manifest_url = h['base'] + 'blyg.json'
+        try:
+            manifest = json.loads(self.fetch(manifest_url))
+        except Exception as e:  # unreadable or not JSON: the page is still there to scrape
+            return None, f'could not read {manifest_url} ({e})'
+        entries = manifest.get('hoppers') if isinstance(manifest, dict) else None
+        for entry in entries if isinstance(entries, list) else []:
+            if not isinstance(entry, dict) or not isinstance(entry.get('page'), str):
+                continue
+            if norm_base(urllib.parse.urljoin(h['base'], entry['page'])) != norm_base(h['canonical']):
+                continue
+            if isinstance(entry.get('feed'), str) and entry['feed']:
+                return urllib.parse.urljoin(h['base'], entry['feed']), None
+            return None, 'its blyg lists the hopper without a feed'
+        return None, ("its blyg does not offer it as a feed (Studio before 0.50, or Settings → Network → "
+                      "hopper feeds off on that blyg)")
+
+    def wm_hopper_feeds(self):
+        """The WM node's own hopperFeeds setting: True, False, or None when unreadable."""
+        if self._hopper_feeds_setting is None:
+            try:
+                value = (self.api.settings() or {}).get('hopperFeeds')
+            except BlygError as e:
+                if isinstance(e, AuthError):
+                    raise
+                log(f'  ! could not read the WM settings: {e}')
+                return None
+            self._hopper_feeds_setting = value if isinstance(value, bool) else None
+        return self._hopper_feeds_setting
+
+    def warn_setting_off(self):
+        if not self._warned_setting:
+            self._warned_setting = True
+            log(f'  ! {HOPPER_FEEDS_OFF}')
+
+    def _find_hopper_sub(self, feed):
+        self._all_subs = None  # re-read: it was just created, or someone else created it
+        return self.hopper_subscriptions().get(feed)
+
+    def ensure_hopper_subscriptions(self, hoppers):
+        """{hopper canonical: route}. A route is {'path': 'feed', 'sub': …} when the
+        hopper's items can be read from a hopper subscription now, else
+        {'path': 'scrape', 'why': …}. Creates the hopper subscription when it
+        is missing and the member's node offers one."""
+        routes = {}
+        have = self.hopper_subscriptions()
+        for h in hoppers:
+            c = h['canonical']
+            if h['base'] == self.site:
+                routes[c] = {'path': 'scrape', 'why': 'a hopper on this blyg'}
+                continue
+            feed, why = self.offered_feed(h)
+            if not feed:
+                routes[c] = {'path': 'scrape', 'why': why}
+                continue
+            sub = have.get(feed)
+            if not sub:
+                sub, why = self._subscribe_hopper(h, feed)
+                if not sub:
+                    routes[c] = {'path': 'scrape', 'why': why}
+                    continue
+                have[feed] = sub
+                if sub.get('_new'):
+                    routes[c] = {'path': 'scrape', 'sub': sub,
+                                 'why': 'hopper subscription just created; its entries arrive with the backfill'}
+                    continue
+            if sub.get('status') == 'paused':
+                flags = ', '.join(f.get('type', '?') for f in sub.get('flags') or [] if isinstance(f, dict))
+                routes[c] = {'path': 'scrape', 'sub': sub,
+                             'why': f"hopper subscription {sub.get('id')} is paused{f' ({flags})' if flags else ''}"}
+            elif not sub.get('lastPollAt'):
+                routes[c] = {'path': 'scrape', 'sub': sub,
+                             'why': f"hopper subscription {sub.get('id')} has not been polled yet"}
+            else:
+                routes[c] = {'path': 'feed', 'sub': sub}
+        return routes
+
+    def _subscribe_hopper(self, h, feed):
+        """(subscription, None) or (None, why). Asks for the proposal first, so
+        a WM node that would subscribe to the whole blyg instead is caught
+        before anything is created. The WM node's own hopperFeeds setting is
+        read first (owner:read), so a node with it off is not sent a proposal
+        every run; the proposal's kind is still checked in case it is on but
+        the node resolves the page differently."""
+        c = h['canonical']
+        if self.wm_hopper_feeds() is False:
+            self.warn_setting_off()
+            return None, 'hopper feeds are off on the WM node'
+        if self.dry_run:
+            self.act(f'subscribe to the hopper feed {feed} ({c})')
+            return None, 'dry run: the hopper subscription is not created'
+        log(f'  hopper {c} is offered as a feed ({feed}); asking the WM node for a hopper subscription')
+        status, body = self.api.subscribe(c, confirm=False)
+        if status == 409:
+            sub = self._find_hopper_sub(feed)
+            if sub:
+                log(f"    already subscribed: {sub.get('title')} ({sub.get('id')})")
+                return sub, None
+            return None, f'the WM node says already subscribed ({error_text(body)}), but no hopper subscription has that feed'
+        if status != 200:
+            return None, f'could not resolve the hopper page ({status}: {error_text(body)})'
+        if body.get('kind') != 'hopper':
+            if self.wm_hopper_feeds() is False:
+                self.warn_setting_off()
+                return None, 'hopper feeds are off on the WM node'
+            log(f"  ! the WM node resolved {c} as {body.get('kind')} ({body.get('title')}), not as a hopper: "
+                'check Settings → Network → hopper feeds on the WM node. Reading the page instead.')
+            return None, f"the WM node resolved the hopper page as {body.get('kind')}, not as a hopper"
+        offered = (body.get('hopper') or {}).get('feedUrl') or body.get('feedUrl')
+        if offered and offered != feed:
+            log(f'    note: the WM node resolved the feed as {offered} (the manifest says {feed})')
+        if not self.act(f"subscribe to the hopper {body.get('title')} ({offered or feed})"):
+            return None, 'not subscribed'
+        status, body = self.api.subscribe(c, confirm=True)
+        if status == 201:
+            log(f"    subscribed: {body.get('title')} ({body.get('id')}), feed {body.get('hopperFeedUrl')}")
+            sub = dict(body, _new=True)
+            self.all_subscriptions().append(body)
+            return sub, None
+        if status == 409:
+            sub = self._find_hopper_sub(offered or feed)
+            if sub:
+                return sub, None
+        return None, f'could not subscribe to the hopper ({status}: {error_text(body)})'
+
+    def hopper_feed_items(self, sub):
+        """(base, kind, id) for each entry of a hopper subscription, newest first."""
+        found = []
+        for entry in self.api.reading(sub=sub['id']):
+            if entry.get('subscriptionId') not in (None, sub['id']):
+                continue
+            hit = parse_item_link(entry.get('sourceUrl'))
+            if hit:
+                found.append(hit)
+            else:
+                log(f"    entry {entry.get('remoteId')} links to {entry.get('sourceUrl')!r}, not a blyg item; skipped")
+        return found
+
+    def wanted_items(self, hoppers, routes=None):
+        routes = routes or {}
         wanted, seen = [], set()
         for h in hoppers:
-            try:
-                page = self.fetch(h['canonical'])
-            except Exception as e:  # one unreachable blyg must not stop the others
-                log(f"  ! could not read {h['canonical']}: {e}")
-                continue
-            items = extract_items(page, h['canonical'])
-            log(f"  {h['canonical']}: {len(items)} item(s)")
+            route = routes.get(h['canonical']) or {'path': 'scrape', 'why': 'no hopper feed checked'}
+            if route['path'] == 'feed':
+                sub = route['sub']
+                try:
+                    items = self.hopper_feed_items(sub)
+                except BlygError as e:
+                    if isinstance(e, AuthError):
+                        raise
+                    log(f"  ! could not read hopper subscription {sub.get('id')}: {e}")
+                    continue
+                log(f"  {h['canonical']}: {len(items)} item(s) [hopper feed {sub.get('hopperFeedUrl')}]")
+            else:
+                try:
+                    page = self.fetch(h['canonical'])
+                except Exception as e:  # one unreachable blyg must not stop the others
+                    log(f"  ! could not read {h['canonical']}: {e}")
+                    continue
+                items = extract_items(page, h['canonical'])
+                log(f"  {h['canonical']}: {len(items)} item(s) [page scrape: {route.get('why')}]")
             for base, kind, item_id in items:
                 if base == self.site:
                     continue  # already ours
                 if (base, item_id) not in seen:
                     seen.add((base, item_id))
-                    wanted.append({'base': base, 'kind': kind, 'id': item_id, 'hopper': h['canonical']})
+                    wanted.append({'base': base, 'kind': kind, 'id': item_id, 'hopper': h['canonical'],
+                                   'via': route['path']})
         return wanted
 
-    # 3: subscriptions
+    # 2: whole-blyg subscriptions
     def ensure_subscriptions(self, bases, poll=True):
-        subs = {norm_base(s['origin']): s for s in self.api.subscriptions()}
+        subs = self.whole_blyg_subscriptions()
         self._subs = subs
         have = set(subs)
         new = 0
@@ -595,9 +920,11 @@ class Sync:
                 continue
             if not self.act(f'subscribe to {base}'):
                 continue
+            # The base, never a hopper page: a hopper URL could resolve to a hopper subscription.
             status, body = self.api.subscribe(base)
             if status == 201:
                 log(f"    subscribed: {body.get('title')} ({body.get('id')})")
+                self.all_subscriptions().append(body)
                 subs[base] = body
                 if body.get('origin'):
                     subs.setdefault(norm_base(body['origin']), body)
@@ -605,9 +932,9 @@ class Sync:
             elif status == 200:
                 log(f'    the blyg proposed a subscription but did not create it; confirm it in Studio: {body}')
             elif status == 409:
-                log(f"    already subscribed ({body.get('error')})")
+                log(f'    already subscribed ({error_text(body)})')
             else:
-                log(f"    ! could not subscribe ({status}): {body.get('error') if isinstance(body, dict) else body}")
+                log(f'    ! could not subscribe ({status}): {error_text(body)}')
         if new and poll and self.act('force a poll of all subscriptions'):
             log(f"    polling {self.api.poll().get('polling')} subscription(s); waiting {self.poll_wait}s")
             self.sleep(self.poll_wait)
@@ -615,15 +942,14 @@ class Sync:
 
     # 3a: blogroll
     def ensure_blogroll(self, bases):
-        """Set in_blogroll on the subscription for each base. Never clears it.
+        """Set inBlogroll on the whole-blyg subscription for each base. Never clears it.
 
         `bases` are the approved hoppers' own blygs. Runs after
         ensure_subscriptions, whose subscription list (plus anything it just
         created) is what we match against. Returns the bases added (or, in a
         dry run, that would be added).
         """
-        subs = self._subs if self._subs is not None else {
-            norm_base(s['origin']): s for s in self.api.subscriptions()}
+        subs = self._subs if self._subs is not None else self.whole_blyg_subscriptions()
         added = []
         for base in sorted(bases):
             sub = subs.get(base)
@@ -635,14 +961,14 @@ class Sync:
                     log(f'  ! {base} has no subscription with that origin, so it cannot be blogrolled '
                         '(subscribed under another origin, or subscribing failed). Check Studio → Reading.')
                 continue
-            if sub.get('in_blogroll'):
+            if sub.get('inBlogroll'):
                 log(f'  already in the blogroll: {base}')
                 continue
             if sub.get('status') == 'paused':
                 log(f'  note: {base} is paused; the public blogroll omits paused subscriptions')
             if self.act(f"add {base} to the blogroll (subscription {sub.get('id')})"):
                 updated = self.api.set_in_blogroll(sub['id'], True)
-                sub['in_blogroll'] = bool((updated or {}).get('in_blogroll', True))
+                sub['inBlogroll'] = bool((updated or {}).get('inBlogroll', True))
             added.append(base)
         return added
 
@@ -661,9 +987,10 @@ class Sync:
         return index
 
     def match(self, wanted, index):
+        hopper_subs = {s['id'] for s in self.all_subscriptions() if s.get('hopperFeedUrl')}
         matched, missing = [], []
         for w in wanted:
-            rows = index.get(w['id']) or []
+            rows = [r for r in index.get(w['id']) or [] if r.get('subscriptionId') not in hopper_subs and not r.get('l0')]
             same = [r for r in rows if norm_base(r.get('origin') or '') == w['base']]
             pick = same or (rows if len(rows) == 1 else [])
             if pick:
@@ -694,8 +1021,7 @@ class Sync:
     def membership(self, hopper):
         if not hopper:
             return set()
-        detail = self.api.hopper(hopper['id'])
-        return {(m['subscription_id'], m['remote_id']) for m in detail.get('memberships') or []}
+        return {(m['subscriptionId'], m['remoteId']) for m in self.api.memberships(hopper['id'])}
 
     def file(self, hopper, rows, members):
         filed = []
@@ -711,12 +1037,12 @@ class Sync:
 
     # 6: digest
     def unfinished_digest(self):
-        drafts = [i for i in self.api.items()
-                  if i.get('status') == 'draft' and (i.get('content_md') or '').startswith(DIGEST_PREFIX)]
+        drafts = [i for i in self.api.items(status='draft')
+                  if i.get('status') == 'draft' and (i.get('contentMd') or '').startswith(DIGEST_PREFIX)]
         return sorted(drafts, key=lambda i: i.get('created') or '')[0] if drafts else None
 
     def generate_and_publish(self, item):
-        content = item['content_md']
+        content = item['contentMd']
         item_id = item['id']
         dropped = set()
         if self.dry_run:
@@ -734,24 +1060,25 @@ class Sync:
             try:
                 result = self.api.generate(item_id, idx)
             except BlygError as e:
-                body = e.body if isinstance(e.body, dict) else {}
-                bad = body.get('id')
-                if e.status == 400 and 'unresolvable source' in str(body.get('error')) and bad and bad not in dropped:
-                    log(f"    source {bad} no longer resolves ({body.get('reason')}); dropping it from the digest")
+                if isinstance(e, AuthError):
+                    raise
+                bad = e.details.get('id')
+                if e.status == 400 and 'unresolvable source' in e.message and bad and bad not in dropped:
+                    log(f"    source {bad} no longer resolves ({e.details.get('reason')}); dropping it from the digest")
                     dropped.add(bad)
                     content = drop_source(content, bad)
                     self.api.patch_item(item_id, content)
                     continue
                 if e.status == 429:
                     raise GenerationFailed(
-                        f'the daily AI budget is spent (HTTP 429: {body.get("error")}). The digest {item_id} '
+                        f'the daily AI budget is spent (HTTP 429: {e.message}). The digest {item_id} '
                         'stays a draft; the next run retries it.') from e
                 if e.status == 502:
                     raise GenerationFailed(
-                        f'the model provider failed (HTTP 502: {body.get("error")}); a provider error still counts '
+                        f'the model provider failed (HTTP 502: {e.message}); a provider error still counts '
                         f'against the AI budget (a config error does not). The digest {item_id} stays a draft; the next run retries it.') from e
                 raise GenerationFailed(f'generation failed: {e}. The digest {item_id} stays a draft.') from e
-            content = result['content_md']
+            content = result['contentMd']
             log(f"    generated {len(result.get('text') or '')} chars with {result.get('model')}")
         if not tk_scopes(content) and not referenced_ids(content):
             log(f'  ! digest {item_id} has nothing left to publish; leaving it as a draft')
@@ -769,11 +1096,16 @@ class Sync:
         draft = self.unfinished_digest()
         if not draft:
             return False
-        title = draft['content_md'].splitlines()[0]
+        title = draft['contentMd'].splitlines()[0]
         log(f"Resuming unfinished digest {draft['id']}: {title}")
-        ids = referenced_ids(draft['content_md'])
+        ids = referenced_ids(draft['contentMd'])
         index = self.imported_index(ids)
-        rows = [index[i][0] for i in ids if index.get(i)]
+        hopper_subs = {s['id'] for s in self.all_subscriptions() if s.get('hopperFeedUrl')}
+        rows = []
+        for i in ids:
+            held = [r for r in index.get(i) or [] if r.get('subscriptionId') not in hopper_subs]
+            if held:
+                rows.append(held[0])
         if hopper:
             self.file(hopper, rows, members)
         self.generate_and_publish(draft)
@@ -788,12 +1120,19 @@ class Sync:
         if self.blogroll_only:
             log('Subscriptions')
             self.ensure_subscriptions(own, poll=False)  # backfill already starts each import
+            log('Hopper feeds')
+            routes = self.ensure_hopper_subscriptions(hoppers)
+            self.log_routes(routes)
             log('Blogroll')
             added = self.ensure_blogroll(own)
             log(f'--blogroll-only: {len(added)} blyg(s) added to the blogroll; no filing, no digest.')
-            return {'filed': [], 'digest': None, 'missing': [], 'blogroll_added': added}
+            return {'filed': [], 'digest': None, 'missing': [], 'blogroll_added': added, 'routes': routes}
 
-        wanted = self.wanted_items(hoppers)
+        log('Hopper feeds')
+        routes = self.ensure_hopper_subscriptions(hoppers)
+        self.log_routes(routes)
+        log('Wanted items')
+        wanted = self.wanted_items(hoppers, routes)
         log(f'{len(wanted)} wanted item(s) on other blygs')
 
         log('Subscriptions')
@@ -813,7 +1152,7 @@ class Sync:
         index = self.imported_index({w['id'] for w in wanted})
         matched, missing = self.match(wanted, index)
         for w in missing:
-            log(f"  not imported yet (next run): {w['base']}{w['kind']}/{w['id']}/")
+            log(f"  not imported yet (next run): {item_ref(w['base'], w['kind'], w['id'])}")
         fresh = [r for r in matched if (r['subscriptionId'], r['remoteId']) not in members]
         # Oldest first, so a backlog reaches the digest in order.
         fresh.sort(key=lambda r: r.get('created') or r.get('observedAt') or '')
@@ -825,25 +1164,37 @@ class Sync:
         log(f'Filing {len(fresh)} new item(s)')
         filed = self.file(hopper, fresh, members)
 
+        result = {'filed': filed, 'digest': None, 'missing': missing, 'blogroll_added': added, 'routes': routes}
         if not filed:
             log('Nothing new; no digest.')
-            return {'filed': [], 'digest': None, 'missing': missing, 'blogroll_added': added}
+            return dict(result, filed=[])
         if not self.digest:
             log('--no-digest: skipping the digest.')
-            return {'filed': filed, 'digest': None, 'missing': missing, 'blogroll_added': added}
+            return result
 
         hopper_url = f'{self.site}h/{(hopper or {}).get("slug") or self.slug}/'
         content = build_digest(filed, self.now, hopper_url, self.max_sources, self.hopper_name)
+        result['digest'] = content
         log(f'Digest: {content.splitlines()[0]}')
         if not self.act(f'create the digest draft ({len(tk_scopes(content))} TK scope(s), {len(filed)} post(s))'):
             log('----- digest draft -----')
             log(content)
             log('------------------------')
-            return {'filed': filed, 'digest': content, 'missing': missing, 'blogroll_added': added}
+            return result
         item = self.api.create_thread(content)
         log(f"    draft {item['id']}")
         self.generate_and_publish(item)
-        return {'filed': filed, 'digest': content, 'missing': missing, 'blogroll_added': added, 'item': item['id']}
+        result['item'] = item['id']
+        return result
+
+    def log_routes(self, routes):
+        for c, r in routes.items():
+            if r['path'] == 'feed':
+                log(f"  {c}: hopper feed (subscription {r['sub'].get('id')}, {r['sub'].get('hopperFeedUrl')})")
+            elif self.blogroll_only:
+                log(f"  {c}: not read as a hopper feed — {r.get('why')}")
+            else:
+                log(f"  {c}: page scrape — {r.get('why')}")
 
 
 def main(argv=None, transport=urllib_transport, fetch=fetch_text, sleep=time.sleep):
@@ -851,8 +1202,8 @@ def main(argv=None, transport=urllib_transport, fetch=fetch_text, sleep=time.sle
     p.add_argument('--dry-run', action='store_true', help='read-only calls only; print the planned actions')
     p.add_argument('--no-digest', action='store_true', help='subscribe and file, but write no digest')
     p.add_argument('--blogroll-only', action='store_true',
-                   help="only subscribe to approved hoppers' blygs and put them in the blogroll; "
-                        'no page scraping, filing or digest')
+                   help="only subscribe to approved hoppers' blygs (and hopper feeds, where offered) and put "
+                        'the blygs in the blogroll; no page scraping, filing or digest')
     p.add_argument('--max-sources', type=int, default=MAX_SOURCES, help=f'sources per TK scope (default {MAX_SOURCES})')
     p.add_argument('--max-scopes', type=int, default=MAX_SCOPES, help=f'TK scopes per digest (default {MAX_SCOPES})')
     p.add_argument('--poll-wait', type=int, default=POLL_WAIT, help='seconds to wait after a forced poll')
