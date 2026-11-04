@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-11-04 · aneesh (2)
+The World Machines blyg now follows members' hoppers themselves. Where a member's blyg publishes a feed for a hopper (Blygger Studio 0.50 or later, with hopper feeds turned on), the twice-daily sync subscribes to that hopper's feed and files only what's in it. For everyone else it reads the hopper page, as before. Members' whole blygs are still followed, because the AI-written digest needs full posts to quote, but only hopper posts reach "From members". The sync and front-page scripts now speak Studio 0.51's API.
+
 ## 2026-11-01 · aneesh (3)
 The World Machines blyg now carries this site's navigation bar, so moving between worldmachines.org and blyg.worldmachines.org feels like one site. The bar has a new **Blyg** item. On blyg pages it opens a row: Front page, All posts, From members, Archive, Submit a hopper, RSS. A small shell Worker (`blyg-shell/`) sits in front of Blygger Studio and adds the bar to public blyg pages, so Studio itself is unmodified. The bar's markup and CSS come from this site's build (`partials/sitenav-blyg.html`, `nav.css`), so the two can't drift apart.
 
