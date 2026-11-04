@@ -9,6 +9,13 @@
 # (--blogroll-only: subscribe + blogroll, no filing, no digest). The shared
 # concurrency group queues it behind a running sync instead of overlapping.
 #
+# Hopper feeds (Studio 0.50+): where a member's blyg offers its hopper as a
+# feed, the WM blyg keeps a hopper subscription to it and takes the hopper's
+# items from there; otherwise it reads the hopper page, as before. Each run
+# logs which path it used per hopper. Needs Settings → Network → hopper feeds
+# on the WM node; the script never changes settings and says so when it is off.
+# Speaks Studio 0.51's private API (contract 5.2.0).
+#
 # Setup:
 #   secret BLYG_TOKEN       Studio REST token (Studio → More → Client access →
 #                           REST API) with owner:read owner:manage owner:draft

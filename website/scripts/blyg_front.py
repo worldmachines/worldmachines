@@ -3,7 +3,7 @@
 Keep a Wikipedia-Main-Page-style front page on the World Machines blyg.
 
 The page is one published thread. Studio's static-front-page setting
-(`front_page` = its id) shows it at the blyg's root and moves the latest-items
+(`frontPage` = its id) shows it at the blyg's root and moves the latest-items
 list to /posts/. The operator sets that once; this script never touches it.
 
 Sections:
@@ -52,7 +52,8 @@ Environment:
                     separate token is its own grant, so its AI call does not
                     count against the digest token's per-grant AI limit.
   BLYG_TOKEN        used when BLYG_FRONT_TOKEN is not set
-  BLYG_API_BASE     default https://blyg.worldmachines.org/api
+  BLYG_API_BASE     default https://blyg.worldmachines.org/api ({mount}/api; Studio 0.51,
+                    private API contract 5.2.0, through blyg_sync.BlygApi)
   BLYG_SITE         public base; default BLYG_API_BASE minus /api
   BLYG_FRONT_ID     the front-page thread's id (or --id)
   BLYG_HOPPER_SLUG  default members
@@ -79,7 +80,7 @@ sys.path.insert(0, str(IMPORT_DIR))
 
 import corpus as C  # noqa: E402  (tools/blyg-import: parsing, link resolution)
 from blyg_sync import (  # noqa: E402  (same request layer as the twice-daily sync)
-    DIGEST_PREFIX, AuthError, BlygApi, BlygError, clean_label, norm_base, q, site_from_api_base,
+    DIGEST_PREFIX, AuthError, BlygApi, BlygError, clean_label, norm_base, site_from_api_base,
     urllib_transport,
 )
 
@@ -736,17 +737,13 @@ def featured_block_of(content_md):
 # ---------------------------------------------------------------- blyg reads
 
 def latest_digest(api, exclude_id=None, pages=DIGEST_SCAN_PAGES):
-    offset = 0
-    for _ in range(pages):
-        page = api.get('/items', offset=offset, limit=100)
-        rows = page.get('items') or []
-        for it in rows:
-            md = it.get('content_md') or ''
-            if it.get('id') != exclude_id and it.get('status') == 'public' and md.startswith(DIGEST_PREFIX):
-                return {'id': it['id'], 'title': md.splitlines()[0].lstrip('# ').strip()}
-        offset += len(rows)
-        if not rows or offset >= (page.get('total') or 0):
+    """The newest public digest among the most recently updated public items."""
+    for n, it in enumerate(api.items(status='public')):
+        if n >= pages * 100:
             break
+        md = it.get('contentMd') or ''
+        if it.get('id') != exclude_id and it.get('status') == 'public' and md.startswith(DIGEST_PREFIX):
+            return {'id': it['id'], 'title': md.splitlines()[0].lstrip('# ').strip()}
     return None
 
 
@@ -769,44 +766,42 @@ def member_posts(api, site, slug, n=MEMBER_POSTS):
     if not hopper:
         log(f'  no hopper /h/{slug}/ yet')
         return []
-    detail = api.hopper(hopper['id'])
-    imported = {(i.get('subscription_id'), i.get('remote_id')): i for i in detail.get('items') or []}
     origins = None
     out = []
-    # Memberships come newest first. Imported rows carry their text; our own
-    # items filed into the hopper (subscription "~own") are read from /items.
-    for m in detail.get('memberships') or []:
+    # Memberships come newest first, each with its held imported item; our own
+    # items filed into the hopper (subscription "~own") have none and are read
+    # from /items.
+    for m in api.memberships(hopper['id']):
         if len(out) >= n:
             break
-        sub, rid = m.get('subscription_id'), m.get('remote_id')
+        sub, rid = m.get('subscriptionId'), m.get('remoteId')
         if sub == OWN_SUBSCRIPTION:
             try:
-                own = api.get(f'/items/{q(rid)}')
-            except BlygError:
+                own = api.item(rid)
+            except BlygError as e:
+                if isinstance(e, AuthError):
+                    raise
                 continue
             if own.get('status') != 'public':
                 continue
-            out.append({'title': item_title(own.get('content_md')), 'author': '',
+            out.append({'title': item_title(own.get('contentMd')), 'author': '',
                         'url': f"{site}{'t' if own.get('kind') == 'thread' else 'f'}/{rid}/"})
             continue
-        it = imported.get((sub, rid))
+        it = m.get('item')
         if not it or it.get('state', 'current') != 'current':
             continue
         if origins is None:
             origins = {s['id']: (norm_base(s.get('origin') or ''), s.get('title') or '') for s in api.subscriptions()}
         origin, sub_title = origins.get(sub, ('', ''))
-        try:
-            author = (json.loads(it.get('author_json') or 'null') or {}).get('name')
-        except ValueError:
-            author = None
+        author = it.get('author') if isinstance(it.get('author'), dict) else {}
         page = it.get('page')
         if page:
             url = page if re.match(r'https?://', page) else origin + page.lstrip('/')
         else:
-            url = f"{origin}{'t' if it.get('kind') == 'thread' else 'f'}/{it.get('remote_id')}/"
+            url = f"{origin}{'t' if it.get('kind') == 'thread' else 'f'}/{it.get('remoteId')}/"
         if not url.startswith('http'):
             continue
-        out.append({'title': item_title(it.get('content_md')), 'author': author or sub_title, 'url': url})
+        out.append({'title': item_title(it.get('contentMd')), 'author': author.get('name') or sub_title, 'url': url})
     return out
 
 
@@ -815,10 +810,10 @@ LINK_ID = re.compile(r'(?<!!)\[\[([0-9a-z]{26})(?:[ \t]*\|[ \t]*([^\n\]]*))?\]\]
 
 def unresolved_link_ids(err):
     """Ids named by a publish 400 'one or more references do not resolve'."""
-    body = err.body if isinstance(err.body, dict) else {}
-    if err.status != 400 or not isinstance(body.get('errors'), list):
+    errors = err.details.get('errors')
+    if err.status != 400 or not isinstance(errors, list):
         return set()
-    return {m.group(1) for e in body['errors'] if isinstance(e, dict)
+    return {m.group(1) for e in errors if isinstance(e, dict)
             for m in LINK_ID.finditer(str(e.get('directive', '')))}
 
 
@@ -854,8 +849,10 @@ class FrontPage:
         if not self.api:
             return 'posts'
         try:
-            return (self.api.get('/settings') or {}).get('posts_path') or 'posts'
-        except BlygError:
+            return (self.api.settings() or {}).get('postsPath') or 'posts'
+        except BlygError as e:
+            if isinstance(e, AuthError):
+                raise
             return 'posts'
 
     def members(self):
@@ -924,7 +921,7 @@ class FrontPage:
             result = self.api.generate(item_id, 0)
             self.report['blurb'] = 'tk'
             log(f"  generated the featured blurb on the blyg ({len(result.get('text') or '')} chars, {result.get('model')})")
-            return result['content_md']
+            return result['contentMd']
         except BlygError as e:
             if isinstance(e, AuthError):
                 raise
@@ -938,16 +935,15 @@ class FrontPage:
 
     def publish(self, item_id, note, content):
         """Publish; a link whose target was withdrawn since becomes plain text (one retry)."""
-        body = {'note': note, 'change_category': 'minor'}
         try:
-            _, resp = self.api.request('POST', f'/items/{q(item_id)}/publish', body)
+            resp = self.api.publish(item_id, note=note, change_category='minor')
         except BlygError as e:
             bad = unresolved_link_ids(e)
             if isinstance(e, AuthError) or not bad:
                 raise
             log(f'  ! {len(bad)} link(s) no longer resolve ({", ".join(sorted(bad))}); writing them as plain text')
             self.api.patch_item(item_id, unlink(content, bad))
-            _, resp = self.api.request('POST', f'/items/{q(item_id)}/publish', body)
+            resp = self.api.publish(item_id, note=note, change_category='minor')
         if resp.get('warning'):
             log(f"  warning from publish: {resp['warning']}")
         log(f"  published version {resp.get('version')}: {self.site}t/{item_id}/")
@@ -959,7 +955,7 @@ class FrontPage:
         log(f'World Machines front page — {self.today} ({mode})' + (' — DRY RUN' if self.dry_run else ''))
         existing = None
         if self.front_id and self.api:
-            existing = self.api.get(f'/items/{q(self.front_id)}')
+            existing = self.api.item(self.front_id)
             log(f"  thread {self.front_id}: status {existing.get('status')}, version {existing.get('version')}, "
                 f"dirty {existing.get('dirty')}")
         posts_path = self.posts_path()
@@ -968,7 +964,7 @@ class FrontPage:
         members = members_section(digest, posts, self.site, self.slug)
         explore = explore_section(self.corpus, self.site, posts_path)
 
-        kept = featured_block_of(existing.get('content_md') or '') if existing else None
+        kept = featured_block_of(existing.get('contentMd') or '') if existing else None
         chosen_today = self.today.isoformat() in self.history.get('days', {})
         choose = self.create or (not self.members_only and not (chosen_today and kept))
         if not choose and not kept:
@@ -1003,11 +999,11 @@ class FrontPage:
             log(f'  created thread {item_id}')
         else:
             item_id = self.front_id
-            if not choose and content == existing.get('content_md') and not existing.get('dirty') \
+            if not choose and content == existing.get('contentMd') and not existing.get('dirty') \
                     and existing.get('status') == 'public':
                 log('  unchanged; not republishing')
                 return self.report
-            if content != existing.get('content_md'):
+            if content != existing.get('contentMd'):
                 self.api.patch_item(item_id, content)
         if use_tk:
             content = self.generate_featured(item_id, content, pick, (welcome, members, explore, dyk_md))
@@ -1021,7 +1017,7 @@ class FrontPage:
         if self.create:
             log(f'\nFront page thread id: {item_id}')
             log('Set it as the front page in Studio (Settings → Front page) or with '
-                f'PATCH {self.api.base}/settings {{"front_page": "{item_id}"}}, and set the repo variable '
+                f'PATCH {self.api.base}/settings {{"frontPage": "{item_id}"}}, and set the repo variable '
                 f'BLYG_FRONT_ID={item_id}.')
         return self.report
 
