@@ -1,18 +1,19 @@
 // Hopper submissions — the list behind /hoppers and /admin/hoppers.
 //
-// Anyone can propose the URL of a public blyg hopper (`{mount}h/{slug}/`) for
-// the World Machines blyg at blyg.worldmachines.org. A submission that
-// validates as a real public blyg hopper (validateHopper below) is accepted
-// at once (status `approved`); anything else is refused with a reason. The
-// admin can still reject (and so block) an accepted hopper later. Records left
-// `pending` by the old approve-first flow can be approved by hand or
-// re-validated from /admin/hoppers.
+// Anyone can propose the URL of a public blyg hopper for the World Machines
+// blyg at blyg.worldmachines.org. On Blygger Studio that is `{mount}h/{slug}/`;
+// on a blyg whose manifest lists its hoppers (spec 0.4 §6.1), any page it
+// names. A submission that validates as a real public blyg hopper
+// (validateHopper below) is accepted at once (status `approved`); anything
+// else is refused with a reason. The admin can still reject (and so block) an
+// accepted hopper later. A record left `pending` by the old approve-first flow
+// is re-validated when its hopper is submitted again (/api/hoppers POST), or
+// from /admin/hoppers.
 //
-// Accepting only records the hopper: stock blygger (v0.46) cannot subscribe to
-// a hopper — it is an HTML page with no feed, and POST /api/subscriptions on
-// its URL would resolve to the member's WHOLE blyg. Polling + filing waits for
-// hopper feeds (blygger-spec Fable queue item 14; manifest `hoppers[]` is
-// proposed in blygger-spec#18 — see matchManifestHoppers).
+// Accepting records the hopper and fires the blyg sync (.github/workflows/
+// blyg-sync.yml), which follows the hopper itself through its hopper feed when
+// the member's blyg offers one (Studio ≥ 0.50 with hopper feeds on; `feed`
+// below), and otherwise reads the hopper page.
 //
 // KV layout (binding HOPPERS — its own namespace, because HANDLES is listed
 // whole by /api/contributors, /api/admin/handles and provision-access.mjs):
@@ -46,28 +47,41 @@ const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,79}$/;
 const USER_AGENT = 'worldmachines-hoppers (+https://worldmachines.org/hoppers)';
 
 // ── Validation ───────────────────────────────────────────────────────────────
-// Blyg protocol v0.4 has no hopper surface yet, so this is the best check
-// available (algorithm from the blygger-spec maintainers; modelled on
+// Spec 0.4 §6.1 (decision #86): a blyg MAY list its public hoppers in its
+// manifest as `hoppers: [{title, page, feed?}]`, `page`/`feed` relative to the
+// identity origin or absolute. Paths are presentation — `h/{slug}/` is only
+// Blygger Studio's convention — so when the manifest lists hoppers, that list
+// is the authority and the path shape is not checked. Without the key (blygs
+// that predate it, or Studio with hopper feeds off) the convention is the best
+// check available (algorithm from the blygger-spec maintainers; modelled on
 // blygger-studio src/importer/resolve.ts, not vendored):
-//   1. normalize the URL (https, no query/fragment, ends /h/{slug}/)
+//   1. normalize the URL (https, no query/fragment, trailing "/" on a directory)
 //   2. the page answers 200 HTML (Studio 404s private/unknown hoppers)
-//   3. resolve the blyg manifest: rel="blyg" link → mount → /blyg/ → /
+//   3. resolve the blyg manifest: rel="blyg" link → h/ mount → each ancestor
+//      directory of the page → /blyg/ → /
 //   4. identity origin = manifest's final URL minus its last segment
-//   5. the final page URL is exactly {identity}h/{slug}/ (catches soft-404s)
-//   7. if the manifest lists hoppers[], the page must be one of them
+//   5. manifest lists hoppers[] → the page must be one of them (§12.1 step 7);
+//      otherwise the final page URL is exactly {identity}h/{slug}/ (catches soft-404s)
 
-/** Strip query + fragment, ensure a trailing "/". */
+/** Strip query + fragment; a directory-like path (last segment has no ".") ends in "/". */
 function normalizeLoose(raw) {
   const u = new URL(raw);
   u.search = '';
   u.hash = '';
-  if (!u.pathname.endsWith('/')) u.pathname += '/';
+  const last = u.pathname.slice(u.pathname.lastIndexOf('/') + 1);
+  if (!u.pathname.endsWith('/') && !last.includes('.')) u.pathname += '/';
   return u.toString();
 }
 
+const CONVENTION_ERROR =
+  'That does not look like a public hopper URL. It should end in /h/<hopper-name>/, ' +
+  'where the name is lowercase letters, digits and hyphens.';
+
 /**
- * Step 1. Normalize a submitted hopper URL.
- * @returns {{canonical:string, slug:string, mount:string}|{error:string}}
+ * Step 1. Normalize a submitted hopper URL. Any https URL is accepted here;
+ * `conventional` says whether it has Studio's `…/h/{slug}/` shape, which only
+ * matters for a blyg whose manifest does not list its hoppers.
+ * @returns {{canonical:string, slug:string|null, mount:string, conventional:boolean}|{error:string}}
  */
 export function normalizeHopperUrl(raw) {
   let url;
@@ -82,13 +96,17 @@ export function normalizeHopperUrl(raw) {
   const canonical = normalizeLoose(url.toString());
   const { pathname, origin } = new URL(canonical);
   const match = pathname.match(/^(.*\/)h\/([^/]+)\/$/);
-  if (!match || !SLUG_RE.test(match[2])) {
-    return {
-      error: 'That does not look like a public hopper URL. It should end in /h/<hopper-name>/, ' +
-        'where the name is lowercase letters, digits and hyphens.',
-    };
+  if (match && SLUG_RE.test(match[2])) {
+    return { canonical, slug: match[2], mount: origin + match[1], conventional: true };
   }
-  return { canonical, slug: match[2], mount: origin + match[1] };
+  return { canonical, slug: lastSegment(pathname), mount: origin + '/', conventional: false };
+}
+
+/** The last non-empty path segment (decoded), or null at the root. */
+function lastSegment(pathname) {
+  const seg = pathname.split('/').filter(Boolean).pop();
+  if (!seg) return null;
+  try { return decodeURIComponent(seg).slice(0, 80); } catch { return seg.slice(0, 80); }
 }
 
 /**
@@ -191,18 +209,31 @@ async function resolveManifest(html, pageUrl, slug, ctx) {
 
   // b. The mount: the final page URL before /h/{slug}/.
   const suffix = `h/${slug}/`;
-  if (pageUrl.endsWith('/' + suffix)) {
+  if (slug && pageUrl.endsWith('/' + suffix)) {
     const found = await tryBase(pageUrl.slice(0, -suffix.length));
     if (found) return found;
   }
 
-  // c. Conventional mounts on the final host.
-  const { origin } = new URL(pageUrl);
-  for (const base of [`${origin}/blyg/`, `${origin}/`]) {
+  // c. Each ancestor directory of the page, nearest first (a hopper at any
+  //    path under its blyg), then the conventional /blyg/ mount.
+  for (const base of ancestorDirs(pageUrl)) {
     const found = await tryBase(base);
     if (found) return found;
   }
+  const found = await tryBase(`${new URL(pageUrl).origin}/blyg/`);
+  if (found) return found;
   return null;
+}
+
+/** Directories above `pageUrl`, nearest first, ending at the host root; at most 6. */
+function ancestorDirs(pageUrl) {
+  const u = new URL(pageUrl);
+  const parts = u.pathname.split('/').filter(Boolean);
+  if (!u.pathname.endsWith('/')) parts.pop(); // a file-like page: start from its directory
+  else parts.pop();                           // a directory page: start from its parent
+  const dirs = [];
+  for (let n = parts.length; n >= 0; n--) dirs.push(`${u.origin}/${parts.slice(0, n).map((p) => p + '/').join('')}`);
+  return dirs.length > 6 ? [...dirs.slice(0, 5), dirs[dirs.length - 1]] : dirs;
 }
 
 /** Accept blyg protocol 0.1–0.4 (patch suffixes allowed). */
@@ -211,12 +242,13 @@ export function supportedBlygVersion(v) {
 }
 
 /**
- * Step 7 — future slot. blygger-spec#18 proposes a manifest key
- *   "hoppers": [{ "title", "page": "h/{slug}/", "feed": "h/{slug}/feed.xml" }]
- * If the manifest has it, the hopper page must be one of its entries (each
- * `page` resolved against the identity origin), and that entry's feed is kept.
- * Without the key there is nothing to check yet.
- * @returns {{listed:boolean, feed:string|null}|{error:string}}
+ * Step 5a — spec 0.4 §6.1 `hoppers`: OPTIONAL array of the blyg's public
+ * hoppers, each `{ title (REQUIRED), page (REQUIRED), feed (OPTIONAL) }`, with
+ * `page`/`feed` relative to the identity origin or absolute, and no path
+ * convention. Unknown members are ignored. If the manifest has the key, the
+ * hopper page must be one of its entries (§12.1 step 7) and that entry's title
+ * and feed are kept. Without the key there is nothing to check here.
+ * @returns {{listed:boolean, feed:string|null, title?:string|null}|{error:string}}
  */
 export function matchManifestHoppers(manifest, base, pageUrl) {
   if (!Array.isArray(manifest.hoppers)) return { listed: false, feed: null };
@@ -229,7 +261,8 @@ export function matchManifestHoppers(manifest, base, pageUrl) {
     if (typeof entry.feed === 'string') {
       try { feed = new URL(entry.feed, base).toString(); } catch { /* keep null */ }
     }
-    return { listed: true, feed };
+    const title = typeof entry.title === 'string' && entry.title.trim() ? entry.title.trim().slice(0, 200) : null;
+    return { listed: true, feed, title };
   }
   return { error: "This blyg lists its public hoppers in its manifest, and that hopper is not one of them." };
 }
@@ -244,7 +277,8 @@ export function matchManifestHoppers(manifest, base, pageUrl) {
 export async function validateHopper(raw, opts = {}) {
   const norm = normalizeHopperUrl(raw);
   if (norm.error) return norm;
-  const { canonical, slug } = norm;
+  const { canonical } = norm;
+  let { slug } = norm;
   const ctx = {
     fetchFn: opts.fetchFn || ((url, init) => fetch(url, init)),
     timeoutMs: opts.timeoutMs ?? FETCH_TIMEOUT_MS,
@@ -284,14 +318,20 @@ export async function validateHopper(raw, opts = {}) {
   // 4. Identity — never the manifest's self-asserted `site`.
   const base = identityOf(manifestUrl);
 
-  // 5. The page must be exactly {identity}h/{slug}/.
-  if (!finalPage.startsWith(base) || finalPage.slice(base.length) !== `h/${slug}/`) {
-    return { error: `That page is not a hopper of the blyg at ${base} (expected ${base}h/${slug}/).` };
-  }
-
-  // 7. Manifest hoppers[] (future slot).
+  // 5a. A manifest that lists its hoppers is the authority: any path it names.
   const listed = matchManifestHoppers(manifest, base, finalPage);
   if (listed.error) return listed;
+
+  // 5b. No list: fall back to Studio's convention, exactly {identity}h/{slug}/.
+  if (!listed.listed) {
+    if (!norm.conventional) return { error: CONVENTION_ERROR };
+    if (!finalPage.startsWith(base) || finalPage.slice(base.length) !== `h/${slug}/`) {
+      return { error: `That page is not a hopper of the blyg at ${base} (expected ${base}h/${slug}/).` };
+    }
+  } else {
+    const conv = finalPage.startsWith(base) && finalPage.slice(base.length).match(/^h\/([^/]+)\/$/);
+    slug = conv ? conv[1] : lastSegment(new URL(finalPage).pathname);
+  }
 
   // 6. Record.
   return {
@@ -299,7 +339,7 @@ export async function validateHopper(raw, opts = {}) {
     canonical,
     base,
     slug,
-    title: extractTitle(html),
+    title: extractTitle(html) || listed.title || null,
     blyg_title: manifestTitle(manifest),
     generator: typeof manifest.generator === 'string' ? manifest.generator.slice(0, 200) : null,
     blyg_version: manifest.blyg.trim(),
