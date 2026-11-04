@@ -120,7 +120,7 @@ website/
   blurbs.md                   ← front-page prose
   admin/handles.html          ← handle registry admin UI
   admin/hoppers.html          ← review blyg hopper submissions: re-validate, reject (rejection blocks the blyg + email)
-  hoppers.html                ← public: submit a public blyg hopper (`…/h/<slug>/`); auto-accepted when it validates as a blyg hopper (`functions/_lib/hoppers.js` validateHopper)
+  hoppers.html                ← public: submit a public blyg hopper (`…/h/<slug>/` on Studio, or any page the blyg's manifest `hoppers` lists, spec 0.4 §6.1); auto-accepted when it validates (`functions/_lib/hoppers.js` validateHopper); resubmitting a stale `pending` record re-validates it
   join.html                   ← public join-request form → GitHub issue; pre-fills email from session
   supplements/                ← rendered HTML versions of supplement documents (generated one-off, committed as static)
   evolution/                  ← unlisted, browser-only evolutionary theory learning course and interactives
