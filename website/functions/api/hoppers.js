@@ -26,6 +26,7 @@ import {
   createSubmission,
   listSubmissions,
   publicHopper,
+  revalidate,
 } from '../_lib/hoppers.js';
 
 const MAX_NOTE = 500;
@@ -77,9 +78,17 @@ export async function onRequestPost(ctx) {
   if (await isBlocked(env, { base: parsed.mount, email })) return blocked();
 
   const existing = await liveSubmissionFor(env, parsed.canonical);
+  if (existing && existing.status === 'approved') {
+    return Response.json({ error: 'That hopper is already listed.' }, { status: 409, headers: NO_STORE });
+  }
   if (existing) {
-    const what = existing.status === 'approved' ? 'already listed' : 'already submitted';
-    return Response.json({ error: `That hopper is ${what}.` }, { status: 409, headers: NO_STORE });
+    // Left pending by the old approve-first flow: nothing would ever list it,
+    // and a 409 here kept its owner locked out. Re-validate the stored record
+    // (approves it if it passes; keeps its id and submitted_at) and treat the
+    // result exactly like a fresh acceptance.
+    const r = await revalidate(env, existing);
+    if (r.error) return Response.json({ error: r.error }, { status: r.status, headers: NO_STORE });
+    return accepted(ctx, env, r.record);
   }
 
   const v = await validateHopper(parsed.canonical);
@@ -93,7 +102,11 @@ export async function onRequestPost(ctx) {
     handle,
     note,
   });
+  return accepted(ctx, env, record);
+}
 
+/** 201 with the public record, plus the hopper-accepted dispatch in waitUntil. */
+function accepted(ctx, env, record) {
   const hopper = publicHopper(record);
   const dispatch = dispatchHopperAccepted(env, hopper);
   if (typeof ctx.waitUntil === 'function') ctx.waitUntil(dispatch);

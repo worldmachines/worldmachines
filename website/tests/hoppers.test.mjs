@@ -57,11 +57,73 @@ test('normalize: https only, strips query/fragment, adds trailing slash', () => 
     canonical: 'https://example.com/blyg/h/history/',
     slug: 'history',
     mount: 'https://example.com/blyg/',
+    conventional: true,
   });
   assert.match(normalizeHopperUrl('http://example.com/blyg/h/history/').error, /https/);
-  assert.match(normalizeHopperUrl('https://example.com/blyg/history/').error, /\/h\//);
-  assert.match(normalizeHopperUrl('https://example.com/h/Bad_Slug/').error, /lowercase/);
   assert.match(normalizeHopperUrl('not a url').error, /valid URL/);
+  // Any https path normalizes; only the no-manifest-list fallback needs /h/{slug}/.
+  assert.deepEqual(normalizeHopperUrl('https://example.com/blyg/history'), {
+    canonical: 'https://example.com/blyg/history/',
+    slug: 'history',
+    mount: 'https://example.com/',
+    conventional: false,
+  });
+  assert.equal(normalizeHopperUrl('https://example.com/h/Bad_Slug/').conventional, false);
+  assert.equal(normalizeHopperUrl('https://example.com/lists/ai.html').canonical, 'https://example.com/lists/ai.html',
+    'a file-like path gets no trailing slash');
+});
+
+test('no manifest hoppers list: a non-/h/ path is refused by the convention', async () => {
+  for (const url of ['https://venkateshrao.com/blyg/history/', 'https://venkateshrao.com/blyg/h/Bad_Slug/']) {
+    const { fetchFn } = mockFetch({
+      [normalizeHopperUrl(url).canonical]: page('History'),
+      'https://venkateshrao.com/blyg/blyg.json': json(MANIFEST),
+    });
+    assert.match((await validateHopper(url, { fetchFn })).error, /\/h\/<hopper-name>\//);
+  }
+});
+
+test('§6.1 hoppers list: any path the manifest names is a hopper (relative, absolute, file-like)', async () => {
+  const listedManifest = {
+    ...MANIFEST,
+    hoppers: [
+      { title: 'AI insights', page: 'lists/ai-insights/' },
+      { title: 'Reading', page: 'https://venkateshrao.com/blyg/collections/reading.html', feed: 'collections/reading.xml' },
+      { title: 'History', page: 'h/history/', feed: 'h/history/feed.xml', extra: 'ignored' },
+    ],
+  };
+  const routes = {
+    'https://venkateshrao.com/blyg/lists/ai-insights/': page('AI — Blyg', '<link rel="blyg" href="/blyg/">'),
+    'https://venkateshrao.com/blyg/collections/reading.html': page('', ''),
+    'https://venkateshrao.com/blyg/h/history/': page('History — Blyg'),
+    'https://venkateshrao.com/blyg/blyg.json': json(listedManifest),
+  };
+  let v = await validateHopper('https://venkateshrao.com/blyg/lists/ai-insights', mockFetch(routes));
+  assert.equal(v.ok, true, v.error);
+  assert.equal(v.base, 'https://venkateshrao.com/blyg/');
+  assert.equal(v.slug, 'ai-insights');
+  assert.equal(v.feed, null, 'feed is optional');
+
+  // Found by walking up from the page's directory, with no rel link; title from the manifest.
+  v = await validateHopper('https://venkateshrao.com/blyg/collections/reading.html', mockFetch(routes));
+  assert.equal(v.ok, true, v.error);
+  assert.equal(v.canonical, 'https://venkateshrao.com/blyg/collections/reading.html');
+  assert.equal(v.slug, 'reading.html');
+  assert.equal(v.title, 'Reading');
+  assert.equal(v.feed, 'https://venkateshrao.com/blyg/collections/reading.xml');
+
+  v = await validateHopper('https://venkateshrao.com/blyg/h/history/', mockFetch(routes));
+  assert.equal(v.ok, true, v.error);
+  assert.equal(v.slug, 'history');
+  assert.equal(v.feed, 'https://venkateshrao.com/blyg/h/history/feed.xml');
+});
+
+test('§6.1 hoppers list: an unlisted page is refused even on the /h/ convention', async () => {
+  const { fetchFn } = mockFetch({
+    'https://venkateshrao.com/blyg/h/private/': page('Private'),
+    'https://venkateshrao.com/blyg/blyg.json': json({ ...MANIFEST, hoppers: [{ title: 'History', page: 'h/history/' }] }),
+  });
+  assert.match((await validateHopper('https://venkateshrao.com/blyg/h/private/', { fetchFn })).error, /not one of them/);
 });
 
 test('rejects http before fetching anything', async () => {
@@ -169,9 +231,10 @@ test('manifest not found anywhere → rejected', async () => {
   const v = await validateHopper('https://example.com/notes/h/x/', { fetchFn });
   assert.match(v.error, /no blyg manifest/);
   assert.deepEqual(calls.slice(1), [
-    'https://example.com/notes/blyg.json',
-    'https://example.com/blyg/blyg.json',
+    'https://example.com/notes/blyg.json',   // the /h/ mount
+    'https://example.com/notes/h/blyg.json', // ancestor directories, nearest first
     'https://example.com/blyg.json',
+    'https://example.com/blyg/blyg.json',    // the conventional mount last
   ]);
 });
 
@@ -232,7 +295,12 @@ test('matchManifestHoppers: no key → nothing to check', () => {
   assert.deepEqual(matchManifestHoppers(MANIFEST, 'https://a.example/', 'https://a.example/h/x/'), { listed: false, feed: null });
   assert.deepEqual(
     matchManifestHoppers({ hoppers: [{ page: 'h/x' }] }, 'https://a.example/', 'https://a.example/h/x/'),
-    { listed: true, feed: null }
+    { listed: true, feed: null, title: null }
+  );
+  assert.deepEqual(
+    matchManifestHoppers({ hoppers: [{ title: 'X', page: 'https://a.example/lists/x', feed: 'https://cdn.example/x.xml' }] },
+      'https://a.example/', 'https://a.example/lists/x/'),
+    { listed: true, feed: 'https://cdn.example/x.xml', title: 'X' }
   );
 });
 
@@ -409,6 +477,43 @@ test('POST 4xx fires no dispatch', async () => {
     assert.equal((await onRequestPost(again.ctx)).status, 409);
     assert.equal(again.waits.length, 0);
     assert.equal(dispatches.length, 1);
+  });
+});
+
+test('POST over a stale pending record re-validates it and accepts (201 + dispatch)', async () => {
+  // Records left pending by the pre-auto-accept flow used to answer 409
+  // "already submitted" forever, so their hopper was never listed.
+  await withGlobalFetch(204, async ({ dispatches }) => {
+    const { ctx, waits, env } = postCtx(goodSubmission);
+    env.store.set('sub:old-1', JSON.stringify(legacy()));
+    env.store.set('canon:https://venkateshrao.com/blyg/h/history', 'old-1');
+    const res = await onRequestPost(ctx);
+    assert.equal(res.status, 201);
+    const data = await res.json();
+    assert.equal(data.hopper.canonical, 'https://venkateshrao.com/blyg/h/history/');
+    const stored = JSON.parse(env.store.get('sub:old-1'));
+    assert.equal(stored.status, 'approved');
+    assert.equal(stored.submitted_at, '2026-10-01T00:00:00Z', 'the original record is kept, not duplicated');
+    assert.equal([...env.store.keys()].filter((k) => k.startsWith('sub:')).length, 1);
+    assert.equal(env.store.get('canon:https://venkateshrao.com/blyg/h/history/'), 'old-1');
+    assert.ok(!env.store.has('canon:https://venkateshrao.com/blyg/h/history'));
+    assert.equal(await waits[0], true);
+    assert.equal(dispatches.length, 1);
+  });
+});
+
+test('POST over a stale pending record that no longer validates still answers 4xx', async () => {
+  await withGlobalFetch(204, async ({ dispatches }) => {
+    const sub = { ...goodSubmission, url: 'https://venkateshrao.com/blyg/h/gone/' };
+    const { ctx, waits, env } = postCtx(sub);
+    env.store.set('sub:old-2', JSON.stringify({ ...legacy(), id: 'old-2', slug: 'gone',
+      url: 'https://venkateshrao.com/blyg/h/gone', canonical: 'https://venkateshrao.com/blyg/h/gone' }));
+    env.store.set('canon:https://venkateshrao.com/blyg/h/gone', 'old-2');
+    const res = await onRequestPost(ctx);
+    assert.equal(res.status, 422);
+    assert.equal(JSON.parse(env.store.get('sub:old-2')).status, 'pending');
+    assert.equal(waits.length, 0);
+    assert.equal(dispatches.length, 0);
   });
 });
 
