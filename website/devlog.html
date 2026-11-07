@@ -67,6 +67,10 @@
   <p class="devlog-intro">A running log of non-trivial changes, maintained by contributors.</p>
   <div class="devlog">
   <article class="devlog-entry">
+    <div class="devlog-meta">6 November 2026 · aneesh</div>
+    <p>The blyg's front page now picks the featured note by author first, then by post. Each morning a date-seeded draw picks one author uniformly from everyone with an eligible note, with "commons" counting as one author for the shared reading notes, summaries and glossary, and skips yesterday's author when possible. It then picks one of that author's notes, weighted by score. Before this, the person with the most notes was featured on 4 of the first 6 days, partly because their own notes and their contributions counted as two separate buckets. "Did you know" now gives each member at most one hook and commons two, and the model only writes hooks; it no longer picks the featured note. The first six days had no repeats, and the 90-day no-repeat rule is unchanged. The members' digest also had two posts titled "2026-11-03 (evening)". They covered different posts, but GitHub ran the 06:00 sync about eight hours late, so the morning run was named for the evening. A digest is now named for the time it actually ran (morning, afternoon or evening), with the time added if that name is already taken.</p>
+  </article>
+  <article class="devlog-entry">
     <div class="devlog-meta">4 November 2026 · aneesh</div>
     <p>The World Machines blyg now follows members' hoppers themselves. Where a member's blyg publishes a feed for a hopper (Blygger Studio 0.50 or later, with hopper feeds turned on), the twice-daily sync subscribes to that hopper's feed and files only what's in it. For everyone else it reads the hopper page, as before. Members' whole blygs are still followed, because the AI-written digest needs full posts to quote, but only hopper posts reach "From members". The sync and front-page scripts now speak Studio 0.51's API.</p>
   </article>
@@ -292,6 +296,6 @@
   </article>
   </div>
   </main>
-  <!-- built: 2026-11-04T17:58:10Z -->
+  <!-- built: 2026-11-07T05:35:17Z -->
 </body>
 </html>
