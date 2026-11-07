@@ -1273,7 +1273,8 @@ def main(argv=None, transport=urllib_transport, ai_transport=urllib_transport, c
             p.error('--date only goes with --dry-run')
         now = datetime.combine(date.fromisoformat(a.date), datetime.min.time(), timezone.utc).replace(hour=6, minute=30)
 
-    token = os.environ.get('BLYG_FRONT_TOKEN') or os.environ.get('BLYG_TOKEN')
+    token = (os.environ.get('BLYG_MANAGE_TOKEN') or os.environ.get('BLYG_FRONT_TOKEN')
+             or os.environ.get('BLYG_TOKEN'))
     api_base = os.environ.get('BLYG_API_BASE') or DEFAULT_API_BASE
     site = os.environ.get('BLYG_SITE') or site_from_api_base(api_base)
     front_id = a.id or os.environ.get('BLYG_FRONT_ID') or None

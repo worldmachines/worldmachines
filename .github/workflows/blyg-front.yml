@@ -19,6 +19,8 @@
 # Setup:
 #   var BLYG_FRONT_ID          the thread id printed by the one-time
 #                              `python scripts/blyg_front.py --create`
+#   secret BLYG_MANAGE_TOKEN   preferred: the owner token with every scope (incl. owner:manage, which
+#                              creating and filing into the series hoppers needs). Set 2026-11-07.
 #   secret BLYG_FRONT_TOKEN    optional: a Studio REST token of its own (owner:read
 #                              owner:draft owner:publish, plus owner:manage so series
 #                              posts are filed into their hoppers). Its own grant, so its
@@ -58,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      BLYG_TOKEN: ${{ secrets.BLYG_FRONT_TOKEN || secrets.BLYG_TOKEN }}
+      BLYG_TOKEN: ${{ secrets.BLYG_MANAGE_TOKEN || secrets.BLYG_FRONT_TOKEN || secrets.BLYG_TOKEN }}
       BLYG_API_BASE: ${{ vars.BLYG_API_BASE || 'https://blyg.worldmachines.org/api' }}
       BLYG_HOPPER_SLUG: ${{ vars.BLYG_HOPPER_SLUG || 'members' }}
       BLYG_FRONT_ID: ${{ vars.BLYG_FRONT_ID }}
