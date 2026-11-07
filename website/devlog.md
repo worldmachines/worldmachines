@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-11-07 · aneesh
+The 1,809 notes in the blyg's shared reading that were written by AI ingestion pipelines (reading notes, entities, summaries and synthesis) now say so under their title: "Written by AI from the group's shared reading notes, not by a member." Members' own notes, their contributions and the glossary are unchanged. The relabelled versions were dated back beside their September originals, so the feed wasn't flooded. Florian's, Patrick's and Mike Casey's blygs are now in the author list, and Florian's and Patrick's notes link to their blygs.
+
 ## 2026-11-06 · aneesh
 The blyg's front page now picks the featured note by author first, then by post. Each morning a date-seeded draw picks one author uniformly from everyone with an eligible note, with "commons" counting as one author for the shared reading notes, summaries and glossary, and skips yesterday's author when possible. It then picks one of that author's notes, weighted by score. Before this, the person with the most notes was featured on 4 of the first 6 days, partly because their own notes and their contributions counted as two separate buckets. "Did you know" now gives each member at most one hook and commons two, and the model only writes hooks; it no longer picks the featured note. The first six days had no repeats, and the 90-day no-repeat rule is unchanged. The members' digest also had two posts titled "2026-11-03 (evening)". They covered different posts, but GitHub ran the 06:00 sync about eight hours late, so the morning run was named for the evening. A digest is now named for the time it actually ran (morning, afternoon or evening), with the time added if that name is already taken.
 
