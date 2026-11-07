@@ -3,9 +3,14 @@
 Kept small and isolated so a change to the API base (e.g. /api moving under
 the mount) or the auth scheme touches only this file.
 
-  POST /items                 {"mode":"blank","kind":...,"content_md":...} -> 201 item (id)
-  PATCH /items/{id}           {"content_md":...}                           -> 200 item
-  POST /items/{id}/publish    {"note"?: ...}                               -> 200 {ok, version}
+  POST /items                 {"kind":...,"contentMd":...}                 -> 201 item (id, revision)
+  GET /items/{id}                                                          -> 200 item (revision)
+  PATCH /items/{id}           {"contentMd":..., "expectedRevision": n}     -> 200 item (revision)
+  POST /items/{id}/publish    {"note"?: ..., "expectedRevision": n}        -> 200 {ok, version, revision}
+
+Studio's private contract 5.x (0.49.12+): camelCase fields, and item commands
+conditional on the item's `revision` (a stale one is a 409 revision-conflict;
+we re-read once and retry, as website/scripts/blyg_sync.py does).
 """
 
 from __future__ import annotations
@@ -51,6 +56,7 @@ class BlygClient:
         self.log = log
         self._last_write = None
         self.calls = 0
+        self._revisions: dict = {}
 
     # The delegated write budget is 60/min shared by all grants (API_DELEGATED_WRITE_LIMIT),
     # so writes are paced; 429s are still honoured below.
@@ -103,12 +109,33 @@ class BlygClient:
         raise RuntimeError("unreachable")
 
     def create_item(self, content_md: str, kind: str) -> str:
-        item = self._request("POST", "/items", {"mode": "blank", "kind": kind, "content_md": content_md})
+        item = self._request("POST", "/items", {"kind": kind, "contentMd": content_md})
+        self._note_revision(item.get("id"), item)
         return item["id"]
 
     def update_item(self, item_id: str, content_md: str) -> None:
-        self._request("PATCH", f"/items/{item_id}", {"content_md": content_md})
+        self._item_command("PATCH", item_id, f"/items/{item_id}", {"contentMd": content_md})
 
     def publish_item(self, item_id: str, note: Optional[str] = None) -> int:
         body = {"note": note} if note else {}
-        return int(self._request("POST", f"/items/{item_id}/publish", body)["version"])
+        return int(self._item_command("POST", item_id, f"/items/{item_id}/publish", body)["version"])
+
+    def _item_command(self, method: str, item_id: str, path: str, body: dict) -> dict:
+        for attempt in (0, 1):
+            rev = self._revisions.get(item_id)
+            if rev is None:
+                rev = self._request("GET", f"/items/{item_id}", None).get("revision")
+            try:
+                out = self._request(method, path, dict(body, expectedRevision=rev))
+            except ApiError as e:
+                if attempt == 0 and e.status == 409 and "revision-conflict" in (e.body or ""):
+                    self._revisions.pop(item_id, None)
+                    continue
+                raise
+            self._note_revision(item_id, out)
+            return out
+        raise RuntimeError("unreachable")
+
+    def _note_revision(self, item_id, payload) -> None:
+        if item_id and isinstance(payload, dict) and isinstance(payload.get("revision"), int):
+            self._revisions[item_id] = payload["revision"]

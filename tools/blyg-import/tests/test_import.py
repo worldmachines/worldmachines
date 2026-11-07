@@ -351,5 +351,45 @@ class StateTest(unittest.TestCase):
             State(self.state_path, "http://other/api")
 
 
+class ClientContractTest(unittest.TestCase):
+    """blyg_client speaks Studio's contract 5.x: camelCase bodies and expectedRevision on item commands."""
+
+    def setUp(self):
+        import io
+        from blyg_client import BlygClient
+        self.calls, self.rev = [], 7
+
+        class Resp(io.BytesIO):
+            def __enter__(s): return s
+            def __exit__(s, *a): return False
+
+        def opener(req, timeout=None):
+            body = json.loads(req.data) if req.data else None
+            self.calls.append((req.get_method(), req.full_url.split("/api", 1)[1], body))
+            if req.get_method() == "GET":
+                return Resp(json.dumps({"id": "x", "revision": self.rev}).encode())
+            if body and "expectedRevision" in body:
+                assert body["expectedRevision"] == self.rev, body
+                self.rev += 1
+            out = {"id": "x", "revision": self.rev}
+            if req.full_url.endswith("/publish"):
+                out["version"] = 3
+            return Resp(json.dumps(out).encode())
+
+        self.client = BlygClient("http://h/api", "t", write_interval=0, opener=opener, sleep=lambda s: None)
+
+    def test_patch_then_publish_carry_the_revision(self):
+        self.client.update_item("x", "# T\n\nbody")
+        self.assertEqual(self.client.publish_item("x", "Labelled"), 3)
+        methods = [(m, p) for m, p, _ in self.calls]
+        self.assertEqual(methods, [("GET", "/items/x"), ("PATCH", "/items/x"), ("POST", "/items/x/publish")])
+        self.assertEqual(self.calls[1][2], {"contentMd": "# T\n\nbody", "expectedRevision": 7})
+        self.assertEqual(self.calls[2][2], {"note": "Labelled", "expectedRevision": 8})
+
+    def test_create_uses_camel_case(self):
+        self.client.create_item("# T", "thread")
+        self.assertEqual(self.calls[0][2], {"kind": "thread", "contentMd": "# T"})
+
+
 if __name__ == "__main__":
     unittest.main()
