@@ -60,7 +60,8 @@ def series_corpus():
              'The [[modernity-machine|Modernity Machine]] shows itself most clearly in the plumbing, where nobody '
              'thought to hide what it was doing to the people above.\n\n'
              f'{filler("drains")}\n\n'
-             'So who decides which drains get mapped, and who is left living above the ones that never are?'),
+             'So who decides which drains get mapped, and who is left living above the ones that never are?',
+             connects='[[legibility]]'),
         note('raw-notes/commons/synthesis/bourgeois.md', 'Bourgeois inwardness',
              'The diary was a defence against [[legibility]], a place where the self could be written without '
              'being read by the household, the church or the state.\n\n' + filler('diaries')),
@@ -263,6 +264,12 @@ class BuildersTest(unittest.TestCase):
         self.assertIn('## Notes that bear on it', post.markdown)
         q = quotes_in(post.markdown)[0][1]
         self.assertTrue(q.endswith('?'), q)
+
+    def test_closing_question_ignores_the_importer_footer(self):
+        b = builder(self.c, DAYS['questions'].date())
+        drainage = self.c.by_path['raw-notes/florian/drainage.md']
+        self.assertIn('**Connects:**', b.t.rendered(drainage))
+        self.assertTrue(S.question_of(b, drainage).text.startswith('So who decides which drains get mapped'))
 
     def test_concept_starts_with_legibility_and_spreads_authors(self):
         post = self.build('concepts')

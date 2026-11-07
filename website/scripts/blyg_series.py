@@ -237,7 +237,8 @@ class Texts:
                         paras.append((section, paragraph_lines(g)))
                     continue
                 paras.append((section, paragraph_lines(lines)))
-            plain_idx = [i for i, (_, ls) in enumerate(paras) if ls]
+            # The importer's footer ("**Connects:** …") is not the note's closing paragraph.
+            plain_idx = [i for i, (_, ls) in enumerate(paras) if ls and not re.match(r'^\*\*[^*\n]+:\*\*', ls[0])]
             last = plain_idx[-1] if plain_idx else -1
             for i, (sec, ls) in enumerate(paras):
                 if not ls:
