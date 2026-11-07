@@ -73,11 +73,12 @@ class State:
 class Importer:
     def __init__(self, units: list[C.Unit], index: C.LinkIndex, authors: C.Authors, state: State,
                  client: Optional[BlygClient], kind: str = "thread", publish_note: Optional[str] = None,
-                 republish_note: Optional[str] = None, log=print):
+                 republish_note: Optional[str] = None, log=print, ai_bylines: Optional[dict] = None):
         self.units = units
         self.by_key = {u.key: u for u in units}
         self.renderer = C.Renderer(index, C.units_by_note(units))
         self.authors = authors
+        self.ai_bylines = ai_bylines or {}
         self.state = state
         self.client = client
         self.kind = kind
@@ -88,7 +89,11 @@ class Importer:
         self.errors: list[str] = []
 
     def byline(self, unit: C.Unit) -> str:
-        return C.render_byline(self.authors.author_for(unit.note))
+        """A member's byline, else the AI disclosure for pipeline-written notes, else nothing."""
+        author = self.authors.author_for(unit.note)
+        if author:
+            return C.render_byline(author)
+        return C.ai_byline(unit.note.path, self.ai_bylines)
 
     def render(self, unit: C.Unit, id_of, stats=None, targets=None) -> str:
         return self.renderer.render(unit, self.byline(unit), id_of, stats, targets)
@@ -206,7 +211,8 @@ class Importer:
         the second-round republishes. Nothing is written, to the blyg or to disk."""
         planner = Importer(self.units, self.renderer.index, self.authors, _ScratchState(self.state),
                            _CountingClient(), kind=self.kind, publish_note=self.publish_note,
-                           republish_note=self.republish_note, log=lambda *a: None)
+                           republish_note=self.republish_note, log=lambda *a: None,
+                           ai_bylines=self.ai_bylines)
         planner.renderer = self.renderer
         planner.sync(selected, publish=publish, republish_published=republish_published)
         c = planner.counts
@@ -346,6 +352,9 @@ def main(argv=None) -> int:
     ap.add_argument("--publish", action="store_true", help="publish items (else leave drafts)")
     ap.add_argument("--update-attribution", action="store_true",
                     help="only items whose byline changed (after editing authors.json); republishes published ones")
+    ap.add_argument("--max-items", type=int, help="after all filters (incl. --update-attribution), only the first N items")
+    ap.add_argument("--republish-note", help="changelog note for republished items (overrides config)")
+    ap.add_argument("--ids-out", type=Path, help="after --execute, write the ids republished in this run, one per line")
     ap.add_argument("--limit", type=int, help="only the first N selected notes (path order)")
     ap.add_argument("--only", action="append", default=[], metavar="GLOB",
                     help="only notes whose repo path matches GLOB (repeatable)")
@@ -381,10 +390,15 @@ def main(argv=None) -> int:
     selected = [u for u in units if u.note.path in chosen_paths]
 
     imp = Importer(units, index, authors, state, None, kind=cfg.get("kind", "thread"),
-                   publish_note=cfg.get("publish_note"), republish_note=cfg.get("republish_note"))
+                   publish_note=cfg.get("publish_note"),
+                   republish_note=args.republish_note or cfg.get("republish_note"),
+                   ai_bylines=cfg.get("ai_bylines"))
     if args.update_attribution:
         selected = [u for u in selected if u.key in state.items
                     and state.items[u.key].get("byline_sha") != C.sha(imp.byline(u))]
+
+    if args.max_items is not None:
+        selected = selected[: args.max_items]
 
     if not args.quiet_stats:
         print(f"== corpus ({args.root}) ==")
@@ -427,7 +441,13 @@ def main(argv=None) -> int:
         print("BLYG_TOKEN is not set.", file=sys.stderr)
         return 2
     imp.client = BlygClient(api_base, token, write_interval=interval)
+    before = {u.key: state.items.get(u.key, {}).get("published_version") for u in selected}
     imp.sync(selected, publish=args.publish, republish_published=args.update_attribution)
+    if args.ids_out:
+        changed = sorted({state.items[k]["id"] for k, v in before.items()
+                          if k in state.items and v and state.items[k].get("published_version") != v})
+        args.ids_out.write_text("".join(i + "\n" for i in changed))
+        print(f"republished ids: {len(changed)} -> {args.ids_out}")
     c = imp.counts
     print(f"\ndone: created {c['create']}, patched {c['patch']}, published {c['publish']}, errors {c['error']}")
     for e in imp.errors[:20]:

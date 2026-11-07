@@ -1,7 +1,10 @@
 {
   "_comment": "Defaults for blyg_import.py. Paths are relative to the repo root. BLYG_API_BASE / BLYG_TOKEN come from the environment.",
   "api_base": "https://blyg.worldmachines.org/api",
-  "include": ["raw-notes/**/*.md", "wiki/**/*.md"],
+  "include": [
+    "raw-notes/**/*.md",
+    "wiki/**/*.md"
+  ],
   "exclude": [],
   "kind": "thread",
   "max_chars": 100000,
@@ -10,5 +13,12 @@
   "contributions_dir": "raw-notes/commons/contributions",
   "write_interval_seconds": 1.1,
   "publish_note": null,
-  "republish_note": "Updated from the World Machines notes repository."
+  "republish_note": "Updated from the World Machines notes repository.",
+  "ai_bylines": {
+    "_comment": "Repo-path prefix -> disclosure line for notes written by an AI ingestion pipeline (not by a member). Contributions and the glossary are human-written and are not listed.",
+    "raw-notes/commons/reading/": "*Reading note written by AI from the group's shared reading, not by a member.*",
+    "raw-notes/commons/entities/": "*Written by AI from the group's shared reading notes, not by a member.*",
+    "raw-notes/commons/summaries/": "*Written by AI from the group's shared reading notes, not by a member.*",
+    "raw-notes/commons/synthesis/": "*Written by AI from the group's shared reading notes, not by a member.*"
+  }
 }

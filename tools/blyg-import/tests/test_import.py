@@ -189,6 +189,24 @@ class AttributionTest(unittest.TestCase):
         n = note("raw-notes/commons/reading/b/x.md", "---\nauthor: \"vgr\"\n---\n# E\n")
         self.assertEqual(C.render_byline(AUTHORS.author_for(n)), "")
 
+    def test_ai_byline_for_pipeline_notes_only(self):
+        lines = {"raw-notes/commons/reading/": "*AI reading*", "raw-notes/commons/synthesis/": "*AI canon*",
+                 "_comment": "ignored"}
+        self.assertEqual(C.ai_byline("raw-notes/commons/reading/book/ch1.md", lines), "*AI reading*")
+        self.assertEqual(C.ai_byline("raw-notes/commons/synthesis/x.md", lines), "*AI canon*")
+        for p in ("raw-notes/commons/glossary/x.md", "raw-notes/commons/contributions/e/e-p01.md",
+                  "raw-notes/aneesh/x.md", "wiki/x.md"):
+            self.assertEqual(C.ai_byline(p, lines), "", p)
+
+    def test_real_config_labels_the_four_pipeline_areas(self):
+        cfg = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_text())
+        keys = sorted(k for k in cfg["ai_bylines"] if not k.startswith("_"))
+        self.assertEqual(keys, ["raw-notes/commons/entities/", "raw-notes/commons/reading/",
+                                "raw-notes/commons/summaries/", "raw-notes/commons/synthesis/"])
+        for k in keys:
+            self.assertIn("AI", cfg["ai_bylines"][k])
+            self.assertIn("not by a member", cfg["ai_bylines"][k])
+
     def test_byline_placed_under_title(self):
         notes, units, index = corpus(("raw-notes/aneesh/x.md", "# X\n\nBody"))
         r = C.Renderer(index, C.units_by_note(units))

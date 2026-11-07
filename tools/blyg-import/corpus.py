@@ -241,6 +241,20 @@ def render_byline(author: Optional[dict]) -> str:
     return f"*By [{name}]({url})*" if url else f"*By {name}*"
 
 
+def ai_byline(path: str, ai_bylines: Optional[dict]) -> str:
+    """The disclosure line for a note an AI pipeline wrote, or "" when the note isn't one.
+
+    `ai_bylines` maps a repo-path prefix (e.g. "raw-notes/commons/reading/") to its line. Members'
+    own notes, their contributions and the hand-kept glossary match no prefix and get no line.
+    """
+    for prefix, line in (ai_bylines or {}).items():
+        if prefix.startswith("_"):
+            continue
+        if path.startswith(prefix):
+            return line
+    return ""
+
+
 def sha(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
