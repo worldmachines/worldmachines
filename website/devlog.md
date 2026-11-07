@@ -5,6 +5,9 @@
   instead of writing an entry here.
 -->
 
+## 2026-11-07 · aneesh (2)
+The blyg's front page now runs a weekly rhythm. Monday keeps the featured note; Tuesday to Sunday the front page links to that day's series post: an open question from a member's notes with the notes that bear on it, a concept dossier (Legibility first), a book companion, two members' notes side by side, a term traced through several members' notes, and on Sunday an I Ching cast, done the WM-Divinations way, applied to an open question. Each post quotes the notes verbatim as checked partial quotes, adds one or two machine-written passages disclosed as generated, and is filed into its own public hopper (`/h/questions/`, `/h/concepts/` and so on). A series day uses at most two of the front-page token's AI calls, and if a post can't be finished the page shows the featured note and the next morning's run finishes the draft.
+
 ## 2026-11-07 · aneesh
 The 1,809 notes in the blyg's shared reading that were written by AI ingestion pipelines (reading notes, entities, summaries and synthesis) now say so under their title: "Written by AI from the group's shared reading notes, not by a member." Members' own notes, their contributions and the glossary are unchanged. The relabelled versions were dated back beside their September originals, so the feed wasn't flooded. Florian's, Patrick's and Mike Casey's blygs are now in the author list, and Florian's and Patrick's notes link to their blygs.
 

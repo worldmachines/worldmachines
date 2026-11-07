@@ -3,22 +3,26 @@
 # names it. See website/scripts/blyg_front.py. Speaks Studio 0.51's private API
 # (contract 5.2.0).
 #
-#   06:30 UTC  daily run, after the 06:00 blyg-sync digest: an AI picks the
-#              featured note and the "Did you know" hooks (at most once a UTC
-#              day), and the page is republished.
+#   06:30 UTC  daily run, after the 06:00 blyg-sync digest: the featured note
+#              (Mondays) or the day's series post (Tue-Sun: questions,
+#              concepts, books, side-by-side, terms, oracle; blyg_series.py)
+#              and the "Did you know" hooks, at most once a UTC day, and the
+#              page is republished. Series posts are their own threads, filed
+#              into /h/<series>/.
 #   18:30 UTC  members-only run, after the 18:00 digest: keeps the featured
 #              block, refreshes "From the members"; republishes only if the
 #              text changed.
 #
-# Commits only tools/blyg-front/history.json (what was featured when, so a note
-# is not reused for 90 days).
+# Commits only tools/blyg-front/history.json (what was featured or posted when,
+# so a note or series subject is not reused for 90 days).
 #
 # Setup:
 #   var BLYG_FRONT_ID          the thread id printed by the one-time
 #                              `python scripts/blyg_front.py --create`
 #   secret BLYG_FRONT_TOKEN    optional: a Studio REST token of its own (owner:read
-#                              owner:draft owner:publish). Its own grant, so its one
-#                              daily AI call is not counted against the digest
+#                              owner:draft owner:publish, plus owner:manage so series
+#                              posts are filed into their hoppers). Its own grant, so its
+#                              1-2 daily AI calls are not counted against the digest
 #                              token's per-grant AI limit. Falls back to BLYG_TOKEN.
 #   secret CF_AI_TOKEN, CLOUDFLARE_ACCOUNT_ID   Workers AI REST (already set)
 #   var BLYG_API_BASE          optional, default https://blyg.worldmachines.org/api

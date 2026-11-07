@@ -8,8 +8,11 @@ list to /posts/. The operator sets that once; this script never touches it.
 
 Sections:
   1. Welcome: what World Machines is, live counts, the main links.
-  2. Today's featured note: chosen by a language model from a deterministic
-     shortlist, with a 120-180-word blurb disclosed as generated.
+  2. Today's featured note (Mondays, and any day the series post fails): an
+     author-first pick with a 120-180-word blurb disclosed as generated. On
+     Tuesday to Sunday the block is "Today's series" instead: the day's series
+     post (scripts/blyg_series.py), its title, a short teaser written here
+     without any AI call, and a link. See "The weekly rhythm" below.
   3. Did you know: 4-6 one-line hooks from other shortlisted notes. Each hook
      is an `impyrt` scope (generated elsewhere, disclosed as generated); the
      link to its note sits outside the scope, because Studio strips bracket
@@ -46,8 +49,23 @@ How the featured note is chosen:
     `impyrt`; if that fails too, the note's own summary is quoted, undisclosed
     because nothing generated it here.
 
-The featured note changes at most once a UTC day (the history file is the
-guard). A run that is not choosing (the evening run, or a re-run on the same
+The weekly rhythm (blyg_series.py), by the UTC weekday of the choosing run:
+  Mon featured note · Tue open questions · Wed concept dossier · Thu book
+  companion · Fri side by side · Sat term watch · Sun oracle cast.
+  Each series post is its own thread with partial quotes of the notes and one
+  or two TK scopes, published once and filed into a public hopper per series
+  (/h/questions/, /h/concepts/, /h/books/, /h/side-by-side/, /h/terms/,
+  /h/oracle/). Only the choosing run builds one. On a series day the page
+  makes no blurb call of its own, so the token spends at most 2 blyg TK calls
+  for the series (RUN_TK_BUDGET caps a run at 5, of the token's 10 a day). If
+  the post cannot be published (no subject, budget spent, provider error) the
+  page shows the featured note, and the draft is finished by the next choosing
+  run. The "Did you know" hooks stay daily. History day entries gain
+  "series": {type, id, title, subject, sources, author, published}; each
+  series excludes its own subjects for 90 days.
+
+The featured block changes at most once a UTC day (the history file is the
+guard: a day entry with `chosen_by`). A run that is not choosing (the evening run, or a re-run on the same
 day) keeps the featured and did-you-know block exactly as it is in the working
 copy and refreshes the other sections. The thread is republished only when its
 text changed. Every publish is one feed.xml entry; Studio has no way to keep a
@@ -58,10 +76,16 @@ Usage (from website/):
   python scripts/blyg_front.py --create           # first run: create + publish, print the id
   python scripts/blyg_front.py                    # daily: update thread BLYG_FRONT_ID
   python scripts/blyg_front.py --members-only     # refresh members/explore; never chooses
+  python scripts/blyg_front.py --dry-run --no-ai --series-only concepts --date 2026-11-11
+                                                  # print one series post; offline without a token
+  python scripts/blyg_front.py --series-only books   # build, publish and file one series post now
+  python scripts/blyg_front.py --no-series        # the featured note whatever the weekday
 
 Environment:
-  BLYG_FRONT_TOKEN  Studio REST token (owner:read owner:draft owner:publish); a
-                    separate token is its own grant, so its AI call does not
+  BLYG_FRONT_TOKEN  Studio REST token (owner:read owner:draft owner:publish, and
+                    owner:manage to create the series hoppers and file posts into
+                    them; without it posts are published but not filed); a
+                    separate token is its own grant, so its AI calls do not
                     count against the digest token's per-grant AI limit.
   BLYG_TOKEN        used when BLYG_FRONT_TOKEN is not set
   BLYG_API_BASE     default https://blyg.worldmachines.org/api ({mount}/api; Studio 0.51,
@@ -108,6 +132,8 @@ HISTORY_PATH = REPO / 'tools' / 'blyg-front' / 'history.json'
 
 FRONT_TITLE = 'World Machines'
 FEATURED_HEADING = "## Today's featured note"
+SERIES_HEADING = "## Today's series: "   # replaces the featured note on series days (blyg_series)
+BLOCK_START = re.compile(r"^## Today's (?:featured note|series: )", re.M)
 DYK_HEADING = '## Did you know…'
 DYK_FALLBACK_HEADING = '## From the notes'
 MEMBERS_HEADING = '## From the members'
@@ -201,11 +227,12 @@ class Corpus:
         self.state = state if state is not None else json.loads(Path(state_path).read_text()).get('items', {})
         self.authors = authors or C.Authors.load(Path(authors_path))
         self.index = C.LinkIndex(self.notes)
+        self.outbound = {}   # path → paths of the other notes it links to
         self.inbound = self._inbound()
         self._plain = {}
 
     def _inbound(self):
-        """path → number of distinct other notes that link to it."""
+        """path → number of distinct other notes that link to it (and fills `outbound`)."""
         sources = {}
         for n in self.notes:
             targets = set()
@@ -225,6 +252,7 @@ class Corpus:
                     res = self.index.resolve(C.parse_link(inner).target, n)
                     if res.note is not None and res.note is not n:
                         targets.add(res.note.path)
+            self.outbound[n.path] = targets
             for t in targets:
                 sources[t] = sources.get(t, 0) + 1
         return sources
@@ -819,12 +847,27 @@ def assemble(welcome, featured_block, members, explore):
 
 
 def featured_block_of(content_md):
-    """The featured + did-you-know block of an existing page, verbatim, or None."""
-    start = content_md.find(FEATURED_HEADING)
+    """The featured (or series) + did-you-know block of an existing page, verbatim, or None."""
+    m = BLOCK_START.search(content_md)
     end = content_md.find(MEMBERS_HEADING)
-    if start == -1 or end == -1 or end < start:
+    if not m or end == -1 or end < m.start():
         return None
-    return content_md[start:end].strip('\n')
+    return content_md[m.start():end].strip('\n')
+
+
+def series_section(series, site):
+    """The front page's block on a series day: the post's title, a teaser written here (no AI), a link."""
+    import blyg_series as S
+    name = S.TYPES[series['type']][0]
+    return '\n'.join([
+        SERIES_HEADING + name,
+        '',
+        f"**{link(series['id'], series['title'])}**",
+        '',
+        safe_generated(series['teaser']),
+        '',
+        f"{link(series['id'], 'Read today’s post →')} · [Every post in the series]({norm_base(site)}h/{series['type']}/)",
+    ])
 
 
 # ---------------------------------------------------------------- blyg reads
@@ -919,7 +962,7 @@ def unlink(content_md, ids):
 class FrontPage:
     def __init__(self, corpus, *, api=None, ai=None, site, history, history_path=HISTORY_PATH, front_id=None,
                  slug=DEFAULT_SLUG, blurb_via='tk', dry_run=False, members_only=False, create=False, now=None,
-                 save=True):
+                 save=True, series=True, texts=None):
         self.corpus = corpus
         self.api = api
         self.ai = ai
@@ -935,7 +978,10 @@ class FrontPage:
         self.now = now or datetime.now(timezone.utc)
         self.today = self.now.date()
         self.save = save
-        self.report = {'ai_calls': 0, 'blyg_generate_calls': 0, 'published': False, 'chosen_by': None, 'blurb': None}
+        self.series = series
+        self.texts = texts
+        self.report = {'ai_calls': 0, 'blyg_generate_calls': 0, 'published': False, 'chosen_by': None, 'blurb': None,
+                       'series': None}
 
     # -- sections that are not chosen
     def posts_path(self):
@@ -1076,19 +1122,24 @@ class FrontPage:
         explore = explore_section(self.corpus, self.site, posts_path)
 
         kept = featured_block_of(existing.get('contentMd') or '') if existing else None
-        chosen_today = self.today.isoformat() in self.history.get('days', {})
+        chosen_today = bool(self.history.get('days', {}).get(self.today.isoformat(), {}).get('chosen_by'))
         choose = self.create or (not self.members_only and not (chosen_today and kept))
         if not choose and not kept:
             log('  the page has no featured block to keep; nothing to refresh until the daily run')
             return self.report
 
-        pick = None
+        pick = series = None
         if choose:
             pick = self.choose()
             dyk_md = dyk_section(pick['dyk'], self.corpus)
-            use_tk = self.blurb_via == 'tk' and not self.dry_run and self.api is not None
-            blurb = tk_blurb(pick['featured'], self.corpus) if use_tk else self.static_blurb(pick['featured'])
-            block = featured_section(pick['featured'], self.corpus, blurb) + '\n\n' + dyk_md
+            series = self.series_post()
+            if series and (series['published'] or self.dry_run):
+                block = series_section(series, self.site) + '\n\n' + dyk_md
+                use_tk = False
+            else:
+                use_tk = self.blurb_via == 'tk' and not self.dry_run and self.api is not None
+                blurb = tk_blurb(pick['featured'], self.corpus) if use_tk else self.static_blurb(pick['featured'])
+                block = featured_section(pick['featured'], self.corpus, blurb) + '\n\n' + dyk_md
         else:
             log('  keeping today\'s featured note and hooks as they are')
             block = kept
@@ -1099,7 +1150,7 @@ class FrontPage:
             log('----- front page markdown -----')
             log(content)
             log('-------------------------------')
-            if pick and self.blurb_via == 'tk':
+            if pick and self.blurb_via == 'tk' and not series:
                 log('(dry run: the live run generates the featured blurb on the blyg from a TK scope whose source '
                     'is the featured note; the text above is the Workers AI preview of it)')
             return self.report
@@ -1119,12 +1170,14 @@ class FrontPage:
         if use_tk:
             content = self.generate_featured(item_id, content, pick, (welcome, members, explore, dyk_md))
 
-        note = (f"minor: today's featured note is {label(pick['featured'].title, 80)}" if pick
+        shown = series if series and series['published'] else None
+        note = (f"minor: today's series post is {label(shown['title'], 80)}" if shown
+                else f"minor: today's featured note is {label(pick['featured'].title, 80)}" if pick
                 else 'minor: member posts refreshed')
         self.publish(item_id, note, content)
         self.report['item_id'] = item_id
         if pick:
-            self.record(pick)
+            self.record(pick, series)
         if self.create:
             log(f'\nFront page thread id: {item_id}')
             log('Set it as the front page in Studio (Settings → Front page) or with '
@@ -1132,18 +1185,69 @@ class FrontPage:
                 f'BLYG_FRONT_ID={item_id}.')
         return self.report
 
-    def record(self, pick):
+    def series_post(self):
+        """Today's series post (blyg_series), built and published before the page; None on a featured-note day.
+
+        Drafts earlier runs left are resumed first, within the run's blyg AI budget. A series that cannot be
+        published today (no subject, budget, provider) returns None or an unpublished result, and the page
+        shows the featured note instead.
+        """
+        import blyg_series as S
+        stype = S.series_for(self.today)
+        if not self.series or self.create:
+            return None
+        runner = S.Runner(self.corpus, api=self.api, ai=self.ai, site=self.site, history=self.history,
+                          today=self.today, dry_run=self.dry_run, texts=self.texts, report=self.report)
+        if stype is None:
+            if self.api and not self.dry_run:
+                runner.resume(runner.recent_series_items(), reserve=1)   # the featured blurb's one call
+            return None
+        result = runner.run_today(stype)
+        if result and not result['published'] and not self.dry_run:
+            log('  the series post is not published today; the page shows the featured note')
+        return result
+
+    def record(self, pick, series=None):
         c = self.corpus
-        self.history.setdefault('days', {})[self.today.isoformat()] = {
-            'featured': {'path': pick['featured'].path, 'id': c.item_id(pick['featured'].path),
-                         'title': pick['featured'].title},
+        entry = {
             'dyk': [{'path': n.path, 'id': c.item_id(n.path)} for n, _ in pick['dyk']],
             'chosen_by': pick['chosen_by'],
             'blurb': self.report['blurb'],
         }
+        if not (series and series['published']):
+            entry['featured'] = {'path': pick['featured'].path, 'id': c.item_id(pick['featured'].path),
+                                 'title': pick['featured'].title}
+        series = series or self.report.get('series')
+        if series and not self.dry_run:
+            entry['series'] = series_record(series)
+        self.history.setdefault('days', {})[self.today.isoformat()] = dict(
+            sorted(entry.items(), key=lambda kv: ['featured', 'dyk', 'series', 'chosen_by', 'blurb'].index(kv[0])))
         if self.save:
             save_history(self.history, self.history_path, self.today)
             log(f'  history: {self.history_path}')
+
+
+def series_record(series):
+    """A series result as history keeps it."""
+    return {k: series.get(k) for k in ('type', 'id', 'title', 'subject', 'subject_title', 'sources', 'author',
+                                       'published')}
+
+
+def run_series_only(stype, corpus, api, ai, site, history, history_path, now, dry_run, save=True):
+    """--series-only: one series post (any weekday); the front page is not touched."""
+    import blyg_series as S
+    today = (now or datetime.now(timezone.utc)).date()
+    report = {'blyg_generate_calls': 0, 'series': None, 'published': False}
+    runner = S.Runner(corpus, api=api, ai=ai, site=site, history=history, today=today, dry_run=dry_run,
+                      report=report)
+    result = runner.run_today(stype)
+    if result and not dry_run:
+        day = history.setdefault('days', {}).setdefault(today.isoformat(), {})
+        day['series'] = series_record(result)
+        report['published'] = result['published']
+        if save:
+            save_history(history, history_path, today)
+    return report
 
 
 def main(argv=None, transport=urllib_transport, ai_transport=urllib_transport, corpus=None, now=None):
@@ -1156,9 +1260,18 @@ def main(argv=None, transport=urllib_transport, ai_transport=urllib_transport, c
     p.add_argument('--no-ai', action='store_true', help='never call Workers AI (deterministic picks)')
     p.add_argument('--history', default=str(HISTORY_PATH))
     p.add_argument('--state', default=str(STATE_PATH), help='tools/blyg-import state file (note → item id)')
+    p.add_argument('--series-only', metavar='TYPE',
+                   choices=('questions', 'concepts', 'books', 'side-by-side', 'terms', 'oracle'),
+                   help='build (and unless --dry-run, publish) one series post; the front page is not touched')
+    p.add_argument('--no-series', action='store_true', help='featured note every day (no series posts)')
+    p.add_argument('--date', help='YYYY-MM-DD: pretend the run happens on this UTC day (with --dry-run only)')
     a = p.parse_args(argv)
     if a.create and a.members_only:
         p.error('--create and --members-only do not go together')
+    if a.date:
+        if not a.dry_run:
+            p.error('--date only goes with --dry-run')
+        now = datetime.combine(date.fromisoformat(a.date), datetime.min.time(), timezone.utc).replace(hour=6, minute=30)
 
     token = os.environ.get('BLYG_FRONT_TOKEN') or os.environ.get('BLYG_TOKEN')
     api_base = os.environ.get('BLYG_API_BASE') or DEFAULT_API_BASE
@@ -1167,7 +1280,7 @@ def main(argv=None, transport=urllib_transport, ai_transport=urllib_transport, c
     if not token and not a.dry_run:
         sys.exit('ERROR: BLYG_FRONT_TOKEN (or BLYG_TOKEN) is not set. Mint a Studio REST token (Studio → More → '
                  'Client access) with owner:read owner:draft owner:publish.')
-    if not a.dry_run and not a.create and not front_id:
+    if not a.dry_run and not a.create and not front_id and not a.series_only:
         sys.exit('ERROR: no front-page thread id. Run --create once, then set the repo variable BLYG_FRONT_ID '
                  '(or pass --id).')
     api = BlygApi(api_base, token, transport=transport, dry_run=a.dry_run) if token else None
@@ -1181,10 +1294,21 @@ def main(argv=None, transport=urllib_transport, ai_transport=urllib_transport, c
         log('Loading the notes corpus')
         corpus = Corpus(state=json.loads(Path(a.state).read_text()).get('items', {}))
         log(f'  {len(corpus.notes)} notes, {len(corpus.state)} blyg items')
+    if a.series_only:
+        try:
+            report = run_series_only(a.series_only, corpus, api, ai, site, load_history(a.history), a.history, now,
+                                     a.dry_run)
+        except AuthError as e:
+            print(f'::error::blyg token refused (HTTP {e.status}); mint a new Studio REST token', file=sys.stderr)
+            sys.exit(str(e))
+        report['ai_calls'] = ai.calls if ai else 0
+        log(f"AI use this run: {report['ai_calls']} Workers AI REST call(s), "
+            f"{report['blyg_generate_calls']} blyg TK call(s); published: {report['published']}")
+        return report
     front = FrontPage(
         corpus, api=api, ai=ai, site=site, history=load_history(a.history), history_path=a.history,
         front_id=front_id, slug=os.environ.get('BLYG_HOPPER_SLUG') or DEFAULT_SLUG, blurb_via=a.blurb_via,
-        dry_run=a.dry_run, members_only=a.members_only, create=a.create, now=now,
+        dry_run=a.dry_run, members_only=a.members_only, create=a.create, now=now, series=not a.no_series,
     )
     try:
         report = front.run()
