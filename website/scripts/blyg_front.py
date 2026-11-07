@@ -19,14 +19,26 @@ Sections:
   5. Explore: most-linked notes, the glossary, books read, members' notes.
 
 How the featured note is chosen:
-  * Shortlist (deterministic): published notes with real prose (length limits),
-    no index/README/stub/multi-part notes, nothing featured or used as a
-    "did you know" in the last 90 days (tools/blyg-front/history.json), scored
+  * Eligible: published notes with real prose (length limits), no
+    index/README/stub/multi-part notes, nothing featured or used as a "did you
+    know" in the last 90 days (tools/blyg-front/history.json). Each is scored
     by area (synthesis, glossary, member notes > reading notes > entities) and
-    inbound wikilinks, then spread across books, members and commons areas.
-  * One Workers AI call (REST, Gemma 4) picks the featured note and writes the
-    hooks from ~30 candidates. Its JSON is validated; anything unusable falls
-    back to the deterministic order, so the page still updates.
+    inbound wikilinks.
+  * Authors first, then posts. Every note belongs to one author: its member,
+    or "commons" for the shared notes no one is named on (reading notes,
+    summaries, synthesis, glossary, entities). A randomizer seeded by the date
+    picks an author uniformly from those with an eligible note, skipping
+    yesterday's featured author when anyone else is left, then one of that
+    author's notes weighted by score. One prolific author therefore gets one
+    author's share of the days, not a share proportional to how much they wrote.
+  * Hook candidates (~30) are dealt round-robin across authors in a shuffled
+    order, then spread across books and areas. On the page, a member gets at
+    most one hook and commons at most two. The featured author's notes are
+    used only when nothing else fills the minimum.
+  * One Workers AI call (REST, Gemma 4) writes the hooks from those candidates.
+    Its JSON is validated; anything unusable falls back to the deterministic
+    order, so the page still updates. The model never picks the featured
+    note.
   * The blurb is a blyg TK scope whose source is the featured note (one call
     on the blyg's shared AI budget), so the published version records which
     note and model produced it. If the blyg refuses (budget spent, provider
@@ -67,6 +79,7 @@ import argparse
 import json
 import math
 import os
+import random
 import re
 import sys
 from datetime import date, datetime, timedelta, timezone
@@ -104,6 +117,8 @@ EXCLUDE_DAYS = 90       # a note featured or used as a hook stays out this long
 HISTORY_KEEP_DAYS = 400
 SHORTLIST_SIZE = 30
 PER_GROUP = 2           # at most this many shortlisted notes per book / member / commons area
+COMMONS = 'commons'     # the author key of the shared notes no member is named on
+HOOKS_PER_AUTHOR = {COMMONS: 2}   # hooks per author on one page; members get 1
 MAX_READING = 14        # reading notes in a shortlist (they are half the corpus)
 DYK_MIN, DYK_MAX = 4, 6
 LEN_MIN, LEN_MAX = 1200, 16000   # plain-text characters
@@ -240,12 +255,22 @@ class Corpus:
         area = self.area(note)
         if area == 'reading':
             return 'book:' + p[3]
-        if area == 'member':
-            return 'member:' + p[1]
+        key = self.author_key(note)
+        if key != COMMONS:
+            return key  # a member's own notes and their contributions are one bucket
         if area == 'contributions':
-            who = self.authors.author_for(note)
-            return 'member:' + (who or {}).get('name', p[3])
+            return 'contribution:' + (p[3] if len(p) > 3 else p[-1])
         return 'commons:' + area
+
+    def author_key(self, note):
+        """Who a note counts as for fairness: 'member:<name>', or COMMONS for shared notes."""
+        if self.area(note) == 'member' or self.area(note) == 'contributions':
+            who = self.authors.author_for(note)
+            if who and who.get('name'):
+                return 'member:' + who['name']
+            if self.area(note) == 'member':
+                return 'member:' + note.path.split('/')[1]
+        return COMMONS
 
     def author(self, note):
         who = self.authors.author_for(note)
@@ -359,25 +384,102 @@ class Corpus:
         return [(self.by_path[p], c) for c, p in rows[:n]]
 
 
-def shortlist(corpus, recent_paths, size=SHORTLIST_SIZE, per_group=PER_GROUP, max_reading=MAX_READING):
-    """The candidates the model chooses from, best first, spread across groups."""
-    pool = [n for n in corpus.notes if n.path not in recent_paths and corpus.eligible(n) is None]
-    pool.sort(key=lambda n: (-corpus.score(n), n.path))
+def eligible_pool(corpus, recent_paths):
+    return [n for n in corpus.notes if n.path not in recent_paths and corpus.eligible(n) is None]
+
+
+def by_author(corpus, notes, rng=None):
+    """{author key: notes}, each list best first; with `rng`, a score-weighted random order instead."""
+    out = {}
+    for n in notes:
+        out.setdefault(corpus.author_key(n), []).append(n)
+    for key, mine in out.items():
+        if rng is None:
+            mine.sort(key=lambda n: (-corpus.score(n), n.path))
+        else:
+            # Efraimidis–Spirakis: sorting by u ** (1 / weight) is a weighted shuffle.
+            mine.sort(key=lambda n: (n.path,))
+            keyed = [(rng.random() ** (1.0 / max(corpus.score(n), 1e-6)), n) for n in mine]
+            keyed.sort(key=lambda kv: -kv[0])
+            mine[:] = [n for _, n in keyed]
+    return out
+
+
+def day_rng(today):
+    """The same picks for every run on one UTC day, different picks across days."""
+    return random.Random(f'wm-front:{today.isoformat()}')
+
+
+def pick_featured(corpus, recent_paths, rng, avoid_author=None):
+    """Authors first: choose an author uniformly, then one of their notes weighted by score."""
+    queues = by_author(corpus, eligible_pool(corpus, recent_paths), rng)
+    if not queues:
+        return None
+    authors = sorted(queues)
+    if avoid_author in authors and len(authors) > 1:
+        authors.remove(avoid_author)
+    author = rng.choice(authors)
+    return queues[author][0]
+
+
+def shortlist(corpus, recent_paths, size=SHORTLIST_SIZE, per_group=PER_GROUP, max_reading=MAX_READING,
+              rng=None, exclude=()):
+    """Hook candidates, dealt round-robin across authors, then capped per book / area.
+
+    Without `rng` the order is deterministic: authors by their best note, each author's notes best first.
+    """
+    skip = set(recent_paths) | {n.path for n in exclude}
+    queues = by_author(corpus, eligible_pool(corpus, skip), rng)
+    authors = sorted(queues, key=lambda a: (-corpus.score(queues[a][0]), a))
+    if rng is not None:
+        authors = sorted(queues)
+        rng.shuffle(authors)
     picked, per, reading = [], {}, 0
-    for round_ in range(1, per_group + 1):
-        for n in pool:
+    pos = {a: 0 for a in authors}
+    while len(picked) < size and authors:
+        for a in list(authors):
             if len(picked) >= size:
                 break
-            g = corpus.group(n)
-            if n in picked or per.get(g, 0) >= round_:
-                continue
-            if corpus.area(n) == 'reading' and reading >= max_reading:
-                continue
-            picked.append(n)
-            per[g] = per.get(g, 0) + 1
-            reading += corpus.area(n) == 'reading'
-    picked.sort(key=lambda n: (-corpus.score(n), n.path))
+            q = queues[a]
+            while pos[a] < len(q):
+                n = q[pos[a]]
+                pos[a] += 1
+                g = corpus.group(n)
+                if per.get(g, 0) >= per_group:
+                    continue
+                if corpus.area(n) == 'reading' and reading >= max_reading:
+                    continue
+                picked.append(n)
+                per[g] = per.get(g, 0) + 1
+                reading += corpus.area(n) == 'reading'
+                break
+            if pos[a] >= len(q):
+                authors.remove(a)
     return picked
+
+
+def spread_hooks(corpus, entries, featured, limit=None):
+    """Keep at most HOOKS_PER_AUTHOR hooks per author (members 1), the featured author last.
+
+    `entries` is [(note, hook)] in preference order. Notes over the cap are used only when the page would
+    otherwise have fewer than DYK_MIN hooks.
+    """
+    limit = limit or DYK_MAX
+    fa = corpus.author_key(featured)
+    count = {fa: 1}
+    kept, spare = [], []
+    for n, hook in entries:
+        a = corpus.author_key(n)
+        if count.get(a, 0) < HOOKS_PER_AUTHOR.get(a, 1) and len(kept) < limit:
+            kept.append((n, hook))
+            count[a] = count.get(a, 0) + 1
+        else:
+            spare.append((n, hook))
+    for e in spare:
+        if len(kept) >= DYK_MIN:
+            break
+        kept.append(e)
+    return kept
 
 
 # ---------------------------------------------------------------- history
@@ -477,21 +579,21 @@ SELECT_SYSTEM = (
 )
 
 
-def selection_prompt(cands, corpus):
+def selection_prompt(featured, cands, corpus):
     lines = [
-        'Choose today\'s featured note and the "Did you know" hooks for the front page from the candidates below.',
+        'Write the "Did you know" hooks for the front page from the candidates below. '
+        f'Today\'s featured note is already chosen ({featured.title}, {corpus.context(featured)}); '
+        'do not write a hook for it.',
         '',
         'Rubric, in order: relevance to World Machines themes (psychohistory, world machines, modernity, '
         'civilizational dynamics, how big systems shape people); surprise (a reader learns something unexpected); '
         'self-containedness (it makes sense without its neighbours); variety (different books, members and topics).',
         '',
         'Answer with one JSON object and nothing else:',
-        '{"featured": "<key>", "why": "<one sentence>", '
-        '"did_you_know": [{"key": "<key>", "hook": "that <fact>"}, ...]}',
+        '{"did_you_know": [{"key": "<key>", "hook": "that <fact>"}, ...]}',
         '',
-        f'- "featured": the key of the single best note.',
-        f'- "did_you_know": {DYK_MIN} to {DYK_MAX} entries, each a different note, none of them the featured one, '
-        'as varied as you can make them.',
+        f'- "did_you_know": {DYK_MIN} to {DYK_MAX} entries, each a different note, from as many different '
+        'authors as you can (one note per member at most).',
         '- Each hook starts with "that", states one surprising, specific fact taken from that candidate\'s excerpt '
         '(never invent one), has at most 25 words, and has no question mark, brackets, links or markdown.',
         '',
@@ -529,8 +631,11 @@ def clean_hook(hook):
     return h
 
 
-def validate_selection(data, cands):
-    """{'featured': Note, 'dyk': [(Note, hook)], 'why': str} from the model's JSON, or raise ValueError."""
+def validate_selection(data, cands, featured, corpus):
+    """{'featured': Note, 'dyk': [(Note, hook)], 'why': str} from the model's JSON, or raise ValueError.
+
+    The featured note is chosen before the model is asked (authors first); the model writes hooks only.
+    """
     if not isinstance(data, dict):
         raise ValueError('answer is not an object')
     keys = {f'C{i:02d}': n for i, n in enumerate(cands, 1)}
@@ -542,10 +647,7 @@ def validate_selection(data, cands):
         m = re.match(r'^C?(\d{1,2})$', k)
         return keys.get(f'C{int(m.group(1)):02d}') if m else None
 
-    featured = note_for(data.get('featured'))
-    if featured is None:
-        raise ValueError(f'featured {data.get("featured")!r} is not a candidate key')
-    dyk, seen = [], {featured.path}
+    entries, seen = [], {featured.path}
     for entry in data.get('did_you_know') or []:
         if not isinstance(entry, dict):
             continue
@@ -554,31 +656,22 @@ def validate_selection(data, cands):
         if n is None or hook is None or n.path in seen:
             continue
         seen.add(n.path)
-        dyk.append((n, hook))
-        if len(dyk) == DYK_MAX:
-            break
+        entries.append((n, hook))
+    dyk = spread_hooks(corpus, entries, featured)
     if len(dyk) < DYK_MIN:
         raise ValueError(f'only {len(dyk)} usable did-you-know hooks')
-    why = data.get('why') if isinstance(data.get('why'), str) else ''
-    return {'featured': featured, 'dyk': dyk, 'why': safe_generated(why, 300)}
+    return {'featured': featured, 'dyk': dyk, 'why': ''}
 
 
-def fallback_selection(cands, corpus):
-    """The deterministic picks: the top candidate, then the best of other groups."""
-    featured = cands[0]
+def fallback_selection(cands, corpus, featured):
+    """The deterministic hooks: candidates in their round-robin order, one group each where possible."""
     rest, groups = [], {corpus.group(featured)}
-    for n in cands[1:]:
-        if corpus.group(n) not in groups:
-            rest.append(n)
+    for n in cands:
+        if n.path != featured.path and corpus.group(n) not in groups:
+            rest.append((n, None))
             groups.add(corpus.group(n))
-        if len(rest) == DYK_MAX:
-            break
-    for n in cands[1:]:
-        if len(rest) >= DYK_MIN:
-            break
-        if n not in rest:
-            rest.append(n)
-    return {'featured': featured, 'dyk': [(n, None) for n in rest], 'why': ''}
+    rest += [(n, None) for n in cands if n.path != featured.path and (n, None) not in rest]
+    return {'featured': featured, 'dyk': spread_hooks(corpus, rest, featured), 'why': ''}
 
 
 BLURB_SYSTEM = (
@@ -866,30 +959,48 @@ class FrontPage:
 
     # -- choosing
     def choose(self):
-        cands = shortlist(self.corpus, recent_paths(self.history, self.today))
-        if not cands:
+        c = self.corpus
+        recent = recent_paths(self.history, self.today)
+        rng = day_rng(self.today)
+        avoid = self.previous_featured_author()
+        featured = pick_featured(c, recent, rng, avoid_author=avoid)
+        if featured is None:
             raise SystemExit('ERROR: no eligible notes for the front page (all excluded?)')
-        log(f'Shortlist: {len(cands)} candidates')
+        authors = sorted(by_author(c, eligible_pool(c, recent)))
+        log(f'Authors with eligible notes: {", ".join(authors)}' + (f' (skipping yesterday\'s {avoid})' if avoid else ''))
+        log(f'Featured author: {c.author_key(featured)} → {featured.path}')
+        cands = shortlist(c, recent, rng=rng, exclude=[featured])
+        log(f'Hook shortlist: {len(cands)} candidates')
         for i, n in enumerate(cands, 1):
-            log(f'  C{i:02d} {self.corpus.score(n):5.2f}  {n.path}')
+            log(f'  C{i:02d} {c.score(n):5.2f}  {c.author_key(n):24s} {n.path}')
         pick = None
-        if self.ai:
+        if self.ai and cands:
             try:
-                text = self.ai.chat(SELECT_SYSTEM, selection_prompt(cands, self.corpus), max_tokens=1500)
-                pick = validate_selection(parse_json_object(text), cands)
+                text = self.ai.chat(SELECT_SYSTEM, selection_prompt(featured, cands, c), max_tokens=1500)
+                pick = validate_selection(parse_json_object(text), cands, featured, c)
                 pick['chosen_by'] = 'ai'
             except (AiError, ValueError) as e:
-                log(f'  ! AI selection unusable ({e}); using the deterministic order')
-        else:
+                log(f'  ! AI hooks unusable ({e}); using the deterministic order')
+        elif not self.ai:
             log('  no Workers AI credentials; using the deterministic order')
         if pick is None:
-            pick = fallback_selection(cands, self.corpus)
+            pick = fallback_selection(cands, c, featured)
             pick['chosen_by'] = 'fallback'
         self.report['chosen_by'] = pick['chosen_by']
-        log(f"Featured ({pick['chosen_by']}): {pick['featured'].path}" + (f" — {pick['why']}" if pick['why'] else ''))
+        log(f"Featured: {pick['featured'].path} (hooks: {pick['chosen_by']})")
         for n, hook in pick['dyk']:
-            log(f'  DYK {n.path}: {hook or "(summary line)"}')
+            log(f'  DYK {c.author_key(n):24s} {n.path}: {hook or "(summary line)"}')
         return pick
+
+    def previous_featured_author(self):
+        """The author of the most recent featured note before today, or None."""
+        days = sorted(d for d in self.history.get('days', {}) if d < self.today.isoformat())
+        for d in reversed(days):
+            path = self.history['days'][d].get('featured', {}).get('path')
+            note = self.corpus.by_path.get(path) if path else None
+            if note is not None:
+                return self.corpus.author_key(note)
+        return None
 
     def rest_blurb(self, note):
         if not self.ai:

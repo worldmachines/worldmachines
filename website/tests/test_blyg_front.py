@@ -211,9 +211,8 @@ class FakeAI:
 
 def good_selection(prompt):
     keys = re.findall(r'^\[(C\d\d)\]', prompt, re.M)
-    return json.dumps({'featured': keys[1], 'why': 'it fits',
-                       'did_you_know': [{'key': k, 'hook': f'that fact number {i} is quite surprising indeed'}
-                                        for i, k in enumerate(keys[2:7])]})
+    return json.dumps({'did_you_know': [{'key': k, 'hook': f'that fact number {i} is quite surprising indeed'}
+                                        for i, k in enumerate(keys[:8])]})
 
 
 def run(corpus, studio, ai, history, *, create=False, members_only=False, front_id=None, dry_run=False, now=NOW,
@@ -287,20 +286,32 @@ class SelectionTest(unittest.TestCase):
         self.c = make_corpus()
         self.cands = F.shortlist(self.c, set())
 
+    def note(self, path):
+        return self.c.by_path[path]
+
     def test_valid_answer(self):
-        data = {'featured': 'C02', 'did_you_know': [
-            {'key': 'C01', 'hook': '…that the census made people readable?'},
-            {'key': 'C03', 'hook': 'Did you know that gold became chamber pots'},
-            {'key': 'C02', 'hook': 'that the featured note cannot also be a hook'},
-            {'key': 'C04', 'hook': 'that [[links]] and [TK] grammar are stripped from hooks'},
-            {'key': 'C04', 'hook': 'that a second hook for the same note is dropped'},
+        featured = self.note('raw-notes/sean/reoccupation.md')
+        cands = F.shortlist(self.c, set(), exclude=[featured])
+        key = {n.path: f'C{i:02d}' for i, n in enumerate(cands, 1)}
+        aneesh = key['raw-notes/aneesh/concepts/modernity-machine.md']
+        data = {'did_you_know': [
+            {'key': key['raw-notes/commons/glossary/legibility.md'], 'hook': '…that the census made people readable?'},
+            {'key': key['raw-notes/commons/reading/more-utopia/more-utopia-02.md'],
+             'hook': 'Did you know that gold became chamber pots'},
+            {'key': aneesh, 'hook': 'that [[links]] and [TK] grammar are stripped from hooks'},
+            {'key': aneesh, 'hook': 'that a second hook for the same note is dropped'},
             {'key': 'C99', 'hook': 'that unknown keys are dropped too'},
-            {'key': 'C05', 'hook': 'no leading that, so it is dropped entirely'},
-            {'key': 'C06', 'hook': 'that silver flowed from Potosí to Manila'},
+            {'key': key['raw-notes/florian/drainage.md'], 'hook': 'no leading that, so it is dropped entirely'},
+            {'key': key['raw-notes/florian/drainage.md'], 'hook': 'that drains were funnier than anyone expected'},
+            {'key': key['raw-notes/commons/synthesis/bourgeois.md'], 'hook': 'that diaries turned the self inward'},
         ]}
-        pick = F.validate_selection(data, self.cands)
-        self.assertIs(pick['featured'], self.cands[1])
-        self.assertEqual([n for n, _ in pick['dyk']], [self.cands[0], self.cands[2], self.cands[3], self.cands[5]])
+        pick = F.validate_selection(data, cands, featured, self.c)
+        self.assertIs(pick['featured'], featured)
+        paths = [n.path for n, _ in pick['dyk']]
+        # commons gets two (glossary, utopia); the synthesis note is a third commons hook, so it is held back
+        self.assertEqual(paths, ['raw-notes/commons/glossary/legibility.md',
+                                 'raw-notes/commons/reading/more-utopia/more-utopia-02.md',
+                                 'raw-notes/aneesh/concepts/modernity-machine.md', 'raw-notes/florian/drainage.md'])
         hooks = [h for _, h in pick['dyk']]
         self.assertEqual(hooks[0], 'that the census made people readable')
         self.assertEqual(hooks[1], 'that gold became chamber pots')
@@ -308,11 +319,12 @@ class SelectionTest(unittest.TestCase):
         self.assertNotIn('TK', hooks[2])
 
     def test_rejects_bad_answers(self):
-        for data in ({'featured': 'C77', 'did_you_know': []},
-                     {'featured': 'C01', 'did_you_know': [{'key': 'C02', 'hook': 'that only one is not enough'}]},
+        featured = self.cands[0]
+        for data in ({'did_you_know': []},
+                     {'did_you_know': [{'key': 'C02', 'hook': 'that only one is not enough'}]},
                      ['not', 'an', 'object']):
             with self.assertRaises(ValueError):
-                F.validate_selection(data, self.cands)
+                F.validate_selection(data, self.cands, featured, self.c)
         with self.assertRaises(ValueError):
             F.parse_json_object('I think the best note is C03.')
         self.assertEqual(F.parse_json_object('```json\n{"featured": "C01"}\n```'), {'featured': 'C01'})
@@ -325,7 +337,8 @@ class SelectionTest(unittest.TestCase):
         self.assertTrue(r['published'])
         md = next(iter(studio.items.values()))['contentMd']
         self.assertIn(F.DYK_FALLBACK_HEADING, md)
-        self.assertIn(self.c.item_id(self.cands[0].path), md.split(F.DYK_FALLBACK_HEADING)[0])
+        expected = F.pick_featured(self.c, set(), F.day_rng(NOW.date()))
+        self.assertIn(self.c.item_id(expected.path), md.split(F.DYK_FALLBACK_HEADING)[0])
 
     def test_ai_http_error_falls_back(self):
         studio = FakeStudio()
@@ -336,6 +349,86 @@ class SelectionTest(unittest.TestCase):
     def test_no_ai_credentials(self):
         r = run(self.c, FakeStudio(), None, {'days': {}}, create=True)
         self.assertEqual((r['chosen_by'], r['ai_calls']), ('fallback', 0))
+
+
+def prolific_corpus(n_mine=200):
+    """One member with many notes, two with one each, and a little commons."""
+    notes = [note(f'raw-notes/aneesh/n/n{i:03d}.md', f'Aneesh note {i}', prose(f'topic {i}')) for i in range(n_mine)]
+    notes += [note('raw-notes/sean/reoccupation.md', 'Reoccupation', prose('vacant position')),
+              note('raw-notes/florian/drainage.md', 'Hilarious drainage', prose('drain')),
+              note('raw-notes/commons/synthesis/bourgeois.md', 'Bourgeois inwardness', prose('diary')),
+              note('raw-notes/commons/contributions/essay-20260504-abcdef/essay-20260504-abcdef-p01.md',
+                   'An essay by Aneesh', prose('essay'), author='aneesh')]
+    state = {n.path: {'id': rid(i), 'published_version': 1} for i, n in enumerate(notes)}
+    authors = C.Authors(authors={'aneesh': {'name': 'Aneesh Sathe', 'blyg': None},
+                                 'sean': {'name': 'Sean Stevenson', 'blyg': None},
+                                 'florian': {'name': 'Florian Lohse', 'blyg': None}}, handles={})
+    return F.Corpus(notes=notes, state=state, authors=authors, config_path=None)
+
+
+class AuthorFirstTest(unittest.TestCase):
+    def setUp(self):
+        self.c = prolific_corpus()
+
+    def test_contributions_count_as_their_member(self):
+        essay = self.c.by_path['raw-notes/commons/contributions/essay-20260504-abcdef/essay-20260504-abcdef-p01.md']
+        mine = self.c.by_path['raw-notes/aneesh/n/n000.md']
+        self.assertEqual(self.c.author_key(essay), 'member:Aneesh Sathe')
+        self.assertEqual(self.c.group(essay), self.c.group(mine))
+        self.assertEqual(self.c.author_key(self.c.by_path['raw-notes/commons/synthesis/bourgeois.md']), F.COMMONS)
+
+    def test_featured_authors_are_uniform_not_proportional(self):
+        counts = {}
+        for d in range(400):
+            day = NOW.date() + F.timedelta(days=d)
+            n = F.pick_featured(self.c, set(), F.day_rng(day))
+            a = self.c.author_key(n)
+            counts[a] = counts.get(a, 0) + 1
+        self.assertEqual(set(counts), {'member:Aneesh Sathe', 'member:Sean Stevenson', 'member:Florian Lohse',
+                                       F.COMMONS})
+        # 201 of 204 notes are Aneesh's; author-first gives him about a quarter of the days.
+        for a, k in counts.items():
+            self.assertTrue(60 <= k <= 140, counts)
+
+    def test_same_day_same_pick(self):
+        a = F.pick_featured(self.c, set(), F.day_rng(NOW.date()))
+        b = F.pick_featured(self.c, set(), F.day_rng(NOW.date()))
+        self.assertIs(a, b)
+
+    def test_skips_yesterdays_author(self):
+        for d in range(60):
+            rng = F.day_rng(NOW.date() + F.timedelta(days=d))
+            n = F.pick_featured(self.c, set(), rng, avoid_author='member:Aneesh Sathe')
+            self.assertNotEqual(self.c.author_key(n), 'member:Aneesh Sathe')
+        only = prolific_corpus(3)
+        only.notes = [n for n in only.notes if only.author_key(n) == 'member:Aneesh Sathe']
+        rng = F.day_rng(NOW.date())
+        self.assertIsNotNone(F.pick_featured(only, set(), rng, avoid_author='member:Aneesh Sathe'))
+
+    def test_shortlist_deals_authors_round_robin(self):
+        cands = F.shortlist(self.c, set(), rng=F.day_rng(NOW.date()))
+        first = [self.c.author_key(n) for n in cands[:4]]
+        self.assertEqual(len(set(first)), 4, first)
+
+    def test_hooks_hold_one_per_member_and_none_from_the_featured_author(self):
+        featured = self.c.by_path['raw-notes/aneesh/n/n000.md']
+        cands = F.shortlist(self.c, set(), rng=F.day_rng(NOW.date()), exclude=[featured])
+        pick = F.fallback_selection(cands, self.c, featured)
+        authors = [self.c.author_key(n) for n, _ in pick['dyk']]
+        self.assertEqual(len(pick['dyk']), F.DYK_MIN)
+        self.assertEqual(authors.count('member:Sean Stevenson'), 1)
+        self.assertEqual(authors.count('member:Florian Lohse'), 1)
+        self.assertEqual(authors.count(F.COMMONS), 1)  # only one commons note is eligible here
+        self.assertEqual(authors.count('member:Aneesh Sathe'), 1)  # topped up to reach DYK_MIN
+
+    def test_no_repeats_across_ninety_days(self):
+        history = {'days': {}}
+        for d in range(90):
+            day = NOW.date() + F.timedelta(days=d)
+            recent = F.recent_paths(history, day)
+            n = F.pick_featured(self.c, recent, F.day_rng(day))
+            self.assertNotIn(n.path, recent)
+            history['days'][day.isoformat()] = {'featured': {'path': n.path}, 'dyk': []}
 
 
 class PageTest(unittest.TestCase):
@@ -354,7 +447,7 @@ class PageTest(unittest.TestCase):
             self.assertNotRegex(m.group(0)[4:-5].split('[=]')[-1], r'\[\[', 'a link inside generated text')
         dyk = md.split(F.DYK_HEADING)[1].split(F.MEMBERS_HEADING)[0]
         lines = [l for l in dyk.splitlines() if l.startswith('- ')]
-        self.assertEqual(len(lines), 5)
+        self.assertTrue(F.DYK_MIN <= len(lines) <= F.DYK_MAX, lines)
         for line in lines:
             self.assertRegex(line, r'^- …\[TK\]impyrt @cf/google/gemma-4-26b-a4b-it=that [^\[\]]+\[/TK\]\? '
                                    r'\(\[\[[0-9a-z]{26} \| [^\]]+\]\]\)$')
