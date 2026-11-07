@@ -174,6 +174,15 @@ def paragraph_lines(lines):
     return out
 
 
+def load_ai_bylines(path=None):
+    """The importer's AI disclosure lines (tools/blyg-import/config.json `ai_bylines`), or {}."""
+    path = Path(path) if path else Path(C.__file__).resolve().parent / 'config.json'
+    try:
+        return json.loads(path.read_text()).get('ai_bylines') or {}
+    except (OSError, ValueError):
+        return {}
+
+
 class Texts:
     """Each note's text as the blyg holds it, and its quotable sentences."""
 
@@ -183,6 +192,7 @@ class Texts:
         self.by_id = {e['id']: p for p, e in corpus.state.items() if e.get('published_version') and '#part-' not in p}
         self._sentences = {}
         self._rendered = {}
+        self.ai_bylines = load_ai_bylines()
 
     def _pub_id(self, key):
         e = self.corpus.state.get(key)
@@ -196,9 +206,16 @@ class Texts:
         entry = self.corpus.state.get(note.path)
         units = self.renderer.units_by_note.get(note.path) or []
         if entry and entry.get('published_version') and units:
-            md = self.renderer.render(units[0], C.render_byline(self.corpus.authors.author_for(note)), self._pub_id)
             sha = entry.get('published_sha')
-            out = md if not sha or sha == C.sha(md) else None
+            author = self.corpus.authors.author_for(note)
+            # A member's byline, or (since the 2026-11 relabel) the AI disclosure line. Accept either so quotes
+            # keep working while the relabel is part-way through.
+            bylines = [C.render_byline(author)] if author else ['', C.ai_byline(note.path, self.ai_bylines)]
+            for byline in dict.fromkeys(bylines):
+                md = self.renderer.render(units[0], byline, self._pub_id)
+                if not sha or sha == C.sha(md):
+                    out = md
+                    break
         self._rendered[note.path] = out
         return out
 

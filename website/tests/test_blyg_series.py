@@ -225,6 +225,31 @@ class QuoteTest(unittest.TestCase):
         self.assertTrue(t.sentences(c.by_path['raw-notes/florian/drainage.md']))
 
 
+class RelabelTest(unittest.TestCase):
+    """The 2026-11 relabel adds an AI byline to commons notes; quotes must survive it, before and after."""
+
+    def test_commons_note_quotable_with_or_without_the_ai_byline(self):
+        n = note('raw-notes/commons/reading/book/book-01.md', 'Chapter one',
+                 'A plain paragraph sentence that is long enough to be quoted by the series without any trouble.')
+        state = {n.path: {'id': rid(1), 'published_version': 1}}
+        c = F.Corpus(notes=[n], state=state, authors=C.Authors(authors={}, handles={}), config_path=None)
+        t = S.Texts(c)
+        line = S.load_ai_bylines()['raw-notes/commons/reading/']
+        unit = t.renderer.units_by_note[n.path][0]
+        for byline in ('', line):
+            state[n.path]['published_sha'] = C.sha(t.renderer.render(unit, byline, t._pub_id))
+            t._rendered.clear()
+            t._sentences.clear()
+            self.assertIsNotNone(t.rendered(n), repr(byline))
+            self.assertEqual(len(t.sentences(n)), 1, repr(byline))
+        state[n.path]['published_sha'] = 'something else'
+        t._rendered.clear()
+        self.assertIsNone(t.rendered(n))
+
+    def test_real_config_has_the_reading_line(self):
+        self.assertIn('not by a member', S.load_ai_bylines()['raw-notes/commons/reading/'])
+
+
 class BuildersTest(unittest.TestCase):
     def setUp(self):
         self.c = series_corpus()
