@@ -435,7 +435,7 @@ class EndToEnd(unittest.TestCase):
                                       '20nzf7p7kdhqjer2jfrfj29exf'])
         (digest,) = st.items.values()
         self.assertEqual(digest['status'], 'public')
-        self.assertTrue(digest['contentMd'].startswith('# World Machines digest — 2026-10-31 (evening)'))
+        self.assertTrue(digest['contentMd'].startswith('# World Machines digest — 2026-10-31 ('), digest['contentMd'][:60])
         self.assertIn('[=]Synthesis of scope 0.[/TK]', digest['contentMd'])
         self.assertIn('Patrick Atwater', digest['contentMd'])
         for c in st.writes():
@@ -903,6 +903,19 @@ class Auth(unittest.TestCase):
             with self.assertRaises(SystemExit) as cm:
                 blyg_sync.main([])
         self.assertIn('BLYG_TOKEN is not set', str(cm.exception.code))
+
+
+class DigestTitleTest(unittest.TestCase):
+    def test_label_is_the_time_the_run_happened(self):
+        t = blyg_sync.digest_title
+        self.assertEqual(t(datetime(2026, 11, 3, 6, 5, tzinfo=timezone.utc)), '# World Machines digest — 2026-11-03 (morning)')
+        self.assertEqual(t(datetime(2026, 11, 3, 13, 51, tzinfo=timezone.utc)), '# World Machines digest — 2026-11-03 (afternoon)')
+        self.assertEqual(t(datetime(2026, 11, 3, 23, 0, tzinfo=timezone.utc)), '# World Machines digest — 2026-11-03 (evening)')
+
+    def test_a_taken_title_gets_the_time(self):
+        now = datetime(2026, 11, 3, 23, 0, tzinfo=timezone.utc)
+        taken = ['# World Machines digest — 2026-11-03 (evening)']
+        self.assertEqual(blyg_sync.digest_title(now, taken), '# World Machines digest — 2026-11-03 (evening, 23:00 UTC)')
 
 
 if __name__ == '__main__':

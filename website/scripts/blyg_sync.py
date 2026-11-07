@@ -88,6 +88,7 @@ DEFAULT_HOPPERS_URL = 'https://worldmachines.org/api/hoppers'
 DEFAULT_SLUG = 'members'
 DEFAULT_HOPPER_NAME = 'From World Machines members'
 DIGEST_PREFIX = '# World Machines digest — '
+RECENT_DIGEST_SCAN = 60   # items read (most recently updated first) when checking a digest title
 TOKEN_SCOPES = 'owner:read owner:manage owner:draft owner:publish'
 
 MAX_SOURCES = 6     # sources per TK scope; the server does not truncate them
@@ -615,8 +616,29 @@ def chunk(seq, size):
     return [seq[i:i + size] for i in range(0, len(seq), size)]
 
 
-def digest_title(now):
-    return f"{DIGEST_PREFIX}{now:%Y-%m-%d} ({'morning' if now.hour < 12 else 'evening'})"
+def digest_title(now, taken=()):
+    """'# World Machines digest — 2026-11-03 (afternoon)', with the time added if that title is taken.
+
+    GitHub's schedule runs hours late (the 06:00 run has started as late as 15:00), so the label is the time
+    of day the run actually happened, not the slot it was scheduled for.
+    """
+    part = 'morning' if now.hour < 12 else 'afternoon' if now.hour < 18 else 'evening'
+    title = f"{DIGEST_PREFIX}{now:%Y-%m-%d} ({part})"
+    if title.lstrip('# ') in {t.lstrip('# ') for t in taken}:
+        title = f"{DIGEST_PREFIX}{now:%Y-%m-%d} ({part}, {now:%H:%M} UTC)"
+    return title
+
+
+def recent_digest_titles(api, limit=RECENT_DIGEST_SCAN):
+    """Titles of the most recently updated digests (any status), to keep a new one from repeating a title."""
+    out = []
+    for i, item in enumerate(api.items()):
+        if i >= limit:
+            break
+        first = (item.get('contentMd') or '').split('\n', 1)[0]
+        if first.startswith(DIGEST_PREFIX):
+            out.append(first)
+    return out
 
 
 def scope_instruction(rows, part, parts):
@@ -635,13 +657,13 @@ def scope_instruction(rows, part, parts):
     )
 
 
-def build_digest(rows, now, hopper_url, max_sources=MAX_SOURCES, hopper_name=DEFAULT_HOPPER_NAME):
+def build_digest(rows, now, hopper_url, max_sources=MAX_SOURCES, hopper_name=DEFAULT_HOPPER_NAME, taken=()):
     """Markdown for the digest thread: intro, one TK scope per ≤max_sources sources, the post list."""
     sources = [r for r in rows if not r.get('l0') and not r.get('withdrawn')]
     groups = chunk(sources, max_sources)
     authors = sorted({post_author(r) for r in rows})
     lines = [
-        digest_title(now),
+        digest_title(now, taken),
         '',
         f'{len(rows)} new post{"s" if len(rows) != 1 else ""} from '
         f'{", ".join(authors)} reached the [{hopper_name}]({hopper_url}) collection. '
@@ -1173,7 +1195,8 @@ class Sync:
             return result
 
         hopper_url = f'{self.site}h/{(hopper or {}).get("slug") or self.slug}/'
-        content = build_digest(filed, self.now, hopper_url, self.max_sources, self.hopper_name)
+        taken = recent_digest_titles(self.api) if self.api else []
+        content = build_digest(filed, self.now, hopper_url, self.max_sources, self.hopper_name, taken)
         result['digest'] = content
         log(f'Digest: {content.splitlines()[0]}')
         if not self.act(f'create the digest draft ({len(tk_scopes(content))} TK scope(s), {len(filed)} post(s))'):
